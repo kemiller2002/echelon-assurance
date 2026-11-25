@@ -15,6 +15,7 @@ authoritative_references: [TSC CC8.1, CC7.1, NIST SP 800-218 (SSDF), SLSA v1.0, 
 ## 01 Secure development lifecycle
 1. Material changes (new data categories, external integrations, authorization changes, financial logic, autonomous agent permissions) require a recorded threat model or design review before implementation.
 2. Security requirements are expressed as tests where possible (OWASP ASVS level chosen per system risk).
+3. Application code meets the security-by-construction requirements SBC-001..018 (`requirements/security-by-construction.md`), implemented by controls CTL-APP-001..010 and mapped existing controls. Each by-construction claim is valid only within its verified boundary.
 
 ## 02 Change, code review and release
 1. All changes to protected branches go through a pull request with at least one approving review by someone other than the author, and all required status checks passing. Administrators cannot bypass these rules; repository rules are themselves defined as code.

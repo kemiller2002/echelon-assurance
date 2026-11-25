@@ -96,6 +96,13 @@ returns. Consequences for the roadmap:
    practice year 1 is likely readiness and an observation period, so all
    scenarios are overstated by roughly one year of examination fees, equally.
 
+### Owner by-construction requirements (2026-11-25)
+
+The SBC and FIN-BC requirements are product engineering, required in every
+scenario, so they do not change the comparison between scenarios. They do
+raise absolute engineering effort for Unbound (not modelled here) and reduce
+expected findings and remediation in all scenarios.
+
 ## 4. Marginal cost of adding another Echelon product
 
 | Cost element | Hybrid / Echelon model | Commercial platform model | Evidence |

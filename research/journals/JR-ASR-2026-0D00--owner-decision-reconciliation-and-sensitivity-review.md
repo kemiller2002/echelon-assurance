@@ -55,3 +55,21 @@ Findings:
   verified completion, missing external anchoring) are already disclosed in
   those systems' own documentation; retained as sanitized results. No
   exploitation detail is present.
+
+## Owner by-construction requirements (commits b0bcd6a, 30d05ab)
+
+- Registered SBC-001..018 as REQ-SBC-001..018 and FIN-BC-001..024 as
+  REQ-FINBC-001..024 (owner IDs in `framework_ref`; classification
+  `voluntary` = owner-mandated internal requirement, not externally imposed).
+- Mapped to existing controls first; added APP domain and CTL-APP-001..010,
+  plus CTL-FIN-015..017 where no control covered the requirement. All at
+  `Designed`.
+- Annotated OQ-104/105/106/115/116/204–213/757/758/762/763 with the owner's
+  proposed dispositions; all remain open pending external confirmation.
+- Challenge review: `requirements/challenge-review.md` (bypass paths, cost,
+  feasibility, unintended effects). Key finding: several requirements assume
+  capabilities not observed in the assessed repositories (Strata runtime
+  adapter, Forma safe rendering, bundle inventory, authenticated provenance).
+- POL-06 and POL-12 reference the records; roadmap P1 sequencing follows the
+  owner's priority order; economics notes the requirements are product
+  engineering common to every scenario.

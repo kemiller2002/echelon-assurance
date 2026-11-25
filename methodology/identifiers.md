@@ -6,7 +6,7 @@ record keeps its ID with `status` set to `retired` or `superseded`.
 | Prefix | Record | Format | Register |
 |---|---|---|---|
 | `SRC-` | Authoritative or secondary source | `SRC-<AREA>-<NNN>` e.g. `SRC-AICPA-001` | `sources/source-register.csv` |
-| `REQ-` | Externally derived requirement | `REQ-<FRAMEWORK>-<NNN>` e.g. `REQ-GLBA-003` | `regulatory/requirements.csv` |
+| `REQ-` | Externally derived or owner-mandated requirement (owner IDs such as `SBC-001`, `FIN-BC-001` kept in `framework_ref`) | `REQ-<FRAMEWORK>-<NNN>` e.g. `REQ-GLBA-003` | `regulatory/requirements.csv` |
 | `CTL-` | Unified control | `CTL-<DOMAIN>-<NNN>` e.g. `CTL-IAM-004` | `controls/control-catalog.csv` |
 | `POL-` | Policy (or policy section) | `POL-<NN>` / `POL-<NN>.<NN>` | `policies/policy-inventory.csv` |
 | `EVT-` | Evidence type | `EVT-<NNN>` | `registers/evidence-types.csv` |
@@ -40,6 +40,7 @@ record keeps its ID with `status` set to `retired` or `superseded`.
 | `TEN` | Tenant/customer isolation and configuration governance |
 | `CUS` | Customer lifecycle, communication, complaints |
 | `ASR` | Assurance-system integrity (controls over the evidence and validation machinery) |
+| `APP` | Application security by construction (owner security-by-construction requirements SBC-xxx) |
 
 Unbound's existing identifiers (`UNB-CTRL-*`, `UNB-SCTRL-*`, `SOC2-0xx`) are
 preserved in Unbound and referenced from `controls/control-catalog.csv`

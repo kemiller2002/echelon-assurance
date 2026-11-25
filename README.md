@@ -29,6 +29,7 @@ the first reference implementation; the architecture is organization-wide.
 |---|---|
 | Executive findings | [`findings/executive-findings.md`](findings/executive-findings.md); challenge of conventional practice and Clarity/EDF application in [`findings/`](findings/) |
 | Owner research brief | [`docs/charter/research-brief-2026-11-25.md`](docs/charter/research-brief-2026-11-25.md) |
+| Owner by-construction requirements and challenge review | [`requirements/`](requirements/) |
 | Research methodology, identifiers | [`methodology/`](methodology/) |
 | Authoritative source register | [`sources/source-register.csv`](sources/source-register.csv) |
 | SOC reporting landscape | [`soc/`](soc/) |

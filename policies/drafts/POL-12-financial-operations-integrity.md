@@ -15,6 +15,8 @@ authoritative_references: [AT-C 320 / SSAE 18 (SOC 1 control objectives, if a SO
 ## Principle
 Financial correctness is enforced by invariants in the system and proved by independent-source reconciliation, rather than inferred from sampling individual transactions.
 
+Detailed requirements: FIN-BC-001..024 (`requirements/financial-integrity-by-construction.md`), mapped to CTL-FIN controls in the catalog.
+
 ## 01 Transaction authorization
 1. Every financial action (contribution acceptance, grant recommendation approval, disbursement release, fee assessment, investment instruction, adjustment) requires authority recorded in the customer's authority matrix and enforced by the application.
 2. Above customer-defined thresholds, two distinct authorized humans approve; the initiator cannot approve. Agents may prepare and recommend but cannot release funds unless a customer has explicitly delegated a bounded authority and the delegation is recorded.

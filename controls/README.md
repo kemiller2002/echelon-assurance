@@ -50,7 +50,7 @@ required in `failure_response`), `detective-only` (no blocking point exists),
 ## Catalog summary (B7, 2026-11-25)
 
 Built by `tools/build_control_catalog.py` (seed builder; the CSV is
-authoritative afterwards). 104 controls across 19 domains. Every
+authoritative afterwards). 104 controls across 19 domains at B7; 117 across 20 domains after the owner by-construction requirements added the APP domain. Every
 requirement not classified `not-applicable` maps to at least one control,
 except these, deliberately:
 
@@ -63,8 +63,8 @@ except these, deliberately:
 Every policy and policy section is implemented by at least one control;
 top-level policies inherit their sections' controls.
 
-Distribution of targets (after owner decisions of 2026-11-25): L4 47,
-L3 28, L2 12, L1 6, L0 6, L5 5. L5 controls: dormant
+Distribution of targets (after owner decisions and by-construction requirements of 2026-11-25; 117 controls): L4 59,
+L3 29, L2 12, L1 6, L0 6, L5 5. L5 controls: dormant
 accounts, offboarding, entitlement drift in non-production, configuration
 drift on reversible settings, and routine retention expiry (irreversible,
 permitted with legal-hold checks and bounded batches under owner decision

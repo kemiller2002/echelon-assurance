@@ -55,7 +55,13 @@ The bulk of the catalog. Order of work inside P1:
 1. **Identity and change foundations**: CTL-IAM-001..008, CTL-SDL-001..010,
    CTL-CFG-001/002, CTL-NET-001/002, CTL-END-001, CTL-CRY-001/002. Mostly
    configuration of managed services plus PC-03, PC-05, PC-08.
-2. **Unbound financial kernel controls** (CTL-FIN-001..008, 010, 011;
+1a. **Security by construction (SBC-001..018)**, sequenced as the owner
+   record directs: financial integrity, tenant isolation, identity, data
+   access, release gates first (CTL-APP-001, 005; CTL-TEN-001; CTL-IAM-001;
+   CTL-SDL-001/002), then the remaining CTL-APP controls. Requirements and
+   test specifications precede implementation.
+2. **Unbound financial kernel controls** (including FIN-BC-001..024 via
+   CTL-FIN-001..017) (CTL-FIN-001..008, 010, 011;
    CTL-TEN-001/002): built into Unbound and passing the daf-landscape gates
    G0–G9 (`financial-core-control-spec-v0.5.md`; G8 is SOC 2 control-to-evidence
    collection and independent review, G9 controlled-pilot approval, with payment
