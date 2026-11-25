@@ -30,7 +30,27 @@
       "updatedAt": "2026-11-25T23:32:55Z",
       "telemetryExecutionIds": [
         "EXE-20261125T233256557Z-3f771e74"
-      ]
+      ],
+      "latestCheckpoint": {
+        "id": "3bd54755f8b1ebb38732bb4c",
+        "recordedAt": "2026-11-25T23:35:57Z",
+        "executionId": "EXE-20261125T233256557Z-3f771e74",
+        "repository": "echelon-assurance",
+        "branch": "claude/echelon-assurance-consolidation-jygy23",
+        "commit": "ce021c599be79a0dfbe41ddf37351fbbefb7e5a4",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-assurance"
+        },
+        "remoteBranch": "claude/echelon-assurance-consolidation-jygy23",
+        "remoteCommit": "ce021c599be79a0dfbe41ddf37351fbbefb7e5a4",
+        "summary": "Owner directions reconciled; Praxis installed; validation passing",
+        "nextAction": "Final adversarial challenge pass, then complete",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      }
     }
   ]
 }
