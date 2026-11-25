@@ -281,3 +281,14 @@ at Unbound. That argument therefore pushes the auditor towards direct
 procedures at Unbound, not away from Unbound. The XID-INV-008 position
 (direct testing until reliance or scale justifies a report) captures this
 correctly `[auditor-interpretation]`.
+
+## Owner decision (2026-11-25)
+
+Owner decision `DF-ASR-2026-0D02` sets the **design target** at SOC 1 Type II
+and SOC 2 Type II covering **all five** trust services categories (Security,
+Availability, Confidentiality, Processing Integrity, Privacy) on shared
+controls. Type I or SOC 3 only with demonstrated commercial benefit. The
+analysis above, which leaned toward deferring Processing Integrity and
+Privacy, is retained as the reasoning record. Actual examination scope
+remains subject to customer and auditor confirmation (OQ-101, OQ-103,
+OQ-104 stay open).

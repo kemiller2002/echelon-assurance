@@ -63,12 +63,12 @@ except these, deliberately:
 Every policy and policy section is implemented by at least one control;
 top-level policies inherit their sections' controls.
 
-Distribution of targets (after review passes): L4 47, L3 29, L2 12, L1 6,
-L0 6, L5 4. Only four controls target L5 (dormant accounts, offboarding,
-entitlement drift in non-production, configuration drift on reversible
-settings): each is reversible and bounded. Retention was lowered from L5 to
-L3 because deletion is irreversible. Judgment controls (risk acceptance,
-oversight, vendor reliance, external attestation) remain L0–L2 by design.
+Distribution of targets (after owner decisions of 2026-11-25): L4 47,
+L3 28, L2 12, L1 6, L0 6, L5 5. L5 controls: dormant
+accounts, offboarding, entitlement drift in non-production, configuration
+drift on reversible settings, and routine retention expiry (irreversible,
+permitted with legal-hold checks and bounded batches under owner decision
+DF-ASR-2026-0D09). Judgment controls remain L0–L2 by design.
 
 The catalog CSV is authoritative; `tools/build_control_catalog.py` was the
 seed and refuses to overwrite curated rows without `--force`.

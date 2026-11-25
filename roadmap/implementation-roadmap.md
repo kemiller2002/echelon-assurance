@@ -19,8 +19,9 @@ catalog (P0 13, P1 67, P2 13, P3 10, P4 1 controls; P5 holds improvements, not c
 
 Actions (owner unless stated):
 
-1. **Make `echelon-assurance` private** (GitHub settings). Until then, keep
-   applying `SECURITY-AND-CONFIDENTIALITY.md`.
+1. **Keep public content to decision 0D05 classes** (public research, policies,
+   control objectives, methodology, sanitized results); stand up a separately
+   restricted store for production evidence, findings and confidential reports.
 2. **Answer the P0 questions that shape everything else** (cheapest
    resolution in brackets):
    - OQ-753 / OQ-756: who Unbound's contracting customers are; whether
@@ -40,7 +41,8 @@ Actions (owner unless stated):
    changes. Approval makes CTL-GOV-002 operable; until then policies are drafts.
 4. **Accept or reject decision record `DF-ASR-2026-3A1E`** (no new system;
    ledger extends Arca).
-5. **Install Praxis** in this repository and require the `assurance-validation`
+5. **Install Praxis** (decision 0D06), migrate the Python register tools to
+   F# with equivalent tests, and require the `assurance-validation`
    check on `main`.
 6. Turn on the cheap preventive controls in existing GitHub/IdP settings:
    MFA (CTL-IAM-004), push protection (CTL-SDL-010), protected branches with
@@ -124,7 +126,8 @@ justifies the extra cost.
   machines (VAL-016) after a time-boxed pilot; analysable authorization
   policy language checked in CI.
 - Raise selected L3 controls to L4/L5 once false-positive rates are known.
-- Processing Integrity and Privacy TSC categories if customer demand appears.
+- Processing Integrity and Privacy are in the design target (decision 0D02);
+  examination scope confirmed with customers and the auditor at P3.
 - ISO 27001 or ISO 42001 certification only if a customer or market requires
   it; the unified catalog already maps toward both.
 - OSCAL export of catalog and assessment results if an auditor or customer
@@ -132,3 +135,12 @@ justifies the extra cost.
 - Comment on the AICPA proposed 2027 TSC and description criteria (comment
   deadline 2027-01-15) if Echelon wants to influence AI points of focus.
 - Second product onboarding using the shared control layer (economics §4).
+
+## Owner decisions of 2026-11-25
+
+`docs/decisions/owner-approved-foundations-2026-11-25.md` (DF-ASR-2026-0D01..0D0E) set design direction for
+operating model, reports, GLBA baseline, approval model, disclosure, Praxis
+and F#, release gates, agent identity, retention automation, evidence
+storage, Folio, Strata, Vigila and control lifecycle cost. They do not
+resolve legal applicability, auditor acceptance, actual configuration,
+staffing or operating effectiveness; the related open questions remain open.

@@ -21,14 +21,19 @@ gives the reasoning behind those choices.
 | L2 Evidence collection | Evidence loss; prep effort | Collector can miss data silently; collected ≠ effective | Evidence is system-generated, which auditors generally weigh above manually assembled evidence, subject to IPE testing (`auditor-interpretation`) | Main saving in audit prep |
 | L3 Automated validation | Late detection | False positives/negatives; the validator becomes a control that itself needs validation | Validation by the same team is still self-assessment, not independent | Replaces periodic manual review |
 | L4 Preventive enforcement | The prohibited event occurs | Blocks legitimate work; outages if the enforcer fails closed; enforcer misconfiguration is a single point of failure | Strongest evidence: auditor tests the configuration over the period plus override paths, rather than samples of outcomes (`auditor-interpretation`, confidence `medium`) | Higher build cost; very low run cost |
-| L5 Continuous enforcement + bounded remediation | Dwell time of drift | Automation can make wrong changes at scale; can mask a recurring root cause; may destroy evidence | Remediation must be logged and reviewed by someone other than its author | Worth it only for reversible, high-frequency drift |
+| L5 Continuous enforcement + bounded remediation | Dwell time of drift | Automation can make wrong changes at scale; can mask a recurring root cause; may destroy evidence | Remediation must be logged and reviewed by someone other than its author | Worth it for high-frequency, bounded actions with pre-action checks; irreversible actions allowed only for approved routine classes (decision 0D09) |
 
 **Rule:** aim for the lowest level that brings residual risk within appetite
-at acceptable cost, and stop at L4 unless the drift is frequent, the fix is
-reversible, and the blast radius is bounded. Judgment and accountability
-activities (risk acceptance, exception approval, management review, policy
-approval) stay at L1–L2 by design: automating their *decision* would remove
-the human accountability that is the point of the control.
+at acceptable cost. Per owner decision `DF-ASR-2026-0D0E`, prefer in order:
+eliminate the risk, prevent, detect, collect evidence, bounded remediation,
+human judgment, manual administration. L5 requires bounded impact, evidence
+of every automated action and a stop condition; **reversibility is not
+universally required** (owner decision `DF-ASR-2026-0D09`): irreversible
+routine actions such as approved retention expiry may run at L5 with
+pre-action checks (legal hold), while mass deletion, key destruction,
+retention changes and evidence destruction need elevated human approval.
+Judgment and accountability activities (risk acceptance, exception
+approval, management review, policy approval) stay at L1–L2 by design.
 
 ## 2. Fail-closed versus fail-open
 

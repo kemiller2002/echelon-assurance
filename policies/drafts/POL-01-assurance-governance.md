@@ -89,9 +89,14 @@ accepts is traceable to a control, an owner and evidence.
    initiating and approving the same financial transaction; operating a
    control and performing its independent validation; administering the
    evidence store and being subject to the evidence it holds.
-2. Where team size makes full segregation impractical, compensating controls
-   (post-hoc independent review, external witness, alerts to a second person)
-   are documented as exceptions under section 05.
+2. Routine low-risk work proceeds under a standing human authorization with
+   a separate implementing agent, a technical verifier and an enforced release
+   gate. Material policy changes, privilege changes, financial exceptions and
+   changes to the verifier require elevated human approval. Where an
+   independent human review is required and no second person exists,
+   fractional (contracted) human review is used. Technical independence of a
+   verifier is not organizational independence and is never described as such
+   (owner decision DF-ASR-2026-0D04).
 
 ## 08 Policy lifecycle and records
 

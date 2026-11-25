@@ -19,7 +19,7 @@ inputs: [economics/parameters.csv, economics/generated/tco-summary.md, economics
 - Internal labor is priced at an assumed loaded cost of USD 100–175/hour.
   Replace with Echelon's actual figure; it is the most sensitive input.
 - The scope modelled is one product (Unbound) with **SOC 1 Type 2 + SOC 2
-  Type 2** (per `soc/unbound-soc-applicability.md`) and an annual independent
+  Type 2 covering all five trust services categories** (owner decision 0D02) (per `soc/unbound-soc-applicability.md`) and an annual independent
   pen test. If no SOC 1 is needed, subtract roughly USD 29k–60k per year
   from every scenario equally.
 
@@ -29,12 +29,12 @@ From `economics/generated/tco-summary.md`:
 
 | Scenario | Unavoidable external | Reducible | Total |
 |---|---|---|---|
-| 1 Conventional manual | $300k – $695k | $357k – $1,312k | $657k – $2,007k |
-| 2 Commercial platform | $300k – $695k | $269k – $904k | $569k – $1,599k |
-| 3 Outsourced management | $300k – $695k | $272k – $980k | $572k – $1,675k |
-| 4 Echelon fully automated (feature parity build) | $380k – $920k | $287k – $1,052k | $667k – $1,972k |
-| 5 Hybrid: minimal automation on existing Echelon systems + targeted external services | $365k – $890k | $205k – $777k | $570k – $1,667k |
-| 5b Sensitivity: hybrid, but auditor rejects system-generated evidence | $365k – $890k | $405k – $1,477k | $770k – $2,367k |
+| 1 Conventional manual | $315k – $745k | $357k – $1,312k | $672k – $2,057k |
+| 2 Commercial platform | $315k – $745k | $269k – $904k | $584k – $1,649k |
+| 3 Outsourced management | $315k – $745k | $272k – $980k | $587k – $1,725k |
+| 4 Echelon fully automated (feature parity build) | $395k – $970k | $287k – $1,052k | $682k – $2,022k |
+| 5 Hybrid: minimal automation on existing Echelon systems + targeted external services | $380k – $940k | $205k – $777k | $585k – $1,717k |
+| 5b Sensitivity: hybrid, but auditor rejects system-generated evidence | $380k – $940k | $405k – $1,477k | $785k – $2,417k |
 
 With an 8% discount rate, the ordering is unchanged
 (`python3 -I economics/tco_model.py --rate 0.08`).
@@ -53,8 +53,8 @@ With an 8% discount rate, the ordering is unchanged
    warning. (`recommendation`, confidence `medium`.)
 3. **The hybrid and a commercial platform cost about the same.** After
    adding the contracted independent reviewer that our own `Tested` and
-   small-team rules require (DF-ASR-2026-7B20), the hybrid ($570k–$1.67M)
-   and a commercial platform ($569k–$1.60M) are indistinguishable within the
+   small-team rules require (owner decision DF-ASR-2026-0D04), the hybrid
+   ($585k–$1.72M) and a commercial platform ($584k–$1.65M) are indistinguishable within the
    uncertainty of the inputs. The hybrid's advantage is not price: it covers
    the financial controls platforms do not, avoids subscription lock-in and
    bundled-auditor independence risk, and its independent review is a real
@@ -83,7 +83,7 @@ the auditor conversation (roadmap P3), not before.
 
 Scenario 5b shows the hybrid's downside: if the auditor will not rely on
 Echelon-generated evidence, the hybrid becomes the **most expensive**
-option ($770k–$2.37M), because the build cost is spent and conventional evidence labor
+option ($785k–$2.42M), because the build cost is spent and conventional evidence labor
 returns. Consequences for the roadmap:
 
 1. Before P3, build only automation that is justified *without* auditor

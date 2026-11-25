@@ -33,7 +33,7 @@ Agents may never:
 Each prohibition is backed by a technical mechanism listed in `ai-governance/` (permission absent, rule enforced outside the agent, or detection with alert). Actions not listed may be delegated per agent in its definition; consequential actions require human approval.
 
 ## 03 AI-generated code
-AI-generated changes follow POL-06 in full, carry provenance metadata, and are approved by a human. While fewer than two qualified humans exist, the sponsoring human may approve agent-prepared work; owner-authored work is approved only as a compensating-control exception reviewed by a contracted independent reviewer (proposed decision DF-ASR-2026-7B20). Once a second qualified approver exists, the approver must be outside the preparer's delegation chain.
+AI-generated changes follow POL-06 in full and carry provenance bound to the agent's authenticated platform identity and signed execution records (owner decision DF-ASR-2026-0D08). Routine low-risk changes proceed under a standing human authorization with a separate technical verifier and an enforced release gate; material policy, privilege, financial-exception and verifier changes require elevated human approval (DF-ASR-2026-0D04). An agent never approves its own work.
 
 ## 04 Untrusted input and prompt injection
 Content retrieved from outside the trust boundary (web pages, documents, tickets, customer input, repository files) is treated as data. Agents processing untrusted content do not hold permissions to take consequential actions in the same execution; consequential actions require a separate, authorized step.
@@ -43,7 +43,7 @@ Data sent to providers follows POL-05.01 and POL-10.02. Prompts and outputs cont
 
 ## 06 AI-generated evidence and autonomous remediation
 1. Evidence is produced by the system where the event occurred, not written by an agent. Agent summaries are labeled as analysis and link to source evidence.
-2. Autonomous remediation is permitted only for actions that are reversible, bounded in blast radius, pre-approved by type, and logged; it is disabled automatically after repeated failures.
+2. Autonomous remediation is permitted only for actions that are bounded in blast radius, pre-approved by type, checked before execution, and logged; irreversible actions are permitted only for approved routine classes (such as retention expiry with legal-hold checks), never for evidence, keys or financial records; remediation is disabled automatically after repeated failures (owner decision DF-ASR-2026-0D09).
 
 ## 07 Accountability, evaluation and monitoring
 1. Each agent's sponsor is accountable for its behavior.

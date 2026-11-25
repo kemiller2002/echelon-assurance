@@ -83,3 +83,16 @@ Columns follow charter §13. "Proposed" = proposal recorded in
    implementing agents cannot reach them.
 3. **Cloud account administrators** can disable logging; organization-level
    guardrails plus external heartbeat monitoring compensate.
+
+## 5. Owner decisions of 2026-11-25 (`docs/decisions/owner-approved-foundations-2026-11-25.md`)
+
+These set intended responsibilities going forward; they do not change what
+was observed in each repository.
+
+| System | Owner decision | Effect on this matrix |
+|---|---|---|
+| Vigila | 13 (DF-ASR-2026-0D0D): Vigila is the logging and observability initiative integrating managed infrastructure; heartbeat must be independently operated | Vigila is the intended implementer for CTL-LOG-001/003 and integrates CTL-ASR-004. The current repository is a follow-up tracker, so this is new scope (proposed change PC-10 revised). |
+| Folio | 11 (0D0B): Folio renders authoritative evidence packages; it is not responsible for evidence collection, validity or authoritative storage | Folio is the renderer for auditor packages (CTL-ASR-010, CTL-CUS-003); manifests and chain of custody belong to evidence storage. |
+| Strata | 12 (0D0C): Strata is the database interaction layer (controlled access, transactions, parameterization, schema governance, testability, instrumentation), not the evidence system | Strata implements database-level controls (TEN, DAT, CFG); evidence storage is separate (0D0A). |
+| Arca | 10 (0D0A): integrity capabilities subject to verification; GitHub not the sole production evidence store; interfaces before custom ledger | Supersedes DF-ASR-2026-3A1E. |
+| Praxis, Dokimos | 6, 7, 8 (0D06–0D08): adopt Praxis and F# standards; require verified completion, enforced checks, authenticated provenance | PC-03, PC-04, PC-05 become owner-approved direction; actual settings still to be verified (OQ-700). |

@@ -25,3 +25,13 @@ needs the owning repository's own governance process.
 | PC-18 | all repos | Context-status vs code consistency check (stale CURRENT-STATE contradicting code in ≥4 repos) | Management-assertion hygiene (ECH2 §3.6) | P2 |
 | PC-19 | AI runtime (no owner yet) | Signed agent action receipts; AI egress gateway enforcing provider-by-data-class; control-weakening change classifier | Gaps identified by AIG batch; owner to decide whether these extend Praxis/Aegis or need a new component | P1 |
 | PC-20 | unbound | Re-examine requirements that cite GLBA as their legal basis (marked "unverified general knowledge" in Unbound); GLBA applicability is contested and undetermined (OQ-200..203). Keep the safeguards as design baseline but cite them as framework-selected/contractual until counsel confirms | REG batch finding | P1 |
+
+## Owner decisions of 2026-11-25
+
+Per `docs/decisions/owner-approved-foundations-2026-11-25.md`: PC-01 (Strata) and PC-02 (Folio) now follow
+decisions 12 and 11. PC-10 is revised: Vigila becomes the logging and
+observability initiative integrating managed infrastructure, with an
+independently operated heartbeat (decision 13). PC-12 follows decision 10:
+define evidence interfaces and use managed durable immutable storage before
+any custom ledger. PC-03..05 follow decisions 7–8. The owner record does not
+authorize changes to other repositories; these remain proposals.

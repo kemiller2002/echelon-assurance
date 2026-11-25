@@ -193,7 +193,7 @@ disabling of required logs (AUTH-T08), no agent self-expansion of privileges
 Approval UX shows the diff, the weakening classification, cited evidence and
 what the agent did *not* check. Approval quality is sampled quarterly
 (RSK-019, automation bias; REQ-OWASPAI-013). Feasibility of distinct humans
-per role is open (OQ-608). Proposed resolution: DF-ASR-2026-7B20. With one human owner, the P1 rule (approver outside
+per role is open (OQ-608). Owner decision DF-ASR-2026-0D04 (superseding proposal DF-ASR-2026-7B20): standing human authorization + separate implementing agent + technical verifier + enforced release gate for routine low-risk work; elevated human approval for material changes; fractional human review where required. With one human owner, the P1 rule (approver outside
 the preparer's delegation chain) leaves no eligible approver for owner-sponsored
 agent work and conflicts with the POL-11.03 small-team fallback; which rule
 governs is OQ-800.

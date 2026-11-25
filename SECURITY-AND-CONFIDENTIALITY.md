@@ -12,16 +12,19 @@ updated: 2026-11-25
 
 ## Repository visibility
 
-The owner directed that this repository be **private**. On 2026-11-25 the
-GitHub repository listing reported `kemiller2002/echelon-assurance` as
-**public**. Until visibility is confirmed private, treat every commit as
-publicly readable and apply the rules below strictly. Visibility is an owner
-action (GitHub → Settings → General → Danger Zone → Change visibility); no
-agent in this program changes it.
+Owner decision `DF-ASR-2026-0D05` (2026-11-25): this repository may hold
+**public research, general policies, control objectives, methodology and
+sanitized results**. Production evidence, vulnerabilities, secrets,
+personnel and customer data, and confidential reports are kept in separately
+restricted stores and never committed here. Source licensing is respected
+(for example, CIS Controls and SIG content are not reproduced).
 
-Even once private, these rules still apply: a private repository is shared
-with every collaborator, CI integration and AI provider granted access, and
-assurance material is a high-value target.
+The repository was public on 2026-11-25. A sensitivity review of its full
+contents was performed the same day before merge (journal
+`JR-ASR-2026-0D00`): no secrets, personal data, production evidence or live
+vulnerability details were found; design-level gaps of Echelon systems that
+those systems' own public documentation already discloses are retained as
+sanitized results.
 
 ## Never commit
 

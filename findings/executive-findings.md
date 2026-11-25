@@ -2,7 +2,7 @@
 id: ASR-FIND-EXEC-001
 title: Executive findings
 status: draft for owner review
-version: 1.0.0
+version: 1.1.0
 created: 2026-11-25
 ---
 
@@ -27,8 +27,10 @@ any control operating today, and no compliance claim is made.
 - **No law requires either report.** Demand comes from sponsors' auditors,
   banks' third-party risk programs and customers. Without a SOC 1, a sponsor's
   auditor would have to test Unbound directly.
-- SOC 2 scope: Security, Availability, Confidentiality; Processing Integrity
-  and Privacy undetermined. Carve out the cloud provider and custodians;
+- SOC 2 design target: all five trust services categories (owner decision
+  DF-ASR-2026-0D02; the research had leaned toward deferring Processing
+  Integrity and Privacy). Actual examination scope is confirmed with
+  customers and the auditor. Carve out the cloud provider and custodians;
   GitHub is effectively a subservice organization for most Echelon systems.
 - No standalone SOC 1 Type 1 (it gives user auditors no operating evidence),
   and no report is possible while Unbound runs only on synthetic data.
@@ -90,8 +92,11 @@ any control operating today, and no compliance claim is made.
   redaction.
 - **Lacks:** tamper-evident anchoring; identity lifecycle and access review;
   central logging/alerting/heartbeat; auditor packaging. None justifies a
-  new Echelon system: use managed services plus extensions of Arca/Percepta
-  (proposed decision `DF-ASR-2026-3A1E`).
+  new Echelon system. Owner decisions 0D0A–0D0D: separate evidence generation
+  from managed, durable, immutable storage (GitHub is not the sole store;
+  interfaces before any custom ledger); Folio renders evidence packages;
+  Strata is the database interaction layer; Vigila becomes the logging and
+  observability initiative with an independently operated heartbeat.
 - **Wrong assumptions in Unbound:** Strata is not an append-only store; Folio
   does not package evidence; GLBA as a cited legal basis is unverified.
   Proposed corrections are in `integration/proposed-changes.md`.
@@ -99,8 +104,9 @@ any control operating today, and no compliance claim is made.
 ## 5. Economics
 
 Five-year totals (ranges; vendor-claim prices and assumed labor):
-conventional $657k–$2.0M; commercial platform $569k–$1.6M; outsourced
-$572k–$1.7M; full Echelon build $667k–$2.0M; hybrid $570k–$1.7M.
+conventional $672k–$2.1M; commercial platform $584k–$1.6M; outsourced
+$587k–$1.7M; full Echelon build $682k–$2.0M; hybrid $585k–$1.7M (SOC 2
+scoped to all five trust services categories per owner decision 0D02).
 
 - **Building feature parity is not cheaper than buying.**
 - **The hybrid costs about the same as a platform** once real independent
@@ -109,7 +115,7 @@ $572k–$1.7M; full Echelon build $667k–$2.0M; hybrid $570k–$1.7M.
   genuinely better assurance.
 - **The hybrid's downside is large**: if the auditor will not rely on
   system-generated evidence it becomes the most expensive option
-  ($770k–$2.4M). So build preventive and financial controls now (valuable in
+  ($785k–$2.4M). So build preventive and financial controls now (valuable in
   any case) and defer ledger and auditor tooling until a CPA firm has scoped
   their use.
 - Shared controls (80 of 104) make each additional product cheap: mainly its
@@ -131,8 +137,8 @@ The P0 open questions are cheap to answer and change the design:
 
 | Question | Resolver | Cheapest route |
 |---|---|---|
-| Who Unbound's contracting customers are; whether sponsor and operator are separate entities (OQ-753, OQ-756) | owner | decision |
-| Named approval roles; small-team rule (OQ-607, OQ-608, OQ-800; proposed DF-ASR-2026-7B20) | owner | decision |
+| Legal structure confirming the operating model of owner decision 0D01 (OQ-753, OQ-756) | owner + counsel | confirmation |
+| Named approval roles and fractional reviewer (OQ-607, OQ-608; approval model set by owner decision 0D04) | owner | staffing decision |
 | Whether sponsors' auditors expect SOC 1 (OQ-101, OQ-754) | sponsor's audit firm | one call |
 | GLBA status of sponsors and Echelon (OQ-200–202) | counsel | one fixed-fee memo |
 | What banks and sponsors will request (OQ-204, OQ-215) | bank / customer | ask for their questionnaire |
@@ -144,12 +150,15 @@ cannot settle it and the lowest-cost resolution
 
 ## 8. Immediate actions
 
-1. Make this repository private (it is currently public).
-2. Answer the P0 questions above.
-3. Review and approve the 13 draft policies and the two proposed decisions.
+1. Keep this repository to the public content classes of owner decision
+   0D05 and stand up a restricted store for evidence and findings.
+2. Answer the remaining P0 questions above.
+3. Review and approve the 13 draft policies (now reconciled with the owner
+   decisions of 2026-11-25).
 4. Turn on what already exists: MFA, push protection, protected branches
    without admin bypass, Praxis verified completion.
-5. Install Praxis here and require the `assurance-validation` check.
+5. Install Praxis here, migrate the register tools to F# (decision 0D06) and
+   require the `assurance-validation` check.
 
 The full phased plan is in `roadmap/implementation-roadmap.md`.
 
@@ -164,3 +173,12 @@ The full phased plan is in `roadmap/implementation-roadmap.md`.
 - All prices are vendor claims or assumptions; quotes are needed.
 - Clarity and EDF were applied by this program to its own conclusions, not by
   an independent assessor (`findings/clarity-and-edf-assessment.md`).
+
+## 10. Owner decisions of 2026-11-25
+
+Fourteen owner decisions (`docs/decisions/owner-approved-foundations-2026-11-25.md`,
+registered as DF-ASR-2026-0D01..0D0E) set design direction and supersede the
+two proposals DF-ASR-2026-3A1E and DF-ASR-2026-7B20. They are design
+direction only: legal applicability, auditor acceptance, actual
+configuration, staffing and operating effectiveness remain unresolved, and
+the related open questions stay open with the decision noted.

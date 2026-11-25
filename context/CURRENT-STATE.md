@@ -5,8 +5,8 @@ Updated: 2026-11-25
 ## Baseline
 
 - Repository created by owner (initial commit `48f04ef`, README only).
-- GitHub reports visibility **public**; owner instruction is private. Owner
-  action required (see `SECURITY-AND-CONFIDENTIALITY.md`).
+- Repository is public; owner decision 0D05 limits it to public research,
+  policies, control objectives, methodology and sanitized results.
 - Praxis CLI not installed (installation was not performed in the research
   session; see `HANDOFF.md`). Conventions adopted manually.
 - Existing assurance work elsewhere (read-only inputs):
@@ -33,7 +33,7 @@ Updated: 2026-11-25
 | B8 | Review passes 1–10 | complete (journals JR-ASR-2026-5C01..5C03) |
 
 Registers: 276 sources, 278 requirements, 104 controls, 83 policy entries,
-30 evidence types, 32 validation procedures, 58 risks, 2 decisions (proposed),
+30 evidence types, 32 validation procedures, 58 risks, 16 decisions (14 owner-accepted 0D01..0D0E; 2 proposals superseded),
 open questions in `registers/open-questions.csv`. See
 `research/journals/` for the batch log.
 

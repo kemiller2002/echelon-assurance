@@ -28,7 +28,7 @@ Data is labelled by schema or storage location, not by manual tagging, so that c
 3. Encryption settings are verified continuously as configuration policy (L4/L5 target).
 
 ## 03 Retention, deletion and legal hold
-1. Each data class has a retention schedule; records are deleted or crypto-shredded at expiry unless under legal hold.
+1. Each data class has a retention schedule. Approved routine expiry is automated: before each deletion or crypto-shred the system checks legal hold, limits batch size and records deletion evidence. Mass deletion, key destruction, retention-period changes and any destruction of evidence require elevated human approval (owner decision DF-ASR-2026-0D09).
 2. Append-only evidence stores retain hashes and references to personal data rather than the personal data itself, so that deletion obligations can be met without breaking integrity.
 3. Retention periods are set from identified legal and contractual sources; where none is identified, the shortest period meeting the business purpose applies. No universal period is assumed.
 
