@@ -34,6 +34,7 @@ From `economics/generated/tco-summary.md`:
 | 3 Outsourced management | $300k – $695k | $272k – $980k | $572k – $1,675k |
 | 4 Echelon fully automated (feature parity build) | $330k – $770k | $287k – $1,052k | $617k – $1,822k |
 | 5 Hybrid: minimal automation on existing Echelon systems + targeted external services | $315k – $740k | $205k – $777k | $520k – $1,517k |
+| 5b Sensitivity: hybrid, but auditor rejects system-generated evidence | $315k – $740k | $405k – $1,477k | $720k – $2,217k |
 
 With an 8% discount rate, the ordering is unchanged
 (`python3 -I economics/tco_model.py --rate 0.08`).
@@ -73,6 +74,23 @@ readiness assessment or first auditor will not rely on system-generated
 evidence with completeness proofs, buy a platform for the SaaS/cloud
 evidence layer and keep the Echelon-built financial controls. Decide after
 the auditor conversation (roadmap P3), not before.
+
+### Review pass 7 (economic viability) finding
+
+Scenario 5b shows the hybrid's downside: if the auditor will not rely on
+Echelon-generated evidence, the hybrid becomes the **most expensive**
+option, because the build cost is spent and conventional evidence labor
+returns. Consequences for the roadmap:
+
+1. Before P3, build only automation that is justified *without* auditor
+   reliance: preventive controls (they reduce risk and findings regardless)
+   and financial invariants (required for production anyway).
+2. Defer the anchored evidence ledger, completeness reconciliation and
+   auditor interface until a CPA firm has said, in scoping, how it will use
+   them.
+3. The model counts SOC 1 and SOC 2 examination fees from year 1. In
+   practice year 1 is likely readiness and an observation period, so all
+   scenarios are overstated by roughly one year of examination fees, equally.
 
 ## 4. Marginal cost of adding another Echelon product
 
