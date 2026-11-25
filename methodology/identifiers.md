@@ -43,4 +43,7 @@ record keeps its ID with `status` set to `retired` or `superseded`.
 
 Unbound's existing identifiers (`UNB-CTRL-*`, `UNB-SCTRL-*`, `SOC2-0xx`) are
 preserved in Unbound and referenced from `controls/control-catalog.csv`
-(`unbound_refs`), never renamed.
+(`unbound_refs`), never renamed. Unbound reuses some of our prefixes with
+different meanings (for example its own `VAL-001…024`), so every reference to
+another repository's identifier is written with a repository prefix:
+`UNB:VAL-003`, `UNB:UNB-CTRL-014`. A bare ID always means this repository.
