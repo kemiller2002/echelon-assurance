@@ -1,0 +1,76 @@
+scenario,component,category,y1_low,y1_high,annual_low,annual_high,avoidable,evidence_class,source_ids,notes
+A-minimum-viable-assurance,SOC 1 Type 2 examination,external-assurance,0,0,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Year 1 is readiness/observation: no examination fee (ECON-006); combined-engagement discount not assumed (OQ-111/755)
+A-minimum-viable-assurance,"SOC 2 Type 2 examination, five categories",external-assurance,0,0,15000,40000,no,vendor-claim,SRC-ECON-004,Uplift for five categories is an assumption
+A-minimum-viable-assurance,Independent penetration test incl. retest,external-assurance,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Pre-launch test in year 1
+A-minimum-viable-assurance,Fractional independent human review,external-assurance,5000,15000,10000,30000,no,assumption,,"Charged in every scenario for equal evidence quality (ECON-004, ECON-008); organizational independence, not technical verification"
+A-minimum-viable-assurance,Readiness assessment by audit-adjacent firm,external-assurance,8000,15000,0,0,no,assumption,,Scoping before observation period (ECON-006)
+A-minimum-viable-assurance,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,Same in every scenario: no invented differences (ECON-011)
+A-minimum-viable-assurance,Bespoke diligence responses (legal/contractual),manual-administration,4000,14000,4000,14000,no,assumption,,Remain manual in every model
+B-targeted-automation,SOC 1 Type 2 examination,external-assurance,0,0,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Year 1 is readiness/observation: no examination fee (ECON-006); combined-engagement discount not assumed (OQ-111/755)
+B-targeted-automation,"SOC 2 Type 2 examination, five categories",external-assurance,0,0,15000,40000,no,vendor-claim,SRC-ECON-004,Uplift for five categories is an assumption
+B-targeted-automation,Independent penetration test incl. retest,external-assurance,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Pre-launch test in year 1
+B-targeted-automation,Fractional independent human review,external-assurance,5000,15000,10000,30000,no,assumption,,"Charged in every scenario for equal evidence quality (ECON-004, ECON-008); organizational independence, not technical verification"
+B-targeted-automation,Readiness assessment by audit-adjacent firm,external-assurance,8000,15000,0,0,no,assumption,,Scoping before observation period (ECON-006)
+B-targeted-automation,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,Same in every scenario: no invented differences (ECON-011)
+B-targeted-automation,Bespoke diligence responses (legal/contractual),manual-administration,4000,14000,4000,14000,no,assumption,,Remain manual in every model
+Bx-targeted-automation-auditor-rejects,SOC 1 Type 2 examination,external-assurance,0,0,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Year 1 is readiness/observation: no examination fee (ECON-006); combined-engagement discount not assumed (OQ-111/755)
+Bx-targeted-automation-auditor-rejects,"SOC 2 Type 2 examination, five categories",external-assurance,0,0,15000,40000,no,vendor-claim,SRC-ECON-004,Uplift for five categories is an assumption
+Bx-targeted-automation-auditor-rejects,Independent penetration test incl. retest,external-assurance,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Pre-launch test in year 1
+Bx-targeted-automation-auditor-rejects,Fractional independent human review,external-assurance,5000,15000,10000,30000,no,assumption,,"Charged in every scenario for equal evidence quality (ECON-004, ECON-008); organizational independence, not technical verification"
+Bx-targeted-automation-auditor-rejects,Readiness assessment by audit-adjacent firm,external-assurance,8000,15000,0,0,no,assumption,,Scoping before observation period (ECON-006)
+Bx-targeted-automation-auditor-rejects,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,Same in every scenario: no invented differences (ECON-011)
+Bx-targeted-automation-auditor-rejects,Bespoke diligence responses (legal/contractual),manual-administration,4000,14000,4000,14000,no,assumption,,Remain manual in every model
+C-commercial-platform,SOC 1 Type 2 examination,external-assurance,0,0,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Year 1 is readiness/observation: no examination fee (ECON-006); combined-engagement discount not assumed (OQ-111/755)
+C-commercial-platform,"SOC 2 Type 2 examination, five categories",external-assurance,0,0,15000,40000,no,vendor-claim,SRC-ECON-004,Uplift for five categories is an assumption
+C-commercial-platform,Independent penetration test incl. retest,external-assurance,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Pre-launch test in year 1
+C-commercial-platform,Fractional independent human review,external-assurance,5000,15000,10000,30000,no,assumption,,"Charged in every scenario for equal evidence quality (ECON-004, ECON-008); organizational independence, not technical verification"
+C-commercial-platform,Readiness assessment by audit-adjacent firm,external-assurance,8000,15000,0,0,no,assumption,,Scoping before observation period (ECON-006)
+C-commercial-platform,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,Same in every scenario: no invented differences (ECON-011)
+C-commercial-platform,Bespoke diligence responses (legal/contractual),manual-administration,4000,14000,4000,14000,no,assumption,,Remain manual in every model
+D-outsourced-management,SOC 1 Type 2 examination,external-assurance,0,0,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Year 1 is readiness/observation: no examination fee (ECON-006); combined-engagement discount not assumed (OQ-111/755)
+D-outsourced-management,"SOC 2 Type 2 examination, five categories",external-assurance,0,0,15000,40000,no,vendor-claim,SRC-ECON-004,Uplift for five categories is an assumption
+D-outsourced-management,Independent penetration test incl. retest,external-assurance,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Pre-launch test in year 1
+D-outsourced-management,Fractional independent human review,external-assurance,5000,15000,10000,30000,no,assumption,,"Charged in every scenario for equal evidence quality (ECON-004, ECON-008); organizational independence, not technical verification"
+D-outsourced-management,Readiness assessment by audit-adjacent firm,external-assurance,8000,15000,0,0,no,assumption,,Scoping before observation period (ECON-006)
+D-outsourced-management,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,Same in every scenario: no invented differences (ECON-011)
+D-outsourced-management,Bespoke diligence responses (legal/contractual),manual-administration,4000,14000,4000,14000,no,assumption,,Remain manual in every model
+E-full-parity-build,SOC 1 Type 2 examination,external-assurance,0,0,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Year 1 is readiness/observation: no examination fee (ECON-006); combined-engagement discount not assumed (OQ-111/755)
+E-full-parity-build,"SOC 2 Type 2 examination, five categories",external-assurance,0,0,15000,40000,no,vendor-claim,SRC-ECON-004,Uplift for five categories is an assumption
+E-full-parity-build,Independent penetration test incl. retest,external-assurance,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Pre-launch test in year 1
+E-full-parity-build,Fractional independent human review,external-assurance,5000,15000,10000,30000,no,assumption,,"Charged in every scenario for equal evidence quality (ECON-004, ECON-008); organizational independence, not technical verification"
+E-full-parity-build,Readiness assessment by audit-adjacent firm,external-assurance,8000,15000,0,0,no,assumption,,Scoping before observation period (ECON-006)
+E-full-parity-build,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,Same in every scenario: no invented differences (ECON-011)
+E-full-parity-build,Bespoke diligence responses (legal/contractual),manual-administration,4000,14000,4000,14000,no,assumption,,Remain manual in every model
+A-minimum-viable-assurance,"Enable existing preventive platform settings (IdP, rulesets, org policies)",shared-incremental-build,4000,14000,0,0,yes,assumption,,No custom automation
+A-minimum-viable-assurance,Manual evidence preparation and periodic reviews,manual-administration,30000,105000,30000,105000,yes,assumption,,
+A-minimum-viable-assurance,Audit fieldwork support,manual-administration,10000,35000,10000,35000,yes,assumption,,
+A-minimum-viable-assurance,Standard questionnaires (manual),manual-administration,8000,28000,8000,28000,yes,assumption,,ECON-010 telemetry to replace
+B-targeted-automation,Targeted automation on existing Echelon systems,shared-incremental-build,30000,122500,0,0,yes,assumption,,"Only high-frequency, preventive or reusable workflows (ECON-009)"
+B-targeted-automation,Maintain targeted automation,shared-maintenance,0,0,15000,52500,yes,assumption,,
+B-targeted-automation,"Administration, evidence gaps, management review",manual-administration,12000,42000,12000,42000,yes,assumption,,Bx: auditor does not rely on system evidence (ECON-012)
+B-targeted-automation,Audit fieldwork support,manual-administration,4000,14000,4000,14000,yes,assumption,,
+B-targeted-automation,"Infrastructure (managed storage, logging)",infrastructure,1000,4000,1000,4000,yes,assumption,,
+B-targeted-automation,External technical validation of assurance machinery,external-assurance,5000,15000,2500,7500,no,assumption,,Before auditor reliance
+B-targeted-automation,"Standard questionnaires (generated, human-reviewed)",manual-administration,4000,17500,4000,17500,yes,assumption,,
+Bx-targeted-automation-auditor-rejects,Targeted automation on existing Echelon systems,shared-incremental-build,30000,122500,0,0,yes,assumption,,"Only high-frequency, preventive or reusable workflows (ECON-009)"
+Bx-targeted-automation-auditor-rejects,Maintain targeted automation,shared-maintenance,0,0,15000,52500,yes,assumption,,
+Bx-targeted-automation-auditor-rejects,"Administration, evidence gaps, management review",manual-administration,40000,140000,40000,140000,yes,assumption,,Bx: auditor does not rely on system evidence (ECON-012)
+Bx-targeted-automation-auditor-rejects,Audit fieldwork support,manual-administration,12000,42000,12000,42000,yes,assumption,,
+Bx-targeted-automation-auditor-rejects,"Infrastructure (managed storage, logging)",infrastructure,1000,4000,1000,4000,yes,assumption,,
+Bx-targeted-automation-auditor-rejects,External technical validation of assurance machinery,external-assurance,5000,15000,2500,7500,no,assumption,,Before auditor reliance
+Bx-targeted-automation-auditor-rejects,"Standard questionnaires (generated, human-reviewed)",manual-administration,4000,17500,4000,17500,yes,assumption,,
+C-commercial-platform,Compliance platform subscription,shared-maintenance,15000,35000,15000,35000,yes,vendor-claim,SRC-PTV-029;SRC-PTV-030,Buyer-reported ranges
+C-commercial-platform,Platform implementation and integration,shared-incremental-build,12000,42000,0,0,yes,assumption,,
+C-commercial-platform,Administration and manual controls (incl. financial controls not covered),manual-administration,20000,70000,20000,70000,yes,assumption,,
+C-commercial-platform,Audit fieldwork support,manual-administration,6000,21000,6000,21000,yes,assumption,,
+C-commercial-platform,Standard questionnaires (platform-assisted),manual-administration,6000,21000,6000,21000,yes,assumption,,
+D-outsourced-management,vCISO / compliance management retainer,external-assurance,36000,96000,36000,96000,yes,vendor-claim,SRC-ECON-005,
+D-outsourced-management,Platform subscription if provider requires,shared-maintenance,0,25000,0,25000,yes,assumption,SRC-PTV-029,
+D-outsourced-management,Internal support to provider,manual-administration,10000,35000,10000,35000,yes,assumption,,
+D-outsourced-management,Standard questionnaires,manual-administration,4000,17500,4000,17500,yes,assumption,,
+E-full-parity-build,Full feature-parity build,shared-incremental-build,80000,280000,0,0,yes,assumption,,Not justified without demand (ECON-014); shown for comparison only
+E-full-parity-build,Maintain full build,shared-maintenance,0,0,30000,105000,yes,assumption,,
+E-full-parity-build,Administration and management review,manual-administration,8000,28000,8000,28000,yes,assumption,,
+E-full-parity-build,Infrastructure,infrastructure,2000,6000,2000,6000,yes,assumption,,
+E-full-parity-build,External technical validation of assurance machinery,external-assurance,10000,25000,5000,12500,no,assumption,,
+E-full-parity-build,Standard questionnaires (generated),manual-administration,3000,14000,3000,14000,yes,assumption,,

@@ -109,15 +109,15 @@ let private roadmap root =
     printfn "rendered %d controls" (List.length controls)
     0
 
-let private tco root (rate: float) =
-    let header, rows =
-        Csv.table (File.ReadAllText(Path.Combine(root, "economics/parameters.csv")))
+let private tco root (rate: float) (input: string) (outDir: string) =
+    let header, rows = Csv.table (File.ReadAllText(Path.Combine(root, input)))
 
     let lines = rows |> List.map (fun r -> List.zip header r |> Map.ofList |> Tco.line)
+
     let totals = Tco.summarise rate lines
-    let out = Path.Combine(root, "economics/generated")
+    let out = Path.Combine(root, outDir)
     Directory.CreateDirectory out |> ignore
-    let markdown = Tco.renderMarkdown rate totals
+    let markdown = Tco.renderMarkdown rate input totals
     File.WriteAllText(Path.Combine(out, "tco-summary.md"), markdown)
     File.WriteAllText(Path.Combine(out, "tco-summary.csv"), Csv.render (Tco.renderCsv totals))
     printf "%s" markdown
@@ -125,7 +125,7 @@ let private tco root (rate: float) =
 
 /// Split arguments into options (with values) and positional arguments.
 let private parseArgs (args: string list) =
-    let valued = set [ "--rate" ]
+    let valued = set [ "--rate"; "--input"; "--out" ]
 
     let rec go opts pos rest =
         match rest with
@@ -154,7 +154,17 @@ let main argv =
             |> Option.map (fun v -> System.Double.Parse(v, System.Globalization.CultureInfo.InvariantCulture))
             |> Option.defaultValue 0.0
 
-        tco (rootOf rest) rate
+        let input =
+            options
+            |> Map.tryFind "--input"
+            |> Option.defaultValue "economics/parameters.csv"
+
+        let outDir =
+            options |> Map.tryFind "--out" |> Option.defaultValue "economics/generated"
+
+        tco (rootOf rest) rate input outDir
     | _ ->
-        eprintfn "usage: assurance (validate | merge [--check] | roadmap | tco [--rate r]) [root]"
+        eprintfn
+            "usage: assurance (validate | merge [--check] | roadmap | tco [--rate r] [--input csv] [--out dir]) [root]"
+
         2

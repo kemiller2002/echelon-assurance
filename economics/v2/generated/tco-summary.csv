@@ -1,0 +1,7 @@
+scenario,unavoidable_low,unavoidable_high,reducible_low,reducible_high
+A-minimum-viable-assurance,324000,795000,266000,966000
+B-targeted-automation,339000,840000,217000,832000
+Bx-targeted-automation-auditor-rejects,339000,840000,397000,1462000
+C-commercial-platform,324000,795000,269000,889000
+D-outsourced-management,324000,795000,272000,979500
+E-full-parity-build,354000,870000,287000,1052000

@@ -154,3 +154,14 @@ escaped defects, so the pen-test line in `parameters.csv` can later be
 replaced by measured internal cost plus actual quotes. The record states no
 guaranteed savings; external testing remains an unavoidable cost line in
 every scenario.
+
+## Version 2 (2026-11-25)
+
+Owner record `requirements/assurance-economics.md` (ECON-001..018) found
+that this model charges independent review only to the automated scenarios,
+does not separate baseline engineering, and starts examination fees in year
+1. Those findings are correct. This v1 model is preserved unchanged as the
+total-lifecycle comparison; the incremental, equal-scope v2 model is in
+`economics/v2/README.md`. v2 reaches the same conclusion: targeted
+automation, minimum viable assurance and a commercial platform overlap in
+cost, and auditor rejection of system evidence is the dominant downside.

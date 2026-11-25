@@ -31,4 +31,5 @@ jobs:
         run: |
           dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- roadmap .
           dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- tco .
-          git diff --exit-code -- roadmap/generated economics/generated
+          dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- tco --input economics/v2/parameters.csv --out economics/v2/generated .
+          git diff --exit-code -- roadmap/generated economics/generated economics/v2/generated
