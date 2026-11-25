@@ -1,7 +1,7 @@
 ---
 id: ASR-REQ-CHAL-001
 title: Challenge review of security-by-construction and financial-integrity-by-construction requirements
-status: draft for owner review
+status: accepted by owner (DF-ASR-2026-0E01)
 created: 2026-11-25
 inputs: [requirements/security-by-construction.md, requirements/financial-integrity-by-construction.md, integration/echelon-integration-matrix.md]
 ---

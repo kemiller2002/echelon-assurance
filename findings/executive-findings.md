@@ -182,3 +182,11 @@ two proposals DF-ASR-2026-3A1E and DF-ASR-2026-7B20. They are design
 direction only: legal applicability, auditor acceptance, actual
 configuration, staffing and operating effectiveness remain unresolved, and
 the related open questions stay open with the decision noted.
+
+## 11. Baseline approved (2026-11-25)
+
+The owner approved the reconciled baseline, the requirement challenge review
+and the capability verification matrix (DF-ASR-2026-0E01). Stage P0 is
+complete; stage P1 starts by verifying actual platform settings. The draft
+policies are not yet in force, and no control is above `Designed`.
+

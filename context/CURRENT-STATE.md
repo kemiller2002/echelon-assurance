@@ -33,7 +33,7 @@ Updated: 2026-11-25
 | B8 | Review passes 1–10 | complete (journals JR-ASR-2026-5C01..5C03) |
 
 Registers: 276 sources, 278 requirements, 104 controls, 83 policy entries,
-30 evidence types, 32 validation procedures, 58 risks, 16 decisions (14 owner-accepted 0D01..0D0E; 2 proposals superseded),
+30 evidence types, 32 validation procedures, 58 risks, 17 decisions (14 owner foundations 0D01..0D0E, baseline approval 0E01; 2 proposals superseded),
 open questions in `registers/open-questions.csv`. See
 `research/journals/` for the batch log.
 
@@ -41,3 +41,7 @@ open questions in `registers/open-questions.csv`. See
 
 No control is claimed above `Designed`. No compliance, attestation or
 effectiveness claim is made.
+
+## Stage
+
+Owner stage P0 (reconciliation) complete 2026-11-25 (DF-ASR-2026-0E01). Next: stage P1 foundations, beginning with verification of actual GitHub and cloud settings.

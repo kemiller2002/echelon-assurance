@@ -1,7 +1,7 @@
 ---
 id: ASR-INT-CAP-001
 title: Capability verification matrix — target responsibilities versus verified capabilities
-status: draft
+status: accepted by owner (DF-ASR-2026-0E01); statuses remain verification targets
 created: 2026-11-25
 inputs: [docs/decisions/owner-approved-foundations-2026-11-25.md, requirements/*.md, integration/fragments/ECH1-assessment.md, integration/fragments/ECH2-assessment.md]
 ---
