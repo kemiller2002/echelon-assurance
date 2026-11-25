@@ -18,7 +18,7 @@ CI passed on every pushed commit of PR #3.
 |---|---|---|
 | Formatting | `dotnet fantomas --check src tests` | pass |
 | Build | `dotnet build Echelon.Assurance.sln -c Release` | 0 errors, 0 warnings |
-| Unit and repository tests | `dotnet test` | 63 passed, 0 failed (33 before this initiative) |
+| Unit and repository tests | `dotnet test` | 64 passed, 0 failed (33 before this initiative) |
 | Register validation and traceability | `assurance validate .` | `OK: all registers valid` |
 | Fragment merge | `assurance merge --check .` | no warnings |
 | Generated views current | `assurance roadmap`, `trace`, `econ`, `tco`, then `git diff --exit-code` | current |
@@ -90,6 +90,22 @@ evidence (auditor, counsel, bank, insurer and customer answers in
 by Echelon. This is technically separated self-review, not organizational
 independence or external assurance (BR-VAL-001, BR-ASR-002).
 
+## 3a. Owner direction reconciliation (after round 4)
+
+The owner then pushed `docs/decisions/owner-review-direction-2026-11-25.md`, registered as DF-ASR-2026-0D0F (accepted). It was reconciled as follows:
+
+- **BR-GOV-004.** Self-approval of material exceptions is not authorized. This replaces the interim self-approval rule proposed in round 1.
+- **BR-VUL-012, BR-VAL-003 and BR-FIN-020.** External testing and counsel are deferred. Activation gates are retained, and production with unresolved material legal risk is not authorized.
+- **BR-VAL-004.** Added: the multi-agent review protocol.
+- **BR-GOV-017 and BR-IAM-002.** Updated.
+- **Backlog.** WI-EXT-02 is withdrawn. WI-EXT-03 and WI-EXT-04 are retitled to question preparation and reassessment. WI-ASR-14 is added.
+- **Economics.** Scenario S8 is added, with an excluded-cost-class mechanism and a unit test. C005 is superseded.
+- **Questions.** External-dependency next actions are annotated. No question is marked resolved.
+- **Risks.** RSK-064 added.
+- **Customer answers.** CAQ-005 and CAQ-049 updated.
+
+Validation was rerun after reconciliation: 64 tests pass and all registers validate. No further challenge round was run on these edits: they implement an explicit owner decision and change no factual claim beyond it.
+
 ## 4. Completion criteria (mission section 23)
 
 | Criterion | Status | Evidence |
@@ -104,7 +120,7 @@ independence or external assurance (BR-VAL-001, BR-ASR-002).
 | Roadmap dependency-driven | Met | Validator: phase order, cycles, coverage, launch gates |
 | All applicable repository validation checks pass | Met | Section 1 |
 | No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; four review rounds |
-| Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items) |
+| Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items; 6 decided by DF-ASR-2026-0D0F) |
 
 ## 5. Conflicts with existing tooling and standards (documented, not disabled)
 

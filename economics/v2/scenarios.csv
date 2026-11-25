@@ -1,9 +1,10 @@
-scenario_id,description,maintenance_multiplier,auditor_reliance,additional_product_start_year,discount_rate,opportunity_multiplier,labor_rate_low,labor_rate_high
-S0-base,"Base case: estimates as recorded, auditor relies on system-generated evidence after testing it, all products from year 1, undiscounted",1.0,yes,1,0.0,0.5,100,175
-S1-maintenance-low,Maintenance 30% below estimate,0.7,yes,1,0.0,0.5,100,175
-S2-maintenance-high,Maintenance 50% above estimate (common for internal tooling),1.5,yes,1,0.0,0.5,100,175
-S3-maintenance-very-high,Maintenance double the estimate,2.0,yes,1,0.0,0.5,100,175
-S4-auditor-nonreliance,Auditor does not rely on internally generated evidence; manual evidence preparation added to automated alternatives,1.0,no,1,0.0,0.5,100,175
-S5-nonreliance-and-maintenance-high,Downside: auditor non-reliance and maintenance 50% above estimate,1.5,no,1,0.0,0.5,100,175
-S6-slow-adoption,Additional products adopt only from year 3,1.0,yes,3,0.0,0.5,100,175
-S7-discounted,Base case discounted at 8% per year,1.0,yes,1,0.08,0.5,100,175
+scenario_id,description,maintenance_multiplier,auditor_reliance,additional_product_start_year,discount_rate,opportunity_multiplier,labor_rate_low,labor_rate_high,excluded_cost_classes
+S0-base,"Base case: estimates as recorded, auditor relies on system-generated evidence after testing it, all products from year 1, undiscounted",1.0,yes,1,0.0,0.5,100,175,
+S1-maintenance-low,Maintenance 30% below estimate,0.7,yes,1,0.0,0.5,100,175,
+S2-maintenance-high,Maintenance 50% above estimate (common for internal tooling),1.5,yes,1,0.0,0.5,100,175,
+S3-maintenance-very-high,Maintenance double the estimate,2.0,yes,1,0.0,0.5,100,175,
+S4-auditor-nonreliance,Auditor does not rely on internally generated evidence; manual evidence preparation added to automated alternatives,1.0,no,1,0.0,0.5,100,175,
+S5-nonreliance-and-maintenance-high,Downside: auditor non-reliance and maintenance 50% above estimate,1.5,no,1,0.0,0.5,100,175,
+S6-slow-adoption,Additional products adopt only from year 3,1.0,yes,3,0.0,0.5,100,175,
+S7-discounted,Base case discounted at 8% per year,1.0,yes,1,0.08,0.5,100,175,
+S8-owner-direction,Owner direction DF-ASR-2026-0D0F planning case: auditor reliance not assumed; no fractional independent reviewer or external technical validation purchased during the horizon; examinations and penetration testing kept as launch-stage obligations (deferral is not waiver),1.0,no,1,0.0,0.5,100,175,organizational-independent-review;independent-technical-validation

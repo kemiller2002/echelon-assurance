@@ -37,6 +37,7 @@ type Scenario =
         DiscountRate: float
         OpportunityMultiplier: float
         LaborRate: Range
+        ExcludedClasses: Set<string>
     }
 
 type Result =
@@ -80,6 +81,13 @@ let scenario (r: Map<string, string>) =
         DiscountRate = number r["discount_rate"]
         OpportunityMultiplier = number r["opportunity_multiplier"]
         LaborRate = number r["labor_rate_low"], number r["labor_rate_high"]
+        ExcludedClasses =
+            Map.tryFind "excluded_cost_classes" r
+            |> Option.defaultValue ""
+            |> fun v -> v.Split ';'
+            |> Array.map (fun x -> x.Trim())
+            |> Array.filter ((<>) "")
+            |> Set.ofArray
     }
 
 let private add (a: Range) (b: Range) = fst a + fst b, snd a + snd b
@@ -96,10 +104,13 @@ let isBuild (a: Activity) =
 let isBaseline (a: Activity) = a.Alternative = "BASELINE"
 
 let applies (s: Scenario) (a: Activity) =
-    match a.Condition with
-    | "nonreliance" -> not s.AuditorReliance
-    | "reliance" -> s.AuditorReliance
-    | _ -> true
+    let conditionHolds =
+        match a.Condition with
+        | "nonreliance" -> not s.AuditorReliance
+        | "reliance" -> s.AuditorReliance
+        | _ -> true
+
+    not (s.ExcludedClasses.Contains a.CostClass) && conditionHolds
 
 /// Cost of one unit (one product's share, one year) before discounting.
 let unitCost (s: Scenario) (a: Activity) : Range =

@@ -7,6 +7,27 @@ created: 2026-11-25
 
 # Owner decision package
 
+> **Owner dispositions (2026-11-25).** Owner direction DF-ASR-2026-0D0F (`docs/decisions/owner-review-direction-2026-11-25.md`) decided ODP-02, 03, 05, 09, 11 and 12, as follows.
+>
+> - **ODP-02:** internal multi-agent review and deterministic verification; no fractional reviewer now; self-approval of material exceptions not authorized.
+> - **ODP-03:** architectural safeguards and documented concentration risk; no additional custodian now; production risk acceptance remains separate.
+> - **ODP-05:** continue with internal regulatory research; sponsor-controlled funds-flow safeguards and activation gates retained.
+> - **ODP-09:** prioritize reusable continuous assurance and operational evidence; no consulting budget; costs and benefits recalculated without assuming auditor reliance.
+> - **ODP-11:** comprehensive continuous internal security testing; external engagement decisions deferred and reassessed before material production launch.
+> - **ODP-12:** no legal engagement now; primary-source research and precise questions continue.
+>
+> The direction waives no obligation and authorizes no production activation with unresolved material legal risk.
+>
+> **Still awaiting the owner:**
+> - ODP-01 (baseline approval);
+> - ODP-04 (successor and protected-reporting recipient);
+> - ODP-06 (observability conflict);
+> - ODP-07 (Strata scope);
+> - ODP-08 (prompt-injection residual risk);
+> - ODP-10 (quick confirmations).
+>
+> The table below is preserved as the original recommendation record.
+
 This package contains only decisions that are genuinely reserved to the owner:
 
 - changes to approved tenets or decisions;

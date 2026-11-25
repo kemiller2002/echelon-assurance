@@ -66,7 +66,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - Under non-reliance, minimum viable and outsourced are tied, and evidence automation never pays.
    - Prevention and testing automation adds about USD 50–70k a year for risk reduction the model does not monetize.
    - Owner capacity, rather than cash, is likely the binding constraint.
-   - Recommendation (DF-ASR-2026-C005): minimum viable assurance now. Prevention automation is justified on risk, and the owner decides whether to treat it as baseline engineering. Evidence-collection automation is gated on a written auditor position and scale. A capacity threshold triggers contracting or hiring. Never a feature-parity platform without demand.
+   - Owner direction (DF-ASR-2026-0D0F) prioritizes reusable continuous assurance and operational evidence, without assuming auditor reliance. In that planning case (S8), minimum viable assurance is cheapest at every scale. Continuous-assurance automation costs more and saves no owner hours, so its case is risk reduction and operational evidence. Build first what has operational value and reuse, and defer audit-only evidence collection.
 7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Fractional review is proposed for 17 key controls only (ODP-02).
 8. **Questions.** No question was falsely closed:
    - 28 depend on the auditor, 21 on counsel and 15 on customers.
@@ -75,9 +75,26 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 
 ## 3. What the owner needs to do
 
-Review `docs/decisions/owner-decision-package-2026-11-25.md`. It contains twelve
-items, each with a recommendation. Nothing else needs owner involvement to
-proceed with specification work.
+The owner's direction of 2026-11-25 (DF-ASR-2026-0D0F) decided six of the
+twelve package items:
+
+- internal multi-agent review instead of purchased independent review;
+- no counsel engagement now;
+- external testing deferred and reassessed before material production launch;
+- no additional custodian;
+- continuous assurance prioritized without assuming auditor reliance;
+- no self-approval of material exceptions.
+
+It has been reconciled into the baseline, registers, economics (scenario S8) and roadmap.
+
+Still awaiting the owner in `docs/decisions/owner-decision-package-2026-11-25.md`:
+
+- ODP-01: baseline approval;
+- ODP-04: successor and protected-reporting recipient;
+- ODP-06: observability conflict;
+- ODP-07: Strata scope;
+- ODP-08: prompt-injection residual risk;
+- ODP-10: quick confirmations, including protecting `main` and installing Praxis.
 
 ## 4. Claims status
 

@@ -97,6 +97,8 @@ classification filter (BR-CUS-002).
 
 ## 6. External testing strategy (BR-VUL-012, BR-VAL-003)
 
+**Owner direction DF-ASR-2026-0D0F (2026-11-25).** External engagement decisions are deferred. Comprehensive continuous internal security testing applies. The need for independent testing is reassessed against risk and actual obligations before material production launch (WI-EXT-04). The strategy below applies when testing is engaged.
+
 - **Purpose.** External tests challenge our controls; they are not our discovery mechanism.
 - **What the engagement package contains.** Architecture, inventory, threat model, latest internal report, known gaps and proposed rules of engagement, all generated.
 - **Scope priority:**

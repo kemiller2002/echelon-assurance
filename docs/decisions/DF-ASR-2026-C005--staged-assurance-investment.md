@@ -1,13 +1,15 @@
 ---
 id: DF-ASR-2026-C005
 title: Staged assurance investment: minimum viable assurance now; evidence-collection automation gated on auditor reliance and scale
-status: proposed
+status: superseded
 decided_by: pending owner
 date: 2026-11-25
 related_questions: [OQ-802, OQ-312, OQ-108]
 ---
 
 # DF-ASR-2026-C005: Staged assurance investment: minimum viable assurance now; evidence-collection automation gated on auditor reliance and scale
+
+> **Superseded for ODP-09 (2026-11-25)** by owner direction DF-ASR-2026-0D0F (`docs/decisions/owner-review-direction-2026-11-25.md`): prioritize reusable continuous assurance and operational evidence; no external consulting budget now; costs and benefits are recalculated without assuming auditor reliance (economics S8). The analysis below is kept for traceability.
 
 ## Context
 The economics model v2 (`economics/v2/generated/model.md`) was corrected over

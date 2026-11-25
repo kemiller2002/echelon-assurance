@@ -13,6 +13,7 @@ let private scenario =
         DiscountRate = 0.0
         OpportunityMultiplier = 0.5
         LaborRate = 100.0, 200.0
+        ExcludedClasses = Set.empty
     }
 
 let private act alt cls perProduct annual start hours cash scaling condition =
@@ -145,3 +146,17 @@ let ``marginal cost of later products is constant for linear scaling`` () =
         ]
 
     Assert.Equal((25.0, 25.0), marginal lines scenario "A" 4)
+
+[<Fact>]
+let ``excluded cost classes are not charged`` () =
+    let a =
+        act "A" "organizational-independent-review" false true 1 (0.0, 0.0) (10.0, 10.0) 0.0 "always"
+
+    Assert.Equal((50.0, 50.0), lifecycle scenario 1 a)
+
+    let s =
+        { scenario with
+            ExcludedClasses = set [ "organizational-independent-review" ]
+        }
+
+    Assert.Equal((0.0, 0.0), lifecycle s 1 a)

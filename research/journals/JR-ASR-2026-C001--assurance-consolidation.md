@@ -38,6 +38,10 @@ branch: claude/echelon-assurance-consolidation-jygy23
 - **One-human exception rule.** It was inconsistent across the baseline, the operating model and a superseded decision.
 - **Gaps.** 32 requirements had no work item, five controls had no baseline requirement, and the 18 reconciliation findings had no disposition.
 
+## Owner direction reconciliation
+
+The owner's direction of 2026-11-25 (DF-ASR-2026-0D0F) was reconciled after round 4. See `findings/validation-report.md`, section 3a.
+
 ## Independence statement
 
 Every step was performed by AI agents controlled by Echelon. The review agents

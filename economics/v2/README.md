@@ -76,7 +76,54 @@ hours:
 - **Threshold.** The proposed threshold is 25% of capacity, about 450 hours a year (BR-GOV-011). The recommended package can exceed it even at one product, so contracting support is probable.
 - **Not modelled.** The cost of that contracting has not been modelled. It is to be estimated when the owner sets the threshold (ODP-02), for example by pricing A3-style support for the hours above the threshold.
 
-## What the numbers do and do not support (DF-ASR-2026-C005, proposed)
+## Owner direction planning case (S8, DF-ASR-2026-0D0F)
+
+The owner directed on 2026-11-25:
+
+- Recalculate costs and benefits **without assuming auditor reliance**.
+- Purchase no external consulting or recurring independent review at the development stage.
+
+Scenario S8 implements this:
+
+- Non-reliance lines apply.
+- Fractional reviewer and external technical validation lines are excluded.
+- Examinations and penetration testing stay in as launch-stage obligations, because deferral is not waiver.
+
+| Five-year midpoint | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| A4 minimum viable | USD 1.09M | 1.55M | 2.92M | 5.20M | 7.48M |
+| A3 outsourced | 1.22M | 1.68M | 3.07M | 5.37M | 7.67M |
+| A5 targeted automation | 1.40M | 1.86M | 3.22M | 5.49M | 7.77M |
+| A8 recommended package | 1.34M | 1.82M | 3.27M | 5.68M | 8.10M |
+
+**Cost.** Without auditor reliance, A4 has the lowest midpoint at every product count. A8 and A5 cost about USD 245k and 310k more than A4 over five years at one product. A5, A6 and A8 stay above A3 at every modelled product count.
+
+**Benefit.** The benefit of reusable continuous assurance in this case is operational, not reduced audit effort:
+
+- earlier detection of control failure;
+- prevention of vulnerability classes and financial errors;
+- generated customer answers and reuse across products.
+
+None of these is monetized. Without reliance, automation does not reduce owner hours either. Steady-state recurring hours, excluding baseline engineering and build:
+
+| Alternative | N=1 | N=3 |
+|---|---|---|
+| A3 | 165–520 h | 320–1,040 h |
+| A4 | 340–930 h | 660–1,800 h |
+| A8 | 435–1,190 h | 770–2,100 h |
+| A5 | 515–1,360 h | 860–2,260 h |
+
+**Consequence for the owner's priority on reusable continuous assurance:**
+
+- **The case rests on risk reduction and operational evidence, not on cost or labor savings.** Build first the automation whose operational value is highest and which is reused across products:
+  - security-by-construction rules;
+  - financial invariant suites;
+  - release gates;
+  - population reconciliation;
+  - continuous security testing.
+- **Defer** collection automation whose only purpose is audit evidence.
+
+## What the numbers do and do not support (DF-ASR-2026-C005, superseded for ODP-09 by DF-ASR-2026-0D0F)
 
 1. **At one or two products, no option is clearly cheaper on cash.** Minimum viable assurance has the lowest midpoint, but within overlapping ranges. The choice rests on security value, independence and owner capacity.
 2. **Evidence-collection automation pays only with auditor reliance and three or more products.** Gate it on a written auditor position (WI-EXT-01) and a credible product pipeline.

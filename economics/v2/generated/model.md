@@ -333,3 +333,37 @@ Break-even (smallest product count at which the automated alternative's midpoint
 | A7-full-internal-platform | A2-commercial-platform | 6 |
 | A7-full-internal-platform | A3-outsourced-management | 9 |
 
+### S8-owner-direction
+
+Owner direction DF-ASR-2026-0D0F planning case: auditor reliance not assumed; no fractional independent reviewer or external technical validation purchased during the horizon; examinations and penetration testing kept as launch-stage obligations (deferral is not waiver)
+
+Five-year incremental assurance cost, midpoint (low–high in the base case table):
+
+| Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| A1-conventional-manual | $1,312k | $2,003k | $4,079k | $7,539k | $10,998k |
+| A2-commercial-platform | $1,252k | $1,766k | $3,308k | $5,878k | $8,448k |
+| A3-outsourced-management | $1,224k | $1,684k | $3,066k | $5,368k | $7,670k |
+| A4-mvp-echelon | $1,090k | $1,546k | $2,915k | $5,195k | $7,476k |
+| A5-targeted-automation | $1,402k | $1,857k | $3,220k | $5,493k | $7,766k |
+| A6-hybrid | $1,473k | $1,951k | $3,386k | $5,776k | $8,167k |
+| A7-full-internal-platform | $2,024k | $2,451k | $3,734k | $5,872k | $8,010k |
+| A8-mvp-plus-prevention | $1,335k | $1,818k | $3,267k | $5,682k | $8,097k |
+
+Break-even (smallest product count at which the automated alternative's midpoint is no higher):
+
+| Automated | vs conventional | Break-even N |
+|---|---|---|
+| A4-mvp-echelon | A1-conventional-manual | 1 |
+| A4-mvp-echelon | A2-commercial-platform | 1 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
+| A5-targeted-automation | A1-conventional-manual | 2 |
+| A5-targeted-automation | A2-commercial-platform | 4 |
+| A5-targeted-automation | A3-outsourced-management | none ≤ 30 |
+| A6-hybrid | A1-conventional-manual | 2 |
+| A6-hybrid | A2-commercial-platform | 8 |
+| A6-hybrid | A3-outsourced-management | none ≤ 30 |
+| A7-full-internal-platform | A1-conventional-manual | 4 |
+| A7-full-internal-platform | A2-commercial-platform | 10 |
+| A7-full-internal-platform | A3-outsourced-management | 26 |
+
