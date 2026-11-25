@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:echelon:schema:evidence-envelope:1",
+  "title": "Echelon evidence envelope",
+  "description": "DRAFT (research, 2026-11-25, not implemented). One immutable envelope per evidence record. The payload is stored separately and referenced by digest. Envelopes are never updated; status changes, control mappings, anchoring receipts and corrections are new envelopes referencing the original. Integrity of an envelope does not establish factual accuracy of its content. See architecture/evidence-architecture.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "envelope_version", "evidence_id", "evidence_type_id", "control_ids",
+    "source", "actor", "collector", "occurred_at", "observed_at", "recorded_at",
+    "policy", "collection", "sequence", "integrity", "provenance",
+    "validation", "retention", "access_classification", "personal_data",
+    "exceptions"
+  ],
+  "properties": {
+    "envelope_version": { "const": "echelon.evidence-envelope/1" },
+    "evidence_id": {
+      "description": "UUIDv7, assigned by the producer; content-independent.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "evidence_type_id": { "type": "string", "pattern": "^EVT-\\d{3}$" },
+    "control_ids": {
+      "description": "Controls this record supports. May be empty at collection; mapping is added by a derived envelope.",
+      "type": "array",
+      "items": { "type": "string", "pattern": "^CTL-[A-Z]{2,3}-\\d{3}$" },
+      "uniqueItems": true
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system", "object_ref"],
+      "properties": {
+        "system": { "type": "string", "minLength": 1, "description": "Producing platform, e.g. github, aws-cloudtrail, praxis." },
+        "system_id": { "type": "string", "pattern": "^SYS-[A-Z0-9-]+$" },
+        "tenant_scope": { "type": "string", "description": "Opaque tenant identifier or 'platform'." },
+        "object_ref": { "type": "string", "minLength": 1, "description": "Stable pointer into the source: PR URL, commit SHA, event ID." },
+        "object_version": { "type": "string" }
+      }
+    },
+    "actor": { "$ref": "#/$defs/identity", "description": "Identity that performed the controlled action. Pseudonymous; never a clear-text email." },
+    "collector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identity", "software", "software_digest"],
+      "properties": {
+        "identity": { "$ref": "#/$defs/identity" },
+        "software": { "type": "string" },
+        "software_digest": { "$ref": "#/$defs/digest" }
+      }
+    },
+    "occurred_at": { "type": "string", "format": "date-time", "description": "When the underlying event happened (source clock)." },
+    "observed_at": { "type": "string", "format": "date-time", "description": "When the collector observed it." },
+    "recorded_at": { "type": "string", "format": "date-time", "description": "Ingest gateway time." },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_id", "policy_version", "policy_digest"],
+      "properties": {
+        "policy_id": { "type": ["string", "null"], "pattern": "^POL-\\d{2}(\\.\\d{2})?$" },
+        "policy_version": { "type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "policy_digest": { "oneOf": [ { "$ref": "#/$defs/digest" }, { "type": "null" } ] },
+        "evaluator_fingerprint": { "type": "string", "description": "Identity of the evaluator (engine + rule bundle digest) that made a decision, when applicable." }
+      }
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "kind"],
+      "properties": {
+        "method": { "enum": ["event-push", "api-poll", "attestation", "platform-log-ingest", "manual-upload", "derived"] },
+        "kind": { "enum": ["direct", "derived", "inferred"], "description": "Ordo EvidenceKind. 'inferred' (model/agent judgment) never satisfies an observation requirement." },
+        "derived_from": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "computation": { "type": "string", "description": "Named, repeatable computation for derived evidence." },
+        "inferred_by": { "type": "string" }
+      },
+      "allOf": [
+        { "if": { "properties": { "kind": { "const": "derived" } } }, "then": { "required": ["derived_from", "computation"] } },
+        { "if": { "properties": { "kind": { "const": "inferred" } } }, "then": { "required": ["inferred_by"] } }
+      ]
+    },
+    "sequence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stream_id", "seq", "prev_envelope_digest"],
+      "properties": {
+        "stream_id": { "type": "string", "minLength": 1 },
+        "seq": { "type": "integer", "minimum": 0, "description": "Gap-free per stream." },
+        "prev_envelope_digest": { "oneOf": [ { "$ref": "#/$defs/digest" }, { "type": "null" } ], "description": "Null only for seq 0." }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["payload_digest", "payload_size", "payload_ref", "signature"],
+      "properties": {
+        "payload_digest": { "$ref": "#/$defs/digest" },
+        "payload_size": { "type": "integer", "minimum": 0 },
+        "payload_ref": { "type": "string", "description": "Location in the WORM payload store." },
+        "payload_media_type": { "type": "string" },
+        "signature": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["scheme", "ref"],
+          "properties": {
+            "scheme": { "enum": ["sigstore-bundle", "kms", "dsse"] },
+            "key_id": { "type": "string" },
+            "ref": { "type": "string", "description": "Pointer to signature/bundle over the canonical envelope (excluding this field)." }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["issuer"],
+      "properties": {
+        "issuer": { "type": "string", "description": "Who vouches for the producer identity, e.g. OIDC issuer." },
+        "run_ref": { "type": "string" },
+        "workflow_ref": { "type": "string" },
+        "producer_app_id": { "type": "string", "description": "For CI checks: the GitHub App that produced the check (must match the pinned expected source)." },
+        "attestation_ref": { "type": "string", "description": "in-toto Statement / SLSA provenance reference." },
+        "attestation_predicate_type": { "type": "string" }
+      }
+    },
+    "anchoring": {
+      "description": "Normally absent on the original; carried by a derived anchoring receipt.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "log_origin": { "type": "string" },
+        "log_index": { "type": "integer", "minimum": 0 },
+        "checkpoint_ref": { "type": "string" },
+        "rfc3161_token_refs": { "type": "array", "items": { "type": "string" } },
+        "witness_cosignatures": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["unvalidated", "schema-valid", "authority-accepted", "reconciled", "rejected", "superseded"] },
+        "validated_by": { "$ref": "#/$defs/identity" },
+        "findings": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["retention_class"],
+      "properties": {
+        "retention_class": { "enum": ["R-AUDIT", "R-FIN", "R-SEC", "R-INTEGRITY", "R-PI"] },
+        "retain_until": { "type": "string", "format": "date" },
+        "legal_hold": { "type": "boolean", "default": false }
+      }
+    },
+    "access_classification": { "enum": ["public", "internal", "confidential", "restricted", "customer-shareable"], "default": "restricted" },
+    "personal_data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["present"],
+      "properties": {
+        "present": { "type": "boolean" },
+        "payload_key_id": { "type": "string", "description": "Per-subject KMS key; destroying it crypto-shreds the payload." },
+        "subject_refs": { "type": "array", "items": { "type": "string" }, "description": "Pseudonymous subject IDs (keyed HMAC), never raw identifiers." }
+      },
+      "if": { "properties": { "present": { "const": true } } },
+      "then": { "required": ["payload_key_id"] }
+    },
+    "exceptions": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "supersedes": { "type": "string", "description": "evidence_id corrected by this envelope." },
+    "synthetic": { "type": "boolean", "default": false, "description": "True for test/example data; synthetic evidence never counts toward control status." }
+  },
+  "$defs": {
+    "digest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alg", "value"],
+      "properties": {
+        "alg": { "enum": ["sha256", "sha512"] },
+        "value": { "type": "string", "pattern": "^[0-9a-f]{64}([0-9a-f]{64})?$" }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": { "enum": ["human", "agent", "workload", "platform"] },
+        "id": { "type": "string", "minLength": 1, "description": "Pseudonymous stable ID (e.g. GitHub numeric ID, OIDC subject)." },
+        "issuer": { "type": "string" },
+        "principal": { "$ref": "#/$defs/identity", "description": "For agents: the accountable human principal." }
+      },
+      "if": { "properties": { "kind": { "const": "agent" } } },
+      "then": { "required": ["principal"] }
+    }
+  }
+}

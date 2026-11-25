@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.ros/locks/
+.DS_Store
+economics/generated/*.tmp
