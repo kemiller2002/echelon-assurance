@@ -93,8 +93,10 @@ accepts is traceable to a control, an owner and evidence.
    a separate implementing agent, a technical verifier and an enforced release
    gate. Material policy changes, privilege changes, financial exceptions and
    changes to the verifier require elevated human approval. Where an
-   independent human review is required and no second person exists,
-   fractional (contracted) human review is used. Technical independence of a
+   independent human review is required and no second person exists, the
+   action is blocked or redesigned; self-approval of material exceptions is not
+   authorized, and no contracted reviewer is engaged at the development stage
+   (owner direction DF-ASR-2026-0D0F; reassessed when required). Technical independence of a
    verifier is not organizational independence and is never described as such
    (owner decision DF-ASR-2026-0D04).
 

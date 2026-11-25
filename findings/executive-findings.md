@@ -32,7 +32,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 | Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 114 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
 | Dispositions | None | `requirements/source-dispositions.csv` (208 items): 149 consolidate, 34 retain, 12 simplify, 8 strengthen, 2 replace, 2 defer, 1 remove (editorial) |
 | Hierarchy | Implicit | 17 tenets → 83 policy entries → 121 controls → 114 baseline requirements → enforcement, validation (39 procedures) and evidence (35 types); generated traceability matrix |
-| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; none block requirements finalization; 15 block implementation, 38 production launch and 33 external examination |
+| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; none block requirements finalization; 15 block implementation, 39 production launch and 33 external examination |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems, tests executed for 5 |
 | Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
 | Roadmap | Narrative | `roadmap/backlog.csv`: 62 dependency-ordered work items across 15 repositories plus owner and managed-service actions; every live baseline requirement has a work item |
@@ -67,11 +67,11 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - Prevention and testing automation adds about USD 50–70k a year for risk reduction the model does not monetize.
    - Owner capacity, rather than cash, is likely the binding constraint.
    - Owner direction (DF-ASR-2026-0D0F) prioritizes reusable continuous assurance and operational evidence, without assuming auditor reliance. In that planning case (S8), minimum viable assurance is cheapest at every scale. Continuous-assurance automation costs more and saves no owner hours, so its case is risk reduction and operational evidence. Build first what has operational value and reuse, and defer audit-only evidence collection.
-7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Under owner direction DF-ASR-2026-0D0F no fractional reviewer is engaged now; internal multi-agent review with deterministic verification is used for development review, and the 17 key controls cannot reach `Tested` until an organizationally independent reviewer exists.
+7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Under owner direction DF-ASR-2026-0D0F no fractional reviewer is engaged now; internal multi-agent review with deterministic verification is used for development review, and the 94 controls whose `Tested` status depends on internal-independent validation (VAL-025) cannot reach it until an organizationally independent reviewer exists.
 8. **Questions.** No question was falsely closed:
-   - 28 depend on the auditor, 21 on counsel and 15 on customers.
-   - 19 are answered, 18 of them by owner decision; 2 proposals remain on commercial intent (OQ-114, OQ-766).
-   - None blocks requirements finalization. 94 remain open, with their external dependencies preserved.
+   - 28 depend on the auditor, 21 on counsel and 16 on customers.
+   - 18 are answered, 17 of them by owner decision; 2 proposals remain on commercial intent (OQ-114, OQ-766).
+   - None blocks requirements finalization. 95 remain open, with their external dependencies preserved.
 
 ## 3. Owner decisions and what remains
 
@@ -105,7 +105,7 @@ Both are reconciled into the baseline, registers, economics and roadmap.
 **Remaining owner actions:**
 
 - Apply repository rulesets on `main` (WI-ASR-03). Praxis 3.25.0 was installed on 2026-11-25.
-- Name the delegate and protected-reporting recipient before production launch (OQ-607).
+- Name the delegate and protected-reporting recipient when operationally necessary (proposed: no later than production launch; OQ-607).
 
 ## 4. Claims status
 

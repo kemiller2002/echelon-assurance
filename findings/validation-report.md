@@ -49,7 +49,7 @@ right, which is why the challenge passes reviewed content.
 
 ## 2. Successive challenge passes
 
-Four review rounds were run by separate agent contexts. The agents were given
+Six review rounds were run by separate agent contexts (rounds 1–4 on the consolidation, rounds 5–6 on the owner-direction reconciliation). The agents were given
 the repository and the earlier findings, not the coordinator's conclusions. Each
 round actively tried to disprove the previous conclusions. All findings are in
 `findings/challenge-passes/`.
@@ -123,11 +123,11 @@ The owner then pushed `docs/decisions/owner-remaining-approvals-2026-11-25.md`, 
 - `praxis registry check` reports current registries.
 - The consolidation runs as Praxis work item WI-ASR-CONSOLIDATION.
 - Provenance is recorded for the consolidation journal. Journals created before installation are acknowledged as origin-unrecorded, with git history as the record.
-- Verified completion (`requireVerifiedCompletion` with pinned verifier keys) is not enabled in this installation; enabling it is WI-PRAXIS-03. The work item is completed with recorded evidence, not a verifier-signed receipt (section 3c records its state).
+- Verified completion (`requireVerifiedCompletion` with pinned verifier keys) is not enabled in this installation; enabling it is WI-PRAXIS-03. The work item is closed with `praxis work complete` and recorded research evidence in the final commit, not with a verifier-signed receipt (section 3d).
 
 ## 3c. Challenge round 5 (owner-direction reconciliation)
 
-The owner's release gate requires adversarial challenge passes. Round 5 reviewed the reconciliation of DF-ASR-2026-0D0F and 0D10 (`findings/challenge-passes/round5-owner-reconciliation.csv`). It found 19 findings, 8 of them material.
+The owner's release gate requires adversarial challenge passes. Round 5 reviewed the reconciliation of DF-ASR-2026-0D0F and 0D10 (`findings/challenge-passes/round5-owner-reconciliation.csv`; the reviewing agent numbered its findings R6-xxx). It found 19 findings, 8 of them material.
 
 **Material findings:**
 
@@ -138,19 +138,41 @@ The owner's release gate requires adversarial challenge passes. Round 5 reviewed
 - no challenge round covered the reconciliation;
 - the protected-reporting role was "defined" without any defined authority or procedure.
 
-**Fixes:**
+**Fixes (in b755a01):**
 
-- all text aligned with the owner directions;
+- text aligned with the owner directions where the round found it (round 6 found remaining instances, fixed afterwards);
 - `methodology/review-protocol.md` created;
 - role authority and procedures added to `governance/operating-model.md`;
 - S8 provisions relabelled;
 - draft POL-07 aligned;
 - OQ-208 kept open as a customer dependency;
 - OQ-607 restored to its authority-matrix scope;
-- question next actions rewritten per question;
+- next actions rewritten for six questions (the rest were completed in round 6);
 - decision qualifiers added.
 
-Round 6 verifies these fixes (section 3d).
+Round 6 verified these fixes (section 3d).
+
+## 3d. Challenge round 6 (verification) and closure
+
+Round 6 (`findings/challenge-passes/round6-verification.csv`, agent IDs R7-xxx) re-checked the 19 round-5 findings: 12 fixed, 6 partially fixed, 1 not fixed. It also found 3 new findings, 2 of them material:
+
+- the executive findings' question counts were stale after OQ-208 was reopened;
+- draft POL-01 still planned contracted review.
+
+All remaining items were fixed in the final commits:
+
+- the work-item state statement is corrected, and the item is completed in Praxis;
+- dispositions for every round-5 and round-6 finding are in `findings/challenge-passes/round5-6-dispositions.csv`;
+- control counts use the computed VAL-025 figure;
+- question statistics are recomputed from the registers;
+- POL-01 is aligned;
+- the naming deadline is labelled as a proposed interpretation;
+- every counsel-package next action is made conditional on owner reassessment;
+- OQ-311 has no quotes now;
+- BR-GOV-011 and BR-GOV-017 carry the reassessment qualifier;
+- stale counts are corrected.
+
+**Stopping rationale.** Across rounds 5 and 6, material findings fell from 8 to 2 new ones plus 3 incomplete fixes. All were textual alignment or count errors, not design or factual-law defects. Every finding now has a recorded disposition. No further round was run: the remaining risks need owner decisions, external evidence or implementation, which meets the mission's stopping condition.
 
 ## 4. Completion criteria (mission section 23)
 
@@ -165,7 +187,7 @@ Round 6 verifies these fixes (section 3d).
 | Economic model reproducible and internally consistent | Met, with hypothetical inputs | `assurance econ`; CI currency check; 12 unit tests; no quotes exist |
 | Roadmap dependency-driven | Met | Validator: phase order, cycles, coverage, launch gates |
 | All applicable repository validation checks pass | Met | Section 1; Praxis verify, validate and registry check (section 3b) |
-| No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; four review rounds |
+| No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; six review rounds |
 | Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items, all decided by DF-ASR-2026-0D0F and 0D10) |
 
 ## 5. Conflicts with existing tooling and standards (documented, not disabled)

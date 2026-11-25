@@ -127,7 +127,7 @@ questionnaire answers through CTL-GOV-012 claim linting.
    observation-period start date is agreed with the auditor. "In-scope"
    means the controls in the agreed report scope, not the whole catalog.
    Review pass 6 found 65 controls had no `internal-independent` validation;
-   each carries VAL-025 (internal independent review). Under owner direction
+   VAL-025 now supports 94 controls; each carries VAL-025 (internal independent review). Under owner direction
    DF-ASR-2026-0D0F no reviewer is contracted now, so these controls cannot reach
    `Tested` until a reviewer exists (OQ-803, answered); multi-agent review
    (BR-VAL-004) is used for internal development review.
