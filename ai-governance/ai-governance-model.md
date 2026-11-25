@@ -16,6 +16,11 @@ research_batch: B6 (key AIG)
 > - **A2** bounded, reversible, low-risk execution under standing authorization.
 > - **A3** material execution only under independently enforced prior human authorization and deterministic gates.
 > - **A4** reserved human authority.
+> - **A5** prohibited for any actor (Unbound vocabulary; section 3 below uses Unbound's A0–A5 scale).
+>
+> In financial domains agents are capped at A2.
+>
+> **Superseded mitigations.** Prohibition P4 and the resilience scenarios relied on hash chaining, external anchoring and second-person approval. They are superseded by the managed retention lock, separately credentialed population reconciliation, and out-of-band alerts (BR-ASR-003, BR-ASR-006, BR-IAM-002). These detect failure and external compromise, but not action by the single owner (ODP-03).
 >
 > **Money movement.** AI agents never authorize, approve or release movement of funds or material financial exceptions, at any level and in any scope (BR-FIN-006, proposed DF-ASR-2026-C004).
 >

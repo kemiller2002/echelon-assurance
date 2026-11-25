@@ -15,11 +15,11 @@ Nine requirement documents (security, financial integrity, executable policy and
 ## Decision (proposed)
 1. The hierarchy is: tenets (`registers/tenets.csv`) → policies (`policies/policy-inventory.csv`) → control objectives (`controls/control-catalog.csv`) → baseline requirements (`requirements/baseline.csv`) → enforcement, validation and evidence (columns of the baseline row, referencing `registers/validation-procedures.csv` and `registers/evidence-types.csv`).
 2. `requirements/baseline.csv` is the authoritative register of Echelon-internal (owner-mandated) requirements. `regulatory/requirements.csv` remains authoritative for externally derived obligations; its existing owner rows (REQ-SBC, REQ-FINBC, REQ-PEC, REQ-AIGBC, REQ-VALBC) keep their IDs for stability and are dispositioned in `requirements/source-dispositions.csv`.
-3. Every original owner requirement ID has exactly one disposition row naming its baseline requirement(s). The nine Markdown documents are preserved as historical source records and are not edited further; where they conflict with the baseline, the baseline governs.
+3. Every original owner requirement ID has exactly one disposition row naming its baseline requirement(s). The same applies to the 18 challenge findings in `reconciliation-and-roadmap.md` (REC-01..18) and the security-by-construction "validation and claims" paragraph (SBC-VC-01). `challenge-review.md` is rationale for the SBC and FIN-BC dispositions and adds no obligations. The nine Markdown documents are preserved as historical source records and are not edited further; where they conflict with the baseline, the baseline governs.
 4. `assurance validate` enforces bidirectional traceability, missing owners/validation/evidence, unsupported controls, status inflation, tenet coverage, question disposition coverage and dependency-ordered backlog.
 
 ## Consequences
-Reversible; removes the need to maintain nine overlapping documents. No requirement is deleted (no `remove` dispositions).
+Reversible; removes the need to maintain nine overlapping documents. No mandatory obligation is removed: the only `remove` disposition is REC-04, an editorial identifier instruction. Scope narrowing is labelled `simplify`, with the narrowing stated. The baseline already reflects decisions C002, C003 and C006; if one is rejected, the affected rows revert.
 
 Proposed by the assurance consolidation (journal `JR-ASR-2026-C001`). Not
 authorized until the owner accepts it; see `docs/decisions/owner-decision-package-2026-11-25.md`.

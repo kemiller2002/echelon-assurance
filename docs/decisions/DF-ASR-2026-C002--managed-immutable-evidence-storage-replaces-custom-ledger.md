@@ -16,7 +16,7 @@ related_questions: [OQ-505, OQ-805]
 Production evidence uses managed object storage with provider retention lock in a separate trust domain, independent population reconciliation and an independent heartbeat (BR-ASR-003, BR-ASR-006, BR-ASR-008). Hash chaining, external anchoring, witness cosignatures and qualified timestamps are deferred until a customer, auditor or regulator requirement is recorded (WI-SCALE-02; OQ-505, OQ-507). `CTL-ASR-002` keeps its ID; its mechanism of record changes.
 
 ## Consequences
-Reduces build and maintenance; residual risk is provider-level trust and an administrator who controls the cloud account (BR-IAM-002, ODP-03). Reversible: anchoring can be added later without changing the envelope.
+A compliance-mode retention lock at a conservative minimum period is applied from the first production evidence and is a precondition for any observation period. Until it is applied, evidence is deletable by the owner. Reduces build and maintenance; residual risk is provider-level trust and an administrator who controls the cloud account (BR-IAM-002, ODP-03). Reversible: anchoring can be added later without changing the envelope.
 
 Proposed by the assurance consolidation (journal `JR-ASR-2026-C001`). Not
 authorized until the owner accepts it; see `docs/decisions/owner-decision-package-2026-11-25.md`.

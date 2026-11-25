@@ -3,12 +3,12 @@ module Echelon.Assurance.Registers.Roadmap
 
 let phases =
     [
-        "P0", "Immediate organizational requirements"
-        "P1", "Required before production"
-        "P2", "Required before onboarding financial institutions"
-        "P3", "Required before beginning an audit observation period"
-        "P4", "Required for external attestation"
-        "P5", "Longer-term improvements"
+        "P0", "Requirements reconciliation"
+        "P1", "Shared foundations"
+        "P2", "Unbound reference implementation"
+        "P3", "Operational readiness"
+        "P4", "External assurance readiness"
+        "P5", "Organizational scale"
     ]
     |> Map.ofList
 

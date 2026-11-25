@@ -10,6 +10,17 @@ review_cycle: semi-annual
 research_batch: B6 (key AIG)
 ---
 
+> **Consolidation note (2026-11-25).** Scenarios R1, R3, R4 and R16 rely on mitigations that the consolidation removed or that cannot operate with one human:
+> - hash chaining, external anchoring and daily chain verification, replaced under DF-ASR-2026-C002;
+> - second-person approval and second-person review.
+>
+> Current design:
+> - **R1 (compromised administrator):** compliance-mode retention lock from the first production evidence; out-of-band alerts; separately credentialed drift detection (BR-ASR-006, BR-IAM-002). This detects external compromise, not owner action (ODP-03).
+> - **R3 (compromised CI/CD):** verifier keys in a protected environment that the implementer cannot read (WI-DOKIMOS-01). Pipeline-definition changes are elevated changes approved by the owner.
+> - **R4 (evidence manipulation):** retention lock plus separately credentialed population reconciliation against sources Echelon does not write, such as sponsor bank statements and platform APIs (BR-ASR-003). There is no chain verification.
+> - **R16 (anchoring lapse):** not applicable while anchoring is deferred.
+
+
 # Assurance-system resilience
 
 **Status.** Research draft (charter section 17 topic). Nothing here is

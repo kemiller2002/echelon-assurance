@@ -36,7 +36,7 @@ accountable role.
 | Policy and control lifecycle | Owner | Assurance coordinator agent | A1 propose; A2 regenerate derived artifacts | Approves material changes (A4) | Signed approvals (EVT-021) |
 | Release integrity | Owner | Implementing agents; Dokimos verifier (separate identity) | A2 within standing authorization | Exception only (elevated approval for verifier or ruleset change) | Receipts (EVT-003, EVT-006) |
 | Financial operations (per sponsor) | Sponsor (customer) | Deterministic workers | None for agents (BR-FIN-006) | Sponsor approves releases and exceptions | Authorization records (EVT-018) |
-| Reconciliation and close | Finance/controls owner (owner today) | Reconciliation worker (separate identity) | Deterministic | Reviews breaks and close | EVT-017, EVT-022 |
+| Reconciliation and close (per sponsor) | Sponsor-appointed approver | Reconciliation worker (separately credentialed identity) | Deterministic | Sponsor approver reviews breaks, adjustments and close; Echelon staff operate the platform but never hold reserved (A3+) financial authority | EVT-017, EVT-022 |
 | Identity and privileged access | Owner | Access-as-code pipeline | A2 for reversible drift reversion | Approves privilege grants and break-glass review | EVT-009, EVT-030 |
 | Continuous security testing | Engineering lead (owner today) | CI suites, triage agent | A1 triage; A2 open findings | Accepts risk on exceptions | EVT-004, EVT-011 |
 | Incident response | Owner | Containment playbooks; agents for evidence gathering | A2 containment only where pre-authorized | Declares incident; makes notification decisions | EVT-016 |
@@ -65,8 +65,8 @@ accountable role.
 
 With one human, these conflicts are recorded, not hidden:
 
-1. **Approver equals implementer** for owner-authored work and owner-requested exceptions. Mitigation: these are recorded as compensating-control exceptions in a review queue (DF-ASR-2026-7B20, proposed). Organizational independence is unavailable until a second human or fractional reviewer exists (ODP-02).
-2. **Administrator equals monitored party.** The owner can disable rulesets, retention locks and alerts. Mitigation: alerts go to an out-of-band channel, and ruleset and retention drift detection run under separate credentials (WI-CONDITOR-02). Residual risk is accepted only by owner decision (ODP-03).
+1. **Approver equals requester** for owner-originated material exceptions and policy changes. Rule (BR-GOV-004): they are recorded as self-approved compensating-control exceptions, disclosed as such, never represented as independently approved, and queued for retrospective review once a reviewer exists. Where an obligation requires independent approval, the action is blocked. Agent-prepared work approved by the owner is not self-approval: the agent is the preparer. Organizational independence is unavailable until a second human or fractional reviewer exists (ODP-02).
+2. **Administrator equals monitored party.** The owner can disable rulesets, retention locks, reconciliation, heartbeats and alerts. Separately credentialed drift detection and out-of-band alerts detect system failures and external compromise, **not owner action**: every alert reaches the owner. Owner-proof assurance needs records the owner does not control (sponsor- or bank-side records, a compliance-mode retention lock) and an external reviewer (ODP-02, ODP-03).
 3. **Whistleblowing and complaints about the owner** need an external recipient (ODP-04).
 4. **Fraud review of the owner's own financial actions:**
    - For sponsor funds: sponsors, not Echelon, authorize movement (BR-FIN-006), which removes most of the conflict for Unbound.

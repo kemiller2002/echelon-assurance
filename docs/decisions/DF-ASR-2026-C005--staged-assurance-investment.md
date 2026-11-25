@@ -10,12 +10,24 @@ related_questions: [OQ-802, OQ-312, OQ-108]
 # DF-ASR-2026-C005: Staged assurance investment: minimum viable now, targeted automation gated on auditor reliance
 
 ## Context
-The economics model v2 (`economics/v2/generated/model.md`) shows the alternatives within overlapping ranges at one product because external examinations and testing dominate cost; targeted automation (A5) is cheapest from two to three products when auditors rely on system evidence, but under auditor non-reliance it never beats a commercial platform or outsourced management within 30 products, while the hybrid (A6) remains competitive in every scenario. A full internal platform (A7) does not break even against commercial or outsourced alternatives before 5-8 products in the base case and never under non-reliance.
+The economics model v2 (`economics/v2/generated/model.md`) was corrected after
+the challenge passes so that platform alternatives also bear maintenance and
+auditor non-reliance.
+
+- **At one or two products the alternatives are indistinguishable** within wide ranges.
+- **Targeted automation (A5) has the lowest midpoint from about three to five products,** but only when the auditor relies on system-generated evidence.
+- **Under non-reliance:**
+  - Minimum viable assurance (A4) is cheapest or near-cheapest at every scale.
+  - Outsourced management (A3) is within a few percent of A4.
+  - A5 and the hybrid (A6) never overtake A3.
+- **A feature-parity internal platform (A7) needs 6–9 products** to break even in the base case.
+- **Owner capacity is likely binding.** Recurring assurance labor of 300–1,500 h a year at one to three products, for most alternatives, is a large share of one person.
 
 ## Decision (proposed)
-1. Immediately: minimum viable Echelon assurance (A4) — registers, validator, enforced release gates, evidence envelope, generated customer answers — plus prevention and testing automation that has value regardless of auditor reliance (security-by-construction rules, financial invariant suites, continuous security testing).
-2. Gate evidence-collection automation (the part whose value depends on auditor reliance) on a written auditor position from the scoping inquiry (WI-EXT-01). If reliance is not obtainable, adopt the hybrid (A6) with a commercial platform for generic evidence.
-3. Never build a feature-parity internal compliance platform (A7) without demonstrated demand.
+1. **Immediately:** minimum viable Echelon assurance (A4). That means registers, validator, enforced release gates, evidence envelope and generated customer answers. Add the prevention and testing automation that has value regardless of auditor reliance: security-by-construction rules, financial invariant suites and continuous security testing.
+2. **Evidence-collection automation is gated.** It proceeds only after a written auditor position on reliance on system evidence (WI-EXT-01, a no-cost inquiry in P2) and a credible path to three or more products. If either is missing, stay on A4.
+3. **Capacity trigger.** If recurring assurance labor exceeds an owner-set threshold (proposed: 25% of owner capacity), contract outsourced support or a fractional reviewer, or hire. The choice is made on cost and independence value.
+4. **Never without demonstrated demand:** a feature-parity internal platform (A7), custom anchoring, OSCAL or AI certifications.
 
 ## Consequences
 All figures are hypothetical or vendor claims; no quotes exist. No purchase or engagement is authorized by this record.

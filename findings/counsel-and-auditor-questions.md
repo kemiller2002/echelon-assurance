@@ -85,8 +85,10 @@ data payloads. Please also give the precedence rule for conflicting holds across
 Proposed interpretation: retention is configurable per record class with legal holds. The
 default is the longest applicable period found in primary sources, and there is no universal
 period.
-Unblocks: compliance-mode WORM retention settings, which cannot be reversed. Until then we will
-use non-locking retention.
+Unblocks: final compliance-mode retention periods. Until then a compliance-mode lock at a
+conservative minimum period is applied from the first production evidence: retention can be
+extended later but not shortened, so locking early carries no irreversibility risk
+(BR-ASR-006; corrected in the consolidation challenge pass).
 
 **C6. Sanctions allocation (OQ-213).**
 Question: Is screening by Unbound on the sponsor's behalf, as specified in SPD-GRT-003, sufficient?
@@ -102,10 +104,13 @@ from the CISA template, for authorization and safe-harbor wording. Blocks publis
 
 **C8. Entity structure and conditional items (OQ-102, OQ-756, OQ-205, OQ-216, OQ-301).**
 Question: With the named entity and sponsor-owned accounts, please confirm three points:
-(a) sponsor and operator are legally separate, with no related-party issue; (b) there is
-no Bank Service Company Act relationship unless Unbound signs a direct contract with a
-bank (if it does, 12 CFR 53.4 notice applies, which we have read); (c) no money-transmission
-licence or NYDFS Part 500 covered-entity status is triggered.
+(a) sponsor and operator are legally separate, with no related-party issue; (b) whether
+12 U.S.C. 1867(c) examination authority can reach Echelon for services performed for a bank
+"by contract or otherwise", including indirectly through a sponsor's bank relationship (see
+CQ-5), and which bank-service-provider incident-notification rule applies by the bank's
+regulator (OCC 12 CFR 53.4, FDIC 12 CFR 304.24, Federal Reserve 12 CFR 225.303); (c) no
+money-transmission licence (including limb (i)(B) of 31 CFR 1010.100(ff)(5)) or NYDFS Part 500
+covered-entity status is triggered.
 Proposed interpretation: the answer to each is no, provided funds stay in accounts the sponsor
 controls. Any alternative funds flow comes back to counsel before it is enabled.
 
@@ -198,7 +203,7 @@ TPRM team for its standard due-diligence request list, its model security addend
 (often shared under NDA) and its TPSP onboarding questionnaire. Then ask:
 
 - B1 (OQ-204, OQ-105): Which assurance do you require: SOC 1 or SOC 2, which type, scope and period? What are your bridge-letter, right-to-audit, incident-notice, subcontractor-notice, examination-access and insurance terms? Note that the 2026 interagency TPRM proposal is not final; its comment period was extended to 2026-12-16.
-- B2 (OQ-206, OQ-757): Please confirm in writing that Unbound would be a Third-Party Service Provider and not a Third-Party Sender. Which audit or risk-assessment duties follow, and at what volume do the Supplementing Data Security threshold and fraud-monitoring duties apply? Please share the relevant Nacha rule excerpts.
+- B2 (OQ-206, OQ-757): Please confirm in writing that Unbound would be a Third-Party Service Provider and not a Third-Party Sender. Which audit, risk-assessment, data-security and fraud-monitoring obligations apply to Unbound now (both fraud-monitoring phases are reported in force before 2026-11-25; we have read only Nacha summary pages)? Please share the relevant Nacha rule excerpts.
 - B3 (OQ-217): Do you require self-assessment against a particular framework, such as CSF 2.0, the CRI Profile or CISA CPGs? SR 24-7 endorses none.
 - B4 (OQ-303): What penetration-test terms do you require: frequency, tester accreditation, sharing of the report or a summary letter, and remediation SLAs?
 - B5 (OQ-610): What do you require on a vendor's use of AI: disclosure, model risk management and human oversight?

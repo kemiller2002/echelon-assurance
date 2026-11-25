@@ -132,10 +132,8 @@ let ownerRequirementsDispositioned (requirements: Record list) (dispositions: Re
 /// requirement points at it; it must also define objective, owner, validation
 /// and evidence.
 let controlSupport (controls: Record list) (baseline: Record list) (requirements: Record list) =
-    let referenced =
-        (baseline |> List.collect (fun b -> items b "control_ids"))
-        @ (requirements |> List.collect (fun r -> items r "control_ids"))
-        |> set
+    ignore requirements
+    let referenced = baseline |> List.collect (fun b -> items b "control_ids") |> set
 
     controls
     |> List.filter (fun c -> field c "status" <> "Retired")
@@ -282,6 +280,127 @@ let backlogOrder (items: Record list) =
 
     later @ cycles
 
+/// A baseline requirement's policies, validation and evidence must be those of
+/// its controls (policies may match a parent or child section).
+let controlAlignment (controls: Record list) (baseline: Record list) =
+    let byId = controls |> List.map (fun c -> field c "control_id", c) |> Map.ofList
+
+    let parent (p: string) =
+        if p.Length > 6 then p.Substring(0, 6) else p
+
+    baseline
+    |> List.collect (fun b ->
+        let ctls = items b "control_ids" |> List.choose (fun id -> Map.tryFind id byId)
+
+        let union col =
+            ctls |> List.collect (fun c -> items c col) |> set
+
+        let id = field b "br_id"
+
+        let policyErr =
+            let theirs = union "policy_ids" |> Set.map parent
+            let mine = items b "policy_ids" |> List.map parent |> set
+
+            if
+                List.isEmpty ctls
+                || Set.isEmpty theirs
+                || not (Set.isEmpty (Set.intersect mine theirs))
+            then
+                []
+            else
+                [
+                    sprintf "requirements/baseline.csv: %s policies do not match its controls' policies" id
+                ]
+
+        let subset col =
+            let allowed = union col
+
+            items b col
+            |> List.filter (allowed.Contains >> not)
+            |> List.map (sprintf "requirements/baseline.csv: %s %s %s is not linked to any of its controls" id col)
+
+        policyErr @ subset "validation_ids" @ subset "evidence_type_ids")
+
+/// Every live baseline requirement is addressed by a work item, and its phase
+/// is the earliest phase of those work items.
+let roadmapCoverage (baseline: Record list) (backlog: Record list) =
+    let phases =
+        backlog
+        |> List.collect (fun w -> items w "requirements_addressed" |> List.map (fun br -> br, field w "phase"))
+        |> List.groupBy fst
+        |> List.map (fun (br, ps) -> br, ps |> List.map snd |> List.min)
+        |> Map.ofList
+
+    baseline
+    |> List.filter (fun b -> field b "disposition" <> "defer")
+    |> List.choose (fun b ->
+        let id = field b "br_id"
+
+        match Map.tryFind id phases with
+        | None -> Some(sprintf "requirements/baseline.csv: %s has no work item" id)
+        | Some p when p <> field b "roadmap_phase" ->
+            Some(
+                sprintf
+                    "requirements/baseline.csv: %s phase %s differs from earliest work item phase %s"
+                    id
+                    (field b "roadmap_phase")
+                    p
+            )
+        | Some _ -> None)
+
+/// Capability status may not exceed the verification actually performed.
+let capabilityInflation (capabilities: Record list) =
+    capabilities
+    |> List.filter (fun c ->
+        field c "status" = "verified-implemented"
+        && field c "verification_basis" <> "tests-executed")
+    |> List.map (fun c ->
+        sprintf
+            "integration/capability-verification.csv: %s verified-implemented without executed tests"
+            (field c "system_id"))
+
+/// Terms describing mechanisms deferred by decision DF-ASR-2026-C002.
+let deferredMechanismTerms =
+    [
+        "tamper-evident evidence ledger"
+        "external anchoring"
+        "witness cosign"
+        "hash-chained ledger"
+    ]
+
+/// Public answers may not describe non-operating controls, and no answer may
+/// describe a deferred mechanism.
+let answerDisclosure (controls: Record list) (answers: Record list) =
+    let status =
+        controls
+        |> List.map (fun c -> field c "control_id", field c "status")
+        |> Map.ofList
+
+    answers
+    |> List.collect (fun a ->
+        let id = field a "question_id"
+
+        let publicErr =
+            let nonOperating =
+                items a "related_control_ids"
+                |> List.exists (fun c -> rank (Map.tryFind c status |> Option.defaultValue "") < rank "Operating")
+
+            if field a "disclosure_class" = "public" && nonOperating then
+                [
+                    sprintf "customer-assurance/question-bank.csv: %s is public but cites non-operating controls" id
+                ]
+            else
+                []
+
+        let text = (field a "proposed_answer").ToLowerInvariant()
+
+        let deferred =
+            deferredMechanismTerms
+            |> List.filter text.Contains
+            |> List.map (sprintf "customer-assurance/question-bank.csv: %s describes deferred mechanism '%s'" id)
+
+        publicErr @ deferred)
+
 let errors (loaded: Loaded) =
     let r = records loaded
     let baseline = r "baseline"
@@ -296,6 +415,10 @@ let errors (loaded: Loaded) =
     @ answerInflation controls (r "question_bank")
     @ questionCoverage (r "open_questions") (r "question_dispositions")
     @ backlogOrder (r "backlog")
+    @ controlAlignment controls baseline
+    @ roadmapCoverage baseline (r "backlog")
+    @ capabilityInflation (r "capabilities")
+    @ answerDisclosure controls (r "question_bank")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 

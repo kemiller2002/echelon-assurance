@@ -32,7 +32,7 @@ Everything here is design. No bank, processor, partner or custodian agreement ex
 ## 2. Regulatory considerations per flow
 
 ### 2.1 Federal money transmission (FinCEN), all flows
-- **Definition [A, SRC-FIN2-001].** 31 CFR 1010.100(ff)(5)(i)(A) defines money transmission services as "the acceptance of currency, funds, or other value that substitutes for currency from one person and the transmission of ... to another location or person by any means". Status is "a matter of facts and circumstances" under (ff)(5)(ii). The listed exclusions cover:
+- **Definition [A, SRC-FIN2-001].** 31 CFR 1010.100(ff)(5)(i) has two limbs. Limb (B) covers "any other person engaged in the transfer of funds"; it is the limb most likely to reach a platform that originates or transmits payment instructions and files (F7, F9), and this review gives it no answer. Counsel must address it (CQ-1, CQ-2). Limb (A) defines money transmission services as "the acceptance of currency, funds, or other value that substitutes for currency from one person and the transmission of ... to another location or person by any means". Status is "a matter of facts and circumstances" under (ff)(5)(ii). The listed exclusions cover:
   - (A) delivery, communication or network access services that support a money transmitter;
   - (B) payment processor: "to facilitate the purchase of, or payment of a bill for, a good or service through a clearance and settlement system by agreement with the creditor or seller";
   - (F) funds transfers "only integral to the sale of goods or the provision of services".
@@ -41,7 +41,7 @@ Everything here is design. No bank, processor, partner or custodian agreement ex
   - (b) it runs through clearance and settlement systems that admit only BSA-regulated institutions;
   - (c) there is a formal agreement;
   - (d) that agreement is at least with the seller or creditor.
-- **Proposed interpretation [AS].** Under F1-F8, Unbound never accepts value (CNV-LEG-001), so the definition's first element ("acceptance") is not met. The exclusions are therefore not needed. That matches daf-landscape Model A (REG-042/043, inference [I]). (ii)(A) supports the view that sending instructions or files is not transmission.
+- **Proposed interpretation [AS].** Under F1-F8, Unbound never accepts value (CNV-LEG-001), so the definition's first element ("acceptance") is not met. The exclusions are therefore not needed. That matches daf-landscape Model A (REG-042/043, inference [I]). (ii)(A) excludes delivery, communication or network access services *supporting a money transmitter*; it may cover services to the ODFI or payment partner where those are themselves transmitters, but does not by itself establish that sending instructions is not transmission. Limb (i)(B) remains open.
 - **Where the exclusions do not help.** A charitable grant is not the purchase of a good or service or the payment of a bill. So (ii)(B) and (ii)(F) fit poorly wherever Unbound or Echelon *would* be in the flow (daf-landscape §14, [I]).
 - **Facts that change this:**
   - any Echelon- or Unbound-titled, FBO or pooled account;
@@ -66,7 +66,7 @@ Everything here is design. No bank, processor, partner or custodian agreement ex
   - A TPSP "provides services related to ACH processing on behalf of another party; may or may not transmit entries directly".
   - A TPS is a TPSP acting for an Originator "without a direct agreement between the Originator and the ODFI".
   - The deciding fact is who holds the origination agreement with the ODFI.
-- **Fraud monitoring [A, SRC-FIN2-010].** Rules effective 2026-03-20 (Phase 1) and 2026-06-22 practical date (Phase 2) require risk-based fraud monitoring by:
+- **Fraud monitoring [IC, SRC-FIN2-010: Nacha summary page; Rules text not read].** Rules effective 2026-03-20 (Phase 1) and 2026-06-22 practical date (Phase 2) require risk-based fraud monitoring by:
   - non-consumer Originators, TPSPs and TPSs;
   - ODFIs and RDFIs.
 
@@ -129,20 +129,21 @@ Everything here is design. No bank, processor, partner or custodian agreement ex
 ## 4. Questions for counsel (with our proposed interpretation)
 | Q | Question | Our proposed interpretation [AS] | Blocks |
 |---|---|---|---|
-| CQ-1 | If Echelon operates Unbound per CNV-LEG-001 (no accounts, no execution capability, instructions under sponsor agreements), is Echelon a money transmitter under 31 CFR 1010.100(ff)(5) or any target state's law? | No: Echelon never accepts value; (ii)(A) supports instruction-only service. State laws to be checked for "receiving money for transmission" interpretations. | Requirements finalization (FIN-BC-026 wording) |
+| CQ-1 | If Echelon operates Unbound per CNV-LEG-001 (no accounts, no execution capability, instructions under sponsor agreements), is Echelon a money transmitter under 31 CFR 1010.100(ff)(5) or any target state's law? | No under limb (i)(A), because Echelon never accepts value; limb (i)(B) ("any other person engaged in the transfer of funds") needs counsel's view for instruction and file transmission; (ii)(A) may apply only where the recipient (ODFI, partner) is itself a money transmitter. State laws to be checked for "receiving money for transmission" interpretations. | Production launch; the baseline handles it through the BR-FIN-020 activation gate |
 | CQ-2 | In the networked-partner rail (F9), does Echelon's sending of payment instructions to the partner make Echelon an agent or delegate of the partner, or a party to transmission, in any state? Does the answer change if Echelon has its own contract with the partner? | No, provided Echelon contracts only as the sponsor's technology provider and the sponsor's partner agreement authorizes instructions. | Production launch of F9 |
-| CQ-3 | Can any exclusion ((ii)(B) payment processor, (ii)(F) integral, state agent-of-payee) be relied on for contribution collection or grant payment if Echelon ever touches funds? | Do not rely on them: grants are not goods/services; design so they are unnecessary. | Requirements finalization |
+| CQ-3 | Can any exclusion ((ii)(B) payment processor, (ii)(F) integral, state agent-of-payee) be relied on for contribution collection or grant payment if Echelon ever touches funds? | Do not rely on them: grants are not goods/services; design so they are unnecessary. | Production launch (baseline already assumes they are unavailable) |
 | CQ-4 | For sponsor-originated ACH (F7), is Echelon a Nacha TPSP only, and what TPSP obligations (fraud monitoring, data security, audit) attach by contract? Would transmitting files directly to the ODFI change status? | TPSP only while the sponsor holds the ODFI agreement; direct transmission does not by itself create TPS status. | Implementation (bank adapter) |
-| CQ-5 | If a bank or bank subsidiary is the contracting customer (decision 1, F12), is Echelon subject to 12 U.S.C. 1867(c) examination, and which regulator's third-party and incident-notice expectations apply contractually? | Likely within 1867(c) for data processing and recordkeeping services to the bank; plan for examination access and bank TPRM terms. | Requirements finalization (decision 1 scope; OQ-205) |
-| CQ-6 | Does "servicing" by Echelon staff (e.g., an E5 administrator model) risk Echelon holding sponsor authority, contrary to CNV-GOV-004? Which servicing tasks may Echelon perform without becoming an agent with authority over charitable assets? | Echelon may perform A0-A2 tasks under per-sponsor ServiceDelegation; never A3+ or payment release. | Requirements finalization |
+| CQ-5 | If a bank or bank subsidiary is the contracting customer (decision 1, F12), is Echelon subject to 12 U.S.C. 1867(c) examination, and which regulator's third-party and incident-notice expectations apply contractually? | Likely within 1867(c) for data processing and recordkeeping services to the bank; plan for examination access and bank TPRM terms. | Bank customer onboarding (F12 excluded from release 1 pending ODP-05) |
+| CQ-6 | Does "servicing" by Echelon staff (e.g., an E5 administrator model) risk Echelon holding sponsor authority, contrary to CNV-GOV-004? Which servicing tasks may Echelon perform without becoming an agent with authority over charitable assets? | Echelon may perform A0-A2 tasks under per-sponsor ServiceDelegation; never A3+ or payment release. | Production launch (baseline already encodes the restriction in BR-FIN-006, BR-FIN-010, BR-FIN-018) |
 | CQ-7 | Allocation of OFAC screening, blocking and reporting between sponsor and Echelon; is Echelon's own exposure satisfied by screening on the sponsor's behalf? | Sponsor blocks and reports; Echelon screens and fences as contracted and maintains its own risk-based program. | Implementation |
 | CQ-8 | Does Unbound-generated acknowledgment content and timing (including the 170(f)(18) statement and corrections after returns) meet substantiation rules when issued in the sponsor's name by a vendor system? | Yes if issued in the sponsor's name from a sponsor-approved template; Echelon never named as donee. | Production launch |
 | CQ-9 | Does a donor-covered processing fee, or an Echelon platform fee paid by the donor, change acknowledgment amount or create money-transmission or fundraising-platform issues? | Follow CNV-PAY-006; Echelon fees invoiced, never netted. | Production launch (card/processor) |
-| CQ-10 | Is a protective hold placed by Echelon (CNV-PLT-007) an exercise of control over funds that affects custody or transmission analysis? | No: time-bounded, sponsor-adopted, sponsor can override via its own bank channel. | Requirements finalization |
+| CQ-10 | Is a protective hold placed by Echelon (CNV-PLT-007) an exercise of control over funds that affects custody or transmission analysis? | No: time-bounded, sponsor-adopted, sponsor can override via its own bank channel. | Production launch |
 | CQ-11 | State unclaimed-property treatment of voided grant checks and priority rules (CNV-PAY-003). | As Unbound default: hold and report when unknown. | Production launch |
 
 ## 5. Blocking summary
-- **Before requirements finalization:**
+- **Correction (consolidation challenge pass, 2026-11-25).** These questions were first labelled as blocking requirements finalization. The baseline now expresses each answer-dependent choice as a gated requirement (BR-FIN-020 activation gate; BR-FIN-006 authority limits), so the requirements can be finalized while the questions stay open; they block production launch or the specific flow. The register (`registers/question-dispositions.csv`) is authoritative for blocking tiers.
+- **Originally listed before requirements finalization:**
   - CQ-1, CQ-3, CQ-5, CQ-6 and CQ-10;
   - entity map (fact 1);
   - resolution of the decision 1 contradiction (financial institutions as customers versus "no direct bank service relationship").

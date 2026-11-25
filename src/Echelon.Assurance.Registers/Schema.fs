@@ -530,7 +530,7 @@ let registers: RegisterSpec list =
             "source_dispositions"
             "requirements/source-dispositions.csv"
             "source_req_id"
-            @"^(SBC|FIN-BC|PEC|AIG-BC|VAL-BC|CST|ECON|GOV-BC)-\d{3}$|^CA-[A-Z]+-\d{2}$"
+            @"^(SBC|FIN-BC|PEC|AIG-BC|VAL-BC|CST|ECON|GOV-BC)-\d{3}$|^CA-[A-Z]+-\d{2}$|^REC-\d{2}$|^SBC-VC-\d{2}$"
             [
                 "source_req_id"
                 "source_document"
@@ -553,6 +553,7 @@ let registers: RegisterSpec list =
                 set
                     [
                         "verified-implemented"
+                        "implemented-unverified"
                         "partially-implemented"
                         "specified-only"
                         "absent"

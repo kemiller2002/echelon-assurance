@@ -133,8 +133,8 @@ regulated-adjacent and of high consequence, and some of its commitments have low
 correctability (retention destruction, funds-flow characterization).
 
 ### 1. Executive Understanding
-The program now has one baseline: 107 requirements that consolidate all 189
-original owner requirements, with no requirement removed. The baseline is traced
+The program now has one baseline: 113 requirements that consolidate 208
+source items, including all 189 original owner requirements; no mandatory obligation is removed. The baseline is traced
 to tenets, policies, controls, validation and evidence, and a validator enforces
 the tracing. Nothing operates yet. The largest uncertainties are external: auditor
 reliance, legal characterization of funds flows, and insurer and customer
@@ -148,7 +148,7 @@ assumed exist.
 | C2. Security-by-construction requirements eliminate the named vulnerability classes within verified boundaries | discovery | Medium (design only; no boundary implemented) | Engineering lead |
 | C3. Unbound's design keeps Echelon out of custody and money transmission | discovery | Medium–Low (flow F9 and bank white-label unresolved) | Owner, pending counsel |
 | C4. Continuous internal testing reduces external testing cost | discovery | Low (no data; external fee unaffected by assumption) | Engineering lead |
-| C5. Targeted automation is economically preferable from 2–3 products | discovery | Low–Medium (true only if auditors rely on system evidence) | Owner |
+| C5. Targeted automation is economically preferable from about 3–5 products | discovery | Low (true only if auditors rely on system evidence; alternatives indistinguishable at 1–2 products; owner capacity may bind first) | Owner |
 | C6. One human can operate the program with AI agents and fractional review | reassessment | Medium–Low (separation-of-duties conflicts persist) | Owner |
 | C7. Existing Echelon systems can provide the assurance capabilities | reassessment | Low (capability verification contradicts 4 of the assumptions) | Owner |
 
@@ -187,11 +187,11 @@ went from implied-high to Low. The economics claim was raised from the original
 ### 8. Monitoring Plan
 | Signal | Threshold | Trigger claim | Response | Trigger reassessment |
 |---|---|---|---|---|
-| Auditor scoping response (WI-EXT-01) | Written position received | C5 | If no reliance: adopt A6 hybrid (DF-ASR-2026-C005) | Revisit when the auditor changes |
+| Auditor scoping response (WI-EXT-01) | Written position received | C5 | If no reliance: stay on A4 minimum viable; do not build evidence-collection automation (DF-ASR-2026-C005) | Revisit when the auditor changes |
 | Capability work item completion (WI-STRATA-01, WI-PRAXIS-01, WI-VIGILA-02) | Each reaches `done` with executed tests | C7, C2 | Update capability register; raise baseline status only with evidence | Each release of those systems |
 | Counsel response on funds flows (WI-EXT-03) | Received | C3 | Adjust BR-FIN-020 perimeter and the roadmap | Any new rail or bank customer |
 | Owner decision latency | More than 10 proposed decisions older than 30 days | C6 | Reduce proposal rate; batch decisions | Quarterly |
-| Actual maintenance hours versus estimate | More than 1.5× estimate for two quarters | C5 | Switch evidence collection to A6 | Annually |
+| Actual maintenance hours versus estimate | More than 1.5× estimate for two quarters | C5 | Stop expanding internal automation; reconsider A3-style outsourced support | Annually |
 | Traceability findings in CI | Above zero | C1 | Merge blocked (once WI-ASR-03 is done) | Continuous |
 
 ### 9. Reassessment Plan

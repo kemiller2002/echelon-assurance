@@ -35,30 +35,54 @@ carried over from v1 (SRC-ECON-001…005, SRC-PTV-029/030/036). Every hour
 estimate, scaling factor and remediation figure is **hypothetical**. Each line
 carries its class in `activities.csv`.
 
-## Results (base case, five years, undiscounted, incremental only)
+## Results (generated `generated/model.md` is authoritative)
 
-The figures are summarized here; `generated/model.md` is authoritative.
+**Revision note.** The first v2 run charged maintenance and auditor non-reliance only to Echelon-built alternatives. The challenge passes (`findings/validation-report.md`, R1-012, R2-022, R2-024) found that biased. The model now does the following:
 
-- **At one product** the alternatives overlap heavily. Midpoints run from USD 1.11M (A3) to 1.33M (A1), and USD 2.0M for A7. External examinations, penetration testing and core diligence are identical across alternatives. At the midpoint they are about 35–41% of each alternative's cost (23% for A7); at the low end of the ranges they are about half. The choice of assurance approach matters far less than the external scope.
-- **Marginal cost per extra product (midpoint).** Lowest is A7 (USD ~300k) and A5 (USD ~325k), against A2 (~460k) and A1 (~690k). Shared automation pays off through reuse, as tenet TNT-14 predicts.
-- **Break-even (base case):**
-  - A5 targeted automation matches A2 commercial platform at 2 products and A3 outsourced management at 3.
-  - A7 full internal platform needs 7–8 products.
-- **Auditor non-reliance (S4) changes the conclusion:**
-  - A5 never breaks even against A2 or A3 within 30 products.
-  - A6 hybrid still breaks even at 4 (A2) and 8 (A3).
-  - A4 minimum viable is unaffected, because it relies on little system-generated evidence.
-- **High maintenance plus non-reliance (S5):** A6 is the only automated option still competitive. A7 never breaks even against A2 or A3.
+- Platform integration upkeep is charged to A2 and A6.
+- Non-reliance lines are charged to A2 and A3, because their evidence is also system-generated.
+- A6's non-reliance hours cover the financial and AI controls it shares with A5.
+- The fractional reviewer grows per product.
 
-## Decisions supported (DF-ASR-2026-C005, proposed)
+The conclusions below come from the corrected run.
 
-1. **Immediately:** A4 minimum viable assurance, plus prevention and testing automation, which has value regardless of auditor reliance.
-2. **Deferred:** evidence-collection automation, until a written auditor position on reliance exists (WI-EXT-01). If reliance is unavailable, use A6.
-3. **Never without demonstrated demand:**
-   - A7 feature-parity platform;
-   - custom ledger or anchoring;
-   - OSCAL;
-   - AI certifications.
+**Base case (S0), five-year midpoints:**
+
+- **At N = 1–2 the alternatives are indistinguishable.** The ranges span about 3×, while the midpoints differ by under 10% (A3 1.13M, A4 1.17M, A2 1.21M, A5 1.27M at N=1). Break-even counts at N ≤ 2 carry no signal.
+- **From N = 5, targeted automation (A5) has the lowest midpoint.** It reaches 2.67M at N=5 against 2.90M for A3 and 3.16M for A2. It breaks even with A3 at 3 products.
+- **The full internal platform (A7) breaks even late.** It matches A2 at 6 products and A3 at 9.
+- **Marginal five-year cost per extra product (midpoint):**
+
+  | A7 | A5 | A6 | A4 | A3 | A2 | A1 |
+  |---|---|---|---|---|---|---|
+  | ~325k | ~350k | ~375k | ~450k | ~440k | ~490k | ~720k |
+
+**Auditor non-reliance (S4) and the downside case (S5):**
+
+- **The minimum viable option (A4) has the lowest or near-lowest midpoint at every product count.** It relies on little system-generated evidence.
+- **Outsourced management (A3) is within about 3–4% of A4.**
+- **Targeted automation and the hybrid never break even against A3** within 30 products. Against A2 they break even at 5 (A5) and 4 (A6) products, or 7 and 6 in S5.
+
+**Slow adoption (S6)** delays A5's advantage but does not remove it (A5 is lowest from N=5).
+
+## Owner capacity
+
+The model prices hours but a single owner has about 1,800 working hours a year,
+shared with product and company work. Recurring assurance labor implied by the
+inputs (steady state, hypothetical):
+
+| Alternative | N=1 | N=3 | N=3, auditor non-reliance |
+|---|---|---|---|
+| A3 outsourced | 85–300 h | 190–680 h | 280–940 h |
+| A4 minimum viable | 300–810 h | 570–1,540 h | 570–1,540 h |
+| A5 targeted | 275–760 h (+120–290 h/yr build, amortized) | 380–1,060 h | 820–2,160 h |
+| A6 hybrid | 265–760 h | 370–1,060 h | 720–1,940 h |
+
+At three products, every alternative except A3 can consume most of one
+person's year. Capacity, not cash, is likely the binding constraint. The model
+proposes an owner-set threshold (for example, recurring assurance labor above
+25% of owner capacity, about 450 h a year) that triggers contracting
+(A3-style support or a fractional reviewer) or a hire (BR-GOV-011, ODP-09).
 
 ## Limitations
 

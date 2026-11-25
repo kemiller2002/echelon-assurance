@@ -149,3 +149,79 @@ let ``backlog dependency on a later phase or in a cycle is reported`` () =
     |> ignore
 
     Assert.Equal(2, List.length (backlogOrder [ wi "WI-A-01" "P1" "WI-A-02"; wi "WI-A-02" "P1" "WI-A-01" ]))
+
+[<Fact>]
+let ``baseline validation and evidence must belong to its controls`` () =
+    let ctl =
+        rec'
+            [
+                "control_id", "CTL-APP-001"
+                "policy_ids", "POL-06.01"
+                "validation_ids", "VAL-001"
+                "evidence_type_ids", "EVT-003"
+            ]
+
+    let good =
+        rec'
+            [
+                "br_id", "BR-APP-001"
+                "control_ids", "CTL-APP-001"
+                "policy_ids", "POL-06"
+                "validation_ids", "VAL-001"
+                "evidence_type_ids", "EVT-003"
+            ]
+
+    Assert.Empty(controlAlignment [ ctl ] [ good ])
+    let bad = good.Add("validation_ids", "VAL-002").Add("policy_ids", "POL-12.02")
+    Assert.Equal(2, List.length (controlAlignment [ ctl ] [ bad ]))
+
+[<Fact>]
+let ``baseline requirement needs a work item at its own phase`` () =
+    let b =
+        rec' [ "br_id", "BR-APP-001"; "roadmap_phase", "P1"; "disposition", "retain" ]
+
+    let w phase =
+        rec'
+            [
+                "work_item_id", "WI-A-01"
+                "phase", phase
+                "requirements_addressed", "BR-APP-001"
+            ]
+
+    Assert.Empty(roadmapCoverage [ b ] [ w "P1" ])
+    Assert.Single(roadmapCoverage [ b ] [ w "P2" ]) |> ignore
+    Assert.Single(roadmapCoverage [ b ] []) |> ignore
+    Assert.Empty(roadmapCoverage [ b.Add("disposition", "defer") ] [])
+
+[<Fact>]
+let ``verified capability requires executed tests`` () =
+    let c basis =
+        rec'
+            [
+                "system_id", "SYS-X"
+                "status", "verified-implemented"
+                "verification_basis", basis
+            ]
+
+    Assert.Empty(capabilityInflation [ c "tests-executed" ])
+    Assert.Single(capabilityInflation [ c "source-inspected" ]) |> ignore
+
+[<Fact>]
+let ``public answers cannot cite designed controls or deferred mechanisms`` () =
+    let ctl = rec' [ "control_id", "CTL-ASR-002"; "status", "Designed" ]
+
+    let a cls text =
+        rec'
+            [
+                "question_id", "CAQ-001"
+                "disclosure_class", cls
+                "related_control_ids", "CTL-ASR-002"
+                "proposed_answer", text
+            ]
+
+    Assert.Single(answerDisclosure [ ctl ] [ a "public" "Designed." ]) |> ignore
+
+    Assert.Single(answerDisclosure [ ctl ] [ a "customer-nda" "Uses external anchoring." ])
+    |> ignore
+
+    Assert.Empty(answerDisclosure [ ctl ] [ a "customer-nda" "Designed, not yet operating." ])
