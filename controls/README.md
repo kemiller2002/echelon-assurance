@@ -17,7 +17,7 @@ Adopted from Unbound `SOC2-019` and extended:
 | `Specified` | Implementation specification exists | Linked specification |
 | `Implemented` | Mechanism exists in a system | Code/config reference and test |
 | `Operating` | Has produced operating evidence in the real environment | Dated evidence records |
-| `Tested` | Effectiveness tested by a validation procedure | `VAL-` result with independence level |
+| `Tested` | Effectiveness tested by a validation procedure | `VAL-` result with independence level `internal-independent` or higher; automated or self-assessment results alone never support `Tested` |
 | `Deficient` | Failed a test or found not operating | Finding reference (restricted) |
 | `Remediating` | Deficiency under remediation | Remediation record |
 | `AuditorReviewed` | Examined by an independent auditor in an attestation | Auditor report reference |
