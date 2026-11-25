@@ -1,0 +1,156 @@
+[
+  {
+    "created": "2026-11-25",
+    "id": "JR-ASR-2026-0D00",
+    "path": "research/journals/JR-ASR-2026-0D00--owner-decision-reconciliation-and-sensitivity-review.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261125T233256557Z-3f771e74": {
+          "actor": {
+            "id": "claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-25T23:33:03.232Z",
+          "operations": [
+            "origin-unrecorded"
+          ],
+          "reason": "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
+        }
+      }
+    },
+    "status": "complete",
+    "title": "Reconciliation with owner-approved foundations and pre-merge sensitivity review"
+  },
+  {
+    "created": "2026-11-25",
+    "id": "JR-ASR-2026-5C01",
+    "path": "research/journals/JR-ASR-2026-5C01--review-pass-2-3-source-accuracy-regulatory.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261125T233256557Z-3f771e74": {
+          "actor": {
+            "id": "claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-25T23:33:03.651Z",
+          "operations": [
+            "origin-unrecorded"
+          ],
+          "reason": "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
+        }
+      }
+    },
+    "status": "complete",
+    "title": "Review passes 2 and 3 - source accuracy and regulatory applicability (2026-11-25)"
+  },
+  {
+    "created": "2026-11-25",
+    "id": "JR-ASR-2026-5C02",
+    "path": "research/journals/JR-ASR-2026-5C02--review-passes-4-5-6-8-9-10.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261125T233256557Z-3f771e74": {
+          "actor": {
+            "id": "claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-25T23:33:03.965Z",
+          "operations": [
+            "origin-unrecorded"
+          ],
+          "reason": "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
+        }
+      }
+    },
+    "status": "complete",
+    "title": "Review passes 4, 5, 6, 8, 9 and 10 - consistency, automation feasibility, independence, security architecture, Unbound fit, auditor-acceptance wording"
+  },
+  {
+    "created": "2026-11-25",
+    "id": "JR-ASR-2026-5C03",
+    "path": "research/journals/JR-ASR-2026-5C03--review-passes-1-7.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261125T233256557Z-3f771e74": {
+          "actor": {
+            "id": "claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-25T23:33:04.293Z",
+          "operations": [
+            "origin-unrecorded"
+          ],
+          "reason": "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
+        }
+      }
+    },
+    "status": "complete",
+    "title": "Review passes 1 (research completeness) and 7 (economic viability)"
+  },
+  {
+    "created": "2026-11-25",
+    "id": "JR-ASR-2026-B001",
+    "path": "research/journals/JR-ASR-2026-B001--research-batches-b0-b7.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261125T233256557Z-3f771e74": {
+          "actor": {
+            "id": "claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-25T23:33:04.630Z",
+          "operations": [
+            "origin-unrecorded"
+          ],
+          "reason": "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
+        }
+      }
+    },
+    "status": "complete",
+    "title": "Research batches B0-B7 (2026-11-25)"
+  },
+  {
+    "branch": "claude/echelon-assurance-consolidation-jygy23",
+    "created": "2026-11-25",
+    "id": "JR-ASR-2026-C001",
+    "path": "research/journals/JR-ASR-2026-C001--assurance-consolidation.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261125T233256557Z-3f771e74": {
+          "actor": {
+            "id": "claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-25T23:33:13.608Z",
+          "evidence": [
+            "findings/validation-report.md"
+          ],
+          "operations": [
+            "created"
+          ],
+          "reason": "Consolidation journal"
+        }
+      }
+    },
+    "status": "complete pending owner decisions",
+    "title": "Assurance consolidation, challenge and requirements finalization"
+  }
+]

@@ -37,7 +37,7 @@ Baseline requirements: 114. Original owner requirements dispositioned: 208. Cont
 | BR-FIN-006 | Separated authority for movement of funds | TNT-02, TNT-11 | POL-12.01, POL-11.01, POL-11.02 | CTL-FIN-002, CTL-AI-002 | VAL-004, VAL-003 | EVT-018, EVT-017 | Designed | strengthen |
 | BR-FIN-007 | External payment destination integrity | TNT-02, TNT-11 | POL-12.04, POL-12.06, POL-10.03 | CTL-FIN-006, CTL-FIN-014 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | retain |
 | BR-FIN-008 | Two-way reconciliation against external sources | TNT-02, TNT-11 | POL-12.03 | CTL-FIN-004 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | strengthen |
-| BR-FIN-009 | Complete financial event populations | TNT-02, TNT-11 | POL-12.06, POL-01.04 | CTL-FIN-003, CTL-ASR-003 | VAL-011, VAL-010 | EVT-022 | Designed | retain |
+| BR-FIN-009 | Complete financial event populations | TNT-02, TNT-11, TNT-17 | POL-12.06, POL-01.04 | CTL-FIN-003, CTL-ASR-003 | VAL-011, VAL-010 | EVT-022 | Designed | retain |
 | BR-FIN-010 | Controlled accounting periods | TNT-02, TNT-11 | POL-12.02 | CTL-FIN-010 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | strengthen |
 | BR-FIN-011 | Reproducible historical reports | TNT-02, TNT-11 | POL-12.02 | CTL-FIN-012 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | retain |
 | BR-FIN-012 | Fee calculation correctness | TNT-02, TNT-11 | POL-12.02, POL-13.02 | CTL-FIN-008 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | simplify |
@@ -51,7 +51,7 @@ Baseline requirements: 114. Original owner requirements dispositioned: 208. Cont
 | BR-GOV-002 | Generated policy artifacts only where they reduce maintenance | TNT-04, TNT-12, TNT-13 | POL-01.08, POL-01.04 | CTL-GOV-014 | VAL-001 | EVT-003 | Designed | simplify |
 | BR-GOV-003 | Policy approval, activation, rollback and history | TNT-04, TNT-12 | POL-01.08, POL-11.02 | CTL-GOV-002, CTL-GOV-003 | VAL-004, VAL-023 | EVT-021 | Designed | consolidate |
 | BR-GOV-004 | Bounded, expiring exceptions | TNT-04, TNT-12 | POL-01.05, POL-11.02, POL-11.06 | CTL-GOV-007, CTL-AI-005 | VAL-004 | EVT-026 | Designed | consolidate |
-| BR-GOV-005 | Explicit enforcement point, failure mode and verification mode | TNT-04, TNT-12 | POL-01.08, POL-01.04 | CTL-GOV-014, CTL-ASR-011 | VAL-008 | EVT-003 | Designed | consolidate |
+| BR-GOV-005 | Explicit enforcement point, failure mode and verification mode | TNT-04, TNT-12, TNT-17 | POL-01.08, POL-01.04 | CTL-GOV-014, CTL-ASR-011 | VAL-008 | EVT-003 | Designed | consolidate |
 | BR-GOV-006 | Human obligations tracked to completion evidence | TNT-04, TNT-12 | POL-01.04, POL-01.09 | CTL-GOV-015 | VAL-010 | EVT-010, EVT-020 | Designed | retain |
 | BR-GOV-007 | Responsibility and delegation register | TNT-04, TNT-12 | POL-01.01, POL-01.06 | CTL-GOV-001, CTL-GOV-008 | VAL-004 | EVT-033, EVT-021 | Designed | consolidate |
 | BR-GOV-008 | Risk register with owners and triggers | TNT-04, TNT-12 | POL-01.02 | CTL-GOV-004 | VAL-032, VAL-037 | EVT-033 | Designed | consolidate |
@@ -59,16 +59,16 @@ Baseline requirements: 114. Original owner requirements dispositioned: 208. Cont
 | BR-GOV-010 | Bidirectional requirements traceability | TNT-04, TNT-12 | POL-01.03 | CTL-GOV-005 | VAL-001 | EVT-003, EVT-033 | Designed | retain |
 | BR-GOV-011 | Management review generated from evidence, exception-based | TNT-04, TNT-12 | POL-01.09 | CTL-GOV-010 | VAL-032 | EVT-021 | Designed | simplify |
 | BR-GOV-012 | Regulatory change monitoring with human activation | TNT-04, TNT-12 | POL-01.03 | CTL-GOV-006 | VAL-037 | EVT-033, EVT-021 | Designed | retain |
-| BR-GOV-013 | Owner unavailability and succession | TNT-04, TNT-12 | POL-01.01, POL-09.02 | CTL-GOV-001, CTL-BCR-002 | VAL-038 | EVT-034 | Designed | escalate |
+| BR-GOV-013 | Owner unavailability and succession | TNT-04, TNT-12 | POL-01.01, POL-09.02 | CTL-GOV-001, CTL-BCR-002 | VAL-038 | EVT-034 | Designed | retain |
 | BR-GOV-014 | Organizational knowledge durable and attributable | TNT-04, TNT-12 | POL-01.08 | CTL-GOV-002 | VAL-001 | EVT-001 | Designed | retain |
 | BR-GOV-015 | Assurance economics model and cost telemetry | TNT-04, TNT-12, TNT-14 | POL-01.09 | CTL-GOV-010 | VAL-001, VAL-037 | EVT-033 | Designed | consolidate |
-| BR-ASR-001 | Evidence at the authoritative enforcement point with a minimal envelope | TNT-05, TNT-06, TNT-09 | POL-01.04 | CTL-ASR-001 | VAL-002 | EVT-022 | Designed | consolidate |
+| BR-ASR-001 | Evidence at the authoritative enforcement point with a minimal envelope | TNT-05, TNT-06, TNT-09, TNT-17 | POL-01.04 | CTL-ASR-001 | VAL-002 | EVT-022 | Designed | consolidate |
 | BR-ASR-002 | Assurance status vocabulary and unknown-is-not-pass | TNT-05, TNT-06 | POL-01.04, POL-01.03, POL-13.04 | CTL-ASR-011, CTL-GOV-012 | VAL-001, VAL-024 | EVT-003 | Designed | consolidate |
-| BR-ASR-003 | Separately sourced population completeness reconciliation | TNT-05, TNT-06 | POL-01.04 | CTL-ASR-003 | VAL-011 | EVT-022 | Designed | retain |
+| BR-ASR-003 | Separately sourced population completeness reconciliation | TNT-05, TNT-06, TNT-17 | POL-01.04 | CTL-ASR-003 | VAL-011 | EVT-022 | Designed | retain |
 | BR-ASR-004 | Freshness, expiry, revocation and revalidation | TNT-05, TNT-06 | POL-01.04 | CTL-ASR-011 | VAL-001 | EVT-003 | Designed | consolidate |
 | BR-ASR-005 | Separated evidence privileges,  no agent or application overwrite | TNT-05, TNT-06 | POL-04.02, POL-07.06, POL-11.02, POL-11.06 | CTL-ASR-006, CTL-AI-005 | VAL-004, VAL-018 | EVT-030, EVT-029 | Designed | consolidate |
 | BR-ASR-006 | Managed immutable evidence storage,  no custom ledger | TNT-05, TNT-06, TNT-13 | POL-07.06, POL-01.04, POL-04.02 | CTL-ASR-002, CTL-ASR-006 | VAL-018, VAL-012 | EVT-029 | Designed | replace |
-| BR-ASR-007 | Evidence payload minimization and classification | TNT-05, TNT-06 | POL-05.01, POL-07.06 | CTL-DAT-001, CTL-LOG-002 | VAL-009 | EVT-003 | Designed | retain |
+| BR-ASR-007 | Evidence payload minimization and classification | TNT-05, TNT-06, TNT-17 | POL-05.01, POL-07.06 | CTL-DAT-001, CTL-LOG-002 | VAL-009 | EVT-003 | Designed | retain |
 | BR-ASR-008 | Externally hosted heartbeat for collectors and security jobs | TNT-05, TNT-06 | POL-07.06 | CTL-ASR-004 | VAL-030 | EVT-023 | Designed | consolidate |
 | BR-ASR-009 | Reproducible examination packages | TNT-05, TNT-06 | POL-13.05, POL-01.03 | CTL-CUS-003 | VAL-019 | EVT-022 | Designed | retain |
 | BR-ASR-010 | Validate the assurance machinery | TNT-05, TNT-06 | POL-01.04 | CTL-ASR-005 | VAL-007, VAL-031, VAL-008 | EVT-004 | Designed | consolidate |
@@ -104,7 +104,7 @@ Baseline requirements: 114. Original owner requirements dispositioned: 208. Cont
 | BR-VEN-001 | Vendor and subservice register with exit plans | TNT-08 | POL-10.01, POL-10.03 | CTL-VEN-001, CTL-VEN-002, CTL-VEN-004 | VAL-037 | EVT-033 | Designed | retain |
 | BR-CUS-001 | Customer assurance answer bank generated from authoritative records | TNT-10 | POL-13.04, POL-01.03 | CTL-CUS-004, CTL-GOV-012 | VAL-024 | EVT-003 | Designed | retain |
 | BR-CUS-002 | Public assurance interface with controlled disclosure | TNT-10 | POL-13.04, POL-01.03 | CTL-CUS-004, CTL-GOV-012 | VAL-024 | EVT-003 | Designed | consolidate |
-| BR-LOG-001 | Security event logging and alert routing | TNT-03, TNT-05 | POL-07.06, POL-08.01 | CTL-LOG-001, CTL-LOG-003 | VAL-010, VAL-030 | EVT-008 | Designed | retain |
+| BR-LOG-001 | Security event logging and alert routing | TNT-03, TNT-05, TNT-17 | POL-07.06, POL-08.01 | CTL-LOG-001, CTL-LOG-003 | VAL-010, VAL-030 | EVT-008 | Designed | retain |
 | BR-IAM-004 | Access as code, drift detection and access attestation | TNT-01, TNT-12 | POL-04.01, POL-04.06 | CTL-IAM-002, CTL-IAM-003, CTL-IAM-009 | VAL-013, VAL-009 | EVT-009, EVT-010 | Designed | simplify |
 | BR-SDL-004 | Threat modelling for material changes | TNT-03, TNT-11, TNT-12 | POL-06.01, POL-06.07 | CTL-SDL-003 | VAL-023 | EVT-002 | Designed | retain |
 | BR-FIN-019 | Fraud detection and triage | TNT-02, TNT-11 | POL-12.04 | CTL-FIN-013 | VAL-010 | EVT-017 | Designed | retain |

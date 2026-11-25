@@ -3,6 +3,18 @@ id: JR-ASR-2026-B001
 title: Research batches B0-B7 (2026-11-25)
 status: complete
 created: 2026-11-25
+provenance:
+  contributions:
+    EXE-20261125T233256557Z-3f771e74:
+      operations: [origin-unrecorded]
+      at: 2026-11-25T23:33:04.630Z
+      actor:
+        kind: agent
+        id: claude-code
+        provider: anthropic
+        model: unknown
+        runtime: claude-code
+      reason: "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
 ---
 
 # Journal: research batches B0–B7

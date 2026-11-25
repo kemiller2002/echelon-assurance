@@ -32,7 +32,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 | Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 113 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
 | Dispositions | None | `requirements/source-dispositions.csv` (208 items): 149 consolidate, 34 retain, 12 simplify, 8 strengthen, 2 replace, 2 defer, 1 remove (editorial) |
 | Hierarchy | Implicit | 16 tenets → 83 policy entries → 121 controls → 113 baseline requirements → enforcement, validation (39 procedures) and evidence (35 types); generated traceability matrix |
-| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; 9 block requirements finalization, all owner decisions; 19 block implementation |
+| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; none block requirements finalization; 15 block implementation, 38 production launch and 33 external examination |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems, tests executed for 5 |
 | Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
 | Roadmap | Narrative | `roadmap/backlog.csv`: 61 dependency-ordered work items across 15 repositories plus owner and managed-service actions; every live baseline requirement has a work item |
@@ -40,8 +40,8 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 ## 2. Most important findings
 
 1. **Owner-assumed capabilities do not exist yet** (`integration/capability-findings.md`):
-   - **Vigila** has no logging or observability code, and the Registry records a same-day owner deferral of observability (ODP-06).
-   - **Strata** is schema governance only; it has no runtime data-access layer (ODP-07, L effort).
+   - **Vigila** has no logging or observability code. The owner has since retained it as the observability initiative on managed infrastructure (DF-ASR-2026-0D10); the Registry record still needs reconciling.
+   - **Strata** is schema governance only; it has no runtime data-access layer. A thin runtime is now approved (DF-ASR-2026-0D10; L effort).
    - **Praxis** provenance is self-reported; verified completion is implemented but enabled nowhere.
    - **Conditor** signing has no trusted keys.
    - **Arca** has hashes but no immutable storage.
@@ -50,7 +50,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 2. **Governance checks are advisory.** As of 2026-11-25 the repositories did not enforce required checks on `main` (RSK-060). Enforcing them is the cheapest high-value action (WI-ASR-03).
 3. **Funds flows.** Unbound is designed so that sponsors hold all accounts and Unbound only relays instructions.
    - **Our working interpretation, not a legal conclusion:** the first limb of FinCEN's definition (acceptance and transmission) is not met. The second limb ("any other person engaged in the transfer of funds") needs counsel's view for instruction and file transmission.
-   - **Counsel is needed before any production launch** on the core money-transmitter and custody questions (ODP-12). **Two flows need specific answers before release 1:** the payment-partner rail, where the partner holds funds in transit, and white-label for banks (`findings/financial-integrity-review.md`, ODP-05).
+   - **No production activation while material money-transmitter and custody questions are unresolved.** Under owner direction DF-ASR-2026-0D0F these are worked by internal primary-source research; no counsel is engaged now. **Two flows need specific answers before release 1:** the payment-partner rail, where the partner holds funds in transit, and white-label for banks (`findings/financial-integrity-review.md`, ODP-05).
    - **New activation gate, BR-FIN-020:** refuses configurations that would put Echelon in the flow of funds, and records who holds each dispatch credential. Unbound must never hold a credential that alone can dispatch money.
 4. **Contradictions resolved by strengthening, not weakening:**
    - AI agents never authorize money movement in any scope (DF-ASR-2026-C004).
@@ -70,13 +70,15 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Fractional review is proposed for 17 key controls only (ODP-02).
 8. **Questions.** No question was falsely closed:
    - 28 depend on the auditor, 21 on counsel and 15 on customers.
-   - 22 are proposed decisions awaiting the owner. OQ-760 and OQ-806 were reopened because owner records conflict, and OQ-800 because its one-human rule awaits ODP-02.
-   - Only 9 block requirements finalization, and all 9 are owner decisions that need no paid advice.
+   - 19 are answered, 18 of them by owner decision; 2 proposals remain on commercial intent (OQ-114, OQ-766).
+   - None blocks requirements finalization. 94 remain open, with their external dependencies preserved.
 
-## 3. What the owner needs to do
+## 3. Owner decisions and what remains
 
-The owner's direction of 2026-11-25 (DF-ASR-2026-0D0F) decided six of the
-twelve package items:
+All twelve owner decision package items are decided, by two owner records of
+2026-11-25.
+
+**DF-ASR-2026-0D0F** (internal review; external services deferred):
 
 - internal multi-agent review instead of purchased independent review;
 - no counsel engagement now;
@@ -85,16 +87,25 @@ twelve package items:
 - continuous assurance prioritized without assuming auditor reliance;
 - no self-approval of material exceptions.
 
-It has been reconciled into the baseline, registers, economics (scenario S8) and roadmap.
+**DF-ASR-2026-0D10** (remaining approvals):
 
-Still awaiting the owner in `docs/decisions/owner-decision-package-2026-11-25.md`:
+- baseline approved in principle;
+- emergency and protected-reporting roles defined, with naming deferred;
+- Vigila retained as the observability initiative on managed infrastructure;
+- a thin Strata runtime;
+- restricted research-agent design;
+- US-first operations and deferred card payments;
+- AICPA standards research;
+- no AI authorization of money movement;
+- mandatory Praxis governance and rulesets;
+- a new tenet, evidence by construction (TNT-17).
 
-- ODP-01: baseline approval;
-- ODP-04: successor and protected-reporting recipient;
-- ODP-06: observability conflict;
-- ODP-07: Strata scope;
-- ODP-08: prompt-injection residual risk;
-- ODP-10: quick confirmations, including protecting `main` and installing Praxis.
+Both are reconciled into the baseline, registers, economics and roadmap.
+
+**Remaining owner actions:**
+
+- Apply repository rulesets on `main` (WI-ASR-03). Praxis 3.25.0 was installed on 2026-11-25.
+- Name the delegate and protected-reporting recipient before production launch (OQ-607).
 
 ## 4. Claims status
 

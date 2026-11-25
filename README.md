@@ -7,7 +7,7 @@ validation methodology for an AI-native compliance operating model.
 > Make security and compliance measurable, continuously evidenced properties
 > of the organization rather than a periodic administrative exercise.
 
-**Status:** assurance consolidation complete for requirements, controls, decisions, economics and roadmap (journal `JR-ASR-2026-C001`); awaiting the owner decisions in [`docs/decisions/owner-decision-package-2026-11-25.md`](docs/decisions/owner-decision-package-2026-11-25.md). Nothing in this repository asserts that any
+**Status:** assurance consolidation complete for requirements, controls, decisions, economics and roadmap (journal `JR-ASR-2026-C001`); owner decisions recorded (DF-ASR-2026-0D0F, DF-ASR-2026-0D10); see [`docs/decisions/owner-decision-package-2026-11-25.md`](docs/decisions/owner-decision-package-2026-11-25.md). Nothing in this repository asserts that any
 Echelon system is compliant, that any control is operating effectively, or
 that any audit requirement is satisfied. See
 [`context/CURRENT-STATE.md`](context/CURRENT-STATE.md).

@@ -106,6 +106,25 @@ The owner then pushed `docs/decisions/owner-review-direction-2026-11-25.md`, reg
 
 Validation was rerun after reconciliation: 64 tests pass and all registers validate. No further challenge round was run on these edits: they implement an explicit owner decision and change no factual claim beyond it.
 
+## 3b. Owner remaining approvals and Praxis installation
+
+The owner then pushed `docs/decisions/owner-remaining-approvals-2026-11-25.md`, registered as DF-ASR-2026-0D10. It was reconciled as follows:
+
+- **Decisions.** C001 (in principle), C002, C003, C004 and C006 are accepted.
+- **Tenets.** TNT-17, evidence by construction, is added and realized by six baseline requirements.
+- **Baseline.** BR-GOV-013, BR-HR-002, BR-LOG-001, BR-ASR-008, BR-APP-001, BR-AI-004 and BR-SDL-001 are updated.
+- **Questions.** Twelve questions are answered by owner decision (OQ-208, 304, 505, 509, 611, 616, 760, 800, 802, 803, 806, 809). Others are reclassified to implementation or external dependencies. No question blocks requirements finalization.
+- **Backlog.** WI-ASR-01, WI-ASR-02 and WI-STRATA-04 are done; WI-VIGILA-01 and WI-ASR-03 are retitled.
+
+**Praxis.** Praxis 3.25.0 was installed with `praxis init`, from the checksum-verified native release.
+
+- `praxis verify` passes.
+- `praxis validate` passes, including with `PRAXIS_BASE_REF` set to `main` as CI runs it.
+- `praxis registry check` reports current registries.
+- The consolidation runs as Praxis work item WI-ASR-CONSOLIDATION.
+- Provenance is recorded for the consolidation journal. Journals created before installation are acknowledged as origin-unrecorded, with git history as the record.
+- Verified completion (`requireVerifiedCompletion` with pinned verifier keys) is not enabled in this installation; enabling it is WI-PRAXIS-03. The work item is therefore completed with evidence, not with a verifier-signed receipt.
+
 ## 4. Completion criteria (mission section 23)
 
 | Criterion | Status | Evidence |
@@ -118,9 +137,9 @@ Validation was rerun after reconciliation: 64 tests pass and all registers valid
 | Proposed capabilities distinguished from verified | Met | `integration/capability-verification.csv` with basis and status; validator blocks inflation |
 | Economic model reproducible and internally consistent | Met, with hypothetical inputs | `assurance econ`; CI currency check; 12 unit tests; no quotes exist |
 | Roadmap dependency-driven | Met | Validator: phase order, cycles, coverage, launch gates |
-| All applicable repository validation checks pass | Met | Section 1 |
+| All applicable repository validation checks pass | Met | Section 1; Praxis verify, validate and registry check (section 3b) |
 | No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; four review rounds |
-| Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items; 6 decided by DF-ASR-2026-0D0F) |
+| Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items, all decided by DF-ASR-2026-0D0F and 0D10) |
 
 ## 5. Conflicts with existing tooling and standards (documented, not disabled)
 

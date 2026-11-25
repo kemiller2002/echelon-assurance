@@ -9,8 +9,8 @@ PR #1 (`claude/fervent-tesla-ytnxz6`) and PR #2
 (`claude/echelon-transparency-governance-rvt82z`) plus the consolidation.
 
 ## Owner actions outstanding
-1. Decide the remaining items in `docs/decisions/owner-decision-package-2026-11-25.md` (ODP-01, 04, 06, 07, 08, 10). ODP-02, 03, 05, 09, 11 and 12 were decided by owner direction DF-ASR-2026-0D0F.
-2. Apply a ruleset on `main` requiring the `assurance-validation` check, and install Praxis (`praxis init`, pinned version). This is WI-ASR-03. As of 2026-11-25 the checks are advisory only.
+1. All twelve owner decision package items are decided (DF-ASR-2026-0D0F, DF-ASR-2026-0D10). Name the emergency delegate and protected-reporting recipient when operationally necessary, and before production launch (OQ-607).
+2. Apply a ruleset on `main` requiring the `assurance-validation` and `Praxis validation` checks. This is WI-ASR-03. Praxis 3.25.0 was installed on 2026-11-25. As of 2026-11-25 the checks are advisory only.
 3. Visibility (decision 0D05): keep public content to the permitted classes; stand up the restricted store before any production evidence exists.
 
 ## How to continue

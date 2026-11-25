@@ -18,13 +18,15 @@ created: 2026-11-25
 >
 > The direction waives no obligation and authorizes no production activation with unresolved material legal risk.
 >
-> **Still awaiting the owner:**
-> - ODP-01 (baseline approval);
-> - ODP-04 (successor and protected-reporting recipient);
-> - ODP-06 (observability conflict);
-> - ODP-07 (Strata scope);
-> - ODP-08 (prompt-injection residual risk);
-> - ODP-10 (quick confirmations).
+> **Remaining items, decided by owner record DF-ASR-2026-0D10** (`docs/decisions/owner-remaining-approvals-2026-11-25.md`):
+> - **ODP-01:** baseline approved in principle, subject to traceability and validation.
+> - **ODP-04:** roles and procedures defined; naming individuals deferred until operationally necessary.
+> - **ODP-06:** Vigila retained on managed infrastructure; capabilities to be verified.
+> - **ODP-07:** thin Strata runtime approved.
+> - **ODP-08:** restricted research-agent design approved; this is not production residual-risk acceptance.
+> - **ODP-10:** US-first operations; deferred card payments; AICPA research; no AI money authorization; mandatory Praxis governance and rulesets.
+>
+> The two owner records govern over conflicting recommendations in the table below.
 >
 > The table below is preserved as the original recommendation record.
 

@@ -1,8 +1,8 @@
 ---
 id: DF-ASR-2026-C003
 title: No user-supplied HTML accepted as markup
-status: proposed
-decided_by: pending owner
+status: accepted
+decided_by: owner — accepted with the baseline (DF-ASR-2026-0D10, ODP-01)
 date: 2026-11-25
 related_questions: []
 ---

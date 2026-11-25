@@ -7,7 +7,7 @@ Updated: 2026-11-25
 - Repository created by owner (initial commit `48f04ef`, README only).
 - Repository is public; owner decision 0D05 limits it to public research,
   policies, control objectives, methodology and sanitized results.
-- Praxis CLI not installed (see `HANDOFF.md`); conventions adopted manually.
+- Praxis 3.25.0 installed 2026-11-25 (`./praxis validate` passes); platform rulesets not yet applied (owner action).
 - Register tooling is F# (`assurance` CLI, 33 tests) per owner decision 0D06.
 - Existing assurance work elsewhere (read-only inputs):
   - Unbound: `requirements/governance/` (SOC 2 readiness directive `SOC2-001…036`,

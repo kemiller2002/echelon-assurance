@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "repository": "echelon-assurance",
+  "nextSeq": 1,
+  "items": [
+    {
+      "id": "WI-ASR-CONSOLIDATION",
+      "title": "Assurance consolidation, challenge and requirements finalization",
+      "description": "Consolidate PR #1 and PR #2 into the unified assurance baseline; reconcile owner directions DF-ASR-2026-0D0F and remaining approvals",
+      "tags": [],
+      "priority": "high",
+      "status": "ready",
+      "attachments": [],
+      "createdAt": "2026-11-25T23:32:52Z",
+      "updatedAt": "2026-11-25T23:32:55Z",
+      "createdBy": "unknown",
+      "createdByActor": {
+        "kind": "agent",
+        "id": "anthropic/claude-code",
+        "provider": "anthropic",
+        "model": "unknown",
+        "runtime": "claude-code"
+      },
+      "source": "owner-mission",
+      "sourceReference": null
+    }
+  ]
+}

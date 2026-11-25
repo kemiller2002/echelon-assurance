@@ -1,8 +1,8 @@
 ---
 id: DF-ASR-2026-C004
 title: AI agents never authorize, approve or release movement of funds
-status: proposed
-decided_by: pending owner
+status: accepted
+decided_by: owner — accepted (DF-ASR-2026-0D10, ODP-10)
 date: 2026-11-25
 related_questions: [OQ-763]
 ---

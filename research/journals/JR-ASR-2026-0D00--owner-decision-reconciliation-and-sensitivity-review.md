@@ -3,6 +3,18 @@ id: JR-ASR-2026-0D00
 title: Reconciliation with owner-approved foundations and pre-merge sensitivity review
 status: complete
 created: 2026-11-25
+provenance:
+  contributions:
+    EXE-20261125T233256557Z-3f771e74:
+      operations: [origin-unrecorded]
+      at: 2026-11-25T23:33:03.232Z
+      actor:
+        kind: agent
+        id: claude-code
+        provider: anthropic
+        model: unknown
+        runtime: claude-code
+      reason: "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
 ---
 
 # Reconciliation with owner decisions (2026-11-25)

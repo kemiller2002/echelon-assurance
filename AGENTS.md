@@ -82,10 +82,11 @@ conventions: `context/` shared state, canonical research records under
 `research/` with `<PREFIX>-<AREA>-<YYYY>-<TOKEN>` identifiers (area `ASR`),
 decision records (`DF-ASR-2026-xxxx`) under `docs/decisions/`, the Praxis
 confidence vocabulary (`very-low` … `very-high`), and front matter on canonical
-records. The `praxis` CLI has **not yet been installed** in this repository
-(see `HANDOFF.md`); until it is, the registers and validator here are the
-enforcement mechanism, and Praxis-generated registries are absent rather than
-hand-written.
+records. Praxis 3.25.0 was installed in this repository on 2026-11-25 (`./praxis`,
+`.echelon/ros.json`; mandatory per owner direction DF-ASR-2026-0D10). Run
+`./praxis registry build` and `./praxis validate` alongside the assurance
+validator. Praxis registries under `registries/` are generated, not hand-written.
+Repository rulesets that make both checks required are an owner action (WI-ASR-03).
 
 ## Verify before you push
 
@@ -95,6 +96,7 @@ dotnet fantomas --check src tests
 dotnet test Echelon.Assurance.sln -c Release
 dotnet run --project src/Echelon.Assurance.Cli -- validate
 dotnet run --project src/Echelon.Assurance.Cli -- merge --check
+./praxis registry check && ./praxis validate
 ```
 
 Register tooling is F# (owner decision DF-ASR-2026-0D06): `src/Echelon.Assurance.Registers`

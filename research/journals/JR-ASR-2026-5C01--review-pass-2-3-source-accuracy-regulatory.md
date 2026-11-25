@@ -3,6 +3,18 @@ id: JR-ASR-2026-5C01
 title: Review passes 2 and 3 - source accuracy and regulatory applicability (2026-11-25)
 status: complete
 created: 2026-11-25
+provenance:
+  contributions:
+    EXE-20261125T233256557Z-3f771e74:
+      operations: [origin-unrecorded]
+      at: 2026-11-25T23:33:03.651Z
+      actor:
+        kind: agent
+        id: claude-code
+        provider: anthropic
+        model: unknown
+        runtime: claude-code
+      reason: "Created by an earlier agent session on branch claude/fervent-tesla-ytnxz6 before Praxis was installed in this repository; origin is recorded in git history"
 ---
 
 # Journal: review passes 2 (source accuracy) and 3 (regulatory applicability)

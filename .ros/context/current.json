@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "protocolVersion": "1.0.0",
+  "repository": "echelon-assurance",
+  "actor": "ros-bootstrap",
+  "startedAt": "2026-11-25T23:32:41.754Z",
+  "updatedAt": "2026-11-25T23:32:55Z",
+  "baselineDirtyPaths": [],
+  "workItems": [
+    {
+      "id": "ROS-INSTALL-3-25-0",
+      "type": "mechanical",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "installation",
+          "path": ".ros/installation.json"
+        }
+      ],
+      "updatedAt": "2026-11-25T23:32:41.754Z",
+      "completedAt": "2026-11-25T23:32:41.754Z"
+    },
+    {
+      "id": "WI-ASR-CONSOLIDATION",
+      "type": "research",
+      "state": "active",
+      "semanticState": "active",
+      "evidence": [],
+      "updatedAt": "2026-11-25T23:32:55Z",
+      "telemetryExecutionIds": [
+        "EXE-20261125T233256557Z-3f771e74"
+      ]
+    }
+  ]
+}
