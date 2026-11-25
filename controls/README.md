@@ -63,12 +63,12 @@ except these, deliberately:
 Every policy and policy section is implemented by at least one control;
 top-level policies inherit their sections' controls.
 
-Distribution of targets: L4 49, L3 27, L2 11, L1 6, L0 6, L5 5. Only five
-controls target L5 (dormant accounts, offboarding, entitlement drift in
-non-production, configuration drift on reversible settings, retention).
-Four are reversible and bounded. Retention (CTL-DAT-002) is **not**
-reversible: crypto-shredding and deletion cannot be undone, which conflicts
-with the L5 rule in `automation/control-automation-matrix.md` §1 and
-`ai-governance/ai-governance-model.md` §14 (open issue, review pass 4/5,
-OQ-801). Judgment controls (risk acceptance,
+Distribution of targets (after review passes): L4 47, L3 29, L2 12, L1 6,
+L0 6, L5 4. Only four controls target L5 (dormant accounts, offboarding,
+entitlement drift in non-production, configuration drift on reversible
+settings): each is reversible and bounded. Retention was lowered from L5 to
+L3 because deletion is irreversible. Judgment controls (risk acceptance,
 oversight, vendor reliance, external attestation) remain L0–L2 by design.
+
+The catalog CSV is authoritative; `tools/build_control_catalog.py` was the
+seed and refuses to overwrite curated rows without `--force`.

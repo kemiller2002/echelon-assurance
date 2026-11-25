@@ -7,7 +7,7 @@ validation methodology for an AI-native compliance operating model.
 > Make security and compliance measurable, continuously evidenced properties
 > of the organization rather than a periodic administrative exercise.
 
-**Status:** research phase. Nothing in this repository asserts that any
+**Status:** research phase complete (batches B0–B8, ten review passes); awaiting owner decisions. Nothing in this repository asserts that any
 Echelon system is compliant, that any control is operating effectively, or
 that any audit requirement is satisfied. See
 [`context/CURRENT-STATE.md`](context/CURRENT-STATE.md).
@@ -27,7 +27,8 @@ the first reference implementation; the architecture is organization-wide.
 
 | Deliverable | Location |
 |---|---|
-| Executive findings | [`findings/`](findings/) |
+| Executive findings | [`findings/executive-findings.md`](findings/executive-findings.md); challenge of conventional practice and Clarity/EDF application in [`findings/`](findings/) |
+| Owner research brief | [`docs/charter/research-brief-2026-11-25.md`](docs/charter/research-brief-2026-11-25.md) |
 | Research methodology, identifiers | [`methodology/`](methodology/) |
 | Authoritative source register | [`sources/source-register.csv`](sources/source-register.csv) |
 | SOC reporting landscape | [`soc/`](soc/) |
