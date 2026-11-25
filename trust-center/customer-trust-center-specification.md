@@ -6,6 +6,9 @@ version: 0.1.0
 created: 2026-11-25
 ---
 
+> **Consolidation note (2026-11-25).** The customer assurance knowledge base requirements and the question bank are in `customer-assurance/`. BR-CUS-001 and BR-CUS-002 govern. Disclosure tiers are `public`, `customer-nda` and `restricted`. The due-diligence repository uses six tiers; the crosswalk is WI-ASR-04.
+
+
 # Customer trust center specification
 
 ## 1. Purpose

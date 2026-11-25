@@ -2,183 +2,71 @@
 id: ASR-FIND-EXEC-001
 title: Executive findings
 status: draft for owner review
-version: 1.1.0
+version: 2.0.0
 created: 2026-11-25
+updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 in git history at 37cbdc5)
 ---
 
-# Executive findings
+# Executive findings: assurance consolidation
 
-**Bottom line.** Echelon Foundry can make assurance an operating property
-rather than an annual exercise, but the savings come from **enforcing
-controls structurally and proving financial correctness by invariants and
-reconciliation**, not from building a compliance platform. External
-examination and penetration-testing fees are unavoidable and make up about
-half of five-year cost under every model. Nothing in this repository shows
-any control operating today, and no compliance claim is made.
+**Bottom line.**
 
-## 1. What reports Unbound needs
+- **One baseline.** The assurance program is now one traceable baseline instead of nine overlapping documents: 107 requirements that consolidate all 189 original owner requirements, with nothing removed.
+- **Validated by tooling.** The structure is enforced by F# tooling that fails on orphaned requirements, unsupported controls, missing owners, validation or evidence, status inflation, undispositioned questions and backlog ordering errors.
+- **Nothing operates yet.** No control is above `Designed`, and no compliance, certification or operating-effectiveness claim is made.
+- **Missing capabilities.** The program is not yet implementation-ready, because several capabilities the owner decisions assumed exist do not.
+- **External answers.** Whether internal evidence automation pays off depends on one external answer: auditor reliance on system-generated evidence.
 
-- **SOC 1 Type 2 as well as SOC 2 Type 2 is the likely answer**, if Unbound
-  operates sponsors' DAF program ledgers for legally separate sponsors. The
-  AICPA's own interpretation (AU-C 9402) calls a SOC 1 the preferred report
-  for a user entity's financial-statement auditor and says a SOC 2 is
-  unlikely to serve that purpose. (`auditor-interpretation`, confidence
-  `medium`; `soc/unbound-soc-applicability.md`.)
-- **No law requires either report.** Demand comes from sponsors' auditors,
-  banks' third-party risk programs and customers. Without a SOC 1, a sponsor's
-  auditor would have to test Unbound directly.
-- SOC 2 design target: all five trust services categories (owner decision
-  DF-ASR-2026-0D02; the research had leaned toward deferring Processing
-  Integrity and Privacy). Actual examination scope is confirmed with
-  customers and the auditor. Carve out the cloud provider and custodians;
-  GitHub is effectively a subservice organization for most Echelon systems.
-- No standalone SOC 1 Type 1 (it gives user auditors no operating evidence),
-  and no report is possible while Unbound runs only on synthetic data.
+## 1. What changed
 
-## 2. What law actually applies
-
-- **Contested and undetermined:** whether GLBA/FTC Safeguards binds the
-  nonprofit sponsors, and whether the for-profit Echelon entity is itself a
-  "financial institution". Recommendation: adopt the Safeguards Rule
-  elements as the design baseline now, regardless of the answer
-  (`regulatory/regulatory-applicability-matrix.md`; counsel questions
-  OQ-200–202).
-- **Most certain obligations arrive by contract** through banks (12 CFR 30
-  App. B, 2023 interagency TPRM guidance, possibly 12 CFR 53.4 incident
-  notice), Nacha rules as a third-party service provider, OFAC, state breach
-  notification and the IRS rules that bind sponsors and donors (which the
-  platform must enable rather than violate).
-- PCI DSS, GDPR and NYDFS are currently not applicable; their triggers are
-  documented.
-
-## 3. The operating model
-
-1. **One control catalog** (`controls/control-catalog.csv`, 104 controls)
-   to which 278 requirements from 31 framework and law codes map; every
-   applicable requirement and every policy section traces to controls,
-   evidence types and validation procedures, checked by CI.
-2. **13 policies instead of 20–35**, with addressable sections, generated
-   from one F# policy model; documents vendors recommend but no framework
-   requires were not created (`policies/`).
-3. **Prevent rather than detect**: 47 controls target L4 preventive
-   enforcement (rulesets, IdP, cloud organization policies, application
-   authorization). Only four target L5, each reversible and bounded.
-   Judgment controls stay human by design (`automation/`).
-4. **Evidence at the source**: a standard envelope emitted by the systems
-   where events happen, heartbeat detection of missing evidence, and — once
-   an auditor has said it will use it — an anchored, append-only ledger with
-   completeness reconciliation. Integrity is never presented as accuracy
-   (`architecture/`).
-5. **Financial assurance by invariants**: write-time double-entry and
-   authorization invariants, idempotent processing and daily two-way
-   reconciliation against bank and custodian records cover 100% of
-   transactions; auditors' sampling then tests these controls rather than
-   re-performing arithmetic (`financial/unbound-financial-controls.md`).
-6. **Agents operate, humans own, outsiders assure**: every agent
-   prohibition is enforced outside the model; agents never approve, never
-   write evidence, never represent internal validation as independent;
-   controls keep working without AI providers (`ai-governance/`).
-7. **Independence is bought, not simulated**: a contracted independent
-   reviewer, external validation of the assurance machinery, an independent
-   pen test and CPA attestation. A control cannot be marked `Tested` on
-   automated or self-assessment results alone.
-
-## 4. What Echelon already has, and what it lacks
-
-- **Has (implemented, not operating):** verifier-signed test receipts and
-  fail-closed completion (Praxis, Dokimos) — enabled in no repository;
-  Tutela's non-self expiring exceptions; Conditor's signed releases; Arca's
-  integrity primitives; Summa's ledger and reconciliation patterns; Aegis
-  redaction.
-- **Lacks:** tamper-evident anchoring; identity lifecycle and access review;
-  central logging/alerting/heartbeat; auditor packaging. None justifies a
-  new Echelon system. Owner decisions 0D0A–0D0D: separate evidence generation
-  from managed, durable, immutable storage (GitHub is not the sole store;
-  interfaces before any custom ledger); Folio renders evidence packages;
-  Strata is the database interaction layer; Vigila becomes the logging and
-  observability initiative with an independently operated heartbeat.
-- **Wrong assumptions in Unbound:** Strata is not an append-only store; Folio
-  does not package evidence; GLBA as a cited legal basis is unverified.
-  Proposed corrections are in `integration/proposed-changes.md`.
-
-## 5. Economics
-
-Five-year totals (ranges; vendor-claim prices and assumed labor):
-conventional $672k–$2.1M; commercial platform $584k–$1.6M; outsourced
-$587k–$1.7M; full Echelon build $682k–$2.0M; hybrid $585k–$1.7M (SOC 2
-scoped to all five trust services categories per owner decision 0D02).
-
-- **Building feature parity is not cheaper than buying.**
-- **The hybrid costs about the same as a platform** once real independent
-  review is included; its value is covering Unbound's financial controls
-  (which platforms do not), avoiding lock-in and bundled-auditor risk, and
-  genuinely better assurance.
-- **The hybrid's downside is large**: if the auditor will not rely on
-  system-generated evidence it becomes the most expensive option
-  ($785k–$2.4M). So build preventive and financial controls now (valuable in
-  any case) and defer ledger and auditor tooling until a CPA firm has scoped
-  their use.
-- Shared controls (80 of 104) make each additional product cheap: mainly its
-  own pen test, product-specific controls and a scope increment.
-
-## 6. Penetration testing
-
-Explicitly required only by specific regimes (PCI, NYDFS, the Safeguards Rule
-with a continuous-monitoring alternative); for Unbound the driver is bank
-and sponsor due diligence. Independence means organizational separation, so
-it must be external. Minimum-cost strategy: heavy internal preparation, a
-public vulnerability disclosure policy, then one grey-box web/API test on
-tenant isolation and financial logic with a retest before launch (planning
-range US$15k–35k, vendor claims) (`pentest/`).
-
-## 7. What blocks progress (owner and adviser decisions)
-
-The P0 open questions are cheap to answer and change the design:
-
-| Question | Resolver | Cheapest route |
+| Area | Before | After |
 |---|---|---|
-| Legal structure confirming the operating model of owner decision 0D01 (OQ-753, OQ-756) | owner + counsel | confirmation |
-| Named approval roles and fractional reviewer (OQ-607, OQ-608; approval model set by owner decision 0D04) | owner | staffing decision |
-| Whether sponsors' auditors expect SOC 1 (OQ-101, OQ-754) | sponsor's audit firm | one call |
-| GLBA status of sponsors and Echelon (OQ-200–202) | counsel | one fixed-fee memo |
-| What banks and sponsors will request (OQ-204, OQ-215) | bank / customer | ask for their questionnaire |
-| Whether rulesets enforce gates today (OQ-700) | owner | look at GitHub settings |
+| Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 107 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
+| Dispositions | None | `requirements/source-dispositions.csv`: 137 consolidate, 34 retain, 7 strengthen, 7 simplify, 2 replace, 2 defer, 0 remove |
+| Hierarchy | Implicit | 16 tenets → 83 policy entries → 121 controls → 107 baseline requirements → enforcement, validation and evidence; generated traceability matrix |
+| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; 8 block requirements finalization, all owner decisions |
+| Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems, tests executed for 5 |
+| Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 7 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
+| Roadmap | Narrative | `roadmap/backlog.csv`: 51 dependency-ordered work items across 15 repositories |
 
-112 questions remain open in total (14 P0), each with the reason research
-cannot settle it and the lowest-cost resolution
-(`registers/open-questions.csv`).
+## 2. Most important findings
 
-## 8. Immediate actions
+1. **Owner-assumed capabilities do not exist yet** (`integration/capability-findings.md`):
+   - **Vigila** has no logging or observability code, and the Registry records a same-day owner deferral of observability (ODP-06).
+   - **Strata** is schema governance only; it has no runtime data-access layer (ODP-07, L effort).
+   - **Praxis** provenance is self-reported; verified completion is implemented but enabled nowhere.
+   - **Conditor** signing has no trusted keys.
+   - **Arca** has hashes but no immutable storage.
 
-1. Keep this repository to the public content classes of owner decision
-   0D05 and stand up a restricted store for evidence and findings.
-2. Answer the remaining P0 questions above.
-3. Review and approve the 13 draft policies (now reconciled with the owner
-   decisions of 2026-11-25).
-4. Turn on what already exists: MFA, push protection, protected branches
-   without admin bypass, Praxis verified completion.
-5. Install Praxis here, migrate the register tools to F# (decision 0D06) and
-   require the `assurance-validation` check.
+   Requirements that rely on these are designed but unenforced (RSK-059).
+2. **Governance checks are advisory.** As of 2026-11-25 the repositories did not enforce required checks on `main` (RSK-060). Enforcing them is the cheapest high-value action (WI-ASR-03).
+3. **Funds flows.** Unbound is designed so that sponsors hold all accounts and Unbound only relays instructions. Under FinCEN's definition, money transmission begins with *acceptance* of funds, which the design avoids. Two flows need counsel before release 1: the payment-partner rail, where the partner holds funds in transit, and white-label for banks (`findings/financial-integrity-review.md`, ODP-05). A new activation gate, BR-FIN-020, refuses configurations that would put Echelon in the flow of funds.
+4. **Contradictions resolved by strengthening, not weakening:**
+   - AI agents never authorize money movement in any scope (DF-ASR-2026-C004).
+   - Periods cannot be reopened after statements issue.
+   - Replay never posts entries or dispatches instructions.
+   - Idempotency payload conflicts open a case rather than going to a dead-letter queue (DF-ASR-2026-C006).
+   - No user-supplied HTML is accepted as markup (DF-ASR-2026-C003).
+5. **Simplified evidence architecture.** The custom hash-chained ledger with witness anchoring and timestamps is replaced by managed retention-locked storage, independent population reconciliation and an independent heartbeat. Anchoring is deferred until someone requires it (DF-ASR-2026-C002).
+6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims):
+   - At one product, every alternative costs about USD 1.1–1.3M over five years at the midpoint (USD 2.0M for a full internal platform), with heavily overlapping ranges.
+   - Shared automation pays off through reuse: targeted automation breaks even against a commercial platform at 2 products and outsourced management at 3.
+   - If the auditor will not rely on system-generated evidence, targeted automation never breaks even against those alternatives, while the hybrid still does (4 and 8 products).
+   - Recommendation (DF-ASR-2026-C005): minimum viable assurance plus prevention and testing automation now; evidence-collection automation only after a written auditor position; never a feature-parity platform without demand.
+7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today. Fractional review is proposed for 17 key controls only (ODP-02).
+8. **Questions.** No question was falsely closed:
+   - 28 depend on the auditor, 21 on counsel and 15 on customers.
+   - 19 are proposed decisions awaiting the owner.
+   - Only 8 block requirements finalization, and all 8 are owner decisions that need no paid advice.
 
-The full phased plan is in `roadmap/implementation-roadmap.md`.
+## 3. What the owner needs to do
 
-## 9. Confidence and limits
+Review `docs/decisions/owner-decision-package-2026-11-25.md`. It contains ten
+items, each with a recommendation. Nothing else needs owner involvement to
+proceed with specification work.
 
-- Standards texts read in full: AT-C 105/205/320, AU-C 402/9402. TSC and
-  description criteria, ISO standards, PCI DSS, Nacha rules and the FFIEC
-  handbook were read only in summary or not at all; conclusions resting on
-  them are capped at `auditor-interpretation`.
-- Echelon systems were assessed by reading code and tests; no test suite was
-  run and no deployment was observed.
-- All prices are vendor claims or assumptions; quotes are needed.
-- Clarity and EDF were applied by this program to its own conclusions, not by
-  an independent assessor (`findings/clarity-and-edf-assessment.md`).
+## 4. Claims status
 
-## 10. Owner decisions of 2026-11-25
-
-Fourteen owner decisions (`docs/decisions/owner-approved-foundations-2026-11-25.md`,
-registered as DF-ASR-2026-0D01..0D0E) set design direction and supersede the
-two proposals DF-ASR-2026-3A1E and DF-ASR-2026-7B20. They are design
-direction only: legal applicability, auditor acceptance, actual
-configuration, staffing and operating effectiveness remain unresolved, and
-the related open questions stay open with the decision noted.
+- No control, policy or system is claimed to be operating, effective, compliant, certified or attested.
+- Internal automated testing is never described as a penetration test or attestation.
+- This consolidation and its review passes were performed by AI agents controlled by Echelon. They are a structured self-review, not independent assurance (`findings/validation-report.md`).

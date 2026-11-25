@@ -1,141 +1,233 @@
 ---
-id: ASR-FIND-CLE-001
-title: Clarity result and EDF diagnosis for the assurance program
-status: draft
-version: 0.1.0
+id: ASR-FND-CLAR-002
+title: Clarity and EDF assessment of the assurance program (consolidation)
+status: draft for owner review
 created: 2026-11-25
-method_refs: [clarity-framework docs/templates/clarity-result-template.md, echelon-diagnostic-framework docs/edf/specification.md (v0.3)]
+supersedes: ASR-FND-CLAR-001 (previous version of this file, in git history at 37cbdc5)
+methods:
+  edf: echelon-diagnostic-framework v0.3 (frozen baseline, docs/edf/specification.md) @ 710d54c
+  clarity: clarity-framework @ 200a9eb — Clarity Result template (status Candidate), assessor guide Level 3
 ---
 
-# Clarity result and EDF diagnosis
+# Clarity and EDF assessment
 
-**Status of this application.** Both frameworks were applied by the research
-program to its own conclusions. This is not an independent Clarity
-assessment or an EDF review by an assessor outside the program. EDF describes
-itself as a working grammar whose incremental value is not yet validated
-(EDF README, "Evidence maturity"); the diagnosis below is offered as
-structure to challenge, not as proof.
+This version replaces the previous assessment. The previous one cited EDF v0.3
+and the Clarity Result template, but it did not conform to them:
 
-## Part A — EDF v0.3 diagnosis: why conventional compliance is costly and weak
+- System Context was not split into its three parts.
+- Its outcome was a goal rather than an observed fact.
+- It typed no origins and no propagation paths.
+- It had no Confidence, Unknowns or Next Responsible Action.
+- It had no "Framework Concepts Observed" section.
+- It named no owners.
+- Its monitoring had no thresholds or triggers.
 
-1. **System context.** A small, AI-native organization (one product,
-   Unbound, pre-production) that will process sponsor fund accounting and
-   donor data, rely on GitHub and a cloud provider, and sell to sponsors and
-   institutions whose auditors and banks perform due diligence.
-2. **Outcome.** Credible, low-recurring-cost assurance that sponsors'
-   auditors, banks and customers rely on, without misrepresentation.
-3. **Manifestations (in comparable organizations; ours is prospective).**
-   Recurring pre-audit evidence scrambles; screenshot-based evidence; audit
-   findings on access reviews and change tickets; platform subscriptions that
-   leave most work manual; reports that cover security but not the financial
-   controls customers' auditors need; claims that outrun evidence.
-4. **Origin network.**
-   - O1: Evidence is produced *after* the event, by people, for the audit,
-     rather than *by* the event.
-   - O2: Controls are procedural (someone must remember) rather than
-     structural (the system cannot do otherwise).
-   - O3: Populations are not provably complete, so auditors sample and test
-     IPE manually.
-   - O4: Separate programs per framework duplicate work.
-   - O5: Independence is scarce in small teams, so self-assessment is
-     dressed up as assurance (compliance theater).
-   - O6: Financial correctness is verified by sampling rather than by
-     invariants and independent reconciliation.
-5. **Propagation.** O1+O3 → high fieldwork hours and exception findings →
-   audit cost and remediation cycles. O2 → recurring failures (missed
-   reviews, unreviewed emergency changes). O4 → multiplied questionnaire and
-   mapping effort. O5 → customer and auditor distrust, or worse, false
-   assurance. O6 → SOC 1 effort and residual misstatement risk.
-6. **Evidence.** External costs and the limits of platforms: `economics/`,
-   `vendors/`. Auditor procedures (sampling, IPE): `soc/`. Echelon's current
-   state (strong designs, nothing operating, key gates not enabled):
-   `integration/`, `financial/unbound-existing-assurance-inventory.md`.
-   Confidence: `medium` for O1–O4 and O6 (well documented); `medium` for O5
-   as a general pattern, `high` as a specific risk for Echelon given headcount.
-7. **Control points.**
-   - CP1 (O1, O3): evidence envelope at source + completeness
-     reconciliation + anchoring (CTL-ASR-001..004).
-   - CP2 (O2): preventive enforcement in rulesets, IdP, org policies,
-     application authorization (L4 controls).
-   - CP3 (O4): one control catalog, requirements mapped to it (CTL-GOV-005).
-   - CP4 (O5): explicit independence levels, `Tested` requires
-     internal-independent, contracted independent reviewer, external
-     validation of the assurance machinery (CTL-ASR-007/008).
-   - CP5 (O6): write-time invariants + two-way independent reconciliation
-     (CTL-FIN-001..005).
-8. **Ranking.** CP2 (cheapest, immediate, removes whole failure classes) >
-   CP5 (core of SOC 1 value; must exist for production anyway) > CP4 (without
-   it nothing else is credible) > CP1 (largest audit-cost lever, but its value
-   depends on auditor reliance) > CP3 (useful, low cost, lower impact at one
-   product).
-9. **Diagnostic sufficiency.** Sufficient to set the roadmap; **insufficient**
-   to predict audit cost savings, because the decisive variable (auditor
-   reliance on system-generated evidence, OQ-500/601/759) is unobserved.
+The conformance gaps are listed in the journal `JR-ASR-2026-C001`.
 
-## Part B — Clarity result for the program's central recommendations
+**Method caveats (required by both methods' own evidence records).**
 
-**Executive understanding.** Unbound will very likely need SOC 1 Type 2 as
-well as SOC 2 Type 2 if it operates sponsors' fund ledgers for separate
-sponsor entities. The most capable route at roughly the cost of a commercial platform is a hybrid: build only the
-assurance capabilities that existing Echelon systems nearly provide, enforce
-controls structurally, and buy independence (pen test, readiness review,
-external validation, attestation).
+- EDF v0.3 is a working grammar. Its value over neutral structure is unproven: the 2026-11-16 improvement research found no measurable advantage on synthetic cases.
+- The Clarity Result format has Candidate status.
+- Both assessments were written by the same agent that performed the consolidation. They are a structured self-review, not independent assurance (BR-VAL-001). An owner or external read is the calibration step.
 
-**Clarity snapshot.** Most important now: who the customer and the service
-organization legally are (OQ-753/756), and whether the first auditor will
-rely on system-generated evidence (OQ-500/601/759).
+---
 
-**Current understanding.** Standards text (AT-C 320, AU-C 402/9402) supports
-SOC 1 relevance; no law requires either report; banks and sponsors' auditors
-drive demand. GLBA status is contested. Existing Echelon systems hold strong
-but disabled or unoperated assurance capabilities.
+## Part A — EDF-2 diagnosis
 
-**Evidence landscape.** Supporting: AICPA standards text read by the SOC
-batch; Unbound's own SOC 1 tagging; vendor and auditor price evidence;
-system code read in 31 repositories. Challenging: TSC and description
-criteria were read only in summary (login wall); all prices are vendor
-claims; no system observed operating; no auditor consulted.
+**Level.** EDF-2: several interacting systems (nine requirement documents,
+fifteen Echelon repositories and external obligations), disputed origins and
+high consequence.
 
-**Assumption landscape.** Sponsor and operator are separate entities;
-sponsors' auditors will want SOC 1; labor rate USD 100–175/h; auditor
-reliance on system evidence; a contracted independent reviewer can be
-afforded; Arca can be extended into an anchored ledger.
+**Diagnostic Calibration.** Not performed. The only independent second analysis
+available is another model run with the same inputs, which EDF says is not
+independent. It is recommended when an owner or external reviewer can provide
+one (ODP-09).
 
-**Calibration review.** Confidence in *what controls are needed* is
-`medium-high`; in *which reports* `medium`; in *cost savings* `low`. The
-roadmap commits early only to actions that are cheap and useful under every
-answer (P0/P1 preventive controls, financial invariants), and defers the
-build-vs-buy decision to P3. That calibration is appropriate.
+### System Context
+- **Primary System:** the Echelon Foundry assurance program as recorded in
+  `kemiller2002/echelon-assurance`: its requirements, controls, decisions and
+  registers, and the assurance responsibilities it assigns to Echelon systems.
+- **Context:** owner-approved foundations (0D01–0D0E) and Unbound and daf-landscape
+  requirements. The Context also includes the Echelon system repositories as they
+  stood on 2026-11-25. External obligations (SOC 1/2 design target, GLBA baseline,
+  payment and tax rules) are another part, and a one-human organization with AI
+  agents is the last.
+- **Focus:** why the program, before this consolidation, could not serve as an
+  implementation-ready baseline.
 
-**Correctability review.** Highly correctable: policies and catalog are
-data; the build-vs-buy decision has an explicit exit. Least correctable:
-WORM retention locks (irreversible; deferred until periods are set) and any
-public claim of compliance (prohibited by CTL-GOV-012).
+### Outcome (observed, 2026-11-25, before consolidation)
+- 189 owner requirement IDs sat across nine documents, and 102 of them were registered.
+- The documents overlapped: for example, exception rules were stated four times and evidence status ladders four times.
+- All 121 controls were at `Designed`.
+- Owner decisions assigned evidence, logging, database and provenance responsibilities to systems that do not implement them. Source inspection and executed tests confirm this (`integration/capability-verification.csv`).
+- Governance checks required by decision 0D07 were advisory, not platform-enforced.
+- The economic model compared alternatives without separating baseline engineering, without the same reviewer costs, and without scaling by product count.
 
-**Monitoring plan.** Watch: AICPA 2027 TSC/description criteria finalization;
-FTC/CFPB positions on nonprofits and fintech service providers; bank partner
-questionnaires; auditor feedback; platform pricing; Arca/Praxis maturity.
+### Manifestations (observable in the Primary System)
+1. The same requirement appears under several IDs, for example identity: SBC-008, AIG-BC-001, AIG-BC-009, CA-PROV-01 and CA-PROV-02.
+2. Contradictions:
+   - FIN-BC-011 allows reopening a period that Unbound forbids reopening.
+   - The OQ-763 disposition implies agents may move money within scope.
+   - CTL-ASR-002 calls for a custom anchored ledger, against owner decision 0D0A.
+   - Decision 0D0D (Vigila) conflicts with the Registry deferral of observability.
+3. Questions were wrongly marked: OQ-802 and OQ-803 were "answered" without a key-control list, and OQ-216 and OQ-217 were described as missing although they existed.
+4. Integration targets were described as responsibilities, not verified capabilities, in the PR #2 document.
+5. Two control catalogs exist (642 ECTL controls in due diligence and 121 CTL controls here) with no crosswalk.
 
-**Reassessment plan (reconsideration criteria).**
-- If sponsor and operator are the same entity → SOC 1 relevance changes;
-  re-run `soc/unbound-soc-applicability.md`.
-- If the auditor will not rely on system evidence → buy a platform for the
-  SaaS/cloud evidence layer.
-- If counsel concludes the Echelon entity is a GLBA financial institution →
-  Safeguards elements become legal, not framework-selected.
-- If Unbound card payments are activated → PCI scope analysis.
-- If a second product joins → re-run economics §4.
+### Origin Network (typed)
+| Origin | Type | Evidence |
+|---|---|---|
+| Requirements written per topic batch, each mapping to controls but none consolidating across batches | Organizational | Nine documents dated the same day, each ending with "reconcile catalog, roadmap…" |
+| Integration responsibilities assigned from READMEs and earlier assessments rather than executed verification | Technical | Capability matrix: Vigila absent; Strata has no runtime layer; Praxis provenance is self-reported |
+| A single human is the approver for every decision class, so independence rules collide | Human / Organizational | DF-ASR-2026-7B20; OQ-607, OQ-608 and OQ-800 |
+| Agents produce requirements faster than the owner can approve them, and proposals accumulate as "proposed" | Organizational | 18 proposed decisions awaiting approval in question dispositions |
+| External obligations are undetermined (auditor reliance, legal applicability), so designs hedge in prose instead of branching explicitly | Regulatory | 28 questions depend on an auditor and 21 on counsel |
+| Cost estimates are not activity-based and not scaled by product | Financial | `economics/parameters.csv` (original) |
 
-**Learning priorities.** In order of cost per uncertainty removed: owner
-decisions (free); call with a sponsor's audit firm (free); bank
-questionnaire request (free); counsel memo (fixed fee); CPA readiness
-scoping (P3).
+### Propagation (typed)
+- **Informational:** each batch's prose dispositions of questions were copied into later batches without re-reading the register, so the wrong statuses for OQ-802 and OQ-803 persisted.
+- **Organizational:** owner decisions recorded in one repository (Registry, Unbound) are not visible in another, so the Vigila and Strata conflicts arose.
+- **Financial:** estimates that are not scaled by product make internal build look either always or never worthwhile, depending on the reader.
 
-**Recommended next posture.** Progressive commitment: execute P0, build P1
-preventive and financial controls, defer anchored ledger and platform
-decisions until auditor input exists.
+### Evidence
+| Item | Observation or inference |
+|---|---|
+| 189 IDs, 102 registered, overlap counts | Observed (`requirements/source-dispositions.csv`, generated by script) |
+| System capabilities | Observed: tests executed for Arca, Dokimos, Strata, Tutela and partially Praxis; source inspection for the rest. Inference: README claims are excluded. |
+| Governance checks advisory | Observed through a read-only API check of branch rules on 2026-11-25 (question disposition agent) |
+| Root causes listed in the Origin Network | Inference from the observed artifacts and commit history; not confirmed with the owner |
+| Disputed point | Whether the Vigila decision (0D0D) or the Registry deferral reflects the owner's current intent; both records are dated 2026-11-25 |
 
-**Current best understanding.** The controls are knowable now and mostly
-cheap; the reports are likely SOC 1 + SOC 2; the savings are plausible but
-unproven and hinge on a conversation with an auditor that has not yet
-happened.
+### Control Points and ranking
+| Rank | Control point | Influence | Controllability | Cost | Confidence |
+|---|---|---|---|---|---|
+| 1 | One authoritative baseline register with a validator that enforces bidirectional traceability and status ceilings | High: stops recurrence of duplication and status inflation | High: internal | Low: done in this initiative | High |
+| 2 | Verify capabilities before assigning responsibility; gate claims on executed tests | High | High | Low | High |
+| 3 | Owner decision package limited to genuinely owner-reserved items | High: unblocks 8 finalization questions | Medium: depends on owner time | Low | Medium |
+| 4 | Platform-enforced rulesets on main | Medium–high | High: owner action | Very low | High |
+| 5 | Activity-based, product-scaled economics with an auditor-reliance branch | Medium | High | Low | Medium: inputs hypothetical |
+| 6 | Cross-repository decision synchronization (Registry ↔ assurance ↔ Unbound) | Medium | Medium | Low–medium | Medium |
+
+**Confidence:** Medium. The outcome and manifestations are observed. The origins
+are reasoned inferences.
+
+**Diagnostic Sufficiency:** sufficient for the next action named below. That
+action is reversible and documentation-only, and it changes no production system.
+It is **not** sufficient for implementation authorizations, which depend on
+capability work and external answers.
+
+**Unknowns:**
+- The owner's current intent on observability (0D0D versus the Registry record).
+- Auditor reliance on system-generated evidence.
+- Counsel's view of the payment-partner rail.
+- The actual cost of maintaining internal automation.
+
+**Next Responsible Action:** the owner reviews `docs/decisions/owner-decision-package-2026-11-25.md`, and the protected-branch ruleset is applied (WI-ASR-03).
+
+---
+
+## Part B — Clarity Result (Level 3 Formal)
+
+**Effort level:** Level 3 (Formal). The program is externally reviewable,
+regulated-adjacent and of high consequence, and some of its commitments have low
+correctability (retention destruction, funds-flow characterization).
+
+### 1. Executive Understanding
+The program now has one baseline: 107 requirements that consolidate all 189
+original owner requirements, with no requirement removed. The baseline is traced
+to tenets, policies, controls, validation and evidence, and a validator enforces
+the tracing. Nothing operates yet. The largest uncertainties are external: auditor
+reliance, legal characterization of funds flows, and insurer and customer
+requirements. The largest internal gaps are capabilities that the owner decisions
+assumed exist.
+
+### 2. Clarity Snapshot
+| Claim | Posture | Confidence | Owner |
+|---|---|---|---|
+| C1. The baseline is complete for the owner requirement set | commitment | High (validator-enforced) | Owner (accountable), assurance coordinator agent (maintains) |
+| C2. Security-by-construction requirements eliminate the named vulnerability classes within verified boundaries | discovery | Medium (design only; no boundary implemented) | Engineering lead |
+| C3. Unbound's design keeps Echelon out of custody and money transmission | discovery | Medium–Low (flow F9 and bank white-label unresolved) | Owner, pending counsel |
+| C4. Continuous internal testing reduces external testing cost | discovery | Low (no data; external fee unaffected by assumption) | Engineering lead |
+| C5. Targeted automation is economically preferable from 2–3 products | discovery | Low–Medium (true only if auditors rely on system evidence) | Owner |
+| C6. One human can operate the program with AI agents and fractional review | reassessment | Medium–Low (separation-of-duties conflicts persist) | Owner |
+| C7. Existing Echelon systems can provide the assurance capabilities | reassessment | Low (capability verification contradicts 4 of the assumptions) | Owner |
+
+### 3. Current Understanding
+See the baseline (`requirements/baseline.csv`), the decisions (`DF-ASR-2026-C001`
+to `C006`) and `findings/executive-findings.md`.
+
+### 4. Evidence Landscape
+- Strong: executed test results for five systems; structural validation of the registers; primary regulatory texts for the FTC Safeguards Rule and for FinCEN's definition of a money transmitter.
+- Weak: every cost figure (hypothetical or vendor claim); auditor positions (none obtained); SIG, CAIQ and VSA content (summaries only).
+
+### 5. Assumption Landscape
+- **Explicit:**
+  - Additional products add about 30% to examination fees.
+  - Labor costs USD 100–175 per hour.
+  - Auditors will test and possibly rely on system evidence.
+  - Sponsors hold all accounts.
+- **Shadow (surfaced here):**
+  - The owner has time to approve decisions at the rate agents propose them.
+  - One combined SOC report boundary can include future products.
+  - Managed cloud services' retention locks are acceptable to auditors.
+  - Customers accept "Designed" answers during early sales.
+
+### 6. Calibration Review
+Confidence labels were lowered where earlier documents implied capability: C7
+went from implied-high to Low. The economics claim was raised from the original
+"no conclusion" to Low–Medium, with an explicit branch on auditor reliance.
+
+### 7. Correctability Review
+- Highly correctable: the baseline, decisions, economics and backlog.
+- Low correctability:
+  - Funds-flow characterization once live; mitigated by BR-FIN-020 activation gate.
+  - Irreversible retention disposal; mitigated by BR-DAT-001 hold checks.
+  - Public disclosure of sensitive evidence; mitigated by BR-CUS-002 classification filter.
+
+### 8. Monitoring Plan
+| Signal | Threshold | Trigger claim | Response | Trigger reassessment |
+|---|---|---|---|---|
+| Auditor scoping response (WI-EXT-01) | Written position received | C5 | If no reliance: adopt A6 hybrid (DF-ASR-2026-C005) | Revisit when the auditor changes |
+| Capability work item completion (WI-STRATA-01, WI-PRAXIS-01, WI-VIGILA-02) | Each reaches `done` with executed tests | C7, C2 | Update capability register; raise baseline status only with evidence | Each release of those systems |
+| Counsel response on funds flows (WI-EXT-03) | Received | C3 | Adjust BR-FIN-020 perimeter and the roadmap | Any new rail or bank customer |
+| Owner decision latency | More than 10 proposed decisions older than 30 days | C6 | Reduce proposal rate; batch decisions | Quarterly |
+| Actual maintenance hours versus estimate | More than 1.5× estimate for two quarters | C5 | Switch evidence collection to A6 | Annually |
+| Traceability findings in CI | Above zero | C1 | Merge blocked (once WI-ASR-03 is done) | Continuous |
+
+### 9. Reassessment Plan
+- Reassess C3 before any production activation.
+- Reassess C5 after the auditor scoping response.
+- Reassess C6 when a second human joins or a fractional reviewer is contracted.
+- The watcher is the owner. The assurance coordinator agent prepares the evidence.
+
+### 10. Learning Priorities
+1. Auditor position on reliance on system evidence.
+2. Counsel position on the payment-partner rail and the bank white-label.
+3. The actual maintenance cost of the first automated controls.
+4. The actual diligence questions asked by the first sponsor and bank partner.
+
+### 11. Framework Concepts Observed
+- **Confidence Debt:** capability claims written before verification.
+- **Resolution Debt:** questions marked answered without the required artifact (OQ-802, OQ-803).
+- **Governance Debt:** proposed decisions accumulating.
+- **Assumption Drift:** the Strata role diverged across three repositories.
+- **Burden Externalization:** proposals that shift approval load onto the single owner.
+- **Proportional Certainty:** applied in the risk-tiered validation (BR-VAL-002).
+
+### 12. Recommended Next Posture
+- **Commitment** on the baseline structure and the security- and financial-by-construction requirements.
+- **Discovery** on economics direction, funds-flow characterization and auditor reliance.
+- **Reassessment** on system responsibility assignments (Vigila, Strata, Praxis provenance).
+
+### 13. Current Best Understanding
+The program is now simpler and internally consistent, but not yet
+implementation-ready, because:
+
+- Key capabilities it depends on are not built.
+- Several external answers determine whether internal evidence automation pays off.
+
+The cheapest high-value steps are:
+
+- enforcing the existing checks;
+- building prevention and testing automation that has value regardless of auditor reliance;
+- obtaining one written auditor position before investing in evidence-collection automation.

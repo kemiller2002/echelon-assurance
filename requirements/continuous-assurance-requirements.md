@@ -13,6 +13,13 @@ builds_on:
   - organization policies POL-ORG-TRN-001, STD-ORG-CLS-001, STD-ORG-PUB-001
 ---
 
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** PR #2 is merged into the consolidation branch, and every CA-* requirement is dispositioned in `requirements/source-dispositions.csv`.
+>
+> - **CA-PROV-03 is replaced** by managed immutable storage (proposed DF-ASR-2026-C002).
+> - **The responsibility table in section 2 is superseded** by verified capabilities in `integration/capability-verification.csv`. Vigila has no runtime monitoring, Strata has no runtime layer, and Praxis attested completion is not enabled anywhere.
+> - **Broken references.** BND-06 and DDT-04 do not exist in echelon-due-diligence. They are corrected through WI-ASR-04.
+
+
 # Continuous assurance requirements (cross-system)
 
 **Status: proposed.** This document states *requirements* and *responsibility assignments*. The

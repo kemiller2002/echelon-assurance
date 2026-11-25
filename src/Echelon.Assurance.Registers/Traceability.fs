@@ -22,6 +22,8 @@ let private field (r: Record) col =
 
 let private items (r: Record) col = splitList (field r col)
 
+let private items' (w: Record) = items w "dependencies"
+
 /// Columns every live baseline requirement must fill (mission section 4).
 let requiredBaselineColumns =
     [
@@ -245,6 +247,41 @@ let questionCoverage (questions: Record list) (dispositions: Record list) =
                         expected
             ])
 
+/// Backlog is dependency-driven: a work item never depends on a later phase,
+/// and dependencies are acyclic.
+let backlogOrder (items: Record list) =
+    let phase =
+        items
+        |> List.map (fun w -> field w "work_item_id", field w "phase")
+        |> Map.ofList
+
+    let deps =
+        items |> List.map (fun w -> field w "work_item_id", items' w) |> Map.ofList
+
+    let later =
+        items
+        |> List.collect (fun w ->
+            items' w
+            |> List.filter (fun d ->
+                match Map.tryFind d phase with
+                | Some p -> System.String.CompareOrdinal(p, field w "phase") > 0
+                | None -> false)
+            |> List.map (fun d ->
+                sprintf "roadmap/backlog.csv: %s depends on later-phase %s" (field w "work_item_id") d))
+
+    let rec reaches seen target node =
+        Map.tryFind node deps
+        |> Option.defaultValue []
+        |> List.exists (fun d -> d = target || (not (Set.contains d seen) && reaches (Set.add d seen) target d))
+
+    let cycles =
+        items
+        |> List.map (fun w -> field w "work_item_id")
+        |> List.filter (fun id -> reaches Set.empty id id)
+        |> List.map (sprintf "roadmap/backlog.csv: %s is in a dependency cycle")
+
+    later @ cycles
+
 let errors (loaded: Loaded) =
     let r = records loaded
     let baseline = r "baseline"
@@ -258,6 +295,7 @@ let errors (loaded: Loaded) =
     @ tenetCoverage (r "tenets") baseline
     @ answerInflation controls (r "question_bank")
     @ questionCoverage (r "open_questions") (r "question_dispositions")
+    @ backlogOrder (r "backlog")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 

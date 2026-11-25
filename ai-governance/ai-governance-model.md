@@ -10,6 +10,22 @@ review_cycle: quarterly
 research_batch: B6 (key AIG)
 ---
 
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** The A0–A4 authority model is reconciled in BR-AI-001:
+> - **A0** read.
+> - **A1** propose.
+> - **A2** bounded, reversible, low-risk execution under standing authorization.
+> - **A3** material execution only under independently enforced prior human authorization and deterministic gates.
+> - **A4** reserved human authority.
+>
+> **Money movement.** AI agents never authorize, approve or release movement of funds or material financial exceptions, at any level and in any scope (BR-FIN-006, proposed DF-ASR-2026-C004).
+>
+> **Statuses.** The status ladder (Designed → Implemented → internally tested → technically independently verified → organizationally independently assessed → externally attested) is BR-ASR-002. "Different model" is never independence (BR-VAL-001).
+>
+> **Section 8.** Section 8's reference to OQ-800 is governed by DF-ASR-2026-7B20 (proposed) and owner decision package item ODP-02.
+>
+> **Verified capability (2026-11-25).** Praxis provenance is self-reported. Only validation receipts are signed. Agent identities are not yet platform-bound (`integration/capability-verification.csv`, WI-PRAXIS-01). Where this document conflicts with the baseline, the baseline governs.
+
+
 # AI governance model for assurance agents
 
 **Status.** Research draft. Nothing in this document is implemented. No

@@ -7,6 +7,19 @@ created: 2026-11-25
 inputs: [controls/control-catalog.csv, roadmap/generated/controls-by-phase.md, registers/open-questions.csv, integration/proposed-changes.md, economics/compliance-economics.md]
 ---
 
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** The dependency-driven backlog is now `roadmap/backlog.csv` (51 work items across echelon-assurance and 14 other repositories, phases P0 to P5). Its generated view is `roadmap/generated/backlog-by-phase.md`. The validator rejects a dependency on a later phase and dependency cycles.
+>
+> Phase meanings follow the mission:
+> - **P0** requirements reconciliation;
+> - **P1** shared foundations;
+> - **P2** Unbound reference implementation;
+> - **P3** operational readiness;
+> - **P4** external assurance readiness;
+> - **P5** organizational scale.
+>
+> The control-phase assignments below remain in the catalog (`roadmap_phase`). The narrative below is preserved as history.
+
+
 # Implementation roadmap
 
 Phases are gates, not dates. Unbound is pre-production and its financial

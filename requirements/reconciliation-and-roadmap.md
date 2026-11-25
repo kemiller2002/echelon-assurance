@@ -1,4 +1,11 @@
 # Assurance baseline challenge and reconciliation
+
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** Corrections:
+> - OQ-216 and OQ-217 already existed in the register (added in 709de1d). The crosswalk below lists 113 IDs, not 112.
+> - OQ-802 and OQ-803 were reopened.
+>
+> The reconciliation deliverables listed below are produced; see `README.md` for the deliverable index.
+
 2026-11-25. Proposed reconciliation direction, not a completed catalog migration or operational assessment.
 
 ## Precedence

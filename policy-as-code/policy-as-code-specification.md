@@ -12,6 +12,18 @@ open_questions: registers/fragments/PAC-open-questions.csv
 confidence: medium
 ---
 
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** The governing requirements are the baseline rows BR-GOV-001 to BR-GOV-006 in `requirements/baseline.csv`. They consolidate PEC-001 to PEC-012, CA-AUTO-01/02 and FIN-BC-022.
+>
+> Changes to this specification:
+> - **Obligation classes.** The five classes (executable decision, configuration constraint, scheduled obligation, human judgment, external obligation) are now a column of every baseline requirement (`enforcement_class`), so the policy model can be generated from the baseline.
+> - **Generation.** Generation is required only where it removes duplicated maintenance (BR-GOV-002, *simplify*).
+> - **Authorization engine.** F# pure decisions stay the default; Cedar is not adopted (OQ-509).
+> - **Precedence.** The order is: mandatory legal and platform safeguards; then Echelon policy; then sponsor policy; then tenant configuration. Unresolved conflicts deny or route to review (BR-GOV-004, BR-FIN-017).
+> - **Lifecycle.** Approval binds the policy digest. Activation, rollback and expiry are BR-GOV-003.
+>
+> The first implementation slice is WI-ASR-06. Where this document conflicts with the baseline, the baseline governs.
+
+
 # Policy-as-code specification
 
 > **Status: research draft.** Nothing here is implemented. The F# types below

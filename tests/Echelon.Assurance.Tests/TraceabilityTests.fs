@@ -137,3 +137,15 @@ let ``question status must agree with its disposition`` () =
 
     Assert.Single(questionCoverage [ q ] [ d ]) |> ignore
     Assert.Single(questionCoverage [ q ] []) |> ignore
+
+[<Fact>]
+let ``backlog dependency on a later phase or in a cycle is reported`` () =
+    let wi id phase deps =
+        rec' [ "work_item_id", id; "phase", phase; "dependencies", deps ]
+
+    Assert.Empty(backlogOrder [ wi "WI-A-01" "P1" ""; wi "WI-A-02" "P2" "WI-A-01" ])
+
+    Assert.Single(backlogOrder [ wi "WI-A-01" "P1" "WI-A-02"; wi "WI-A-02" "P2" "" ])
+    |> ignore
+
+    Assert.Equal(2, List.length (backlogOrder [ wi "WI-A-01" "P1" "WI-A-02"; wi "WI-A-02" "P1" "WI-A-01" ]))

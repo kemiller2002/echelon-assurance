@@ -143,7 +143,7 @@ Baseline requirements: 107. Original owner requirements dispositioned: 189. Cont
 | CTL-APP-009 | Approved cryptography and randomness | BR-APP-010 | 2 | Designed |
 | CTL-APP-010 | Resource limits and backpressure | BR-APP-011 | 4 | Designed |
 | CTL-ASR-001 | Evidence envelope at source | BR-ASR-001 | 7 | Designed |
-| CTL-ASR-002 | Tamper-evident evidence ledger with external anchoring | BR-ASR-006 | 3 | Designed |
+| CTL-ASR-002 | Managed immutable evidence storage (custom ledger and anchoring deferred) | BR-ASR-006 | 3 | Designed |
 | CTL-ASR-003 | Evidence completeness reconciliation | BR-FIN-009, BR-ASR-003 | 5 | Designed |
 | CTL-ASR-004 | Collector heartbeat and missing-evidence detection | BR-ASR-008 | 3 | Designed |
 | CTL-ASR-005 | Control mutation and sentinel testing | BR-ASR-010 | 4 | Designed |

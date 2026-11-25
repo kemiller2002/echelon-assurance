@@ -110,6 +110,14 @@ let private roadmap root =
     let out = Path.Combine(root, "roadmap/generated")
     Directory.CreateDirectory out |> ignore
     File.WriteAllText(Path.Combine(out, "controls-by-phase.md"), Roadmap.render controls)
+
+    let backlogPath = Path.Combine(root, "roadmap/backlog.csv")
+
+    if File.Exists backlogPath then
+        let bh, brows = Csv.table (File.ReadAllText backlogPath)
+        let items = brows |> List.map (fun r -> List.zip bh r |> Map.ofList)
+        File.WriteAllText(Path.Combine(out, "backlog-by-phase.md"), Roadmap.renderBacklog items)
+
     printfn "rendered %d controls" (List.length controls)
     0
 

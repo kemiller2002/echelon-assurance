@@ -7,6 +7,9 @@ created: 2026-11-25
 inputs: [integration/fragments/ECH1-assessment.md, integration/fragments/ECH2-assessment.md, integration/system-register.csv]
 ---
 
+> **Consolidation note (2026-11-25).** Superseded for capability status by `integration/capability-verification.csv` and `integration/capability-findings.md`. These come from fresh source inspection, plus executed tests for Arca, Dokimos, Strata, Tutela and part of Praxis. Proposed work for other repositories is in `roadmap/backlog.csv`. The matrix below is preserved as history.
+
+
 # Echelon integration and responsibility matrix
 
 Evidence for every row is in the two system assessments (file paths read in

@@ -10,6 +10,20 @@ review_cycle: semi-annual
 research_batch: B6 (key AIG)
 ---
 
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** The independent validation methodology is now:
+> - **Status ladder:** BR-ASR-002.
+> - **Role separation:** BR-VAL-001.
+> - **Risk tiers:** BR-VAL-002.
+> - **External assurance trigger:** BR-VAL-003.
+> - **Validating the machinery:** BR-ASR-010.
+>
+> **Key controls for organizational review.** The controls that warrant organizationally independent review are listed in `docs/decisions/owner-decision-package-2026-11-25.md` (ODP-02). All others use automated and internal validation proportionate to risk. Blanket independent human review of routine operations is not required.
+>
+> **Small-team constraint.** With one human, `internal-independent` validations (VAL-006, VAL-011, VAL-012, VAL-016, VAL-019, VAL-022, VAL-025, VAL-032) have no independent performer today. Until a fractional reviewer exists they can be performed only as self-assessment, and they **cannot support `Tested` status** (see `controls/README.md`).
+>
+> **Continuous security testing** is specified in `validation/continuous-security-testing-specification.md`.
+
+
 # Independent validation architecture
 
 **Status.** Research draft. No validation procedure here has been executed.

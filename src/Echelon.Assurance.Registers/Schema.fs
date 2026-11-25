@@ -561,6 +561,37 @@ let registers: RegisterSpec list =
             ]
             []
         spec
+            "backlog"
+            "roadmap/backlog.csv"
+            "work_item_id"
+            @"^WI-[A-Z0-9]+-\d{2}$"
+            [
+                "work_item_id"
+                "phase"
+                "repository"
+                "title"
+                "requirements_addressed"
+                "dependencies"
+                "deliverables"
+                "acceptance_criteria"
+                "validation_method"
+                "effort"
+                "economic_justification"
+                "security_implications"
+                "blockers"
+                "status"
+            ]
+            [
+                "phase", set [ "P0"; "P1"; "P2"; "P3"; "P4"; "P5" ]
+                "effort", set [ "S"; "M"; "L" ]
+                "status", set [ "proposed"; "authorized"; "in-progress"; "done"; "withdrawn" ]
+            ]
+            [
+                "requirements_addressed", "baseline"
+                "dependencies", "backlog"
+                "blockers", "open_questions"
+            ]
+        spec
             "question_dispositions"
             "registers/question-dispositions.csv"
             "oq_id"

@@ -9,6 +9,16 @@ updated: 2026-11-25
 review_cycle: quarterly
 ---
 
+> **Consolidation note (2026-11-25).** The funds-flow regulatory review, covering 12 flows with characterization-determining facts and counsel questions, is in `findings/financial-integrity-review.md`. Primary texts retrieved on 2026-11-25 include:
+> - 31 CFR 1010.100(ff);
+> - FIN-2014-R012;
+> - 16 CFR 314.4(d)(2) and 314.6;
+> - the 2023 Interagency Guidance;
+> - 12 U.S.C. 1867.
+>
+> No legal conclusion is drawn. The basis of each baseline requirement is recorded in `requirements/baseline.csv` (`basis`): `conditional-legal` means a legal obligation if applicability is confirmed.
+
+
 # Regulatory and framework applicability matrix
 
 Batch B3, agent key `REG`. Machine-readable rows: `regulatory/fragments/REG.csv`

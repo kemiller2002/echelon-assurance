@@ -13,6 +13,28 @@ evidence_types: registers/fragments/PAC-evidence-types.csv
 confidence: medium
 ---
 
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`; resolves the overlap question OQ-809 / registry OD-GOV-020 pending owner approval).** Governing requirements: BR-ASR-001 to BR-ASR-011, BR-DAT-001 and BR-IAM-001.
+>
+> **Reconciliation with `requirements/continuous-assurance-requirements.md` (PR #2):**
+> - CA-PROV-01 and CA-REPRO-01 become envelope fields (BR-ASR-001).
+> - CA-PROV-02 becomes the self-reported versus platform-authenticated label (BR-IAM-001).
+> - CA-FRESH, CA-EXP and CA-REV become BR-ASR-004.
+> - CA-DISC becomes BR-ASR-007 and BR-CUS-002.
+> - **CA-PROV-03 (hash chain plus external anchoring) is replaced** by managed immutable storage.
+>
+> **Minimum architecture now (proposed DF-ASR-2026-C002):**
+> 1. Envelopes are emitted at enforcement points.
+> 2. Sensitive payloads are kept apart from minimal integrity metadata.
+> 3. Storage is managed object storage with a provider retention lock in a separate account.
+> 4. Population reconciliation uses an independent read identity.
+> 5. An independent managed heartbeat watches the collectors.
+> 6. Packages are reproducible.
+>
+> **Deferred until demand is recorded:** the hash-chained ledger, witness cosignatures (EVT-024), RFC 3161 timestamps (EVT-025) and public anchoring described below. They are design history, not the plan of record.
+>
+> **Verified capability (2026-11-25):** Arca has content hashes but no chain, signing or WORM storage; Folio has no digest manifest; Vigila has no logging (`integration/capability-verification.csv`).
+
+
 # Continuous evidence architecture
 
 > **Status: design research.** Not implemented. No evidence exists yet. This
