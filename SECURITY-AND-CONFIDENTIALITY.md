@@ -51,5 +51,5 @@ sanitized results.
 
 Before each commit, confirm: no secrets (scan with a secret scanner where
 available), no production data, no exploit-relevant weakness detail, no
-restricted-use report content. The validator in `tools/` checks for a small
+restricted-use report content. The validator (`assurance validate`) checks for a small
 set of high-confidence secret patterns; it is not a substitute for judgment.

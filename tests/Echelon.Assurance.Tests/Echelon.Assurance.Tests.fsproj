@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CsvTests.fs" />
+    <Compile Include="ValidationTests.fs" />
+    <Compile Include="MergeTests.fs" />
+    <Compile Include="RepositoryTests.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="FsCheck.Xunit" Version="2.16.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj" />
+  </ItemGroup>
+</Project>

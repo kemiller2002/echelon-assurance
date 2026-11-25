@@ -2,7 +2,7 @@
 
 Repository: /home/user/echelon-assurance (git branch claude/fervent-tesla-ytnxz6).
 Read first: AGENTS.md, SECURITY-AND-CONFIDENTIALITY.md, methodology/research-methodology.md,
-methodology/identifiers.md, tools/schema.py (register column definitions).
+methodology/identifiers.md, src/Echelon.Assurance.Registers/Schema.fs (register column definitions; the Python `tools/schema.py` named in the original batch was retired 2026-11-25).
 
 Rules:
 - Write ONLY the files assigned to you. Do NOT git add/commit/push; the coordinator commits.
@@ -17,7 +17,7 @@ Rules:
 - No secrets, no live security findings, no confidential info (the repo is currently public).
 - Today is 2026-11-25; use it as the retrieval date for sources you actually fetched.
 
-Fragment files (CSV, UTF-8, header row exactly as in tools/schema.py, `;` separates list values,
+Fragment files (CSV, UTF-8, header row exactly as in Schema.fs, `;` separates list values,
 quote fields containing commas):
 - sources/fragments/<KEY>.csv — schema "sources". source_id = SRC-<KEY>-NNN.
 - regulatory/fragments/<KEY>.csv — schema "requirements" (if assigned). req_id = REQ-<FRAMEWORK>-NNN

@@ -37,7 +37,7 @@ From `economics/generated/tco-summary.md`:
 | 5b Sensitivity: hybrid, but auditor rejects system-generated evidence | $380k – $940k | $405k – $1,477k | $785k – $2,417k |
 
 With an 8% discount rate, the ordering is unchanged
-(`python3 -I economics/tco_model.py --rate 0.08`).
+(`assurance tco --rate 0.08`).
 
 ## 3. What the numbers say
 

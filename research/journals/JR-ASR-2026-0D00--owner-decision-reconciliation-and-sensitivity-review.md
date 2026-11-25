@@ -73,3 +73,27 @@ Findings:
 - POL-06 and POL-12 reference the records; roadmap P1 sequencing follows the
   owner's priority order; economics notes the requirements are product
   engineering common to every scenario.
+
+## F# migration of register tooling (owner decision 0D06)
+
+- Installed the .NET 10 SDK from Ubuntu packages (10.0.115).
+- New solution `Echelon.Assurance.sln`: `src/Echelon.Assurance.Registers` (pure:
+  Csv, Schema, Validation, Merge, Roadmap, Tco), `src/Echelon.Assurance.Cli`
+  (`assurance validate | merge [--check] | roadmap | tco [--rate r]`; the only
+  code with effects), `tests/Echelon.Assurance.Tests` (xUnit + FsCheck, 33 tests,
+  including repository acceptance tests for traceability rules).
+- **Parity verified** against the retired Python tools before removal:
+  identical `validate` output on the repository and on a deliberately
+  corrupted copy (duplicate ID, dangling reference, planted fake token);
+  identical `merge --check` output; identical roadmap body; identical TCO
+  markdown and CSV at discount rates 0 and 0.08.
+- **Mutation check**: disabling all per-register checks inside `validate`
+  initially *survived* the suite (unit tests covered the check functions, not
+  their composition). Added composition tests; both mutants (per-register
+  checks dropped, secret scan dropped) now fail the suite; restored code passes.
+- Fantomas formatting enforced; CI now builds, tests (fails on an empty run),
+  validates, checks fragment drift and fails if generated views are stale.
+- Removed: tools/validate_registers.py, merge_fragments.py, render_roadmap.py,
+  schema.py, build_control_catalog.py (retired seed), economics/tco_model.py,
+  and an accidentally committed `__pycache__` file.
+- Praxis CLI itself is still not installed in this repository.

@@ -10,10 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-dotnet@v4
         with:
-          python-version: "3.12"
+          global-json-file: global.json
+      - name: Restore tools
+        run: dotnet tool restore
+      - name: Formatting
+        run: dotnet fantomas --check src tests
+      - name: Build
+        run: dotnet build Echelon.Assurance.sln -c Release
+      - name: Test (fails on an empty run)
+        run: |
+          dotnet test Echelon.Assurance.sln -c Release --no-build --logger "trx;LogFileName=results.trx" | tee test.log
+          grep -Eq "Passed!.*Total: +[1-9]" test.log
       - name: Validate registers
-        run: python3 -I tools/validate_registers.py
+        run: dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- validate .
       - name: Fragments merge cleanly
-        run: python3 -I tools/merge_fragments.py --check
+        run: dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- merge --check .
+      - name: Generated files are current
+        run: |
+          dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- roadmap .
+          dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- tco .
+          git diff --exit-code -- roadmap/generated economics/generated

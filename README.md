@@ -55,8 +55,13 @@ the first reference implementation; the architecture is organization-wide.
 ## Verify
 
 ```bash
-python3 -I tools/validate_registers.py
+dotnet tool restore
+dotnet test Echelon.Assurance.sln -c Release
+dotnet run --project src/Echelon.Assurance.Cli -- validate
 ```
+
+Requires the .NET 10 SDK. `assurance merge`, `assurance roadmap` and
+`assurance tco` regenerate merged registers and generated views.
 
 ## Contributing
 

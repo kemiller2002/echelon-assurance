@@ -49,8 +49,8 @@ required in `failure_response`), `detective-only` (no blocking point exists),
 
 ## Catalog summary (B7, 2026-11-25)
 
-Built by `tools/build_control_catalog.py` (seed builder; the CSV is
-authoritative afterwards). 104 controls across 19 domains at B7; 117 across 20 domains after the owner by-construction requirements added the APP domain. Every
+Seeded at B7 by a one-time builder (since retired; see git history). The CSV is
+authoritative. 104 controls across 19 domains at B7; 117 across 20 domains after the owner by-construction requirements added the APP domain. Every
 requirement not classified `not-applicable` maps to at least one control,
 except these, deliberately:
 
@@ -70,5 +70,4 @@ drift on reversible settings, and routine retention expiry (irreversible,
 permitted with legal-hold checks and bounded batches under owner decision
 DF-ASR-2026-0D09). Judgment controls remain L0–L2 by design.
 
-The catalog CSV is authoritative; `tools/build_control_catalog.py` was the
-seed and refuses to overwrite curated rows without `--force`.
+The catalog CSV is authoritative and is curated directly.

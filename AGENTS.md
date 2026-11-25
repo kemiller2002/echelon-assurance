@@ -66,7 +66,7 @@ records (`docs/decisions/`) → research conclusions → local convention.
 8. **Machine-readable registers are authoritative.** CSV registers under
    `registers/`, `controls/`, `regulatory/`, `sources/` and `policies/` are the
    source of truth; Markdown narratives cite them. Run
-   `python3 -I tools/validate_registers.py` before committing; it must pass.
+   `dotnet run --project src/Echelon.Assurance.Cli -- validate` before committing; it must pass.
 9. **Preserve contradictions.** Record disagreeing sources and interpretations;
    do not resolve them silently.
 10. **Branches.** `main` is protected. Work on a branch, open a pull request,
@@ -90,5 +90,13 @@ hand-written.
 ## Verify before you push
 
 ```bash
-python3 -I tools/validate_registers.py
+dotnet tool restore
+dotnet fantomas --check src tests
+dotnet test Echelon.Assurance.sln -c Release
+dotnet run --project src/Echelon.Assurance.Cli -- validate
+dotnet run --project src/Echelon.Assurance.Cli -- merge --check
 ```
+
+Register tooling is F# (owner decision DF-ASR-2026-0D06): `src/Echelon.Assurance.Registers`
+(pure library: CSV, schema, validation, merge, roadmap, TCO) and
+`src/Echelon.Assurance.Cli` (`assurance`, the only code with effects).

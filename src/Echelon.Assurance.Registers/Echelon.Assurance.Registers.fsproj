@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Compile Include="Csv.fs" />
+    <Compile Include="Schema.fs" />
+    <Compile Include="Validation.fs" />
+    <Compile Include="Merge.fs" />
+    <Compile Include="Roadmap.fs" />
+    <Compile Include="Tco.fs" />
+  </ItemGroup>
+</Project>

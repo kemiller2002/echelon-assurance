@@ -29,7 +29,7 @@ independence level, §2). Both are recorded for every result.
 
 ## 2. Independence spectrum
 
-The six levels are the `independence_level` enum in `tools/schema.py`.
+The six levels are the `independence_level` enum in `src/Echelon.Assurance.Registers/Schema.fs`.
 
 | Level | Performed by | What it can support | What it must never be called | Evidence class of the distinction |
 |---|---|---|---|---|
