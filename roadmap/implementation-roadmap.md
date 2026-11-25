@@ -31,7 +31,7 @@ Actions (owner unless stated):
    - OQ-200..202: GLBA status of sponsors and of the Echelon entity [one
      scoped counsel memo; fixed-fee].
    - OQ-754 / OQ-101: whether a first sponsor's auditor expects SOC 1 [a 30-minute
-     call with the sponsor's audit firm; no fee].
+     call with the sponsor's audit firm; no fee expected (`assumption`)].
    - OQ-204 / OQ-215: what bank partners and prospective sponsors will
      actually request [ask for their vendor due-diligence questionnaire].
    - OQ-700: are rulesets actually requiring checks today [owner looks at
@@ -98,7 +98,10 @@ questionnaire answers through CTL-GOV-012 claim linting.
    (system description from one source, trust center), CTL-GOV-013.
 3. Exit criterion: every in-scope control is `Operating` with production
    evidence and `Tested` at `internal-independent` level, and the
-   observation-period start date is agreed with the auditor.
+   observation-period start date is agreed with the auditor. As catalogued,
+   65 of 104 controls have no validation procedure at `internal-independent`
+   level or higher, and no economics scenario budgets the reviewer; this
+   criterion cannot yet be met (OQ-803).
 4. **Decision point**: if the auditor will not rely on Echelon-generated
    evidence, buy a platform for the SaaS/cloud evidence layer
    (economics §3).

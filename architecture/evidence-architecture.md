@@ -57,7 +57,10 @@ confidence: medium
 
 Gap: none of these is an append-only, witnessed, retention-locked evidence
 store with completeness reconciliation. That is the new component, subject to
-a decision record per AGENTS rule 5 [recommendation].
+a decision record per AGENTS rule 5 [recommendation]. Note: the proposed
+decision record `DF-ASR-2026-3A1E` instead extends Arca (GitHub-backed
+records) with a hash chain, anchoring and a WORM target; the two designs are
+not yet reconciled (OQ-805).
 
 ## 3. Evidence envelope
 
@@ -168,7 +171,10 @@ WORM design satisfies the spirit of both; applicability is not claimed.
 
 Collector signing keys in a managed KMS/HSM with no export; CI uses keyless
 OIDC signing so no long-lived secret exists; log and checkpoint signing keys
-held by a role separated from evidence producers; key rotation recorded as
+held by a role separated from evidence producers (with one human
+administrator this separation does not exist yet; KMS key deletion and
+evidence-account deletion are admin bypasses of WORM and crypto-shredding,
+OQ-804); key rotation recorded as
 evidence; TSA tokens and witness keys pinned in verifier configuration
 [recommendation].
 

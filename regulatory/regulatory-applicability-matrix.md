@@ -133,9 +133,9 @@ triggers. Requirement-level rows are in `REG.csv`.
 
 ### 4.1 Laws and regulations
 
-| Framework (code) | What / authority | Binds | Echelon Foundry | Unbound | Class | Evidence / conf. | Contradictions | Triggers |
-|---|---|---|---|---|---|---|---|---|
-| GLBA Safeguards (GLBA) | 16 CFR 314 (FTC), amended 2021, notice rule 2023/eff. 2024 | Non-bank financial institutions under FTC jurisdiction | not-applicable | undetermined → adopt as baseline | open-question / low | §3.1 | OQ-200–202; bank contract |
+| Framework (code) | What / authority | Binds | Echelon Foundry | Unbound (classification) | Evidence / conf. | Contradictions | Triggers |
+|---|---|---|---|---|---|---|---|
+| GLBA Safeguards (GLBA) | 16 CFR 314 (FTC), amended 2021, notice rule 2023/eff. 2024 | Non-bank financial institutions under FTC jurisdiction | undetermined (for-profit operator could itself be a financial institution; OQ-202) | undetermined → adopt as baseline | open-question / low | §3.1 | OQ-200–202; bank contract |
 | GLBA Privacy (GLBA) | 12 CFR 1016 (CFPB); 16 CFR 313 (FTC, auto dealers) | Financial institutions re consumers' NPI | n/a | undetermined (sponsors); reuse limits as service provider | open-question / low | CFPA lacks nonprofit carve-out | OQ-203 |
 | State breach notification (STATE) | 50 states + DC, GU, PR, VI (SRC-REG-042) | Anyone owning, licensing or maintaining residents' PI | **legal** (employee data) | **legal** (as maintainer: notify data owner; sponsors notify residents) | authoritative / high | Deadlines/triggers vary | First real PI |
 | State "reasonable security" (STATE) | e.g., 201 CMR 17 (MA) (SRC-REG-058) | Owners/licensors of MA residents' PI | legal (employee data if MA residents) | contractual via sponsors | authoritative / medium | Whether a processor "licenses" PI | MA residents in data |

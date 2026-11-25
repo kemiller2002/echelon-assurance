@@ -193,7 +193,10 @@ disabling of required logs (AUTH-T08), no agent self-expansion of privileges
 Approval UX shows the diff, the weakening classification, cited evidence and
 what the agent did *not* check. Approval quality is sampled quarterly
 (RSK-019, automation bias; REQ-OWASPAI-013). Feasibility of distinct humans
-per role is open (OQ-608).
+per role is open (OQ-608). With one human owner, the P1 rule (approver outside
+the preparer's delegation chain) leaves no eligible approver for owner-sponsored
+agent work and conflicts with the POL-11.03 small-team fallback; which rule
+governs is OQ-800.
 
 ## 9. AI-generated code governance
 
