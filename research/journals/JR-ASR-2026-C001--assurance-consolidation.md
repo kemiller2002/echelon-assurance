@@ -23,10 +23,10 @@ branch: claude/echelon-assurance-consolidation-jygy23
 
 1. **Research agents.** Five agents worked in parallel on narrow briefs: capability verification, financial review against Unbound and daf-landscape, customer question bank, question register disposition, and methodology extraction. They wrote only to a scratch area; the coordinator integrated their output into the registers.
 2. **Baseline.** The coordinator wrote the baseline (`requirements/baseline.csv`), the tenets, the dispositions, the decisions C001–C006, the economics v2 model and the backlog.
-3. **Tooling.** The F# tooling was extended with the Traceability and Economics modules and the `trace` and `econ` commands. Unit tests went from 33 to 61. CI now checks that the generated views are current.
+3. **Tooling.** The F# tooling was extended with the Traceability and Economics modules and the `trace` and `econ` commands. Unit tests went from 33 to 63. CI now checks that the generated views are current.
 4. **Challenge round 1.** Two adversarial review agents worked from the repository, not from the coordinator's conclusions. One covered structure and consistency (passes 1, 2, 9, 13, 14, 15). The other covered domain correctness (passes 3–8, 10–12). They reported 59 findings, 33 of them material, archived in `findings/challenge-passes/`.
 5. **Fixes.** All material findings were addressed in commit 8bec065. New validator rules prevent the mechanically checkable defect classes from recurring.
-6. **Challenge round 2.** A fresh agent verified the round-1 fixes and looked for new defects (`findings/validation-report.md`).
+6. **Challenge rounds 2–4.** Fresh agents verified each round's fixes and looked for new defects. New material findings fell from 33 to 4, then 3, then 1. The last round found only unescalated owner decisions. See `findings/validation-report.md` for the stopping rationale.
 
 ## Material corrections made by the challenge passes
 

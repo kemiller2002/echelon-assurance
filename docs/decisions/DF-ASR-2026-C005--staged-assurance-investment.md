@@ -15,7 +15,7 @@ three challenge rounds. Mandatory gates, maintenance, auditor non-reliance and
 reviewer growth are now charged to every alternative, and the recommended
 package is modelled as A8.
 
-- **One or two products:** minimum viable assurance (A4) has the lowest midpoint in every scenario, with outsourced management (A3) within about 4%. The ranges overlap heavily.
+- **One or two products:** minimum viable assurance (A4) has the lowest or near-lowest midpoint in every scenario, with outsourced management (A3) within about 4%. The ranges overlap heavily.
 - **Reliance and five or more products:** targeted automation (A5) is cheapest only when the auditor relies on system evidence and there are about five or more products.
 - **Non-reliance:** A4 and A3 are effectively tied at every scale, and A5, A6 and A8 never overtake A3.
 - **Prevention and testing automation** adds about USD 50–70k a year (A8 − A4). Its benefit is not monetized.

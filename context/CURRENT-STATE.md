@@ -40,7 +40,7 @@ open questions in `registers/open-questions.csv`. See
 
 Consolidation (C1) registers: 16 tenets, 113 baseline requirements, 208
 source dispositions, 115 questions with dispositions, 27 verified systems,
-60 backlog work items, 97 customer questions, 22 decisions (6 proposed in C1),
+61 backlog work items, 97 customer questions, 22 decisions (6 proposed in C1),
 63 risks. PR #1 and PR #2 content is consolidated on branch
 `claude/echelon-assurance-consolidation-jygy23`.
 

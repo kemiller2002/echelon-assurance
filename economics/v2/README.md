@@ -41,20 +41,20 @@ carries its class in `activities.csv`.
 
 - Maintenance and auditor non-reliance are now charged to every alternative that produces system-generated evidence.
 - The fractional reviewer grows per product.
-- The enforced release gates, registers and validator that owner decisions 0D06 and 0D07 require are now charged to every alternative.
+- The enforced release gates, registers and validator that owner decisions 0D06 and 0D07 require are now charged to every alternative (A4, A7 and A8 include them in their builds; the others carry explicit lines).
 - A8 models the package that DF-ASR-2026-C005 recommends: minimum viable assurance plus prevention and testing automation, without evidence-collection automation.
 
 **Base case (S0), five-year midpoints:**
 
 - **At N=1 the alternatives other than A7 are close.** Midpoints run USD 1.17M (A4) to 1.44M (A1); A7 is USD 2.02M. The ranges span about 3×, so no ranking at N ≤ 2 is reliable. A4 has the lowest midpoint at N=1 and N=2, with A3 within about 4%.
-- **From N=5, targeted automation (A5) has the lowest midpoint.** It is USD 2.67M against about USD 2.98M (A3, A4) and USD 3.25M (A2). This depends on auditor reliance.
+- **From N=5, targeted automation (A5) has the lowest midpoint.** It is USD 2.76M against about USD 2.98M (A3, A4) and USD 3.25M (A2). It breaks even with A3 at 3 products on midpoints, but the margin stays small until about five. This depends on auditor reliance.
 - **A7 (full internal platform)** breaks even with A2 at 6 products and with A3 at 8.
 - **A8 costs about USD 245k more than A4 over five years at N=1, and about USD 350k more at N=5** (roughly USD 50–70k a year). The model counts the cost of prevention and testing automation but deliberately not its benefit (ECON-011).
 
 **Auditor non-reliance (S4) and the downside (S5):**
 
 - **A4 and A3 are effectively tied** at every product count: within about 4% at N=1 and about 1% at N=15. A4 is lower up to about five products, and A3 is lower at larger scale.
-- **A5, A6 and A8 never overtake A3.** Against A2, A5 breaks even at 3 products and A6 at 5.
+- **A5, A6 and A8 never overtake A3.** Against A2, A5 breaks even at 5 products and A6 at 8.
 
 **Slow adoption (S6)** delays but does not remove A5's advantage under reliance.
 
@@ -69,8 +69,8 @@ hours:
 | A3 outsourced | 125–400 h | 230–780 h |
 | A4 minimum viable | 300–810 h | 570–1,540 h |
 | A8 recommended package | 395–1,070 h | 680–1,840 h |
-| A5 targeted (reliance) | 275–760 h | 380–1,060 h |
-| A5 targeted (non-reliance) | 475–1,260 h | 820–2,160 h |
+| A5 targeted (reliance) | 315–860 h | 420–1,160 h |
+| A5 targeted (non-reliance) | 515–1,360 h | 860–2,260 h |
 
 - **Capacity.** One owner has about 1,800 working hours a year, so capacity, not cash, is likely the binding constraint.
 - **Threshold.** The proposed threshold is 25% of capacity, about 450 hours a year (BR-GOV-011). The recommended package can exceed it even at one product, so contracting support is probable.

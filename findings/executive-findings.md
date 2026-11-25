@@ -35,7 +35,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 | Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; 9 block requirements finalization, all owner decisions; 19 block implementation |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems, tests executed for 5 |
 | Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
-| Roadmap | Narrative | `roadmap/backlog.csv`: 60 dependency-ordered work items across 15 repositories; every live baseline requirement has a work item |
+| Roadmap | Narrative | `roadmap/backlog.csv`: 61 dependency-ordered work items across 15 repositories plus owner and managed-service actions; every live baseline requirement has a work item |
 
 ## 2. Most important findings
 
@@ -50,7 +50,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 2. **Governance checks are advisory.** As of 2026-11-25 the repositories did not enforce required checks on `main` (RSK-060). Enforcing them is the cheapest high-value action (WI-ASR-03).
 3. **Funds flows.** Unbound is designed so that sponsors hold all accounts and Unbound only relays instructions.
    - **Our working interpretation, not a legal conclusion:** the first limb of FinCEN's definition (acceptance and transmission) is not met. The second limb ("any other person engaged in the transfer of funds") needs counsel's view for instruction and file transmission.
-   - **Two flows need counsel before release 1:** the payment-partner rail, where the partner holds funds in transit, and white-label for banks (`findings/financial-integrity-review.md`, ODP-05).
+   - **Counsel is needed before any production launch** on the core money-transmitter and custody questions (ODP-12). **Two flows need specific answers before release 1:** the payment-partner rail, where the partner holds funds in transit, and white-label for banks (`findings/financial-integrity-review.md`, ODP-05).
    - **New activation gate, BR-FIN-020:** refuses configurations that would put Echelon in the flow of funds, and records who holds each dispatch credential. Unbound must never hold a credential that alone can dispatch money.
 4. **Contradictions resolved by strengthening, not weakening:**
    - AI agents never authorize money movement in any scope (DF-ASR-2026-C004).
@@ -59,9 +59,9 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - Idempotency payload conflicts open a case rather than going to a dead-letter queue (DF-ASR-2026-C006).
    - No user-supplied HTML is accepted as markup (DF-ASR-2026-C003).
 5. **Simplified evidence architecture.** The custom hash-chained ledger with witness anchoring and timestamps is replaced by managed storage under a compliance-mode retention lock from the first production evidence, separately sourced population reconciliation and an externally hosted heartbeat. These detect failure and external compromise, not action by the single owner. Anchoring is deferred until someone requires it (DF-ASR-2026-C002).
-6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims, corrected over three challenge rounds):
+6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims, corrected over four challenge rounds):
    - At one product, five-year midpoints run USD 1.17–1.44M (USD 2.02M for a full internal platform), and the ranges span about 3×.
-   - Minimum viable assurance has the lowest midpoint at one or two products in every scenario, with outsourced management within about 4%.
+   - Minimum viable assurance has the lowest or near-lowest midpoint at one or two products in every scenario, with outsourced management within about 4%.
    - Targeted automation is cheapest only with auditor reliance on system-generated evidence and about five or more products.
    - Under non-reliance, minimum viable and outsourced are tied, and evidence automation never pays.
    - Prevention and testing automation adds about USD 50–70k a year for risk reduction the model does not monetize.
@@ -75,7 +75,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 
 ## 3. What the owner needs to do
 
-Review `docs/decisions/owner-decision-package-2026-11-25.md`. It contains ten
+Review `docs/decisions/owner-decision-package-2026-11-25.md`. It contains twelve
 items, each with a recommendation. Nothing else needs owner involvement to
 proceed with specification work.
 
