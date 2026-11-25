@@ -112,6 +112,9 @@ At least quarterly, the owner reviews: control health metrics, failed and
 overdue controls, open exceptions, risk register changes, incidents, vendor
 changes and regulatory changes. The review and its decisions are recorded.
 
+## 10 Operating cadence (proposed defaults, not statutory frequencies)
+Continuous automated monitoring with event-triggered escalation; weekly exception and workload triage when active operations justify it; monthly management review of material risks and evidence gaps; quarterly obligation and vendor review; annual or material-change policy and continuity review. Adjusted by risk and actual commitments (owner record `requirements/organizational-governance.md`).
+
 ## Enforcement and validation
 
 Enforcement: authority matrix consumed by repository rules and application

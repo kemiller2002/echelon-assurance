@@ -423,3 +423,11 @@ CTL-LOG-002, CTL-DAT-002, CTL-GOV-007/008/012, CTL-APP-005/010,
 CTL-FIN-002, CTL-ASR-006) plus one new control, CTL-AI-010 (AI involvement
 disclosure and correction path). Residual prompt-injection risk (RSK-001) is
 explicitly **not accepted** pending owner review.
+
+### Reconciliation finding 5 (2026-11-25)
+
+A3 is execution under independently enforced *prior* authority, not
+independent agent authorization. For money movement, prefer deterministic
+payment workers executing sponsor-authorized instructions over model-driven
+execution; agents may prepare and explain, the sponsor retains financial
+authority.

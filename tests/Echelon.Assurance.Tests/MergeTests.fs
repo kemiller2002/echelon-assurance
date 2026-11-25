@@ -95,3 +95,35 @@ module Tco =
         let undiscounted = fiveYear 0.0 (l "s" "no" (100.0, 100.0) (100.0, 100.0))
         let discounted = fiveYear 0.08 (l "s" "no" (100.0, 100.0) (100.0, 100.0))
         Assert.True(fst discounted < fst undiscounted && fst discounted > 100.0)
+
+module TraceTests =
+    open Echelon.Assurance.Registers
+
+    [<Fact>]
+    let ``matrix emits one row per requirement-control link with independence levels`` () =
+        let req =
+            Map.ofList
+                [
+                    "req_id", "REQ-X-001"
+                    "framework_ref", "X-1"
+                    "applicability", "legal"
+                    "control_ids", "CTL-GOV-001;CTL-NOPE-999"
+                ]
+
+        let ctl =
+            Map.ofList
+                [
+                    "control_id", "CTL-GOV-001"
+                    "status", "Designed"
+                    "automation_target", "L4"
+                    "policy_ids", "POL-01"
+                    "validation_ids", "VAL-025"
+                    "evidence_type_ids", "EVT-021"
+                ]
+
+        let v =
+            Map.ofList [ "validation_id", "VAL-025"; "independence_level", "internal-independent" ]
+
+        let table = Trace.matrix [ req ] [ ctl ] [ v ]
+        Assert.Equal(2, List.length table)
+        Assert.Contains("VAL-025(internal-independent)", List.item 1 table)

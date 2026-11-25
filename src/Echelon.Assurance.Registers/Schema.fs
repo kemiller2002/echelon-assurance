@@ -314,8 +314,21 @@ let registers: RegisterSpec list =
                 "priority"
                 "status"
                 "related"
+                "workstream"
+                "design_disposition"
+                "external_dependency"
+                "closure_evidence"
             ]
             [
+                "workstream",
+                set
+                    [
+                        "authoritative-sources"
+                        "commercial-legal-regulatory"
+                        "external-assurance"
+                        "technical-configuration"
+                        "governance"
+                    ]
                 "resolver",
                 set
                     [
@@ -375,12 +388,13 @@ let registers: RegisterSpec list =
 let byName name =
     registers |> List.find (fun s -> s.Name = name)
 
-/// Fragment locations per register (glob as directory + suffix).
+/// Fragment locations per register (glob as directory + suffix). Open-question
+/// fragments are frozen historical inputs: the register gained curated
+/// disposition columns on 2026-11-25 and is no longer merged from fragments.
 let fragmentSources: (string * string * string) list =
     [
         "sources", "sources/fragments", ".csv"
         "requirements", "regulatory/fragments", ".csv"
-        "open_questions", "registers/fragments", "-open-questions.csv"
         "evidence_types", "registers/fragments", "-evidence-types.csv"
         "validations", "registers/fragments", "-validation-procedures.csv"
         "risks", "registers/fragments", "-risks.csv"

@@ -123,6 +123,23 @@ let private tco root (rate: float) (input: string) (outDir: string) =
     printf "%s" markdown
     0
 
+let private trace root =
+    let records path =
+        let header, rows = Csv.table (File.ReadAllText(Path.Combine(root, path)))
+        rows |> List.map (fun r -> List.zip header r |> Map.ofList)
+
+    let table =
+        Trace.matrix
+            (records "regulatory/requirements.csv")
+            (records "controls/control-catalog.csv")
+            (records "registers/validation-procedures.csv")
+
+    let out = Path.Combine(root, "controls/generated")
+    Directory.CreateDirectory out |> ignore
+    File.WriteAllText(Path.Combine(out, "traceability.csv"), Csv.render table)
+    printfn "traceability: %d links" (List.length table - 1)
+    0
+
 /// Split arguments into options (with values) and positional arguments.
 let private parseArgs (args: string list) =
     let valued = set [ "--rate"; "--input"; "--out" ]
@@ -147,6 +164,7 @@ let main argv =
     | "validate" :: rest -> validate (rootOf rest)
     | "merge" :: rest -> merge (rootOf rest) (options.ContainsKey "--check")
     | "roadmap" :: rest -> roadmap (rootOf rest)
+    | "trace" :: rest -> trace (rootOf rest)
     | "tco" :: rest ->
         let rate =
             options
@@ -165,6 +183,6 @@ let main argv =
         tco (rootOf rest) rate input outDir
     | _ ->
         eprintfn
-            "usage: assurance (validate | merge [--check] | roadmap | tco [--rate r] [--input csv] [--out dir]) [root]"
+            "usage: assurance (validate | merge [--check] | roadmap | trace | tco [--rate r] [--input csv] [--out dir]) [root]"
 
         2

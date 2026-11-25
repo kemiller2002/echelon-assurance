@@ -1,0 +1,708 @@
+req_id,framework_ref,applicability,control_id,control_status,automation_target,policy_ids,validations,evidence_type_ids
+REQ-AIGBC-001,AIG-BC-001,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-AIGBC-001,AIG-BC-001,voluntary,CTL-IAM-001,Designed,L4,POL-04.01;POL-11.01,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-AIGBC-002,AIG-BC-002,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-AIGBC-002,AIG-BC-002,voluntary,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-AIGBC-003,AIG-BC-003,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-AIGBC-003,AIG-BC-003,voluntary,CTL-APP-010,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-008(automated);VAL-025(internal-independent),EVT-004
+REQ-AIGBC-004,AIG-BC-004,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-AIGBC-004,AIG-BC-004,voluntary,CTL-GOV-003,Designed,L4,POL-01.08;POL-11.02,VAL-023(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028;EVT-006
+REQ-AIGBC-005,AIG-BC-005,voluntary,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-AIGBC-005,AIG-BC-005,voluntary,CTL-GOV-007,Designed,L4,POL-01.05;POL-11.02,VAL-004(automated);VAL-001(automated);VAL-025(internal-independent),EVT-026
+REQ-AIGBC-006,AIG-BC-006,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-AIGBC-006,AIG-BC-006,voluntary,CTL-APP-005,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated);VAL-017(automated);VAL-027(external-penetration),EVT-004;EVT-018
+REQ-AIGBC-006,AIG-BC-006,voluntary,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-AIGBC-007,AIG-BC-007,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-AIGBC-007,AIG-BC-007,voluntary,CTL-VEN-003,Designed,L4,POL-10.02;POL-11.05,VAL-004(automated);VAL-025(internal-independent),EVT-007;EVT-018
+REQ-AIGBC-008,AIG-BC-008,voluntary,CTL-AI-003,Designed,L4,POL-11.04,VAL-005(automated);VAL-006(internal-independent),EVT-007
+REQ-AIGBC-009,AIG-BC-009,voluntary,CTL-AI-004,Designed,L2,POL-11.07,VAL-018(automated);VAL-025(internal-independent),EVT-007
+REQ-AIGBC-010,AIG-BC-010,voluntary,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-AIGBC-010,AIG-BC-010,voluntary,CTL-ASR-006,Designed,L4,POL-04.02;POL-07.06,VAL-013(automated);VAL-025(internal-independent),EVT-030
+REQ-AIGBC-011,AIG-BC-011,voluntary,CTL-IR-003,Designed,L4,POL-08.02;POL-11.07,VAL-022(internal-independent),EVT-007;EVT-016
+REQ-AIGBC-012,AIG-BC-012,voluntary,CTL-AI-008,Designed,L3,POL-11.07;POL-09.02,VAL-022(internal-independent),EVT-016
+REQ-AIGBC-013,AIG-BC-013,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-AIGBC-014,AIG-BC-014,voluntary,CTL-AI-006,Designed,L4,POL-11.07,VAL-021(automated);VAL-025(internal-independent),EVT-004
+REQ-AIGBC-015,AIG-BC-015,voluntary,CTL-DAT-002,Designed,L4,POL-05.03;POL-05.06,VAL-009(automated);VAL-025(internal-independent),EVT-027
+REQ-AIGBC-015,AIG-BC-015,voluntary,CTL-LOG-002,Designed,L4,POL-07.06;POL-05.01,VAL-001(automated);VAL-025(internal-independent),EVT-004
+REQ-AIGBC-015,AIG-BC-015,voluntary,CTL-VEN-003,Designed,L4,POL-10.02;POL-11.05,VAL-004(automated);VAL-025(internal-independent),EVT-007;EVT-018
+REQ-AIGBC-016,AIG-BC-016,voluntary,CTL-AI-010,Designed,L3,POL-11.07;POL-13.04,VAL-001(automated);VAL-025(internal-independent),EVT-007;EVT-021
+REQ-AIGBC-017,AIG-BC-017,voluntary,CTL-AI-007,Designed,L3,POL-11.06,VAL-020(automated);VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-AIGBC-017,AIG-BC-017,voluntary,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-AIGBC-018,AIG-BC-018,voluntary,CTL-IR-003,Designed,L4,POL-08.02;POL-11.07,VAL-022(internal-independent),EVT-007;EVT-016
+REQ-AIRMF-001,GOVERN 1.6,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-AIRMF-001,GOVERN 1.6,voluntary,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-AIRMF-002,GOVERN 2.1,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-AIRMF-002,GOVERN 2.1,voluntary,CTL-AI-004,Designed,L2,POL-11.07,VAL-018(automated);VAL-025(internal-independent),EVT-007
+REQ-AIRMF-003,GOVERN 1.5,voluntary,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-AIRMF-004,GOVERN 6.1; GOVERN 6.2,voluntary,CTL-AI-008,Designed,L3,POL-11.07;POL-09.02,VAL-022(internal-independent),EVT-016
+REQ-AIRMF-004,GOVERN 6.1; GOVERN 6.2,voluntary,CTL-VEN-003,Designed,L4,POL-10.02;POL-11.05,VAL-004(automated);VAL-025(internal-independent),EVT-007;EVT-018
+REQ-AIRMF-005,MAP 3.5,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-AIRMF-006,MEASURE 1.3,voluntary,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-AIRMF-006,MEASURE 1.3,voluntary,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-AIRMF-006,MEASURE 1.3,voluntary,CTL-GOV-009,Designed,L4,POL-01.07,VAL-013(automated);VAL-025(internal-independent),EVT-002;EVT-018;EVT-026
+REQ-AIRMF-007,MEASURE 2.7,voluntary,CTL-AI-006,Designed,L4,POL-11.07,VAL-021(automated);VAL-025(internal-independent),EVT-004
+REQ-AIRMF-008,MANAGE 2.4,voluntary,CTL-IR-003,Designed,L4,POL-08.02;POL-11.07,VAL-022(internal-independent),EVT-007;EVT-016
+REQ-AIRMF-009,MANAGE 4.1,voluntary,CTL-AI-004,Designed,L2,POL-11.07,VAL-018(automated);VAL-025(internal-independent),EVT-007
+REQ-AIRMF-009,MANAGE 4.1,voluntary,CTL-AI-006,Designed,L4,POL-11.07,VAL-021(automated);VAL-025(internal-independent),EVT-004
+REQ-AIRMF-010,MANAGE 4.3,voluntary,CTL-IR-003,Designed,L4,POL-08.02;POL-11.07,VAL-022(internal-independent),EVT-007;EVT-016
+REQ-AIRMF-011,GV-3.2-001,voluntary,CTL-AI-006,Designed,L4,POL-11.07,VAL-021(automated);VAL-025(internal-independent),EVT-004
+REQ-AIRMF-012,MS-1.3-003,voluntary,CTL-AI-006,Designed,L4,POL-11.07,VAL-021(automated);VAL-025(internal-independent),EVT-004
+REQ-AIRMF-013,MS-2.5-003,voluntary,CTL-AI-007,Designed,L3,POL-11.06,VAL-020(automated);VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-AIRMF-014,MG-4.3-002,voluntary,CTL-IR-003,Designed,L4,POL-08.02;POL-11.07,VAL-022(internal-independent),EVT-007;EVT-016
+REQ-AIRMF-015,GV-1.6-003,voluntary,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-AIRMF-016,Section 2.9 Information Security,voluntary,CTL-AI-003,Designed,L4,POL-11.04,VAL-005(automated);VAL-006(internal-independent),EVT-007
+REQ-APISEC-001,OWASP API Security Top 10 - 2023 (API1-API10),framework-selected,CTL-APP-001,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated),EVT-004;EVT-003
+REQ-APISEC-001,OWASP API Security Top 10 - 2023 (API1-API10),framework-selected,CTL-APP-005,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated);VAL-017(automated);VAL-027(external-penetration),EVT-004;EVT-018
+REQ-APISEC-001,OWASP API Security Top 10 - 2023 (API1-API10),framework-selected,CTL-APP-007,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-028
+REQ-APISEC-001,OWASP API Security Top 10 - 2023 (API1-API10),framework-selected,CTL-NET-002,Designed,L4,POL-07.02,VAL-009(automated);VAL-027(external-penetration),EVT-028;EVT-011
+REQ-APISEC-001,OWASP API Security Top 10 - 2023 (API1-API10),framework-selected,CTL-TEN-001,Designed,L4,POL-05.05,VAL-014(automated);VAL-027(external-penetration),EVT-004
+REQ-ASVS-001,OWASP ASVS 5.0.0 Level 2,framework-selected,CTL-APP-001,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated),EVT-004;EVT-003
+REQ-ASVS-001,OWASP ASVS 5.0.0 Level 2,framework-selected,CTL-APP-002,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-003
+REQ-ASVS-001,OWASP ASVS 5.0.0 Level 2,framework-selected,CTL-APP-005,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated);VAL-017(automated);VAL-027(external-penetration),EVT-004;EVT-018
+REQ-ASVS-001,OWASP ASVS 5.0.0 Level 2,framework-selected,CTL-APP-006,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004
+REQ-ASVS-001,OWASP ASVS 5.0.0 Level 2,framework-selected,CTL-APP-008,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-028
+REQ-ASVS-001,OWASP ASVS 5.0.0 Level 2,framework-selected,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-ASVS-001,OWASP ASVS 5.0.0 Level 2,framework-selected,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-BANK-001,12 CFR Part 30 App. B III.D (and FDIC/Fed equivalents),contractual,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-BANK-002,12 CFR Part 30 App. B Supplement A,contractual,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-BANK-003,12 CFR 53.4 (and FDIC 12 CFR 304 / Fed 12 CFR 225 equivalents),undetermined,CTL-IR-002,Designed,L3,POL-08.03,VAL-022(internal-independent),EVT-016
+REQ-BANK-004,12 U.S.C. 1867(c),undetermined,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-BANK-005,Bank due-diligence practice,customer-expectation,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-BANK-005,Bank due-diligence practice,customer-expectation,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-BANK-006,Sponsor ODFI origination agreement (via CNV-PAY-001),contractual,CTL-FIN-014,Designed,L4,POL-12.06;POL-10.03,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-017
+REQ-BANK-006,Sponsor ODFI origination agreement (via CNV-PAY-001),contractual,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-CCM-001,CSA CCM v4.1 (released 2026-01-28) and CAIQ v4.1,customer-expectation,CTL-NET-001,Designed,L4,POL-07.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-008;EVT-028
+REQ-CIS-001,CIS Controls v8.1 IG1,voluntary,CTL-END-001,Designed,L4,POL-07.03,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-CIS-001,CIS Controls v8.1 IG1,voluntary,CTL-IAM-003,Designed,L5,POL-04.06,VAL-009(automated);VAL-019(internal-independent),EVT-009;EVT-028
+REQ-CIS-001,CIS Controls v8.1 IG1,voluntary,CTL-IAM-007,Designed,L5,POL-04.06,VAL-009(automated);VAL-025(internal-independent),EVT-009
+REQ-CIS-001,CIS Controls v8.1 IG1,voluntary,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-CIS-002,CIS Controls v8.1 IG2,voluntary,CTL-NET-001,Designed,L4,POL-07.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-008;EVT-028
+REQ-CSF-001,CSF 2.0 GV.OC,framework-selected,CTL-GOV-005,Designed,L3,POL-01.03,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-CSF-002,CSF 2.0 GV.RM,framework-selected,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-CSF-003,CSF 2.0 GV.RR,framework-selected,CTL-GOV-001,Designed,L0,POL-01.01,VAL-025(internal-independent),EVT-021
+REQ-CSF-003,CSF 2.0 GV.RR,framework-selected,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-CSF-004,CSF 2.0 GV.PO,framework-selected,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-CSF-005,CSF 2.0 GV.OV,framework-selected,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-CSF-006,CSF 2.0 GV.SC,framework-selected,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-CSF-006,CSF 2.0 GV.SC,framework-selected,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-CSF-007,CSF 2.0 ID.AM,framework-selected,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-CSF-008,CSF 2.0 ID.RA,framework-selected,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-CSF-009,CSF 2.0 ID.IM,framework-selected,CTL-GOV-006,Designed,L1,POL-01.03,VAL-020(automated);VAL-025(internal-independent),EVT-021
+REQ-CSF-010,CSF 2.0 PR.AA,framework-selected,CTL-IAM-001,Designed,L4,POL-04.01;POL-11.01,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-CSF-011,CSF 2.0 PR.AT,framework-selected,CTL-HR-002,Designed,L2,POL-03.02,VAL-013(automated);VAL-025(internal-independent),EVT-020
+REQ-CSF-012,CSF 2.0 PR.DS,framework-selected,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-CSF-013,CSF 2.0 PR.PS,framework-selected,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-CSF-013,CSF 2.0 PR.PS,framework-selected,CTL-END-001,Designed,L4,POL-07.03,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-CSF-013,CSF 2.0 PR.PS,framework-selected,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-CSF-014,CSF 2.0 PR.IR,framework-selected,CTL-BCR-002,Designed,L1,POL-09.02,VAL-012(internal-independent);VAL-022(internal-independent),EVT-015
+REQ-CSF-015,CSF 2.0 DE.CM,framework-selected,CTL-ASR-004,Designed,L3,POL-07.06,VAL-030(automated);VAL-008(automated);VAL-025(internal-independent),EVT-023
+REQ-CSF-015,CSF 2.0 DE.CM,framework-selected,CTL-LOG-001,Designed,L2,POL-07.06,VAL-002(automated);VAL-025(internal-independent),EVT-008;EVT-009;EVT-018
+REQ-CSF-016,CSF 2.0 DE.AE,framework-selected,CTL-LOG-003,Designed,L3,POL-07.06;POL-08.01,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-CSF-017,CSF 2.0 RS.MA,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-CSF-018,CSF 2.0 RS.AN,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-CSF-019,CSF 2.0 RS.CO,framework-selected,CTL-IR-002,Designed,L3,POL-08.03,VAL-022(internal-independent),EVT-016
+REQ-CSF-020,CSF 2.0 RS.MI,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-CSF-021,CSF 2.0 RC.RP,framework-selected,CTL-BCR-001,Designed,L3,POL-09.01,VAL-012(internal-independent),EVT-015
+REQ-CSF-021,CSF 2.0 RC.RP,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-CSF-022,CSF 2.0 RC.CO,framework-selected,CTL-IR-002,Designed,L3,POL-08.03,VAL-022(internal-independent),EVT-016
+REQ-CST-001,CST-001,voluntary,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-CST-001,CST-001,voluntary,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-CST-002,CST-002,voluntary,CTL-APP-001,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated),EVT-004;EVT-003
+REQ-CST-002,CST-002,voluntary,CTL-APP-002,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-003
+REQ-CST-002,CST-002,voluntary,CTL-APP-004,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-013
+REQ-CST-003,CST-003,voluntary,CTL-SDL-010,Designed,L4,POL-04.05,VAL-009(automated);VAL-025(internal-independent),EVT-012
+REQ-CST-003,CST-003,voluntary,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-CST-004,CST-004,voluntary,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-CST-004,CST-004,voluntary,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-CST-005,CST-005,voluntary,CTL-APP-005,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated);VAL-017(automated);VAL-027(external-penetration),EVT-004;EVT-018
+REQ-CST-005,CST-005,voluntary,CTL-TEN-001,Designed,L4,POL-05.05,VAL-014(automated);VAL-027(external-penetration),EVT-004
+REQ-CST-006,CST-006,voluntary,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-CST-006,CST-006,voluntary,CTL-VUL-005,Designed,L4,POL-07.05;POL-06.06,VAL-004(automated);VAL-025(internal-independent),EVT-004;EVT-021
+REQ-CST-007,CST-007,voluntary,CTL-APP-006,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004
+REQ-CST-007,CST-007,voluntary,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-CST-008,CST-008,voluntary,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-CST-008,CST-008,voluntary,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-CST-008,CST-008,voluntary,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-CST-009,CST-009,voluntary,CTL-AI-003,Designed,L4,POL-11.04,VAL-005(automated);VAL-006(internal-independent),EVT-007
+REQ-CST-009,CST-009,voluntary,CTL-AI-006,Designed,L4,POL-11.07,VAL-021(automated);VAL-025(internal-independent),EVT-004
+REQ-CST-010,CST-010,voluntary,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-CST-010,CST-010,voluntary,CTL-CRY-001,Designed,L4,POL-05.02,VAL-009(automated);VAL-025(internal-independent),EVT-018;EVT-028
+REQ-CST-010,CST-010,voluntary,CTL-NET-001,Designed,L4,POL-07.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-008;EVT-028
+REQ-CST-011,CST-011,voluntary,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-CST-011,CST-011,voluntary,CTL-NET-002,Designed,L4,POL-07.02,VAL-009(automated);VAL-027(external-penetration),EVT-028;EVT-011
+REQ-CST-012,CST-012,voluntary,CTL-SDL-008,Designed,L4,POL-06.06,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-008
+REQ-CST-012,CST-012,voluntary,CTL-VUL-005,Designed,L4,POL-07.05;POL-06.06,VAL-004(automated);VAL-025(internal-independent),EVT-004;EVT-021
+REQ-CST-013,CST-013,voluntary,CTL-VUL-006,Designed,L3,POL-07.05;POL-06.05,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004;EVT-011
+REQ-CST-014,CST-014,voluntary,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-CST-015,CST-015,voluntary,CTL-ASR-005,Designed,L3,POL-01.04,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004
+REQ-CST-015,CST-015,voluntary,CTL-VUL-006,Designed,L3,POL-07.05;POL-06.05,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004;EVT-011
+REQ-CST-016,CST-016,voluntary,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-CST-017,CST-017,voluntary,CTL-GOV-007,Designed,L4,POL-01.05;POL-11.02,VAL-004(automated);VAL-001(automated);VAL-025(internal-independent),EVT-026
+REQ-CST-017,CST-017,voluntary,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-CST-017,CST-017,voluntary,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-CST-018,CST-018,voluntary,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-CST-018,CST-018,voluntary,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-CST-019,CST-019,voluntary,CTL-ASR-004,Designed,L3,POL-07.06,VAL-030(automated);VAL-008(automated);VAL-025(internal-independent),EVT-023
+REQ-CST-020,CST-020,voluntary,CTL-CUS-004,Designed,L3,POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-CST-020,CST-020,voluntary,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-CST-020,CST-020,voluntary,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-CST-021,CST-021,voluntary,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-CST-022,CST-022,voluntary,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-CST-022,CST-022,voluntary,CTL-VUL-006,Designed,L3,POL-07.05;POL-06.05,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004;EVT-011
+REQ-CST-023,CST-023,voluntary,CTL-GOV-005,Designed,L3,POL-01.03,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-CST-023,CST-023,voluntary,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-CST-024,CST-024,voluntary,CTL-VUL-005,Designed,L4,POL-07.05;POL-06.06,VAL-004(automated);VAL-025(internal-independent),EVT-004;EVT-021
+REQ-CST-025,CST-025,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-CST-026,CST-026,voluntary,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-CST-026,CST-026,voluntary,CTL-IAM-008,Designed,L4,POL-04.05;POL-11.01,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-ECON-001,ECON-001,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-002,ECON-002,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-003,ECON-003,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-004,ECON-004,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-005,ECON-005,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-006,ECON-006,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-007,ECON-007,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-008,ECON-008,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-009,ECON-009,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-010,ECON-010,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-011,ECON-011,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-012,ECON-012,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-013,ECON-013,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-014,ECON-014,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-015,ECON-015,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-016,ECON-016,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-017,ECON-017,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ECON-018,ECON-018,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-EUAI-001,Article 2 (scope),undetermined,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-EUAI-002,Article 4 (Chapter I) AI literacy,undetermined,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-EUAI-003,Article 50 transparency,undetermined,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-EUAI-003,Article 50 transparency,undetermined,CTL-AI-010,Designed,L3,POL-11.07;POL-13.04,VAL-001(automated);VAL-025(internal-independent),EVT-007;EVT-021
+REQ-EUAI-004,"Article 6, Annex III; Article 113 as amended",undetermined,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-FFIEC-001,FFIEC IT Examination Handbook (booklets incl. outsourcing/TSP supervision),customer-expectation,CTL-BCR-002,Designed,L1,POL-09.02,VAL-012(internal-independent);VAL-022(internal-independent),EVT-015
+REQ-FINBC-001,FIN-BC-001,voluntary,CTL-FIN-001,Designed,L4,POL-12.02;POL-12.05,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-018;EVT-017
+REQ-FINBC-002,FIN-BC-002,voluntary,CTL-FIN-001,Designed,L4,POL-12.02;POL-12.05,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-018;EVT-017
+REQ-FINBC-003,FIN-BC-003,voluntary,CTL-FIN-001,Designed,L4,POL-12.02;POL-12.05,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-018;EVT-017
+REQ-FINBC-003,FIN-BC-003,voluntary,CTL-FIN-011,Designed,L4,POL-12.05,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-004,FIN-BC-004,voluntary,CTL-FIN-015,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-004
+REQ-FINBC-005,FIN-BC-005,voluntary,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-006,FIN-BC-006,voluntary,CTL-FIN-005,Designed,L4,POL-12.02,VAL-003(automated);VAL-008(automated);VAL-016(internal-independent),EVT-018;EVT-017
+REQ-FINBC-007,FIN-BC-007,voluntary,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-007,FIN-BC-007,voluntary,CTL-TEN-001,Designed,L4,POL-05.05,VAL-014(automated);VAL-027(external-penetration),EVT-004
+REQ-FINBC-008,FIN-BC-008,voluntary,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-008,FIN-BC-008,voluntary,CTL-FIN-005,Designed,L4,POL-12.02,VAL-003(automated);VAL-008(automated);VAL-016(internal-independent),EVT-018;EVT-017
+REQ-FINBC-009,FIN-BC-009,voluntary,CTL-ASR-001,Designed,L2,POL-01.04,VAL-002(automated);VAL-025(internal-independent),EVT-001;EVT-003;EVT-005;EVT-008;EVT-018
+REQ-FINBC-009,FIN-BC-009,voluntary,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-010,FIN-BC-010,voluntary,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-FINBC-011,FIN-BC-011,voluntary,CTL-FIN-010,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-012,FIN-BC-012,voluntary,CTL-FIN-012,Designed,L3,POL-12.02,VAL-003(automated);VAL-011(internal-independent),EVT-017
+REQ-FINBC-013,FIN-BC-013,voluntary,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-013,FIN-BC-013,voluntary,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-014,FIN-BC-014,voluntary,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-015,FIN-BC-015,voluntary,CTL-FIN-008,Designed,L3,POL-12.02;POL-13.02,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-017
+REQ-FINBC-015,FIN-BC-015,voluntary,CTL-FIN-009,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-015(automated),EVT-017
+REQ-FINBC-016,FIN-BC-016,voluntary,CTL-FIN-007,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-017,FIN-BC-017,voluntary,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-018,FIN-BC-018,voluntary,CTL-FIN-016,Designed,L4,POL-12.01,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-019,FIN-BC-019,voluntary,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-019,FIN-BC-019,voluntary,CTL-FIN-014,Designed,L4,POL-12.06;POL-10.03,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-017
+REQ-FINBC-020,FIN-BC-020,voluntary,CTL-ASR-003,Designed,L3,POL-01.04,VAL-011(internal-independent);VAL-019(internal-independent),EVT-022
+REQ-FINBC-020,FIN-BC-020,voluntary,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-021,FIN-BC-021,voluntary,CTL-BCR-001,Designed,L3,POL-09.01,VAL-012(internal-independent),EVT-015
+REQ-FINBC-021,FIN-BC-021,voluntary,CTL-FIN-017,Designed,L3,POL-12.06;POL-09.01,VAL-012(internal-independent);VAL-003(automated),EVT-015
+REQ-FINBC-022,FIN-BC-022,voluntary,CTL-TEN-002,Designed,L4,POL-13.02,VAL-013(automated);VAL-025(internal-independent),EVT-019
+REQ-FINBC-023,FIN-BC-023,voluntary,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-FINBC-023,FIN-BC-023,voluntary,CTL-FIN-011,Designed,L4,POL-12.05,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-FINBC-023,FIN-BC-023,voluntary,CTL-GOV-011,Designed,L3,POL-01.04,VAL-025(internal-independent),EVT-016
+REQ-FINBC-024,FIN-BC-024,voluntary,CTL-DAT-002,Designed,L4,POL-05.03;POL-05.06,VAL-009(automated);VAL-025(internal-independent),EVT-027
+REQ-GLBA-001,Title V; 15 U.S.C. 6801-6809; 15 U.S.C. 6805(a)(7),undetermined,CTL-GOV-005,Designed,L3,POL-01.03,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-GLBA-002,16 CFR 314.4(a),undetermined,CTL-GOV-001,Designed,L0,POL-01.01,VAL-025(internal-independent),EVT-021
+REQ-GLBA-003,16 CFR 314.4(b),undetermined,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-GLBA-004,16 CFR 314.4(c)(1),undetermined,CTL-IAM-002,Designed,L4,POL-04.01,VAL-009(automated);VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-002
+REQ-GLBA-005,16 CFR 314.4(c)(2),undetermined,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-GLBA-005,16 CFR 314.4(c)(2),undetermined,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-GLBA-005,16 CFR 314.4(c)(2),undetermined,CTL-END-001,Designed,L4,POL-07.03,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-GLBA-006,16 CFR 314.4(c)(3),undetermined,CTL-CRY-001,Designed,L4,POL-05.02,VAL-009(automated);VAL-025(internal-independent),EVT-018;EVT-028
+REQ-GLBA-007,16 CFR 314.4(c)(4),undetermined,CTL-SDL-003,Designed,L3,POL-06.01;POL-06.07,VAL-025(internal-independent),EVT-002;EVT-021
+REQ-GLBA-008,16 CFR 314.4(c)(5),undetermined,CTL-IAM-004,Designed,L4,POL-04.03;POL-04.04,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-GLBA-009,16 CFR 314.4(c)(6),undetermined,CTL-DAT-002,Designed,L4,POL-05.03;POL-05.06,VAL-009(automated);VAL-025(internal-independent),EVT-027
+REQ-GLBA-010,16 CFR 314.4(c)(7),undetermined,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-GLBA-010,16 CFR 314.4(c)(7),undetermined,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-GLBA-011,16 CFR 314.4(c)(8),undetermined,CTL-LOG-001,Designed,L2,POL-07.06,VAL-002(automated);VAL-025(internal-independent),EVT-008;EVT-009;EVT-018
+REQ-GLBA-012,16 CFR 314.4(d),undetermined,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-GLBA-013,16 CFR 314.4(e),undetermined,CTL-HR-002,Designed,L2,POL-03.02,VAL-013(automated);VAL-025(internal-independent),EVT-020
+REQ-GLBA-014,16 CFR 314.4(f),contractual,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-GLBA-015,16 CFR 314.4(g),undetermined,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-GLBA-015,16 CFR 314.4(g),undetermined,CTL-GOV-011,Designed,L3,POL-01.04,VAL-025(internal-independent),EVT-016
+REQ-GLBA-016,16 CFR 314.4(h),undetermined,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-GLBA-017,16 CFR 314.4(i),undetermined,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-GLBA-018,16 CFR 314.4(j); 314.2(m),undetermined,CTL-IR-002,Designed,L3,POL-08.03,VAL-022(internal-independent),EVT-016
+REQ-GLBA-020,"Privacy Rule: 12 CFR 1016 (Reg P, CFPB) / 16 CFR 313 (FTC, limited)",undetermined,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-GOVBC-001,GOV-BC-001,voluntary,CTL-GOV-001,Designed,L0,POL-01.01,VAL-025(internal-independent),EVT-021
+REQ-GOVBC-001,GOV-BC-001,voluntary,CTL-GOV-015,Designed,L3,POL-01.04;POL-01.09,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-GOVBC-002,GOV-BC-002,voluntary,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-GOVBC-003,GOV-BC-003,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-GOVBC-003,GOV-BC-003,voluntary,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-GOVBC-004,GOV-BC-004,voluntary,CTL-GOV-007,Designed,L4,POL-01.05;POL-11.02,VAL-004(automated);VAL-001(automated);VAL-025(internal-independent),EVT-026
+REQ-GOVBC-004,GOV-BC-004,voluntary,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-GOVBC-005,GOV-BC-005,voluntary,CTL-GOV-009,Designed,L4,POL-01.07,VAL-013(automated);VAL-025(internal-independent),EVT-002;EVT-018;EVT-026
+REQ-GOVBC-006,GOV-BC-006,voluntary,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-GOVBC-007,GOV-BC-007,voluntary,CTL-GOV-005,Designed,L3,POL-01.03,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-GOVBC-008,GOV-BC-008,voluntary,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-GOVBC-008,GOV-BC-008,voluntary,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-GOVBC-009,GOV-BC-009,voluntary,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-GOVBC-009,GOV-BC-009,voluntary,CTL-VEN-002,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-GOVBC-010,GOV-BC-010,voluntary,CTL-HR-001,Designed,L3,POL-03.01;POL-02;POL-02.02;POL-02.03,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-020
+REQ-GOVBC-010,GOV-BC-010,voluntary,CTL-HR-003,Designed,L5,POL-03.03,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-GOVBC-010,GOV-BC-010,voluntary,CTL-IAM-009,Designed,L2,POL-04.06,VAL-019(internal-independent),EVT-010
+REQ-GOVBC-011,GOV-BC-011,voluntary,CTL-IAM-001,Designed,L4,POL-04.01;POL-11.01,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-GOVBC-011,GOV-BC-011,voluntary,CTL-IAM-004,Designed,L4,POL-04.03;POL-04.04,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-GOVBC-012,GOV-BC-012,voluntary,CTL-ASR-006,Designed,L4,POL-04.02;POL-07.06,VAL-013(automated);VAL-025(internal-independent),EVT-030
+REQ-GOVBC-012,GOV-BC-012,voluntary,CTL-CRY-002,Designed,L4,POL-05.02,VAL-013(automated);VAL-025(internal-independent),EVT-008;EVT-009
+REQ-GOVBC-012,GOV-BC-012,voluntary,CTL-IAM-005,Designed,L4,POL-04.02,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-030
+REQ-GOVBC-012,GOV-BC-012,voluntary,CTL-IAM-006,Designed,L3,POL-04.02,VAL-022(internal-independent),EVT-030
+REQ-GOVBC-013,GOV-BC-013,voluntary,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-GOVBC-013,GOV-BC-013,voluntary,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-GOVBC-014,GOV-BC-014,voluntary,CTL-SDL-004,Designed,L4,POL-06.04,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-014;EVT-005
+REQ-GOVBC-015,GOV-BC-015,voluntary,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-GOVBC-015,GOV-BC-015,voluntary,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-GOVBC-016,GOV-BC-016,voluntary,CTL-BCR-002,Designed,L1,POL-09.02,VAL-012(internal-independent);VAL-022(internal-independent),EVT-015
+REQ-GOVBC-016,GOV-BC-016,voluntary,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-GOVBC-017,GOV-BC-017,voluntary,CTL-HR-002,Designed,L2,POL-03.02,VAL-013(automated);VAL-025(internal-independent),EVT-020
+REQ-GOVBC-018,GOV-BC-018,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-GOVBC-019,GOV-BC-019,voluntary,CTL-ASR-011,Designed,L4,POL-01.04,VAL-001(automated);VAL-031(automated);VAL-025(internal-independent),EVT-022;EVT-023
+REQ-GOVBC-019,GOV-BC-019,voluntary,CTL-CUS-004,Designed,L3,POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-GOVBC-019,GOV-BC-019,voluntary,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-GOVBC-020,GOV-BC-020,voluntary,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-GOVBC-020,GOV-BC-020,voluntary,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-GOVBC-021,GOV-BC-021,voluntary,CTL-GOV-006,Designed,L1,POL-01.03,VAL-020(automated);VAL-025(internal-independent),EVT-021
+REQ-GOVBC-022,GOV-BC-022,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-GOVBC-023,GOV-BC-023,voluntary,CTL-BCR-003,Designed,L3,POL-09.03,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-GOVBC-023,GOV-BC-023,voluntary,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-GOVBC-024,GOV-BC-024,voluntary,CTL-CUS-002,Designed,L1,POL-13.03,VAL-025(internal-independent),EVT-016
+REQ-GOVBC-024,GOV-BC-024,voluntary,CTL-HR-004,Designed,L4,POL-02.01,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-GOVBC-025,GOV-BC-025,voluntary,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-GOVBC-025,GOV-BC-025,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-GOVBC-026,GOV-BC-026,voluntary,CTL-AI-008,Designed,L3,POL-11.07;POL-09.02,VAL-022(internal-independent),EVT-016
+REQ-GOVBC-026,GOV-BC-026,voluntary,CTL-BCR-002,Designed,L1,POL-09.02,VAL-012(internal-independent);VAL-022(internal-independent),EVT-015
+REQ-IRS-001,26 U.S.C. 4966,contractual,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-IRS-001,26 U.S.C. 4966,contractual,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-IRS-002,26 U.S.C. 4967,contractual,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-IRS-002,26 U.S.C. 4967,contractual,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-IRS-002,26 U.S.C. 4967,contractual,CTL-HR-004,Designed,L4,POL-02.01,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-IRS-003,26 U.S.C. 170(f)(8),contractual,CTL-FIN-007,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-IRS-004,26 U.S.C. 170(f)(18),contractual,CTL-FIN-007,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-IRS-005,26 U.S.C. 6033(k),contractual,CTL-FIN-012,Designed,L3,POL-12.02,VAL-003(automated);VAL-011(internal-independent),EVT-017
+REQ-IRS-006,"26 CFR 1.6001-1(c),(e)",contractual,CTL-DAT-002,Designed,L4,POL-05.03;POL-05.06,VAL-009(automated);VAL-025(internal-independent),EVT-027
+REQ-ISO27001-001,ISO/IEC 27001:2022 clauses 4-10 and Annex A,voluntary,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-ISO27001-002,ISO/IEC 27001 certification decision,undetermined,CTL-GOV-005,Designed,L3,POL-01.03,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-ISO27701-001,ISO/IEC 27701:2025 PIMS (standalone),voluntary,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-ISO42001-001,Clause 5.2,voluntary,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-ISO42001-002,Clause 5.3,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-ISO42001-002,Clause 5.3,voluntary,CTL-GOV-001,Designed,L0,POL-01.01,VAL-025(internal-independent),EVT-021
+REQ-ISO42001-003,Clauses 6.1.2-6.1.4; 8.2-8.4,voluntary,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-ISO42001-004,Clause 9.2,voluntary,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-ISO42001-004,Clause 9.2,voluntary,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-ISO42001-005,Clause 9.3,voluntary,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-ISO42001-005,Clause 9.3,voluntary,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-ISO42001-006,Annex A (normative); Annex B,voluntary,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-N53-001,SP 800-53 Rev. 5 (Release 5.2.0) AC family,framework-selected,CTL-IAM-002,Designed,L4,POL-04.01,VAL-009(automated);VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-002
+REQ-N53-001,SP 800-53 Rev. 5 (Release 5.2.0) AC family,framework-selected,CTL-IAM-005,Designed,L4,POL-04.02,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-030
+REQ-N53-002,SP 800-53 Rev. 5 (Release 5.2.0) AT family,framework-selected,CTL-HR-002,Designed,L2,POL-03.02,VAL-013(automated);VAL-025(internal-independent),EVT-020
+REQ-N53-003,SP 800-53 Rev. 5 (Release 5.2.0) AU family,framework-selected,CTL-LOG-001,Designed,L2,POL-07.06,VAL-002(automated);VAL-025(internal-independent),EVT-008;EVT-009;EVT-018
+REQ-N53-004,SP 800-53 Rev. 5 (Release 5.2.0) CA family,framework-selected,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-N53-004,SP 800-53 Rev. 5 (Release 5.2.0) CA family,framework-selected,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-N53-005,SP 800-53 Rev. 5 (Release 5.2.0) CM family,framework-selected,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-N53-006,SP 800-53 Rev. 5 (Release 5.2.0) CP family,framework-selected,CTL-BCR-001,Designed,L3,POL-09.01,VAL-012(internal-independent),EVT-015
+REQ-N53-006,SP 800-53 Rev. 5 (Release 5.2.0) CP family,framework-selected,CTL-BCR-002,Designed,L1,POL-09.02,VAL-012(internal-independent);VAL-022(internal-independent),EVT-015
+REQ-N53-007,SP 800-53 Rev. 5 (Release 5.2.0) IA family,framework-selected,CTL-IAM-001,Designed,L4,POL-04.01;POL-11.01,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-N53-007,SP 800-53 Rev. 5 (Release 5.2.0) IA family,framework-selected,CTL-IAM-004,Designed,L4,POL-04.03;POL-04.04,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-N53-008,SP 800-53 Rev. 5 (Release 5.2.0) IR family,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-N53-009,SP 800-53 Rev. 5 (Release 5.2.0) MA family,framework-selected,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-N53-010,SP 800-53 Rev. 5 (Release 5.2.0) MP family,framework-selected,CTL-VEN-005,Designed,L2,POL-07.07;POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-N53-011,SP 800-53 Rev. 5 (Release 5.2.0) PE family,framework-selected,CTL-VEN-005,Designed,L2,POL-07.07;POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-N53-012,SP 800-53 Rev. 5 (Release 5.2.0) PL family,framework-selected,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-N53-013,SP 800-53 Rev. 5 (Release 5.2.0) PM family,framework-selected,CTL-GOV-001,Designed,L0,POL-01.01,VAL-025(internal-independent),EVT-021
+REQ-N53-014,SP 800-53 Rev. 5 (Release 5.2.0) PS family,framework-selected,CTL-HR-001,Designed,L3,POL-03.01;POL-02;POL-02.02;POL-02.03,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-020
+REQ-N53-014,SP 800-53 Rev. 5 (Release 5.2.0) PS family,framework-selected,CTL-HR-003,Designed,L5,POL-03.03,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-N53-015,SP 800-53 Rev. 5 (Release 5.2.0) PT family,framework-selected,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-N53-016,SP 800-53 Rev. 5 (Release 5.2.0) RA family,framework-selected,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-N53-016,SP 800-53 Rev. 5 (Release 5.2.0) RA family,framework-selected,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-N53-017,SP 800-53 Rev. 5 (Release 5.2.0) SA family,framework-selected,CTL-SDL-003,Designed,L3,POL-06.01;POL-06.07,VAL-025(internal-independent),EVT-002;EVT-021
+REQ-N53-017,SP 800-53 Rev. 5 (Release 5.2.0) SA family,framework-selected,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-N53-018,SP 800-53 Rev. 5 (Release 5.2.0) SC family,framework-selected,CTL-APP-009,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004
+REQ-N53-018,SP 800-53 Rev. 5 (Release 5.2.0) SC family,framework-selected,CTL-CRY-001,Designed,L4,POL-05.02,VAL-009(automated);VAL-025(internal-independent),EVT-018;EVT-028
+REQ-N53-018,SP 800-53 Rev. 5 (Release 5.2.0) SC family,framework-selected,CTL-CRY-002,Designed,L4,POL-05.02,VAL-013(automated);VAL-025(internal-independent),EVT-008;EVT-009
+REQ-N53-019,SP 800-53 Rev. 5 (Release 5.2.0) SI family,framework-selected,CTL-LOG-001,Designed,L2,POL-07.06,VAL-002(automated);VAL-025(internal-independent),EVT-008;EVT-009;EVT-018
+REQ-N53-019,SP 800-53 Rev. 5 (Release 5.2.0) SI family,framework-selected,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-N53-020,SP 800-53 Rev. 5 (Release 5.2.0) SR family,framework-selected,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-N53-020,SP 800-53 Rev. 5 (Release 5.2.0) SR family,framework-selected,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-NACHA-001,"Nacha Operating Rules Art. One s.1.6 (ACH Security Framework, 2013)",contractual,CTL-FIN-014,Designed,L4,POL-12.06;POL-10.03,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-017
+REQ-NACHA-001,"Nacha Operating Rules Art. One s.1.6 (ACH Security Framework, 2013)",contractual,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-NACHA-002,"Supplementing Data Security Requirements (Phase 2, eff. 2022-06-30)",voluntary,CTL-FIN-014,Designed,L4,POL-12.06;POL-10.03,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-017
+REQ-NACHA-003,Risk Management Topics - Fraud Monitoring (Phase 1 eff. 2026-03-20; Phase 2 eff. 2026-06-22),contractual,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-NACHA-003,Risk Management Topics - Fraud Monitoring (Phase 1 eff. 2026-03-20; Phase 2 eff. 2026-06-22),contractual,CTL-FIN-013,Designed,L3,POL-12.04,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-NACHA-003,Risk Management Topics - Fraud Monitoring (Phase 1 eff. 2026-03-20; Phase 2 eff. 2026-06-22),contractual,CTL-FIN-014,Designed,L4,POL-12.06;POL-10.03,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-017
+REQ-NACHA-003,Risk Management Topics - Fraud Monitoring (Phase 1 eff. 2026-03-20; Phase 2 eff. 2026-06-22),contractual,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-NACHA-004,Notification of Change (NOC) handling,contractual,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-NACHA-004,Notification of Change (NOC) handling,contractual,CTL-FIN-014,Designed,L4,POL-12.06;POL-10.03,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-017
+REQ-OFAC-001,31 CFR Chapter V (sanctions regulations); OFAC enforcement guidelines,legal,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-OFAC-002,A Framework for OFAC Compliance Commitments (2019-05-02),voluntary,CTL-FIN-013,Designed,L3,POL-12.04,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-OFAC-003,Screening practice,customer-expectation,CTL-FIN-006,Designed,L4,POL-12.04,VAL-003(automated);VAL-010(automated);VAL-025(internal-independent),EVT-018
+REQ-OSSF-001,OSPS Baseline (2025) Levels 1-3,voluntary,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-OSSF-002,OpenSSF Scorecard (dependency assessment),voluntary,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-OWASPAI-001,LLM01:2025 Prompt Injection,voluntary,CTL-AI-003,Designed,L4,POL-11.04,VAL-005(automated);VAL-006(internal-independent),EVT-007
+REQ-OWASPAI-002,LLM02:2025 Sensitive Information Disclosure,voluntary,CTL-LOG-002,Designed,L4,POL-07.06;POL-05.01,VAL-001(automated);VAL-025(internal-independent),EVT-004
+REQ-OWASPAI-002,LLM02:2025 Sensitive Information Disclosure,voluntary,CTL-VEN-003,Designed,L4,POL-10.02;POL-11.05,VAL-004(automated);VAL-025(internal-independent),EVT-007;EVT-018
+REQ-OWASPAI-003,LLM03:2025 Supply Chain,voluntary,CTL-VEN-003,Designed,L4,POL-10.02;POL-11.05,VAL-004(automated);VAL-025(internal-independent),EVT-007;EVT-018
+REQ-OWASPAI-004,LLM05:2025 Improper Output Handling,voluntary,CTL-SDL-009,Designed,L4,POL-11.03;POL-06.02,VAL-004(automated);VAL-025(internal-independent),EVT-001;EVT-002;EVT-007
+REQ-OWASPAI-005,LLM06:2025 Excessive Agency,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-OWASPAI-005,LLM06:2025 Excessive Agency,voluntary,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-OWASPAI-005,LLM06:2025 Excessive Agency,voluntary,CTL-GOV-003,Designed,L4,POL-01.08;POL-11.02,VAL-023(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028;EVT-006
+REQ-OWASPAI-005,LLM06:2025 Excessive Agency,voluntary,CTL-GOV-007,Designed,L4,POL-01.05;POL-11.02,VAL-004(automated);VAL-001(automated);VAL-025(internal-independent),EVT-026
+REQ-OWASPAI-006,LLM09:2025 Misinformation,voluntary,CTL-AI-007,Designed,L3,POL-11.06,VAL-020(automated);VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-OWASPAI-007,LLM10:2025 Unbounded Consumption,voluntary,CTL-AI-008,Designed,L3,POL-11.07;POL-09.02,VAL-022(internal-independent),EVT-016
+REQ-OWASPAI-007,LLM10:2025 Unbounded Consumption,voluntary,CTL-APP-010,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-008(automated);VAL-025(internal-independent),EVT-004
+REQ-OWASPAI-008,ASI01 Agent Goal Hijack,voluntary,CTL-AI-003,Designed,L4,POL-11.04,VAL-005(automated);VAL-006(internal-independent),EVT-007
+REQ-OWASPAI-008,ASI01 Agent Goal Hijack,voluntary,CTL-IR-003,Designed,L4,POL-08.02;POL-11.07,VAL-022(internal-independent),EVT-007;EVT-016
+REQ-OWASPAI-009,ASI02 Tool Misuse and Exploitation; ASI05 Unexpected Code Execution,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-OWASPAI-010,ASI03 Identity and Privilege Abuse,voluntary,CTL-AI-001,Designed,L4,POL-11.01;POL-11.07,VAL-013(automated);VAL-025(internal-independent),EVT-007
+REQ-OWASPAI-010,ASI03 Identity and Privilege Abuse,voluntary,CTL-IAM-001,Designed,L4,POL-04.01;POL-11.01,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-OWASPAI-011,ASI06 Memory and Context Poisoning,voluntary,CTL-AI-003,Designed,L4,POL-11.04,VAL-005(automated);VAL-006(internal-independent),EVT-007
+REQ-OWASPAI-012,ASI07 Insecure Inter-Agent Communication; ASI08 Cascading Failures,voluntary,CTL-AI-004,Designed,L2,POL-11.07,VAL-018(automated);VAL-025(internal-independent),EVT-007
+REQ-OWASPAI-013,ASI09 Human-Agent Trust Exploitation; ASI10 Rogue Agents,voluntary,CTL-AI-007,Designed,L3,POL-11.06,VAL-020(automated);VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-OWASPAI-013,ASI09 Human-Agent Trust Exploitation; ASI10 Rogue Agents,voluntary,CTL-AI-010,Designed,L3,POL-11.07;POL-13.04,VAL-001(automated);VAL-025(internal-independent),EVT-007;EVT-021
+REQ-OWASPAI-014,Threat model approach,voluntary,CTL-SDL-003,Designed,L3,POL-06.01;POL-06.07,VAL-025(internal-independent),EVT-002;EVT-021
+REQ-OWASPAI-015,"01 General controls (governance, data limitation, limiting unwanted behaviour)",voluntary,CTL-AI-009,Designed,L1,POL-11,VAL-029(self-assessment);VAL-025(internal-independent),EVT-021
+REQ-PEC-001,PEC-001,voluntary,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-PEC-001,PEC-001,voluntary,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-PEC-002,PEC-002,voluntary,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-PEC-003,PEC-003,voluntary,CTL-APP-005,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated);VAL-017(automated);VAL-027(external-penetration),EVT-004;EVT-018
+REQ-PEC-003,PEC-003,voluntary,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-PEC-003,PEC-003,voluntary,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-PEC-004,PEC-004,voluntary,CTL-GOV-003,Designed,L4,POL-01.08;POL-11.02,VAL-023(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028;EVT-006
+REQ-PEC-004,PEC-004,voluntary,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-PEC-005,PEC-005,voluntary,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-PEC-006,PEC-006,voluntary,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-PEC-006,PEC-006,voluntary,CTL-GOV-003,Designed,L4,POL-01.08;POL-11.02,VAL-023(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028;EVT-006
+REQ-PEC-007,PEC-007,voluntary,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-PEC-007,PEC-007,voluntary,CTL-TEN-002,Designed,L4,POL-13.02,VAL-013(automated);VAL-025(internal-independent),EVT-019
+REQ-PEC-008,PEC-008,voluntary,CTL-GOV-007,Designed,L4,POL-01.05;POL-11.02,VAL-004(automated);VAL-001(automated);VAL-025(internal-independent),EVT-026
+REQ-PEC-009,PEC-009,voluntary,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-PEC-010,PEC-010,voluntary,CTL-GOV-015,Designed,L3,POL-01.04;POL-01.09,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-PEC-011,PEC-011,voluntary,CTL-FIN-012,Designed,L3,POL-12.02,VAL-003(automated);VAL-011(internal-independent),EVT-017
+REQ-PEC-011,PEC-011,voluntary,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-PEC-012,PEC-012,voluntary,CTL-AI-008,Designed,L3,POL-11.07;POL-09.02,VAL-022(internal-independent),EVT-016
+REQ-PEC-013,PEC-013,voluntary,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-PEC-013,PEC-013,voluntary,CTL-ASR-001,Designed,L2,POL-01.04,VAL-002(automated);VAL-025(internal-independent),EVT-001;EVT-003;EVT-005;EVT-008;EVT-018
+REQ-PEC-014,PEC-014,voluntary,CTL-ASR-001,Designed,L2,POL-01.04,VAL-002(automated);VAL-025(internal-independent),EVT-001;EVT-003;EVT-005;EVT-008;EVT-018
+REQ-PEC-015,PEC-015,voluntary,CTL-ASR-009,Designed,L4,POL-01.04,VAL-001(automated);VAL-025(internal-independent),EVT-022
+REQ-PEC-015,PEC-015,voluntary,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-PEC-016,PEC-016,voluntary,CTL-ASR-003,Designed,L3,POL-01.04,VAL-011(internal-independent);VAL-019(internal-independent),EVT-022
+REQ-PEC-017,PEC-017,voluntary,CTL-ASR-011,Designed,L4,POL-01.04,VAL-001(automated);VAL-031(automated);VAL-025(internal-independent),EVT-022;EVT-023
+REQ-PEC-018,PEC-018,voluntary,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-PEC-018,PEC-018,voluntary,CTL-ASR-006,Designed,L4,POL-04.02;POL-07.06,VAL-013(automated);VAL-025(internal-independent),EVT-030
+REQ-PEC-019,PEC-019,voluntary,CTL-ASR-002,Designed,L4,POL-07.06;POL-01.04,VAL-018(automated);VAL-026(external-technical),EVT-024;EVT-025;EVT-029
+REQ-PEC-020,PEC-020,voluntary,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-PEC-020,PEC-020,voluntary,CTL-LOG-002,Designed,L4,POL-07.06;POL-05.01,VAL-001(automated);VAL-025(internal-independent),EVT-004
+REQ-PEC-021,PEC-021,voluntary,CTL-DAT-002,Designed,L4,POL-05.03;POL-05.06,VAL-009(automated);VAL-025(internal-independent),EVT-027
+REQ-PEC-022,PEC-022,voluntary,CTL-ASR-004,Designed,L3,POL-07.06,VAL-030(automated);VAL-008(automated);VAL-025(internal-independent),EVT-023
+REQ-PEC-023,PEC-023,voluntary,CTL-ASR-003,Designed,L3,POL-01.04,VAL-011(internal-independent);VAL-019(internal-independent),EVT-022
+REQ-PEC-023,PEC-023,voluntary,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-PEC-024,PEC-024,voluntary,CTL-CUS-004,Designed,L3,POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-PEC-024,PEC-024,voluntary,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-PEC-025,PEC-025,voluntary,CTL-ASR-001,Designed,L2,POL-01.04,VAL-002(automated);VAL-025(internal-independent),EVT-001;EVT-003;EVT-005;EVT-008;EVT-018
+REQ-PEC-025,PEC-025,voluntary,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-PEC-026,PEC-026,voluntary,CTL-ASR-005,Designed,L3,POL-01.04,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004
+REQ-PEC-026,PEC-026,voluntary,CTL-ASR-008,Designed,L0,POL-01.04,VAL-026(external-technical),EVT-021
+REQ-PEC-027,PEC-027,voluntary,CTL-ASR-011,Designed,L4,POL-01.04,VAL-001(automated);VAL-031(automated);VAL-025(internal-independent),EVT-022;EVT-023
+REQ-PEC-028,PEC-028,voluntary,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-PENTEST-001,PCI DSS v4.0.1 11.4.1,undetermined,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-002,PCI DSS v4.0.1 11.4.2 / 11.4.3,undetermined,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-003,PCI DSS v4.0.1 11.4.4,undetermined,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-004,PCI DSS v4.0.1 11.4.5 / 11.4.6,undetermined,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-005,PCI DSS v4.0.1 11.4.7,undetermined,CTL-TEN-001,Designed,L4,POL-05.05,VAL-014(automated);VAL-027(external-penetration),EVT-004
+REQ-PENTEST-006,PCI SSC Pen Testing Guidance v1.1 s.3,undetermined,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-007,23 NYCRR 500.5(a)(1),undetermined,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-008,23 NYCRR 500.5(a)(2)-(c),undetermined,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-PENTEST-010,16 CFR 314.4(d)(1),undetermined,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-011,16 CFR 314.4(d)(2),undetermined,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-PENTEST-013,NIST SP 800-53 Rev5 CA-8,voluntary,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-014,NIST SP 800-53 Rev5 CA-8(1),voluntary,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-015,NIST SP 800-53 Rev5 RA-5(11),voluntary,CTL-VUL-003,Designed,L1,POL-07.05,VAL-001(automated);VAL-025(internal-independent),EVT-016
+REQ-PENTEST-016,NIST SP 800-53 Rev5 SA-11,voluntary,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-PENTEST-017,FDIC InTREx (FFIEC CAT baseline statement),customer-expectation,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-019,AICPA TSC 2017 CC4.1 (points of focus),customer-expectation,CTL-VUL-002,Designed,L0,POL-07.05,VAL-027(external-penetration),EVT-016
+REQ-PENTEST-020,ISO/IEC 27001:2022 Annex A 8.8 / 8.29,voluntary,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-PENTEST-022,RFC 9116,voluntary,CTL-VUL-003,Designed,L1,POL-07.05,VAL-001(automated);VAL-025(internal-independent),EVT-016
+REQ-SAMM-001,"OWASP SAMM v2 (5 business functions, 15 practices)",voluntary,CTL-SDL-003,Designed,L3,POL-06.01;POL-06.07,VAL-025(internal-independent),EVT-002;EVT-021
+REQ-SBC-001,SBC-001,voluntary,CTL-APP-001,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated),EVT-004;EVT-003
+REQ-SBC-002,SBC-002,voluntary,CTL-APP-002,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-003
+REQ-SBC-003,SBC-003,voluntary,CTL-APP-003,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-013
+REQ-SBC-004,SBC-004,voluntary,CTL-APP-004,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-013
+REQ-SBC-005,SBC-005,voluntary,CTL-APP-001,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated),EVT-004;EVT-003
+REQ-SBC-006,SBC-006,voluntary,CTL-APP-005,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated);VAL-017(automated);VAL-027(external-penetration),EVT-004;EVT-018
+REQ-SBC-007,SBC-007,voluntary,CTL-TEN-001,Designed,L4,POL-05.05,VAL-014(automated);VAL-027(external-penetration),EVT-004
+REQ-SBC-008,SBC-008,voluntary,CTL-AI-004,Designed,L2,POL-11.07,VAL-018(automated);VAL-025(internal-independent),EVT-007
+REQ-SBC-008,SBC-008,voluntary,CTL-IAM-001,Designed,L4,POL-04.01;POL-11.01,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-SBC-008,SBC-008,voluntary,CTL-SDL-009,Designed,L4,POL-11.03;POL-06.02,VAL-004(automated);VAL-025(internal-independent),EVT-001;EVT-002;EVT-007
+REQ-SBC-009,SBC-009,voluntary,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-SBC-009,SBC-009,voluntary,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-SBC-010,SBC-010,voluntary,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-SBC-010,SBC-010,voluntary,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-SBC-010,SBC-010,voluntary,CTL-SDL-004,Designed,L4,POL-06.04,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-014;EVT-005
+REQ-SBC-011,SBC-011,voluntary,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-SBC-012,SBC-012,voluntary,CTL-IAM-008,Designed,L4,POL-04.05;POL-11.01,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-SBC-012,SBC-012,voluntary,CTL-LOG-002,Designed,L4,POL-07.06;POL-05.01,VAL-001(automated);VAL-025(internal-independent),EVT-004
+REQ-SBC-012,SBC-012,voluntary,CTL-SDL-010,Designed,L4,POL-04.05,VAL-009(automated);VAL-025(internal-independent),EVT-012
+REQ-SBC-013,SBC-013,voluntary,CTL-APP-006,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004
+REQ-SBC-014,SBC-014,voluntary,CTL-APP-007,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-028
+REQ-SBC-015,SBC-015,voluntary,CTL-APP-008,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-028
+REQ-SBC-016,SBC-016,voluntary,CTL-APP-009,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004
+REQ-SBC-016,SBC-016,voluntary,CTL-CRY-002,Designed,L4,POL-05.02,VAL-013(automated);VAL-025(internal-independent),EVT-008;EVT-009
+REQ-SBC-017,SBC-017,voluntary,CTL-AI-002,Designed,L4,POL-11.01;POL-11.02,VAL-004(automated);VAL-013(automated);VAL-017(automated);VAL-025(internal-independent),EVT-007;EVT-009
+REQ-SBC-017,SBC-017,voluntary,CTL-AI-003,Designed,L4,POL-11.04,VAL-005(automated);VAL-006(internal-independent),EVT-007
+REQ-SBC-018,SBC-018,voluntary,CTL-APP-010,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-008(automated);VAL-025(internal-independent),EVT-004
+REQ-SLSA-001,SLSA v1.2 Build L1-L2,framework-selected,CTL-SDL-004,Designed,L4,POL-06.04,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-014;EVT-005
+REQ-SLSA-002,SLSA v1.2 Build L3,voluntary,CTL-SDL-004,Designed,L4,POL-06.04,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-014;EVT-005
+REQ-SLSA-003,SLSA v1.2 Source track,voluntary,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-SOC1-001,AT-C 320.13,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOC1-002,AT-C 320.10,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOC1-003,AT-C 320.15a,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOC1-004,AT-C 320.15b-c,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-001,Designed,L4,POL-12.02;POL-12.05,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-018;EVT-017
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-005,Designed,L4,POL-12.02,VAL-003(automated);VAL-008(automated);VAL-016(internal-independent),EVT-018;EVT-017
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-008,Designed,L3,POL-12.02;POL-13.02,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-017
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-009,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-015(automated),EVT-017
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-010,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-011,Designed,L4,POL-12.05,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-012,Designed,L3,POL-12.02,VAL-003(automated);VAL-011(internal-independent),EVT-017
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-015,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-004
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-FIN-016,Designed,L4,POL-12.01,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-GOV-009,Designed,L4,POL-01.07,VAL-013(automated);VAL-025(internal-independent),EVT-002;EVT-018;EVT-026
+REQ-SOC1-005,AT-C 320.16,framework-selected,CTL-TEN-002,Designed,L4,POL-13.02,VAL-013(automated);VAL-025(internal-independent),EVT-019
+REQ-SOC1-006,AT-C 320.17,framework-selected,CTL-FIN-001,Designed,L4,POL-12.02;POL-12.05,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-018;EVT-017
+REQ-SOC1-006,AT-C 320.17,framework-selected,CTL-FIN-010,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-SOC1-007,AT-C 320.08;.11;.25d;.37,framework-selected,CTL-VEN-002,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-SOC1-008,AT-C 320.15a(vii);.25c;.40e,framework-selected,CTL-VEN-002,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-SOC1-009,AT-C 320.36;.38,framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-010,AT-C 320.30;AT-C 205.36,framework-selected,CTL-ASR-001,Designed,L2,POL-01.04,VAL-002(automated);VAL-025(internal-independent),EVT-001;EVT-003;EVT-005;EVT-008;EVT-018
+REQ-SOC1-010,AT-C 320.30;AT-C 205.36,framework-selected,CTL-ASR-002,Designed,L4,POL-07.06;POL-01.04,VAL-018(automated);VAL-026(external-technical),EVT-024;EVT-025;EVT-029
+REQ-SOC1-010,AT-C 320.30;AT-C 205.36,framework-selected,CTL-ASR-003,Designed,L3,POL-01.04,VAL-011(internal-independent);VAL-019(internal-independent),EVT-022
+REQ-SOC1-010,AT-C 320.30;AT-C 205.36,framework-selected,CTL-ASR-008,Designed,L0,POL-01.04,VAL-026(external-technical),EVT-021
+REQ-SOC1-010,AT-C 320.30;AT-C 205.36,framework-selected,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-SOC1-010,AT-C 320.30;AT-C 205.36,framework-selected,CTL-FIN-009,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-015(automated),EVT-017
+REQ-SOC1-010,AT-C 320.30;AT-C 205.36,framework-selected,CTL-FIN-012,Designed,L3,POL-12.02,VAL-003(automated);VAL-011(internal-independent),EVT-017
+REQ-SOC1-011,AT-C 320.28;.31;.A47,framework-selected,CTL-ASR-003,Designed,L3,POL-01.04,VAL-011(internal-independent);VAL-019(internal-independent),EVT-022
+REQ-SOC1-011,AT-C 320.28;.31;.A47,framework-selected,CTL-ASR-009,Designed,L4,POL-01.04,VAL-001(automated);VAL-025(internal-independent),EVT-022
+REQ-SOC1-012,AT-C 320.29,framework-selected,CTL-SDL-006,Designed,L3,POL-06.02,VAL-011(internal-independent),EVT-005;EVT-022
+REQ-SOC1-013,AT-C 320.21;.23,framework-selected,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-SOC1-014,AT-C 320.40n;.41n,framework-selected,CTL-CUS-004,Designed,L3,POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-SOC1-015,AT-C 105.28;AT-C 320.40j,framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-016,UAA attest definition (state law),framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-016,UAA attest definition (state law),framework-selected,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-SOC1-017,AT-C 320.35,framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-018,AT-C 320.42-.44,framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-019,AT-C 205.32,framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-020,AT-C 205.40-.44,framework-selected,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-SOC1-020,AT-C 205.40-.44,framework-selected,CTL-ASR-008,Designed,L0,POL-01.04,VAL-026(external-technical),EVT-021
+REQ-SOC1-021,AT-C 320.34;.45,framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-022,AU-C 402.12;.16;.17,framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOC1-023,"AU-C 9402 (Dec 2022, rev Mar 2024)",framework-selected,CTL-ASR-010,Designed,L0,POL-01.04,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-001,DC 200 DC1,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-002,DC 200 DC2,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-003,DC 200 DC3,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-004,DC 200 DC4,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-005,DC 200 DC5,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-006,DC 200 DC6,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-007,DC 200 DC7,framework-selected,CTL-VEN-002,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-SOCDC-008,DC 200 DC8,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-009,DC 200 DC9,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-SOCDC-010,2027 proposed description criteria (exposure draft),undetermined,CTL-GOV-006,Designed,L1,POL-01.03,VAL-020(automated);VAL-025(internal-independent),EVT-021
+REQ-SSDF-001,SP 800-218 v1.1 PO (Prepare the Organization),framework-selected,CTL-SDL-003,Designed,L3,POL-06.01;POL-06.07,VAL-025(internal-independent),EVT-002;EVT-021
+REQ-SSDF-002,SP 800-218 v1.1 PS (Protect the Software),framework-selected,CTL-APP-003,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent),EVT-004;EVT-013
+REQ-SSDF-002,SP 800-218 v1.1 PS (Protect the Software),framework-selected,CTL-IAM-008,Designed,L4,POL-04.05;POL-11.01,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-SSDF-002,SP 800-218 v1.1 PS (Protect the Software),framework-selected,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-SSDF-002,SP 800-218 v1.1 PS (Protect the Software),framework-selected,CTL-SDL-004,Designed,L4,POL-06.04,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-014;EVT-005
+REQ-SSDF-002,SP 800-218 v1.1 PS (Protect the Software),framework-selected,CTL-SDL-010,Designed,L4,POL-04.05,VAL-009(automated);VAL-025(internal-independent),EVT-012
+REQ-SSDF-003,SP 800-218 v1.1 PW (Produce Well-Secured Software),framework-selected,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-SSDF-003,SP 800-218 v1.1 PW (Produce Well-Secured Software),framework-selected,CTL-SDL-003,Designed,L3,POL-06.01;POL-06.07,VAL-025(internal-independent),EVT-002;EVT-021
+REQ-SSDF-004,SP 800-218 v1.1 RV (Respond to Vulnerabilities),framework-selected,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-SSDF-004,SP 800-218 v1.1 RV (Respond to Vulnerabilities),framework-selected,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-SSDF-004,SP 800-218 v1.1 RV (Respond to Vulnerabilities),framework-selected,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-SSDF-004,SP 800-218 v1.1 RV (Respond to Vulnerabilities),framework-selected,CTL-VUL-005,Designed,L4,POL-07.05;POL-06.06,VAL-004(automated);VAL-025(internal-independent),EVT-004;EVT-021
+REQ-SSDF-005,"SP 800-218r1 ipd (SSDF v1.2 draft, 2025-12-17)",voluntary,CTL-SDL-003,Designed,L3,POL-06.01;POL-06.07,VAL-025(internal-independent),EVT-002;EVT-021
+REQ-SSDFAI-001,Section 1 scope statement,voluntary,CTL-SDL-009,Designed,L4,POL-11.03;POL-06.02,VAL-004(automated);VAL-025(internal-independent),EVT-001;EVT-002;EVT-007
+REQ-SSDFAI-002,PW.4.4,voluntary,CTL-SDL-005,Designed,L4,POL-06.04;POL-06.09,VAL-009(automated);VAL-025(internal-independent),EVT-013;EVT-011
+REQ-SSDFAI-003,"PW.5.1 (R2, R3)",voluntary,CTL-SDL-009,Designed,L4,POL-11.03;POL-06.02,VAL-004(automated);VAL-025(internal-independent),EVT-001;EVT-002;EVT-007
+REQ-SSDFAI-004,PS.3.2 (R1),voluntary,CTL-VEN-003,Designed,L4,POL-10.02;POL-11.05,VAL-004(automated);VAL-025(internal-independent),EVT-007;EVT-018
+REQ-SSDFAI-005,PO.5.3,voluntary,CTL-SDL-008,Designed,L4,POL-06.06,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-008
+REQ-STATE-001,"State security-breach notification statutes (50 states, DC, GU, PR, VI)",legal,CTL-IR-002,Designed,L3,POL-08.03,VAL-022(internal-independent),EVT-016
+REQ-STATE-002,Comprehensive state consumer privacy laws - nonprofit coverage,undetermined,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-STATE-003,Comprehensive state privacy laws - GLBA exemptions,undetermined,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-STATE-004,Comprehensive state privacy laws - processor duties,undetermined,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-STATE-006,201 CMR 17.00 (Massachusetts) and similar state 'reasonable security' laws,legal,CTL-CRY-001,Designed,L4,POL-05.02,VAL-009(automated);VAL-025(internal-independent),EVT-018;EVT-028
+REQ-STATE-006,201 CMR 17.00 (Massachusetts) and similar state 'reasonable security' laws,legal,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-TPRM-001,88 FR 37920 - Planning; critical activities,customer-expectation,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-TPRM-002,88 FR 37920 - Due diligence and third-party selection,customer-expectation,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-TPRM-002,88 FR 37920 - Due diligence and third-party selection,customer-expectation,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-TPRM-003,88 FR 37920 - Contract negotiation,customer-expectation,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-TPRM-004,88 FR 37920 - Ongoing monitoring,customer-expectation,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-TPRM-005,88 FR 37920 - Termination,customer-expectation,CTL-CUS-001,Designed,L4,POL-13.01,VAL-009(automated);VAL-025(internal-independent),EVT-027;EVT-019
+REQ-TPRM-005,88 FR 37920 - Termination,customer-expectation,CTL-VEN-004,Designed,L2,POL-10.03,VAL-025(internal-independent),EVT-021
+REQ-TPRM-006,88 FR 37920 - Subcontractors,customer-expectation,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-TSC-001,CC1.1,framework-selected,CTL-HR-004,Designed,L4,POL-02.01,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-TSC-002,CC1.2,framework-selected,CTL-GOV-013,Designed,L0,POL-01.01,VAL-025(internal-independent),EVT-021
+REQ-TSC-003,CC1.3,framework-selected,CTL-GOV-001,Designed,L0,POL-01.01,VAL-025(internal-independent),EVT-021
+REQ-TSC-003,CC1.3,framework-selected,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-TSC-004,CC1.4,framework-selected,CTL-HR-001,Designed,L3,POL-03.01;POL-02;POL-02.02;POL-02.03,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-020
+REQ-TSC-005,CC1.5,framework-selected,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-TSC-005,CC1.5,framework-selected,CTL-HR-002,Designed,L2,POL-03.02,VAL-013(automated);VAL-025(internal-independent),EVT-020
+REQ-TSC-006,CC2.1,framework-selected,CTL-GOV-005,Designed,L3,POL-01.03,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-TSC-007,CC2.2,framework-selected,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-TSC-007,CC2.2,framework-selected,CTL-HR-002,Designed,L2,POL-03.02,VAL-013(automated);VAL-025(internal-independent),EVT-020
+REQ-TSC-008,CC2.3,framework-selected,CTL-CUS-002,Designed,L1,POL-13.03,VAL-025(internal-independent),EVT-016
+REQ-TSC-008,CC2.3,framework-selected,CTL-CUS-004,Designed,L3,POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-TSC-008,CC2.3,framework-selected,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-TSC-008,CC2.3,framework-selected,CTL-IR-002,Designed,L3,POL-08.03,VAL-022(internal-independent),EVT-016
+REQ-TSC-009,CC3.1,framework-selected,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-TSC-010,CC3.2,framework-selected,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-TSC-011,CC3.3,framework-selected,CTL-FIN-011,Designed,L4,POL-12.05,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-TSC-011,CC3.3,framework-selected,CTL-FIN-013,Designed,L3,POL-12.04,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-TSC-011,CC3.3,framework-selected,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-TSC-012,CC3.4,framework-selected,CTL-GOV-004,Designed,L1,POL-01.02,VAL-025(internal-independent),EVT-021
+REQ-TSC-012,CC3.4,framework-selected,CTL-GOV-006,Designed,L1,POL-01.03,VAL-020(automated);VAL-025(internal-independent),EVT-021
+REQ-TSC-013,CC4.1,framework-selected,CTL-ASR-001,Designed,L2,POL-01.04,VAL-002(automated);VAL-025(internal-independent),EVT-001;EVT-003;EVT-005;EVT-008;EVT-018
+REQ-TSC-013,CC4.1,framework-selected,CTL-ASR-005,Designed,L3,POL-01.04,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004
+REQ-TSC-013,CC4.1,framework-selected,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-TSC-013,CC4.1,framework-selected,CTL-ASR-011,Designed,L4,POL-01.04,VAL-001(automated);VAL-031(automated);VAL-025(internal-independent),EVT-022;EVT-023
+REQ-TSC-013,CC4.1,framework-selected,CTL-GOV-015,Designed,L3,POL-01.04;POL-01.09,VAL-001(automated);VAL-025(internal-independent),EVT-021
+REQ-TSC-013,CC4.1,framework-selected,CTL-VUL-006,Designed,L3,POL-07.05;POL-06.05,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004;EVT-011
+REQ-TSC-014,CC4.2,framework-selected,CTL-GOV-010,Designed,L2,POL-01.09,VAL-032(internal-independent),EVT-021
+REQ-TSC-014,CC4.2,framework-selected,CTL-GOV-011,Designed,L3,POL-01.04,VAL-025(internal-independent),EVT-016
+REQ-TSC-015,CC5.1,framework-selected,CTL-AI-005,Designed,L4,POL-11.02;POL-11.06,VAL-004(automated);VAL-018(automated);VAL-025(internal-independent),EVT-030;EVT-002
+REQ-TSC-015,CC5.1,framework-selected,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-TSC-015,CC5.1,framework-selected,CTL-GOV-007,Designed,L4,POL-01.05;POL-11.02,VAL-004(automated);VAL-001(automated);VAL-025(internal-independent),EVT-026
+REQ-TSC-015,CC5.1,framework-selected,CTL-GOV-008,Designed,L4,POL-01.06,VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-021;EVT-018
+REQ-TSC-015,CC5.1,framework-selected,CTL-GOV-009,Designed,L4,POL-01.07,VAL-013(automated);VAL-025(internal-independent),EVT-002;EVT-018;EVT-026
+REQ-TSC-016,CC5.2,framework-selected,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-TSC-016,CC5.2,framework-selected,CTL-IAM-002,Designed,L4,POL-04.01,VAL-009(automated);VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-002
+REQ-TSC-016,CC5.2,framework-selected,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-TSC-017,CC5.3,framework-selected,CTL-GOV-002,Designed,L4,POL-01.08,VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028
+REQ-TSC-017,CC5.3,framework-selected,CTL-GOV-003,Designed,L4,POL-01.08;POL-11.02,VAL-023(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028;EVT-006
+REQ-TSC-017,CC5.3,framework-selected,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-TSC-018,CC6.1,framework-selected,CTL-ASR-006,Designed,L4,POL-04.02;POL-07.06,VAL-013(automated);VAL-025(internal-independent),EVT-030
+REQ-TSC-018,CC6.1,framework-selected,CTL-CFG-002,Designed,L3,POL-07.01,VAL-011(internal-independent),EVT-022
+REQ-TSC-018,CC6.1,framework-selected,CTL-CRY-001,Designed,L4,POL-05.02,VAL-009(automated);VAL-025(internal-independent),EVT-018;EVT-028
+REQ-TSC-018,CC6.1,framework-selected,CTL-CRY-002,Designed,L4,POL-05.02,VAL-013(automated);VAL-025(internal-independent),EVT-008;EVT-009
+REQ-TSC-018,CC6.1,framework-selected,CTL-IAM-001,Designed,L4,POL-04.01;POL-11.01,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-TSC-018,CC6.1,framework-selected,CTL-IAM-004,Designed,L4,POL-04.03;POL-04.04,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-TSC-018,CC6.1,framework-selected,CTL-IAM-005,Designed,L4,POL-04.02,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-030
+REQ-TSC-018,CC6.1,framework-selected,CTL-IAM-006,Designed,L3,POL-04.02,VAL-022(internal-independent),EVT-030
+REQ-TSC-018,CC6.1,framework-selected,CTL-IAM-008,Designed,L4,POL-04.05;POL-11.01,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-TSC-018,CC6.1,framework-selected,CTL-LOG-002,Designed,L4,POL-07.06;POL-05.01,VAL-001(automated);VAL-025(internal-independent),EVT-004
+REQ-TSC-018,CC6.1,framework-selected,CTL-SDL-008,Designed,L4,POL-06.06,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-008
+REQ-TSC-018,CC6.1,framework-selected,CTL-SDL-010,Designed,L4,POL-04.05,VAL-009(automated);VAL-025(internal-independent),EVT-012
+REQ-TSC-018,CC6.1,framework-selected,CTL-TEN-001,Designed,L4,POL-05.05,VAL-014(automated);VAL-027(external-penetration),EVT-004
+REQ-TSC-019,CC6.2,framework-selected,CTL-HR-001,Designed,L3,POL-03.01;POL-02;POL-02.02;POL-02.03,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-020
+REQ-TSC-019,CC6.2,framework-selected,CTL-HR-003,Designed,L5,POL-03.03,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-TSC-019,CC6.2,framework-selected,CTL-IAM-002,Designed,L4,POL-04.01,VAL-009(automated);VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-002
+REQ-TSC-019,CC6.2,framework-selected,CTL-IAM-003,Designed,L5,POL-04.06,VAL-009(automated);VAL-019(internal-independent),EVT-009;EVT-028
+REQ-TSC-019,CC6.2,framework-selected,CTL-IAM-007,Designed,L5,POL-04.06,VAL-009(automated);VAL-025(internal-independent),EVT-009
+REQ-TSC-019,CC6.2,framework-selected,CTL-IAM-009,Designed,L2,POL-04.06,VAL-019(internal-independent),EVT-010
+REQ-TSC-020,CC6.3,framework-selected,CTL-APP-005,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-004(automated);VAL-007(automated);VAL-025(internal-independent);VAL-013(automated);VAL-017(automated);VAL-027(external-penetration),EVT-004;EVT-018
+REQ-TSC-020,CC6.3,framework-selected,CTL-HR-003,Designed,L5,POL-03.03,VAL-013(automated);VAL-025(internal-independent),EVT-009
+REQ-TSC-020,CC6.3,framework-selected,CTL-IAM-002,Designed,L4,POL-04.01,VAL-009(automated);VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-002
+REQ-TSC-020,CC6.3,framework-selected,CTL-IAM-003,Designed,L5,POL-04.06,VAL-009(automated);VAL-019(internal-independent),EVT-009;EVT-028
+REQ-TSC-020,CC6.3,framework-selected,CTL-IAM-005,Designed,L4,POL-04.02,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-030
+REQ-TSC-020,CC6.3,framework-selected,CTL-IAM-009,Designed,L2,POL-04.06,VAL-019(internal-independent),EVT-010
+REQ-TSC-021,CC6.4,framework-selected,CTL-VEN-005,Designed,L2,POL-07.07;POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-TSC-022,CC6.5,framework-selected,CTL-CUS-001,Designed,L4,POL-13.01,VAL-009(automated);VAL-025(internal-independent),EVT-027;EVT-019
+REQ-TSC-022,CC6.5,framework-selected,CTL-VEN-005,Designed,L2,POL-07.07;POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-TSC-023,CC6.6,framework-selected,CTL-NET-001,Designed,L4,POL-07.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-008;EVT-028
+REQ-TSC-023,CC6.6,framework-selected,CTL-NET-002,Designed,L4,POL-07.02,VAL-009(automated);VAL-027(external-penetration),EVT-028;EVT-011
+REQ-TSC-024,CC6.7,framework-selected,CTL-CRY-001,Designed,L4,POL-05.02,VAL-009(automated);VAL-025(internal-independent),EVT-018;EVT-028
+REQ-TSC-024,CC6.7,framework-selected,CTL-DAT-004,Designed,L4,POL-05.01,VAL-013(automated);VAL-025(internal-independent),EVT-019
+REQ-TSC-025,CC6.8,framework-selected,CTL-END-001,Designed,L4,POL-07.03,VAL-009(automated);VAL-025(internal-independent),EVT-009;EVT-028
+REQ-TSC-026,CC7.1,framework-selected,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-TSC-026,CC7.1,framework-selected,CTL-NET-001,Designed,L4,POL-07.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-008;EVT-028
+REQ-TSC-026,CC7.1,framework-selected,CTL-VUL-001,Designed,L3,POL-07.04,VAL-009(automated);VAL-025(internal-independent),EVT-011
+REQ-TSC-027,CC7.2,framework-selected,CTL-ASR-002,Designed,L4,POL-07.06;POL-01.04,VAL-018(automated);VAL-026(external-technical),EVT-024;EVT-025;EVT-029
+REQ-TSC-027,CC7.2,framework-selected,CTL-ASR-004,Designed,L3,POL-07.06,VAL-030(automated);VAL-008(automated);VAL-025(internal-independent),EVT-023
+REQ-TSC-027,CC7.2,framework-selected,CTL-ASR-006,Designed,L4,POL-04.02;POL-07.06,VAL-013(automated);VAL-025(internal-independent),EVT-030
+REQ-TSC-027,CC7.2,framework-selected,CTL-IAM-006,Designed,L3,POL-04.02,VAL-022(internal-independent),EVT-030
+REQ-TSC-027,CC7.2,framework-selected,CTL-LOG-001,Designed,L2,POL-07.06,VAL-002(automated);VAL-025(internal-independent),EVT-008;EVT-009;EVT-018
+REQ-TSC-027,CC7.2,framework-selected,CTL-LOG-003,Designed,L3,POL-07.06;POL-08.01,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-TSC-028,CC7.3,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-TSC-028,CC7.3,framework-selected,CTL-LOG-003,Designed,L3,POL-07.06;POL-08.01,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-TSC-029,CC7.4,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-TSC-030,CC7.5,framework-selected,CTL-BCR-001,Designed,L3,POL-09.01,VAL-012(internal-independent),EVT-015
+REQ-TSC-030,CC7.5,framework-selected,CTL-IR-001,Designed,L3,POL-08.01,VAL-022(internal-independent),EVT-016
+REQ-TSC-031,CC8.1,framework-selected,CTL-CFG-001,Designed,L5,POL-06.08;POL-07.01,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-028;EVT-005
+REQ-TSC-031,CC8.1,framework-selected,CTL-GOV-003,Designed,L4,POL-01.08;POL-11.02,VAL-023(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028;EVT-006
+REQ-TSC-031,CC8.1,framework-selected,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-TSC-031,CC8.1,framework-selected,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-TSC-031,CC8.1,framework-selected,CTL-SDL-004,Designed,L4,POL-06.04,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-014;EVT-005
+REQ-TSC-031,CC8.1,framework-selected,CTL-SDL-006,Designed,L3,POL-06.02,VAL-011(internal-independent),EVT-005;EVT-022
+REQ-TSC-031,CC8.1,framework-selected,CTL-SDL-007,Designed,L3,POL-06.03,VAL-001(automated);VAL-025(internal-independent),EVT-006;EVT-002
+REQ-TSC-031,CC8.1,framework-selected,CTL-SDL-008,Designed,L4,POL-06.06,VAL-013(automated);VAL-025(internal-independent),EVT-009;EVT-008
+REQ-TSC-031,CC8.1,framework-selected,CTL-SDL-009,Designed,L4,POL-11.03;POL-06.02,VAL-004(automated);VAL-025(internal-independent),EVT-001;EVT-002;EVT-007
+REQ-TSC-031,CC8.1,framework-selected,CTL-TEN-002,Designed,L4,POL-13.02,VAL-013(automated);VAL-025(internal-independent),EVT-019
+REQ-TSC-032,CC9.1,framework-selected,CTL-BCR-002,Designed,L1,POL-09.02,VAL-012(internal-independent);VAL-022(internal-independent),EVT-015
+REQ-TSC-033,CC9.2,framework-selected,CTL-VEN-001,Designed,L2,POL-10.01,VAL-025(internal-independent),EVT-021
+REQ-TSC-034,A1.1,framework-selected,CTL-APP-010,Designed,L4,POL-06.01;POL-06.05,VAL-001(automated);VAL-008(automated);VAL-025(internal-independent),EVT-004
+REQ-TSC-034,A1.1,framework-selected,CTL-BCR-003,Designed,L3,POL-09.03,VAL-010(automated);VAL-025(internal-independent),EVT-016
+REQ-TSC-035,A1.2,framework-selected,CTL-BCR-001,Designed,L3,POL-09.01,VAL-012(internal-independent),EVT-015
+REQ-TSC-036,A1.3,framework-selected,CTL-BCR-001,Designed,L3,POL-09.01,VAL-012(internal-independent),EVT-015
+REQ-TSC-036,A1.3,framework-selected,CTL-BCR-002,Designed,L1,POL-09.02,VAL-012(internal-independent);VAL-022(internal-independent),EVT-015
+REQ-TSC-036,A1.3,framework-selected,CTL-FIN-017,Designed,L3,POL-12.06;POL-09.01,VAL-012(internal-independent);VAL-003(automated),EVT-015
+REQ-TSC-037,C1.1,framework-selected,CTL-DAT-001,Designed,L3,POL-05.01,VAL-009(automated);VAL-025(internal-independent),EVT-018
+REQ-TSC-037,C1.1,framework-selected,CTL-LOG-002,Designed,L4,POL-07.06;POL-05.01,VAL-001(automated);VAL-025(internal-independent),EVT-004
+REQ-TSC-038,C1.2,framework-selected,CTL-DAT-002,Designed,L4,POL-05.03;POL-05.06,VAL-009(automated);VAL-025(internal-independent),EVT-027
+REQ-TSC-039,PI1.1,framework-selected,CTL-CUS-003,Designed,L2,POL-13.05;POL-01.03,VAL-028(external-attestation),EVT-021
+REQ-TSC-040,PI1.2,framework-selected,CTL-FIN-002,Designed,L4,POL-12.01,VAL-003(automated);VAL-017(automated);VAL-013(automated);VAL-025(internal-independent),EVT-018
+REQ-TSC-040,PI1.2,framework-selected,CTL-FIN-007,Designed,L4,POL-12.02,VAL-003(automated);VAL-025(internal-independent),EVT-018
+REQ-TSC-041,PI1.3,framework-selected,CTL-FIN-001,Designed,L4,POL-12.02;POL-12.05,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-018;EVT-017
+REQ-TSC-041,PI1.3,framework-selected,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-TSC-041,PI1.3,framework-selected,CTL-FIN-005,Designed,L4,POL-12.02,VAL-003(automated);VAL-008(automated);VAL-016(internal-independent),EVT-018;EVT-017
+REQ-TSC-042,PI1.4,framework-selected,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-TSC-042,PI1.4,framework-selected,CTL-FIN-012,Designed,L3,POL-12.02,VAL-003(automated);VAL-011(internal-independent),EVT-017
+REQ-TSC-043,PI1.5,framework-selected,CTL-FIN-003,Designed,L4,POL-12.06,VAL-003(automated);VAL-008(automated);VAL-025(internal-independent),EVT-018
+REQ-TSC-044,P1 (P1.1),framework-selected,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-TSC-045,P2 (P2.1),framework-selected,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-TSC-046,P3 (P3.1-P3.2),framework-selected,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-TSC-047,P4 (P4.1-P4.3),framework-selected,CTL-DAT-002,Designed,L4,POL-05.03;POL-05.06,VAL-009(automated);VAL-025(internal-independent),EVT-027
+REQ-TSC-048,P5 (P5.1-P5.2),framework-selected,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-TSC-049,P6 (P6.1-P6.7),framework-selected,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-TSC-050,P7 (P7.1),framework-selected,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-TSC-051,P8 (P8.1),framework-selected,CTL-DAT-003,Designed,L2,POL-05.04,VAL-025(internal-independent),EVT-019
+REQ-TSC-052,2027 proposed TSC (exposure draft),undetermined,CTL-GOV-006,Designed,L1,POL-01.03,VAL-020(automated);VAL-025(internal-independent),EVT-021
+REQ-VALBC-001,VAL-BC-001,voluntary,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-VALBC-001,VAL-BC-001,voluntary,CTL-GOV-009,Designed,L4,POL-01.07,VAL-013(automated);VAL-025(internal-independent),EVT-002;EVT-018;EVT-026
+REQ-VALBC-002,VAL-BC-002,voluntary,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-VALBC-003,VAL-BC-003,voluntary,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-VALBC-003,VAL-BC-003,voluntary,CTL-VUL-004,Designed,L3,POL-07.05;POL-06.05,VAL-004(automated);VAL-005(automated);VAL-006(internal-independent),EVT-004;EVT-011
+REQ-VALBC-004,VAL-BC-004,voluntary,CTL-ASR-005,Designed,L3,POL-01.04,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004
+REQ-VALBC-005,VAL-BC-005,voluntary,CTL-FIN-004,Designed,L3,POL-12.03,VAL-011(internal-independent);VAL-010(automated),EVT-017
+REQ-VALBC-005,VAL-BC-005,voluntary,CTL-FIN-008,Designed,L3,POL-12.02;POL-13.02,VAL-003(automated);VAL-015(automated);VAL-025(internal-independent),EVT-017
+REQ-VALBC-006,VAL-BC-006,voluntary,CTL-GOV-003,Designed,L4,POL-01.08;POL-11.02,VAL-023(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-028;EVT-006
+REQ-VALBC-006,VAL-BC-006,voluntary,CTL-SDL-001,Designed,L4,POL-06.02,VAL-009(automated);VAL-007(automated);VAL-025(internal-independent),EVT-002;EVT-006;EVT-001
+REQ-VALBC-006,VAL-BC-006,voluntary,CTL-SDL-002,Designed,L4,POL-06.05,VAL-002(automated);VAL-007(automated);VAL-025(internal-independent),EVT-003;EVT-004
+REQ-VALBC-007,VAL-BC-007,voluntary,CTL-AI-007,Designed,L3,POL-11.06,VAL-020(automated);VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-VALBC-007,VAL-BC-007,voluntary,CTL-ASR-001,Designed,L2,POL-01.04,VAL-002(automated);VAL-025(internal-independent),EVT-001;EVT-003;EVT-005;EVT-008;EVT-018
+REQ-VALBC-008,VAL-BC-008,voluntary,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-VALBC-008,VAL-BC-008,voluntary,CTL-ASR-008,Designed,L0,POL-01.04,VAL-026(external-technical),EVT-021
+REQ-VALBC-009,VAL-BC-009,voluntary,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-VALBC-009,VAL-BC-009,voluntary,CTL-ASR-008,Designed,L0,POL-01.04,VAL-026(external-technical),EVT-021
+REQ-VALBC-009,VAL-BC-009,voluntary,CTL-GOV-014,Designed,L4,POL-01.08;POL-01.04,VAL-001(automated);VAL-003(automated);VAL-009(automated);VAL-025(internal-independent),EVT-021;EVT-018;EVT-028
+REQ-VALBC-010,VAL-BC-010,voluntary,CTL-ASR-009,Designed,L4,POL-01.04,VAL-001(automated);VAL-025(internal-independent),EVT-022
+REQ-VALBC-010,VAL-BC-010,voluntary,CTL-ASR-011,Designed,L4,POL-01.04,VAL-001(automated);VAL-031(automated);VAL-025(internal-independent),EVT-022;EVT-023
+REQ-VALBC-010,VAL-BC-010,voluntary,CTL-GOV-012,Designed,L3,POL-01.03;POL-13.04,VAL-024(automated);VAL-025(internal-independent),EVT-021
+REQ-VALBC-011,VAL-BC-011,voluntary,CTL-ASR-011,Designed,L4,POL-01.04,VAL-001(automated);VAL-031(automated);VAL-025(internal-independent),EVT-022;EVT-023
+REQ-VALBC-012,VAL-BC-012,voluntary,CTL-ASR-005,Designed,L3,POL-01.04,VAL-007(automated);VAL-031(automated);VAL-025(internal-independent),EVT-004
+REQ-VALBC-012,VAL-BC-012,voluntary,CTL-ASR-008,Designed,L0,POL-01.04,VAL-026(external-technical),EVT-021
+REQ-VALBC-013,VAL-BC-013,voluntary,CTL-ASR-007,Designed,L0,POL-01.04,VAL-025(internal-independent);VAL-032(internal-independent),EVT-021
+REQ-VALBC-014,VAL-BC-014,voluntary,CTL-ASR-011,Designed,L4,POL-01.04,VAL-001(automated);VAL-031(automated);VAL-025(internal-independent),EVT-022;EVT-023
+REQ-VALBC-014,VAL-BC-014,voluntary,CTL-GOV-011,Designed,L3,POL-01.04,VAL-025(internal-independent),EVT-016

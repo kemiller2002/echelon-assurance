@@ -28,9 +28,11 @@ at acceptable cost. Per owner decision `DF-ASR-2026-0D0E`, prefer in order:
 eliminate the risk, prevent, detect, collect evidence, bounded remediation,
 human judgment, manual administration. L5 requires bounded impact, evidence
 of every automated action and a stop condition; **reversibility is not
-universally required** (owner decision `DF-ASR-2026-0D09`): irreversible
-routine actions such as approved retention expiry may run at L5 with
-pre-action checks (legal hold), while mass deletion, key destruction,
+universally required for automation** (owner decision `DF-ASR-2026-0D09`),
+but per reconciliation finding 8 **L5 is reserved for bounded reversible
+remediation**: irreversible routine actions such as approved retention
+expiry are automated *enforcement* of an approved lifecycle policy (L4) with
+pre-action legal-hold checks, while mass deletion, key destruction,
 retention changes and evidence destruction need elevated human approval.
 Judgment and accountability activities (risk acceptance, exception
 approval, management review, policy approval) stay at L1–L2 by design.

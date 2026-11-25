@@ -155,3 +155,18 @@ and F#, release gates, agent identity, retention automation, evidence
 storage, Folio, Strata, Vigila and control lifecycle cost. They do not
 resolve legal applicability, auditor acceptance, actual configuration,
 staffing or operating effectiveness; the related open questions remain open.
+
+## Owner staged reconciliation roadmap (2026-11-25)
+
+`requirements/reconciliation-and-roadmap.md` defines execution stages. They run *alongside* the charter gates
+above (which set when each control must exist); owner-approved foundations
+take precedence and batch specifications are proposed refinements.
+
+| Owner stage | Purpose and exit | Charter gates it serves | State |
+|---|---|---|---|
+| P0 reconciliation | Read all artefacts; bidirectional requirement/control/test/evidence crosswalk; contradictions resolved by decisions; questions updated without false closure; revised economics; owner approves baseline. | Precondition for every gate | Largely done in this branch: `controls/generated/traceability.csv`, structured question dispositions, `integration/capability-verification-matrix.md`, economics v2. **Owner baseline approval outstanding.** |
+| P1 foundations | Verify repository settings and tool capabilities; identity, authorization, policy, evidence and test interfaces; threat models; synthetic fixtures; protected release gates. Exit: reproducible negative tests and authenticated receipts in a reference environment. | Charter P0 and early P1 | Not started (verification needs owner access to settings) |
+| P2 Unbound reference | Financial invariants, tenant isolation, durable processing, reconciliation, continuous security tests, evidence. Exit: adversarial, recovery and concurrency tests with traceable evidence; no production claims from synthetic tests. | Charter P1 | Not started |
+| P3 operational readiness | Workforce/admin controls, monitoring, retention, incident response, continuity, commitments, provider contracts, regulatory applicability. Exit: verified deployed controls, accountable roles, risk-tier validation, no unresolved launch blockers. | Charter P1 (production) and P2 (financial institutions) | Not started |
+| P4 external readiness | Evidence packages; scope with auditor/customers; quotes; required independent assessments; observation period only after controls operate. | Charter P3 and P4 | Not started |
+| P5 scale | Reuse shared controls; measure incremental cost and questionnaire effort; expand only with demand. | Charter P5 | Not started |

@@ -63,11 +63,10 @@ except these, deliberately:
 Every policy and policy section is implemented by at least one control;
 top-level policies inherit their sections' controls.
 
-Distribution of targets (after owner decisions and owner requirement records SBC, FIN-BC, PEC, AIG-BC/VAL-BC and CST of 2026-11-25; 123 controls): L4 62,
-L3 32, L2 12, L1 6, L0 6, L5 5. L5 controls: dormant
-accounts, offboarding, entitlement drift in non-production, configuration
-drift on reversible settings, and routine retention expiry (irreversible,
-permitted with legal-hold checks and bounded batches under owner decision
-DF-ASR-2026-0D09). Judgment controls remain L0–L2 by design.
+Distribution of targets (after owner decisions and owner requirement records through the 2026-11-25 reconciliation; 123 controls): L4 63,
+L3 32, L2 12, L1 6, L0 6, L5 4. L5 controls (bounded reversible remediation only,
+reconciliation finding 8): dormant accounts, offboarding, entitlement drift in
+non-production, configuration drift on reversible settings. Routine retention
+expiry is L4 enforcement with legal-hold checks (owner decision 0D09). Judgment controls remain L0–L2 by design.
 
 The catalog CSV is authoritative and is curated directly.
