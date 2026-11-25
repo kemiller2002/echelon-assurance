@@ -85,6 +85,146 @@ let sourceTypes =
 
 let access = set [ "public"; "paywalled"; "summary-only"; "internal" ]
 
+/// Dispositions applied to every requirement during consolidation (mission section 5).
+let sourceDispositions =
+    set
+        [
+            "retain"
+            "consolidate"
+            "strengthen"
+            "simplify"
+            "replace"
+            "defer"
+            "remove"
+            "escalate"
+        ]
+
+let baselineColumns =
+    [
+        "br_id"
+        "area"
+        "title"
+        "statement"
+        "prevents"
+        "does_not_prevent"
+        "tenet_ids"
+        "policy_ids"
+        "control_ids"
+        "risk_ids"
+        "source_refs"
+        "basis"
+        "justification"
+        "applicability"
+        "owner_role"
+        "enforcement_mechanism"
+        "enforcement_class"
+        "automation_target"
+        "validation_method"
+        "validation_ids"
+        "validation_triggers"
+        "evidence_type_ids"
+        "evidence_obligation"
+        "dependencies"
+        "echelon_systems"
+        "failure_behavior"
+        "residual_risk"
+        "implementation_status"
+        "external_dependencies"
+        "incremental_cost"
+        "disposition"
+        "disposition_rationale"
+        "roadmap_phase"
+    ]
+
+let validationTriggers =
+    set
+        [
+            "every-change"
+            "deployment-candidate"
+            "config-change"
+            "vulnerability-disclosure"
+            "model-change"
+            "dependency-change"
+            "scheduled"
+            "continuous"
+            "event"
+        ]
+
+let baselineEnums =
+    [
+        "basis",
+        set
+            [
+                "legal"
+                "conditional-legal"
+                "contractual"
+                "framework-selected"
+                "commercial-expectation"
+                "voluntary"
+                "undetermined"
+            ]
+        "applicability",
+        set
+            [
+                "organization"
+                "all-products"
+                "financial-products"
+                "ai-systems"
+                "unbound"
+            ]
+        "enforcement_class",
+        set
+            [
+                "executable-decision"
+                "configuration-constraint"
+                "scheduled-obligation"
+                "human-judgment"
+                "external-obligation"
+            ]
+        "automation_target", automationLevels
+        "implementation_status", controlStatus
+        "incremental_cost", costClasses
+        "disposition", sourceDispositions.Remove "remove"
+        "roadmap_phase", set [ "P0"; "P1"; "P2"; "P3"; "P4"; "P5" ]
+    ]
+
+/// Multi-valued columns whose every element must belong to a vocabulary.
+let listEnums: Map<string, Map<string, Set<string>>> =
+    Map.ofList [ "baseline", Map.ofList [ "validation_triggers", validationTriggers ] ]
+
+let baselineRefs =
+    [
+        "tenet_ids", "tenets"
+        "policy_ids", "policies"
+        "control_ids", "controls"
+        "risk_ids", "risks"
+        "validation_ids", "validations"
+        "evidence_type_ids", "evidence_types"
+        "dependencies", "baseline"
+        "echelon_systems", "systems"
+        "external_dependencies", "open_questions"
+    ]
+
+let capabilityColumns =
+    [
+        "system_id"
+        "name"
+        "repository_head"
+        "language"
+        "verification_basis"
+        "proposed_responsibility"
+        "implemented_capabilities"
+        "test_evidence"
+        "specified_only"
+        "missing_capabilities"
+        "architectural_fit"
+        "required_extensions"
+        "alternative_approach"
+        "security_implications"
+        "incremental_effort"
+        "status"
+    ]
+
 let private spec name path idColumn idPattern columns enums refs =
     {
         Name = name
@@ -370,6 +510,143 @@ let registers: RegisterSpec list =
             ]
             []
             []
+        spec
+            "tenets"
+            "registers/tenets.csv"
+            "tenet_id"
+            @"^TNT-\d{2}$"
+            [ "tenet_id"; "title"; "statement"; "constraint"; "decision_ids" ]
+            []
+            [ "decision_ids", "decisions" ]
+        spec
+            "baseline"
+            "requirements/baseline.csv"
+            "br_id"
+            @"^BR-[A-Z]{2,3}-\d{3}$"
+            baselineColumns
+            baselineEnums
+            baselineRefs
+        spec
+            "source_dispositions"
+            "requirements/source-dispositions.csv"
+            "source_req_id"
+            @"^(SBC|FIN-BC|PEC|AIG-BC|VAL-BC|CST|ECON|GOV-BC)-\d{3}$|^CA-[A-Z]+-\d{2}$"
+            [
+                "source_req_id"
+                "source_document"
+                "registered_req_id"
+                "disposition"
+                "baseline_ids"
+                "rationale"
+            ]
+            [ "disposition", sourceDispositions ]
+            [ "registered_req_id", "requirements"; "baseline_ids", "baseline" ]
+        spec
+            "capabilities"
+            "integration/capability-verification.csv"
+            "system_id"
+            @"^SYS-[A-Z0-9-]+$"
+            capabilityColumns
+            [
+                "verification_basis", set [ "tests-executed"; "source-inspected"; "docs-only"; "not-accessible" ]
+                "status",
+                set
+                    [
+                        "verified-implemented"
+                        "partially-implemented"
+                        "specified-only"
+                        "absent"
+                        "not-applicable"
+                    ]
+            ]
+            []
+        spec
+            "question_dispositions"
+            "registers/question-dispositions.csv"
+            "oq_id"
+            @"^OQ-\d{3}$"
+            [
+                "oq_id"
+                "classification"
+                "blocking_tier"
+                "disposition_summary"
+                "lowest_cost_resolution"
+                "next_action"
+                "resolver"
+                "evidence_refs"
+                "original_status"
+                "proposed_status"
+            ]
+            [
+                "classification",
+                set
+                    [
+                        "resolved-owner-decision"
+                        "resolved-authoritative-research"
+                        "resolved-implementation-evidence"
+                        "proposed-decision-awaiting-approval"
+                        "dependent-customer"
+                        "dependent-auditor"
+                        "dependent-legal"
+                        "dependent-vendor-insurer"
+                        "dependent-future-standard"
+                        "dependent-implementation"
+                        "superseded"
+                    ]
+                "blocking_tier",
+                set
+                    [
+                        "requirements-finalization"
+                        "implementation"
+                        "production-launch"
+                        "external-examination"
+                        "none"
+                    ]
+                "proposed_status", set [ "open"; "answered"; "superseded" ]
+            ]
+            [ "oq_id", "open_questions" ]
+        spec
+            "question_bank"
+            "customer-assurance/question-bank.csv"
+            "question_id"
+            @"^CAQ-\d{3}$"
+            [
+                "question_id"
+                "category"
+                "question"
+                "asked_by"
+                "source_ids"
+                "applicability"
+                "proposed_answer"
+                "answer_basis"
+                "related_policy_ids"
+                "related_control_ids"
+                "supporting_evidence_type_ids"
+                "implementation_status"
+                "evidence_freshness_rule"
+                "disclosure_class"
+                "approval_required"
+            ]
+            [
+                "answer_basis",
+                set
+                    [
+                        "generated-from-control-catalog"
+                        "generated-from-policy"
+                        "owner-decision"
+                        "open-question"
+                        "manual"
+                    ]
+                "implementation_status", set [ "designed"; "not-started"; "not-applicable"; "unknown"; "operating" ]
+                "disclosure_class", set [ "public"; "customer-nda"; "restricted" ]
+                "approval_required", set [ "none"; "owner"; "owner+counsel" ]
+            ]
+            [
+                "source_ids", "sources"
+                "related_policy_ids", "policies"
+                "related_control_ids", "controls"
+                "supporting_evidence_type_ids", "evidence_types"
+            ]
     ]
 
 let byName name =

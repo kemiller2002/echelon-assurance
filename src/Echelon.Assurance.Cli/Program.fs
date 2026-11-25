@@ -2,6 +2,7 @@
 ///   assurance validate [root]
 ///   assurance merge [--check] [root]
 ///   assurance roadmap [root]
+///   assurance trace [root]
 module Echelon.Assurance.Cli.Program
 
 open System.IO
@@ -55,7 +56,9 @@ let private summary (loaded: Validation.Loaded) =
 
 let private validate root =
     let loaded = loadAll root
-    let errors = Validation.validate loaded (scannedFiles root)
+
+    let errors =
+        Validation.validate loaded (scannedFiles root) @ Traceability.errors loaded
 
     (if List.isEmpty errors then
          [ "OK: all registers valid" ]
@@ -109,6 +112,13 @@ let private roadmap root =
     printfn "rendered %d controls" (List.length controls)
     0
 
+let private trace root =
+    let out = Path.Combine(root, "requirements/generated")
+    Directory.CreateDirectory out |> ignore
+    File.WriteAllText(Path.Combine(out, "traceability-matrix.md"), Traceability.render (loadAll root))
+    printfn "rendered requirements/generated/traceability-matrix.md"
+    0
+
 let private tco root (rate: float) =
     let header, rows =
         Csv.table (File.ReadAllText(Path.Combine(root, "economics/parameters.csv")))
@@ -147,6 +157,7 @@ let main argv =
     | "validate" :: rest -> validate (rootOf rest)
     | "merge" :: rest -> merge (rootOf rest) (options.ContainsKey "--check")
     | "roadmap" :: rest -> roadmap (rootOf rest)
+    | "trace" :: rest -> trace (rootOf rest)
     | "tco" :: rest ->
         let rate =
             options
@@ -156,5 +167,5 @@ let main argv =
 
         tco (rootOf rest) rate
     | _ ->
-        eprintfn "usage: assurance (validate | merge [--check] | roadmap | tco [--rate r]) [root]"
+        eprintfn "usage: assurance (validate | merge [--check] | roadmap | trace | tco [--rate r]) [root]"
         2

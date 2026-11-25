@@ -1,0 +1,190 @@
+source_req_id,source_document,registered_req_id,disposition,baseline_ids,rationale
+SBC-001,requirements/security-by-construction.md,REQ-SBC-001,consolidate,BR-APP-001,SBC-001 and SBC-005 describe one guarantee from two sides; credential confinement is the enforceable part.
+SBC-002,requirements/security-by-construction.md,REQ-SBC-002,strengthen,BR-APP-002,Owner rule is 'no HTML input'; requirement raised from 'no untrusted rendering' to 'no user-supplied HTML accepted as markup'.
+SBC-003,requirements/security-by-construction.md,REQ-SBC-003,retain,BR-APP-003,Scoped to application-authored JS; vendor JS governed by BR-APP-013.
+SBC-004,requirements/security-by-construction.md,REQ-SBC-004,simplify,BR-APP-004,Native dependencies inventoried rather than forbidden; enforcement is compiler flags plus one analyzer rule.
+SBC-005,requirements/security-by-construction.md,REQ-SBC-005,consolidate,BR-APP-001,SBC-001 and SBC-005 describe one guarantee from two sides; credential confinement is the enforceable part.
+SBC-006,requirements/security-by-construction.md,REQ-SBC-006,consolidate,BR-APP-005,"CST-005 authorization regression is the validation of this requirement, not a separate requirement."
+SBC-007,requirements/security-by-construction.md,REQ-SBC-007,consolidate,BR-APP-006,FIN-BC-007 (fund/account boundaries) is the financial instance of the same isolation rule.
+SBC-008,requirements/security-by-construction.md,REQ-SBC-008,consolidate,BR-IAM-001,Five statements of one identity-and-attribution requirement.
+SBC-009,requirements/security-by-construction.md,REQ-SBC-009,consolidate,BR-FIN-004,"Consolidates four documents and adopts Unbound UNB-XIN-EVA-005 and CNV-ARC-003 semantics (payload conflict is a case, not a dead letter; versioned hold fence)."
+SBC-010,requirements/security-by-construction.md,REQ-SBC-010,consolidate,BR-SDL-001,Six statements of one release-gate requirement; verifier separation (VAL-BC-006) is part of the gate.
+SBC-011,requirements/security-by-construction.md,REQ-SBC-011,consolidate,BR-APP-013,"CST-004 (inventory, SBOM, vulnerability, license) is the continuous half of the same admission control."
+SBC-012,requirements/security-by-construction.md,REQ-SBC-012,retain,BR-APP-012,Retained as a distinct testable obligation.
+SBC-013,requirements/security-by-construction.md,REQ-SBC-013,retain,BR-APP-007,Retained as a distinct testable obligation.
+SBC-014,requirements/security-by-construction.md,REQ-SBC-014,retain,BR-APP-008,Retained as a distinct testable obligation.
+SBC-015,requirements/security-by-construction.md,REQ-SBC-015,retain,BR-APP-009,Retained as a distinct testable obligation.
+SBC-016,requirements/security-by-construction.md,REQ-SBC-016,retain,BR-APP-010,Retained as a distinct testable obligation.
+SBC-017,requirements/security-by-construction.md,REQ-SBC-017,consolidate,BR-AI-004,Three documents describe the same containment boundary and its tests.
+SBC-018,requirements/security-by-construction.md,REQ-SBC-018,retain,BR-APP-011,Retained as a distinct testable obligation.
+FIN-BC-001,requirements/financial-integrity-by-construction.md,REQ-FINBC-001,retain,BR-FIN-001,Retained as a distinct testable obligation.
+FIN-BC-002,requirements/financial-integrity-by-construction.md,REQ-FINBC-002,consolidate,BR-FIN-002,Immutability and the correction path are one requirement; neither is meaningful alone.
+FIN-BC-003,requirements/financial-integrity-by-construction.md,REQ-FINBC-003,consolidate,BR-FIN-002,Immutability and the correction path are one requirement; neither is meaningful alone.
+FIN-BC-004,requirements/financial-integrity-by-construction.md,REQ-FINBC-004,retain,BR-FIN-003,Retained as a distinct testable obligation.
+FIN-BC-005,requirements/financial-integrity-by-construction.md,REQ-FINBC-005,strengthen,BR-FIN-004,Payload-conflict opens an owned case; business-derived keys (UNB-XIN-EVA-005).
+FIN-BC-006,requirements/financial-integrity-by-construction.md,REQ-FINBC-006,consolidate,BR-FIN-005,Balance states are the state machine's data; one requirement.
+FIN-BC-007,requirements/financial-integrity-by-construction.md,REQ-FINBC-007,consolidate,BR-APP-006,FIN-BC-007 (fund/account boundaries) is the financial instance of the same isolation rule.
+FIN-BC-008,requirements/financial-integrity-by-construction.md,REQ-FINBC-008,consolidate,BR-FIN-005,Balance states are the state machine's data; one requirement.
+FIN-BC-009,requirements/financial-integrity-by-construction.md,REQ-FINBC-009,consolidate,BR-FIN-006,"Removes the implication in the OQ-763 disposition that agents may move money 'within approved scope'; aligns with Unbound CNV-LEG-001, CNV-AIO-001, CNV-GRT-001 and daf-landscape invariant 9."
+FIN-BC-010,requirements/financial-integrity-by-construction.md,REQ-FINBC-010,strengthen,BR-FIN-008,"Adds three population tests and reconciler independence (Unbound UNB-ACC-018, CNV-FIN-004)."
+FIN-BC-011,requirements/financial-integrity-by-construction.md,REQ-FINBC-011,strengthen,BR-FIN-010,Reopen only before statements are issued (Unbound UNB-XIN-EVA-002).
+FIN-BC-012,requirements/financial-integrity-by-construction.md,REQ-FINBC-012,retain,BR-FIN-011,Retained as a distinct testable obligation.
+FIN-BC-013,requirements/financial-integrity-by-construction.md,REQ-FINBC-013,strengthen,BR-FIN-006,"AI agents never authorize money movement in any scope; Unbound relays, never executes (CNV-LEG-001)."
+FIN-BC-014,requirements/financial-integrity-by-construction.md,REQ-FINBC-014,consolidate,BR-FIN-004,"Consolidates four documents and adopts Unbound UNB-XIN-EVA-005 and CNV-ARC-003 semantics (payload conflict is a case, not a dead letter; versioned hold fence)."
+FIN-BC-015,requirements/financial-integrity-by-construction.md,REQ-FINBC-015,simplify,BR-FIN-012,Fees only; investment accounting split into BR-FIN-023 (financial review).
+FIN-BC-016,requirements/financial-integrity-by-construction.md,REQ-FINBC-016,strengthen,BR-FIN-013,"Four-date contribution model; no donor ACH debit in release 1 (CNV-FIN-003, CNV-PAY-005)."
+FIN-BC-017,requirements/financial-integrity-by-construction.md,REQ-FINBC-017,retain,BR-FIN-014,Retained as a distinct testable obligation.
+FIN-BC-018,requirements/financial-integrity-by-construction.md,REQ-FINBC-018,retain,BR-FIN-015,Retained as a distinct testable obligation.
+FIN-BC-019,requirements/financial-integrity-by-construction.md,REQ-FINBC-019,retain,BR-FIN-007,Retained as a distinct testable obligation.
+FIN-BC-020,requirements/financial-integrity-by-construction.md,REQ-FINBC-020,retain,BR-FIN-009,Retained as a distinct testable obligation.
+FIN-BC-021,requirements/financial-integrity-by-construction.md,REQ-FINBC-021,strengthen,BR-FIN-016,Replay restricted to projection rebuild; never posts or dispatches (Unbound UNB-XIN-EVA-001).
+FIN-BC-022,requirements/financial-integrity-by-construction.md,REQ-FINBC-022,consolidate,BR-FIN-017,PEC-007 precedence is the general rule; FIN-BC-022 its financial instance.
+FIN-BC-023,requirements/financial-integrity-by-construction.md,REQ-FINBC-023,retain,BR-FIN-018,Retained as a distinct testable obligation.
+FIN-BC-024,requirements/financial-integrity-by-construction.md,REQ-FINBC-024,consolidate,BR-DAT-001,Financial and evidence retention share one mechanism.
+PEC-001,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-001,consolidate,BR-GOV-001,"Model, classification and decision purity are one design requirement."
+PEC-002,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-002,consolidate,BR-GOV-001,"Model, classification and decision purity are one design requirement."
+PEC-003,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-003,consolidate,BR-GOV-001,"Model, classification and decision purity are one design requirement."
+PEC-004,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-004,simplify,BR-GOV-002,Generation required only where it eliminates duplicated maintenance; linked prose otherwise.
+PEC-005,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-005,consolidate,BR-GOV-003,"Approval, change control and historical reproducibility form one lifecycle."
+PEC-006,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-006,consolidate,BR-GOV-003,"Approval, change control and historical reproducibility form one lifecycle."
+PEC-007,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-007,consolidate,BR-FIN-017,PEC-007 precedence is the general rule; FIN-BC-022 its financial instance.
+PEC-008,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-008,consolidate,BR-GOV-004,Four documents define the same exception rule.
+PEC-009,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-009,consolidate,BR-GOV-005,PR #2 verification-mode vocabulary merged with PEC-009.
+PEC-010,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-010,retain,BR-GOV-006,Retained as a distinct testable obligation.
+PEC-011,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-011,consolidate,BR-GOV-003,"Approval, change control and historical reproducibility form one lifecycle."
+PEC-012,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-012,consolidate,BR-AI-006,Three documents state the tenet; one requirement.
+PEC-013,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-013,consolidate,BR-ASR-001,PR #2 provenance and reproducibility fields merged into the single envelope.
+PEC-014,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-014,consolidate,BR-ASR-001,PR #2 provenance and reproducibility fields merged into the single envelope.
+PEC-015,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-015,consolidate,BR-ASR-002,Four documents define the same status ladder; unified in validation/assurance-status-model.
+PEC-016,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-016,retain,BR-ASR-003,Retained as a distinct testable obligation.
+PEC-017,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-017,consolidate,BR-ASR-004,Five statements of one temporal-validity rule.
+PEC-018,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-018,consolidate,BR-ASR-005,Agent non-alteration is a special case of privilege separation.
+PEC-019,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-019,replace,BR-ASR-006,Retained intent (managed immutable storage) but replaces the catalog's custom tamper-evident ledger design (CTL-ASR-002) as the mechanism of record.
+PEC-020,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-020,consolidate,BR-ASR-007,Merged with semantically equivalent requirements.
+PEC-021,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-021,consolidate,BR-DAT-001,Financial and evidence retention share one mechanism.
+PEC-022,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-022,consolidate,BR-ASR-008,Collector and security-job silence detection are the same mechanism.
+PEC-023,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-023,consolidate,BR-ASR-009,Merged with semantically equivalent requirements.
+PEC-024,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-024,consolidate,BR-CUS-002,Four statements of one disclosure rule.
+PEC-025,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-025,consolidate,BR-FIN-004,"Consolidates four documents and adopts Unbound UNB-XIN-EVA-005 and CNV-ARC-003 semantics (payload conflict is a case, not a dead letter; versioned hold fence)."
+PEC-026,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-026,consolidate,BR-ASR-010,"Mutation, machinery validation and security-tool validation are one practice; scope narrowed by risk."
+PEC-027,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-027,consolidate,BR-ASR-002,Four documents define the same status ladder; unified in validation/assurance-status-model.
+PEC-028,requirements/executable-policy-and-continuous-evidence.md,REQ-PEC-028,simplify,BR-ASR-006;BR-ASR-009,Canonical structured export only; OSCAL and other specialized formats deferred until demand.
+AIG-BC-001,requirements/ai-governance-independent-validation.md,REQ-AIGBC-001,consolidate,BR-IAM-001,Five statements of one identity-and-attribution requirement.
+AIG-BC-002,requirements/ai-governance-independent-validation.md,REQ-AIGBC-002,consolidate,BR-AI-001,Authorization and budgets are one delegation record.
+AIG-BC-003,requirements/ai-governance-independent-validation.md,REQ-AIGBC-003,consolidate,BR-AI-001,Authorization and budgets are one delegation record.
+AIG-BC-004,requirements/ai-governance-independent-validation.md,REQ-AIGBC-004,retain,BR-AI-002,Retained as a distinct testable obligation.
+AIG-BC-005,requirements/ai-governance-independent-validation.md,REQ-AIGBC-005,consolidate,BR-GOV-004,Four documents define the same exception rule.
+AIG-BC-006,requirements/ai-governance-independent-validation.md,REQ-AIGBC-006,consolidate,BR-FIN-006,"Removes the implication in the OQ-763 disposition that agents may move money 'within approved scope'; aligns with Unbound CNV-LEG-001, CNV-AIO-001, CNV-GRT-001 and daf-landscape invariant 9."
+AIG-BC-007,requirements/ai-governance-independent-validation.md,REQ-AIGBC-007,consolidate,BR-AI-003,Data-class allowlist and trace minimization are one data-handling rule.
+AIG-BC-008,requirements/ai-governance-independent-validation.md,REQ-AIGBC-008,consolidate,BR-AI-004,Three documents describe the same containment boundary and its tests.
+AIG-BC-009,requirements/ai-governance-independent-validation.md,REQ-AIGBC-009,consolidate,BR-IAM-001,Five statements of one identity-and-attribution requirement.
+AIG-BC-010,requirements/ai-governance-independent-validation.md,REQ-AIGBC-010,consolidate,BR-ASR-005,Agent non-alteration is a special case of privilege separation.
+AIG-BC-011,requirements/ai-governance-independent-validation.md,REQ-AIGBC-011,consolidate,BR-AI-005,Revocation is the containment step of agent incident response.
+AIG-BC-012,requirements/ai-governance-independent-validation.md,REQ-AIGBC-012,consolidate,BR-AI-006,Three documents state the tenet; one requirement.
+AIG-BC-013,requirements/ai-governance-independent-validation.md,REQ-AIGBC-013,consolidate,BR-AI-007,Inventory is the trigger set for evaluation.
+AIG-BC-014,requirements/ai-governance-independent-validation.md,REQ-AIGBC-014,consolidate,BR-AI-007,Inventory is the trigger set for evaluation.
+AIG-BC-015,requirements/ai-governance-independent-validation.md,REQ-AIGBC-015,consolidate,BR-AI-003,Data-class allowlist and trace minimization are one data-handling rule.
+AIG-BC-016,requirements/ai-governance-independent-validation.md,REQ-AIGBC-016,retain,BR-AI-008,Retained as a distinct testable obligation.
+AIG-BC-017,requirements/ai-governance-independent-validation.md,REQ-AIGBC-017,consolidate,BR-ASR-011,Same rule stated from validation and AI governance sides.
+AIG-BC-018,requirements/ai-governance-independent-validation.md,REQ-AIGBC-018,consolidate,BR-AI-005,Revocation is the containment step of agent incident response.
+VAL-BC-001,requirements/ai-governance-independent-validation.md,REQ-VALBC-001,consolidate,BR-VAL-001,Four documents state the separation rule.
+VAL-BC-002,requirements/ai-governance-independent-validation.md,REQ-VALBC-002,consolidate,BR-SDL-001,Six statements of one release-gate requirement; verifier separation (VAL-BC-006) is part of the gate.
+VAL-BC-003,requirements/ai-governance-independent-validation.md,REQ-VALBC-003,consolidate,BR-VAL-002,"Depth, tiering and formal-methods threshold are one proportionality rule; VAL-BC-013 formal methods deferred by default."
+VAL-BC-004,requirements/ai-governance-independent-validation.md,REQ-VALBC-004,consolidate,BR-ASR-010,"Mutation, machinery validation and security-tool validation are one practice; scope narrowed by risk."
+VAL-BC-005,requirements/ai-governance-independent-validation.md,REQ-VALBC-005,consolidate,BR-FIN-012,Fees only; investment accounting moved to BR-FIN-023. VAL-BC-005 independent recomputation is the validation.
+VAL-BC-006,requirements/ai-governance-independent-validation.md,REQ-VALBC-006,consolidate,BR-SDL-001,Six statements of one release-gate requirement; verifier separation (VAL-BC-006) is part of the gate.
+VAL-BC-007,requirements/ai-governance-independent-validation.md,REQ-VALBC-007,consolidate,BR-ASR-011,Same rule stated from validation and AI governance sides.
+VAL-BC-008,requirements/ai-governance-independent-validation.md,REQ-VALBC-008,consolidate,BR-VAL-001,Four documents state the separation rule.
+VAL-BC-009,requirements/ai-governance-independent-validation.md,REQ-VALBC-009,consolidate,BR-VAL-002,"Depth, tiering and formal-methods threshold are one proportionality rule; VAL-BC-013 formal methods deferred by default."
+VAL-BC-010,requirements/ai-governance-independent-validation.md,REQ-VALBC-010,consolidate,BR-ASR-002,Four documents define the same status ladder; unified in validation/assurance-status-model.
+VAL-BC-011,requirements/ai-governance-independent-validation.md,REQ-VALBC-011,consolidate,BR-ASR-004,Five statements of one temporal-validity rule.
+VAL-BC-012,requirements/ai-governance-independent-validation.md,REQ-VALBC-012,consolidate,BR-ASR-010,"Mutation, machinery validation and security-tool validation are one practice; scope narrowed by risk."
+VAL-BC-013,requirements/ai-governance-independent-validation.md,REQ-VALBC-013,defer,BR-VAL-002,Formal methods deferred by default; considered only for critical state machines when cost-benefit is shown (OQ-611).
+VAL-BC-014,requirements/ai-governance-independent-validation.md,REQ-VALBC-014,consolidate,BR-GOV-008;BR-GOV-016,Residual-risk recording and failure non-suppression belong to the risk register.
+CST-001,requirements/continuous-security-testing.md,,consolidate,BR-VUL-001,Internal and external inventories are one inventory.
+CST-002,requirements/continuous-security-testing.md,,consolidate,BR-VUL-002,Same pipeline stage.
+CST-003,requirements/continuous-security-testing.md,,consolidate,BR-VUL-002,Same pipeline stage.
+CST-004,requirements/continuous-security-testing.md,,consolidate,BR-APP-013,"CST-004 (inventory, SBOM, vulnerability, license) is the continuous half of the same admission control."
+CST-005,requirements/continuous-security-testing.md,,consolidate,BR-APP-005;BR-APP-006,"CST-005 authorization regression is the validation of this requirement, not a separate requirement. | FIN-BC-007 (fund/account boundaries) is the financial instance of the same isolation rule."
+CST-006,requirements/continuous-security-testing.md,,retain,BR-VUL-003,Retained as a distinct testable obligation.
+CST-007,requirements/continuous-security-testing.md,,retain,BR-VUL-004,Retained as a distinct testable obligation.
+CST-008,requirements/continuous-security-testing.md,,retain,BR-VUL-005,Retained as a distinct testable obligation.
+CST-009,requirements/continuous-security-testing.md,,consolidate,BR-AI-004,Three documents describe the same containment boundary and its tests.
+CST-010,requirements/continuous-security-testing.md,,retain,BR-VUL-006,Retained as a distinct testable obligation.
+CST-011,requirements/continuous-security-testing.md,,consolidate,BR-VUL-001,Internal and external inventories are one inventory.
+CST-012,requirements/continuous-security-testing.md,,consolidate,BR-VUL-007,Environment and authorization rules apply to the same runs.
+CST-013,requirements/continuous-security-testing.md,,retain,BR-VUL-008,Retained as a distinct testable obligation.
+CST-014,requirements/continuous-security-testing.md,,consolidate,BR-SDL-001,Six statements of one release-gate requirement; verifier separation (VAL-BC-006) is part of the gate.
+CST-015,requirements/continuous-security-testing.md,,consolidate,BR-ASR-010,"Mutation, machinery validation and security-tool validation are one practice; scope narrowed by risk."
+CST-016,requirements/continuous-security-testing.md,,consolidate,BR-VUL-009,Internal and external findings share one lifecycle; protection of findings is part of it.
+CST-017,requirements/continuous-security-testing.md,,consolidate,BR-SDL-001,Six statements of one release-gate requirement; verifier separation (VAL-BC-006) is part of the gate.
+CST-018,requirements/continuous-security-testing.md,,retain,BR-VUL-010,Retained as a distinct testable obligation.
+CST-019,requirements/continuous-security-testing.md,,consolidate,BR-ASR-008,Collector and security-job silence detection are the same mechanism.
+CST-020,requirements/continuous-security-testing.md,,retain,BR-VUL-011,Retained as a distinct testable obligation.
+CST-021,requirements/continuous-security-testing.md,,retain,BR-VUL-012,Retained as a distinct testable obligation.
+CST-022,requirements/continuous-security-testing.md,,consolidate,BR-VUL-009,Internal and external findings share one lifecycle; protection of findings is part of it.
+CST-023,requirements/continuous-security-testing.md,,consolidate,BR-GOV-009,Commitments and testing obligations are obligations.
+CST-024,requirements/continuous-security-testing.md,,consolidate,BR-VUL-007,Environment and authorization rules apply to the same runs.
+CST-025,requirements/continuous-security-testing.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+CST-026,requirements/continuous-security-testing.md,,consolidate,BR-VUL-009,Internal and external findings share one lifecycle; protection of findings is part of it.
+ECON-001,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-002,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-003,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-004,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-005,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-006,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-007,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-008,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-009,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-010,requirements/assurance-economics.md,,consolidate,BR-GOV-015;BR-CUS-001,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-011,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-012,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-013,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-014,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-015,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-016,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+ECON-017,requirements/assurance-economics.md,,defer,BR-GOV-015,Measuring causal commercial impact needs customers and pipeline data; deferred to P5 within the economics requirement.
+ECON-018,requirements/assurance-economics.md,,consolidate,BR-GOV-015,"ECON-001..018 are methodology requirements on one model, not operational controls."
+GOV-BC-001,requirements/organizational-governance.md,,consolidate,BR-GOV-007,"Responsibility, authority distinctions, standing delegation and reserved authority are one register."
+GOV-BC-002,requirements/organizational-governance.md,,consolidate,BR-GOV-007,"Responsibility, authority distinctions, standing delegation and reserved authority are one register."
+GOV-BC-003,requirements/organizational-governance.md,,consolidate,BR-GOV-007,"Responsibility, authority distinctions, standing delegation and reserved authority are one register."
+GOV-BC-004,requirements/organizational-governance.md,,consolidate,BR-GOV-007,"Responsibility, authority distinctions, standing delegation and reserved authority are one register."
+GOV-BC-005,requirements/organizational-governance.md,,consolidate,BR-GOV-004;BR-VAL-001,Four documents define the same exception rule. | Four documents state the separation rule.
+GOV-BC-006,requirements/organizational-governance.md,,consolidate,BR-GOV-008,Residual-risk recording and failure non-suppression belong to the risk register.
+GOV-BC-007,requirements/organizational-governance.md,,consolidate,BR-GOV-009,Commitments and testing obligations are obligations.
+GOV-BC-008,requirements/organizational-governance.md,,consolidate,BR-VUL-001,Internal and external inventories are one inventory.
+GOV-BC-009,requirements/organizational-governance.md,,retain,BR-VEN-001,Retained as a distinct testable obligation.
+GOV-BC-010,requirements/organizational-governance.md,,consolidate,BR-IAM-003,Lifecycle and identity are one control family for a small workforce.
+GOV-BC-011,requirements/organizational-governance.md,,consolidate,BR-IAM-003,Lifecycle and identity are one control family for a small workforce.
+GOV-BC-012,requirements/organizational-governance.md,,retain,BR-IAM-002,Genuine small-team separation conflict; documented rather than hidden.
+GOV-BC-013,requirements/organizational-governance.md,,consolidate,BR-SDL-001,Six statements of one release-gate requirement; verifier separation (VAL-BC-006) is part of the gate.
+GOV-BC-014,requirements/organizational-governance.md,,retain,BR-SDL-002,Retained as a distinct testable obligation.
+GOV-BC-015,requirements/organizational-governance.md,,retain,BR-DAT-002,Retained as a distinct testable obligation.
+GOV-BC-016,requirements/organizational-governance.md,,consolidate,BR-GOV-013;BR-IR-001;BR-BCR-001,"Split by concern: succession (BR-GOV-013), incident response (BR-IR-001), continuity (BR-BCR-001)."
+GOV-BC-017,requirements/organizational-governance.md,,simplify,BR-HR-001,Event-triggered role-based competency replaces calendar seat-time training unless an obligation requires a frequency.
+GOV-BC-018,requirements/organizational-governance.md,,simplify,BR-GOV-011,Generated packages and exception-based human review replace manual reporting and standing meetings.
+GOV-BC-019,requirements/organizational-governance.md,,consolidate,BR-CUS-001,Merged with semantically equivalent requirements.
+GOV-BC-020,requirements/organizational-governance.md,,consolidate,BR-CUS-002,Four statements of one disclosure rule.
+GOV-BC-021,requirements/organizational-governance.md,,retain,BR-GOV-012,Retained as a distinct testable obligation.
+GOV-BC-022,requirements/organizational-governance.md,,consolidate,BR-GOV-011,Replaces calendar meetings and manual reporting with generated packages and event triggers.
+GOV-BC-023,requirements/organizational-governance.md,,consolidate,BR-GOV-009,Commitments and testing obligations are obligations.
+GOV-BC-024,requirements/organizational-governance.md,,retain,BR-HR-002,Retained as a distinct testable obligation.
+GOV-BC-025,requirements/organizational-governance.md,,simplify,BR-GOV-011,Fixed review calendars replaced by risk- and event-triggered review with obligation-driven minimums.
+GOV-BC-026,requirements/organizational-governance.md,,consolidate,BR-AI-006,Three documents state the tenet; one requirement.
+CA-AUTO-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-GOV-005,PR #2 verification-mode vocabulary merged with PEC-009.
+CA-AUTO-02,requirements/continuous-assurance-requirements.md,,consolidate,BR-GOV-005,PR #2 verification-mode vocabulary merged with PEC-009.
+CA-DISC-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-CUS-002,Four statements of one disclosure rule.
+CA-DISC-02,requirements/continuous-assurance-requirements.md,,consolidate,BR-ASR-007,Merged with semantically equivalent requirements.
+CA-EXC-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-GOV-004,Four documents define the same exception rule.
+CA-EXP-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-ASR-004,Five statements of one temporal-validity rule.
+CA-FRESH-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-ASR-004,Five statements of one temporal-validity rule.
+CA-IND-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-ASR-002,Four documents define the same status ladder; unified in validation/assurance-status-model.
+CA-IND-02,requirements/continuous-assurance-requirements.md,,consolidate,BR-CUS-002,Four statements of one disclosure rule.
+CA-IND-03,requirements/continuous-assurance-requirements.md,,consolidate,BR-VAL-001,Four documents state the separation rule.
+CA-PROV-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-IAM-001;BR-ASR-001,Five statements of one identity-and-attribution requirement. | PR #2 provenance and reproducibility fields merged into the single envelope.
+CA-PROV-02,requirements/continuous-assurance-requirements.md,,consolidate,BR-IAM-001,Five statements of one identity-and-attribution requirement.
+CA-PROV-03,requirements/continuous-assurance-requirements.md,,replace,BR-ASR-006,"Custom append-only hash chain with external anchoring replaced by managed provider immutability (owner decision 0D0A, mission section 11); anchoring deferred until a customer, auditor or regulator requirement is demonstrated (OQ-505)."
+CA-REPRO-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-ASR-001;BR-ASR-009,PR #2 provenance and reproducibility fields merged into the single envelope.
+CA-REV-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-ASR-004,Five statements of one temporal-validity rule.
+CA-RISK-01,requirements/continuous-assurance-requirements.md,,consolidate,BR-GOV-008,Residual-risk recording and failure non-suppression belong to the risk register.
+CA-TRACE-01,requirements/continuous-assurance-requirements.md,,retain,BR-GOV-010,Retained as a distinct testable obligation.

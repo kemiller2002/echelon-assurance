@@ -1,0 +1,17 @@
+tenet_id,title,statement,constraint,decision_ids
+TNT-01,Security by construction,Eliminate classes of vulnerability architecturally before relying on detection.,Claims limited to the verified enforcement boundary.,DF-ASR-2026-0D07;DF-ASR-2026-0D0C
+TNT-02,Financial integrity by construction,"Financial correctness is enforced by ledger invariants, typed transitions and independent reconciliation.",External systems remain authoritative for their own records; no legal characterization assumed.,DF-ASR-2026-0D01
+TNT-03,Continuous automated assurance,Assurance activities that software can perform continuously are designed to run continuously.,Automation is not independence; legal and auditor obligations unaffected.,DF-ASR-2026-0D0E
+TNT-04,Executable policies wherever feasible,Policy obligations that are decisions or constraints are expressed as typed deterministic definitions.,Legal interpretation and human judgment are not forced into code.,DF-ASR-2026-0D06
+TNT-05,Evidence through normal operations,Evidence is emitted at authoritative enforcement points as a by-product of operating.,Hashes and immutable storage do not prove accuracy or completeness.,DF-ASR-2026-0D0A
+TNT-06,Independent verification of material outcomes,Material outcomes are verified by a party or mechanism separate from the implementer.,Technical independence is not organizational independence.,DF-ASR-2026-0D04
+TNT-07,AI-native organizational operations,"AI agents execute delegated work under explicit, externally enforced authority.",Agents never hold legal accountability or reserved human authority.,DF-ASR-2026-0D04;DF-ASR-2026-0D08
+TNT-08,Minimal recurring human intervention,"Human effort is reserved for judgment, exceptions and reserved authority.",Necessary human accountability and independent judgment are preserved.,DF-ASR-2026-0D0E
+TNT-09,Shared assurance capabilities across products,Assurance mechanisms are built once and reused by every product.,Product-specific legal and audit boundaries remain distinct.,
+TNT-10,Public transparency with appropriate confidentiality,"Standards, methods and sanitized results are public; sensitive evidence is restricted.","No confidential evidence, exploit detail or customer data in public outputs.",DF-ASR-2026-0D05
+TNT-11,Deterministic enforcement of critical controls,Critical restrictions are enforced by deterministic mechanisms outside any model.,"AI instructions are guidance, not security boundaries.",
+TNT-12,"Durable, attributable and reproducible decisions",Decisions are recorded with authenticated attribution and can be reproduced.,Self-reported provenance is labelled as such until platform-bound.,DF-ASR-2026-0D08
+TNT-13,Minimal architectural and operational complexity,Prefer the smallest mechanism that meets the obligation; no new systems by default.,Simplicity never removes a mandatory obligation.,
+TNT-14,Incremental rather than duplicated assurance costs,Each product adds only its incremental assurance cost.,Shared cost allocation is tracked and reconciled to actuals.,
+TNT-15,Essential operations function without AI,Critical controls and essential operations have non-AI execution paths.,Degraded throughput is acceptable; loss of control is not.,
+TNT-16,External assurance as independent challenge,External testers and auditors challenge our controls; they are not our primary discovery mechanism.,Mandatory external obligations are never reduced by internal automation unless the authority accepts it.,

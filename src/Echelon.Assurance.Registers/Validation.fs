@@ -80,7 +80,17 @@ let rowErrors (spec: RegisterSpec) (rows: Csv.Row list) =
                     else
                         None)
 
-            idErr @ enumErrs
+            let listEnumErrs =
+                listEnums
+                |> Map.tryFind spec.Name
+                |> Option.defaultValue Map.empty
+                |> Map.toList
+                |> List.collect (fun (col, allowed) ->
+                    splitList r[col]
+                    |> List.filter (allowed.Contains >> not)
+                    |> List.map (sprintf "%s: %s contains '%s' not in allowed values" where col))
+
+            idErr @ enumErrs @ listEnumErrs
 
     let idIndex = spec.Columns |> List.findIndex ((=) spec.IdColumn)
 
