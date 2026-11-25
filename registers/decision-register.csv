@@ -1,1 +1,2 @@
 decision_id,title,status,decided_by,date,summary,record_path
+DF-ASR-2026-3A1E,"No new Echelon system for assurance; evidence ledger extends Arca",proposed,pending owner,2026-11-25,"Reuse Arca/Percepta for evidence ledger with external anchoring; managed IdP and cloud logging for identity and monitoring; Tutela for exceptions",docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md
