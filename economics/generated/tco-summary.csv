@@ -1,0 +1,6 @@
+scenario,unavoidable_low,unavoidable_high,reducible_low,reducible_high
+1-conventional-manual,258728,599386,310225,1136592
+2-commercial-platform,258728,599386,233918,788437
+3-outsourced-management,258728,599386,234855,845709
+4-echelon-automated,285288,665787,254670,932310
+5-hybrid,272008,639227,180237,682761

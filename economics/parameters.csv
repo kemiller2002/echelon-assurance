@@ -1,0 +1,53 @@
+scenario,component,category,y1_low,y1_high,annual_low,annual_high,avoidable,evidence_class,source_ids,notes
+1-conventional-manual,SOC 1 Type 2 examination (fund accounting),external-audit,29000,60000,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Begins after observation period; Y1 may be readiness/Type 1 instead (assumption: same order of cost)
+1-conventional-manual,"SOC 2 Type 2 examination (Security, Availability, Confidentiality)",external-audit,12000,30000,12000,30000,no,vendor-claim,SRC-ECON-004,Combined SOC 1+2 engagement discount unknown (OQ)
+1-conventional-manual,Independent external penetration test incl. retest,pentest,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Complex multi-role app with APIs; closest analogue
+1-conventional-manual,Bank/customer due-diligence responses (unavoidable core),customer-reviews,4000,14000,4000,14000,no,assumption,,Bespoke contractual/legal questions remain manual in every model
+2-commercial-platform,SOC 1 Type 2 examination (fund accounting),external-audit,29000,60000,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Begins after observation period; Y1 may be readiness/Type 1 instead (assumption: same order of cost)
+2-commercial-platform,"SOC 2 Type 2 examination (Security, Availability, Confidentiality)",external-audit,12000,30000,12000,30000,no,vendor-claim,SRC-ECON-004,Combined SOC 1+2 engagement discount unknown (OQ)
+2-commercial-platform,Independent external penetration test incl. retest,pentest,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Complex multi-role app with APIs; closest analogue
+2-commercial-platform,Bank/customer due-diligence responses (unavoidable core),customer-reviews,4000,14000,4000,14000,no,assumption,,Bespoke contractual/legal questions remain manual in every model
+3-outsourced-management,SOC 1 Type 2 examination (fund accounting),external-audit,29000,60000,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Begins after observation period; Y1 may be readiness/Type 1 instead (assumption: same order of cost)
+3-outsourced-management,"SOC 2 Type 2 examination (Security, Availability, Confidentiality)",external-audit,12000,30000,12000,30000,no,vendor-claim,SRC-ECON-004,Combined SOC 1+2 engagement discount unknown (OQ)
+3-outsourced-management,Independent external penetration test incl. retest,pentest,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Complex multi-role app with APIs; closest analogue
+3-outsourced-management,Bank/customer due-diligence responses (unavoidable core),customer-reviews,4000,14000,4000,14000,no,assumption,,Bespoke contractual/legal questions remain manual in every model
+4-echelon-automated,SOC 1 Type 2 examination (fund accounting),external-audit,29000,60000,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Begins after observation period; Y1 may be readiness/Type 1 instead (assumption: same order of cost)
+4-echelon-automated,"SOC 2 Type 2 examination (Security, Availability, Confidentiality)",external-audit,12000,30000,12000,30000,no,vendor-claim,SRC-ECON-004,Combined SOC 1+2 engagement discount unknown (OQ)
+4-echelon-automated,Independent external penetration test incl. retest,pentest,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Complex multi-role app with APIs; closest analogue
+4-echelon-automated,Bank/customer due-diligence responses (unavoidable core),customer-reviews,4000,14000,4000,14000,no,assumption,,Bespoke contractual/legal questions remain manual in every model
+5-hybrid,SOC 1 Type 2 examination (fund accounting),external-audit,29000,60000,29000,60000,no,vendor-claim,SRC-ECON-001;SRC-ECON-002;SRC-ECON-003,Begins after observation period; Y1 may be readiness/Type 1 instead (assumption: same order of cost)
+5-hybrid,"SOC 2 Type 2 examination (Security, Availability, Confidentiality)",external-audit,12000,30000,12000,30000,no,vendor-claim,SRC-ECON-004,Combined SOC 1+2 engagement discount unknown (OQ)
+5-hybrid,Independent external penetration test incl. retest,pentest,15000,35000,15000,35000,no,vendor-claim,SRC-PTV-036,Complex multi-role app with APIs; closest analogue
+5-hybrid,Bank/customer due-diligence responses (unavoidable core),customer-reviews,4000,14000,4000,14000,no,assumption,,Bespoke contractual/legal questions remain manual in every model
+1-conventional-manual,Readiness consultant,consulting,15000,40000,0,10000,yes,assumption,,Gap assessment and policy templates
+1-conventional-manual,Evidence preparation and periodic manual reviews,admin-labor,40000,140000,40000,140000,yes,assumption,,"Screenshots, access review exports, sampling support"
+1-conventional-manual,Audit fieldwork support,admin-labor,12000,42000,12000,42000,yes,assumption,,
+1-conventional-manual,Security questionnaires (manual),customer-reviews,10000,35000,10000,35000,yes,assumption,,
+1-conventional-manual,Remediation of findings,remediation,8000,35000,6000,28000,yes,assumption,,
+2-commercial-platform,Compliance platform subscription,software,15000,35000,15000,35000,yes,vendor-claim,SRC-PTV-029;SRC-PTV-030,Vanta/Drata buyer-reported ranges; multi-framework pricier
+2-commercial-platform,Platform implementation and integration,admin-labor,12000,42000,0,0,yes,assumption,,
+2-commercial-platform,"Ongoing admin, evidence gaps, manual controls",admin-labor,20000,70000,20000,70000,yes,assumption,,"Platforms automate config snapshots, not population testing or financial controls"
+2-commercial-platform,Audit fieldwork support,admin-labor,6000,21000,6000,21000,yes,assumption,,
+2-commercial-platform,Security questionnaires (assisted),customer-reviews,6000,21000,6000,21000,yes,assumption,,
+2-commercial-platform,Readiness consulting,consulting,0,15000,0,0,yes,assumption,,
+2-commercial-platform,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,
+3-outsourced-management,vCISO / compliance management retainer,consulting,36000,96000,36000,96000,yes,vendor-claim,SRC-ECON-005,USD 3k-8k/month startup-to-small band
+3-outsourced-management,Platform subscription often required by provider,software,0,25000,0,25000,yes,assumption,SRC-PTV-029,Some providers bundle; others require client subscription
+3-outsourced-management,Internal support to provider,admin-labor,10000,35000,10000,35000,yes,assumption,,
+3-outsourced-management,Security questionnaires,customer-reviews,4000,17500,4000,17500,yes,assumption,,
+3-outsourced-management,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,
+4-echelon-automated,Build evidence/assurance automation (full feature parity),engineering,80000,280000,0,0,yes,assumption,,Opportunity cost: hours diverted from product
+4-echelon-automated,"Maintain automation, integrations, validators",engineering,0,0,30000,105000,yes,assumption,,
+4-echelon-automated,Admin and management review,admin-labor,8000,28000,8000,28000,yes,assumption,,
+4-echelon-automated,"Infrastructure (WORM storage, logging, TSA, witness)",infrastructure,2000,6000,2000,6000,yes,assumption,,Managed services
+4-echelon-automated,External technical validation of assurance machinery,external-validation,10000,25000,5000,12500,no,assumption,,Needed before auditor reliance; biennial thereafter
+4-echelon-automated,Security questionnaires (generated),customer-reviews,3000,14000,3000,14000,yes,assumption,,
+4-echelon-automated,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,
+5-hybrid,Build minimal automation on existing Echelon systems,engineering,30000,122500,0,0,yes,assumption,,Only capabilities in vendors/compliance-platform-analysis.md minimum set
+5-hybrid,Maintain automation,engineering,0,0,15000,52500,yes,assumption,,
+5-hybrid,"Admin, evidence gaps, management review",admin-labor,12000,42000,12000,42000,yes,assumption,,
+5-hybrid,Infrastructure,infrastructure,1000,4000,1000,4000,yes,assumption,,
+5-hybrid,Targeted readiness assessment by audit-adjacent firm,consulting,8000,15000,0,0,yes,assumption,,Validates scoping before observation period
+5-hybrid,External technical validation of assurance machinery,external-validation,5000,15000,2500,7500,no,assumption,,Narrower scope than scenario 4
+5-hybrid,Security questionnaires (generated + reviewed),customer-reviews,4000,17500,4000,17500,yes,assumption,,
+5-hybrid,Remediation of findings,remediation,6000,28000,4000,21000,yes,assumption,,
