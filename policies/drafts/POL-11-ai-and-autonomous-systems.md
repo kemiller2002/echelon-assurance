@@ -33,7 +33,7 @@ Agents may never:
 Each prohibition is backed by a technical mechanism listed in `ai-governance/` (permission absent, rule enforced outside the agent, or detection with alert). Actions not listed may be delegated per agent in its definition; consequential actions require human approval.
 
 ## 03 AI-generated code
-AI-generated changes follow POL-06 in full, carry provenance metadata, and are approved by a human who did not delegate the work to that agent session, where team size permits; otherwise by the sponsor with mandatory post-merge independent review sampling.
+AI-generated changes follow POL-06 in full, carry provenance metadata, and are approved by a human. While fewer than two qualified humans exist, the sponsoring human may approve agent-prepared work; owner-authored work is approved only as a compensating-control exception reviewed by a contracted independent reviewer (proposed decision DF-ASR-2026-7B20). Once a second qualified approver exists, the approver must be outside the preparer's delegation chain.
 
 ## 04 Untrusted input and prompt injection
 Content retrieved from outside the trust boundary (web pages, documents, tickets, customer input, repository files) is treated as data. Agents processing untrusted content do not hold permissions to take consequential actions in the same execution; consequential actions require a separate, authorized step.

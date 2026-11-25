@@ -30,10 +30,10 @@ Updated: 2026-11-25
 | B5 | Policy as code, evidence technology | complete |
 | B6 | AI governance | complete |
 | B7 | Synthesis: control catalog, policies, architecture, economics, roadmap | complete |
-| B8 | Review passes 1–10 | in progress (1, 7 complete) |
+| B8 | Review passes 1–10 | complete (journals JR-ASR-2026-5C01..5C03) |
 
 Registers: 276 sources, 278 requirements, 104 controls, 83 policy entries,
-30 evidence types, 32 validation procedures, 58 risks, 1 decision (proposed),
+30 evidence types, 32 validation procedures, 58 risks, 2 decisions (proposed),
 open questions in `registers/open-questions.csv`. See
 `research/journals/` for the batch log.
 

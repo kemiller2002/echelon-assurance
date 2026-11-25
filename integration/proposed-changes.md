@@ -16,7 +16,7 @@ needs the owning repository's own governance process.
 | PC-09 | aegis | Package redaction for reuse by every evidence emitter | Prevent secrets/PII in evidence | P2 |
 | PC-10 | vigila | Add expected-source heartbeat and gap detection, or decide to use managed cloud logging and narrow Vigila's scope | SOC2-027 has no implementer | P1 |
 | PC-11 | fides | Clarify deployment state; document that MFA enforcement evidence comes from the IdP; scope lifecycle/access review to the managed IdP | Contradictory status; F5 | P1 |
-| PC-12 | arca | Implement hash-chained records with periodic checkpoints anchored externally (transparency-log witness, RFC 3161), plus WORM storage target | Genuine gap (F1); decision record DF-ASR-2026-3A1E | P0 |
+| PC-12 | arca | Implement hash-chained records with periodic checkpoints anchored externally (transparency-log witness, RFC 3161), plus WORM storage target | Genuine gap (F1); decision record DF-ASR-2026-3A1E (amended: WORM object storage, build at P3) | P3 (design now) |
 | PC-13 | percepta | Align envelope with `architecture/evidence-envelope.schema.json` | One evidence contract | P2 |
 | PC-14 | unbound | Reuse Summa's ledger invariant, close and reconciliation patterns in the FIN kernel design | Avoid re-designing | P2 |
 | PC-15 | echelon-registry, project-administration | Expose system inventory for control applicability | Asset inventory (CC6.1) | P2 |

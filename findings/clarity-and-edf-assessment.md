@@ -76,7 +76,7 @@ structure to challenge, not as proof.
 
 **Executive understanding.** Unbound will very likely need SOC 1 Type 2 as
 well as SOC 2 Type 2 if it operates sponsors' fund ledgers for separate
-sponsor entities. The cheapest credible route is a hybrid: build only the
+sponsor entities. The most capable route at roughly the cost of a commercial platform is a hybrid: build only the
 assurance capabilities that existing Echelon systems nearly provide, enforce
 controls structurally, and buy independence (pen test, readiness review,
 external validation, attestation).

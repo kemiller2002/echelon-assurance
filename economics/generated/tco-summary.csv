@@ -2,6 +2,6 @@ scenario,unavoidable_low,unavoidable_high,reducible_low,reducible_high
 1-conventional-manual,300000,695000,357000,1312000
 2-commercial-platform,300000,695000,269000,904000
 3-outsourced-management,300000,695000,272000,979500
-4-echelon-automated,330000,770000,287000,1052000
-5-hybrid,315000,740000,205000,777000
-5b-hybrid-auditor-rejects-system-evidence,315000,740000,405000,1477000
+4-echelon-automated,380000,920000,287000,1052000
+5-hybrid,365000,890000,205000,777000
+5b-hybrid-auditor-rejects-system-evidence,365000,890000,405000,1477000

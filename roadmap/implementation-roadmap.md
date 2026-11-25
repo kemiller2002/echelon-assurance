@@ -98,10 +98,13 @@ questionnaire answers through CTL-GOV-012 claim linting.
    (system description from one source, trust center), CTL-GOV-013.
 3. Exit criterion: every in-scope control is `Operating` with production
    evidence and `Tested` at `internal-independent` level, and the
-   observation-period start date is agreed with the auditor. As catalogued,
-   65 of 104 controls have no validation procedure at `internal-independent`
-   level or higher, and no economics scenario budgets the reviewer; this
-   criterion cannot yet be met (OQ-803).
+   observation-period start date is agreed with the auditor. "In-scope"
+   means the controls in the agreed report scope, not the whole catalog.
+   Review pass 6 found 65 controls had no `internal-independent` validation;
+   each now carries VAL-025 (internal independent review by the contracted
+   reviewer, CTL-ASR-007, DF-ASR-2026-7B20), budgeted in economics scenarios
+   4/5/5b. Whether one contracted reviewer can cover the in-scope set
+   remains OQ-803.
 4. **Decision point**: if the auditor will not rely on Echelon-generated
    evidence, buy a platform for the SaaS/cloud evidence layer
    (economics §3).

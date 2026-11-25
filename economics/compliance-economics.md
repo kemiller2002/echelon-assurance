@@ -32,9 +32,9 @@ From `economics/generated/tco-summary.md`:
 | 1 Conventional manual | $300k – $695k | $357k – $1,312k | $657k – $2,007k |
 | 2 Commercial platform | $300k – $695k | $269k – $904k | $569k – $1,599k |
 | 3 Outsourced management | $300k – $695k | $272k – $980k | $572k – $1,675k |
-| 4 Echelon fully automated (feature parity build) | $330k – $770k | $287k – $1,052k | $617k – $1,822k |
-| 5 Hybrid: minimal automation on existing Echelon systems + targeted external services | $315k – $740k | $205k – $777k | $520k – $1,517k |
-| 5b Sensitivity: hybrid, but auditor rejects system-generated evidence | $315k – $740k | $405k – $1,477k | $720k – $2,217k |
+| 4 Echelon fully automated (feature parity build) | $380k – $920k | $287k – $1,052k | $667k – $1,972k |
+| 5 Hybrid: minimal automation on existing Echelon systems + targeted external services | $365k – $890k | $205k – $777k | $570k – $1,667k |
+| 5b Sensitivity: hybrid, but auditor rejects system-generated evidence | $365k – $890k | $405k – $1,477k | $770k – $2,367k |
 
 With an 8% discount rate, the ordering is unchanged
 (`python3 -I economics/tco_model.py --rate 0.08`).
@@ -51,12 +51,16 @@ With an 8% discount rate, the ordering is unchanged
    build effort and the external validation the assurance machinery itself
    then needs exceed a mid-market subscription. This confirms the charter's
    warning. (`recommendation`, confidence `medium`.)
-3. **The hybrid is cheapest at the midpoint, but the ranges overlap.** Its
-   advantage comes from building *only* what existing Echelon systems almost
-   provide (the minimum capability set in `vendors/compliance-platform-analysis.md`)
-   and buying narrow external services (readiness check, external validation)
-   rather than a platform. The margin over a commercial platform is within the
-   uncertainty of the inputs. (`recommendation`, confidence `low`.)
+3. **The hybrid and a commercial platform cost about the same.** After
+   adding the contracted independent reviewer that our own `Tested` and
+   small-team rules require (DF-ASR-2026-7B20), the hybrid ($570k–$1.67M)
+   and a commercial platform ($569k–$1.60M) are indistinguishable within the
+   uncertainty of the inputs. The hybrid's advantage is not price: it covers
+   the financial controls platforms do not, avoids subscription lock-in and
+   bundled-auditor independence risk, and its independent review is a real
+   assurance improvement. Platform scenarios that omit independent review
+   are cheaper partly because they assure less. (`recommendation`,
+   confidence `low` on cost, `medium` on the qualitative difference.)
 4. **Cost is not the deciding factor; fit is.** The decisive differences are
    not in this table:
    - Commercial platforms automate configuration snapshots for common SaaS
@@ -79,7 +83,7 @@ the auditor conversation (roadmap P3), not before.
 
 Scenario 5b shows the hybrid's downside: if the auditor will not rely on
 Echelon-generated evidence, the hybrid becomes the **most expensive**
-option, because the build cost is spent and conventional evidence labor
+option ($770k–$2.37M), because the build cost is spent and conventional evidence labor
 returns. Consequences for the roadmap:
 
 1. Before P3, build only automation that is justified *without* auditor

@@ -38,3 +38,13 @@ infrastructure and itself needs ASR controls and independent verification
 Arca's design cannot accommodate append-only chaining without breaking its
 erasure model; or auditor feedback (OQ-500, OQ-759) rejects the anchoring
 approach.
+
+## Amendment 1 (2026-11-25, review passes 4–6)
+- **Storage:** the ledger reuses Arca's record model and integrity primitives
+  but its storage target is WORM object storage in a separate account, **not
+  GitHub repositories** (GitHub-held evidence is mutable by organization
+  owners; `architecture/evidence-architecture.md`). Resolves the
+  contradiction raised as OQ-805, pending owner acceptance.
+- **Timing:** design now; build at P3 after the CPA firm has stated in
+  scoping how it will use the ledger (economics scenario 5b). PC-12 priority
+  changed from P0 to P3 accordingly.

@@ -917,6 +917,10 @@ def relink(path: Path, spec_name: str, id_col: str, mapping: dict, policy_parent
 
 
 def main() -> int:
+    if (ROOT / "controls/control-catalog.csv").stat().st_size > 2000 and "--force" not in sys.argv:
+        print("Refusing to overwrite the curated catalog. The CSV is authoritative since B7 review passes;"
+              " rerun with --force only to deliberately reseed (review edits would be lost).")
+        return 1
     req_path = ROOT / "regulatory/requirements.csv"
     req_index = {r["req_id"]: r for r in read(req_path)}
     def extend(c):

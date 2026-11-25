@@ -306,3 +306,17 @@ outcome samples. It is tagged `auditor-interpretation`, confidence `medium`.
 | 11 | Low | Charter §16 and §22 text absent from this repository | OQ-807 |
 | 12 | Low | `registers/fragments/AIG-validation-procedures.csv` still holds the pre-edit VAL-012 and VAL-019 text (merge adds rows only, so there is no effect) | fragments |
 | 13 | Low | Duplicated auditor-acceptance questions (OQ-108, 312, 500, 601, 759, 765) with mixed resolver (`auditor` vs `cpa-firm`); consider consolidating | registers |
+
+## Coordinator disposition (2026-11-25)
+
+| Issue | Disposition |
+|---|---|
+| OQ-800 small-team approval | Proposed decision DF-ASR-2026-7B20; POL-11.03, ai-governance §4, CTL-GOV-009 aligned to it. Owner acceptance pending. |
+| OQ-803 P3 exit unmeetable | VAL-025 attached to the 65 controls lacking independent validation; contracted reviewer budgeted (economics 4/5/5b); exit scoped to report scope. Capacity question stays open. |
+| OQ-804 single admin can destroy evidence | CTL-ASR-006 mechanism hardened (org policy denying deletion, KMS deletion waiting period with external alert, external anchors); limitation stated: only a second admin/custodian truly fixes it. |
+| OQ-805 ledger substrate/timing | DF-ASR-2026-3A1E amended: WORM object storage, not GitHub; build at P3; PC-12 → P3. |
+| OQ-802 automation targets vs costing | CTL-HR-001/002 lowered (L3/L2, P1) pending HR/training system; remaining mismatch stays open. |
+| OQ-806 Vigila | Removed from CTL-LOG-001/003 and CTL-ASR-004; managed alerting and external dead-man monitor named instead. |
+| OQ-801 retention L5 | CTL-DAT-002 target lowered to L3 with human-approved deletion batches. |
+| Economics consequence | With the reviewer, hybrid ≈ commercial platform on cost; economics §3 rewritten; Clarity wording corrected. |
+| Seed builder risk | `tools/build_control_catalog.py` refuses to overwrite the curated catalog without `--force`. |
