@@ -69,7 +69,7 @@ SRC-PTV-038/-039/-040/-048]**:
 | Probo (SRC-PTV-044) | Open source (MIT) GRC | Evidence as files/URLs; CLI | Few | Audit programs | Free | Manual evidence; young project |
 | CISO Assistant (SRC-PTV-045) | Open source (AGPL-3.0) plus commercial editions | Manual/API evidence; 200+ frameworks with mapping; REST API, MCP | API-first | Audit module | Community free | Mapping library is the main value; not an automated collector |
 | eramba (SRC-PTV-046) | Self-hosted GRC; Community and Enterprise | Manual workflows | Few | Audit workflows | Enterprise reported EUR 2,500/yr flat (EUR 5,000 also shown) | GRC toolkit, not an evidence collector |
-| Delve (SRC-PTV-042) | AI compliance startup | n/a | n/a | Alleged rubber-stamp affiliated auditors | n/a | **Allegations (Mar 2026)** of fabricated evidence and pre-generated auditor conclusions; denied; unproven |
+| Delve (SRC-PTV-042) | AI compliance startup | n/a | n/a | Alleged rubber-stamp audit firms (alleged to be one operation) | n/a | **Allegations (Mar 2026)** of fabricated evidence and pre-generated auditor conclusions; denied; unproven |
 
 ## 3. Security implications of buying
 

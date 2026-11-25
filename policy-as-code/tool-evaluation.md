@@ -63,7 +63,7 @@ capped accordingly. No tool here has been run by this program.
 | **GCS Bucket Lock / Object Retention Lock** (SRC-PAC-032) | Retention up to 100 years; locking irreversible; project lien | GA | GCP service | Equivalent on GCP | authoritative |
 | **CloudTrail log file validation** (SRC-PAC-033) | SHA-256 per log file; hourly RSA-signed digest files chained to previous digest; detects modification/deletion and lets you assert no files were delivered in a period | GA | AWS service | Model for our own digest chain; source of IAM evidence | authoritative |
 | **Amazon QLDB** (SRC-PAC-034) | Ledger DB; **end of support 2025-07-31**; AWS recommends Aurora PostgreSQL migration | Retired | — | **Do not use** | summary-only |
-| **immudb** (SRC-PAC-035) | Append-only DB, Merkle commit log, client-side verification | Active | **Business Source License 1.1** (not OSI open source) | Possible but licence and single-vendor risk; prefer Tessera + object lock | authoritative |
+| **immudb** (SRC-PAC-035) | Append-only DB, Merkle commit log, client-side verification | Active | **Business Source License 1.1** for v1.9DOM.2+ (not OSI open source; Additional Use Grant permits production use except a competing hosted/embedded offering) | Possible but licence and single-vendor risk; prefer Tessera + object lock | authoritative |
 | **OpenTelemetry logs** (SRC-PAC-036) | Log data model (Timestamp, ObservedTimestamp, TraceId, SpanId, Resource, Attributes) | CNCF | Apache-2.0 | Transport/correlation for evidence events; **provides no integrity guarantees** on the page read | authoritative |
 
 ## 5. Overall verdict

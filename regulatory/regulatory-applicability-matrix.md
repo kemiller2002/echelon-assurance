@@ -74,7 +74,12 @@ for selection — no decision record exists) · `customer-expectation` · `volun
      for its own profit or its members' (15 U.S.C. 44, SRC-REG-006). In *FTC v.
      Grand Canyon Education* (D. Ariz. Aug. 15, 2024, as reported, SRC-REG-009)
      the court dismissed FTC Act Section 5 claims against a nonprofit-chartered
-     university for want of jurisdiction. **Contradicting interpretation:** the
+     university because the FTC had not pleaded facts showing it was a
+     "corporation" under 15 U.S.C. 44 (leave to amend granted); a March 2025
+     order dismissed the amended claims without leave to amend, and the FTC
+     later dismissed the whole case (August 2025). It is a pleading-stage
+     district-court ruling with no appellate decision, and it concerned
+     Section 5, not GLBA. **Contradicting interpretation:** the
      Safeguards Rule rests on GLBA rulemaking authority, and some commentators
      read 6805(a)(7) as reaching any financial institution no other agency
      supervises. The Department of Education requires (mostly nonprofit)
@@ -134,10 +139,10 @@ triggers. Requirement-level rows are in `REG.csv`.
 | GLBA Privacy (GLBA) | 12 CFR 1016 (CFPB); 16 CFR 313 (FTC, auto dealers) | Financial institutions re consumers' NPI | n/a | undetermined (sponsors); reuse limits as service provider | open-question / low | CFPA lacks nonprofit carve-out | OQ-203 |
 | State breach notification (STATE) | 50 states + DC, GU, PR, VI (SRC-REG-042) | Anyone owning, licensing or maintaining residents' PI | **legal** (employee data) | **legal** (as maintainer: notify data owner; sponsors notify residents) | authoritative / high | Deadlines/triggers vary | First real PI |
 | State "reasonable security" (STATE) | e.g., 201 CMR 17 (MA) (SRC-REG-058) | Owners/licensors of MA residents' PI | legal (employee data if MA residents) | contractual via sponsors | authoritative / medium | Whether a processor "licenses" PI | MA residents in data |
-| State comprehensive privacy (STATE) | ~20 state laws; CO, DE, NJ, OR (and per later commentary MD, MN) do not exempt 501(c)(3)s (SRC-REG-043); GLBA exemptions entity- vs data-level, CT/MT narrowed 2025 (SRC-REG-044) | Controllers above thresholds; processors | likely below thresholds | undetermined (processor duties near-certain contractually) | auditor-interpretation / medium | Secondary sources disagree on lists | OQ-209; resident counts per sponsor |
+| State comprehensive privacy (STATE) | ~20 state laws; CO, DE, NJ, OR (and per later commentary MD, MN) do not exempt 501(c)(3)s (SRC-REG-043); GLBA exemptions entity- vs data-level, MT narrowed 2025-10-01, CT 2025-10-01 or 2026-07-01 (sources disagree) (SRC-REG-044) | Controllers above thresholds; processors | likely below thresholds | undetermined (processor duties near-certain contractually) | auditor-interpretation / medium | Secondary sources disagree on lists | OQ-209; resident counts per sponsor |
 | NYDFS Part 500 (STATE) | 23 NYCRR 500; final phase 2025-11-01 (SRC-REG-045) | DFS licensees | n/a | not-applicable; contractual if a DFS-licensed partner | auditor-interpretation / medium | — | OQ-211, OQ-216 |
 | GDPR (GDPR) | Reg. (EU) 2016/679 Art. 3(2) (SRC-REG-041) | Non-EU controllers/processors targeting or monitoring EU data subjects | not-applicable | not-applicable | authoritative / medium | Accessibility ≠ targeting (EDPB, not read) | OQ-208: EU/UK donors, marketing, tracking |
-| IRS DAF rules (IRS) | 26 U.S.C. 4966, 4967, 170(f)(8), 170(f)(18), 6033(k); 26 CFR 1.6001-1 (SRC-REG-046–050) | Sponsors, fund managers, donors | n/a | **contractual** (sponsor's legal duty; platform must enable compliance and not cause violations) | authoritative / high | — | Sponsor contract; Unbound becoming a sponsor itself would make it **legal** |
+| IRS DAF rules (IRS) | 26 U.S.C. 4966, 4967, 170(f)(8), 170(f)(18), 6033(k); 26 CFR 1.6001-1 (SRC-REG-046–050) | Sponsors, fund managers, donors | n/a | **contractual** (duties and taxes fall on sponsors, fund managers and donors; platform must enable compliance and not cause violations) | authoritative (law) / medium (classification) | Platform personnel acting with sponsor authority could be argued to be "fund managers" (4966(d)(3)); 170(f)(8)/(18) are donor-deduction conditions, not sponsor duties (OQ-212) | Sponsor contract; Unbound becoming a sponsor itself would make it **legal** |
 | IRS Pub 1075 / e-file (IRS) | FTI safeguards; e-file provider rules | Agencies receiving FTI; EROs/preparers | n/a | not-applicable | assumption / medium | — | Offering tax preparation (also makes operator a Safeguards FI) |
 | OFAC (OFAC) | 31 CFR ch. V; 2019 Compliance Framework (SRC-REG-051) | All U.S. persons | **legal** | **legal** (no facilitation) + framework voluntary | authoritative / medium | Allocation sponsor vs platform | OQ-213; foreign grants |
 | Bank incident notice (BANK) | 12 CFR 53.4 et al. (SRC-REG-017) | Bank service providers (BSCA) | n/a | undetermined | open-question / medium | — | OQ-205 direct bank contract |
@@ -152,7 +157,7 @@ triggers. Requirement-level rows are in `REG.csv`.
 | Interagency InfoSec Guidelines (BANK) | 12 CFR 30 App. B (SRC-REG-056) | Banks | Safeguards and incident notice by contract | contractual | authoritative / medium | Most certain GLBA-equivalent route |
 | FFIEC IT Handbook (FFIEC) | Examiner handbook (SRC-REG-020, 403 — not verified) | Banks, examined TSPs | Questionnaire language | customer-expectation | customer-expectation / low | Examination only under BSCA |
 | FFIEC CAT (FFIEC) | Sunset; removed 2025-08-31; CSF 2.0 and CISA CPGs cited (SRC-REG-019) | — | Do not build to CAT | not-applicable | authoritative / medium | Supports CSF 2.0 anchor |
-| Nacha Operating Rules (NACHA) | ACH Security Framework (2013); Supplementing Data Security (≥2M entries, 2021/2022); Fraud Monitoring (2026-03-20 / 2026-06-22) (SRC-REG-021/022) | Originators, TPSPs, TPSs (not FIs) | Applies as TPSP once ACH is live | contractual (security framework, fraud monitoring); voluntary until 2M (account-number unreadability — adopt now) | authoritative / medium | Rule text is subscription-only; NOC timing taken from Unbound | OQ-206; becoming a Third-Party Sender |
+| Nacha Operating Rules (NACHA) | ACH Security Framework (2013); Supplementing Data Security (≥2M entries, 2021/2022); Fraud Monitoring (2026-03-20 / 2026-06-22) (SRC-REG-021/022) | Originators, TPSPs, TPSs (and ODFIs/RDFIs, not relevant to Unbound) | Applies as TPSP once ACH is live | contractual (security framework, fraud monitoring); voluntary until 2M (account-number unreadability — adopt now) | authoritative / medium | Rule text is subscription-only; NOC timing taken from Unbound | OQ-206; becoming a Third-Party Sender |
 | PCI DSS v4.0.1 (PCI) | PCI SSC; v4.0.1 June 2024; future-dated reqs 2025-03-31; SAQ A changed 2025-01-30 (SRC-REG-023/024) | Entities storing/processing/transmitting CHD or able to affect CDE | Cards deferred | not-applicable (R1) | authoritative / medium | 2026 FAQ revision reported, unverified | OQ-207: enabling cards; hosting the donation page |
 
 ### 4.3 Voluntary frameworks

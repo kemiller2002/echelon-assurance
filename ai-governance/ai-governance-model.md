@@ -256,8 +256,8 @@ bounds what a hijacked agent can do *(recommendation)*:
    prohibited-action attempts) alert; every denial by the policy engine is a
    signal (AIN-033).
 7. Testing: automated injection corpus on every change (VAL-005) and human
-   adaptive red-team quarterly (VAL-006), since static robustness is
-   insufficient per CAISI.
+   adaptive red-team quarterly (VAL-006), since the CAISI results show
+   static robustness cannot be assumed *(recommendation)*.
 
 Residual risk acceptance is an owner decision (OQ-616).
 

@@ -119,8 +119,9 @@ for the demand. This matches Unbound's SPD-ADV-003.
 
 ## 3. Is SOC 2 alone sufficient?
 
-**No, not for sponsors whose auditors rely on Unbound's controls**
-`[authoritative]`.
+**Probably not, for sponsors whose auditors rely on Unbound's controls**
+`[authoritative]` (AU-C 9402 says "unlikely", not "never"; the user
+auditor's judgment decides).
 
 - **Primary-source basis.** AU-C 9402 (issued December 2022, revised March
   2024) calls SOC 1 "the preferred report". It says a SOC 2 "is unlikely to
