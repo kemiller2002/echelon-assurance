@@ -37,53 +37,51 @@ carries its class in `activities.csv`.
 
 ## Results (generated `generated/model.md` is authoritative)
 
-**Revision note.** Two challenge rounds corrected biases in earlier runs:
+**Revision note.** Three challenge rounds corrected biases in earlier runs:
 
-- Maintenance and auditor non-reliance are now charged to every alternative that produces system-generated evidence, including A2, A3, A4 and A6.
+- Maintenance and auditor non-reliance are now charged to every alternative that produces system-generated evidence.
 - The fractional reviewer grows per product.
-- A8 was added. It models the package that DF-ASR-2026-C005 recommends: minimum viable assurance plus prevention and testing automation, without evidence-collection automation.
+- The enforced release gates, registers and validator that owner decisions 0D06 and 0D07 require are now charged to every alternative.
+- A8 models the package that DF-ASR-2026-C005 recommends: minimum viable assurance plus prevention and testing automation, without evidence-collection automation.
 
 **Base case (S0), five-year midpoints:**
 
-- **At N=1 the alternatives other than A7 are close.** Midpoints run USD 1.13–1.41M; A7 is USD 2.02M. The ranges span about 3× and the midpoints differ by up to about 25%, so no ranking at N ≤ 2 is reliable.
-- **From N=5, targeted automation (A5) has the lowest midpoint.** It is USD 2.67M against USD 2.90M (A3) and USD 3.16M (A2), and it breaks even with A3 at 3 products. This depends on auditor reliance.
-- **A7 (full internal platform)** breaks even with A2 at 6 products and with A3 at 9.
+- **At N=1 the alternatives other than A7 are close.** Midpoints run USD 1.17M (A4) to 1.44M (A1); A7 is USD 2.02M. The ranges span about 3×, so no ranking at N ≤ 2 is reliable. A4 has the lowest midpoint at N=1 and N=2, with A3 within about 4%.
+- **From N=5, targeted automation (A5) has the lowest midpoint.** It is USD 2.67M against about USD 2.98M (A3, A4) and USD 3.25M (A2). This depends on auditor reliance.
+- **A7 (full internal platform)** breaks even with A2 at 6 products and with A3 at 8.
 - **A8 costs about USD 245k more than A4 over five years at N=1, and about USD 350k more at N=5** (roughly USD 50–70k a year). The model counts the cost of prevention and testing automation but deliberately not its benefit (ECON-011).
 
 **Auditor non-reliance (S4) and the downside (S5):**
 
-- **Outsourced management (A3) is cheapest at every product count**, with the fewest owner hours.
-- **A4 is within about 2–7% of A3.**
-- **A5, A6 and A8 never overtake A3.**
+- **A4 and A3 are effectively tied** at every product count: within about 4% at N=1 and about 1% at N=15. A4 is lower up to about five products, and A3 is lower at larger scale.
+- **A5, A6 and A8 never overtake A3.** Against A2, A5 breaks even at 3 products and A6 at 5.
 
 **Slow adoption (S6)** delays but does not remove A5's advantage under reliance.
 
 ## Owner capacity
 
 Steady-state recurring assurance labor implied by the inputs (hypothetical). It
-excludes baseline product engineering (200–500 h a year per product) and A5/A8
-build hours:
+excludes baseline product engineering (200–500 h a year per product) and build
+hours:
 
 | Alternative | N=1 | N=3 |
 |---|---|---|
-| A3 outsourced | 85–300 h | 190–680 h |
+| A3 outsourced | 125–400 h | 230–780 h |
 | A4 minimum viable | 300–810 h | 570–1,540 h |
 | A8 recommended package | 395–1,070 h | 680–1,840 h |
 | A5 targeted (reliance) | 275–760 h | 380–1,060 h |
 | A5 targeted (non-reliance) | 475–1,260 h | 820–2,160 h |
 
-One owner has about 1,800 working hours a year. Capacity, not cash, is likely
-the binding constraint. The proposed threshold of 25% of capacity (about 450
-hours a year, BR-GOV-011) is exceeded by every alternative except A3 at three
-products. Contracting support is therefore probable whichever internal option
-is chosen. Its cost lies between the A3 and A4 lines.
+- **Capacity.** One owner has about 1,800 working hours a year, so capacity, not cash, is likely the binding constraint.
+- **Threshold.** The proposed threshold is 25% of capacity, about 450 hours a year (BR-GOV-011). The recommended package can exceed it even at one product, so contracting support is probable.
+- **Not modelled.** The cost of that contracting has not been modelled. It is to be estimated when the owner sets the threshold (ODP-02), for example by pricing A3-style support for the hours above the threshold.
 
 ## What the numbers do and do not support (DF-ASR-2026-C005, proposed)
 
-1. **No internal option is cheaper on cash alone at one or two products.** The choice rests on security value, independence and owner capacity, not on cost savings.
+1. **At one or two products, no option is clearly cheaper on cash.** Minimum viable assurance has the lowest midpoint, but within overlapping ranges. The choice rests on security value, independence and owner capacity.
 2. **Evidence-collection automation pays only with auditor reliance and three or more products.** Gate it on a written auditor position (WI-EXT-01) and a credible product pipeline.
 3. **Prevention and testing automation (A8 increment, about USD 50–70k a year) is justified by risk reduction the model does not monetize,** under tenets TNT-01, TNT-02 and TNT-16. Much of it, such as financial invariant suites and security-by-construction rules, is arguably responsible baseline engineering for a financial product. Classifying it as baseline or as a discretionary assurance investment is an owner decision (ODP-09).
-4. **If owner capacity binds, A3-style outsourced support is the cheapest relief,** and it adds some independent challenge.
+4. **If owner capacity binds, A3-style outsourced support is a natural relief,** with a similar total cost under non-reliance, and it adds some independent challenge. Its incremental cost on top of A4 or A8 is not yet modelled.
 5. **Never without demonstrated demand:**
    - A7 feature-parity platform;
    - custom anchoring;

@@ -11,13 +11,15 @@ related_questions: [OQ-802, OQ-312, OQ-108]
 
 ## Context
 The economics model v2 (`economics/v2/generated/model.md`) was corrected over
-two challenge rounds and now includes the recommended package as alternative A8.
+three challenge rounds. Mandatory gates, maintenance, auditor non-reliance and
+reviewer growth are now charged to every alternative, and the recommended
+package is modelled as A8.
 
-- **One or two products:** the alternatives are close within wide ranges. No internal option is cheaper on cash.
-- **Reliance and three or more products:** targeted automation (A5) is cheapest only when the auditor relies on system evidence and there are three to five or more products.
-- **Non-reliance:** outsourced management (A3) is cheapest at every scale and uses the fewest owner hours. Minimum viable assurance (A4) is within a few percent of A3.
+- **One or two products:** minimum viable assurance (A4) has the lowest midpoint in every scenario, with outsourced management (A3) within about 4%. The ranges overlap heavily.
+- **Reliance and five or more products:** targeted automation (A5) is cheapest only when the auditor relies on system evidence and there are about five or more products.
+- **Non-reliance:** A4 and A3 are effectively tied at every scale, and A5, A6 and A8 never overtake A3.
 - **Prevention and testing automation** adds about USD 50–70k a year (A8 − A4). Its benefit is not monetized.
-- **Owner capacity is likely binding** for every internal option.
+- **Owner capacity is likely binding.** The cost of contracting to relieve it is not yet modelled.
 
 ## Decision (proposed)
 1. **Now:** minimum viable Echelon assurance (A4): registers, validator, enforced release gates, evidence envelope, generated customer answers.

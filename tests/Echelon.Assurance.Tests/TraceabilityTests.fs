@@ -227,14 +227,25 @@ let ``public answers cannot cite designed controls or deferred mechanisms`` () =
     Assert.Empty(answerDisclosure [ ctl ] [ a "customer-nda" "Designed, not yet operating." ])
 
 [<Fact>]
-let ``before-production requirement scheduled after operational readiness is reported`` () =
-    let b gate phase =
-        rec' [ "br_id", "BR-APP-001"; "launch_gate", gate; "roadmap_phase", phase ]
+let ``before-production requirement whose work completes after operational readiness is reported`` () =
+    let b gate =
+        rec' [ "br_id", "BR-APP-001"; "launch_gate", gate; "roadmap_phase", "P1" ]
 
-    Assert.Empty(launchGates [ b "before-production" "P3" ])
-    Assert.Single(launchGates [ b "before-production" "P4" ]) |> ignore
-    Assert.Empty(launchGates [ b "before-external-examination" "P4" ])
-    Assert.Empty(launchGates [ b "on-demand" "P5" ])
+    let w phase =
+        rec'
+            [
+                "work_item_id", "WI-A-0" + phase
+                "phase", phase
+                "requirements_addressed", "BR-APP-001"
+            ]
+
+    Assert.Empty(launchGates [ b "before-production" ] [ w "P1"; w "P3" ])
+
+    Assert.Single(launchGates [ b "before-production" ] [ w "P1"; w "P4" ])
+    |> ignore
+
+    Assert.Empty(launchGates [ b "before-external-examination" ] [ w "P4" ])
+    Assert.Empty(launchGates [ b "on-demand" ] [ w "P5" ])
 
 [<Fact>]
 let ``tested control needs an independent validation procedure`` () =

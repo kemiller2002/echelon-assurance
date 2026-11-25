@@ -148,7 +148,7 @@ assumed exist.
 | C2. Security-by-construction requirements eliminate the named vulnerability classes within verified boundaries | discovery | Medium (design only; no boundary implemented) | Engineering lead |
 | C3. Unbound's design keeps Echelon out of custody and money transmission | discovery | Medium–Low (flow F9 and bank white-label unresolved) | Owner, pending counsel |
 | C4. Continuous internal testing reduces external testing cost | discovery | Low (no data; external fee unaffected by assumption) | Engineering lead |
-| C5. Internal assurance automation saves money | discovery | Low (no cash saving at 1–2 products; evidence automation pays only with auditor reliance and three or more products; outsourced management cheapest under non-reliance; owner capacity binds first) | Owner |
+| C5. Internal assurance automation saves money | discovery | Low (no clear cash saving at 1–2 products; evidence automation pays only with auditor reliance and about five or more products; minimum viable and outsourced tied under non-reliance; owner capacity binds first) | Owner |
 | C6. One human can operate the program with AI agents and fractional review | reassessment | Medium–Low (separation-of-duties conflicts persist) | Owner |
 | C7. Existing Echelon systems can provide the assurance capabilities | reassessment | Low (capability verification contradicts 4 of the assumptions) | Owner |
 

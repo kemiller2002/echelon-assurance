@@ -9,9 +9,9 @@ Opportunity cost (build hours diverted from product work) is reported separately
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $610k–$2,093k | $910k–$3,229k | $1,810k–$6,636k | $3,310k–$12,315k | $4,810k–$17,994k |
-| A2-commercial-platform | $577k–$1,836k | $801k–$2,589k | $1,471k–$4,849k | $2,589k–$8,615k | $3,707k–$12,382k |
-| A3-outsourced-management | $528k–$1,722k | $738k–$2,397k | $1,370k–$4,420k | $2,422k–$7,791k | $3,475k–$11,162k |
+| A1-conventional-manual | $642k–$2,233k | $942k–$3,369k | $1,842k–$6,776k | $3,342k–$12,455k | $4,842k–$18,134k |
+| A2-commercial-platform | $609k–$1,976k | $833k–$2,729k | $1,503k–$4,989k | $2,621k–$8,755k | $3,739k–$12,522k |
+| A3-outsourced-management | $560k–$1,862k | $770k–$2,537k | $1,402k–$4,560k | $2,454k–$7,931k | $3,507k–$11,302k |
 | A4-mvp-echelon | $538k–$1,794k | $743k–$2,494k | $1,356k–$4,594k | $2,377k–$8,093k | $3,399k–$11,592k |
 | A5-targeted-automation | $580k–$1,954k | $748k–$2,489k | $1,253k–$4,094k | $2,095k–$6,768k | $2,937k–$9,442k |
 | A6-hybrid | $610k–$1,986k | $794k–$2,552k | $1,347k–$4,250k | $2,269k–$7,079k | $3,191k–$9,909k |
@@ -22,9 +22,9 @@ Opportunity cost (build hours diverted from product work) is reported separately
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $610k–$2,093k | $300k–$1,136k | $300k–$1,136k | $300k–$1,136k | $300k–$1,136k |
-| A2-commercial-platform | $577k–$1,836k | $224k–$753k | $224k–$753k | $224k–$753k | $224k–$753k |
-| A3-outsourced-management | $528k–$1,722k | $211k–$674k | $211k–$674k | $211k–$674k | $211k–$674k |
+| A1-conventional-manual | $642k–$2,233k | $300k–$1,136k | $300k–$1,136k | $300k–$1,136k | $300k–$1,136k |
+| A2-commercial-platform | $609k–$1,976k | $224k–$753k | $224k–$753k | $224k–$753k | $224k–$753k |
+| A3-outsourced-management | $560k–$1,862k | $211k–$674k | $211k–$674k | $211k–$674k | $211k–$674k |
 | A4-mvp-echelon | $538k–$1,794k | $204k–$700k | $204k–$700k | $204k–$700k | $204k–$700k |
 | A5-targeted-automation | $580k–$1,954k | $168k–$535k | $168k–$535k | $168k–$535k | $168k–$535k |
 | A6-hybrid | $610k–$1,986k | $184k–$566k | $184k–$566k | $184k–$566k | $184k–$566k |
@@ -35,9 +35,9 @@ Opportunity cost (build hours diverted from product work) is reported separately
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $1,035k | $845k | $781k | $760k |
-| A2-commercial-platform | $1,206k | $847k | $632k | $560k | $536k |
-| A3-outsourced-management | $1,125k | $784k | $579k | $511k | $488k |
+| A1-conventional-manual | $1,438k | $1,078k | $862k | $790k | $766k |
+| A2-commercial-platform | $1,292k | $890k | $649k | $569k | $542k |
+| A3-outsourced-management | $1,211k | $827k | $596k | $519k | $494k |
 | A4-mvp-echelon | $1,166k | $809k | $595k | $524k | $500k |
 | A5-targeted-automation | $1,267k | $809k | $535k | $443k | $413k |
 | A6-hybrid | $1,298k | $837k | $560k | $467k | $437k |
@@ -48,9 +48,9 @@ Opportunity cost (build hours diverted from product work) is reported separately
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $0k–$0k | $0k–$0k | $0k–$0k | $0k–$0k | $0k–$0k |
-| A2-commercial-platform | $4k–$21k | $4k–$21k | $4k–$21k | $4k–$21k | $4k–$21k |
-| A3-outsourced-management | $0k–$0k | $0k–$0k | $0k–$0k | $0k–$0k | $0k–$0k |
+| A1-conventional-manual | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k |
+| A2-commercial-platform | $10k–$47k | $10k–$47k | $10k–$47k | $10k–$47k | $10k–$47k |
+| A3-outsourced-management | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k |
 | A4-mvp-echelon | $12k–$54k | $13k–$60k | $16k–$75k | $21k–$102k | $26k–$128k |
 | A5-targeted-automation | $29k–$126k | $31k–$134k | $35k–$160k | $43k–$202k | $51k–$244k |
 | A6-hybrid | $20k–$88k | $21k–$93k | $24k–$108k | $29k–$135k | $34k–$161k |
@@ -69,9 +69,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $2,069k | $4,223k | $7,813k | $11,402k |
-| A2-commercial-platform | $1,206k | $1,695k | $3,160k | $5,602k | $8,044k |
-| A3-outsourced-management | $1,125k | $1,567k | $2,895k | $5,107k | $7,319k |
+| A1-conventional-manual | $1,438k | $2,155k | $4,309k | $7,899k | $11,488k |
+| A2-commercial-platform | $1,292k | $1,781k | $3,246k | $5,688k | $8,130k |
+| A3-outsourced-management | $1,211k | $1,653k | $2,981k | $5,193k | $7,405k |
 | A4-mvp-echelon | $1,166k | $1,618k | $2,975k | $5,235k | $7,496k |
 | A5-targeted-automation | $1,267k | $1,619k | $2,673k | $4,431k | $6,189k |
 | A6-hybrid | $1,298k | $1,673k | $2,798k | $4,674k | $6,550k |
@@ -84,16 +84,16 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
 | A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 2 |
-| A5-targeted-automation | A3-outsourced-management | 3 |
+| A5-targeted-automation | A2-commercial-platform | 1 |
+| A5-targeted-automation | A3-outsourced-management | 2 |
 | A6-hybrid | A1-conventional-manual | 1 |
 | A6-hybrid | A2-commercial-platform | 2 |
-| A6-hybrid | A3-outsourced-management | 4 |
+| A6-hybrid | A3-outsourced-management | 3 |
 | A7-full-internal-platform | A1-conventional-manual | 3 |
 | A7-full-internal-platform | A2-commercial-platform | 6 |
-| A7-full-internal-platform | A3-outsourced-management | 9 |
+| A7-full-internal-platform | A3-outsourced-management | 8 |
 
 ### S1-maintenance-low
 
@@ -103,9 +103,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $2,069k | $4,223k | $7,813k | $11,402k |
-| A2-commercial-platform | $1,188k | $1,676k | $3,141k | $5,583k | $8,025k |
-| A3-outsourced-management | $1,125k | $1,567k | $2,895k | $5,107k | $7,319k |
+| A1-conventional-manual | $1,421k | $2,139k | $4,293k | $7,882k | $11,472k |
+| A2-commercial-platform | $1,258k | $1,746k | $3,211k | $5,653k | $8,095k |
+| A3-outsourced-management | $1,195k | $1,637k | $2,964k | $5,176k | $7,388k |
 | A4-mvp-echelon | $1,141k | $1,593k | $2,949k | $5,210k | $7,470k |
 | A5-targeted-automation | $1,190k | $1,536k | $2,571k | $4,298k | $6,024k |
 | A6-hybrid | $1,226k | $1,596k | $2,707k | $4,560k | $6,412k |
@@ -118,14 +118,14 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
 | A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 2 |
-| A5-targeted-automation | A3-outsourced-management | 2 |
+| A5-targeted-automation | A2-commercial-platform | 1 |
+| A5-targeted-automation | A3-outsourced-management | 1 |
 | A6-hybrid | A1-conventional-manual | 1 |
-| A6-hybrid | A2-commercial-platform | 2 |
-| A6-hybrid | A3-outsourced-management | 3 |
-| A7-full-internal-platform | A1-conventional-manual | 3 |
+| A6-hybrid | A2-commercial-platform | 1 |
+| A6-hybrid | A3-outsourced-management | 2 |
+| A7-full-internal-platform | A1-conventional-manual | 2 |
 | A7-full-internal-platform | A2-commercial-platform | 5 |
 | A7-full-internal-platform | A3-outsourced-management | 7 |
 
@@ -137,9 +137,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $2,069k | $4,223k | $7,813k | $11,402k |
-| A2-commercial-platform | $1,238k | $1,726k | $3,191k | $5,633k | $8,075k |
-| A3-outsourced-management | $1,125k | $1,567k | $2,895k | $5,107k | $7,319k |
+| A1-conventional-manual | $1,464k | $2,182k | $4,336k | $7,925k | $11,515k |
+| A2-commercial-platform | $1,351k | $1,839k | $3,304k | $5,746k | $8,188k |
+| A3-outsourced-management | $1,238k | $1,680k | $3,007k | $5,219k | $7,431k |
 | A4-mvp-echelon | $1,209k | $1,661k | $3,017k | $5,278k | $7,538k |
 | A5-targeted-automation | $1,394k | $1,757k | $2,843k | $4,655k | $6,466k |
 | A6-hybrid | $1,419k | $1,802k | $2,950k | $4,865k | $6,780k |
@@ -152,16 +152,16 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
-| A5-targeted-automation | A1-conventional-manual | 2 |
-| A5-targeted-automation | A2-commercial-platform | 3 |
-| A5-targeted-automation | A3-outsourced-management | 5 |
-| A6-hybrid | A1-conventional-manual | 2 |
-| A6-hybrid | A2-commercial-platform | 3 |
-| A6-hybrid | A3-outsourced-management | 6 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
+| A5-targeted-automation | A1-conventional-manual | 1 |
+| A5-targeted-automation | A2-commercial-platform | 2 |
+| A5-targeted-automation | A3-outsourced-management | 3 |
+| A6-hybrid | A1-conventional-manual | 1 |
+| A6-hybrid | A2-commercial-platform | 2 |
+| A6-hybrid | A3-outsourced-management | 5 |
 | A7-full-internal-platform | A1-conventional-manual | 4 |
-| A7-full-internal-platform | A2-commercial-platform | 9 |
-| A7-full-internal-platform | A3-outsourced-management | 13 |
+| A7-full-internal-platform | A2-commercial-platform | 8 |
+| A7-full-internal-platform | A3-outsourced-management | 12 |
 
 ### S3-maintenance-very-high
 
@@ -171,9 +171,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $2,069k | $4,223k | $7,813k | $11,402k |
-| A2-commercial-platform | $1,269k | $1,757k | $3,223k | $5,665k | $8,107k |
-| A3-outsourced-management | $1,125k | $1,567k | $2,895k | $5,107k | $7,319k |
+| A1-conventional-manual | $1,491k | $2,209k | $4,363k | $7,952k | $11,542k |
+| A2-commercial-platform | $1,409k | $1,897k | $3,362k | $5,804k | $8,246k |
+| A3-outsourced-management | $1,265k | $1,707k | $3,034k | $5,246k | $7,458k |
 | A4-mvp-echelon | $1,251k | $1,703k | $3,060k | $5,320k | $7,581k |
 | A5-targeted-automation | $1,522k | $1,895k | $3,013k | $4,878k | $6,742k |
 | A6-hybrid | $1,539k | $1,930k | $3,102k | $5,056k | $7,010k |
@@ -186,16 +186,16 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
 | A5-targeted-automation | A1-conventional-manual | 2 |
-| A5-targeted-automation | A2-commercial-platform | 4 |
-| A5-targeted-automation | A3-outsourced-management | 7 |
+| A5-targeted-automation | A2-commercial-platform | 2 |
+| A5-targeted-automation | A3-outsourced-management | 5 |
 | A6-hybrid | A1-conventional-manual | 2 |
-| A6-hybrid | A2-commercial-platform | 4 |
-| A6-hybrid | A3-outsourced-management | 10 |
+| A6-hybrid | A2-commercial-platform | 3 |
+| A6-hybrid | A3-outsourced-management | 7 |
 | A7-full-internal-platform | A1-conventional-manual | 5 |
-| A7-full-internal-platform | A2-commercial-platform | 11 |
-| A7-full-internal-platform | A3-outsourced-management | 17 |
+| A7-full-internal-platform | A2-commercial-platform | 10 |
+| A7-full-internal-platform | A3-outsourced-management | 16 |
 
 ### S4-auditor-nonreliance
 
@@ -205,9 +205,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $2,069k | $4,223k | $7,813k | $11,402k |
-| A2-commercial-platform | $1,292k | $1,832k | $3,452k | $6,152k | $8,852k |
-| A3-outsourced-management | $1,175k | $1,647k | $3,065k | $5,427k | $7,789k |
+| A1-conventional-manual | $1,438k | $2,155k | $4,309k | $7,899k | $11,488k |
+| A2-commercial-platform | $1,378k | $1,918k | $3,538k | $6,238k | $8,938k |
+| A3-outsourced-management | $1,261k | $1,733k | $3,151k | $5,513k | $7,875k |
 | A4-mvp-echelon | $1,216k | $1,698k | $3,145k | $5,555k | $7,966k |
 | A5-targeted-automation | $1,482k | $1,963k | $3,404k | $5,807k | $8,210k |
 | A6-hybrid | $1,513k | $2,017k | $3,530k | $6,050k | $8,571k |
@@ -220,15 +220,15 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
 | A5-targeted-automation | A1-conventional-manual | 2 |
-| A5-targeted-automation | A2-commercial-platform | 5 |
+| A5-targeted-automation | A2-commercial-platform | 3 |
 | A5-targeted-automation | A3-outsourced-management | none ≤ 30 |
 | A6-hybrid | A1-conventional-manual | 2 |
-| A6-hybrid | A2-commercial-platform | 8 |
+| A6-hybrid | A2-commercial-platform | 5 |
 | A6-hybrid | A3-outsourced-management | none ≤ 30 |
 | A7-full-internal-platform | A1-conventional-manual | 5 |
-| A7-full-internal-platform | A2-commercial-platform | 12 |
+| A7-full-internal-platform | A2-commercial-platform | 11 |
 | A7-full-internal-platform | A3-outsourced-management | none ≤ 30 |
 
 ### S5-nonreliance-and-maintenance-high
@@ -239,9 +239,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $2,069k | $4,223k | $7,813k | $11,402k |
-| A2-commercial-platform | $1,324k | $1,864k | $3,484k | $6,184k | $8,884k |
-| A3-outsourced-management | $1,175k | $1,647k | $3,065k | $5,427k | $7,789k |
+| A1-conventional-manual | $1,464k | $2,182k | $4,336k | $7,925k | $11,515k |
+| A2-commercial-platform | $1,437k | $1,977k | $3,597k | $6,297k | $8,997k |
+| A3-outsourced-management | $1,288k | $1,760k | $3,177k | $5,539k | $7,901k |
 | A4-mvp-echelon | $1,259k | $1,741k | $3,187k | $5,598k | $8,008k |
 | A5-targeted-automation | $1,610k | $2,101k | $3,574k | $6,031k | $8,487k |
 | A6-hybrid | $1,634k | $2,146k | $3,681k | $6,241k | $8,801k |
@@ -254,15 +254,15 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
-| A5-targeted-automation | A1-conventional-manual | 3 |
-| A5-targeted-automation | A2-commercial-platform | 7 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
+| A5-targeted-automation | A1-conventional-manual | 2 |
+| A5-targeted-automation | A2-commercial-platform | 5 |
 | A5-targeted-automation | A3-outsourced-management | none ≤ 30 |
-| A6-hybrid | A1-conventional-manual | 3 |
-| A6-hybrid | A2-commercial-platform | 13 |
+| A6-hybrid | A1-conventional-manual | 2 |
+| A6-hybrid | A2-commercial-platform | 9 |
 | A6-hybrid | A3-outsourced-management | none ≤ 30 |
 | A7-full-internal-platform | A1-conventional-manual | 6 |
-| A7-full-internal-platform | A2-commercial-platform | 17 |
+| A7-full-internal-platform | A2-commercial-platform | 16 |
 | A7-full-internal-platform | A3-outsourced-management | none ≤ 30 |
 
 ### S6-slow-adoption
@@ -273,9 +273,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,352k | $1,808k | $3,178k | $5,461k | $7,744k |
-| A2-commercial-platform | $1,206k | $1,520k | $2,461k | $4,029k | $5,598k |
-| A3-outsourced-management | $1,125k | $1,405k | $2,246k | $3,647k | $5,048k |
+| A1-conventional-manual | $1,438k | $1,894k | $3,264k | $5,547k | $7,830k |
+| A2-commercial-platform | $1,292k | $1,606k | $2,547k | $4,115k | $5,684k |
+| A3-outsourced-management | $1,211k | $1,491k | $2,332k | $3,733k | $5,134k |
 | A4-mvp-echelon | $1,166k | $1,462k | $2,349k | $3,828k | $5,306k |
 | A5-targeted-automation | $1,267k | $1,501k | $2,205k | $3,377k | $4,549k |
 | A6-hybrid | $1,298k | $1,544k | $2,284k | $3,516k | $4,749k |
@@ -288,16 +288,16 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
 | A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 2 |
-| A5-targeted-automation | A3-outsourced-management | 5 |
+| A5-targeted-automation | A2-commercial-platform | 1 |
+| A5-targeted-automation | A3-outsourced-management | 3 |
 | A6-hybrid | A1-conventional-manual | 1 |
-| A6-hybrid | A2-commercial-platform | 3 |
-| A6-hybrid | A3-outsourced-management | 7 |
+| A6-hybrid | A2-commercial-platform | 2 |
+| A6-hybrid | A3-outsourced-management | 4 |
 | A7-full-internal-platform | A1-conventional-manual | 4 |
-| A7-full-internal-platform | A2-commercial-platform | 10 |
-| A7-full-internal-platform | A3-outsourced-management | 16 |
+| A7-full-internal-platform | A2-commercial-platform | 9 |
+| A7-full-internal-platform | A3-outsourced-management | 14 |
 
 ### S7-discounted
 
@@ -307,9 +307,9 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,155k | $1,768k | $3,608k | $6,674k | $9,740k |
-| A2-commercial-platform | $1,031k | $1,448k | $2,697k | $4,780k | $6,862k |
-| A3-outsourced-management | $960k | $1,338k | $2,473k | $4,363k | $6,254k |
+| A1-conventional-manual | $1,234k | $1,847k | $3,687k | $6,753k | $9,819k |
+| A2-commercial-platform | $1,110k | $1,527k | $2,776k | $4,858k | $6,941k |
+| A3-outsourced-management | $1,039k | $1,417k | $2,551k | $4,442k | $6,333k |
 | A4-mvp-echelon | $1,002k | $1,388k | $2,545k | $4,473k | $6,402k |
 | A5-targeted-automation | $1,100k | $1,401k | $2,301k | $3,802k | $5,302k |
 | A6-hybrid | $1,122k | $1,442k | $2,402k | $4,003k | $5,603k |
@@ -322,14 +322,14 @@ Break-even (smallest product count at which the automated alternative's midpoint
 |---|---|---|
 | A4-mvp-echelon | A1-conventional-manual | 1 |
 | A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | none ≤ 30 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
 | A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 2 |
-| A5-targeted-automation | A3-outsourced-management | 3 |
+| A5-targeted-automation | A2-commercial-platform | 1 |
+| A5-targeted-automation | A3-outsourced-management | 2 |
 | A6-hybrid | A1-conventional-manual | 1 |
 | A6-hybrid | A2-commercial-platform | 2 |
-| A6-hybrid | A3-outsourced-management | 4 |
+| A6-hybrid | A3-outsourced-management | 3 |
 | A7-full-internal-platform | A1-conventional-manual | 3 |
-| A7-full-internal-platform | A2-commercial-platform | 7 |
-| A7-full-internal-platform | A3-outsourced-management | 10 |
+| A7-full-internal-platform | A2-commercial-platform | 6 |
+| A7-full-internal-platform | A3-outsourced-management | 9 |
 

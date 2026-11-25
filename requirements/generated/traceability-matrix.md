@@ -36,7 +36,7 @@ Baseline requirements: 113. Original owner requirements dispositioned: 208. Cont
 | BR-FIN-005 | Explicit balance states and allowed transitions | TNT-02, TNT-11 | POL-12.06, POL-12.02 | CTL-FIN-003, CTL-FIN-005 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | consolidate |
 | BR-FIN-006 | Separated authority for movement of funds | TNT-02, TNT-11 | POL-12.01, POL-11.01, POL-11.02 | CTL-FIN-002, CTL-AI-002 | VAL-004, VAL-003 | EVT-018, EVT-017 | Designed | strengthen |
 | BR-FIN-007 | External payment destination integrity | TNT-02, TNT-11 | POL-12.04, POL-12.06, POL-10.03 | CTL-FIN-006, CTL-FIN-014 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | retain |
-| BR-FIN-008 | Two-way independent reconciliation | TNT-02, TNT-11 | POL-12.03 | CTL-FIN-004 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | strengthen |
+| BR-FIN-008 | Two-way reconciliation against external sources | TNT-02, TNT-11 | POL-12.03 | CTL-FIN-004 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | strengthen |
 | BR-FIN-009 | Complete financial event populations | TNT-02, TNT-11 | POL-12.06, POL-01.04 | CTL-FIN-003, CTL-ASR-003 | VAL-011, VAL-010 | EVT-022 | Designed | retain |
 | BR-FIN-010 | Controlled accounting periods | TNT-02, TNT-11 | POL-12.02 | CTL-FIN-010 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | strengthen |
 | BR-FIN-011 | Reproducible historical reports | TNT-02, TNT-11 | POL-12.02 | CTL-FIN-012 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | retain |

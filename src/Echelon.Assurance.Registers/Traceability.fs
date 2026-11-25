@@ -358,17 +358,29 @@ let latestPhaseFor gate =
     | "before-external-examination" -> Some "P4"
     | _ -> None
 
-let launchGates (baseline: Record list) =
+let launchGates (baseline: Record list) (backlog: Record list) =
+    let latest =
+        backlog
+        |> List.collect (fun w -> items w "requirements_addressed" |> List.map (fun br -> br, field w "phase"))
+        |> List.groupBy fst
+        |> List.map (fun (br, ps) -> br, ps |> List.map snd |> List.max)
+        |> Map.ofList
+
     baseline
     |> List.choose (fun b ->
+        let id = field b "br_id"
+
+        let completes =
+            Map.tryFind id latest |> Option.defaultValue (field b "roadmap_phase")
+
         match latestPhaseFor (field b "launch_gate") with
-        | Some latest when System.String.CompareOrdinal(field b "roadmap_phase", latest) > 0 ->
+        | Some limit when System.String.CompareOrdinal(completes, limit) > 0 ->
             Some(
                 sprintf
-                    "requirements/baseline.csv: %s is %s but scheduled in %s"
-                    (field b "br_id")
+                    "requirements/baseline.csv: %s is %s but its work completes in %s"
+                    id
                     (field b "launch_gate")
-                    (field b "roadmap_phase")
+                    completes
             )
         | _ -> None)
 
@@ -479,7 +491,7 @@ let errors (loaded: Loaded) =
     @ roadmapCoverage baseline (r "backlog")
     @ capabilityInflation (r "capabilities")
     @ answerDisclosure controls (r "question_bank")
-    @ launchGates baseline
+    @ launchGates baseline (r "backlog")
     @ testedNeedsIndependence controls (r "validations")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")

@@ -194,6 +194,7 @@ let baselineEnums =
                 "before-observation-period"
                 "before-external-examination"
                 "on-demand"
+                "not-a-launch-gate"
             ]
     ]
 

@@ -34,8 +34,8 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 | Hierarchy | Implicit | 16 tenets → 83 policy entries → 121 controls → 113 baseline requirements → enforcement, validation (39 procedures) and evidence (35 types); generated traceability matrix |
 | Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; 9 block requirements finalization, all owner decisions; 19 block implementation |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems, tests executed for 5 |
-| Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 7 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
-| Roadmap | Narrative | `roadmap/backlog.csv`: 59 dependency-ordered work items across 15 repositories; every live baseline requirement has a work item |
+| Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
+| Roadmap | Narrative | `roadmap/backlog.csv`: 60 dependency-ordered work items across 15 repositories; every live baseline requirement has a work item |
 
 ## 2. Most important findings
 
@@ -59,10 +59,11 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - Idempotency payload conflicts open a case rather than going to a dead-letter queue (DF-ASR-2026-C006).
    - No user-supplied HTML is accepted as markup (DF-ASR-2026-C003).
 5. **Simplified evidence architecture.** The custom hash-chained ledger with witness anchoring and timestamps is replaced by managed storage under a compliance-mode retention lock from the first production evidence, separately sourced population reconciliation and an externally hosted heartbeat. These detect failure and external compromise, not action by the single owner. Anchoring is deferred until someone requires it (DF-ASR-2026-C002).
-6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims, corrected over two challenge rounds):
-   - No internal option is cheaper on cash at one or two products. At one product, five-year midpoints run USD 1.13–1.41M (USD 2.02M for a full internal platform), and the ranges span about 3×.
-   - Targeted automation is cheapest only when the auditor relies on system-generated evidence and there are three or more products.
-   - Under non-reliance, outsourced management is cheapest at every scale.
+6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims, corrected over three challenge rounds):
+   - At one product, five-year midpoints run USD 1.17–1.44M (USD 2.02M for a full internal platform), and the ranges span about 3×.
+   - Minimum viable assurance has the lowest midpoint at one or two products in every scenario, with outsourced management within about 4%.
+   - Targeted automation is cheapest only with auditor reliance on system-generated evidence and about five or more products.
+   - Under non-reliance, minimum viable and outsourced are tied, and evidence automation never pays.
    - Prevention and testing automation adds about USD 50–70k a year for risk reduction the model does not monetize.
    - Owner capacity, rather than cash, is likely the binding constraint.
    - Recommendation (DF-ASR-2026-C005): minimum viable assurance now. Prevention automation is justified on risk, and the owner decides whether to treat it as baseline engineering. Evidence-collection automation is gated on a written auditor position and scale. A capacity threshold triggers contracting or hiring. Never a feature-parity platform without demand.
