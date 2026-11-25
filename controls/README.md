@@ -65,6 +65,10 @@ top-level policies inherit their sections' controls.
 
 Distribution of targets: L4 49, L3 27, L2 11, L1 6, L0 6, L5 5. Only five
 controls target L5 (dormant accounts, offboarding, entitlement drift in
-non-production, configuration drift on reversible settings, retention):
-each is reversible and bounded. Judgment controls (risk acceptance,
+non-production, configuration drift on reversible settings, retention).
+Four are reversible and bounded. Retention (CTL-DAT-002) is **not**
+reversible: crypto-shredding and deletion cannot be undone, which conflicts
+with the L5 rule in `automation/control-automation-matrix.md` §1 and
+`ai-governance/ai-governance-model.md` §14 (open issue, review pass 4/5,
+OQ-801). Judgment controls (risk acceptance,
 oversight, vendor reliance, external attestation) remain L0–L2 by design.

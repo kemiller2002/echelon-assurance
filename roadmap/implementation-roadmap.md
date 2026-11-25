@@ -55,7 +55,9 @@ The bulk of the catalog. Order of work inside P1:
    configuration of managed services plus PC-03, PC-05, PC-08.
 2. **Unbound financial kernel controls** (CTL-FIN-001..008, 010, 011;
    CTL-TEN-001/002): built into Unbound and passing the daf-landscape gates
-   G1–G7 before any production financial execution.
+   G0–G9 (`financial-core-control-spec-v0.5.md`; G8 is SOC 2 control-to-evidence
+   collection and independent review, G9 controlled-pilot approval, with payment
+   and trade execution separately gated) before any production financial execution.
 3. **Evidence at source** (CTL-ASR-001, 004, 009): envelopes emitted by
    source systems, heartbeat monitoring outside the primary account. The
    anchored ledger (CTL-ASR-002) can follow in P3.

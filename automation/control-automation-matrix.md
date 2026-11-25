@@ -71,7 +71,7 @@ block an emergency security fix.
 
 | Activity | Ceiling | Why |
 |---|---|---|
-| Risk acceptance and exception approval | L1–L2 | Accountability must be human; agents may evaluate and recommend (POL-11.02) |
+| Risk acceptance and exception approval | L1–L2 for the decision | Accountability must be human; agents may evaluate and recommend (POL-11.02). The catalog's L4 for CTL-GOV-007 and CTL-GOV-002 applies to *enforcing who may decide* (approver ≠ requester, signed approval required before effect), not to automating the decision |
 | Policy approval | L2 | Same |
 | Vendor due diligence judgment | L2 | Report review can be assisted; reliance decision is human |
 | Incident severity and notification decisions | L2–L3 | Deadlines automated; legal judgment human |

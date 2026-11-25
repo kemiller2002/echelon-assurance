@@ -156,8 +156,9 @@ Enforcement mechanisms:
 - The validation pipeline publishes results only to an append-only store the
   implementing pipeline cannot write.
 - A control's `Tested` status requires a validation result whose
-  `independence_level` is at least `internal-independent` for key controls;
-  `automated` results alone keep it at `Operating` *(recommendation for the
+  `independence_level` is at least `internal-independent`; `controls/README.md`
+  applies this to every control, not only key controls, and `automated`
+  results alone keep it at `Operating` *(recommendation for the
   status rules in `controls/README.md`; coordinator decision)*.
 - Small-team reality: where two distinct humans are not available, record the
   gap and use an external fractional reviewer for the validator/approver role
@@ -207,9 +208,9 @@ effectiveness (RSK-040).
 
 | Phase | Validation layers |
 |---|---|
-| P0–P1 | VAL-001..004, 009, 010, 011, 013, 017, 018, 020, 024, 029, 030, 031 |
-| P2 | Add VAL-005, 006, 007, 008, 012, 014, 015, 016, 019, 021, 022, 023, 025, 032 |
-| Before first SOC 2 Type 2 period | VAL-026 (external technical review of evidence machinery), VAL-027 (pen test incl. agents), then VAL-028 |
+| P0–P1 | VAL-001..004, 009, 010, 011, 013, 014, 017, 018, 020, 024, 029, 030, 031 (VAL-014 moved from P2 in review pass 4: CTL-TEN-001 is a P1 control and daf-landscape gate G2 requires tenant-isolation tests before production) |
+| P2 | Add VAL-005, 006, 007, 008, 012, 015, 016, 019, 021, 022, 023, 025, 032 |
+| Before first SOC 2 Type 2 period | VAL-026 (external technical review of evidence machinery), VAL-027 (pen test incl. agents; its first run is earlier, before production launch, per roadmap P1 and CTL-VUL-002), then VAL-028 |
 
 ## 8. Open items
 

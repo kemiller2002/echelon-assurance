@@ -20,7 +20,7 @@ needs the owning repository's own governance process.
 | PC-13 | percepta | Align envelope with `architecture/evidence-envelope.schema.json` | One evidence contract | P2 |
 | PC-14 | unbound | Reuse Summa's ledger invariant, close and reconciliation patterns in the FIN kernel design | Avoid re-designing | P2 |
 | PC-15 | echelon-registry, project-administration | Expose system inventory for control applicability | Asset inventory (CC6.1) | P2 |
-| PC-16 | specula | Evaluate as independent read-only observer for completeness reconciliation | External-witness candidate | P3 |
+| PC-16 | specula | Evaluate as a read-only observer for completeness reconciliation, independent of the collector code path | Candidate separate observer; Echelon-run, so `automated`, not independent and not an external witness (AGENTS rule 4) | P3 |
 | PC-17 | praxis, clarity, EEF | Converge on one signed-approval record pattern | Three approval designs (ECH1 overlaps) | P2 |
 | PC-18 | all repos | Context-status vs code consistency check (stale CURRENT-STATE contradicting code in ≥4 repos) | Management-assertion hygiene (ECH2 §3.6) | P2 |
 | PC-19 | AI runtime (no owner yet) | Signed agent action receipts; AI egress gateway enforcing provider-by-data-class; control-weakening change classifier | Gaps identified by AIG batch; owner to decide whether these extend Praxis/Aegis or need a new component | P1 |
