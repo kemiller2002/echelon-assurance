@@ -1,13 +1,13 @@
 ---
 id: DF-ASR-2026-C005
-title: Staged assurance investment: minimum viable now, targeted automation gated on auditor reliance
+title: Staged assurance investment: minimum viable assurance now; evidence-collection automation gated on auditor reliance and scale
 status: proposed
 decided_by: pending owner
 date: 2026-11-25
 related_questions: [OQ-802, OQ-312, OQ-108]
 ---
 
-# DF-ASR-2026-C005: Staged assurance investment: minimum viable now, targeted automation gated on auditor reliance
+# DF-ASR-2026-C005: Staged assurance investment: minimum viable assurance now; evidence-collection automation gated on auditor reliance and scale
 
 ## Context
 The economics model v2 (`economics/v2/generated/model.md`) was corrected after
