@@ -32,6 +32,9 @@ Agents may never:
 
 Each prohibition is backed by a technical mechanism listed in `ai-governance/` (permission absent, rule enforced outside the agent, or detection with alert). Actions not listed may be delegated per agent in its definition; consequential actions require human approval.
 
+## 02a Authority tiers
+Agents operate within owner tiers A0–A4 (`requirements/ai-governance-independent-validation.md`): A0 read authorized data; A1 propose; A2 bounded low-risk execution; A3 material operations only through independently enforced human authorization and deterministic gates; A4 reserved human authority (policy weakening, material exceptions, risk acceptance, privileged access, management assertions). No agent independently authorizes movement of funds or material exceptions. If required independent approval is unavailable, the action is blocked or redesigned.
+
 ## 03 AI-generated code
 AI-generated changes follow POL-06 in full and carry provenance bound to the agent's authenticated platform identity and signed execution records (owner decision DF-ASR-2026-0D08). Routine low-risk changes proceed under a standing human authorization with a separate technical verifier and an enforced release gate; material policy, privilege, financial-exception and verifier changes require elevated human approval (DF-ASR-2026-0D04). An agent never approves its own work.
 

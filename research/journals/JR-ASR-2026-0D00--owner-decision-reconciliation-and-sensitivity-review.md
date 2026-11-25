@@ -111,3 +111,14 @@ Findings:
   public witness networks and qualified timestamps are deferred.
 - Annotated OQ-108/312/500–510/703/705/751/758/759/762/765/802–805/804 with
   the owner's proposed dispositions; auditor reliance and legal questions stay open.
+
+## Owner record: AI governance and independent validation (commit f2d9ea9)
+
+- Registered AIG-BC-001..018 as REQ-AIGBC-* and VAL-BC-001..014 as REQ-VALBC-*.
+- All but one mapped to existing controls; new CTL-AI-010 (AI involvement
+  disclosure and correction path) for AIG-BC-016.
+- Owner A0–A4 authority model reconciled with Unbound's A0–A5 tiers in the AI
+  governance model (A3 clarified; A5 = hard prohibitions) and added to POL-11.
+- RSK-001: residual prompt-injection risk recorded as explicitly not accepted.
+- Annotated OQ-107/113/510/600–616/701–706/763/765/800/803 with owner
+  dispositions; legal applicability, auditor reliance, staffing and quotes stay open.

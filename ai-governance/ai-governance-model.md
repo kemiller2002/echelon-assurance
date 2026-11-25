@@ -402,3 +402,24 @@ Verified by VAL-022. *(recommendation; REQ-AIRMF-004.)*
   are used.
 - **ISO 42001** conclusions are capped at `auditor-interpretation` because the
   text was not read.
+
+## Owner authority model and requirements AIG-BC-001..018 (2026-11-25)
+
+`requirements/ai-governance-independent-validation.md` sets the authority model for Echelon agents:
+
+| Tier | Meaning | Relation to Unbound tiers above |
+|---|---|---|
+| A0 | Read public or specifically authorized data | Same as Unbound A0 (observe) |
+| A1 | Propose drafts and decisions | Same as A1 (prepare) |
+| A2 | Execute bounded reversible, or otherwise explicitly authorized low-risk, operations | Same as A2; "otherwise explicitly authorized" aligns with owner decision 0D09 |
+| A3 | Material operations only through independently enforced standing or transaction-specific human authorization and deterministic gates | Clarifies Unbound A3; no agent independently authorizes movement of funds or material exceptions; the sponsor retains financial authority |
+| A4 | Reserved human authority: policy weakening, material exceptions, risk acceptance, privileged access, management assertions, other nondelegable decisions | Same as A4; Unbound's A5 (prohibited) corresponds to the hard prohibitions in §4 |
+
+If independent approval is required and unavailable, the action is blocked or
+redesigned; technical separation is never represented as human
+organizational independence. The 18 AIG-BC requirements map to existing
+controls (CTL-IAM-001, CTL-AI-001..008, CTL-IR-003, CTL-VEN-003,
+CTL-LOG-002, CTL-DAT-002, CTL-GOV-007/008/012, CTL-APP-005/010,
+CTL-FIN-002, CTL-ASR-006) plus one new control, CTL-AI-010 (AI involvement
+disclosure and correction path). Residual prompt-injection risk (RSK-001) is
+explicitly **not accepted** pending owner review.

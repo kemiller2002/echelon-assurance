@@ -217,3 +217,17 @@ effectiveness (RSK-040).
 OQ-601 (auditor reliance on agent evidence), OQ-604 (mutation testing as
 management monitoring), OQ-608 (staffing for separation), OQ-611 (formal
 methods investment), OQ-612 (external technical validation provider).
+
+## Owner requirements VAL-BC-001..014 (2026-11-25)
+
+`requirements/ai-governance-independent-validation.md` confirms this architecture's independence vocabulary and adds a risk
+tier rule: routine deterministic checks for routine controls; independent
+technical verification plus accountable review for material controls;
+external human review where required or justified (VAL-BC-009). A
+different model alone is not independence (VAL-BC-008). Status is never
+promoted automatically between internally tested, technically independently
+verified, organizationally independently assessed and externally attested
+(VAL-BC-010; CTL-ASR-009, CTL-ASR-011). Formal methods only for critical
+state machines where the benefit justifies the cost, and a model proof is not
+a proof of the executable code (VAL-BC-013; OQ-611: state machines and
+property tests first, any modeling pilot only after cost-benefit review).
