@@ -26,7 +26,7 @@ SECRET_PATTERNS = (
     re.compile(r"ghp_[A-Za-z0-9]{36}"),
     re.compile(r"github_pat_[A-Za-z0-9_]{60,}"),
     re.compile(r"xox[baprs]-[A-Za-z0-9-]{10,}"),
-    re.compile(r"sk-(ant-)?[A-Za-z0-9_-]{32,}"),
+    re.compile(r"(?<![A-Za-z0-9])sk-(ant-)?[A-Za-z0-9_-]{32,}"),
 )
 SCANNED_SUFFIXES = (".md", ".csv", ".json", ".py", ".fs", ".fsx", ".yml", ".yaml", ".txt")
 
