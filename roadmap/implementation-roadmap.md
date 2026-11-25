@@ -74,11 +74,14 @@ The bulk of the catalog. Order of work inside P1:
 4. **AI controls** (CTL-AI-001..008): agent registry, platform-enforced
    permissions, untrusted-content isolation, kill switch, evaluation suites.
    PC-19 decides where receipts and the AI egress gateway live.
-5. **Incident, vulnerability, logging**: CTL-IR-001..003, CTL-VUL-001..004,
+5. **Continuous security testing** (owner record CST-001..026; CTL-VUL-001..006):
+   interfaces and fixtures first, isolated authorized environments before any
+   active testing, readiness package before external engagement.
+6. **Incident, vulnerability, logging**: CTL-IR-001..003, CTL-VUL-001..004,
    CTL-LOG-001..003. The **first independent pen test** (CTL-VUL-002) runs
    on the production-equivalent environment before launch, following
    `pentest/unbound-minimum-cost-testing-strategy.md`.
-6. **Vendors**: CTL-VEN-001, 003, 005: vendor register, AI provider approval,
+7. **Vendors**: CTL-VEN-001, 003, 005: vendor register, AI provider approval,
    cloud provider report review.
 
 Exit criterion: each P1 control is at least `Implemented` with a recorded

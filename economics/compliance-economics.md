@@ -146,3 +146,11 @@ Quotes from 2–3 CPA firms for a combined SOC 1 + SOC 2 Type 2 engagement on
 the Unbound scope; one grey-box pen-test quote; one platform quote for
 comparison. These are in `registers/open-questions.csv` and on the roadmap
 as P0/P3 actions.
+
+### Owner record: continuous security testing (2026-11-25)
+
+CST-025 requires recording testing cost, runtime, coverage, finding yield and
+escaped defects, so the pen-test line in `parameters.csv` can later be
+replaced by measured internal cost plus actual quotes. The record states no
+guaranteed savings; external testing remains an unavoidable cost line in
+every scenario.

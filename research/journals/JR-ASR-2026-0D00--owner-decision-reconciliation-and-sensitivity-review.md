@@ -122,3 +122,11 @@ Findings:
 - RSK-001: residual prompt-injection risk recorded as explicitly not accepted.
 - Annotated OQ-107/113/510/600–616/701–706/763/765/800/803 with owner
   dispositions; legal applicability, auditor reliance, staffing and quotes stay open.
+
+## Owner record: continuous security testing (commit e983dd6)
+
+- Registered CST-001..026 as REQ-CST-*; mapped to existing VUL, SDL, CFG, APP,
+  TEN, FIN, AI and ASR controls; new CTL-VUL-005 (authorized, isolated active
+  testing) and CTL-VUL-006 (risk-based orchestration with validated harnesses).
+- Pen-test strategy, roadmap and economics updated; OQ-300..313, 604, 612
+  annotated with owner dispositions (all still open where external answers are needed).
