@@ -70,7 +70,7 @@ Each record carries:
 - penetration test reports;
 - contract terms.
 
-Every public artifact passes the classification filter and the independence lint
+Because no control operates yet, only one question-bank answer is public; the public page carries program-level content (standards, methodology, status definitions) from documentation rather than from control answers. Every public artifact passes the classification filter and the independence lint
 (BR-CUS-002). Internal automation is never described as certification,
 attestation or audit.
 

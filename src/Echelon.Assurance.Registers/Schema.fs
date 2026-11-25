@@ -134,6 +134,7 @@ let baselineColumns =
         "disposition"
         "disposition_rationale"
         "roadmap_phase"
+        "launch_gate"
     ]
 
 let validationTriggers =
@@ -186,6 +187,14 @@ let baselineEnums =
         "incremental_cost", costClasses
         "disposition", sourceDispositions.Remove "remove"
         "roadmap_phase", set [ "P0"; "P1"; "P2"; "P3"; "P4"; "P5" ]
+        "launch_gate",
+        set
+            [
+                "before-production"
+                "before-observation-period"
+                "before-external-examination"
+                "on-demand"
+            ]
     ]
 
 /// Multi-valued columns whose every element must belong to a vocabulary.

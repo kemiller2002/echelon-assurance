@@ -17,7 +17,7 @@ inputs: [controls/control-catalog.csv, roadmap/generated/controls-by-phase.md, r
 > - **P4** external assurance readiness;
 > - **P5** organizational scale.
 >
-> The control-phase assignments below remain in the catalog (`roadmap_phase`). The narrative below is preserved as history.
+> Control phases in the catalog (`roadmap_phase`) are now derived: a control's phase is the earliest phase of the baseline requirements that use it (when work on it starts). Each baseline requirement also has a `launch_gate` (before-production, before-observation-period, before-external-examination, on-demand) that the validator checks against its phase. The narrative below is preserved as history: its counts and its phase names (for example "P1: required before production") use the earlier meanings.
 
 
 # Implementation roadmap

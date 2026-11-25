@@ -1,8 +1,8 @@
 ---
 id: DF-ASR-2026-7B20
 title: Small-team approval and independence rule
-status: proposed
-decided_by: pending owner
+status: superseded
+decided_by: pending owner (superseded by DF-ASR-2026-0D04; one-human exception rule now in BR-GOV-004, awaiting ODP-02)
 date: 2026-11-25
 resolves: [OQ-800 (pending owner), OQ-803 (partly)]
 ---

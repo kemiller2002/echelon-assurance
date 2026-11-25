@@ -59,7 +59,7 @@ ACT-057,A6-hybrid,Infrastructure,infrastructure-consumption,per-product,annual,1
 ACT-058,A6-hybrid,AI consumption,ai-consumption,per-product,annual,1,0,0,1500,6000,0.8,always,hypothetical,,
 ACT-059,A6-hybrid,Remediation of findings,remediation,per-product,annual,1,0,0,4000,20000,0.5,always,hypothetical,,
 ACT-060,A6-hybrid,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,
-ACT-061,A6-hybrid,Manual evidence for financial and AI controls when auditor does not rely on system evidence,human-admin,per-product,annual,2,160,400,0,0,0.6,nonreliance,hypothetical,,Financial and AI controls remain system-generated; generic evidence on the platform carries the A2 non-reliance line separately (review R2-022)
+ACT-061,A6-hybrid,Manual evidence for financial and AI controls when auditor does not rely on system evidence,human-admin,per-product,annual,2,200,500,0,0,0.6,nonreliance,hypothetical,,"Financial and AI controls are identical to A5, so the same non-reliance effort applies (round 2 correction)"
 ACT-062,A7-full-internal-platform,Build feature-parity internal compliance platform,shared-build,shared,one-time,1,1600,4000,0,0,0,always,hypothetical,,Original 'full parity' $80k-280k at ~$100-175/h converted and widened
 ACT-063,A7-full-internal-platform,Maintain platform,shared-maintenance,shared,annual,1,500,1200,0,0,0,always,hypothetical,,
 ACT-064,A7-full-internal-platform,Product integration,product-build,per-product,one-time,1,60,160,0,0,0.3,always,hypothetical,,
@@ -84,3 +84,21 @@ ACT-082,A5-targeted-automation,Fractional independent reviewer: per-product key-
 ACT-083,A6-hybrid,Fractional independent reviewer: per-product key-control review,organizational-independent-review,per-product,annual,2,0,0,3000,10000,1.0,always,hypothetical,,Review volume grows with products (review R2-024); first product included
 ACT-084,A7-full-internal-platform,Fractional independent reviewer: per-product key-control review,organizational-independent-review,per-product,annual,2,0,0,3000,10000,1.0,always,hypothetical,,Review volume grows with products (review R2-024); first product included
 ACT-085,A3-outsourced-management,Fractional independent reviewer: per-product key-control review (residual),organizational-independent-review,per-product,annual,2,0,0,1000,5000,1.0,always,hypothetical,,Retainer covers part
+ACT-086,A4-mvp-echelon,Manual evidence when auditor does not rely on gate and envelope evidence,human-admin,per-product,annual,2,40,120,0,0,0.6,nonreliance,hypothetical,,Symmetry (round 2): A4 also produces some system evidence
+ACT-087,A8-mvp-plus-prevention,"Build registers, validator, release gates and evidence export on existing systems",shared-build,shared,one-time,1,200,500,0,0,0,always,hypothetical,,Largely exists (assurance CLI); enable Praxis/Dokimos gates (copied from A4)
+ACT-088,A8-mvp-plus-prevention,Maintain registers and validators,shared-maintenance,shared,annual,1,60,160,0,0,0,always,hypothetical,,(copied from A4)
+ACT-089,A8-mvp-plus-prevention,"Product integration (gates, envelope export)",product-build,per-product,one-time,1,40,120,0,0,0.5,always,hypothetical,,(copied from A4)
+ACT-090,A8-mvp-plus-prevention,Manual evidence preparation and administration,human-admin,per-product,annual,1,150,400,0,0,0.6,always,hypothetical,,Most evidence still manual (copied from A4)
+ACT-091,A8-mvp-plus-prevention,Audit fieldwork support,human-admin,per-product,annual,2,60,160,0,0,0.5,always,hypothetical,,(copied from A4)
+ACT-092,A8-mvp-plus-prevention,"Security questionnaires (generated from catalog, reviewed)",customer-diligence,per-product,annual,1,30,90,0,0,0.5,always,hypothetical,,(copied from A4)
+ACT-093,A8-mvp-plus-prevention,"Infrastructure (managed storage, CI)",infrastructure-consumption,shared,annual,1,0,0,500,2000,0,always,hypothetical,,"No custom ledger, TSA or witness (copied from A4)"
+ACT-094,A8-mvp-plus-prevention,"AI consumption (drafting, triage)",ai-consumption,shared,annual,1,0,0,1000,4000,0,always,hypothetical,,(copied from A4)
+ACT-095,A8-mvp-plus-prevention,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,(copied from A4)
+ACT-096,A8-mvp-plus-prevention,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,Decision 0D04 (copied from A4)
+ACT-097,A8-mvp-plus-prevention,Fractional independent reviewer: per-product key-control review,organizational-independent-review,per-product,annual,2,0,0,3000,10000,1.0,always,hypothetical,,Review volume grows with products (review R2-024); first product included (copied from A4)
+ACT-098,A8-mvp-plus-prevention,Manual evidence when auditor does not rely on gate and envelope evidence,human-admin,per-product,annual,2,40,120,0,0,0.6,nonreliance,hypothetical,,Symmetry (round 2): A4 also produces some system evidence (copied from A4)
+ACT-099,A8-mvp-plus-prevention,"Build prevention and testing automation (analyzers, invariant suites, CST orchestration)",shared-build,shared,one-time,1,300,700,0,0,0,always,hypothetical,,Subset of A5 build excluding evidence collection
+ACT-100,A8-mvp-plus-prevention,Maintain prevention and testing automation,shared-maintenance,shared,annual,1,80,220,0,0,0,always,hypothetical,,
+ACT-101,A8-mvp-plus-prevention,Product test-suite integration,product-build,per-product,one-time,1,40,120,0,0,0.4,always,hypothetical,,
+ACT-102,A8-mvp-plus-prevention,Product test-suite maintenance,product-maintenance,per-product,annual,1,15,40,0,0,0.5,always,hypothetical,,
+ACT-103,A8-mvp-plus-prevention,Test infrastructure and AI consumption,infrastructure-consumption,per-product,annual,1,0,0,1500,6000,0.6,always,hypothetical,,

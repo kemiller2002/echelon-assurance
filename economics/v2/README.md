@@ -37,52 +37,58 @@ carries its class in `activities.csv`.
 
 ## Results (generated `generated/model.md` is authoritative)
 
-**Revision note.** The first v2 run charged maintenance and auditor non-reliance only to Echelon-built alternatives. The challenge passes (`findings/validation-report.md`, R1-012, R2-022, R2-024) found that biased. The model now does the following:
+**Revision note.** Two challenge rounds corrected biases in earlier runs:
 
-- Platform integration upkeep is charged to A2 and A6.
-- Non-reliance lines are charged to A2 and A3, because their evidence is also system-generated.
-- A6's non-reliance hours cover the financial and AI controls it shares with A5.
+- Maintenance and auditor non-reliance are now charged to every alternative that produces system-generated evidence, including A2, A3, A4 and A6.
 - The fractional reviewer grows per product.
-
-The conclusions below come from the corrected run.
+- A8 was added. It models the package that DF-ASR-2026-C005 recommends: minimum viable assurance plus prevention and testing automation, without evidence-collection automation.
 
 **Base case (S0), five-year midpoints:**
 
-- **At N = 1–2 the alternatives are indistinguishable.** The ranges span about 3×, while the midpoints differ by under 10% (A3 1.13M, A4 1.17M, A2 1.21M, A5 1.27M at N=1). Break-even counts at N ≤ 2 carry no signal.
-- **From N = 5, targeted automation (A5) has the lowest midpoint.** It reaches 2.67M at N=5 against 2.90M for A3 and 3.16M for A2. It breaks even with A3 at 3 products.
-- **The full internal platform (A7) breaks even late.** It matches A2 at 6 products and A3 at 9.
-- **Marginal five-year cost per extra product (midpoint):**
+- **At N=1 the alternatives other than A7 are close.** Midpoints run USD 1.13–1.41M; A7 is USD 2.02M. The ranges span about 3× and the midpoints differ by up to about 25%, so no ranking at N ≤ 2 is reliable.
+- **From N=5, targeted automation (A5) has the lowest midpoint.** It is USD 2.67M against USD 2.90M (A3) and USD 3.16M (A2), and it breaks even with A3 at 3 products. This depends on auditor reliance.
+- **A7 (full internal platform)** breaks even with A2 at 6 products and with A3 at 9.
+- **A8 costs about USD 245k more than A4 over five years at N=1, and about USD 350k more at N=5** (roughly USD 50–70k a year). The model counts the cost of prevention and testing automation but deliberately not its benefit (ECON-011).
 
-  | A7 | A5 | A6 | A4 | A3 | A2 | A1 |
-  |---|---|---|---|---|---|---|
-  | ~325k | ~350k | ~375k | ~450k | ~440k | ~490k | ~720k |
+**Auditor non-reliance (S4) and the downside (S5):**
 
-**Auditor non-reliance (S4) and the downside case (S5):**
+- **Outsourced management (A3) is cheapest at every product count**, with the fewest owner hours.
+- **A4 is within about 2–7% of A3.**
+- **A5, A6 and A8 never overtake A3.**
 
-- **The minimum viable option (A4) has the lowest or near-lowest midpoint at every product count.** It relies on little system-generated evidence.
-- **Outsourced management (A3) is within about 3–4% of A4.**
-- **Targeted automation and the hybrid never break even against A3** within 30 products. Against A2 they break even at 5 (A5) and 4 (A6) products, or 7 and 6 in S5.
-
-**Slow adoption (S6)** delays A5's advantage but does not remove it (A5 is lowest from N=5).
+**Slow adoption (S6)** delays but does not remove A5's advantage under reliance.
 
 ## Owner capacity
 
-The model prices hours but a single owner has about 1,800 working hours a year,
-shared with product and company work. Recurring assurance labor implied by the
-inputs (steady state, hypothetical):
+Steady-state recurring assurance labor implied by the inputs (hypothetical). It
+excludes baseline product engineering (200–500 h a year per product) and A5/A8
+build hours:
 
-| Alternative | N=1 | N=3 | N=3, auditor non-reliance |
-|---|---|---|---|
-| A3 outsourced | 85–300 h | 190–680 h | 280–940 h |
-| A4 minimum viable | 300–810 h | 570–1,540 h | 570–1,540 h |
-| A5 targeted | 275–760 h (+120–290 h/yr build, amortized) | 380–1,060 h | 820–2,160 h |
-| A6 hybrid | 265–760 h | 370–1,060 h | 720–1,940 h |
+| Alternative | N=1 | N=3 |
+|---|---|---|
+| A3 outsourced | 85–300 h | 190–680 h |
+| A4 minimum viable | 300–810 h | 570–1,540 h |
+| A8 recommended package | 395–1,070 h | 680–1,840 h |
+| A5 targeted (reliance) | 275–760 h | 380–1,060 h |
+| A5 targeted (non-reliance) | 475–1,260 h | 820–2,160 h |
 
-At three products, every alternative except A3 can consume most of one
-person's year. Capacity, not cash, is likely the binding constraint. The model
-proposes an owner-set threshold (for example, recurring assurance labor above
-25% of owner capacity, about 450 h a year) that triggers contracting
-(A3-style support or a fractional reviewer) or a hire (BR-GOV-011, ODP-09).
+One owner has about 1,800 working hours a year. Capacity, not cash, is likely
+the binding constraint. The proposed threshold of 25% of capacity (about 450
+hours a year, BR-GOV-011) is exceeded by every alternative except A3 at three
+products. Contracting support is therefore probable whichever internal option
+is chosen. Its cost lies between the A3 and A4 lines.
+
+## What the numbers do and do not support (DF-ASR-2026-C005, proposed)
+
+1. **No internal option is cheaper on cash alone at one or two products.** The choice rests on security value, independence and owner capacity, not on cost savings.
+2. **Evidence-collection automation pays only with auditor reliance and three or more products.** Gate it on a written auditor position (WI-EXT-01) and a credible product pipeline.
+3. **Prevention and testing automation (A8 increment, about USD 50–70k a year) is justified by risk reduction the model does not monetize,** under tenets TNT-01, TNT-02 and TNT-16. Much of it, such as financial invariant suites and security-by-construction rules, is arguably responsible baseline engineering for a financial product. Classifying it as baseline or as a discretionary assurance investment is an owner decision (ODP-09).
+4. **If owner capacity binds, A3-style outsourced support is the cheapest relief,** and it adds some independent challenge.
+5. **Never without demonstrated demand:**
+   - A7 feature-parity platform;
+   - custom anchoring;
+   - OSCAL;
+   - AI certifications.
 
 ## Limitations
 

@@ -28,7 +28,7 @@ Baseline requirements: 113. Original owner requirements dispositioned: 208. Cont
 | BR-IAM-003 | Workforce identity lifecycle with phishing-resistant MFA | TNT-01, TNT-12 | POL-04.03, POL-04.04, POL-03.01, POL-02, POL-02.02, POL-02.03, POL-03.03, POL-04.06 | CTL-IAM-004, CTL-HR-001, CTL-HR-003, CTL-IAM-007 | VAL-013, VAL-009 | EVT-009, EVT-032 | Designed | consolidate |
 | BR-SDL-001 | Verified completion and protected release gate | TNT-03, TNT-11, TNT-12, TNT-09 | POL-06.02, POL-06.05, POL-06.03 | CTL-SDL-001, CTL-SDL-002, CTL-SDL-006, CTL-SDL-007 | VAL-004, VAL-009 | EVT-003, EVT-006 | Designed | consolidate |
 | BR-SDL-002 | Signed release provenance | TNT-03, TNT-11, TNT-12 | POL-06.04 | CTL-SDL-004 | VAL-009 | EVT-014, EVT-005 | Designed | retain |
-| BR-SDL-003 | AI-generated change provenance | TNT-03, TNT-11, TNT-12 | POL-11.03, POL-06.02 | CTL-SDL-009 | VAL-023 | EVT-001, EVT-007 | Designed | retain |
+| BR-SDL-003 | AI-generated change provenance and elevated changes | TNT-03, TNT-11, TNT-12 | POL-11.03, POL-06.02 | CTL-SDL-009 | VAL-023, VAL-004 | EVT-001, EVT-007 | Designed | retain |
 | BR-FIN-001 | Balanced, atomic double-entry posting | TNT-02, TNT-11 | POL-12.02, POL-12.05 | CTL-FIN-001 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | retain |
 | BR-FIN-002 | Immutable posted entries,  corrections by linked reversal | TNT-02, TNT-11 | POL-12.02, POL-12.05 | CTL-FIN-001, CTL-FIN-011 | VAL-003, VAL-010 | EVT-004, EVT-031 | Designed | consolidate |
 | BR-FIN-003 | Explicit monetary precision and rounding | TNT-02, TNT-11 | POL-12.02 | CTL-FIN-015 | VAL-003, VAL-010 | EVT-004, EVT-017 | Designed | retain |
@@ -64,12 +64,12 @@ Baseline requirements: 113. Original owner requirements dispositioned: 208. Cont
 | BR-GOV-015 | Assurance economics model and cost telemetry | TNT-04, TNT-12, TNT-14 | POL-01.09 | CTL-GOV-010 | VAL-001, VAL-037 | EVT-033 | Designed | consolidate |
 | BR-ASR-001 | Evidence at the authoritative enforcement point with a minimal envelope | TNT-05, TNT-06, TNT-09 | POL-01.04 | CTL-ASR-001 | VAL-002 | EVT-022 | Designed | consolidate |
 | BR-ASR-002 | Assurance status vocabulary and unknown-is-not-pass | TNT-05, TNT-06 | POL-01.04, POL-01.03, POL-13.04 | CTL-ASR-011, CTL-GOV-012 | VAL-001, VAL-024 | EVT-003 | Designed | consolidate |
-| BR-ASR-003 | Independent population completeness reconciliation | TNT-05, TNT-06 | POL-01.04 | CTL-ASR-003 | VAL-011 | EVT-022 | Designed | retain |
+| BR-ASR-003 | Separately sourced population completeness reconciliation | TNT-05, TNT-06 | POL-01.04 | CTL-ASR-003 | VAL-011 | EVT-022 | Designed | retain |
 | BR-ASR-004 | Freshness, expiry, revocation and revalidation | TNT-05, TNT-06 | POL-01.04 | CTL-ASR-011 | VAL-001 | EVT-003 | Designed | consolidate |
 | BR-ASR-005 | Separated evidence privileges,  no agent or application overwrite | TNT-05, TNT-06 | POL-04.02, POL-07.06, POL-11.02, POL-11.06 | CTL-ASR-006, CTL-AI-005 | VAL-004, VAL-018 | EVT-030, EVT-029 | Designed | consolidate |
 | BR-ASR-006 | Managed immutable evidence storage,  no custom ledger | TNT-05, TNT-06, TNT-13 | POL-07.06, POL-01.04, POL-04.02 | CTL-ASR-002, CTL-ASR-006 | VAL-018, VAL-012 | EVT-029 | Designed | replace |
 | BR-ASR-007 | Evidence payload minimization and classification | TNT-05, TNT-06 | POL-05.01, POL-07.06 | CTL-DAT-001, CTL-LOG-002 | VAL-009 | EVT-003 | Designed | retain |
-| BR-ASR-008 | Independent heartbeat for collectors and security jobs | TNT-05, TNT-06 | POL-07.06 | CTL-ASR-004 | VAL-030 | EVT-023 | Designed | consolidate |
+| BR-ASR-008 | Externally hosted heartbeat for collectors and security jobs | TNT-05, TNT-06 | POL-07.06 | CTL-ASR-004 | VAL-030 | EVT-023 | Designed | consolidate |
 | BR-ASR-009 | Reproducible examination packages | TNT-05, TNT-06 | POL-13.05, POL-01.03 | CTL-CUS-003 | VAL-019 | EVT-022 | Designed | retain |
 | BR-ASR-010 | Validate the assurance machinery | TNT-05, TNT-06 | POL-01.04 | CTL-ASR-005 | VAL-007, VAL-031, VAL-008 | EVT-004 | Designed | consolidate |
 | BR-ASR-011 | Primary, derived and AI-interpreted evidence kept distinct | TNT-05, TNT-06 | POL-11.06 | CTL-AI-007 | VAL-020 | EVT-007 | Designed | consolidate |

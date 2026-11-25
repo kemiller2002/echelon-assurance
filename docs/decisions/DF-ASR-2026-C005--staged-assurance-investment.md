@@ -10,24 +10,21 @@ related_questions: [OQ-802, OQ-312, OQ-108]
 # DF-ASR-2026-C005: Staged assurance investment: minimum viable assurance now; evidence-collection automation gated on auditor reliance and scale
 
 ## Context
-The economics model v2 (`economics/v2/generated/model.md`) was corrected after
-the challenge passes so that platform alternatives also bear maintenance and
-auditor non-reliance.
+The economics model v2 (`economics/v2/generated/model.md`) was corrected over
+two challenge rounds and now includes the recommended package as alternative A8.
 
-- **At one or two products the alternatives are indistinguishable** within wide ranges.
-- **Targeted automation (A5) has the lowest midpoint from about three to five products,** but only when the auditor relies on system-generated evidence.
-- **Under non-reliance:**
-  - Minimum viable assurance (A4) is cheapest or near-cheapest at every scale.
-  - Outsourced management (A3) is within a few percent of A4.
-  - A5 and the hybrid (A6) never overtake A3.
-- **A feature-parity internal platform (A7) needs 6–9 products** to break even in the base case.
-- **Owner capacity is likely binding.** Recurring assurance labor of 300–1,500 h a year at one to three products, for most alternatives, is a large share of one person.
+- **One or two products:** the alternatives are close within wide ranges. No internal option is cheaper on cash.
+- **Reliance and three or more products:** targeted automation (A5) is cheapest only when the auditor relies on system evidence and there are three to five or more products.
+- **Non-reliance:** outsourced management (A3) is cheapest at every scale and uses the fewest owner hours. Minimum viable assurance (A4) is within a few percent of A3.
+- **Prevention and testing automation** adds about USD 50–70k a year (A8 − A4). Its benefit is not monetized.
+- **Owner capacity is likely binding** for every internal option.
 
 ## Decision (proposed)
-1. **Immediately:** minimum viable Echelon assurance (A4). That means registers, validator, enforced release gates, evidence envelope and generated customer answers. Add the prevention and testing automation that has value regardless of auditor reliance: security-by-construction rules, financial invariant suites and continuous security testing.
-2. **Evidence-collection automation is gated.** It proceeds only after a written auditor position on reliance on system evidence (WI-EXT-01, a no-cost inquiry in P2) and a credible path to three or more products. If either is missing, stay on A4.
-3. **Capacity trigger.** If recurring assurance labor exceeds an owner-set threshold (proposed: 25% of owner capacity), contract outsourced support or a fractional reviewer, or hire. The choice is made on cost and independence value.
-4. **Never without demonstrated demand:** a feature-parity internal platform (A7), custom anchoring, OSCAL or AI certifications.
+1. **Now:** minimum viable Echelon assurance (A4): registers, validator, enforced release gates, evidence envelope, generated customer answers.
+2. **Prevention and testing automation** (security-by-construction rules, financial invariant suites, continuous security testing) is recommended for risk reduction, not cost savings. The owner classifies it as baseline product engineering or as a discretionary assurance investment of about USD 50–70k a year (ODP-09).
+3. **Evidence-collection automation** proceeds only after a written auditor position on reliance (WI-EXT-01, a no-cost inquiry in P2) and a credible path to three or more products.
+4. **Capacity trigger:** when recurring assurance labor exceeds an owner-set threshold (proposed 25% of owner capacity), contract A3-style support or a fractional reviewer, or hire.
+5. **Never without demonstrated demand:** a feature-parity internal platform (A7), custom anchoring, OSCAL or AI certifications.
 
 ## Consequences
 All figures are hypothetical or vendor claims; no quotes exist. No purchase or engagement is authorized by this record.

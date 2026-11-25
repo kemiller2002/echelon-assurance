@@ -225,3 +225,25 @@ let ``public answers cannot cite designed controls or deferred mechanisms`` () =
     |> ignore
 
     Assert.Empty(answerDisclosure [ ctl ] [ a "customer-nda" "Designed, not yet operating." ])
+
+[<Fact>]
+let ``before-production requirement scheduled after operational readiness is reported`` () =
+    let b gate phase =
+        rec' [ "br_id", "BR-APP-001"; "launch_gate", gate; "roadmap_phase", phase ]
+
+    Assert.Empty(launchGates [ b "before-production" "P3" ])
+    Assert.Single(launchGates [ b "before-production" "P4" ]) |> ignore
+    Assert.Empty(launchGates [ b "before-external-examination" "P4" ])
+    Assert.Empty(launchGates [ b "on-demand" "P5" ])
+
+[<Fact>]
+let ``tested control needs an independent validation procedure`` () =
+    let v id level =
+        rec' [ "validation_id", id; "independence_level", level ]
+
+    let c vals =
+        rec' [ "control_id", "CTL-APP-001"; "status", "Tested"; "validation_ids", vals ]
+
+    let vs = [ v "VAL-001" "automated"; v "VAL-025" "internal-independent" ]
+    Assert.Single(testedNeedsIndependence [ c "VAL-001" ] vs) |> ignore
+    Assert.Empty(testedNeedsIndependence [ c "VAL-001;VAL-025" ] vs)

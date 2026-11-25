@@ -348,6 +348,59 @@ let roadmapCoverage (baseline: Record list) (backlog: Record list) =
             )
         | Some _ -> None)
 
+/// Latest phase in which a requirement with a given launch gate may complete:
+/// production launch follows operational readiness (P3); external examination
+/// follows external assurance readiness (P4).
+let latestPhaseFor gate =
+    match gate with
+    | "before-production"
+    | "before-observation-period" -> Some "P3"
+    | "before-external-examination" -> Some "P4"
+    | _ -> None
+
+let launchGates (baseline: Record list) =
+    baseline
+    |> List.choose (fun b ->
+        match latestPhaseFor (field b "launch_gate") with
+        | Some latest when System.String.CompareOrdinal(field b "roadmap_phase", latest) > 0 ->
+            Some(
+                sprintf
+                    "requirements/baseline.csv: %s is %s but scheduled in %s"
+                    (field b "br_id")
+                    (field b "launch_gate")
+                    (field b "roadmap_phase")
+            )
+        | _ -> None)
+
+/// A control may be Tested only when a validation procedure at
+/// internal-independent level or higher supports it (controls/README.md).
+let testedNeedsIndependence (controls: Record list) (validations: Record list) =
+    let independent =
+        set
+            [
+                "internal-independent"
+                "external-technical"
+                "external-penetration"
+                "external-attestation"
+            ]
+
+    let level =
+        validations
+        |> List.map (fun v -> field v "validation_id", field v "independence_level")
+        |> Map.ofList
+
+    controls
+    |> List.filter (fun c -> rank (field c "status") >= rank "Tested")
+    |> List.filter (fun c ->
+        items c "validation_ids"
+        |> List.exists (fun v -> independent.Contains(Map.tryFind v level |> Option.defaultValue ""))
+        |> not)
+    |> List.map (fun c ->
+        sprintf
+            "controls/control-catalog.csv: %s is %s without an independent validation procedure"
+            (field c "control_id")
+            (field c "status"))
+
 /// Capability status may not exceed the verification actually performed.
 let capabilityInflation (capabilities: Record list) =
     capabilities
@@ -394,10 +447,17 @@ let answerDisclosure (controls: Record list) (answers: Record list) =
 
         let text = (field a "proposed_answer").ToLowerInvariant()
 
-        let deferred =
+        let deferredEvidence =
+            items a "supporting_evidence_type_ids"
+            |> List.filter (fun e -> e = "EVT-024" || e = "EVT-025")
+            |> List.map (sprintf "customer-assurance/question-bank.csv: %s cites deferred evidence type %s" id)
+
+        let deferredText =
             deferredMechanismTerms
             |> List.filter text.Contains
             |> List.map (sprintf "customer-assurance/question-bank.csv: %s describes deferred mechanism '%s'" id)
+
+        let deferred = deferredEvidence @ deferredText
 
         publicErr @ deferred)
 
@@ -419,6 +479,8 @@ let errors (loaded: Loaded) =
     @ roadmapCoverage baseline (r "backlog")
     @ capabilityInflation (r "capabilities")
     @ answerDisclosure controls (r "question_bank")
+    @ launchGates baseline
+    @ testedNeedsIndependence controls (r "validations")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 
