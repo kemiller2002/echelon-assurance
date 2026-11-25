@@ -4,7 +4,7 @@
   "repository": "echelon-assurance",
   "actor": "ros-bootstrap",
   "startedAt": "2026-11-25T23:32:41.754Z",
-  "updatedAt": "2026-11-25T23:32:55Z",
+  "updatedAt": "2026-11-25T23:47:51Z",
   "baselineDirtyPaths": [],
   "workItems": [
     {
@@ -24,10 +24,19 @@
     {
       "id": "WI-ASR-CONSOLIDATION",
       "type": "research",
-      "state": "active",
-      "semanticState": "active",
-      "evidence": [],
-      "updatedAt": "2026-11-25T23:32:55Z",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "research-record",
+          "path": "research/journals/JR-ASR-2026-C001--assurance-consolidation.md"
+        },
+        {
+          "type": "research-record",
+          "path": "findings/validation-report.md"
+        }
+      ],
+      "updatedAt": "2026-11-25T23:47:51Z",
       "telemetryExecutionIds": [
         "EXE-20261125T233256557Z-3f771e74"
       ],
@@ -50,7 +59,9 @@
           "status": "verified",
           "mechanism": "git-remote-observation"
         }
-      }
+      },
+      "completedAt": "2026-11-25T23:47:51Z",
+      "conclusion": "Assurance baseline consolidated and reconciled with owner directions DF-ASR-2026-0D0F and 0D10; repository and Praxis validation pass; six adversarial challenge rounds dispositioned"
     }
   ]
 }

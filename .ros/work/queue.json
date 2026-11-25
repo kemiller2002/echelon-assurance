@@ -9,10 +9,10 @@
       "description": "Consolidate PR #1 and PR #2 into the unified assurance baseline; reconcile owner directions DF-ASR-2026-0D0F and remaining approvals",
       "tags": [],
       "priority": "high",
-      "status": "ready",
+      "status": "complete",
       "attachments": [],
       "createdAt": "2026-11-25T23:32:52Z",
-      "updatedAt": "2026-11-25T23:32:55Z",
+      "updatedAt": "2026-11-25T23:47:51Z",
       "createdBy": "unknown",
       "createdByActor": {
         "kind": "agent",
