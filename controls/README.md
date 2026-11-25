@@ -46,3 +46,25 @@ possible. See `automation/control-automation-matrix.md` for the reasoning.
 evaluate), `fail-open-justified` (action proceeds, exception raised; rationale
 required in `failure_response`), `detective-only` (no blocking point exists),
 `n/a`.
+
+## Catalog summary (B7, 2026-11-25)
+
+Built by `tools/build_control_catalog.py` (seed builder; the CSV is
+authoritative afterwards). 104 controls across 19 domains. Every
+requirement not classified `not-applicable` maps to at least one control,
+except these, deliberately:
+
+| Requirement | Why no control |
+|---|---|
+| REQ-GLBA-019, REQ-PENTEST-012 | Safeguards Rule small-institution exemption (< 5,000 consumers): an exemption, not an obligation; tracked so its loss is noticed |
+| REQ-PENTEST-009 | NYDFS limited exemption; NYDFS currently not applicable |
+| REQ-TPRM-008 | Agencies' illustrative resource, not a requirement |
+
+Every policy and policy section is implemented by at least one control;
+top-level policies inherit their sections' controls.
+
+Distribution of targets: L4 49, L3 27, L2 11, L1 6, L0 6, L5 5. Only five
+controls target L5 (dormant accounts, offboarding, entitlement drift in
+non-production, configuration drift on reversible settings, retention):
+each is reversible and bounded. Judgment controls (risk acceptance,
+oversight, vendor reliance, external attestation) remain L0–L2 by design.
