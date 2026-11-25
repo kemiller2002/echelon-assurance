@@ -22,15 +22,20 @@ Updated: 2026-11-25
 
 | Batch | Scope | Status |
 |---|---|---|
-| B0 | Repository establishment | in progress |
-| B1 | Echelon system evaluation | pending |
-| B2 | SOC landscape | pending |
-| B3 | Regulatory and framework crosswalk | pending |
-| B4 | Penetration testing, compliance vendors | pending |
-| B5 | Policy as code, evidence technology | pending |
-| B6 | AI governance | pending |
-| B7 | Synthesis: control catalog, policies, architecture, economics, roadmap | pending |
-| B8 | Review passes 1–10 | pending |
+| B0 | Repository establishment | complete |
+| B1 | Echelon system evaluation | complete |
+| B2 | SOC landscape | complete |
+| B3 | Regulatory and framework crosswalk | complete |
+| B4 | Penetration testing, compliance vendors | complete |
+| B5 | Policy as code, evidence technology | complete |
+| B6 | AI governance | complete |
+| B7 | Synthesis: control catalog, policies, architecture, economics, roadmap | complete |
+| B8 | Review passes 1–10 | in progress (1, 7 complete) |
+
+Registers: 276 sources, 278 requirements, 104 controls, 83 policy entries,
+30 evidence types, 32 validation procedures, 58 risks, 1 decision (proposed),
+open questions in `registers/open-questions.csv`. See
+`research/journals/` for the batch log.
 
 ## Claims status
 
