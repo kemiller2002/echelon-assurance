@@ -64,6 +64,8 @@ Clarity review (problem, intended outcome, assumptions, challenges) and an
 Echelon Diagnostic Framework (EDF) pass where the EDF repository's method
 applies. The research program prepares inputs; it does not claim a Clarity or
 EDF review was performed unless one was executed and recorded.
+Application to this program's own conclusions (not an independent review):
+`findings/clarity-and-edf-assessment.md`.
 
 ## 6. Review passes
 
