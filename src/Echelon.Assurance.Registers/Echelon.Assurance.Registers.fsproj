@@ -7,5 +7,6 @@
     <Compile Include="Merge.fs" />
     <Compile Include="Roadmap.fs" />
     <Compile Include="Tco.fs" />
+    <Compile Include="Economics.fs" />
   </ItemGroup>
 </Project>

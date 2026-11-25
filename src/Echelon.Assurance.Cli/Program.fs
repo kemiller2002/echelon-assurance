@@ -3,6 +3,7 @@
 ///   assurance merge [--check] [root]
 ///   assurance roadmap [root]
 ///   assurance trace [root]
+///   assurance econ [root]
 module Echelon.Assurance.Cli.Program
 
 open System.IO
@@ -119,6 +120,32 @@ let private trace root =
     printfn "rendered requirements/generated/traceability-matrix.md"
     0
 
+let private econ root =
+    let load name f =
+        let header, rows =
+            Csv.table (File.ReadAllText(Path.Combine(root, "economics/v2", name)))
+
+        rows |> List.map (fun r -> List.zip header r |> Map.ofList |> f)
+
+    let activities = load "activities.csv" Economics.activity
+    let scenarios = load "scenarios.csv" Economics.scenario
+    let alternatives = load "alternatives.csv" (fun r -> r["alternative_id"])
+    let out = Path.Combine(root, "economics/v2/generated")
+    Directory.CreateDirectory out |> ignore
+    File.WriteAllText(Path.Combine(out, "model.md"), Economics.renderMarkdown activities scenarios alternatives)
+
+    File.WriteAllText(
+        Path.Combine(out, "results.csv"),
+        Csv.render (Economics.renderCsv activities scenarios alternatives)
+    )
+
+    printfn
+        "rendered economics/v2/generated (%d activities, %d scenarios)"
+        (List.length activities)
+        (List.length scenarios)
+
+    0
+
 let private tco root (rate: float) =
     let header, rows =
         Csv.table (File.ReadAllText(Path.Combine(root, "economics/parameters.csv")))
@@ -158,6 +185,7 @@ let main argv =
     | "merge" :: rest -> merge (rootOf rest) (options.ContainsKey "--check")
     | "roadmap" :: rest -> roadmap (rootOf rest)
     | "trace" :: rest -> trace (rootOf rest)
+    | "econ" :: rest -> econ (rootOf rest)
     | "tco" :: rest ->
         let rate =
             options
@@ -167,5 +195,5 @@ let main argv =
 
         tco (rootOf rest) rate
     | _ ->
-        eprintfn "usage: assurance (validate | merge [--check] | roadmap | trace | tco [--rate r]) [root]"
+        eprintfn "usage: assurance (validate | merge [--check] | roadmap | trace | econ | tco [--rate r]) [root]"
         2

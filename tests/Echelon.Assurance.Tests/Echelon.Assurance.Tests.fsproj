@@ -6,6 +6,8 @@
     <Compile Include="CsvTests.fs" />
     <Compile Include="ValidationTests.fs" />
     <Compile Include="MergeTests.fs" />
+    <Compile Include="EconomicsTests.fs" />
+    <Compile Include="TraceabilityTests.fs" />
     <Compile Include="RepositoryTests.fs" />
   </ItemGroup>
   <ItemGroup>

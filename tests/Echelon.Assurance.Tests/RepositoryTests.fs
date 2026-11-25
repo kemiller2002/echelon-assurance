@@ -38,7 +38,7 @@ let private records name =
 
 [<Fact>]
 let ``committed registers validate`` () =
-    let errors = Validation.validate loaded []
+    let errors = Validation.validate loaded [] @ Traceability.errors loaded
     Assert.True(List.isEmpty errors, String.concat "\n" errors)
 
 [<Fact>]
