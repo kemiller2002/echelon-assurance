@@ -113,7 +113,7 @@ Baseline requirements: 114. Original owner requirements dispositioned: 208. Cont
 | BR-AI-009 | AI management system applicability | TNT-07, TNT-11 | POL-11 | CTL-AI-009 | VAL-029 | EVT-021 | Designed | defer |
 | BR-VUL-013 | Coordinated vulnerability disclosure | TNT-03, TNT-16 | POL-07.05 | CTL-VUL-003 | VAL-038 | EVT-033 | Designed | retain |
 | BR-CUS-003 | Customer onboarding and termination with data return | TNT-10 | POL-13.01 | CTL-CUS-001 | VAL-014, VAL-002 | EVT-019 | Designed | retain |
-| BR-FIN-020 | Funds-flow perimeter and payment role table | TNT-02, TNT-11 | POL-12.06, POL-10.03 | CTL-FIN-014, CTL-VEN-004 | VAL-001, VAL-009 | EVT-019 | Designed | escalate |
+| BR-FIN-020 | Funds-flow perimeter and payment role table | TNT-02, TNT-11 | POL-12.06, POL-10.03 | CTL-FIN-014, CTL-VEN-004 | VAL-001, VAL-009 | EVT-019 | Designed | retain |
 | BR-FIN-021 | Book of record and reporting bridge | TNT-02, TNT-11 | POL-12.02 | CTL-FIN-012 | VAL-003, VAL-010 | EVT-017 | Designed | retain |
 | BR-FIN-022 | Sanctions screening fenced at irreversible dispatch | TNT-02, TNT-11 | POL-12.04, POL-12.01 | CTL-FIN-006, CTL-FIN-002 | VAL-004, VAL-010 | EVT-018 | Designed | retain |
 | BR-FIN-023 | Investment valuation and unitization | TNT-02, TNT-11 | POL-12.03 | CTL-FIN-009 | VAL-003, VAL-011 | EVT-017 | Designed | retain |

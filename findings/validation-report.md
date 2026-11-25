@@ -104,7 +104,7 @@ The owner then pushed `docs/decisions/owner-review-direction-2026-11-25.md`, reg
 - **Risks.** RSK-064 added.
 - **Customer answers.** CAQ-005 and CAQ-049 updated.
 
-Validation was rerun after reconciliation: 64 tests pass and all registers validate. No further challenge round was run on these edits: they implement an explicit owner decision and change no factual claim beyond it.
+Validation was rerun after reconciliation: 64 tests pass and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
 
 ## 3b. Owner remaining approvals and Praxis installation
 
@@ -123,7 +123,34 @@ The owner then pushed `docs/decisions/owner-remaining-approvals-2026-11-25.md`, 
 - `praxis registry check` reports current registries.
 - The consolidation runs as Praxis work item WI-ASR-CONSOLIDATION.
 - Provenance is recorded for the consolidation journal. Journals created before installation are acknowledged as origin-unrecorded, with git history as the record.
-- Verified completion (`requireVerifiedCompletion` with pinned verifier keys) is not enabled in this installation; enabling it is WI-PRAXIS-03. The work item is therefore completed with evidence, not with a verifier-signed receipt.
+- Verified completion (`requireVerifiedCompletion` with pinned verifier keys) is not enabled in this installation; enabling it is WI-PRAXIS-03. The work item is completed with recorded evidence, not a verifier-signed receipt (section 3c records its state).
+
+## 3c. Challenge round 5 (owner-direction reconciliation)
+
+The owner's release gate requires adversarial challenge passes. Round 5 reviewed the reconciliation of DF-ASR-2026-0D0F and 0D10 (`findings/challenge-passes/round5-owner-reconciliation.csv`). It found 19 findings, 8 of them material.
+
+**Material findings:**
+
+- the roadmap narrative, operating model and executive findings still planned a contracted reviewer, counsel memo or pre-launch pen test;
+- S8 called examinations and pen tests "launch-stage obligations";
+- the review-protocol deliverable did not exist;
+- the work-item state was overstated;
+- no challenge round covered the reconciliation;
+- the protected-reporting role was "defined" without any defined authority or procedure.
+
+**Fixes:**
+
+- all text aligned with the owner directions;
+- `methodology/review-protocol.md` created;
+- role authority and procedures added to `governance/operating-model.md`;
+- S8 provisions relabelled;
+- draft POL-07 aligned;
+- OQ-208 kept open as a customer dependency;
+- OQ-607 restored to its authority-matrix scope;
+- question next actions rewritten per question;
+- decision qualifiers added.
+
+Round 6 verifies these fixes (section 3d).
 
 ## 4. Completion criteria (mission section 23)
 

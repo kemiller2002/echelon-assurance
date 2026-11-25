@@ -65,7 +65,7 @@ accountable role.
 
 With one human, these conflicts are recorded, not hidden:
 
-1. **Approver equals requester** for owner-originated material exceptions. Rule (BR-GOV-004, owner direction DF-ASR-2026-0D0F): self-approval of material exceptions is not authorized. Such an exception is blocked, or the change is redesigned, until a qualified approver exists. Internal development review uses the multi-agent review protocol (BR-VAL-004). That protocol is technical review, not organizational independence. Under owner decision 0D04, routine agent-prepared work is approved through the owner's standing authorization with a separately credentialed technical verifier and an enforced gate; this is technical separation, not organizational independence. Organizational independence is unavailable until a second human or fractional reviewer exists (ODP-02).
+1. **Approver equals requester** for owner-originated material exceptions and policy changes. Policy changes the owner makes are recorded with the reason and pass the multi-agent review protocol and validators; they are not represented as independently approved. For material exceptions: Rule (BR-GOV-004, owner direction DF-ASR-2026-0D0F): self-approval of material exceptions is not authorized. Such an exception is blocked, or the change is redesigned, until a qualified approver exists. Internal development review uses the multi-agent review protocol (BR-VAL-004). That protocol is technical review, not organizational independence. Under owner decision 0D04, routine agent-prepared work is approved through the owner's standing authorization with a separately credentialed technical verifier and an enforced gate; this is technical separation, not organizational independence. Organizational independence is unavailable until a second human or fractional reviewer exists (ODP-02).
 2. **Administrator equals monitored party.** The owner can disable rulesets, retention locks, reconciliation, heartbeats and alerts. Separately credentialed drift detection and out-of-band alerts detect system failures and external compromise, **not owner action**: every alert reaches the owner. Owner-proof assurance needs records the owner does not control (sponsor- or bank-side records, a compliance-mode retention lock) and an external reviewer (ODP-02, ODP-03).
 3. **Whistleblowing and complaints about the owner** need an external recipient (ODP-04).
 4. **Fraud review of the owner's own financial actions:**
@@ -76,10 +76,20 @@ Economically viable mitigations, in order:
 
 1. Design so the sponsor is the second party for money.
 2. Use the technical verifier for routine work.
-3. Contract fractional review for key controls only (ODP-02), at USD 10–30k a year (hypothetical).
+3. Use the internal multi-agent review protocol for development review (BR-VAL-004, `methodology/review-protocol.md`); no fractional reviewer is contracted now (owner direction DF-ASR-2026-0D0F). Reassess when an observation period, production risk acceptance or an obligation requires organizational independence.
 4. Escalate to a second hire only when workload or obligations justify it (BR-GOV-011 metrics).
 
 No personnel, approvals or reviewers are invented here.
+
+## Defined roles (owner direction DF-ASR-2026-0D10, ODP-04)
+
+Individuals are named when operationally necessary. The proposed interpretation
+is no later than production launch; the owner has not set that deadline.
+
+| Role | Authority | Not authorized | Activation and procedure | Evidence |
+|---|---|---|---|---|
+| Emergency delegate | Suspend agent runs and credentials; freeze releases (pause the release gate); contact sponsors, partners and providers; use sealed recovery credentials to restore access | Approve policy changes, exceptions, risk acceptance or money movement; change controls or retention | Activated when the owner is unreachable for a defined period or on the owner's instruction; follows the human-readable runbook, which works without AI; every action logged out of band | Activation and action log (EVT-034) |
+| Protected-reporting recipient | Receive whistleblowing, conflict-of-interest and complaint reports concerning the owner; retain them outside owner-administered systems; decide whether to escalate externally | Act on Echelon systems; access production data | Reports go to a channel the owner does not administer; the recipient acknowledges receipt and records disposition; no retaliation | Report and disposition records (restricted) |
 
 ## Owner unavailability (BR-GOV-013)
 

@@ -335,7 +335,7 @@ Break-even (smallest product count at which the automated alternative's midpoint
 
 ### S8-owner-direction
 
-Owner direction DF-ASR-2026-0D0F planning case: auditor reliance not assumed; no fractional independent reviewer or external technical validation purchased during the horizon; examinations and penetration testing kept as launch-stage obligations (deferral is not waiver)
+Owner direction DF-ASR-2026-0D0F planning case: auditor reliance not assumed; no fractional independent reviewer or external technical validation purchased. Examinations and penetration testing stay in as conservative cost provisions (charged on the model's standard timing), pending reassessment against actual obligations; they are not committed or required by this scenario.
 
 Five-year incremental assurance cost, midpoint (low–high in the base case table):
 

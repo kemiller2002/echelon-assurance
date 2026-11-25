@@ -11,7 +11,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 
 **Bottom line.**
 
-- **One baseline.** The assurance program is now one traceable baseline instead of nine overlapping documents: 113 requirements. They consolidate 208 source items: all 189 original owner requirement IDs, 18 reconciliation challenge findings and one validation paragraph. No mandatory obligation is removed; scope narrowing is labelled *simplify* and stated.
+- **One baseline.** The assurance program is now one traceable baseline instead of nine overlapping documents: 113 requirements approved in principle by the owner, plus BR-VAL-004 (the review protocol, added from owner direction DF-ASR-2026-0D0F), for 114 in total. They consolidate 208 source items: all 189 original owner requirement IDs, 18 reconciliation challenge findings and one validation paragraph. No mandatory obligation is removed; scope narrowing is labelled *simplify* and stated.
 - **Validated by tooling.** F# tooling enforces the structure. It fails on:
   - orphaned requirements and controls not supported by a baseline requirement;
   - missing owners, validation or evidence;
@@ -29,13 +29,13 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 
 | Area | Before | After |
 |---|---|---|
-| Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 113 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
+| Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 114 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
 | Dispositions | None | `requirements/source-dispositions.csv` (208 items): 149 consolidate, 34 retain, 12 simplify, 8 strengthen, 2 replace, 2 defer, 1 remove (editorial) |
-| Hierarchy | Implicit | 16 tenets → 83 policy entries → 121 controls → 113 baseline requirements → enforcement, validation (39 procedures) and evidence (35 types); generated traceability matrix |
+| Hierarchy | Implicit | 17 tenets → 83 policy entries → 121 controls → 114 baseline requirements → enforcement, validation (39 procedures) and evidence (35 types); generated traceability matrix |
 | Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; none block requirements finalization; 15 block implementation, 38 production launch and 33 external examination |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems, tests executed for 5 |
 | Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
-| Roadmap | Narrative | `roadmap/backlog.csv`: 61 dependency-ordered work items across 15 repositories plus owner and managed-service actions; every live baseline requirement has a work item |
+| Roadmap | Narrative | `roadmap/backlog.csv`: 62 dependency-ordered work items across 15 repositories plus owner and managed-service actions; every live baseline requirement has a work item |
 
 ## 2. Most important findings
 
@@ -67,7 +67,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - Prevention and testing automation adds about USD 50–70k a year for risk reduction the model does not monetize.
    - Owner capacity, rather than cash, is likely the binding constraint.
    - Owner direction (DF-ASR-2026-0D0F) prioritizes reusable continuous assurance and operational evidence, without assuming auditor reliance. In that planning case (S8), minimum viable assurance is cheapest at every scale. Continuous-assurance automation costs more and saves no owner hours, so its case is risk reduction and operational evidence. Build first what has operational value and reuse, and defer audit-only evidence collection.
-7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Fractional review is proposed for 17 key controls only (ODP-02).
+7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Under owner direction DF-ASR-2026-0D0F no fractional reviewer is engaged now; internal multi-agent review with deterministic verification is used for development review, and the 17 key controls cannot reach `Tested` until an organizationally independent reviewer exists.
 8. **Questions.** No question was falsely closed:
    - 28 depend on the auditor, 21 on counsel and 15 on customers.
    - 19 are answered, 18 of them by owner decision; 2 proposals remain on commercial intent (OQ-114, OQ-766).
@@ -90,7 +90,7 @@ All twelve owner decision package items are decided, by two owner records of
 **DF-ASR-2026-0D10** (remaining approvals):
 
 - baseline approved in principle;
-- emergency and protected-reporting roles defined, with naming deferred;
+- emergency-delegate and protected-reporting roles defined (`governance/operating-model.md`), with naming deferred;
 - Vigila retained as the observability initiative on managed infrastructure;
 - a thin Strata runtime;
 - restricted research-agent design;

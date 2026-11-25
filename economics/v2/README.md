@@ -87,7 +87,7 @@ Scenario S8 implements this:
 
 - Non-reliance lines apply.
 - Fractional reviewer and external technical validation lines are excluded.
-- Examinations and penetration testing stay in as launch-stage obligations, because deferral is not waiver.
+- Examinations and penetration testing stay in as conservative cost provisions on the model's standard timing (pen test yearly from year 1, examinations from year 2). They are not commitments: the owner reassesses them against actual obligations. Removing them lowers every alternative equally and does not change the ranking.
 
 | Five-year midpoint | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|

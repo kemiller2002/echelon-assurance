@@ -7,7 +7,7 @@ created: 2026-11-25
 inputs: [controls/control-catalog.csv, roadmap/generated/controls-by-phase.md, registers/open-questions.csv, integration/proposed-changes.md, economics/compliance-economics.md]
 ---
 
-> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** The dependency-driven backlog is now `roadmap/backlog.csv` (61 work items across echelon-assurance and 14 other repositories, phases P0 to P5). Its generated view is `roadmap/generated/backlog-by-phase.md`. The validator rejects a dependency on a later phase and dependency cycles.
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`; updated for owner directions DF-ASR-2026-0D0F and 0D10).** Where the history below plans contracted reviewers, counsel memos or pre-launch external tests, the owner directions govern: none is engaged now, and each is reassessed when legally required, commercially necessary or when material uncertainty cannot otherwise be resolved. The dependency-driven backlog is now `roadmap/backlog.csv` (62 work items across echelon-assurance and 14 other repositories, phases P0 to P5). Its generated view is `roadmap/generated/backlog-by-phase.md`. The validator rejects a dependency on a later phase and dependency cycles.
 >
 > Phase meanings follow the mission:
 > - **P0** requirements reconciliation;
@@ -40,10 +40,12 @@ Actions (owner unless stated):
    - OQ-753 / OQ-756: who Unbound's contracting customers are; whether
      sponsor and operator are separate entities [owner decision].
    - OQ-607 / OQ-608: named roles for policy approval, exception approval and
-     independent review given current headcount [owner decision; consider a
-     contracted part-time independent reviewer].
-   - OQ-200..202: GLBA status of sponsors and of the Echelon entity [one
-     scoped counsel memo; fixed-fee].
+     independent review given current headcount [owner decision; under owner
+     direction DF-ASR-2026-0D0F no contracted reviewer now: multi-agent review
+     and deterministic verification (BR-VAL-004)].
+   - OQ-200..202: GLBA status of sponsors and of the Echelon entity [internal
+     primary-source research and precise questions; no counsel engagement now
+     (DF-ASR-2026-0D0F)].
    - OQ-754 / OQ-101: whether a first sponsor's auditor expects SOC 1 [a 30-minute
      call with the sponsor's audit firm; no fee expected (`assumption`)].
    - OQ-204 / OQ-215: what bank partners and prospective sponsors will
@@ -88,9 +90,10 @@ The bulk of the catalog. Order of work inside P1:
    permissions, untrusted-content isolation, kill switch, evaluation suites.
    PC-19 decides where receipts and the AI egress gateway live.
 5. **Incident, vulnerability, logging**: CTL-IR-001..003, CTL-VUL-001..004,
-   CTL-LOG-001..003. The **first independent pen test** (CTL-VUL-002) runs
-   on the production-equivalent environment before launch, following
-   `pentest/unbound-minimum-cost-testing-strategy.md`.
+   CTL-LOG-001..003. External penetration testing (CTL-VUL-002) is
+   deferred (DF-ASR-2026-0D0F); comprehensive continuous internal testing applies,
+   and independent testing is reassessed against risk and actual obligations
+   before material production launch (WI-EXT-04).
 6. **Vendors**: CTL-VEN-001, 003, 005: vendor register, AI provider approval,
    cloud provider report review.
 
@@ -102,7 +105,7 @@ negative test, and production-separated evidence exists (CTL-ASR-009).
 CTL-VEN-004 (bank obligations mapped), CTL-FIN-009, 012..014 (valuation,
 reproducible reports, fraud triage, bank integration controls),
 CTL-BCR-002/003 (exercised DR, availability monitoring), CTL-DAT-002/003
-(retention set with counsel — **before** any WORM lock), CTL-CUS-001/002,
+(retention schedule from internal primary-source research; a conservative minimum compliance-mode lock applies from the first production evidence, BR-ASR-006), CTL-CUS-001/002,
 CTL-IAM-009, CTL-AI-009. Prepare the bank due-diligence pack from the
 trust-center tier "Bank partner" (`trust-center/`). Re-run the TPRM
 questionnaire answers through CTL-GOV-012 claim linting.
@@ -124,10 +127,10 @@ questionnaire answers through CTL-GOV-012 claim linting.
    observation-period start date is agreed with the auditor. "In-scope"
    means the controls in the agreed report scope, not the whole catalog.
    Review pass 6 found 65 controls had no `internal-independent` validation;
-   each now carries VAL-025 (internal independent review by the contracted
-   reviewer, CTL-ASR-007, DF-ASR-2026-7B20), budgeted in economics scenarios
-   4/5/5b. Whether one contracted reviewer can cover the in-scope set
-   remains OQ-803.
+   each carries VAL-025 (internal independent review). Under owner direction
+   DF-ASR-2026-0D0F no reviewer is contracted now, so these controls cannot reach
+   `Tested` until a reviewer exists (OQ-803, answered); multi-agent review
+   (BR-VAL-004) is used for internal development review.
 4. **Decision point**: if the auditor will not rely on Echelon-generated
    evidence, buy a platform for the SaaS/cloud evidence layer
    (economics §3).

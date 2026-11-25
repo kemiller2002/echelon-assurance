@@ -2,7 +2,7 @@
 id: DF-ASR-2026-7B20
 title: Small-team approval and independence rule
 status: superseded
-decided_by: pending owner (superseded by DF-ASR-2026-0D04; one-human exception rule now in BR-GOV-004, awaiting ODP-02)
+decided_by: pending owner (superseded by DF-ASR-2026-0D04; one-human exception rule now in BR-GOV-004 per owner direction DF-ASR-2026-0D0F: no self-approval of material exceptions)
 date: 2026-11-25
 resolves: [OQ-800 (pending owner), OQ-803 (partly)]
 ---

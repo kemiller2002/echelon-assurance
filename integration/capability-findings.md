@@ -1,5 +1,7 @@
 # Capability verification findings (2026-11-25)
 
+> **Owner decision (DF-ASR-2026-0D10).** Vigila is retained as the shared observability initiative on managed logging and monitoring infrastructure; its observability capability remains **absent** until verified, and the Registry record RP-REG-2026-0001 is to be reconciled (WI-VIGILA-01). A thin Strata runtime is approved (WI-STRATA-01).
+
 Scope: re-verification of the assurance responsibilities proposed for Echelon systems in
 `echelon-assurance` (branch `claude/echelon-assurance-consolidation-jygy23`), against fresh
 shallow clones in local read-only clones (all at depth 1). Read-only; builds and tests ran in

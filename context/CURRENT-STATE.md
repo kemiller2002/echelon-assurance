@@ -38,9 +38,9 @@ Registers: 276 sources, 278 requirements, 104 controls, 83 policy entries,
 open questions in `registers/open-questions.csv`. See
 `research/journals/` for the batch log.
 
-Consolidation (C1) registers: 16 tenets, 113 baseline requirements, 208
+Consolidation (C1) registers: 17 tenets, 114 baseline requirements, 208
 source dispositions, 115 questions with dispositions, 27 verified systems,
-61 backlog work items, 97 customer questions, 22 decisions (6 proposed in C1),
+62 backlog work items, 97 customer questions, 22 decisions (6 proposed in C1),
 63 risks. PR #1 and PR #2 content is consolidated on branch
 `claude/echelon-assurance-consolidation-jygy23`.
 
