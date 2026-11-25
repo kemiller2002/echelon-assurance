@@ -97,3 +97,17 @@ Findings:
   schema.py, build_control_catalog.py (retired seed), economics/tco_model.py,
   and an accidentally committed `__pycache__` file.
 - Praxis CLI itself is still not installed in this repository.
+
+## Owner record: executable policy and continuous evidence (commit acdbf81)
+
+- Registered PEC-001..028 as REQ-PEC-001..028 (owner IDs in `framework_ref`).
+- Mapped to existing controls; new controls only for gaps: CTL-GOV-014
+  (executable policy model with classified obligations), CTL-GOV-015 (human
+  obligation tracking), CTL-ASR-011 (evidence freshness; unknown is not pass).
+- Checked the existing policy-as-code specification and evidence architecture
+  first, as instructed: both already preferred F# deciders and flagged
+  crypto-shredding as a legal question. Tightened the architecture to state
+  crypto-shredding is not assumed to satisfy legal erasure (PEC-021) and that
+  public witness networks and qualified timestamps are deferred.
+- Annotated OQ-108/312/500–510/703/705/751/758/759/762/765/802–805/804 with
+  the owner's proposed dispositions; auditor reliance and legal questions stay open.

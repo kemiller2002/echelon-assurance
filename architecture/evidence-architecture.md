@@ -238,7 +238,9 @@ Design:
    by stable pseudonymous ID; the mapping table (ID → person) is a mutable,
    access-controlled register outside the evidence store.
 2. **Payloads with personal data are encrypted per subject (or per subject ×
-   period) with a key in KMS.** Erasure = destroy the key (crypto-shredding);
+   period) with a key in KMS.** The erasure *mechanism* is key destruction
+   (crypto-shredding); it is **not assumed to satisfy legal erasure**
+   requirements (owner requirement PEC-021; OQ-503);
    envelope, hash and log entry remain, proving that a record existed and was
    erased under procedure (EVT-027 erasure record).
 3. **Hashes of personal data are themselves personal data if guessable**
@@ -284,3 +286,17 @@ OQ-503 (crypto-shredding as erasure), OQ-504 (cloud provider), OQ-505
 (public witness network), OQ-507 (qualified timestamps), OQ-508 (GitHub plan
 for audit-log API), OQ-510 (agent evidence classification). See
 `registers/fragments/PAC-open-questions.csv`.
+
+## Owner requirements PEC-013..028 (2026-11-25)
+
+`requirements/executable-policy-and-continuous-evidence.md` maps onto this architecture as follows (catalog controls in
+brackets): evidence emitted at the enforcement point (CTL-ASR-001), standard
+envelope (CTL-ASR-001; `evidence-envelope.schema.json`), completeness
+reconciliation (CTL-ASR-003), freshness and unknown-is-not-pass (new
+CTL-ASR-011), separated privileges (CTL-ASR-006), managed immutable storage
+with GitHub not the sole store (CTL-ASR-002), heartbeat (CTL-ASR-004),
+reproducible auditor packages (CTL-ASR-010), self-verification (CTL-ASR-005,
+008). Per the owner's dispositions, a public witness network and qualified
+timestamp purchases are **deferred until justified** (OQ-504, OQ-505,
+OQ-507): the storage interface is provider-neutral first, and anchoring
+options in this document are evaluation candidates, not commitments.

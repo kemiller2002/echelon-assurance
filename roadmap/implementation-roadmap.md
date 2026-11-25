@@ -66,7 +66,9 @@ The bulk of the catalog. Order of work inside P1:
    G0–G9 (`financial-core-control-spec-v0.5.md`; G8 is SOC 2 control-to-evidence
    collection and independent review, G9 controlled-pilot approval, with payment
    and trade execution separately gated) before any production financial execution.
-3. **Evidence at source** (CTL-ASR-001, 004, 009): envelopes emitted by
+3. **Policy model and evidence at source** (CTL-GOV-014/015, CTL-ASR-001,
+   004, 009, 011; owner requirements PEC-001..028), with interfaces and
+   synthetic evidence fixtures defined before implementation: envelopes emitted by
    source systems, heartbeat monitoring outside the primary account. The
    anchored ledger (CTL-ASR-002) can follow in P3.
 4. **AI controls** (CTL-AI-001..008): agent registry, platform-enforced
