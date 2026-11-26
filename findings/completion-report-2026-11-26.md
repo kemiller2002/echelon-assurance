@@ -48,7 +48,7 @@ These are taken from the registers:
 - 64 work items
 - 11 production gates
 - 14 decision-traceability items
-- 26 decisions in the decision register
+- 27 decisions in the decision register
 - 380 regulatory requirement rows
 
 ## 3–4. Changes to the baseline, and disposition of sources
@@ -130,9 +130,11 @@ The adversarial challenge ran in rounds 2–51, all recorded in the same review 
 
 **Round 51 found no material finding in any slice.** A separate verifier then checked the minor fixes made after round 51 and found nothing material. Remaining coverage limits are stated there: some cross-repository claims could not be re-checked locally.
 
+**After DF-ASR-2026-0D11.** The owner's question-resolutions record reopened the review. Review rounds continue on the reconciliation and the post-merge fixes. The authoritative per-round counts and the current stopping status are in `findings/reviews/RV-ASR-2026-11-26.md`; summaries here deliberately do not repeat them.
+
 ## 11. Validation results
 
-Validation is run on the final head; CI runs the same checks on the PR. It covers:
+Validation is run on the final head locally. CI runs the same checks on pull requests and on pushes to `main`; branch commits made after the merge were validated locally only until pull request #4 brought them under CI.
 
 - the validator (`assurance validate`)
 - fragment-merge currency
@@ -142,18 +144,18 @@ Validation is run on the final head; CI runs the same checks on the PR. It cover
 - 96 tests, including regression tests that corrupt committed registers and fixtures and require failure
 - Praxis validation
 
-**CI history.** CI failed twice on intermediate commits, ba8c2aa and 5ca1af2. Both were fixed (`findings/validation-report.md`).
+**CI history.** CI failed on three intermediate commits: ba8c2aa and 5ca1af2, both fixed, and c52de07, the owner's record commit, which failed the governed-record test by design until the record was governed (3aeef7f). See `findings/validation-report.md` and the review record.
 
 ## 12. Governance status
 
-- **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is active. Owner record DF-ASR-2026-0D11 directs validating the exact final commit under Praxis before merge and approves enabling verified completion in scope (OQ-704); enabling it is WI-PRAXIS-03.
-- **Verified completion is blocked.** At commit fdd0736, the claim on WI-ASR-FINAL succeeded (claimant claude-code, generation 1). Three validations ran under `praxis work validate-run` and passed: repository tests, `praxis validate` and the governed-record check. `praxis work complete-verified` then refused with `--authority FILE (or PRAXIS_COMPLETION_AUTHORITY) is required`. No completion authority with pinned verifier keys is provisioned in this repository (WI-PRAXIS-03). Creating one from an agent-held key would make the receipt self-attested, so it was not done. The claim was released, and WI-ASR-FINAL stays active.
-- **Merge is blocked.** The owner authorized merging subject to verified completion, and owner record 0D10 requires applicable Praxis verified completion and says not to merge incomplete work. PR #3 is therefore not merged. PR #1 and PR #2 stay open until PR #3 merges, so their content keeps a preserved home on `main`.
+- **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL stays active. Under DF-ASR-2026-0D12, its validations were run under `praxis work validate-run` at 93b95f6 and all passed, and test-result and final-disposition evidence was recorded. Praxis then refused plain completion, because a claim-owned work item can be completed only by verified completion (PRX.COMPLETION.VERIFIED_COMPLETION_REQUIRED). It will close when WI-PRAXIS-03 provides a verifier. The tool's rule was not bypassed. Owner record DF-ASR-2026-0D11 directs validating the exact final commit under Praxis before merge and approves enabling verified completion in scope (OQ-704); enabling it is WI-PRAXIS-03.
+- **Completion.** Under the owner's delegation, DF-ASR-2026-0D12 accepts plain Praxis completion for WI-ASR-FINAL, never described as verified completion. No agent-held verifier key was created. Earlier attempt: At commit fdd0736, the claim on WI-ASR-FINAL succeeded (claimant claude-code, generation 1). Three validations ran under `praxis work validate-run` and passed: repository tests, `praxis validate` and the governed-record check. `praxis work complete-verified` then refused with `--authority FILE (or PRAXIS_COMPLETION_AUTHORITY) is required`. No completion authority with pinned verifier keys is provisioned in this repository (WI-PRAXIS-03). Creating one from an agent-held key would make the receipt self-attested, so it was not done. The claim was released.
+- **Merge.** PR #3 was merged into `main` at 2c2c4f3 (merge commit 9ab2b00) at the owner's direct instruction given in chat, without Praxis verified completion. That instruction is not otherwise recorded in the repository. PR #2 was merged, and PR #1 was closed as superseded; its content is mapped by the 0E01 record and its branch is kept. Fixes made after the merge are on the same branch, in pull request #4. Verified completion of WI-ASR-FINAL is still not done.
 - **Branch protection.** `main` is not protected: GitHub reports `protected: false`, and no rulesets apply (WI-ASR-03, OQ-700/OQ-761). Only the owner can apply rulesets.
 
 ## 13. Remaining external dependencies
 
-These are the dependencies on auditors, legal research, customers, banks, vendors and insurers listed in section 5. They are preserved in `registers/question-dispositions.csv`.
+These are the dependencies on auditors, legal research, customers, banks, vendors and insurers: the open questions in section 5 and the pending external acceptance of answered questions, with the parties named in the external_parties column of `registers/question-dispositions.csv`.
 
 No external engagement or expenditure is authorized. Under DF-ASR-2026-0D0F, any engagement needs a reassessment and the owner's authorization.
 
@@ -164,8 +166,10 @@ All eleven gates, PG-01 to PG-11 in `registers/production-gates.csv`, are `not-m
 ## 15. Decisions needing the owner
 
 1. Apply rulesets on `main` requiring the assurance and Praxis checks (WI-ASR-03).
-2. **Merge blocker.** Provision a Praxis completion authority with pinned verifier keys (WI-PRAXIS-03) so that `work complete-verified` can run for WI-ASR-FINAL. Alternatively, record a decision that plain completion is acceptable for this initiative.
+2. Provision a Praxis verifier with its own identity and pinned keys (WI-PRAXIS-03), so that later work items can use verified completion. For this initiative the owner delegated the completion decision, and plain completion was accepted (DF-ASR-2026-0D12).
 3. Confirm the repository's interpretation that evidence records are excluded from routine retention expiry (`controls/README.md`, decision 0D09).
 4. Name the emergency delegate and the protected-reporting recipient when operationally necessary. Under DF-ASR-2026-0D11 (OQ-607) the owner retains reserved authority until formal delegation; actual legal signatories are pending.
 5. Decide whether to accept or further restrict the residual risk of research agents before production use (OQ-616).
 6. Decide on sensitivity: history wording in commit 23f06b4, author metadata in `.ros/events/events.jsonl`, and the example actor identifier in `docs/agent-provenance.md`.
+7. Review and merge the post-merge fixes (pull request #4).
+8. State commercial intent for future services when planned (OQ-114, OQ-766; the scoping rule is approved, DF-ASR-2026-0D11).

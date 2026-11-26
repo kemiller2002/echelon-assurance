@@ -35,7 +35,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 | Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 117 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
 | Dispositions | None | `requirements/source-dispositions.csv` (222 items): 149 consolidate, 36 retain, 16 strengthen, 13 simplify, 5 replace, 2 defer, 1 remove (editorial) |
 | Hierarchy | Implicit | 18 tenets → 84 policy entries → 121 controls → 117 baseline requirements → enforcement, validation (41 procedures) and evidence (35 types); generated traceability matrix; 11 production activation gates (`registers/production-gates.csv`) |
-| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action, and for every open question the reason it is unresolved, the responsible role and the resolution trigger; none block requirements finalization. After owner record DF-ASR-2026-0D11, 25 remain open (2 block implementation, 12 production launch, 9 external examination), and each question records its architectural decision, requirements definition, implementation verification and external acceptance separately |
+| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action, and for every open question the reason it is unresolved, the responsible role and the resolution trigger; none block requirements finalization. After owner record DF-ASR-2026-0D11, 25 remain open (2 block implementation, 12 production launch, 9 external examination, 2 none), and each question records its architectural decision, requirements definition, implementation verification and external acceptance separately |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems; tests executed for 5 (the Praxis run timed out before its attested-completion tests, so Praxis is partially tested) |
 | Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 13 scenarios (including the ODP-09 no-examination, partial-reliance, full-reliance and customer-specific cases), cost by evidence purpose, marginal cost; v1 preserved |
 | Roadmap | Narrative | `roadmap/backlog.csv`: 64 work items (63 live, 1 withdrawn), dependency-ordered across 15 named repositories, a placeholder for the observability owner repository, and owner and managed-service actions; every live baseline requirement has a work item |
@@ -110,6 +110,8 @@ Both are reconciled into the baseline, registers, economics and roadmap.
 
 - Apply repository rulesets on `main` (WI-ASR-03). Praxis 3.25.0 was installed on 2026-11-25.
 - Name the delegate and protected-reporting recipient when operationally necessary (proposed: no later than production launch; OQ-607).
+- Provision a Praxis verifier with its own identity and pinned keys (WI-PRAXIS-03) for later work. PR #3 was merged without verified completion on the owner's instruction, and plain completion was accepted under the owner's delegation (DF-ASR-2026-0D12).
+- Review and merge the fixes made after the merge (pull request #4).
 
 ## 4. Claims status
 

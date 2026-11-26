@@ -154,7 +154,7 @@ SRC-AIG-031.)*
 
 | Separation axis | Implementer | Validator | Approver |
 |---|---|---|---|
-| Role (human) | Control owner/engineer | Person outside the implementing team (OQ-608) | Authority from decision register (OQ-607) |
+| Role (human) | Control owner/engineer | Person outside the implementing team where one exists; today multiple-agent review and protected deterministic verification, with no retainer (OQ-608, DF-ASR-2026-0D11) | Authority from decision register (OQ-607) |
 | Agent identity | Builder agent identities | Separate validation agent identities with read-only source access | none (humans only) |
 | Credentials | Write to control code via PR | Read-only to sources and evidence; write only to validation-results store | Approval service, phishing-resistant authenticator |
 | Repository | Control/policy repositories | Validation repository (tests, mutants, reconciliations) | Decision register |
@@ -168,7 +168,8 @@ Enforcement mechanisms:
 
 - Branch protection: changes to the validation repository require approval by
   someone who did not author the change *and* is not the implementer of the
-  controls it tests; validation code cannot be changed in the same pull
+  controls it tests (not achievable with one human today; see the small-team
+  limits later in this section); validation code cannot be changed in the same pull
   request as the control it tests (a deterministic CI rule).
 - Policy analysis (VAL-017) proves no single principal holds both
   control-write and validation-write permissions, and no agent holds approval.
@@ -214,8 +215,8 @@ Candidate invariants and recommendation:
 |---|---|---|---|
 | No agent principal can approve, merge protected branches, write primary evidence or alter retention | Analysable policy language + automated policy analysis (Cedar/SMT pattern) | **Yes** — cheap once the policy language is analysable; runs in CI (VAL-017) | P1 |
 | Approval binds to exact artifact hash; any change invalidates | TLA+ model of approval/exception state machine | Deferred; a time-boxed pilot only if later justified (OQ-611) | P2 |
-| Evidence log: append-only, sealed periods immutable, corrections linked | TLA+ model + property-based tests on implementation | Pilot with above | P2 |
-| Ledger conservation / double entry; settlement state machine | Property-based tests now; TLA+ for settlement protocol when built | PBT P1; TLA+ P2–P3 | P1–P3 |
+| Evidence log: append-only, sealed periods immutable, corrections linked | TLA+ model + property-based tests on implementation | Property-based tests; TLA+ only if a pilot is later justified (OQ-611, deferred) | P2 |
+| Ledger conservation / double entry; settlement state machine | Property-based tests now; TLA+ for settlement protocol only if later justified (OQ-611, deferred) | PBT P1; TLA+ conditional | P1–P3 |
 | Tenant isolation in authorization | Policy analysis | Yes with first item | P1 |
 | Full code-level proof (Lean/F*/Dafny) | — | **No** for now: cost and skills out of proportion; revisit if Echelon builds its own policy engine | — |
 
@@ -232,7 +233,7 @@ effectiveness (RSK-040).
 | Phase | Validation layers |
 |---|---|
 | P0–P1 | VAL-001..004, 009, 010, 011, 013, 014, 017, 018, 020, 024, 029, 030, 031 (VAL-014 moved from P2 in review pass 4: CTL-TEN-001 is a P1 control and daf-landscape gate G2 requires tenant-isolation tests before production) |
-| P2 | Add VAL-005, 006, 007, 008, 012, 015, 016, 019, 021, 022, 023, 025, 032 |
+| P2 | Add VAL-005, 006, 007, 008, 012, 015, 016 (formal-methods part only if justified, OQ-611), 019, 021, 022, 023, 025, 032 |
 | Before material production launch | VAL-027 (pen test incl. agents): deferred under ODP-11; the need is reassessed against risk and actual obligations before material production launch, whether or not an examination is planned (WI-EXT-04, PG-04, PG-10) |
 | Only if an examination is planned (reassessed under DF-ASR-2026-0D0F; none planned now) | VAL-026 (external technical review of evidence machinery; deferred under 0D0F), then VAL-028 |
 
@@ -241,10 +242,11 @@ effectiveness (RSK-040).
 OQ-601 (auditor reliance on agent evidence), OQ-604 (mutation testing as
 management monitoring), OQ-608 (staffing for separation) and OQ-612 (external
 technical validation provider) have owner-approved internal design resolutions
-(DF-ASR-2026-0D11); implementation verification remains pending for all four,
+(DF-ASR-2026-0D11); requirements definition and implementation verification
+remain pending for all four,
 and auditor or provider acceptance remains pending for OQ-601, OQ-604 and
 OQ-612 (OQ-608 has no external acceptance condition). OQ-611 (formal methods investment) is answered as
-deferred (DF-ASR-2026-0D10).
+deferred (inferred from the owner's baseline approval, DF-ASR-2026-0D10).
 
 ## Owner requirements VAL-BC-001..014 (2026-11-25)
 

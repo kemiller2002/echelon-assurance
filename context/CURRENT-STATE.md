@@ -31,7 +31,7 @@ Updated: 2026-11-26
 | B6 | AI governance | complete |
 | B7 | Synthesis: control catalog, policies, architecture, economics, roadmap | complete |
 | B8 | Review passes 1–10 | complete (journals JR-ASR-2026-5C01..5C03) |
-| C2 | Final reconciliation of owner directions 0D0F and 0D10: decision traceability, question fields, production gates, ODP-09 economics, review A–F (`findings/reviews/RV-ASR-2026-11-26.md`), validator hardening | review complete; adversarial rounds 2–51 in the review record (round 51 found no material finding); completion report `findings/completion-report-2026-11-26.md`; merge subject to verified completion and required checks |
+| C2 | Final reconciliation of owner directions 0D0F and 0D10: decision traceability, question fields, production gates, ODP-09 economics, review A–F (`findings/reviews/RV-ASR-2026-11-26.md`), validator hardening | review A–F complete; adversarial rounds in the review record (round 51 found no material finding; the owner record DF-ASR-2026-0D11 reopened the review, and per-round counts and stopping status are kept only there); completion report `findings/completion-report-2026-11-26.md`; merged into `main` (9ab2b00) at the owner's instruction without Praxis verified completion; post-merge fixes in pull request #4 |
 | C1 | Assurance consolidation: unified baseline, dispositions, capability verification, question dispositions, economics v2, backlog, decisions C001–C006, owner decision package, successive challenge passes | complete; owner decisions recorded (DF-ASR-2026-0D0F, 0D10; journal JR-ASR-2026-C001) |
 
 Research-program registers (B7, historical): 276 sources, 278 requirements, 104 controls, 83 policy entries,
@@ -44,7 +44,7 @@ baseline requirements, 222 source dispositions, 121 controls, 41 validation
 procedures, 115 questions with dispositions (25 open, 88 answered, 2
 superseded, after owner record DF-ASR-2026-0D11), 27 systems assessed (5 with executed tests), 64 backlog work items, 11 production
 activation gates (all `not-met`), 14 owner decision traceability rows, 97
-customer questions, 26 decisions, 66 risks. PR #1 and PR #2 content is consolidated on branch
+customer questions, 27 decisions, 66 risks. PR #1 and PR #2 content is consolidated on branch
 `claude/echelon-assurance-consolidation-jygy23`.
 
 ## Claims status

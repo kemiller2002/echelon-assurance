@@ -605,6 +605,7 @@ let ``gating questions, accepted decisions, done work, risk acceptance and owner
                 "DF-ASR-2026-0D0F"
                 "DF-ASR-2026-0D10"
                 "DF-ASR-2026-0D11"
+                "DF-ASR-2026-0D12"
             ],
         field "decisions" "decision_id" (fun d -> d["status"] = "accepted")
     )

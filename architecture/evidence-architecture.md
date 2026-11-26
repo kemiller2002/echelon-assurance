@@ -333,10 +333,12 @@ OQ-500 (auditor reliance on witnessed tlog evidence), OQ-502 (retention),
 OQ-503 (crypto-shredding as erasure), OQ-504 (cloud provider), OQ-507
 (qualified timestamps), OQ-508 (GitHub plan for audit-log API) and OQ-510
 (agent evidence classification) now have owner-approved internal design
-resolutions (DF-ASR-2026-0D11); requirements definition, implementation
-verification and external acceptance remain pending, including auditor
-acceptance (OQ-500, OQ-510) and provider selection (OQ-504, provider pending).
-OQ-505 (public witness network) is answered as deferred (DF-ASR-2026-0D10).
+resolutions (DF-ASR-2026-0D11); requirements definition and implementation
+verification remain pending; external acceptance remains pending where a
+condition exists, notably auditor acceptance (OQ-500, OQ-510). Provider
+selection for OQ-504 is pending as part of implementation; OQ-504 has no
+external acceptance condition.
+OQ-505 (public witness network) is answered as deferred (inferred from the owner's baseline approval, DF-ASR-2026-0D10).
 See `registers/question-dispositions.csv` and
 `registers/fragments/PAC-open-questions.csv`.
 
@@ -349,7 +351,8 @@ reconciliation (CTL-ASR-003), freshness and unknown-is-not-pass (new
 CTL-ASR-011), separated privileges (CTL-ASR-006), managed immutable storage
 with GitHub not the sole store (CTL-ASR-002), heartbeat (CTL-ASR-004),
 reproducible auditor packages (CTL-ASR-010), self-verification (CTL-ASR-005,
-008). Per the owner's dispositions, a public witness network and qualified
-timestamp purchases are **deferred until justified** (OQ-504, OQ-505,
-OQ-507): the storage interface is provider-neutral first, and anchoring
+008). A public witness network is deferred (OQ-505, inferred from the owner's
+baseline approval, DF-ASR-2026-0D10) and qualified timestamp services are used
+only if required (OQ-507, DF-ASR-2026-0D11); storage is managed immutable
+storage with the provider pending (OQ-504, DF-ASR-2026-0D11): the storage interface is provider-neutral first, and anchoring
 options in this document are evaluation candidates, not commitments.

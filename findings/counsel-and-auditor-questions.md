@@ -86,7 +86,7 @@ configurable contract windows. In addition: (a) Under the laws that apply, is de
 per-subject encryption keys ("crypto-shredding") an acceptable form of deletion while the
 ciphertext remains in WORM storage? (b) In which deployment models, if any, does Unbound act
 toward donors in its own right rather than as a processor?
-Proposed interpretation: Unbound is a processor in every planned model. Crypto-shredding is not
+Approved design: configurable privacy roles, with sponsor instructions as the default and own-purpose data kept separate (OQ-104, DF-ASR-2026-0D11). Proposed interpretation of the legal role, still the question: Unbound acts as a processor in every planned model. Crypto-shredding is not
 assumed to be sufficient on its own; personal data is kept separate from minimal evidence metadata.
 Unblocks: processor contract terms, the incident-response matrix and the privacy design of the evidence store.
 
