@@ -13,6 +13,8 @@ confidence: medium
 
 # Tool evaluation
 
+> **Note (DF-ASR-2026-C002, accepted).** Custom hash chaining, transparency-log anchoring, external witnesses and RFC 3161 timestamping are deferred until a requirement for them is recorded; evidence integrity rests on a managed store under a compliance-mode retention lock, separately credentialed population reconciliation and an externally hosted heartbeat. Text below that relies on anchoring describes an option, not the plan.
+
 Retrieved 2026-11-25 unless stated. "Maturity" is what the primary source
 says, not our judgment of production quality. Licences are as stated by the
 project's own page. Where a fact came only from a search-result summary the

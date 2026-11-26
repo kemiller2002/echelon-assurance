@@ -84,8 +84,9 @@ The bulk of the catalog. Order of work inside P1:
 3. **Policy model and evidence at source** (CTL-GOV-014/015, CTL-ASR-001,
    004, 009, 011; owner requirements PEC-001..028), with interfaces and
    synthetic evidence fixtures defined before implementation: envelopes emitted by
-   source systems, heartbeat monitoring outside the primary account. The
-   anchored ledger (CTL-ASR-002) can follow in P3.
+   source systems, heartbeat monitoring outside the primary account. Custom
+   anchoring (CTL-ASR-002) is deferred under DF-ASR-2026-C002 until a
+   requirement for it is recorded.
 4. **AI controls** (CTL-AI-001..008): agent registry, platform-enforced
    permissions, untrusted-content isolation, kill switch, evaluation suites.
    PC-19 decides where receipts and the AI egress gateway live.

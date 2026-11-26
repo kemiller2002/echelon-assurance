@@ -93,8 +93,8 @@ let renderCsv (totals: (string * Totals) list) : Csv.Row list =
 
     [
         "scenario"
-        "unavoidable_low"
-        "unavoidable_high"
+        "external_v1_assumptions_low"
+        "external_v1_assumptions_high"
         "reducible_low"
         "reducible_high"
     ]

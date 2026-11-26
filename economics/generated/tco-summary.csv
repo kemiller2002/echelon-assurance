@@ -1,4 +1,4 @@
-scenario,unavoidable_low,unavoidable_high,reducible_low,reducible_high
+scenario,external_v1_assumptions_low,external_v1_assumptions_high,reducible_low,reducible_high
 1-conventional-manual,315000,745000,357000,1312000
 2-commercial-platform,315000,745000,269000,904000
 3-outsourced-management,315000,745000,272000,979500

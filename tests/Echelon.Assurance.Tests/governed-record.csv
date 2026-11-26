@@ -256,7 +256,7 @@ controls,CTL-END-001,5f99b5d6f597332b
 controls,CTL-FIN-001,d8654da0c3e4f9c8
 controls,CTL-FIN-002,45e5e9355410fb05
 controls,CTL-FIN-003,1057a85beb1e2968
-controls,CTL-FIN-004,5eec38404ae60ba0
+controls,CTL-FIN-004,782dc4e384e4138b
 controls,CTL-FIN-005,f53334139deb2977
 controls,CTL-FIN-006,6f2c2394c86131ca
 controls,CTL-FIN-007,403cba16420d9c39
@@ -312,7 +312,7 @@ controls,CTL-SDL-003,2b6c86dae3f6e2ac
 controls,CTL-SDL-004,be376b269291d7d7
 controls,CTL-SDL-005,822b7073dbfe448e
 controls,CTL-SDL-006,1dfd2626e4fcd758
-controls,CTL-SDL-007,afea206c3ddcf2f8
+controls,CTL-SDL-007,7faa7c64450c312b
 controls,CTL-SDL-008,ea551b59546a2688
 controls,CTL-SDL-009,d3267a93d1d32e14
 controls,CTL-SDL-010,31f3721f078bb320
@@ -453,7 +453,7 @@ file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
 file,policies/drafts/POL-11-ai-and-autonomous-systems.md,706c1a622f8c3001
 file,policies/drafts/POL-12-financial-operations-integrity.md,74c82a721e0c46d8
 file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
-file,policies/policy-inventory.md,f83b77b134fe2787
+file,policies/policy-inventory.md,6287fa883f03a960
 file,requirements/README.md,bf7a0c418b406b69
 file,requirements/ai-governance-independent-validation.md,7c9bb9fad1beb3f7
 file,requirements/assurance-economics.md,e265ba4586a7e3b1
@@ -474,7 +474,7 @@ file,src/Echelon.Assurance.Registers/Governed.fs,a40cdc7a46273c4e
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
 file,src/Echelon.Assurance.Registers/Roadmap.fs,27ba2959764926ca
 file,src/Echelon.Assurance.Registers/Schema.fs,9db3dd6397580e37
-file,src/Echelon.Assurance.Registers/Tco.fs,5c95b739a5d004d7
+file,src/Echelon.Assurance.Registers/Tco.fs,ad8aee70385975d4
 file,src/Echelon.Assurance.Registers/Traceability.fs,4d5747ee191d2e4a
 file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
@@ -1320,7 +1320,7 @@ risks,RSK-038,18fcb25cb6e2f554
 risks,RSK-039,a0769a15300545b1
 risks,RSK-040,87435ef64d499268
 risks,RSK-041,19b61fdf58fa796b
-risks,RSK-042,956b9af7f2780afe
+risks,RSK-042,56825362a5ee38bb
 risks,RSK-043,dcf3e83dc07ddca9
 risks,RSK-044,84df52431abf41cd
 risks,RSK-045,d4e0972b1eb5ad64

@@ -8,6 +8,8 @@ created: 2026-11-25
 
 # Auditor experience specification
 
+> **Note (DF-ASR-2026-C002, accepted).** Custom hash chaining, transparency-log anchoring, external witnesses and RFC 3161 timestamping are deferred until a requirement for them is recorded; evidence integrity rests on a managed store under a compliance-mode retention lock, separately credentialed population reconciliation and an externally hosted heartbeat. Text below that relies on anchoring describes an option, not the plan.
+
 ## 1. What an auditor actually needs
 
 A service auditor issuing a SOC 1 or SOC 2 report has to obtain sufficient
@@ -46,7 +48,8 @@ on the auditor accepting the reliance approach — see OQ register).
    can re-run it and get the same result (IPE re-performance).
 3. **Completeness proofs alongside populations.** Each population includes
    its completeness evidence: source-system counts for the same period, the
-   evidence log checkpoint (Merkle root) covering the period, and the
+   evidence store retention-lock and digest manifest covering the period
+   (an anchored checkpoint only if anchoring is later required, C002), and the
    reconciliation result (`architecture/evidence-architecture.md`).
 4. **Failures are first-class.** Populations include denials, exceptions,
    missed heartbeats and remediation — not only successes.

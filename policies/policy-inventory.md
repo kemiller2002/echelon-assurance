@@ -71,7 +71,7 @@ and that the mechanism enforces it (`auditor-interpretation`; see
 | Self-approval of a financial transaction | Domain authorization rejects approver = initiator | Authority matrix, negative tests, rejection logs |
 | Using static cloud keys | Organization policy forbids key creation; workload identity federation | Policy objective, org-policy evidence, exception process |
 | Storing secrets in repositories | Push protection + scanning | Objective, scanner evidence, incident path for bypass |
-| Agent modifying historical evidence | Append-only store with no delete permission for agent identities; transparency-log anchoring | Objective, permission evidence, integrity verification results |
+| Agent modifying historical evidence | Append-only store with no delete permission for agent identities; compliance-mode retention lock (anchoring deferred, DF-ASR-2026-C002) | Objective, permission evidence, integrity verification results |
 
 Section-level owners, approval authorities and links to controls are in the
 register; `control_ids` and `requirement_ids` are populated in batch B7.
