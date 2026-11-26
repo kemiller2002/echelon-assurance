@@ -436,7 +436,7 @@ Verified by VAL-022. *(recommendation; REQ-AIRMF-004.)*
 | A0 | Read public or specifically authorized data | Same as Unbound A0 (observe) |
 | A1 | Propose drafts and decisions | Same as A1 (prepare) |
 | A2 | Execute bounded reversible, or otherwise explicitly authorized low-risk, operations | Same as A2; "otherwise explicitly authorized" aligns with owner decision 0D09 |
-| A3 | Material operations only through independently enforced standing or transaction-specific human authorization and deterministic gates | Clarifies Unbound A3; no agent independently authorizes movement of funds or material exceptions; the sponsor retains financial authority |
+| A3 | Material operations only through independently enforced standing or transaction-specific human authorization and deterministic gates | Clarifies Unbound A3; no agent authorizes movement of funds in any scope or approves any exception (ODP-10, BR-GOV-004); in financial domains agents are capped at A2; the sponsor retains financial authority |
 | A4 | Reserved human authority: policy weakening, material exceptions, risk acceptance, privileged access, management assertions, other nondelegable decisions | Same as A4; Unbound's A5 (prohibited) corresponds to the hard prohibitions in §4 |
 
 If independent approval is required and unavailable, the action is blocked or

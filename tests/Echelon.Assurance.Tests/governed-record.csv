@@ -350,7 +350,7 @@ decisions,DF-ASR-2026-0D06,920d448d1965ba9f
 decisions,DF-ASR-2026-0D07,761ab829ea4be383
 decisions,DF-ASR-2026-0D08,9c1feeec60f712b4
 decisions,DF-ASR-2026-0D09,544a3a831e0db355
-decisions,DF-ASR-2026-0D0A,686304f56f89d236
+decisions,DF-ASR-2026-0D0A,1542edfba3b5ef73
 decisions,DF-ASR-2026-0D0B,66eac6cf8a2cc23f
 decisions,DF-ASR-2026-0D0C,f2be1904ca879b5d
 decisions,DF-ASR-2026-0D0D,4937e11433210f82
@@ -450,7 +450,7 @@ file,policies/drafts/POL-07-operations-security.md,3adc46f931f49bd1
 file,policies/drafts/POL-08-incident-response-and-notification.md,de6101ae0e5e9259
 file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
-file,policies/drafts/POL-11-ai-and-autonomous-systems.md,f935c92f91476572
+file,policies/drafts/POL-11-ai-and-autonomous-systems.md,706c1a622f8c3001
 file,policies/drafts/POL-12-financial-operations-integrity.md,74c82a721e0c46d8
 file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
 file,policies/policy-inventory.md,f83b77b134fe2787
@@ -472,7 +472,7 @@ file,src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj,3e2a5ded
 file,src/Echelon.Assurance.Registers/Economics.fs,f747a88548c6ac57
 file,src/Echelon.Assurance.Registers/Governed.fs,a40cdc7a46273c4e
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
-file,src/Echelon.Assurance.Registers/Roadmap.fs,51474dcaf0ab534a
+file,src/Echelon.Assurance.Registers/Roadmap.fs,27ba2959764926ca
 file,src/Echelon.Assurance.Registers/Schema.fs,9db3dd6397580e37
 file,src/Echelon.Assurance.Registers/Tco.fs,c1ccfb6b97d51289
 file,src/Echelon.Assurance.Registers/Traceability.fs,e12c26d0e103f060
@@ -682,7 +682,7 @@ production_gates,PG-03,a92f0ead5b9eff03
 production_gates,PG-04,4f75772a971f17e3
 production_gates,PG-05,649ee6c54e727b3d
 production_gates,PG-06,7d41a38858550d5f
-production_gates,PG-07,a53a00882a6f7f7c
+production_gates,PG-07,a3cce409d1663edb
 production_gates,PG-08,a7842fe2708cfb42
 production_gates,PG-09,92709e5d1d398aab
 production_gates,PG-10,499ed8f8eb842b15
