@@ -592,7 +592,7 @@ are deliberately not reproduced.
   - Demand from bank partners is therefore `customer-expectation`.
 - **2026 proposed replacement.** The OCC, Fed, FDIC and NCUA proposed
   replacement TPRM guidance on 15 September 2026, with comments due 16
-  November 2026. It emphasises risk-based tailoring and says credible
+  November 2026 (extended to 16 December 2026, per the question register). It emphasises risk-based tailoring and says credible
   summaries, certifications or assessments "may be adequate" for due
   diligence depending on facts (SRC-SOC-021) `[authoritative]` for the
   proposal text. Final status is unknown (OQ-105).

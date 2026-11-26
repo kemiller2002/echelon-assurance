@@ -41,7 +41,7 @@ high consequence.
 **Diagnostic Calibration.** Not performed. The only independent second analysis
 available is another model run with the same inputs, which EDF says is not
 independent. It is recommended when an owner or external reviewer can provide
-one (ODP-09).
+one (ODP-02; no external reviewer is engaged now, DF-ASR-2026-0D0F).
 
 ### System Context
 - **Primary System:** the Echelon Foundry assurance program as recorded in
@@ -122,7 +122,7 @@ capability work and external answers.
 - The legal characterization of the payment-partner rail (internal research; external advice only after an owner reassessment).
 - The actual cost of maintaining internal automation.
 
-**Next Responsible Action:** the owner reviews `docs/decisions/owner-decision-package-2026-11-25.md`, and the protected-branch ruleset is applied (WI-ASR-03).
+**Next Responsible Action:** the owner applies the protected-branch ruleset (WI-ASR-03); the decision package is decided (DF-ASR-2026-0D0F, DF-ASR-2026-0D10).
 
 ---
 

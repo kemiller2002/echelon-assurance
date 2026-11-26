@@ -90,9 +90,10 @@ initiate, record and post the sponsor's most significant transaction classes:
 **The exclusion does not apply.** AU-C 402.05 excludes services that only
 process transactions the entity itself specifically authorizes, such as a
 bank processing checking-account transactions. Unbound does more than that:
-it maintains the books and computes fees and allocations. So it is a
-**service organization** for the sponsor's auditor `[authoritative]`,
-applying 402.03 and 402.05.
+it maintains the books and computes fees and allocations. So, provided the operator
+is an entity separate from the sponsor (OQ-756), it is likely a **service
+organization** for the sponsor's auditor `[auditor-interpretation]`, applying
+402.03 and 402.05; ICFR relevance is the sponsor auditor's judgment (OQ-754).
 
 **Who is audited.** DAF sponsors are public charities that typically have
 audited financial statements, because of state charitable solicitation

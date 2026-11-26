@@ -17,7 +17,7 @@ research_batch: B6 (key AIG)
 > - **External assurance trigger:** BR-VAL-003.
 > - **Validating the machinery:** BR-ASR-010.
 >
-> **Key controls for organizational review.** The controls that warrant organizationally independent review are listed in `docs/decisions/owner-decision-package-2026-11-25.md` (ODP-02). All others use automated and internal validation proportionate to risk. Blanket independent human review of routine operations is not required.
+> **Key controls for organizational review.** The controls proposed (not owner-approved) for organizationally independent review are listed in `docs/decisions/owner-decision-package-2026-11-25.md` (ODP-02). All others use automated and internal validation proportionate to risk. Blanket independent human review of routine operations is not required.
 >
 > **Small-team constraint.** With one human, `internal-independent` validations (VAL-006, VAL-011, VAL-012, VAL-016, VAL-019, VAL-022, VAL-025, VAL-032) have no independent performer today. They are not performed as if independent. Under owner direction DF-ASR-2026-0D0F, `Tested` rests instead on protected deterministic verification (VAL-040, `technically-separated`) for executable controls. The multiple-agent review protocol (VAL-041, `agent-review`) is approved for internal development review only and never supports `Tested`, so judgment controls (L0–L2) cannot reach `Tested` until a technically separated or organizational validator exists. Technical separation is not described as organizational independence (see `controls/README.md`). VAL-025 is used only if an organizationally independent reviewer is later engaged on a recorded trigger.
 >
@@ -231,7 +231,7 @@ effectiveness (RSK-040).
 |---|---|
 | P0–P1 | VAL-001..004, 009, 010, 011, 013, 014, 017, 018, 020, 024, 029, 030, 031 (VAL-014 moved from P2 in review pass 4: CTL-TEN-001 is a P1 control and daf-landscape gate G2 requires tenant-isolation tests before production) |
 | P2 | Add VAL-005, 006, 007, 008, 012, 015, 016, 019, 021, 022, 023, 025, 032 |
-| Before first SOC 2 Type 2 period | VAL-026 (external technical review of evidence machinery), VAL-027 (pen test incl. agents; deferred under ODP-11 — the need is reassessed against risk and actual obligations before material production activation, WI-EXT-04, PG-04, PG-10), then VAL-028 |
+| Only if an examination is planned (reassessed under DF-ASR-2026-0D0F; none planned now) | VAL-026 (external technical review of evidence machinery; deferred under 0D0F), VAL-027 (pen test incl. agents; deferred under ODP-11 — the need is reassessed against risk and actual obligations before material production activation, WI-EXT-04, PG-04, PG-10), then VAL-028 |
 
 ## 8. Open items
 

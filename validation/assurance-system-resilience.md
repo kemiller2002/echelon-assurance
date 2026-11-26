@@ -86,8 +86,10 @@ does not control. In increasing order of independence:
    *Deferred under DF-ASR-2026-C002 until someone requires it.*
 5. **External technical review** of evidence integrity, completeness and
    identity separation (VAL-026; provider and CPA acceptance open, OQ-612).
+   *Deferred under DF-ASR-2026-0D0F; only if a reassessment authorizes it.*
 6. **Formal attestation** (VAL-028), where the CPA firm decides what of the
-   above it relies on (OQ-601, OQ-604).
+   above it relies on (OQ-601, OQ-604). *Only if an examination is planned
+   (reassessed under DF-ASR-2026-0D0F; none planned now).*
 
 ## 4. Compliance-theater indicators (reviewed quarterly, VAL-032)
 
@@ -107,7 +109,7 @@ does not control. In increasing order of independence:
   it leave traces outside their control.
 - It cannot make Echelon's own verification independent; only external
   parties provide independence (`independent-validation-architecture.md` §3).
-- Tamper-evidence depends on external anchoring continuing and on the
+- Tamper-evidence rests on the managed retention lock (external anchoring deferred under DF-ASR-2026-C002) continuing and on the
   anchoring party's integrity.
 - Retention-lock and storage immutability guarantees are provider features
   whose claims (vendor-claim) require verification during implementation.
