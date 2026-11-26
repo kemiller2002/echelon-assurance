@@ -267,7 +267,7 @@ Prevention at the model layer is unreliable (SRC-AIG-018; REQ-OWASPAI-001,
 REQ-AIRMF-016). The design therefore **assumes the agent may be hijacked** and
 bounds what a hijacked agent can do *(recommendation)*:
 
-1. Authority bound: agents are A0–A2; hijack yields at most a draft, a
+1. Authority bound: research agents that process untrusted content are A0–A2 with no consequential tools (ODP-08, BR-AI-004); hijack yields at most a draft, a
    ticket or a reversible tag.
 2. Deterministic authorization outside the model (§5) and no credentials in
    context (§6).

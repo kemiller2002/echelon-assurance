@@ -2,8 +2,8 @@ register,id,digest
 backlog,WI-AEGIS-01,e7e9d4b82c60346e
 backlog,WI-ARCA-01,159607434fd630ae
 backlog,WI-ARCA-02,43e5eb4c1b1b7fd1
-backlog,WI-ASR-01,e257ffc93c5a5797
-backlog,WI-ASR-02,5da7a9bb12975666
+backlog,WI-ASR-01,d5054c5efdd0efb8
+backlog,WI-ASR-02,9822cf6c087c809c
 backlog,WI-ASR-03,b2dc19e0a1e61368
 backlog,WI-ASR-04,a8958d61899131b5
 backlog,WI-ASR-05,95b793fe92c5fc65
@@ -14,8 +14,8 @@ backlog,WI-ASR-09,fe6c3171a83c65be
 backlog,WI-ASR-10,3b4591fde25fb119
 backlog,WI-ASR-11,adb620da01e4418b
 backlog,WI-ASR-12,9d93f1aa45d881d3
-backlog,WI-ASR-13,05c30a70269c2b27
-backlog,WI-ASR-14,b3b608cb5b178487
+backlog,WI-ASR-13,88d914623453aba3
+backlog,WI-ASR-14,fb8f52948ff09d2c
 backlog,WI-CONDITOR-01,6a6166f63c3f6610
 backlog,WI-CONDITOR-02,996c003607608add
 backlog,WI-DOKIMOS-01,a3b78df012e13cca
@@ -540,7 +540,7 @@ open_questions,OQ-509,6118be9b2185424f
 open_questions,OQ-510,d3a18cbb86c32a94
 open_questions,OQ-600,a4ae1c9dd2ba324c
 open_questions,OQ-601,6bb7665da85b68bb
-open_questions,OQ-602,fdc8e822f65a2e38
+open_questions,OQ-602,2b39863841d9d054
 open_questions,OQ-603,6d651e80af67a79c
 open_questions,OQ-604,70dbd52bf2f04755
 open_questions,OQ-605,7ca6be745e8c845d
@@ -696,7 +696,7 @@ question_bank,CAQ-006,1e53ad5510f007e6
 question_bank,CAQ-007,24c98967f9f72e86
 question_bank,CAQ-008,ec056aa37ce32b54
 question_bank,CAQ-009,3d576362e5d3bbcb
-question_bank,CAQ-010,cc02c143c5d86dc5
+question_bank,CAQ-010,aaeb9650d132802f
 question_bank,CAQ-011,6e8532f6519fb11c
 question_bank,CAQ-012,25b411c884728d1a
 question_bank,CAQ-013,f62985f669607d14
