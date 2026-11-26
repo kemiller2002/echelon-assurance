@@ -428,7 +428,7 @@ file,docs/decisions/owner-remaining-approvals-2026-11-25.md,12aeeef62147559a
 file,docs/decisions/owner-review-direction-2026-11-25.md,59759d70be559755
 file,economics/parameters.csv,87a09cc2a85a9852
 file,economics/v2/activities.csv,489a8457b2d6b0bf
-file,economics/v2/alternatives.csv,4a5a52c40eadfa9c
+file,economics/v2/alternatives.csv,38e2e9e7f576f097
 file,economics/v2/scenarios.csv,903367ec3db1afb1
 file,financial/finbc-unbound-map.csv,c479ead4d0057bad
 file,findings/challenge-passes/round1-domain.csv,d946fc095bb40804
@@ -444,8 +444,8 @@ file,findings/clarity-and-edf-assessment.md,a71a316d62c5844f
 file,findings/counsel-and-auditor-questions.md,6f0408ae7e851043
 file,findings/executive-findings.md,e6c6f43e92b2ead0
 file,findings/financial-integrity-review.md,66519ca6ca391e9d
-file,findings/reviews/RV-ASR-2026-11-26.md,c922f7d5cd1ff4b8
-file,findings/validation-report.md,2bef0e76f8cdba01
+file,findings/reviews/RV-ASR-2026-11-26.md,d4dc2616db58fa0e
+file,findings/validation-report.md,031bc4cce2ed8ac2
 file,global.json,b48d6da8fa62c0da
 file,policies/drafts/POL-01-assurance-governance.md,6222818163909251
 file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
@@ -816,7 +816,7 @@ question_dispositions,OQ-204,5770ebfe34356ee2
 question_dispositions,OQ-205,6c729fa72cbd8cc2
 question_dispositions,OQ-206,362fb164ac64f121
 question_dispositions,OQ-207,903ffe278fbf534a
-question_dispositions,OQ-208,8331b89024c4ea1d
+question_dispositions,OQ-208,cbbf1e133f0e3057
 question_dispositions,OQ-209,135a1f05c6f7754a
 question_dispositions,OQ-210,d96f1e23da74faf5
 question_dispositions,OQ-211,a6478e228404fafe
@@ -1338,7 +1338,7 @@ risks,RSK-049,6a76361ab175ea52
 risks,RSK-050,ca383a6d37e9f5f1
 risks,RSK-051,9005a2a5d8db5479
 risks,RSK-052,38aff3a69481dac0
-risks,RSK-053,89ba7c3cf069bdc5
+risks,RSK-053,f4ffa87279a60e4c
 risks,RSK-054,4b09b615718638e8
 risks,RSK-055,828d957c1289aa90
 risks,RSK-056,3375b56b0880b987

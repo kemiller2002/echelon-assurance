@@ -64,7 +64,7 @@ round actively tried to disprove the previous conclusions. All findings are in
 
 **The most consequential corrections the passes forced:**
 
-1. **Economics conclusion reversed twice.** The first run favored targeted automation, then the hybrid. Once maintenance, non-reliance, mandatory gates and reviewer growth were charged to every alternative, the evidence supports minimum viable assurance. Internal automation shows no clear cash saving at one or two products. Evidence-collection automation pays only with auditor reliance and scale. *(Superseded for decisions by the ODP-09 recalculation, DF-ASR-2026-0D0F: costs are now separated by evidence purpose, no product-count threshold applies, and statements that evidence automation pays only with auditor reliance and scale no longer hold; see `economics/v2/README.md`.)*
+1. **Economics conclusion reversed twice.** The first run favored targeted automation, then the hybrid. Once maintenance, non-reliance, mandatory gates and reviewer growth were charged to every alternative, the evidence supports minimum viable assurance. Internal automation shows no clear cash saving at one or two products. Evidence-collection automation pays only with auditor reliance and scale. *(Superseded for decisions by the ODP-09 recalculation (DF-ASR-2026-0D0F; owner brief of 2026-11-26): costs are now separated by evidence purpose, no product-count threshold applies, and statements that evidence automation pays only with auditor reliance and scale no longer hold; see `economics/v2/README.md`.)*
 2. **FinCEN analysis.** Limb (i)(B), "any other person engaged in the transfer of funds", had been omitted. A legal reading was stated as fact. Legal engagement was decided under ODP-12: none now; internal research and prepared questions (DF-ASR-2026-0D0F).
 3. **Evidence storage.** The replacement for the custom ledger was not actually immutable in the interim. A compliance-mode retention lock now applies from the first production evidence.
 4. **Independence wording.** Owner-administered reconciliation, heartbeat and alerts were called "independent". They are separately credentialed and detect failure, not owner action.
@@ -117,7 +117,7 @@ The owner then pushed `docs/decisions/owner-remaining-approvals-2026-11-25.md`, 
 - **Decisions.** C001 (in principle), C002, C003, C004 and C006 are accepted.
 - **Tenets.** TNT-17, evidence by construction, is added and realized by six baseline requirements.
 - **Baseline.** BR-GOV-013, BR-HR-002, BR-LOG-001, BR-ASR-008, BR-APP-001, BR-AI-004 and BR-SDL-001 are updated.
-- **Questions.** Twelve questions are answered by owner decision (OQ-208, 304, 505, 509, 611, 616, 760, 800, 802, 803, 806, 809). Others are reclassified to implementation or external dependencies. No question blocks requirements finalization.
+- **Questions.** Twelve questions were answered by owner decision at that point (OQ-208, 304, 505, 509, 611, 616, 760, 800, 802, 803, 806, 809); OQ-208 and OQ-616 were later reopened (round F4, dispositions register), which holds 16 resolved-owner-decision rows. Others are reclassified to implementation or external dependencies. No question blocks requirements finalization.
 - **Backlog.** WI-ASR-01, WI-ASR-02 and WI-STRATA-04 are done; WI-VIGILA-01 and WI-ASR-03 are retitled.
 
 **Praxis.** Praxis 3.25.0 was installed with `praxis init`, from the checksum-verified native release.

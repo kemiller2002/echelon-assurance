@@ -210,7 +210,7 @@ What this shows, without thresholds:
 | Faster customer diligence | No | Elapsed days per questionnaire; share of answers generated without edits |
 | Reuse across products | Partly (scaling factors) | Actual hours to onboard each additional product to gates, suites and observability |
 
-## What the numbers do and do not support (DF-ASR-2026-C005, superseded for ODP-09 by DF-ASR-2026-0D0F; items 2 and 4 superseded, items 1, 3 and 5 retained)
+## What the numbers do and do not support (DF-ASR-2026-C005, superseded for ODP-09 by DF-ASR-2026-0D0F and the owner brief of 2026-11-26; items 2 and 4 superseded, items 1, 3 and 5 retained)
 
 1. **At one or two products, no option is clearly cheaper on cash.** Minimum viable assurance has the lowest midpoint, but within overlapping ranges. The choice rests on security value, independence and owner capacity.
 2. **Evidence-collection automation** *(superseded by the ODP-09 recalculation above: no product-count threshold applies; decide by purpose and measured manual evidence hours).* Original text: pays only with auditor reliance and three or more products; gate it on a written auditor position (WI-EXT-01) and a credible product pipeline.
