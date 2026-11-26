@@ -45,7 +45,7 @@ SRC-SOC-028/029).
   **institutional partners or financial institutions** in embedded or
   white-label programs (PARTNER-SEGREGATION-AND-TENANCY.md). The operator has
   instruction-only authority and never takes title to money (UNB-XIN-REG-001).
-- **Owner-approved Unbound decisions (2026-11-24) already in place:**
+- **Owner-approved Unbound decisions (2026-11-24) already in place** (Unbound marks them external-authorization-required, with professional gates still open):
   - **SPD-PLT-001:** no report is legally required. Evidence engineering
     continues from inception. SOC description and period work is conditional
     on contract demand or a second user entity. Before go-live, obtain the

@@ -25,7 +25,7 @@ Devices accessing nonpublic data are managed: full-disk encryption, screen lock,
 
 ## 04 Vulnerability management
 1. Code, dependencies, containers and cloud configuration are scanned continuously.
-2. Remediation deadlines by severity (initial targets, to be confirmed against customer contracts): critical 7 days, high 30 days, medium 90 days, low best effort. Overdue items without an approved exception are control failures.
+2. Remediation deadlines by severity (repository proposal pending the owner decision for the obligation register, validation/continuous-security-testing-specification.md; to be confirmed against customer contracts): critical 7 days, high 30 days, medium 90 days, low best effort. Overdue items without an approved exception are control failures.
 3. Reachability and exploitability may lower priority only through a recorded decision.
 
 ## 05 Penetration and security testing

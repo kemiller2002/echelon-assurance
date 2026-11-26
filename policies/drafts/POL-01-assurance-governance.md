@@ -99,7 +99,8 @@ accepts is traceable to a control, an owner and evidence.
 2. Routine low-risk work proceeds under a standing human authorization with
    a separate implementing agent, a technical verifier and an enforced release
    gate. Material policy changes, privilege changes, financial exceptions and
-   changes to the verifier require elevated human approval. Where an
+   changes to the verifier require elevated human approval, as do the further
+   elevated classes of BR-SDL-003 listed in POL-06.02. Where an
    independent human review is required and no second person exists, the
    action is blocked or redesigned; self-approval of material exceptions is not
    authorized, and no contracted reviewer is engaged at the development stage

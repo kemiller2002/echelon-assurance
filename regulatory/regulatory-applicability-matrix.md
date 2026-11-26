@@ -110,7 +110,7 @@ for selection — no decision record exists) · `customer-expectation` · `volun
 
 | Item | Echelon Foundry (today) | Unbound (production) | Evidence class | Confidence |
 |---|---|---|---|---|
-| GLBA Safeguards Rule 314.4(a)–(i) | not-applicable (no financial activity, no customer information) | **undetermined** legally; very likely **contractual** in practice via banks; recommended as **design baseline now** | open-question | low (legal) / medium (practical) |
+| GLBA Safeguards Rule 314.4(a)–(i) | undetermined (OQ-202); likely not-applicable today (no financial activity, no customer information) | **undetermined** legally; very likely **contractual** in practice via banks; recommended as **design baseline now** | open-question | low (legal) / medium (practical) |
 | 314.4(f) service-provider oversight | n/a | **contractual** (mechanism of flow-down) | authoritative | medium |
 | 314.4(j) FTC notice (≥500 consumers, ≤30 days) | n/a | undetermined; derived duty = fast contractual notice to the FI | open-question | medium |
 | Privacy Rule / Reg P | n/a | sponsors: undetermined; Unbound: reuse/redisclosure limits as service provider | open-question | low |

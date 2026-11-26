@@ -98,7 +98,7 @@ Scenario S8 implements this:
 
 (Regenerated 2026-11-26 after adding the shared observability lines ACT-114..116, ODP-06, which are identical in every alternative; the earlier figures were about USD 0.10M lower at N=1.)
 
-**Cost.** Without auditor reliance, A4 has the lowest midpoint at every product count. A8 and A5 cost about USD 245k and 310k more than A4 over five years at one product. A5, A6 and A8 stay above A3 at every modelled product count.
+**Cost.** In S8, A4 has the lowest midpoint at every product count (in other no-reliance cases A3 or A5 can be lower at five or more products; see generated/model.md). A8 and A5 cost about USD 245k and 310k more than A4 over five years at one product. A5, A6 and A8 stay above A3 at every modelled product count.
 
 **Benefit.** The benefit of reusable continuous assurance in this case is operational, not reduced audit effort:
 

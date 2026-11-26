@@ -8,7 +8,7 @@ created: 2026-11-25
 
 # Policy inventory
 
-Register: [`policy-inventory.csv`](policy-inventory.csv) (13 policies, 70 sections).
+Register: [`policy-inventory.csv`](policy-inventory.csv) (13 policies, 71 sections; POL-11.02 also covers section 02a).
 
 ## Design principle
 

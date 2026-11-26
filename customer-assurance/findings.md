@@ -6,7 +6,7 @@ platform). Research only; no repository was modified. Companion files:
 (SRC-CAQ-001..024, all retrieved or read on 2026-11-25).
 
 Current-state baseline used for every answer: Unbound has no production deployment; all 121
-controls in `echelon-assurance/controls/control-catalog.csv` are `Designed`; all 83 policy
+controls in `echelon-assurance/controls/control-catalog.csv` are `Designed`; all 84 policy
 entries in `policies/policy-inventory.csv` are `drafted` (none adopted); no SOC report,
 certification, external penetration test or insurance policy exists.
 
