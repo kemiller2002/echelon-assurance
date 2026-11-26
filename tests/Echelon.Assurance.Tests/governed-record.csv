@@ -410,7 +410,7 @@ file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,PROJECT-CHARTER.md,e26e3ea1065587c0
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
-file,docs/charter/final-reconciliation-brief-2026-11-26.md,390b9261bceac7bc
+file,docs/charter/final-reconciliation-brief-2026-11-26.md,7bb8add47b6d5cbb
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,8fd9e2878505b201
@@ -440,6 +440,20 @@ file,findings/challenge-passes/round5-6-dispositions.csv,b3324e51262215ae
 file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,global.json,b48d6da8fa62c0da
+file,policies/drafts/POL-01-assurance-governance.md,6222818163909251
+file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
+file,policies/drafts/POL-03-people-security.md,b9b107dff77d24ea
+file,policies/drafts/POL-04-identity-and-access.md,639b8a6bf9596b66
+file,policies/drafts/POL-05-data-protection.md,d82bf45d84eb99fa
+file,policies/drafts/POL-06-secure-engineering-and-change.md,56fc36969de6eeaa
+file,policies/drafts/POL-07-operations-security.md,3adc46f931f49bd1
+file,policies/drafts/POL-08-incident-response-and-notification.md,de6101ae0e5e9259
+file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
+file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
+file,policies/drafts/POL-11-ai-and-autonomous-systems.md,f935c92f91476572
+file,policies/drafts/POL-12-financial-operations-integrity.md,74c82a721e0c46d8
+file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
+file,policies/policy-inventory.md,f83b77b134fe2787
 file,requirements/README.md,bf7a0c418b406b69
 file,requirements/ai-governance-independent-validation.md,7c9bb9fad1beb3f7
 file,requirements/assurance-economics.md,e265ba4586a7e3b1
@@ -456,7 +470,7 @@ file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
 file,src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj,3e2a5ded3dbf9f35
 file,src/Echelon.Assurance.Registers/Economics.fs,f747a88548c6ac57
-file,src/Echelon.Assurance.Registers/Governed.fs,7978cab73c5e53ca
+file,src/Echelon.Assurance.Registers/Governed.fs,a40cdc7a46273c4e
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
 file,src/Echelon.Assurance.Registers/Roadmap.fs,51474dcaf0ab534a
 file,src/Echelon.Assurance.Registers/Schema.fs,9db3dd6397580e37
@@ -861,7 +875,7 @@ question_dispositions,OQ-710,6e1759f1d2c43ae2
 question_dispositions,OQ-750,3287346db51cd9cc
 question_dispositions,OQ-751,15f80c7dff7b6393
 question_dispositions,OQ-752,3adae8cfba5338e3
-question_dispositions,OQ-753,f02824c7fa84d910
+question_dispositions,OQ-753,d73d47b5a83d2bbd
 question_dispositions,OQ-754,0cf72f25c19bface
 question_dispositions,OQ-755,29cbf61df1dd47eb
 question_dispositions,OQ-756,c47c4420c308e291
@@ -880,7 +894,7 @@ question_dispositions,OQ-801,d48c235d7babfda1
 question_dispositions,OQ-802,39def4808fd85f76
 question_dispositions,OQ-803,d4d3513f756f7f4f
 question_dispositions,OQ-804,2cb43b2fa9f43490
-question_dispositions,OQ-805,b145b896814f45c7
+question_dispositions,OQ-805,80821f14bcc6d99e
 question_dispositions,OQ-806,8e9c950b8f17090e
 question_dispositions,OQ-807,3d5f4c9457dca91b
 question_dispositions,OQ-808,b2bca54d9bf2cb0f

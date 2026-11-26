@@ -26,7 +26,8 @@ Agents may never:
 - create, alter or delete historical evidence;
 - disable, weaken or bypass a control or monitoring;
 - change a policy, authority matrix or control definition without human approval;
-- release funds, approve grants, or change financial records outside authority explicitly delegated in POL-12;
+- release funds, approve grants or authorize any movement of money, in any scope (POL-12.01; owner direction ODP-10, DF-ASR-2026-0D10; DF-ASR-2026-C004);
+- change financial records except through the deterministic paths POL-12 defines;
 - send Confidential or Restricted data to a provider not approved for that class;
 - represent internal or automated validation as external audit or attestation.
 

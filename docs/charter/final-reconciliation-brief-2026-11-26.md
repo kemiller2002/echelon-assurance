@@ -14,7 +14,9 @@ Reconciliation and Verified Completion" in a Claude Code session on
 traced. Where it repeats the owner records of 2026-11-25
 (`docs/decisions/owner-review-direction-2026-11-25.md`,
 `docs/decisions/owner-remaining-approvals-2026-11-25.md`), those records
-govern.
+govern. One exception is recorded below: where the brief restated an item
+more strictly (ODP-07, "no ORM"), the repository follows the stricter wording
+and cites both, pending owner confirmation.
 
 Items the brief introduced as organizational tenets:
 
