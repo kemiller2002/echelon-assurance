@@ -191,7 +191,7 @@ All remaining items were fixed in the final commits:
 | Economic model reproducible and internally consistent | Met, with hypothetical inputs | `assurance econ`; CI currency check; 17 unit tests; no quotes exist |
 | Roadmap dependency-driven | Met | Validator: phase order, cycles, coverage, launch gates |
 | All applicable repository validation checks pass | Met for the assurance validator, tests and Praxis validate/registry check; **verified completion not met** (WI-ASR-CONSOLIDATION was closed by plain completion; WI-ASR-FINAL is the final work item; see section 7) | Section 1; section 3b; `findings/reviews/RV-ASR-2026-11-26.md` |
-| No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; six review rounds |
+| No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; review A–F and eleven adversarial rounds (`findings/reviews/RV-ASR-2026-11-26.md`) |
 | Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items, all decided by DF-ASR-2026-0D0F and 0D10) |
 
 ## 5. Conflicts with existing tooling and standards (documented, not disabled)

@@ -26,7 +26,7 @@ Phases are gates, not dates. Unbound is pre-production and its financial
 core is NO-GO for production financial execution; no phase below claims any
 control is implemented. Per-control assignments are generated in
 [`generated/controls-by-phase.md`](generated/controls-by-phase.md) from the
-catalog (P0 13, P1 67, P2 13, P3 10, P4 1 controls; P5 holds improvements, not controls).
+catalog; the generated file is authoritative for current counts.
 
 ## P0 — Immediate organizational requirements
 

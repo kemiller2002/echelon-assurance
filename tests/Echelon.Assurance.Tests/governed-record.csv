@@ -340,7 +340,6 @@ decision_traceability,ODP-10,5ba199c979496e44
 decision_traceability,ODP-11,0e240ccf62757b89
 decision_traceability,ODP-12,7db22565e677fb2c
 decision_traceability,OT-01,0a787f46d3fee54d
-decision_traceability,OT-02,7683fae70b4663ac
 decisions,DF-ASR-2026-0D01,d5ec0d52c5ecb630
 decisions,DF-ASR-2026-0D02,52ccf91ecc066a61
 decisions,DF-ASR-2026-0D03,cbb32153d6cb8cf3
@@ -403,10 +402,15 @@ evidence_types,EVT-034,a3a7d30ae7ec1adc
 evidence_types,EVT-035,c7a137bb212e7eaf
 file,.config/dotnet-tools.json,ef4e0624483aa32d
 file,.editorconfig,0936594621dc51a6
-file,.github/workflows/assurance-validation.yml,855dddc978c2268c
+file,.github/workflows/assurance-validation.yml,ef588e454596879b
 file,.github/workflows/praxis-validation.yml,1c890c25e5a3bee0
+file,AGENTS.md,6f5cd737b26f0cf1
 file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
+file,PROJECT-CHARTER.md,e26e3ea1065587c0
+file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
+file,docs/charter/final-reconciliation-brief-2026-11-26.md,c8c03d0f192ec093
+file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,8fd9e2878505b201
 file,docs/decisions/DF-ASR-2026-7B20--small-team-approval-and-independence-rule.md,dc6bff23c6b698fe
@@ -451,7 +455,7 @@ file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
 file,src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj,3e2a5ded3dbf9f35
 file,src/Echelon.Assurance.Registers/Economics.fs,f747a88548c6ac57
-file,src/Echelon.Assurance.Registers/Governed.fs,3ddadcf397a06038
+file,src/Echelon.Assurance.Registers/Governed.fs,21c3e48c6f19a708
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
 file,src/Echelon.Assurance.Registers/Roadmap.fs,51474dcaf0ab534a
 file,src/Echelon.Assurance.Registers/Schema.fs,9db3dd6397580e37
@@ -752,7 +756,7 @@ question_bank,CAQ-081,7d6de83934c3e6f6
 question_bank,CAQ-082,c38e53e5d35ea555
 question_bank,CAQ-083,29877729171c6bd7
 question_bank,CAQ-084,b6b2cc4bd2d84660
-question_bank,CAQ-085,14c2a83b82e56bc5
+question_bank,CAQ-085,b7b190b78707253a
 question_bank,CAQ-086,e7fa93769a1080d0
 question_bank,CAQ-087,222cc720c19dcdb7
 question_bank,CAQ-088,08b4f6e5cd7f1e9d
@@ -1468,7 +1472,6 @@ source_dispositions,ODP-10,b6258e4a873c62a1
 source_dispositions,ODP-11,e86d78f8fdcf91a0
 source_dispositions,ODP-12,7f4f0a6f4d38ba4a
 source_dispositions,OT-01,c0ddf7e0fd2f66d3
-source_dispositions,OT-02,c714ba47df6eef99
 source_dispositions,PEC-001,3c949bd2f326e727
 source_dispositions,PEC-002,5088d99877bbf686
 source_dispositions,PEC-003,43d5723cd1b7312c
@@ -1924,7 +1927,7 @@ tenets,TNT-14,da4bd2305247ea3b
 tenets,TNT-15,2d1c1f28754086c5
 tenets,TNT-16,17c46911ff03bfa9
 tenets,TNT-17,7bccbdf7d08dd14d
-tenets,TNT-18,a34a9a35bd201cbe
+tenets,TNT-18,c9f6ad7c0e2ce9f5
 validations,VAL-001,7942511aba518c7c
 validations,VAL-002,657fccb9413710de
 validations,VAL-003,07e380ff651083b1

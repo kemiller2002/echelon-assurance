@@ -220,4 +220,4 @@ ODP-10,docs/decisions/owner-remaining-approvals-2026-11-25.md,,retain,BR-SDL-001
 ODP-11,docs/decisions/owner-review-direction-2026-11-25.md,,replace,BR-VUL-012;BR-VAL-003,Pre-activation risk assessment replaces an unconditional external test.
 ODP-12,docs/decisions/owner-review-direction-2026-11-25.md,,replace,BR-FIN-020;BR-VAL-003;BR-GOV-009,Activation gates and prepared legal questions replace counsel engagement.
 OT-01,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-ASR-012;BR-ASR-001;BR-ASR-003;BR-ASR-007;BR-FIN-009;BR-GOV-005,Evidence by construction realized as a per-system design obligation.
-OT-02,docs/decisions/owner-review-direction-2026-11-25.md,,strengthen,BR-VAL-003;BR-VUL-012;BR-GOV-009;BR-VAL-004,External services not the default (TNT-18).
+OT-02,docs/charter/final-reconciliation-brief-2026-11-26.md,,strengthen,BR-VAL-003;BR-VUL-012;BR-GOV-009;BR-VAL-004,External services not the default (TNT-18): owner brief of 2026-11-26, triggers from DF-ASR-2026-0D0F.

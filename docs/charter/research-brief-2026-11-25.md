@@ -14,6 +14,7 @@ note: Condensed faithfully from the owner's instruction; section numbers preserv
 - Scope is **organizational assurance**, not only SOC. SOC 1 and SOC 2 are initial priorities; architecture must absorb further regulatory, contractual, security, operational and financial requirements without substantial redesign.
 - Establish the repository with current Echelon Foundry repository governance standards and Praxis conventions.
 - Keep the repository **private**; never publish sensitive findings, internal control weaknesses, production evidence, credentials or confidential information.
+  *(Note, not owner text: privacy of the repository is superseded by owner decision DF-ASR-2026-0D05 — public, limited to the permitted content classes; the rest of this line stands.)*
 - Focus on research, requirements, policy, architecture specifications and validation methodology; **do not prematurely implement a new software platform**. Evaluate existing Echelon systems first.
 - Execute the complete script below, committing findings incrementally.
 

@@ -69,7 +69,7 @@ records (`docs/decisions/`) → research conclusions → local convention.
    `dotnet run --project src/Echelon.Assurance.Cli -- validate` before committing; it must pass.
 9. **Preserve contradictions.** Record disagreeing sources and interpretations;
    do not resolve them silently.
-10. **Branches.** `main` is protected. Work on a branch, open a pull request,
+10. **Branches.** `main` is to be protected with required checks (WI-ASR-03, an owner action); until then checks are advisory (RSK-060). Work on a branch, open a pull request,
     never force-push.
 11. **Durable state.** Update [`context/CURRENT-STATE.md`](context/CURRENT-STATE.md)
     and add a journal entry under `research/journals/` for each research batch,

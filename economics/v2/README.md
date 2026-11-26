@@ -93,7 +93,7 @@ Scenario S8 implements this:
 |---|---|---|---|---|---|
 | A4 minimum viable | USD 1.19M | 1.65M | 3.03M | 5.32M | 7.61M |
 | A3 outsourced | 1.33M | 1.79M | 3.18M | 5.49M | 7.81M |
-| A5 targeted automation | 1.50M | 1.96M | 3.33M | 5.62M | 7.91M |
+| A5 targeted automation | 1.50M | 1.96M | 3.33M | 5.62M | 7.90M |
 | A8 recommended package | 1.44M | 1.92M | 3.38M | 5.81M | 8.24M |
 
 (Regenerated 2026-11-26 after adding the shared observability lines ACT-114..116, ODP-06, which are identical in every alternative; the earlier figures were about USD 0.10M lower at N=1.)
@@ -158,13 +158,13 @@ Five-year midpoints (USD, generated `generated/model.md` is authoritative):
 | | A8 | 1.03M | 1.37M | 2.37M | 4.05M | 5.72M |
 | | A5 | 0.96M | 1.18M | 1.86M | 2.98M | 4.10M |
 | S10 partial reliance | A4 | 1.17M | 1.61M | 2.94M | 5.16M | 7.38M |
-| | A8 | 1.41M | 1.88M | 3.30M | 5.65M | 8.00M |
+| | A8 | 1.41M | 1.88M | 3.29M | 5.65M | 8.00M |
 | | A5 | 1.44M | 1.83M | 3.01M | 4.97M | 6.93M |
 | S11 full reliance | A4 | 1.14M | 1.57M | 2.86M | 5.00M | 7.14M |
 | | A8 | 1.39M | 1.84M | 3.21M | 5.49M | 7.77M |
 | | A5 | 1.33M | 1.66M | 2.64M | 4.28M | 5.92M |
 | S12 customer-specific | A4 | 0.88M | 1.23M | 2.30M | 4.07M | 5.84M |
-| | A8 | 1.12M | 1.51M | 2.65M | 4.55M | 6.46M |
+| | A8 | 1.12M | 1.50M | 2.65M | 4.55M | 6.46M |
 | | A5 | 1.03M | 1.29M | 2.07M | 3.37M | 4.66M |
 
 What this shows, without thresholds:

@@ -15,9 +15,10 @@ jobs:
           global-json-file: global.json
       - name: No build hooks or tracked build output
         run: |
-          if git ls-files | grep -Eiq '(^|/)(bin|obj)/'; then echo "tracked build output"; exit 1; fi
-          if git ls-files | grep -Ei '\.(targets|props|rsp)$' | grep -Eiv '^Directory\.Build\.props$'; then echo "unexpected MSBuild hook"; exit 1; fi
-          if git ls-files | grep -Eiq '(^|/)Directory\.Solution\.|(^|/)(before|after)\.[^/]*\.sln\.targets$'; then echo "solution hook"; exit 1; fi
+          git ls-files > "$RUNNER_TEMP/files.txt"
+          if grep -Ei '(^|/)(bin|obj)/' "$RUNNER_TEMP/files.txt"; then echo "tracked build output"; exit 1; fi
+          if grep -Ei '\.(targets|props|rsp)$' "$RUNNER_TEMP/files.txt" | grep -Eiv '^Directory\.Build\.props$'; then echo "unexpected MSBuild hook"; exit 1; fi
+          if grep -Ei '(^|/)Directory\.Solution\.|(^|/)(before|after)\.[^/]*\.sln\.targets$' "$RUNNER_TEMP/files.txt"; then echo "solution hook"; exit 1; fi
       - name: Restore tools
         run: dotnet tool restore
       - name: Formatting

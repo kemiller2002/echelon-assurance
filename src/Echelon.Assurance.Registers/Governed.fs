@@ -73,6 +73,10 @@ let coversFile (relative: string) =
     && (buildInput
         || lower.StartsWith "src/"
         || (lower.StartsWith "docs/decisions/" && lower.EndsWith ".md")
+        || (lower.StartsWith "docs/charter/" && lower.EndsWith ".md")
+        || lower = "project-charter.md"
+        || lower = "agents.md"
+        || lower = "security-and-confidentiality.md"
         || (lower.StartsWith "requirements/"
             && lower.EndsWith ".md"
             && not (lower.StartsWith "requirements/generated/"))
