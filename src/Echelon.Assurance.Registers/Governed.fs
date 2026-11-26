@@ -88,6 +88,9 @@ let coversFile (relative: string) =
         || (lower.StartsWith "docs/decisions/" && lower.EndsWith ".md")
         || (lower.StartsWith "docs/charter/" && lower.EndsWith ".md")
         || (lower.StartsWith "policies/" && lower.EndsWith ".md")
+        || (lower.StartsWith "findings/"
+            && lower.EndsWith ".md"
+            && not (lower.StartsWith "findings/challenge-passes/"))
         || lower = "project-charter.md"
         || lower = "agents.md"
         || lower = "security-and-confidentiality.md"

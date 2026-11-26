@@ -70,7 +70,7 @@ annual penetration testing plus vulnerability assessments every six months.
 314.6 (read) exempts paragraphs (b)(1), (d)(2), (h) and (i) for institutions under the 5,000 threshold.
 Proposed interpretation: a white-label technology provider that does not hold custody is
 probably a service provider to financial institutions, not a financial institution itself.
-Regardless of the answer, we will run continuous monitoring and an independent penetration test.
+Regardless of the answer, continuous internal monitoring and testing run (ODP-11); whether an independent penetration test is needed is reassessed against risk and actual obligations before material production launch (BR-VUL-012, PG-10).
 Unblocks: whether the annual penetration test is a legal minimum or voluntary
 (REQ-PENTEST-010..012), and legal vs contractual classification for Unbound.
 
@@ -182,8 +182,10 @@ external technical validation of the evidence machinery?
 test within or near the examination period? Would a grey-box application/API test of a
 production-equivalent environment built from the same infrastructure-as-code be acceptable?
 Is autonomous or AI testing only a vulnerability assessment?
-Proposed interpretation: SOC 2 does not require a penetration test (SRC-PTV-015). We plan
-one independent test before launch regardless.
+Proposed interpretation: SOC 2 does not require a penetration test (SRC-PTV-015). Independent
+testing is deferred under owner direction ODP-11 and reassessed against risk
+and actual obligations before material production launch (BR-VUL-012, PG-10);
+none is planned now.
 
 **A8. Engagement structure and cost (OQ-111, OQ-755).** Please give an indicative fee for separate
 and for combined SOC 1 and SOC 2 type 2 engagements over the same period on a shared control set.
@@ -217,8 +219,9 @@ TPRM team for its standard due-diligence request list, its model security addend
 - B5 (OQ-610): What do you require on a vendor's use of AI: disclosure, model risk management and human oversight?
 - B6 (OQ-310, OQ-506, OQ-606): Will you accept a SOC report from a firm affiliated with a compliance platform? Do you need OSCAL output or ISO 42001?
 
-Our proposed position: we will provide a SOC 2 type 2, plus a SOC 1 type 2 where the sponsor's
-ICFR relevance is confirmed. Contract notice windows are configurable. We do not claim the bank
+Our proposed position: controls are designed for SOC 2 type 2, and SOC 1 type 2 where the
+sponsor's ICFR relevance is confirmed (decision 0D02); whether and when an examination happens
+is not yet decided. Contract notice windows are configurable. We do not claim the bank
 has accepted any of this.
 
 ## 6. Insurance broker / cyber insurer

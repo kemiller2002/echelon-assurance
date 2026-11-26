@@ -439,6 +439,13 @@ file,findings/challenge-passes/round4-stopping-check.csv,9f89749accb6b95e
 file,findings/challenge-passes/round5-6-dispositions.csv,b3324e51262215ae
 file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
+file,findings/challenging-conventional-compliance.md,26b4c749a133bfdb
+file,findings/clarity-and-edf-assessment.md,a71a316d62c5844f
+file,findings/counsel-and-auditor-questions.md,7c7bc63dd5c3a83b
+file,findings/executive-findings.md,e6c6f43e92b2ead0
+file,findings/financial-integrity-review.md,66519ca6ca391e9d
+file,findings/reviews/RV-ASR-2026-11-26.md,7c8eb6e18f332d28
+file,findings/validation-report.md,2bef0e76f8cdba01
 file,global.json,b48d6da8fa62c0da
 file,policies/drafts/POL-01-assurance-governance.md,6222818163909251
 file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
@@ -470,7 +477,7 @@ file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
 file,src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj,3e2a5ded3dbf9f35
 file,src/Echelon.Assurance.Registers/Economics.fs,f747a88548c6ac57
-file,src/Echelon.Assurance.Registers/Governed.fs,a40cdc7a46273c4e
+file,src/Echelon.Assurance.Registers/Governed.fs,3a4032e55a78a0a6
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
 file,src/Echelon.Assurance.Registers/Roadmap.fs,27ba2959764926ca
 file,src/Echelon.Assurance.Registers/Schema.fs,9db3dd6397580e37
