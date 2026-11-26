@@ -507,7 +507,25 @@ let unsupportedClaimTerms =
         "penetration test was performed"
         "penetration tested annually"
         "fractional"
+        "compliant"
+        "audited our"
+        "unqualified opinion"
+        "attested"
+        "penetration testing is performed"
+        "annual penetration test"
     ]
+
+/// True when the term appears in a negated form only ("no ... has been", "not ...").
+let private negated (text: string) (term: string) =
+    let i = text.IndexOf(term: string)
+
+    let before =
+        if i < 0 then
+            ""
+        else
+            text.Substring(max 0 (i - 30), min 30 i)
+
+    before.Contains "no " || before.Contains "not " || before.Contains "never "
 
 /// Public answers may not describe non-operating controls, and no answer may
 /// describe a deferred mechanism.
@@ -552,7 +570,7 @@ let answerDisclosure (controls: Record list) (answers: Record list) =
         let unsupported =
             if anyNonOperating || List.isEmpty (items a "related_control_ids") then
                 unsupportedClaimTerms
-                |> List.filter text.Contains
+                |> List.filter (fun t -> text.Contains t && not (negated text t))
                 |> List.map (
                     sprintf "customer-assurance/question-bank.csv: %s claims '%s' without operating controls" id
                 )

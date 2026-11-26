@@ -564,3 +564,97 @@ let ``every decision record file exists and names its decision`` () =
         |> List.map (fun d -> d["decision_id"])
 
     Assert.True(List.isEmpty bad, String.concat ", " bad)
+
+/// Governed record (round 5, reviewer K): every change to a governed field
+/// (status, applicability, independence, authority, gating, legal position,
+/// customer answer) must regenerate this snapshot with `assurance governed`,
+/// so the change is visible in review as a fixture diff.
+[<Fact>]
+let ``governed fields match the committed governed record`` () =
+    let committed =
+        Csv.table (File.ReadAllText(Path.Combine(root, "tests/Echelon.Assurance.Tests/governed-record.csv")))
+        |> snd
+        |> List.choose (function
+            | [ r; i; d ] -> Some(r, i, d)
+            | _ -> None)
+
+    Assert.NotEmpty committed
+    let diffs = Governed.differences committed loaded
+
+    Assert.True(
+        List.isEmpty diffs,
+        "regenerate with `assurance governed` after review:\n"
+        + String.concat "\n" diffs
+    )
+
+[<Fact>]
+let ``round 5 corruptions change the governed record`` () =
+    let committed = Governed.snapshot loaded
+
+    let changes l =
+        Assert.NotEmpty(Governed.differences committed l)
+
+    corrupt
+        "policies"
+        (List.map (fun p ->
+            if p["policy_id"] = "POL-01" then
+                p |> Map.add "status" "approved"
+            else
+                p))
+    |> changes
+
+    corrupt
+        "requirements"
+        (List.map (fun r ->
+            if r["req_id"] = "REQ-GLBA-001" then
+                r |> Map.add "applicability" "not-applicable"
+            else
+                r))
+    |> changes
+
+    corrupt
+        "baseline"
+        (List.map (fun b ->
+            if b["br_id"] = "BR-FIN-006" then
+                b |> Map.add "launch_gate" "not-a-launch-gate"
+            else
+                b))
+    |> changes
+
+    corrupt
+        "decisions"
+        (List.map (fun d ->
+            if d["decision_id"] = "DF-ASR-2026-C004" then
+                d |> Map.add "record_path" "docs/decisions/owner-review-direction-2026-11-25.md"
+            else
+                d))
+    |> changes
+
+    corrupt
+        "validations"
+        (List.map (fun v ->
+            if v["validation_id"] = "VAL-001" then
+                v
+                |> Map.add "performed_by" "Automated verifier"
+                |> Map.add "independence_level" "qualified-professional"
+            else
+                v))
+    |> changes
+
+    corrupt
+        "decision_traceability"
+        (List.map (fun t ->
+            if t["item_id"] = "ODP-02" then
+                t |> Map.add "question_ids" ""
+            else
+                t))
+    |> changes
+
+    corrupt
+        "question_bank"
+        (List.map (fun a ->
+            if a["question_id"] = "CAQ-002" then
+                a |> Map.add "proposed_answer" "Echelon is SOC 2 compliant."
+            else
+                a))
+    |> reports "CAQ-002 claims"

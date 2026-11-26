@@ -4,6 +4,7 @@
 ///   assurance roadmap [root]
 ///   assurance trace [root]
 ///   assurance econ [root]
+///   assurance governed [--check] [root]
 module Echelon.Assurance.Cli.Program
 
 open System.IO
@@ -128,6 +129,37 @@ let private trace root =
     printfn "rendered requirements/generated/traceability-matrix.md"
     0
 
+let private governedPath root =
+    Path.Combine(root, "tests/Echelon.Assurance.Tests/governed-record.csv")
+
+/// Writes the governed-record snapshot; with --check, reports differences.
+let private governed root check =
+    let loaded = loadAll root
+    let path = governedPath root
+
+    if check then
+        let committed =
+            if File.Exists path then
+                Csv.table (File.ReadAllText path)
+                |> snd
+                |> List.choose (function
+                    | [ r; i; d ] -> Some(r, i, d)
+                    | _ -> None)
+            else
+                []
+
+        match Governed.differences committed loaded with
+        | [] ->
+            printfn "governed record current"
+            0
+        | diffs ->
+            diffs |> List.iter (printfn "governed field changed: %s")
+            1
+    else
+        File.WriteAllText(path, Governed.render loaded)
+        printfn "wrote %s" (Path.GetRelativePath(root, path))
+        0
+
 let private econ root =
     let load name f =
         let header, rows =
@@ -194,6 +226,7 @@ let main argv =
     | "roadmap" :: rest -> roadmap (rootOf rest)
     | "trace" :: rest -> trace (rootOf rest)
     | "econ" :: rest -> econ (rootOf rest)
+    | "governed" :: rest -> governed (rootOf rest) (options.ContainsKey "--check")
     | "tco" :: rest ->
         let rate =
             options
