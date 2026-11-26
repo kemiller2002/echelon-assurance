@@ -194,3 +194,25 @@ let ``purpose breakdown sums to incremental plus baseline`` () =
 
     Assert.Equal(fst r.Incremental + fst r.Baseline, fst total, 6)
     Assert.Equal(snd r.Incremental + snd r.Baseline, snd total, 6)
+
+[<Fact>]
+let ``customer multiplier scales only customer-packaging lines`` () =
+    let s =
+        { scenario with
+            CustomerMultiplier = 2.0
+        }
+
+    let a =
+        act "A" "customer-diligence" false true 1 (0.0, 0.0) (10.0, 10.0) 0.0 "always"
+
+    Assert.Equal(
+        (100.0, 100.0),
+        lifecycle
+            s
+            1
+            { a with
+                Purpose = "customer-packaging"
+            }
+    )
+
+    Assert.Equal((50.0, 50.0), lifecycle s 1 a)

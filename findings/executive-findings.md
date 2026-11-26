@@ -11,30 +11,33 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 
 **Bottom line.**
 
-- **One baseline.** The assurance program is now one traceable baseline instead of nine overlapping documents: 113 requirements approved in principle by the owner, plus BR-VAL-004 (the review protocol, added from owner direction DF-ASR-2026-0D0F), for 114 in total. They consolidate 208 source items: all 189 original owner requirement IDs, 18 reconciliation challenge findings and one validation paragraph. No mandatory obligation is removed; scope narrowing is labelled *simplify* and stated.
+- **One baseline.** The assurance program is now one traceable baseline instead of nine overlapping documents: 113 requirements approved in principle by the owner plus four additions traced to owner items (BR-VAL-004 from ODP-02; BR-LOG-002, BR-APP-014 and BR-ASR-012 from ODP-06, ODP-07 and OT-01), for 117 in total. They consolidate 222 source items: all 189 original owner requirement IDs, 18 reconciliation challenge findings, one validation paragraph and the 14 owner decision items of 2026-11-25. No mandatory obligation is removed; scope narrowing is labelled *simplify* and stated.
 - **Validated by tooling.** F# tooling enforces the structure. It fails on:
   - orphaned requirements and controls not supported by a baseline requirement;
   - missing owners, validation or evidence;
   - policies, validation or evidence that do not match the requirement's controls;
   - status inflation, including in customer answers and capability status;
   - undispositioned questions;
-  - requirements without work items, and backlog ordering errors.
+  - requirements without work items, and backlog ordering errors;
+  - open questions without a reason, responsible role and trigger, or answered without evidence;
+  - production activation gates that omit a gating requirement or blocking question, or are met while a cited question is open;
+  - owner decision items without bidirectional traceability.
 
   The checks are structural: they cannot prove that a link is semantically right, which is why the challenge passes reviewed the content (`findings/validation-report.md`).
 - **Nothing operates yet.** No control is above `Designed`, and no compliance, certification or operating-effectiveness claim is made.
 - **Missing capabilities.** The program is not yet implementation-ready, because several capabilities the owner decisions assumed exist do not.
-- **External answers.** Whether internal evidence automation pays off depends on one external answer: auditor reliance on system-generated evidence.
+- **Economics by purpose.** Under the ODP-09 recalculation, investments are judged by the purpose of the evidence they produce and by measured manual evidence hours, not by auditor reliance or product-count thresholds (`economics/v2/README.md`).
 
 ## 1. What changed
 
 | Area | Before | After |
 |---|---|---|
-| Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 114 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
-| Dispositions | None | `requirements/source-dispositions.csv` (208 items): 149 consolidate, 34 retain, 12 simplify, 8 strengthen, 2 replace, 2 defer, 1 remove (editorial) |
-| Hierarchy | Implicit | 17 tenets → 83 policy entries → 121 controls → 114 baseline requirements → enforcement, validation (39 procedures) and evidence (35 types); generated traceability matrix |
-| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action; none block requirements finalization; 15 block implementation, 39 production launch and 33 external examination |
-| Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems, tests executed for 5 |
-| Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 8 scenarios, marginal cost and break-even; v1 preserved |
+| Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 117 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
+| Dispositions | None | `requirements/source-dispositions.csv` (222 items): 149 consolidate, 36 retain, 16 strengthen, 13 simplify, 5 replace, 2 defer, 1 remove (editorial) |
+| Hierarchy | Implicit | 18 tenets → 83 policy entries → 121 controls → 117 baseline requirements → enforcement, validation (41 procedures) and evidence (35 types); generated traceability matrix; 11 production activation gates (`registers/production-gates.csv`) |
+| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action, and for every open question the reason it is unresolved, the responsible role and the resolution trigger; none block requirements finalization; 15 block implementation, 40 production launch and 33 external examination |
+| Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems; tests executed for 5 (the Praxis run timed out before its attested-completion tests, so Praxis is partially tested) |
+| Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 13 scenarios (including the ODP-09 no-examination, partial-reliance, full-reliance and customer-specific cases), cost by evidence purpose, marginal cost; v1 preserved |
 | Roadmap | Narrative | `roadmap/backlog.csv`: 62 dependency-ordered work items across 15 repositories plus owner and managed-service actions; every live baseline requirement has a work item |
 
 ## 2. Most important findings
@@ -59,17 +62,16 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - Idempotency payload conflicts open a case rather than going to a dead-letter queue (DF-ASR-2026-C006).
    - No user-supplied HTML is accepted as markup (DF-ASR-2026-C003).
 5. **Simplified evidence architecture.** The custom hash-chained ledger with witness anchoring and timestamps is replaced by managed storage under a compliance-mode retention lock from the first production evidence, separately sourced population reconciliation and an externally hosted heartbeat. These detect failure and external compromise, not action by the single owner. Anchoring is deferred until someone requires it (DF-ASR-2026-C002).
-6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims, corrected over four challenge rounds):
-   - At one product, five-year midpoints run USD 1.17–1.44M (USD 2.02M for a full internal platform), and the ranges span about 3×.
-   - Minimum viable assurance has the lowest or near-lowest midpoint at one or two products in every scenario, with outsourced management within about 4%.
-   - Targeted automation is cheapest only with auditor reliance on system-generated evidence and about five or more products *(base-case result; under the ODP-09 recalculation, DF-ASR-2026-0D0F, investments are decided by purpose and measured manual evidence hours, not product-count thresholds; see `economics/v2/README.md`)*.
-   - Under non-reliance, minimum viable and outsourced are tied, and evidence automation never pays.
-   - Prevention and testing automation adds about USD 50–70k a year for risk reduction the model does not monetize.
-   - Owner capacity, rather than cash, is likely the binding constraint.
-   - Owner direction (DF-ASR-2026-0D0F) prioritizes reusable continuous assurance and operational evidence, without assuming auditor reliance. In that planning case (S8), minimum viable assurance is cheapest at every scale. Continuous-assurance automation costs more and saves no owner hours, so its case is risk reduction and operational evidence. Build first what has operational value and reuse, and defer audit-only evidence collection.
-7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Under owner direction DF-ASR-2026-0D0F no fractional reviewer is engaged now; internal multi-agent review with deterministic verification is used for development review, and `Tested` rests on protected deterministic verification (VAL-040) for executable controls or on the multiple-agent review protocol (VAL-041) for L0–L2 judgment controls. Neither is organizational independence, and neither is described as such; a stakeholder who requires organizational independence (an examiner, a bank partner) is told so (ODP-02).
+6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims; recalculated under ODP-09 on 2026-11-26):
+   - At one product, five-year midpoints run USD 1.27–1.54M (USD 2.12M for a full internal platform) in the base case, and the ranges span about 3×. No ranking at one or two products is reliable.
+   - Minimum viable assurance (A4) has the lowest midpoint at one and two products in every scenario, including the ODP-09 cases.
+   - Costs are now separated by evidence purpose. The prevention and testing package (A8) costs about USD 245k more than A4 over five years at one product: prevention USD 192k, financial integrity USD 34k and test infrastructure USD 19k. Its case is risk reduction, which the model does not monetize.
+   - Auditor packaging is the cost most sensitive to examination plans: it disappears without an examination and falls by about a fifth under partial reliance.
+   - Evidence-collection automation (A5) has a lower midpoint than A4 at five or more modelled products in the no-examination, customer-specific and full-reliance cases, because manual evidence preparation is needed for operations and customers too. This rests on a hypothetical estimate of manual evidence hours, to be measured before deciding. It is a description of results, not a threshold.
+   - Owner capacity, rather than cash, is likely the binding constraint. No external consulting budget is authorized.
+7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Under owner direction DF-ASR-2026-0D0F no fractional reviewer is engaged now; internal multi-agent review with deterministic verification is used for development review, and `Tested` rests on protected deterministic verification (VAL-040, technically separated) for executable controls. Multiple-agent review (VAL-041) is approved for development review only and never supports `Tested`, so judgment controls cannot reach `Tested` until a technically separated or organizational validator exists. Technical separation is not organizational independence and is never described as such; a stakeholder who requires organizational independence (an examiner, a bank partner) is told so (ODP-02).
 8. **Questions.** No question was falsely closed:
-   - 28 depend on the auditor, 21 on counsel and 16 on customers.
+   - 28 depend on the auditor, 21 on legal research (no counsel is engaged; prepared questions only, ODP-12) and 16 on customers.
    - 18 are answered, 17 of them by owner decision; 2 proposals remain on commercial intent (OQ-114, OQ-766).
    - None blocks requirements finalization. 95 remain open, with their external dependencies preserved.
 

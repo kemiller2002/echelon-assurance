@@ -1,9 +1,15 @@
 # Counsel, auditor, CPA, bank and insurer question packages
 
+> **Prepared questions only (owner direction DF-ASR-2026-0D0F, ODP-12).** No
+> legal or professional engagement exists or is authorized. These packages are
+> held ready; sending any of them requires an owner reassessment recorded under
+> 0D0F (legally required, commercially necessary, or material uncertainty that
+> internal research cannot resolve). Until then each question is worked by
+> primary-source research and multiple-agent review, and the affected capability
+> stays gated from production activation.
+
 Prepared 2026-11-25 from `registers/open-questions.csv` and the dispositions in
-`question-dispositions.csv`. Each package is meant to be sent as written, after
-the owner has made the internal decisions listed under "Preconditions". No paid
-engagement is authorized by this document. Everything here is **proposed
+`question-dispositions.csv`. No paid engagement is authorized by this document. Everything here is **proposed
 interpretation**, not a legal conclusion and not a statement of auditor acceptance.
 
 Common facts for every package:
@@ -11,11 +17,13 @@ Common facts for every package:
 - Unbound is a donor-advised-fund (DAF) administration platform. Under owner decision 1 (DF-ASR-2026-0D01), Echelon runs it as a commercial technology and servicing platform for sponsoring charities and financial institutions. Donors and advisors use it only through those organizations. Echelon does not act as sponsor and does not hold custody of assets.
 - In the initial design, funds stay in bank accounts owned by the sponsor, and every flow is authorized by the sponsor. There is no platform custody or money transmission (REC item 17), and no direct contract with a bank is assumed. Card payments are deferred.
 - The initial offering is US-only. There is no deliberate EU/UK targeting.
-- Controls are designed for SOC 1 Type II and SOC 2 Type II across all five trust categories (decision 2). GLBA Safeguards Rule elements are the design baseline, adopted without claiming they legally apply (decision 3).
-- AI agents prepare work only. Material approvals need a human, and enforced technical gates apply (decision 4).
+- Controls are designed for SOC 1 type 2 and SOC 2 type 2 across all five trust categories (decision 2). GLBA Safeguards Rule elements are the design baseline, adopted without claiming they legally apply (decision 3).
+- AI agents prepare work only. They never authorize, approve or release money in any scope; financial execution is deterministic under a recorded human authorization or an established recurring authority, and enforced technical gates apply (decision 4; ODP-10).
 
-Preconditions (owner, no cost): name the intended contracting entity (OQ-102); approve the
-US-only scope (OQ-208), the card deferral (OQ-304) and the sponsor-controlled-funds constraint (OQ-216).
+Preconditions: the owner has decided the US-only scope, the card deferral and
+the sponsor-controlled-funds constraint (ODP-05, ODP-10). Remaining: the intended
+contracting entity (OQ-102), and an owner reassessment under 0D0F before any
+package is sent.
 
 ---
 
@@ -23,8 +31,8 @@ US-only scope (OQ-208), the card deferral (OQ-304) and the sponsor-controlled-fu
 
 Blocking tier for all items: **production-launch**. Requirements are not blocked
 because decision 3 already adopts the Safeguards elements. Bundle all items into a
-single fixed-scope request. Expected effort is 2-4 hours of attorney time. As a free
-first step, ask two prospective sponsors what position their own counsel has taken.
+single question set. As a no-cost first step, ask prospective sponsors what position
+their own advisers have taken.
 
 **C1. GLBA status of DAF sponsors and donors (OQ-200, OQ-203).**
 Question: Is a 501(c)(3) DAF sponsoring organization a "financial institution" under
@@ -112,7 +120,7 @@ regulator (OCC 12 CFR 53.4, FDIC 12 CFR 304.24, Federal Reserve 12 CFR 225.303);
 money-transmission licence (including limb (i)(B) of 31 CFR 1010.100(ff)(5)) or NYDFS Part 500
 covered-entity status is triggered.
 Proposed interpretation: the answer to each is no, provided funds stay in accounts the sponsor
-controls. Any alternative funds flow comes back to counsel before it is enabled.
+controls. Any alternative funds flow comes back for internal research and owner reassessment before it is enabled.
 
 ## 2. Tax advisor (sponsor's or Unbound's)
 
@@ -178,7 +186,7 @@ Proposed interpretation: SOC 2 does not require a penetration test (SRC-PTV-015)
 one independent test before launch regardless.
 
 **A8. Engagement structure and cost (OQ-111, OQ-755).** Please give an indicative fee for separate
-and for combined SOC 1 and SOC 2 Type II engagements over the same period on a shared control set.
+and for combined SOC 1 and SOC 2 type 2 engagements over the same period on a shared control set.
 
 **A9. 2027 criteria (OQ-107, OQ-113, OQ-605).** Final criteria are expected after the comment
 period closes on 2027-01-15. The proposed effective date is engagements starting on or after
@@ -190,10 +198,10 @@ be disclosed without exposing vulnerabilities?
 **U1. Planned approach (OQ-101, OQ-110, OQ-754).** Blocking tier: **external-examination**.
 Question: Unbound would run the sponsor's DAF program ledger and export summarized journals
 to the sponsor's ERP. Would you treat this processing as relevant to the sponsor's ICFR?
-Would you plan to rely on a SOC 1 Type II report, test controls directly, or audit
+Would you plan to rely on a SOC 1 type 2 report, test controls directly, or audit
 substantively? What period and end date would you need, given the sponsor's fiscal year?
 Attach a one-page service description and the convergence crosswalk.
-Proposed interpretation: the processing is relevant, a SOC 1 Type II is expected, and the
+Proposed interpretation: the processing is relevant, a SOC 1 type 2 is expected, and the
 first period is aligned to the sponsor's fiscal year end.
 
 ## 5. Bank partner / ODFI (one consolidated diligence request)
@@ -209,7 +217,7 @@ TPRM team for its standard due-diligence request list, its model security addend
 - B5 (OQ-610): What do you require on a vendor's use of AI: disclosure, model risk management and human oversight?
 - B6 (OQ-310, OQ-506, OQ-606): Will you accept a SOC report from a firm affiliated with a compliance platform? Do you need OSCAL output or ISO 42001?
 
-Our proposed position: we will provide a SOC 2 Type II, plus a SOC 1 Type II where the sponsor's
+Our proposed position: we will provide a SOC 2 type 2, plus a SOC 1 type 2 where the sponsor's
 ICFR relevance is confirmed. Contract notice windows are configurable. We do not claim the bank
 has accepted any of this.
 

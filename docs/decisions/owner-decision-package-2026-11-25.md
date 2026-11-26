@@ -1,7 +1,7 @@
 ---
 id: ASR-ODP-2026-11-25
 title: Owner decision package — assurance consolidation
-status: awaiting owner
+status: decided (DF-ASR-2026-0D0F, DF-ASR-2026-0D10); retained for history
 created: 2026-11-25
 ---
 

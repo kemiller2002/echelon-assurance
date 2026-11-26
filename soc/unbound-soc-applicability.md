@@ -56,8 +56,8 @@ SRC-SOC-028/029).
     stand-alone Type 1 unless a contract asks for it.
   - **SPD-ADV-003:** a SOC 1 Type 2 is warranted when reliance by more than
     one user auditor makes it cheaper than repeated direct testing.
-  - **RCD-031:** design for SOC 1 Type II (fund-accounting controls) and
-    SOC 2 Type II (platform security). This is readiness only.
+  - **RCD-031:** design for SOC 1 type 2 (fund-accounting controls) and
+    SOC 2 type 2 (platform security). This is readiness only.
 
 These decisions are Unbound's. This analysis tests them against primary
 sources; it does not override them.
@@ -284,8 +284,8 @@ correctly `[auditor-interpretation]`.
 
 ## Owner decision (2026-11-25)
 
-Owner decision `DF-ASR-2026-0D02` sets the **design target** at SOC 1 Type II
-and SOC 2 Type II covering **all five** trust services categories (Security,
+Owner decision `DF-ASR-2026-0D02` sets the **design target** at SOC 1 type 2
+and SOC 2 type 2 covering **all five** trust services categories (Security,
 Availability, Confidentiality, Processing Integrity, Privacy) on shared
 controls. Type I or SOC 3 only with demonstrated commercial benefit. The
 analysis above, which leaned toward deferring Processing Integrity and

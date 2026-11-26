@@ -12,7 +12,7 @@ related_questions: [OQ-763]
 ## Context
 The financial-integrity question disposition for OQ-763 said 'no autonomous agent movement of money outside approved scope', implying movement inside a scope. Unbound's CNV-AIO-001 limits agents to reversible A2 actions in release 1. Its general rule lets agents act up to the recorded authority of their principal, so the prohibition is not permanent there. daf-landscape (invariant 9) gives agents no money-movement authority. Unbound cannot execute payments at all (CNV-LEG-001).
 
-## Decision (proposed)
+## Decision
 BR-FIN-006: AI agents never authorize, approve or release movement of funds or material financial exceptions in any scope. Deterministic workers may act only under recorded sponsor (board) delegation. Unbound relays sponsor-authorized instructions and never executes or settles payments.
 
 ## Consequences

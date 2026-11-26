@@ -350,22 +350,7 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $2,126k | $2,556k | $3,847k | $5,997k | $8,148k |
 | A8-mvp-plus-prevention | $1,438k | $1,923k | $3,380k | $5,808k | $8,235k |
 
-Break-even (smallest product count at which the automated alternative's midpoint is no higher):
-
-| Automated | vs conventional | Break-even N |
-|---|---|---|
-| A4-mvp-echelon | A1-conventional-manual | 1 |
-| A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | 1 |
-| A5-targeted-automation | A1-conventional-manual | 2 |
-| A5-targeted-automation | A2-commercial-platform | 4 |
-| A5-targeted-automation | A3-outsourced-management | none ≤ 30 |
-| A6-hybrid | A1-conventional-manual | 2 |
-| A6-hybrid | A2-commercial-platform | 8 |
-| A6-hybrid | A3-outsourced-management | none ≤ 30 |
-| A7-full-internal-platform | A1-conventional-manual | 4 |
-| A7-full-internal-platform | A2-commercial-platform | 10 |
-| A7-full-internal-platform | A3-outsourced-management | 26 |
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
 
 ### S9-no-exam
 
@@ -384,26 +369,11 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $1,580k | $1,777k | $2,370k | $3,358k | $4,346k |
 | A8-mvp-plus-prevention | $1,032k | $1,367k | $2,372k | $4,048k | $5,724k |
 
-Break-even (smallest product count at which the automated alternative's midpoint is no higher):
-
-| Automated | vs conventional | Break-even N |
-|---|---|---|
-| A4-mvp-echelon | A1-conventional-manual | 1 |
-| A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | 1 |
-| A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 2 |
-| A5-targeted-automation | A3-outsourced-management | 1 |
-| A6-hybrid | A1-conventional-manual | 2 |
-| A6-hybrid | A2-commercial-platform | 3 |
-| A6-hybrid | A3-outsourced-management | 2 |
-| A7-full-internal-platform | A1-conventional-manual | 3 |
-| A7-full-internal-platform | A2-commercial-platform | 6 |
-| A7-full-internal-platform | A3-outsourced-management | 5 |
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
 
 ### S10-partial-reliance
 
-ODP-09 partial reliance: an examination is commissioned and the examiner relies on about half of the system-generated evidence; half the manual non-reliance evidence preparation is charged. No contracted reviewer or external technical validation.
+ODP-09 partial reliance: an examination is commissioned and the examiner relies on about half of the system-generated evidence; half the manual non-reliance evidence preparation is charged. External technical validation of the assurance machinery is included because an examiner relying on system evidence would need it (ACT-045, ACT-071); no contracted reviewer.
 
 Five-year incremental assurance cost, midpoint (low–high in the base case table):
 
@@ -413,31 +383,16 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A2-commercial-platform | $1,312k | $1,803k | $3,275k | $5,729k | $8,183k |
 | A3-outsourced-management | $1,301k | $1,749k | $3,093k | $5,333k | $7,573k |
 | A4-mvp-echelon | $1,168k | $1,611k | $2,942k | $5,161k | $7,379k |
-| A5-targeted-automation | $1,397k | $1,789k | $2,968k | $4,931k | $6,894k |
+| A5-targeted-automation | $1,437k | $1,829k | $3,008k | $4,971k | $6,934k |
 | A6-hybrid | $1,468k | $1,884k | $3,133k | $5,214k | $7,295k |
-| A7-full-internal-platform | $2,018k | $2,384k | $3,481k | $5,309k | $7,138k |
+| A7-full-internal-platform | $2,106k | $2,472k | $3,569k | $5,397k | $7,225k |
 | A8-mvp-plus-prevention | $1,413k | $1,883k | $3,295k | $5,648k | $8,000k |
 
-Break-even (smallest product count at which the automated alternative's midpoint is no higher):
-
-| Automated | vs conventional | Break-even N |
-|---|---|---|
-| A4-mvp-echelon | A1-conventional-manual | 1 |
-| A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | 1 |
-| A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 2 |
-| A5-targeted-automation | A3-outsourced-management | 3 |
-| A6-hybrid | A1-conventional-manual | 2 |
-| A6-hybrid | A2-commercial-platform | 4 |
-| A6-hybrid | A3-outsourced-management | 7 |
-| A7-full-internal-platform | A1-conventional-manual | 3 |
-| A7-full-internal-platform | A2-commercial-platform | 7 |
-| A7-full-internal-platform | A3-outsourced-management | 10 |
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
 
 ### S11-full-reliance
 
-ODP-09 full reliance: an examination is commissioned and the examiner relies on system-generated evidence after testing it. No contracted reviewer or external technical validation.
+ODP-09 full reliance: an examination is commissioned and the examiner relies on system-generated evidence after testing it. External technical validation of the assurance machinery is included because an examiner relying on system evidence would need it (ACT-045, ACT-071); no contracted reviewer.
 
 Five-year incremental assurance cost, midpoint (low–high in the base case table):
 
@@ -447,31 +402,16 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A2-commercial-platform | $1,269k | $1,734k | $3,129k | $5,454k | $7,779k |
 | A3-outsourced-management | $1,276k | $1,709k | $3,008k | $5,173k | $7,338k |
 | A4-mvp-echelon | $1,143k | $1,571k | $2,857k | $5,001k | $7,144k |
-| A5-targeted-automation | $1,289k | $1,617k | $2,602k | $4,243k | $5,884k |
+| A5-targeted-automation | $1,329k | $1,657k | $2,642k | $4,283k | $5,924k |
 | A6-hybrid | $1,360k | $1,712k | $2,767k | $4,526k | $6,284k |
-| A7-full-internal-platform | $1,911k | $2,212k | $3,116k | $4,621k | $6,127k |
+| A7-full-internal-platform | $1,998k | $2,300k | $3,203k | $4,709k | $6,215k |
 | A8-mvp-plus-prevention | $1,388k | $1,843k | $3,210k | $5,488k | $7,765k |
 
-Break-even (smallest product count at which the automated alternative's midpoint is no higher):
-
-| Automated | vs conventional | Break-even N |
-|---|---|---|
-| A4-mvp-echelon | A1-conventional-manual | 1 |
-| A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | 1 |
-| A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 2 |
-| A5-targeted-automation | A3-outsourced-management | 2 |
-| A6-hybrid | A1-conventional-manual | 1 |
-| A6-hybrid | A2-commercial-platform | 2 |
-| A6-hybrid | A3-outsourced-management | 3 |
-| A7-full-internal-platform | A1-conventional-manual | 3 |
-| A7-full-internal-platform | A2-commercial-platform | 5 |
-| A7-full-internal-platform | A3-outsourced-management | 6 |
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
 
 ### S12-customer-specific
 
-ODP-09 customer-specific: no SOC examination; each customer receives generated answers and evidence packages directly, and customer-specific diligence effort doubles (hypothetical). Auditor packaging and external examinations excluded; penetration-test provision retained.
+ODP-09 customer-specific (a sensitivity of S9, not a separate model): no SOC examination; customers receive generated answers and evidence packages directly, represented only by doubling customer-packaging effort (hypothetical). The model has no customer-count dimension, customer-mandated tests or audit-rights assessments; those are recorded as limitations.
 
 Five-year incremental assurance cost, midpoint (low–high in the base case table):
 
@@ -486,22 +426,7 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $1,645k | $1,873k | $2,557k | $3,697k | $4,838k |
 | A8-mvp-plus-prevention | $1,124k | $1,505k | $2,648k | $4,553k | $6,459k |
 
-Break-even (smallest product count at which the automated alternative's midpoint is no higher):
-
-| Automated | vs conventional | Break-even N |
-|---|---|---|
-| A4-mvp-echelon | A1-conventional-manual | 1 |
-| A4-mvp-echelon | A2-commercial-platform | 1 |
-| A4-mvp-echelon | A3-outsourced-management | 1 |
-| A5-targeted-automation | A1-conventional-manual | 1 |
-| A5-targeted-automation | A2-commercial-platform | 1 |
-| A5-targeted-automation | A3-outsourced-management | 1 |
-| A6-hybrid | A1-conventional-manual | 1 |
-| A6-hybrid | A2-commercial-platform | 2 |
-| A6-hybrid | A3-outsourced-management | 2 |
-| A7-full-internal-platform | A1-conventional-manual | 3 |
-| A7-full-internal-platform | A2-commercial-platform | 5 |
-| A7-full-internal-platform | A3-outsourced-management | 5 |
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
 
 
 ## Five-year cost by evidence purpose (midpoint, includes baseline engineering)
@@ -515,7 +440,8 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $85k | $136k | $289k | $544k | $799k |
+| prevention | $0k | $0k | $0k | $0k | $0k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
 | continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
 | shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
@@ -530,10 +456,11 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $34k | $49k | $96k | $174k | $252k |
-| prevention | $278k | $328k | $482k | $736k | $992k |
-| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
-| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| shared-infrastructure | $38k | $49k | $82k | $139k | $195k |
 | auditor-packaging | $118k | $182k | $374k | $694k | $1,014k |
 | customer-packaging | $92k | $138k | $276k | $505k | $735k |
 | external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
@@ -545,9 +472,10 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $165k | $192k | $275k | $413k | $551k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $60k | $90k | $180k | $330k | $480k |
-| continuous-validation | $111k | $121k | $151k | $201k | $251k |
-| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $86k | $86k | $86k | $86k | $86k |
+| operational-evidence | $218k | $249k | $342k | $499k | $655k |
 | shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
 | auditor-packaging | $258k | $404k | $843k | $1,574k | $2,305k |
 | customer-packaging | $75k | $110k | $213k | $386k | $558k |
@@ -560,7 +488,8 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $85k | $136k | $289k | $544k | $799k |
+| prevention | $0k | $0k | $0k | $0k | $0k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
 | continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
 | shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
@@ -575,10 +504,11 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $34k | $49k | $96k | $174k | $252k |
-| prevention | $278k | $328k | $482k | $736k | $992k |
-| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
-| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| shared-infrastructure | $38k | $49k | $82k | $139k | $195k |
 | auditor-packaging | $0k | $0k | $0k | $0k | $0k |
 | customer-packaging | $92k | $138k | $276k | $505k | $735k |
 | external-services | $125k | $200k | $425k | $800k | $1,175k |
@@ -590,9 +520,10 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $165k | $192k | $275k | $413k | $551k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $60k | $90k | $180k | $330k | $480k |
-| continuous-validation | $111k | $121k | $151k | $201k | $251k |
-| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $86k | $86k | $86k | $86k | $86k |
+| operational-evidence | $218k | $249k | $342k | $499k | $655k |
 | shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
 | auditor-packaging | $0k | $0k | $0k | $0k | $0k |
 | customer-packaging | $75k | $110k | $213k | $386k | $558k |
@@ -605,7 +536,8 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $85k | $136k | $289k | $544k | $799k |
+| prevention | $0k | $0k | $0k | $0k | $0k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
 | continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
 | shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
@@ -620,10 +552,11 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $34k | $49k | $96k | $174k | $252k |
-| prevention | $278k | $328k | $482k | $736k | $992k |
-| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
-| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| shared-infrastructure | $38k | $49k | $82k | $139k | $195k |
 | auditor-packaging | $93k | $142k | $289k | $534k | $779k |
 | customer-packaging | $92k | $138k | $276k | $505k | $735k |
 | external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
@@ -635,13 +568,14 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $165k | $192k | $275k | $413k | $551k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $60k | $90k | $180k | $330k | $480k |
-| continuous-validation | $111k | $121k | $151k | $201k | $251k |
-| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $86k | $86k | $86k | $86k | $86k |
+| operational-evidence | $218k | $249k | $342k | $499k | $655k |
 | shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
 | auditor-packaging | $150k | $232k | $477k | $886k | $1,294k |
 | customer-packaging | $75k | $110k | $213k | $386k | $558k |
-| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+| external-services | $453k | $614k | $1,099k | $1,906k | $2,713k |
 
 ### S11-full-reliance, A4-mvp-echelon
 
@@ -650,7 +584,8 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $85k | $136k | $289k | $544k | $799k |
+| prevention | $0k | $0k | $0k | $0k | $0k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
 | continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
 | shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
@@ -665,10 +600,11 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $34k | $49k | $96k | $174k | $252k |
-| prevention | $278k | $328k | $482k | $736k | $992k |
-| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
-| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| shared-infrastructure | $38k | $49k | $82k | $139k | $195k |
 | auditor-packaging | $68k | $102k | $204k | $374k | $544k |
 | customer-packaging | $92k | $138k | $276k | $505k | $735k |
 | external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
@@ -680,13 +616,14 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $165k | $192k | $275k | $413k | $551k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $60k | $90k | $180k | $330k | $480k |
-| continuous-validation | $111k | $121k | $151k | $201k | $251k |
-| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $86k | $86k | $86k | $86k | $86k |
+| operational-evidence | $218k | $249k | $342k | $499k | $655k |
 | shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
 | auditor-packaging | $43k | $60k | $112k | $198k | $284k |
 | customer-packaging | $75k | $110k | $213k | $386k | $558k |
-| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+| external-services | $453k | $614k | $1,099k | $1,906k | $2,713k |
 
 ### S12-customer-specific, A4-mvp-echelon
 
@@ -695,7 +632,8 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $85k | $136k | $289k | $544k | $799k |
+| prevention | $0k | $0k | $0k | $0k | $0k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
 | continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
 | shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
@@ -710,10 +648,11 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $102k | $105k | $113k | $126k | $138k |
 | financial-integrity | $34k | $49k | $96k | $174k | $252k |
-| prevention | $278k | $328k | $482k | $736k | $992k |
-| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
 | operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
-| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| shared-infrastructure | $38k | $49k | $82k | $139k | $195k |
 | auditor-packaging | $0k | $0k | $0k | $0k | $0k |
 | customer-packaging | $184k | $276k | $551k | $1,011k | $1,470k |
 | external-services | $125k | $200k | $425k | $800k | $1,175k |
@@ -725,9 +664,10 @@ Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of eac
 | baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
 | operational-visibility | $165k | $192k | $275k | $413k | $551k |
 | financial-integrity | $0k | $0k | $0k | $0k | $0k |
-| prevention | $60k | $90k | $180k | $330k | $480k |
-| continuous-validation | $111k | $121k | $151k | $201k | $251k |
-| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| prevention | $192k | $192k | $192k | $192k | $192k |
+| remediation | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $86k | $86k | $86k | $86k | $86k |
+| operational-evidence | $218k | $249k | $342k | $499k | $655k |
 | shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
 | auditor-packaging | $0k | $0k | $0k | $0k | $0k |
 | customer-packaging | $150k | $219k | $426k | $771k | $1,116k |

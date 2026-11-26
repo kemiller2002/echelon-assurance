@@ -199,3 +199,18 @@ let ``every evidence path cited by questions, gates and decisions exists`` () =
         |> List.filter (fun p -> not (File.Exists(Path.Combine(root, p)) || Directory.Exists(Path.Combine(root, p))))
 
     Assert.True(List.isEmpty missing, String.concat "\n" missing)
+
+[<Fact>]
+let ``economics activities use known timing and condition values`` () =
+    let header, rows =
+        Csv.table (File.ReadAllText(Path.Combine(root, "economics/v2/activities.csv")))
+
+    let bad =
+        rows
+        |> List.map (fun r -> List.zip header r |> Map.ofList)
+        |> List.filter (fun r ->
+            not (List.contains r["timing"] [ "annual"; "one-time" ])
+            || not (List.contains r["condition"] [ "always"; "reliance"; "nonreliance" ]))
+        |> List.map (fun r -> r["activity_id"])
+
+    Assert.True(List.isEmpty bad, String.concat ", " bad)

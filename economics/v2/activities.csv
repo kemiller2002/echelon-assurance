@@ -9,20 +9,20 @@ ACT-007,A1-conventional-manual,Readiness consultant,consulting,shared,one-time,1
 ACT-008,A1-conventional-manual,Evidence preparation and periodic manual reviews,human-admin,per-product,annual,1,300,800,0,0,0.7,always,hypothetical,,Original model $40k-140k converted to hours at $100-175/h,operational-evidence
 ACT-009,A1-conventional-manual,Audit fieldwork support,human-admin,per-product,annual,2,80,240,0,0,0.6,always,hypothetical,,,auditor-packaging
 ACT-010,A1-conventional-manual,Security questionnaires (manual),customer-diligence,per-product,annual,1,80,200,0,0,0.8,always,hypothetical,,,customer-packaging
-ACT-011,A1-conventional-manual,Remediation of findings,remediation,per-product,annual,1,0,0,8000,35000,0.6,always,hypothetical,,,prevention
+ACT-011,A1-conventional-manual,Remediation of findings,remediation,per-product,annual,1,0,0,8000,35000,0.6,always,hypothetical,,,remediation
 ACT-012,A1-conventional-manual,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,Added for comparability (missing from original A1),external-services
 ACT-013,A2-commercial-platform,Compliance platform subscription,subscription,per-product,annual,1,0,0,15000,35000,0.25,always,vendor-claim,SRC-PTV-029;SRC-PTV-030,Extra frameworks/products assumed +25% each (hypothetical),external-services
 ACT-014,A2-commercial-platform,Platform implementation and integration,shared-build,shared,one-time,1,80,240,0,0,0,always,hypothetical,,,operational-evidence
 ACT-015,A2-commercial-platform,"Ongoing administration, evidence gaps and manual controls (financial, AI)",human-admin,per-product,annual,1,150,400,0,0,0.6,always,hypothetical,,Platforms do not cover financial-integrity or AI-authority controls,operational-evidence
 ACT-016,A2-commercial-platform,Audit fieldwork support,human-admin,per-product,annual,2,40,120,0,0,0.5,always,hypothetical,,,auditor-packaging
 ACT-017,A2-commercial-platform,Security questionnaires (assisted),customer-diligence,per-product,annual,1,40,120,0,0,0.7,always,hypothetical,,,customer-packaging
-ACT-018,A2-commercial-platform,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,,prevention
+ACT-018,A2-commercial-platform,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,,remediation
 ACT-019,A2-commercial-platform,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,Added for comparability,external-services
 ACT-020,A3-outsourced-management,vCISO / compliance management retainer,consulting,per-product,annual,1,0,0,36000,96000,0.3,always,vendor-claim,SRC-ECON-005,,external-services
 ACT-021,A3-outsourced-management,Platform subscription often required by provider,subscription,shared,annual,1,0,0,0,25000,0,always,hypothetical,SRC-PTV-029,,external-services
 ACT-022,A3-outsourced-management,Internal support to provider,human-admin,per-product,annual,1,60,200,0,0,0.6,always,hypothetical,,,operational-evidence
 ACT-023,A3-outsourced-management,Security questionnaires,customer-diligence,per-product,annual,1,25,100,0,0,0.7,always,hypothetical,,,customer-packaging
-ACT-024,A3-outsourced-management,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,,prevention
+ACT-024,A3-outsourced-management,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,,remediation
 ACT-025,A3-outsourced-management,Fractional independent human reviewer (residual),organizational-independent-review,shared,annual,1,0,0,0,10000,0,always,hypothetical,,Retainer provides part of the independent challenge,external-services
 ACT-026,A4-mvp-echelon,"Build registers, validator, release gates and evidence export on existing systems",shared-build,shared,one-time,1,200,500,0,0,0,always,hypothetical,,Largely exists (assurance CLI); enable Praxis/Dokimos gates,continuous-validation
 ACT-027,A4-mvp-echelon,Maintain registers and validators,shared-maintenance,shared,annual,1,60,160,0,0,0,always,hypothetical,,,continuous-validation
@@ -32,11 +32,11 @@ ACT-030,A4-mvp-echelon,Audit fieldwork support,human-admin,per-product,annual,2,
 ACT-031,A4-mvp-echelon,"Security questionnaires (generated from catalog, reviewed)",customer-diligence,per-product,annual,1,30,90,0,0,0.5,always,hypothetical,,,customer-packaging
 ACT-032,A4-mvp-echelon,"Infrastructure (managed storage, CI)",infrastructure-consumption,shared,annual,1,0,0,500,2000,0,always,hypothetical,,"No custom ledger, TSA or witness",shared-infrastructure
 ACT-033,A4-mvp-echelon,"AI consumption (drafting, triage)",ai-consumption,shared,annual,1,0,0,1000,4000,0,always,hypothetical,,,shared-infrastructure
-ACT-034,A4-mvp-echelon,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,,prevention
+ACT-034,A4-mvp-echelon,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,,remediation
 ACT-035,A4-mvp-echelon,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,Decision 0D04,external-services
-ACT-036,A5-targeted-automation,"Build targeted continuous automation (identity drift, evidence envelope, reconciliation, continuous security testing orchestration)",shared-build,shared,one-time,1,500,1200,0,0,0,always,hypothetical,,Reuses existing Echelon systems where verified (capability matrix),operational-evidence
-ACT-037,A5-targeted-automation,"Maintain automation, integrations and validators",shared-maintenance,shared,annual,1,150,400,0,0,0,always,hypothetical,,Maintenance multiplier applies,operational-evidence
-ACT-038,A5-targeted-automation,"Product integration (gates, evidence, domain test suites)",product-build,per-product,one-time,1,80,240,0,0,0.4,always,hypothetical,,,continuous-validation
+ACT-036,A5-targeted-automation,"Build targeted evidence-collection automation (identity drift, evidence envelope, population reconciliation)",shared-build,shared,one-time,1,200,500,0,0,0,always,hypothetical,,"Split 2026-11-26 (review D): evidence-collection part of the former 500-1,200 h line; prevention part is ACT-117",operational-evidence
+ACT-037,A5-targeted-automation,Maintain evidence-collection automation and integrations,shared-maintenance,shared,annual,1,70,180,0,0,0,always,hypothetical,,Split 2026-11-26: prevention part is ACT-118; maintenance multiplier applies,operational-evidence
+ACT-038,A5-targeted-automation,"Product integration (gates, evidence, domain test suites)",product-build,per-product,one-time,1,80,240,0,0,0.4,always,hypothetical,,,operational-evidence
 ACT-039,A5-targeted-automation,Product-specific maintenance,product-maintenance,per-product,annual,1,30,80,0,0,0.5,always,hypothetical,,,operational-evidence
 ACT-040,A5-targeted-automation,Exception handling and generated management review,human-admin,per-product,annual,1,40,120,0,0,0.4,always,hypothetical,,,operational-visibility
 ACT-041,A5-targeted-automation,Audit fieldwork support,human-admin,per-product,annual,2,40,100,0,0,0.4,always,hypothetical,,,auditor-packaging
@@ -44,7 +44,7 @@ ACT-042,A5-targeted-automation,"Security questionnaires (generated, exception re
 ACT-043,A5-targeted-automation,"Infrastructure (managed immutable storage, CI minutes, test environments)",infrastructure-consumption,per-product,annual,1,0,0,1500,6000,0.6,always,hypothetical,,,shared-infrastructure
 ACT-044,A5-targeted-automation,"AI consumption (continuous testing, triage)",ai-consumption,per-product,annual,1,0,0,1500,6000,0.8,always,hypothetical,,,shared-infrastructure
 ACT-045,A5-targeted-automation,External technical validation of assurance machinery,independent-technical-validation,shared,annual,2,0,0,5000,15000,0,always,hypothetical,,Needed for auditor reliance; quotes not obtained (OQ-612),external-services
-ACT-046,A5-targeted-automation,Remediation of findings,remediation,per-product,annual,1,0,0,4000,20000,0.5,always,hypothetical,,Earlier detection assumed to reduce remediation cost (unverified),prevention
+ACT-046,A5-targeted-automation,Remediation of findings,remediation,per-product,annual,1,0,0,4000,20000,0.5,always,hypothetical,,Earlier detection assumed to reduce remediation cost (unverified),remediation
 ACT-047,A5-targeted-automation,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,,external-services
 ACT-048,A5-targeted-automation,Manual evidence preparation when auditor does not rely on system evidence,human-admin,per-product,annual,2,200,500,0,0,0.6,nonreliance,hypothetical,,Downside (ECON-012),auditor-packaging
 ACT-049,A6-hybrid,Build prevention and testing automation (no evidence-collection integrations),shared-build,shared,one-time,1,350,850,0,0,0,always,hypothetical,,,prevention
@@ -57,7 +57,7 @@ ACT-055,A6-hybrid,Audit fieldwork support,human-admin,per-product,annual,2,30,80
 ACT-056,A6-hybrid,Security questionnaires,customer-diligence,per-product,annual,1,15,60,0,0,0.4,always,hypothetical,,,customer-packaging
 ACT-057,A6-hybrid,Infrastructure,infrastructure-consumption,per-product,annual,1,0,0,1000,4000,0.6,always,hypothetical,,,shared-infrastructure
 ACT-058,A6-hybrid,AI consumption,ai-consumption,per-product,annual,1,0,0,1500,6000,0.8,always,hypothetical,,,shared-infrastructure
-ACT-059,A6-hybrid,Remediation of findings,remediation,per-product,annual,1,0,0,4000,20000,0.5,always,hypothetical,,,prevention
+ACT-059,A6-hybrid,Remediation of findings,remediation,per-product,annual,1,0,0,4000,20000,0.5,always,hypothetical,,,remediation
 ACT-060,A6-hybrid,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,,external-services
 ACT-061,A6-hybrid,Manual evidence for financial and AI controls when auditor does not rely on system evidence,human-admin,per-product,annual,2,200,500,0,0,0.6,nonreliance,hypothetical,,"Financial and AI controls are identical to A5, so the same non-reliance effort applies (round 2 correction)",auditor-packaging
 ACT-062,A7-full-internal-platform,Build feature-parity internal compliance platform,shared-build,shared,one-time,1,1600,4000,0,0,0,always,hypothetical,,Original 'full parity' $80k-280k at ~$100-175/h converted and widened,operational-evidence
@@ -70,7 +70,7 @@ ACT-068,A7-full-internal-platform,Security questionnaires,customer-diligence,per
 ACT-069,A7-full-internal-platform,Infrastructure,infrastructure-consumption,shared,annual,1,0,0,3000,8000,0,always,hypothetical,,,shared-infrastructure
 ACT-070,A7-full-internal-platform,AI consumption,ai-consumption,per-product,annual,1,0,0,2000,8000,0.8,always,hypothetical,,,shared-infrastructure
 ACT-071,A7-full-internal-platform,External technical validation of assurance machinery,independent-technical-validation,shared,annual,1,0,0,10000,25000,0,always,hypothetical,,,external-services
-ACT-072,A7-full-internal-platform,Remediation of findings,remediation,per-product,annual,1,0,0,4000,20000,0.5,always,hypothetical,,,prevention
+ACT-072,A7-full-internal-platform,Remediation of findings,remediation,per-product,annual,1,0,0,4000,20000,0.5,always,hypothetical,,,remediation
 ACT-073,A7-full-internal-platform,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,,external-services
 ACT-074,A7-full-internal-platform,Manual evidence preparation when auditor does not rely on system evidence,human-admin,per-product,annual,2,200,500,0,0,0.6,nonreliance,hypothetical,,,auditor-packaging
 ACT-075,A2-commercial-platform,"Platform integration upkeep (connectors, control mappings)",shared-maintenance,shared,annual,1,40,120,0,0,0,always,hypothetical,,Added for symmetry: platforms also need maintenance (review R1-012),operational-evidence
@@ -93,7 +93,7 @@ ACT-091,A8-mvp-plus-prevention,Audit fieldwork support,human-admin,per-product,a
 ACT-092,A8-mvp-plus-prevention,"Security questionnaires (generated from catalog, reviewed)",customer-diligence,per-product,annual,1,30,90,0,0,0.5,always,hypothetical,,(copied from A4),customer-packaging
 ACT-093,A8-mvp-plus-prevention,"Infrastructure (managed storage, CI)",infrastructure-consumption,shared,annual,1,0,0,500,2000,0,always,hypothetical,,"No custom ledger, TSA or witness (copied from A4)",shared-infrastructure
 ACT-094,A8-mvp-plus-prevention,"AI consumption (drafting, triage)",ai-consumption,shared,annual,1,0,0,1000,4000,0,always,hypothetical,,(copied from A4),shared-infrastructure
-ACT-095,A8-mvp-plus-prevention,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,(copied from A4),prevention
+ACT-095,A8-mvp-plus-prevention,Remediation of findings,remediation,per-product,annual,1,0,0,6000,28000,0.6,always,hypothetical,,(copied from A4),remediation
 ACT-096,A8-mvp-plus-prevention,Fractional independent human reviewer,organizational-independent-review,shared,annual,1,0,0,10000,30000,0,always,hypothetical,,Decision 0D04 (copied from A4),external-services
 ACT-097,A8-mvp-plus-prevention,Fractional independent reviewer: per-product key-control review,organizational-independent-review,per-product,annual,2,0,0,3000,10000,1.0,always,hypothetical,,Review volume grows with products (review R2-024); first product included (copied from A4),external-services
 ACT-098,A8-mvp-plus-prevention,Manual evidence when auditor does not rely on gate and envelope evidence,human-admin,per-product,annual,2,40,120,0,0,0.6,nonreliance,hypothetical,,Symmetry (round 2): A4 also produces some system evidence (copied from A4),auditor-packaging
@@ -101,7 +101,7 @@ ACT-099,A8-mvp-plus-prevention,"Build prevention and testing automation (analyze
 ACT-100,A8-mvp-plus-prevention,Maintain prevention and testing automation,shared-maintenance,shared,annual,1,80,220,0,0,0,always,hypothetical,,,prevention
 ACT-101,A8-mvp-plus-prevention,Product test-suite integration,product-build,per-product,one-time,1,40,120,0,0,0.4,always,hypothetical,,,financial-integrity
 ACT-102,A8-mvp-plus-prevention,Product test-suite maintenance,product-maintenance,per-product,annual,1,15,40,0,0,0.5,always,hypothetical,,,financial-integrity
-ACT-103,A8-mvp-plus-prevention,Test infrastructure and AI consumption,infrastructure-consumption,per-product,annual,1,0,0,1500,6000,0.6,always,hypothetical,,,continuous-validation
+ACT-103,A8-mvp-plus-prevention,Test infrastructure and AI consumption,infrastructure-consumption,per-product,annual,1,0,0,1500,6000,0.6,always,hypothetical,,,shared-infrastructure
 ACT-104,A1-conventional-manual,"Mandatory enforced release gates, registers and validator (owner decisions 0D06, 0D07)",shared-build,shared,one-time,1,120,300,0,0,0,always,hypothetical,,Required regardless of alternative (round 3 correction); subset of A4 build without evidence export,continuous-validation
 ACT-105,A1-conventional-manual,"Maintain mandatory gates, registers and validator",shared-maintenance,shared,annual,1,40,100,0,0,0,always,hypothetical,,Required regardless of alternative (round 3 correction),continuous-validation
 ACT-106,A2-commercial-platform,"Mandatory enforced release gates, registers and validator (owner decisions 0D06, 0D07)",shared-build,shared,one-time,1,120,300,0,0,0,always,hypothetical,,Required regardless of alternative (round 3 correction); subset of A4 build without evidence export,continuous-validation
@@ -112,6 +112,8 @@ ACT-110,A5-targeted-automation,"Mandatory enforced release gates, registers and 
 ACT-111,A5-targeted-automation,"Maintain mandatory gates, registers and validator",shared-maintenance,shared,annual,1,40,100,0,0,0,always,hypothetical,,Required regardless of alternative (round 4 correction),continuous-validation
 ACT-112,A6-hybrid,"Mandatory enforced release gates, registers and validator (owner decisions 0D06, 0D07)",shared-build,shared,one-time,1,120,300,0,0,0,always,hypothetical,,Required regardless of alternative (round 4 correction),continuous-validation
 ACT-113,A6-hybrid,"Maintain mandatory gates, registers and validator",shared-maintenance,shared,annual,1,40,100,0,0,0,always,hypothetical,,Required regardless of alternative (round 4 correction),continuous-validation
-ACT-114,ALL,"Shared observability (Vigila): logging, events, metrics, alerting, health checks, independent heartbeat and evidence integration on managed infrastructure",shared-build,shared,once,1,80,240,0,0,0,always,hypothetical,,Owner direction DF-ASR-2026-0D10 (ODP-06); identical in every alternative; hypothetical,operational-visibility
+ACT-114,ALL,"Shared observability (Vigila): logging, events, metrics, alerting, health checks, independent heartbeat and evidence integration on managed infrastructure",shared-build,shared,one-time,1,80,240,0,0,0,always,hypothetical,,Owner direction DF-ASR-2026-0D10 (ODP-06); identical in every alternative; hypothetical,operational-visibility
 ACT-115,ALL,"Operate and maintain shared observability (Vigila), including managed-service consumption",shared-maintenance,shared,annual,1,40,120,600,3600,0,always,hypothetical,,ODP-06; hypothetical,operational-visibility
-ACT-116,ALL,Product integration with shared observability interfaces,product-build,per-product,once,1,16,40,0,0,0.6,always,hypothetical,,ODP-06; hypothetical,operational-visibility
+ACT-116,ALL,Product integration with shared observability interfaces,product-build,per-product,one-time,1,16,40,0,0,0.6,always,hypothetical,,ODP-06; hypothetical,operational-visibility
+ACT-117,A5-targeted-automation,"Build prevention and continuous security testing automation (analyzers, invariant suites, CST orchestration)",shared-build,shared,one-time,1,300,700,0,0,0,always,hypothetical,,Split from ACT-036 (review D); same scope as A8 ACT-099,prevention
+ACT-118,A5-targeted-automation,Maintain prevention and continuous security testing automation,shared-maintenance,shared,annual,1,80,220,0,0,0,always,hypothetical,,Split from ACT-037; same scope as A8 ACT-100; maintenance multiplier applies,prevention

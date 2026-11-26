@@ -124,7 +124,7 @@ law/legitimate business need" exception), and the board report (314.4(i)).
 Do **not** design around the 5,000-consumer exemption (314.6): it is counted per
 institution, and banks expect the exempted elements anyway. `recommendation`.
 
-**Triggers that change the classification:** counsel opinion on OQ-200–OQ-202;
+**Triggers that change the classification:** a recorded resolution of OQ-200–OQ-202 (internal research, or external advice obtained on a recorded trigger);
 choice of a donor-facing brand versus white-label; any lending, custody,
 check-cashing, wire-transfer or tax-preparation service (FTC's own examples,
 SRC-REG-005); a bank contract (makes it contractual immediately).
@@ -150,7 +150,7 @@ triggers. Requirement-level rows are in `REG.csv`.
 | State breach notification (STATE) | 50 states + DC, GU, PR, VI (SRC-REG-042) | Anyone owning, licensing or maintaining residents' PI | **legal** (employee data) | **legal** (as maintainer: notify data owner; sponsors notify residents) | authoritative / high | Deadlines/triggers vary | First real PI |
 | State "reasonable security" (STATE) | e.g., 201 CMR 17 (MA) (SRC-REG-058) | Owners/licensors of MA residents' PI | legal (employee data if MA residents) | contractual via sponsors | authoritative / medium | Whether a processor "licenses" PI | MA residents in data |
 | State comprehensive privacy (STATE) | ~20 state laws; CO, DE, NJ, OR (and per later commentary MD, MN) do not exempt 501(c)(3)s (SRC-REG-043); GLBA exemptions entity- vs data-level, MT narrowed 2025-10-01, CT 2025-10-01 or 2026-07-01 (sources disagree) (SRC-REG-044) | Controllers above thresholds; processors | likely below thresholds | undetermined (processor duties near-certain contractually) | auditor-interpretation / medium | Secondary sources disagree on lists | OQ-209; resident counts per sponsor |
-| NYDFS Part 500 (STATE) | 23 NYCRR 500; final phase 2025-11-01 (SRC-REG-045) | DFS licensees | n/a | not-applicable; contractual if a DFS-licensed partner | auditor-interpretation / medium | — | OQ-211, OQ-216 |
+| NYDFS Part 500 (STATE) | 23 NYCRR 500; final phase 2025-11-01 (SRC-REG-045) | DFS licensees | n/a | undetermined (licensing or covered-entity status open, OQ-216, OQ-301); contractual if a DFS-licensed partner | auditor-interpretation / low | — | OQ-211, OQ-216 |
 | GDPR (GDPR) | Reg. (EU) 2016/679 Art. 3(2) (SRC-REG-041) | Non-EU controllers/processors targeting or monitoring EU data subjects | not-applicable | not-applicable | authoritative / medium | Accessibility ≠ targeting (EDPB, not read) | OQ-208: EU/UK donors, marketing, tracking |
 | IRS DAF rules (IRS) | 26 U.S.C. 4966, 4967, 170(f)(8), 170(f)(18), 6033(k); 26 CFR 1.6001-1 (SRC-REG-046–050) | Sponsors, fund managers, donors | n/a | **contractual** (duties and taxes fall on sponsors, fund managers and donors; platform must enable compliance and not cause violations) | authoritative (law) / medium (classification) | Platform personnel acting with sponsor authority could be argued to be "fund managers" (4966(d)(3)); 170(f)(8)/(18) are donor-deduction conditions, not sponsor duties (OQ-212) | Sponsor contract; Unbound becoming a sponsor itself would make it **legal** |
 | IRS Pub 1075 / e-file (IRS) | FTI safeguards; e-file provider rules | Agencies receiving FTI; EROs/preparers | n/a | not-applicable | assumption / medium | — | Offering tax preparation (also makes operator a Safeguards FI) |
@@ -202,7 +202,7 @@ SOC 1 / SOC 2 (AICPA) are covered by batch B2 and are not classified here.
    entries. `recommendation`.
 4. **Keep card data out** by architecture (processor-hosted fields/redirect) and
    decide who serves the donation page before enabling cards. `recommendation`.
-5. **Privacy is per-sponsor and per-state:** build a counsel-maintained
+5. **Privacy is per-sponsor and per-state:** build a maintained, primary-source-cited
    applicability table rather than one national policy. `recommendation`.
 6. **IRS duties are sponsor duties enforced through platform design**; the
    platform's outputs (acknowledgments, 6033(k) data) are SOC 1-relevant.

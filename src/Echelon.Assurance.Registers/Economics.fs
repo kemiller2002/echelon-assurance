@@ -52,6 +52,7 @@ let purposes =
         "operational-visibility"
         "financial-integrity"
         "prevention"
+        "remediation"
         "continuous-validation"
         "operational-evidence"
         "shared-infrastructure"
@@ -413,21 +414,28 @@ let renderMarkdown all (scenarios: Scenario list) (alternatives: string list) =
         ]
         @ table (fun a n -> money (midpoint (evaluate all s a n).Incremental))
         @ [ "" ]
-        @ [
-            "Break-even (smallest product count at which the automated alternative's midpoint is no higher):"
-            ""
-        ]
-        @ [ "| Automated | vs conventional | Break-even N |"; "|---|---|---|" ]
-        @ (breakEvenPairs
-           |> List.map (fun (c, r) ->
-               sprintf
-                   "| %s | %s | %s |"
-                   c
-                   r
-                   (match breakEven all s c r with
-                    | Some n -> string n
-                    | None -> sprintf "none ≤ %d" breakEvenSearchLimit)))
-        @ [ "" ]
+        @ (if List.contains s.Id purposeScenarios then
+               [
+                   "Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F)."
+                   ""
+               ]
+           else
+               [
+                   "Break-even (smallest product count at which the automated alternative's midpoint is no higher):"
+                   ""
+                   "| Automated | vs conventional | Break-even N |"
+                   "|---|---|---|"
+               ]
+               @ (breakEvenPairs
+                  |> List.map (fun (c, r) ->
+                      sprintf
+                          "| %s | %s | %s |"
+                          c
+                          r
+                          (match breakEven all s c r with
+                           | Some n -> string n
+                           | None -> sprintf "none ≤ %d" breakEvenSearchLimit)))
+               @ [ "" ])
 
     [
         "# Assurance economics model v2 (generated)"
