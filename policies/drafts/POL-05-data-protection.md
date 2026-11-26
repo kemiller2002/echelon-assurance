@@ -7,7 +7,7 @@ owner: Owner
 approval_authority: Board or sole owner
 review: annual
 scope: all data Echelon Foundry creates, receives, processes or stores, in every environment
-authoritative_references: [TSC CC6.1, CC6.7, C1, P1-P8, 16 CFR 314.4(c)(2)-(3) and (c)(6), GLBA 15 USC 6802 (as service provider), state breach and privacy laws, IRS record retention guidance]
+authoritative_references: [TSC CC6.1, CC6.7, C1, P1-P8, 16 CFR 314.4(c)(2)-(3) and (c)(6), GLBA 15 USC 6802 (if applicable, as service provider; classification not assumed, OQ-202), state breach and privacy laws, IRS record retention guidance]
 ---
 
 # POL-05 Data Protection Policy

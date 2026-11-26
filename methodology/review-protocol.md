@@ -39,7 +39,7 @@ checked by deterministic tests and the validators (`assurance validate`,
    - The coordinator fixes or escalates every material finding.
    - A fresh reviewer verifies the fixes (status `fixed`, `partially-fixed`, `not-fixed` or `new`).
    - Repeat until a round finds no new material defect, or the remaining items need owner decisions, external evidence or implementation.
-7. **Record provenance.** Each round's findings are kept with scope, round and dispositions in `findings/challenge-passes/` (consolidation rounds) or `findings/reviews/` (final reconciliation, `RV-ASR-2026-11-26.md`). The stopping rationale goes in the validation report, and disagreements, assumptions, limitations and unresolved risks go in the relevant register.
+7. **Record provenance.** Each round's findings are kept with scope, round and dispositions in `findings/challenge-passes/` (consolidation rounds) or `findings/reviews/` (final reconciliation, `RV-ASR-2026-11-26.md`). The stopping rationale goes in the review record (`findings/reviews/RV-ASR-2026-11-26.md` for the final reconciliation; the validation report points to it), and disagreements, assumptions, limitations and unresolved risks go in the relevant register.
 
 ## Known limits
 

@@ -411,7 +411,7 @@ Break-even is not reported for ODP-09 scenarios: no product-count threshold gate
 
 ### S12-customer-specific
 
-ODP-09 customer-specific (a sensitivity of S9, not a separate model): no SOC examination; customers receive generated answers and evidence packages directly, represented only by doubling customer-packaging effort (hypothetical). The model has no customer-count dimension, customer-mandated tests or audit-rights assessments; those are recorded as limitations.
+ODP-09 customer-specific (a sensitivity of S9, not a separate model): no SOC examination; customers receive generated answers and evidence packages directly, represented only by doubling customer-packaging cost (hours and cash) (hypothetical). The model has no customer-count dimension, customer-mandated tests or audit-rights assessments; those are recorded as limitations.
 
 Five-year incremental assurance cost, midpoint (low–high in the base case table):
 

@@ -126,8 +126,8 @@ must come from elsewhere. [recommendation]
   [observed]
 - **Customers (user entities) are sponsors**, and potentially partners
   (white-label/servicing institutions). Donors and advisors are end users
-  of sponsors, not Unbound's contracting customers. [assumption derived
-  from the observed role definitions; OQ-753]
+  of sponsors, not Unbound's contracting customers. [owner decision 1, DF-ASR-2026-0D01, which answered
+  OQ-753]
 
 ### 4.2 Financial administration activities
 

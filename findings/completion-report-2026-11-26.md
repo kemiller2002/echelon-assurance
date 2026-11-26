@@ -134,7 +134,7 @@ The adversarial challenge ran in rounds 2–51, all recorded in the same review 
 
 ## 11. Validation results
 
-Validation is run on the final head locally, and CI runs the same checks on every push and pull request. It covers:
+Validation is run on the final head locally. CI runs the same checks on pull requests and on pushes to `main`; branch commits made after the merge have no CI run until a pull request is opened, so they are validated locally only. It covers:
 
 - the validator (`assurance validate`)
 - fragment-merge currency
@@ -150,7 +150,7 @@ Validation is run on the final head locally, and CI runs the same checks on ever
 
 - **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is active. Owner record DF-ASR-2026-0D11 directs validating the exact final commit under Praxis before merge and approves enabling verified completion in scope (OQ-704); enabling it is WI-PRAXIS-03.
 - **Verified completion is blocked.** At commit fdd0736, the claim on WI-ASR-FINAL succeeded (claimant claude-code, generation 1). Three validations ran under `praxis work validate-run` and passed: repository tests, `praxis validate` and the governed-record check. `praxis work complete-verified` then refused with `--authority FILE (or PRAXIS_COMPLETION_AUTHORITY) is required`. No completion authority with pinned verifier keys is provisioned in this repository (WI-PRAXIS-03). Creating one from an agent-held key would make the receipt self-attested, so it was not done. The claim was released, and WI-ASR-FINAL stays active.
-- **Merge.** PR #3 was merged into `main` at 2c2c4f3 (merge commit 9ab2b00) at the owner's direct instruction given in chat, without Praxis verified completion. That instruction is not otherwise recorded in the repository. PR #2 was merged, and PR #1 was closed as superseded; its content is mapped by the 0E01 record and its branch is kept. Fixes made after the merge (rounds 53–54) are on the same branch and need a new pull request. Verified completion of WI-ASR-FINAL is still not done.
+- **Merge.** PR #3 was merged into `main` at 2c2c4f3 (merge commit 9ab2b00) at the owner's direct instruction given in chat, without Praxis verified completion. That instruction is not otherwise recorded in the repository. PR #2 was merged, and PR #1 was closed as superseded; its content is mapped by the 0E01 record and its branch is kept. Fixes made after the merge are on the same branch and need a new pull request. Verified completion of WI-ASR-FINAL is still not done.
 - **Branch protection.** `main` is not protected: GitHub reports `protected: false`, and no rulesets apply (WI-ASR-03, OQ-700/OQ-761). Only the owner can apply rulesets.
 
 ## 13. Remaining external dependencies

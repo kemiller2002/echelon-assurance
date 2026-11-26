@@ -290,7 +290,7 @@ bounds what a hijacked agent can do *(recommendation)*:
    signal (AIN-033).
 7. Testing: automated injection corpus on every change (VAL-005) and human
    adaptive red-team quarterly (VAL-006), since the CAISI results show
-   static robustness cannot be assumed *(recommendation)*.
+   static robustness cannot be assumed *(recommendation; with one human the human red-team is not independent of the developer today, see `validation/independent-validation-architecture.md`)*.
 
 Residual risk acceptance is an owner decision (OQ-616).
 
@@ -371,7 +371,7 @@ Everything else is L4 or lower (block and route to a human).
 - Pre-deployment per role: task accuracy on frozen golden sets, citation
   fidelity, refusal/denial of prohibited actions, injection resistance
   (VAL-021, VAL-005).
-- Evaluators and red-teamers are not the agent's developers
+- Evaluators and red-teamers are not the agent's developers (with one human this cannot be met today; see the consolidation note in `validation/independent-validation-architecture.md`)
   (REQ-AIRMF-006 MEASURE 1.3; REQ-AIRMF-012 MS-1.3-003).
 - Ongoing: correction rate (human edits to agent drafts), denial rate,
   citation failure rate, cost, latency, drift canary; using Praxis metrics
