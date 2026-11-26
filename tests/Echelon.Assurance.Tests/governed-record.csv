@@ -413,7 +413,7 @@ file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,GEMINI.md,0fd756e53f9269f4
 file,HANDOFF.md,0360e7138952a2ed
-file,PROJECT-CHARTER.md,4cd66634cb4bb856
+file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,d98097165f28b4e7
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
 file,ai-governance/ai-governance-model.md,38e19697fd871e1a
@@ -481,7 +481,7 @@ file,framework/standards/IDENTIFIERS.md,18c7f078aef2e319
 file,framework/standards/NAMING-STANDARD.md,fec4343ab4b8d149
 file,framework/standards/TAXONOMY.md,91fbbd647a090d10
 file,global.json,b48d6da8fa62c0da
-file,governance/operating-model.md,8603d94fd495c39c
+file,governance/operating-model.md,54ebb3c629a132f9
 file,integration/capability-findings.md,c5b68d9d5c40aa12
 file,integration/echelon-integration-matrix.md,babd05395746f435
 file,integration/proposed-changes.md,934bdfb05351b6c1
@@ -559,7 +559,7 @@ file,src/Echelon.Assurance.Registers/Traceability.fs,4d5747ee191d2e4a
 file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
 file,trust-center/customer-trust-center-specification.md,3e33552e7635c7ee
-file,validation/assurance-system-resilience.md,ad483d54b9c41185
+file,validation/assurance-system-resilience.md,7ede48f396effc06
 file,validation/continuous-security-testing-specification.md,ff818cec8a1f6890
 file,validation/independent-validation-architecture.md,d27a058ee08c1303
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43

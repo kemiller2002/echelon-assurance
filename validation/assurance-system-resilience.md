@@ -110,6 +110,6 @@ does not control. In increasing order of independence:
 - It cannot make Echelon's own verification independent; only external
   parties provide independence (`independent-validation-architecture.md` §3).
 - Tamper-evidence rests on the managed retention lock (external anchoring deferred under DF-ASR-2026-C002) continuing and on the
-  anchoring party's integrity.
+  storage provider's integrity.
 - Retention-lock and storage immutability guarantees are provider features
   whose claims (vendor-claim) require verification during implementation.

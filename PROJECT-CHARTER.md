@@ -18,6 +18,8 @@ commercial compliance platforms, supports credible external attestation,
 scales across Echelon products, and meets the expectations of financial
 institutions and enterprise customers.
 
+*(Note, 2026-11-26: "independently" is an aim. With one human, no organizational independence is available or contracted (DF-ASR-2026-0D04, 0D0F); validation independence is stated per control in the `controls/README.md` vocabulary.)*
+
 The program challenges conventional compliance workflows rather than
 automating them unexamined.
 
