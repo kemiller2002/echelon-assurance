@@ -15,11 +15,11 @@ authoritative_references: [AT-C 320 / SSAE 18 (SOC 1 control objectives, if a SO
 ## Principle
 Financial correctness is enforced by invariants in the system and proved by independent-source reconciliation, rather than inferred from sampling individual transactions.
 
-Detailed requirements: FIN-BC-001..024 (`requirements/financial-integrity-by-construction.md`), mapped to CTL-FIN controls in the catalog.
+Detailed requirements: the BR-FIN rows of `requirements/baseline.csv` (DF-ASR-2026-C001), which consolidate FIN-BC-001..024 (historical source, `requirements/financial-integrity-by-construction.md`) and apply C006 where they differ; mapped to CTL-FIN controls in the catalog.
 
 ## 01 Transaction authorization
 1. Every financial action (contribution acceptance, grant recommendation approval, disbursement release, fee assessment, investment instruction, adjustment) requires authority recorded in the customer's authority matrix and enforced by the application.
-2. Above customer-defined thresholds, two distinct authorized humans approve; the initiator cannot approve. AI agents may prepare and recommend but never authorize, approve or release funds in any scope. Execution is deterministic: a deterministic worker acts only under a recorded human authorization or an established recurring authority (for example, a sponsor-approved recurring grant) revalidated at execution, and payment execution stays on the sponsor's rails (ODP-10, DF-ASR-2026-0D10; DF-ASR-2026-C004; BR-FIN-006, BR-FIN-015).
+2. Above customer-defined thresholds, two distinct authorized humans approve; the initiator cannot approve. AI agents may recommend but never prepare, alter or release payment instructions, and never authorize, approve or release funds, in any scope (BR-AI-001, DF-ASR-2026-C004). Execution is deterministic: a deterministic worker acts only under a recorded human authorization or an established recurring authority (for example, a sponsor-approved recurring grant) revalidated at execution, and payment execution stays on the sponsor's rails (ODP-10, DF-ASR-2026-0D10; DF-ASR-2026-C004; BR-FIN-006, BR-FIN-015).
 
 ## 02 Accounting integrity
 1. The ledger is double-entry; every posting balances; postings are immutable.

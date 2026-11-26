@@ -1,12 +1,14 @@
 ---
 id: DF-ASR-2026-3A1E
 title: No new Echelon system for assurance; evidence ledger extends Arca, identity and monitoring use managed services
-status: proposed
-decided_by: pending owner
+status: superseded
+decided_by: never decided (superseded by owner decision 10, DF-ASR-2026-0D0A, and consolidation decision DF-ASR-2026-C002)
 date: 2026-11-25
 ---
 
 # DF-ASR-2026-3A1E
+
+> **Superseded.** Owner decision 10 (DF-ASR-2026-0D0A) and accepted decision DF-ASR-2026-C002 replace this proposal: managed retention-locked evidence storage; hash chaining, external anchoring and RFC 3161 timestamping are deferred until a requirement is recorded. Kept for history.
 
 ## Context
 Charter §13 forbids creating a new Echelon system until existing systems are

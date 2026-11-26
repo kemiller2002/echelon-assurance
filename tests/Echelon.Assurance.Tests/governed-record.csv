@@ -227,7 +227,7 @@ controls,CTL-APP-008,0aaac49a660cd418
 controls,CTL-APP-009,ac22e8a3f499be4f
 controls,CTL-APP-010,100f4a6cade47a92
 controls,CTL-ASR-001,90e54d377b3ea580
-controls,CTL-ASR-002,f185e8cfc99e68a8
+controls,CTL-ASR-002,244c6cbb6451eee9
 controls,CTL-ASR-003,23db827fc2857270
 controls,CTL-ASR-004,2be7ed32117d91ef
 controls,CTL-ASR-005,7545e2a6b23944c9
@@ -413,7 +413,7 @@ file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,7bb8add47b6d5cbb
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
-file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,8fd9e2878505b201
+file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,3a3211757f4894d5
 file,docs/decisions/DF-ASR-2026-7B20--small-team-approval-and-independence-rule.md,dc6bff23c6b698fe
 file,docs/decisions/DF-ASR-2026-C001--requirements-hierarchy-and-authoritative-baseline.md,568d421344d56828
 file,docs/decisions/DF-ASR-2026-C002--managed-immutable-evidence-storage-replaces-custom-ledger.md,049b81129b272519
@@ -445,13 +445,13 @@ file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
 file,policies/drafts/POL-03-people-security.md,b9b107dff77d24ea
 file,policies/drafts/POL-04-identity-and-access.md,639b8a6bf9596b66
 file,policies/drafts/POL-05-data-protection.md,d82bf45d84eb99fa
-file,policies/drafts/POL-06-secure-engineering-and-change.md,56fc36969de6eeaa
+file,policies/drafts/POL-06-secure-engineering-and-change.md,6e22d89088cd6394
 file,policies/drafts/POL-07-operations-security.md,3adc46f931f49bd1
 file,policies/drafts/POL-08-incident-response-and-notification.md,de6101ae0e5e9259
 file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
 file,policies/drafts/POL-11-ai-and-autonomous-systems.md,706c1a622f8c3001
-file,policies/drafts/POL-12-financial-operations-integrity.md,74c82a721e0c46d8
+file,policies/drafts/POL-12-financial-operations-integrity.md,2b0c91534651a8eb
 file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
 file,policies/policy-inventory.md,6287fa883f03a960
 file,requirements/README.md,bf7a0c418b406b69
