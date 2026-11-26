@@ -403,7 +403,7 @@ evidence_types,EVT-034,a3a7d30ae7ec1adc
 evidence_types,EVT-035,c7a137bb212e7eaf
 file,.config/dotnet-tools.json,ef4e0624483aa32d
 file,.editorconfig,0936594621dc51a6
-file,.github/workflows/assurance-validation.yml,ce47f6456e76dd42
+file,.github/workflows/assurance-validation.yml,855dddc978c2268c
 file,.github/workflows/praxis-validation.yml,1c890c25e5a3bee0
 file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
@@ -447,7 +447,7 @@ file,requirements/organizational-governance.md,451db1a155039645
 file,requirements/reconciliation-and-roadmap.md,3556f4d692e2e88d
 file,requirements/security-by-construction.md,2eaa65de0590478c
 file,src/Echelon.Assurance.Cli/Echelon.Assurance.Cli.fsproj,b512aac6c08e03c4
-file,src/Echelon.Assurance.Cli/Program.fs,b0f0b97a975c877f
+file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
 file,src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj,3e2a5ded3dbf9f35
 file,src/Echelon.Assurance.Registers/Economics.fs,f747a88548c6ac57
@@ -457,7 +457,7 @@ file,src/Echelon.Assurance.Registers/Roadmap.fs,51474dcaf0ab534a
 file,src/Echelon.Assurance.Registers/Schema.fs,9db3dd6397580e37
 file,src/Echelon.Assurance.Registers/Tco.fs,c1ccfb6b97d51289
 file,src/Echelon.Assurance.Registers/Traceability.fs,e12c26d0e103f060
-file,src/Echelon.Assurance.Registers/Validation.fs,71d7f48a9df763be
+file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
 open_questions,OQ-100,b127549be306754a
 open_questions,OQ-101,26f919865c9a481a

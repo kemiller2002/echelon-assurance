@@ -31,6 +31,9 @@ automating them unexamined.
 - Unbound is the reference implementation; design is organization-wide.
 - Other repositories are read-only; proposed changes are recorded here.
 - Repository must remain private; sensitive material is never committed.
+  *(Superseded by owner decision DF-ASR-2026-0D05: the repository is public and
+  limited to the permitted public content classes in
+  `SECURITY-AND-CONFIDENTIALITY.md`; sensitive material is never committed.)*
 
 ## Deliverables
 

@@ -41,7 +41,9 @@ let rec private files (dir: string) : string seq =
 
 let private scannedFiles root =
     files root
-    |> Seq.filter (fun p -> Validation.scannedSuffixes |> List.exists (fun s -> p.EndsWith s))
+    |> Seq.filter (fun p ->
+        let lower = p.ToLowerInvariant()
+        Validation.scannedSuffixes |> List.exists (fun s -> lower.EndsWith s))
     |> Seq.map (fun p -> Path.GetRelativePath(root, p), File.ReadAllText p)
     |> List.ofSeq
 
