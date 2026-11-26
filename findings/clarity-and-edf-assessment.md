@@ -96,7 +96,7 @@ one (ODP-02; no external reviewer is engaged now, DF-ASR-2026-0D0F).
 | System capabilities | Observed: tests executed for Arca, Dokimos, Strata, Tutela and partially Praxis; source inspection for the rest. Inference: README claims are excluded. |
 | Governance checks advisory | Observed through a read-only API check of branch rules on 2026-11-25 (question disposition agent) |
 | Root causes listed in the Origin Network | Inference from the observed artifacts and commit history; not confirmed with the owner |
-| Disputed point | Whether the Vigila decision (0D0D) or the Registry deferral reflects the owner's current intent; both records are dated 2026-11-25 |
+| Disputed point | Resolved by ODP-06 (DF-ASR-2026-0D10): Vigila is retained as the observability initiative; the Registry deferral record awaits reconciliation (WI-VIGILA-01) |
 
 ### Control Points and ranking
 | Rank | Control point | Influence | Controllability | Cost | Confidence |
@@ -117,7 +117,7 @@ It is **not** sufficient for implementation authorizations, which depend on
 capability work and external answers.
 
 **Unknowns:**
-- The owner's current intent on observability (0D0D versus the Registry record).
+- Observability intent is resolved by ODP-06 (DF-ASR-2026-0D10: Vigila retained); reconciling the Registry record remains open (WI-VIGILA-01).
 - Auditor reliance on system-generated evidence.
 - The legal characterization of the payment-partner rail (internal research; external advice only after an owner reassessment).
 - The actual cost of maintaining internal automation.

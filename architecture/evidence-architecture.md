@@ -257,7 +257,7 @@ streaming and repository inventory reconciliation [recommendation].
 
 | Retention class | Content | Proposed minimum | Basis |
 |---|---|---|---|
-| `R-AUDIT` | Control operating evidence | Audit period + 1 year, pending advice | assumption; OQ-502 |
+| `R-AUDIT` | Control operating evidence | Audit period + 1 year, pending OQ-502 research | assumption; OQ-502 |
 | `R-FIN` | Financial-transaction and reconciliation evidence | Undetermined (tax/banking rules) | open-question OQ-502 |
 | `R-SEC` | Security logs, incidents | Undetermined | open-question |
 | `R-INTEGRITY` | Envelopes, checkpoints, TSA tokens, witness cosigs | ≥ longest payload class + renewal of timestamps | recommendation |

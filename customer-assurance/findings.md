@@ -6,7 +6,7 @@ platform). Research only; no repository was modified. Companion files:
 (SRC-CAQ-001..024, all retrieved or read on 2026-11-25).
 
 Current-state baseline used for every answer: Unbound has no production deployment; all 121
-controls in `echelon-assurance/controls/control-catalog.csv` are `Designed`; all 84 policy
+controls in `echelon-assurance/controls/control-catalog.csv` are `Designed`; all 83 policy
 entries in `policies/policy-inventory.csv` are `drafted` (none adopted); no SOC report,
 certification, external penetration test or insurance policy exists.
 
@@ -37,7 +37,7 @@ inventory, evidence types, `requirements/organizational-governance.md` (GOV-BC-0
 
 | # | Issue | Evidence | Recommended resolution |
 |---|---|---|---|
-| C1 | Two control catalogs. echelon-due-diligence has 642 `ECTL-*` controls and 617 `EVR-*` evidence requirements; echelon-assurance has 121 `CTL-*` controls and 30 `EVT-*` evidence types. No crosswalk exists. | `controls/*.jsonl` vs `controls/control-catalog.csv` | Make echelon-assurance `CTL-*` authoritative for answers (as this bank does); add an `ECTL -> CTL` crosswalk; retire or mark ECTL as research-only |
+| C1 | Two control catalogs. echelon-due-diligence has 642 `ECTL-*` controls and 617 `EVR-*` evidence requirements; echelon-assurance has 121 `CTL-*` controls and 35 `EVT-*` evidence types. No crosswalk exists. | `controls/*.jsonl` vs `controls/control-catalog.csv` | Make echelon-assurance `CTL-*` authoritative for answers (as this bank does); add an `ECTL -> CTL` crosswalk; retire or mark ECTL as research-only |
 | C2 | Status vocabularies differ: DD `proposed-target-state`/`partially-implemented`/`verified-operational`; assurance `Designed`. Bank uses `designed`/`not-started`/`unknown`/`not-applicable`. | DD answer schema; catalog `status` | Define one lifecycle (for example Designed, Implemented, Operating, Independently-verified) and map both |
 | C3 | Disclosure tiers differ: assurance spec has 4 tiers (Public, Prospect, Customer, Bank partner); DD-TC-002 has 6 (public, authenticated-prospect, NDA, existing customer, auditor-only, internal). Bank uses 3 (public, customer-nda, restricted) as instructed. | Both trust-center specs | Adopt DD's 6 tiers as the storage model; derive the 3-class view for questionnaires |
 | C4 | Pen-test letter tier: assurance spec puts it at Prospect (NDA click-through); DD TC-RED-002 says NDA tier only. Compatible but worded differently. | ASR-TRUST-SPEC-001 §2; DD-TC-002 | Harmonize wording on NDA |

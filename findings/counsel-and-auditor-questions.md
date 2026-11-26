@@ -15,8 +15,8 @@ interpretation**, not a legal conclusion and not a statement of auditor acceptan
 Common facts for every package:
 
 - Unbound is a donor-advised-fund (DAF) administration platform. Under owner decision 1 (DF-ASR-2026-0D01), Echelon runs it as a commercial technology and servicing platform for sponsoring charities and financial institutions. Donors and advisors use it only through those organizations. Echelon does not act as sponsor and does not hold custody of assets.
-- In the initial design, funds stay in bank accounts owned by the sponsor, and every flow is authorized by the sponsor. There is no platform custody or money transmission (REC item 17), and no direct contract with a bank is assumed. Card payments are deferred.
-- Operations are US-first (owner direction ODP-10). There is no deliberate EU/UK targeting.
+- In the initial design, funds stay in bank accounts owned by the sponsor, and every flow is authorized by the sponsor. The design avoids platform custody and money transmission (REC item 17; the legal conclusion is open, OQ-216), and no direct contract with a bank is assumed. Card payments are deferred.
+- Operations are US-first (owner direction ODP-10); the proposed design does not deliberately target the EU/UK (OQ-208).
 - Controls are designed for SOC 1 type 2 and SOC 2 type 2 across all five trust categories (decision 2). GLBA Safeguards Rule elements are the design baseline, adopted without claiming they legally apply (decision 3).
 - AI agents act within delegated tiers; in financial domains AI agents are capped at A2; they never prepare, alter or release payment instructions and never authorize, approve or release money movement in any scope (BR-AI-001, BR-FIN-006, DF-ASR-2026-C004); financial execution is deterministic under a recorded human authorization or an established recurring authority set by a human, and enforced technical gates apply (decision 4; ODP-10).
 

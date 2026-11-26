@@ -31,7 +31,7 @@ Devices accessing nonpublic data are managed: full-disk encryption, screen lock,
 ## 05 Penetration and security testing
 1. Internal security testing (automated and manual) runs continuously.
 2. Independent external penetration testing is performed when reassessment against risk and actual customer, contractual, insurer or regulatory obligations requires it, and then at the frequency those obligations set (commonly annually and after significant change), by testers independent of the development team. At the development stage external testing is deferred and comprehensive continuous internal testing applies (owner direction DF-ASR-2026-0D0F).
-3. Automated scanning is never represented as a penetration test. External reports are restricted; customers receive attestation letters.
+3. Automated scanning is never represented as a penetration test. External reports, if any test is performed, are restricted; customers then receive attestation letters.
 4. A public vulnerability disclosure policy and security.txt are maintained.
 
 ## 06 Logging, audit trails and monitoring
