@@ -489,6 +489,26 @@ let deferredMechanismTerms =
         "hash-chained ledger"
     ]
 
+/// Claims an answer may not make while its controls are not operating, or that
+/// contradict owner direction DF-ASR-2026-0D0F at the development stage.
+let unsupportedClaimTerms =
+    [
+        "report available"
+        "soc 2 type ii report"
+        "soc 2 type 2 report"
+        "soc 1 type 2 report"
+        "we are soc"
+        "certified"
+        "contracted independent reviewer"
+        "independent reviewer reviews"
+        "reviewed by an independent"
+        "outside counsel review"
+        "counsel reviews"
+        "penetration test was performed"
+        "penetration tested annually"
+        "fractional"
+    ]
+
 /// Public answers may not describe non-operating controls, and no answer may
 /// describe a deferred mechanism.
 let answerDisclosure (controls: Record list) (answers: Record list) =
@@ -525,7 +545,21 @@ let answerDisclosure (controls: Record list) (answers: Record list) =
             |> List.filter text.Contains
             |> List.map (sprintf "customer-assurance/question-bank.csv: %s describes deferred mechanism '%s'" id)
 
-        let deferred = deferredEvidence @ deferredText
+        let anyNonOperating =
+            items a "related_control_ids"
+            |> List.exists (fun c -> rank (Map.tryFind c status |> Option.defaultValue "") < rank "Operating")
+
+        let unsupported =
+            if anyNonOperating || List.isEmpty (items a "related_control_ids") then
+                unsupportedClaimTerms
+                |> List.filter text.Contains
+                |> List.map (
+                    sprintf "customer-assurance/question-bank.csv: %s claims '%s' without operating controls" id
+                )
+            else
+                []
+
+        let deferred = deferredEvidence @ deferredText @ unsupported
 
         publicErr @ deferred)
 
@@ -937,6 +971,79 @@ let removalAuthority (dispositions: Record list) (decisions: Record list) =
             (field d "source_req_id")
             (field d "disposition"))
 
+/// A done work item's dependencies are done.
+let doneDependencies (backlog: Record list) =
+    let status =
+        backlog
+        |> List.map (fun w -> field w "work_item_id", field w "status")
+        |> Map.ofList
+
+    backlog
+    |> List.filter (fun w -> field w "status" = "done")
+    |> List.collect (fun w ->
+        items' w
+        |> List.filter (fun d -> Map.tryFind d status |> Option.defaultValue "" <> "done")
+        |> List.map (sprintf "roadmap/backlog.csv: %s is done but its dependency %s is not" (field w "work_item_id")))
+
+/// An agent or automated performer never holds an organizational, professional
+/// or external independence level (DF-ASR-2026-0D0F).
+let performerIndependence (validations: Record list) =
+    let agentLike (p: string) =
+        let t = p.ToLowerInvariant()
+
+        let human =
+            [
+                "engineer"
+                "human"
+                "person"
+                "operator"
+                "operations"
+                "reviewer outside"
+                "firm"
+            ]
+            |> List.exists t.StartsWith
+
+        not human
+        && ([ "agent"; "claude"; "model"; "ai "; "pipeline"; "harness"; "ci " ]
+            |> List.exists t.Contains)
+
+    let reserved =
+        set
+            [
+                "internal-independent"
+                "qualified-professional"
+                "external-technical"
+                "external-penetration"
+                "external-attestation"
+            ]
+
+    validations
+    |> List.filter (fun v ->
+        agentLike (field v "performed_by")
+        && reserved.Contains(field v "independence_level"))
+    |> List.map (fun v ->
+        sprintf
+            "registers/validation-procedures.csv: %s performed by '%s' cannot be %s"
+            (field v "validation_id")
+            (field v "performed_by")
+            (field v "independence_level"))
+
+/// Tenets cite only accepted decisions.
+let tenetDecisions (tenets: Record list) (decisions: Record list) =
+    let accepted =
+        decisions
+        |> List.filter (fun d -> field d "status" = "accepted")
+        |> List.map (fun d -> field d "decision_id")
+        |> set
+
+    tenets
+    |> List.collect (fun t ->
+        items t "decision_ids"
+        |> List.filter (accepted.Contains >> not)
+        |> List.map (
+            sprintf "registers/tenets.csv: %s cites %s, which is not an accepted decision" (field t "tenet_id")
+        ))
+
 let errors (loaded: Loaded) =
     let r = records loaded
     let baseline = r "baseline"
@@ -970,6 +1077,9 @@ let errors (loaded: Loaded) =
     @ identifierReferences loaded
     @ ownerDecisionAnswers (r "question_dispositions") (r "decisions")
     @ removalAuthority (r "source_dispositions") (r "decisions")
+    @ doneDependencies (r "backlog")
+    @ performerIndependence (r "validations")
+    @ tenetDecisions (r "tenets") (r "decisions")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 

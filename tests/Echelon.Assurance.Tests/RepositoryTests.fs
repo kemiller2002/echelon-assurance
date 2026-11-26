@@ -174,6 +174,48 @@ let ``corrupted committed registers fail validation`` () =
          >> List.map (Map.add "validation_ids" "VAL-041"))
     |> reports "Tested"
 
+    // Round 4 (reviewer J).
+    corrupt
+        "backlog"
+        (List.map (fun w ->
+            if w["work_item_id"] = "WI-ASR-06" then
+                w |> Map.add "status" "done"
+            else
+                w))
+    |> reports "WI-ASR-06 is done but its dependency"
+
+    corrupt
+        "question_bank"
+        (List.map (fun a ->
+            if a["question_id"] = "CAQ-002" then
+                a
+                |> Map.add
+                    "proposed_answer"
+                    "A contracted independent reviewer and outside counsel review all controls; SOC 2 Type II report available"
+            else
+                a))
+    |> reports "CAQ-002 claims"
+
+    corrupt
+        "validations"
+        (List.map (fun v ->
+            if v["validation_id"] = "VAL-001" then
+                v
+                |> Map.add "independence_level" "external-attestation"
+                |> Map.add "performed_by" "Claude review agent"
+            else
+                v))
+    |> reports "VAL-001 performed by"
+
+    corrupt
+        "tenets"
+        (List.map (fun t ->
+            if t["tenet_id"] = "TNT-01" then
+                t |> Map.add "decision_ids" "DF-ASR-2026-C005"
+            else
+                t))
+    |> reports "TNT-01 cites DF-ASR-2026-C005"
+
     // Round 3 (reviewer H): emptied gate lists, closing legal questions, removing owner requirements.
     corrupt
         "production_gates"
@@ -391,3 +433,134 @@ let ``closed questions and removed or deferred source items match the governed r
 
     Assert.Equal<Set<string>>(closedQuestions, actualClosed)
     Assert.Equal<Set<string>>(narrowed, actualNarrowed)
+
+/// Ratchet (round 4, reviewer J): lowering a question's blocking tier, adding
+/// an accepted decision, marking work done, changing risk treatment from
+/// mitigate, or introducing a new control owner role are governed changes and
+/// must edit this test in the same pull request, citing the authority.
+[<Fact>]
+let ``gating questions, accepted decisions, done work, risk acceptance and owner roles match the governed record`` () =
+    let field name col pred =
+        records name |> List.filter pred |> List.map (fun r -> r[col]) |> set
+
+    Assert.Equal<Set<string>>(
+        set
+            [
+                "OQ-102"
+                "OQ-104"
+                "OQ-105"
+                "OQ-200"
+                "OQ-201"
+                "OQ-202"
+                "OQ-203"
+                "OQ-204"
+                "OQ-205"
+                "OQ-206"
+                "OQ-208"
+                "OQ-209"
+                "OQ-210"
+                "OQ-211"
+                "OQ-212"
+                "OQ-213"
+                "OQ-214"
+                "OQ-215"
+                "OQ-216"
+                "OQ-217"
+                "OQ-300"
+                "OQ-301"
+                "OQ-302"
+                "OQ-303"
+                "OQ-306"
+                "OQ-307"
+                "OQ-311"
+                "OQ-312"
+                "OQ-313"
+                "OQ-502"
+                "OQ-503"
+                "OQ-504"
+                "OQ-508"
+                "OQ-603"
+                "OQ-606"
+                "OQ-607"
+                "OQ-608"
+                "OQ-609"
+                "OQ-610"
+                "OQ-614"
+                "OQ-615"
+                "OQ-616"
+                "OQ-700"
+                "OQ-703"
+                "OQ-704"
+                "OQ-706"
+                "OQ-709"
+                "OQ-710"
+                "OQ-752"
+                "OQ-756"
+                "OQ-757"
+                "OQ-761"
+                "OQ-762"
+                "OQ-764"
+                "OQ-804"
+            ],
+        field "question_dispositions" "oq_id" (fun q ->
+            q["blocking_tier"] = "production-launch"
+            || q["blocking_tier"] = "implementation")
+    )
+
+    Assert.Equal<Set<string>>(
+        set
+            [
+                "DF-ASR-2026-0D01"
+                "DF-ASR-2026-0D02"
+                "DF-ASR-2026-0D03"
+                "DF-ASR-2026-0D04"
+                "DF-ASR-2026-0D05"
+                "DF-ASR-2026-0D06"
+                "DF-ASR-2026-0D07"
+                "DF-ASR-2026-0D08"
+                "DF-ASR-2026-0D09"
+                "DF-ASR-2026-0D0A"
+                "DF-ASR-2026-0D0B"
+                "DF-ASR-2026-0D0C"
+                "DF-ASR-2026-0D0D"
+                "DF-ASR-2026-0D0E"
+                "DF-ASR-2026-C001"
+                "DF-ASR-2026-C002"
+                "DF-ASR-2026-C003"
+                "DF-ASR-2026-C004"
+                "DF-ASR-2026-C006"
+                "DF-ASR-2026-0D0F"
+                "DF-ASR-2026-0D10"
+            ],
+        field "decisions" "decision_id" (fun d -> d["status"] = "accepted")
+    )
+
+    Assert.Equal<Set<string>>(
+        set [ "WI-ASR-01"; "WI-ASR-02"; "WI-ASR-13"; "WI-ASR-14" ],
+        field "backlog" "work_item_id" (fun w -> w["status"] = "done")
+    )
+
+    Assert.Empty(field "risks" "risk_id" (fun r -> r["treatment"] = "accept" || r["status"] <> "identified"))
+
+    Assert.Equal<Set<string>>(
+        set [ "Engineering lead"; "Finance/controls owner"; "Owner" ],
+        field "controls" "owner_role" (fun _ -> true)
+    )
+
+[<Fact>]
+let ``every decision record file exists and names its decision`` () =
+    let bad =
+        records "decisions"
+        |> List.filter (fun d ->
+            let path = Path.Combine(root, d["record_path"])
+            // Owner records are the owner's own words and are not edited to add
+            // identifiers; which decisions cite them is fixed by the ratchet above.
+            let ownerRecord = d["record_path"].StartsWith "docs/decisions/owner-"
+
+            not (
+                File.Exists path
+                && (ownerRecord || File.ReadAllText(path).Contains(d["decision_id"]))
+            ))
+        |> List.map (fun d -> d["decision_id"])
+
+    Assert.True(List.isEmpty bad, String.concat ", " bad)
