@@ -12,7 +12,7 @@ journal: JR-ASR-2026-C001
 
 The following commands were run locally on the final head with the .NET 10 SDK
 (10.0.404). The same steps run in CI (`.github/workflows/assurance-validation.yml`).
-CI passed on c346fa7 and later pushed commits whose checks have completed, except 5ca1af2; the final head is validated locally as recorded in the completion report. CI failed on two intermediate commits. The first was ba8c2aa (an unquoted comma in two OT-02 rows broke CSV parsing; 5 of 93 tests and the validator failed), which was fixed sixteen seconds later by c346fa7. CI also failed on 5ca1af2 (REQ-STATE-005 had no mapped control after its reclassification; the local gate had not stopped the commit), fixed by 54b2913; CI history after c346fa7 is recorded in `findings/reviews/RV-ASR-2026-11-26.md`.
+CI passed on c346fa7 and later pushed commits whose checks have completed, except 5ca1af2 and c52de07 (the owner's record commit, which failed the governed-record test by design until 3aeef7f governed it); the final head is validated locally as recorded in the completion report. CI failed on two intermediate commits. The first was ba8c2aa (an unquoted comma in two OT-02 rows broke CSV parsing; 5 of 93 tests and the validator failed), which was fixed sixteen seconds later by c346fa7. CI also failed on 5ca1af2 (REQ-STATE-005 had no mapped control after its reclassification; the local gate had not stopped the commit), fixed by 54b2913; CI history after c346fa7 is recorded in `findings/reviews/RV-ASR-2026-11-26.md`.
 
 | Check | Command | Result |
 |---|---|---|
@@ -222,6 +222,6 @@ reconciliation are in `context/CURRENT-STATE.md`; adversarial rounds and their
 stopping rationale are in the review record. Round 51 was the first round in
 which no reviewer found a material new finding; a separate verifier then checked
 the minor fixes made after it. The owner record DF-ASR-2026-0D11 reopened the
-review: rounds 52 and 53 found 1 and 5 material findings, all fixed, and a
-further clean round is pending. The completion report is
+review; per-round counts and the current stopping status are kept only in the
+review record. The completion report is
 `findings/completion-report-2026-11-26.md`.

@@ -414,7 +414,7 @@ file,CLAUDE.md,e401b9fc1ca10cc1
 file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,GEMINI.md,0fd756e53f9269f4
-file,HANDOFF.md,0360e7138952a2ed
+file,HANDOFF.md,5bb1efb614ababbb
 file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,7691a8f95f0b9ffe
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
@@ -424,7 +424,7 @@ file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,8384baf9452192cd
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
 file,context/ARCHITECTURE.md,597841df183adb8c
-file,context/CURRENT-STATE.md,eb63593388cd2aaf
+file,context/CURRENT-STATE.md,61bb222adb5e06b0
 file,context/DECISIONS.md,5c8440043f359a82
 file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
@@ -467,12 +467,12 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,68763a822684b2fd
 file,findings/clarity-and-edf-assessment.md,896aa16bd483adb1
-file,findings/completion-report-2026-11-26.md,3d68a8036c813057
+file,findings/completion-report-2026-11-26.md,2171b2d43cd0ef0d
 file,findings/counsel-and-auditor-questions.md,1709ddafd6817b97
-file,findings/executive-findings.md,c844aec3d90ae823
+file,findings/executive-findings.md,ff0cf864d8cd3251
 file,findings/financial-integrity-review.md,ff57b38bfb7f38c9
-file,findings/reviews/RV-ASR-2026-11-26.md,dd477124cb91b8b4
-file,findings/validation-report.md,3ed360ced7ad6974
+file,findings/reviews/RV-ASR-2026-11-26.md,9ac0234c325cc242
+file,findings/validation-report.md,0834a9b8890f72e6
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
 file,framework/policies/OUTPUT-POLICY.md,f8f0403b2ec80c1f
@@ -492,7 +492,7 @@ file,integration/proposed-changes.md,8bdad6e82b0c32fe
 file,methodology/identifiers.md,1a70739a1118e343
 file,methodology/research-methodology.md,50096ce4322b2e32
 file,methodology/review-protocol.md,d26aea16300b8ac2
-file,pentest/penetration-testing-research.md,6ecbfce5dca9f80a
+file,pentest/penetration-testing-research.md,ba4c50622fc923af
 file,pentest/unbound-minimum-cost-testing-strategy.md,f8c4087a9027c4cf
 file,policies/drafts/POL-01-assurance-governance.md,599faa69d9d7778a
 file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
@@ -511,7 +511,7 @@ file,policies/policy-inventory.md,c74ee7381b270eab
 file,policy-as-code/policy-as-code-specification.md,2f1a3a3829d32f6d
 file,policy-as-code/tool-evaluation.md,5b8a2a8dcbf1d475
 file,regulatory/framework-crosswalk-method.md,a0d4bbfce0581ef8
-file,regulatory/regulatory-applicability-matrix.md,4590011ed6adfb23
+file,regulatory/regulatory-applicability-matrix.md,f0bebcd8573d183c
 file,requirements/README.md,ddb5003eb4ccde76
 file,requirements/ai-governance-independent-validation.md,7c9bb9fad1beb3f7
 file,requirements/assurance-economics.md,e265ba4586a7e3b1

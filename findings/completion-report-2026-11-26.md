@@ -130,11 +130,11 @@ The adversarial challenge ran in rounds 2–51, all recorded in the same review 
 
 **Round 51 found no material finding in any slice.** A separate verifier then checked the minor fixes made after round 51 and found nothing material. Remaining coverage limits are stated there: some cross-repository claims could not be re-checked locally.
 
-**After DF-ASR-2026-0D11.** The owner's question-resolutions record reopened the review. Round 52 (three slices) found one material finding. Round 53 (five slices, full coverage) found five, all in the reconciliation text or the review status. All are fixed. The stopping condition (a round with no material finding) is not yet met again for the reconciled state; see the review record.
+**After DF-ASR-2026-0D11.** The owner's question-resolutions record reopened the review. From round 52 on, rounds continue on the reconciliation and the post-merge fixes. The authoritative per-round counts and the current stopping status are in `findings/reviews/RV-ASR-2026-11-26.md`; summaries here deliberately do not repeat them.
 
 ## 11. Validation results
 
-Validation is run on the final head; CI runs the same checks on the PR. It covers:
+Validation is run on the final head locally, and CI runs the same checks on every push and pull request. It covers:
 
 - the validator (`assurance validate`)
 - fragment-merge currency
@@ -144,7 +144,7 @@ Validation is run on the final head; CI runs the same checks on the PR. It cover
 - 96 tests, including regression tests that corrupt committed registers and fixtures and require failure
 - Praxis validation
 
-**CI history.** CI failed twice on intermediate commits, ba8c2aa and 5ca1af2. Both were fixed (`findings/validation-report.md`).
+**CI history.** CI failed on three intermediate commits: ba8c2aa and 5ca1af2, both fixed, and c52de07, the owner's record commit, which failed the governed-record test by design until the record was governed (3aeef7f). See `findings/validation-report.md` and the review record.
 
 ## 12. Governance status
 
@@ -172,3 +172,4 @@ All eleven gates, PG-01 to PG-11 in `registers/production-gates.csv`, are `not-m
 5. Decide whether to accept or further restrict the residual risk of research agents before production use (OQ-616).
 6. Decide on sensitivity: history wording in commit 23f06b4, author metadata in `.ros/events/events.jsonl`, and the example actor identifier in `docs/agent-provenance.md`.
 7. Decide whether to open a pull request for the post-merge fixes.
+8. State commercial intent for future services when planned (OQ-114, OQ-766; the scoping rule is approved, DF-ASR-2026-0D11).
