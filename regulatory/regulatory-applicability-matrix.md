@@ -9,7 +9,7 @@ updated: 2026-11-25
 review_cycle: quarterly
 ---
 
-> **Consolidation note (2026-11-25).** The funds-flow regulatory review, covering 12 flows with characterization-determining facts and counsel questions, is in `findings/financial-integrity-review.md`. Primary texts retrieved on 2026-11-25 include:
+> **Consolidation note (2026-11-25).** The funds-flow regulatory review, covering 12 flows with characterization-determining facts and prepared legal questions, is in `findings/financial-integrity-review.md`. Primary texts retrieved on 2026-11-25 include:
 > - 31 CFR 1010.100(ff);
 > - FIN-2014-R012;
 > - 16 CFR 314.4(d)(2) and 314.6;

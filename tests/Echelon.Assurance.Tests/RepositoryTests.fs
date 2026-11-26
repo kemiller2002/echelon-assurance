@@ -581,7 +581,7 @@ let ``governed fields match the committed governed record`` () =
     Assert.NotEmpty committed
 
     let files =
-        Directory.EnumerateFiles(root, "*.csv", SearchOption.AllDirectories)
+        Directory.EnumerateFiles(root, "*.*", SearchOption.AllDirectories)
         |> Seq.map (fun p -> Path.GetRelativePath(root, p).Replace('\\', '/'), p)
         |> Seq.filter (fst >> Governed.coversFile)
         |> Seq.map (fun (rel, p) -> rel, File.ReadAllText p)
@@ -720,3 +720,11 @@ let ``economics inputs are in the governed record`` () =
     Assert.NotEmpty(Governed.differencesWith committed loaded changed)
     Assert.True(Governed.coversFile path)
     Assert.False(Governed.coversFile "economics/v2/generated/results.csv")
+
+[<Fact>]
+let ``owner decision records are in the governed record`` () =
+    let path = "docs/decisions/owner-review-direction-2026-11-25.md"
+    let content = File.ReadAllText(Path.Combine(root, path))
+    let committed = Governed.full loaded [ path, content ]
+    Assert.True(Governed.coversFile path)
+    Assert.NotEmpty(Governed.differencesWith committed loaded [ path, content + "\nEngage legal counsel." ])

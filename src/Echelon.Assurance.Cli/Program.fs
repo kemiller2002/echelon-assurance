@@ -141,7 +141,7 @@ let private governedPath root =
 
 /// Writes the governed-record snapshot; with --check, reports differences.
 let private repositoryCsvFiles (root: string) =
-    Directory.EnumerateFiles(root, "*.csv", SearchOption.AllDirectories)
+    Directory.EnumerateFiles(root, "*.*", SearchOption.AllDirectories)
     |> Seq.map (fun p -> Path.GetRelativePath(root, p).Replace('\\', '/'), p)
     |> Seq.filter (fst >> Governed.coversFile)
     |> Seq.map (fun (rel, p) -> rel, File.ReadAllText p)

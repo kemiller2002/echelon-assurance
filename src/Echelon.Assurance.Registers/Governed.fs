@@ -48,13 +48,14 @@ let coversFile (relative: string) =
     let p = relative.Replace('\\', '/')
     let registerPaths = Schema.registers |> List.map (fun s -> s.Path) |> set
 
-    p.EndsWith ".csv"
-    && not (registerPaths.Contains p)
-    && not (
-        [ "/generated/"; "/fragments/"; "/bin/"; "/obj/" ] |> List.exists p.Contains
-        || [ "tests/"; "registries/"; ".git/"; "node_modules/" ]
-           |> List.exists p.StartsWith
-    )
+    (p.StartsWith "docs/decisions/" && p.EndsWith ".md")
+    || p.EndsWith ".csv"
+       && not (registerPaths.Contains p)
+       && not (
+           [ "/generated/"; "/fragments/"; "/bin/"; "/obj/" ] |> List.exists p.Contains
+           || [ "tests/"; "registries/"; ".git/"; "node_modules/" ]
+              |> List.exists p.StartsWith
+       )
 
 /// Digest rows for covered input files (whole file, line endings normalized).
 let fileSnapshot (files: (string * string) list) =

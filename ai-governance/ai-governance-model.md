@@ -407,8 +407,9 @@ Verified by VAL-022. *(recommendation; REQ-AIRMF-004.)*
 - Internal assurance agents that do not interact with the public and do not
   make decisions about natural persons appear unlikely to be high-risk;
   however, territorial scope, Article 4 literacy and Article 50 transparency
-  for any future donor-facing assistant are **undetermined** and go to
-  counsel (OQ-600). *(open-question)*
+  for any future donor-facing assistant are **undetermined** and are worked by internal
+  legal research, with external advice only after an owner reassessment under
+  DF-ASR-2026-0D0F (OQ-600). *(open-question)*
 
 ## 21. Contradictions and limits preserved
 

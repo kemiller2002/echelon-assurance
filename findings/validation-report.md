@@ -1,7 +1,7 @@
 ---
 id: ASR-VAL-REPORT-001
 title: Validation report — assurance consolidation
-status: final for this initiative (owner decisions outstanding)
+status: final for this initiative (owner decisions recorded: DF-ASR-2026-0D0F, DF-ASR-2026-0D10)
 created: 2026-11-25
 journal: JR-ASR-2026-C001
 ---
@@ -18,7 +18,7 @@ CI passed on every pushed commit of PR #3.
 |---|---|---|
 | Formatting | `dotnet fantomas --check src tests` | pass |
 | Build | `dotnet build Echelon.Assurance.sln -c Release` | 0 errors, 0 warnings |
-| Unit and repository tests | `dotnet test` | 64 passed at consolidation (33 before this initiative); 90 passed after the final reconciliation (2026-11-26, section 4) |
+| Unit and repository tests | `dotnet test` | 64 passed at consolidation (33 before this initiative); 91 passed after the final reconciliation (2026-11-26, section 7) |
 | Register validation and traceability | `assurance validate .` | `OK: all registers valid` |
 | Fragment merge | `assurance merge --check .` | no warnings |
 | Generated views current | `assurance roadmap`, `trace`, `econ`, `tco`, then `git diff --exit-code` | current |
@@ -65,7 +65,7 @@ round actively tried to disprove the previous conclusions. All findings are in
 **The most consequential corrections the passes forced:**
 
 1. **Economics conclusion reversed twice.** The first run favored targeted automation, then the hybrid. Once maintenance, non-reliance, mandatory gates and reviewer growth were charged to every alternative, the evidence supports minimum viable assurance. Internal automation shows no clear cash saving at one or two products. Evidence-collection automation pays only with auditor reliance and scale. *(Superseded for decisions by the ODP-09 recalculation, DF-ASR-2026-0D0F: costs are now separated by evidence purpose, no product-count threshold applies, and statements that evidence automation pays only with auditor reliance and scale no longer hold; see `economics/v2/README.md`.)*
-2. **FinCEN analysis.** Limb (i)(B), "any other person engaged in the transfer of funds", had been omitted. A legal reading was stated as fact. Counsel is now a pre-launch owner decision (ODP-12).
+2. **FinCEN analysis.** Limb (i)(B), "any other person engaged in the transfer of funds", had been omitted. A legal reading was stated as fact. Legal engagement was decided under ODP-12: none now; internal research and prepared questions (DF-ASR-2026-0D0F).
 3. **Evidence storage.** The replacement for the custom ledger was not actually immutable in the interim. A compliance-mode retention lock now applies from the first production evidence.
 4. **Independence wording.** Owner-administered reconciliation, heartbeat and alerts were called "independent". They are separately credentialed and detect failure, not owner action.
 5. **Payment dispatch.** Unbound could have held credentials sufficient to move money. Activation is now blocked for any channel without a sponsor-side control.
@@ -104,7 +104,7 @@ The owner then pushed `docs/decisions/owner-review-direction-2026-11-25.md`, reg
 - **Risks.** RSK-064 added.
 - **Customer answers.** CAQ-005 and CAQ-049 updated.
 
-Validation was rerun after reconciliation (64 tests at that point; 90 after the final reconciliation, section 4) and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
+Validation was rerun after reconciliation (64 tests at that point; 91 after the final reconciliation, section 7) and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
 
 ## 3b. Owner remaining approvals and Praxis installation
 
@@ -184,9 +184,9 @@ All remaining items were fixed in the final commits:
 | Every outstanding question has a disposition and next action | Met | 115 rows in `registers/question-dispositions.csv`; validator enforces it |
 | Every material contradiction resolved or escalated | Met | Decisions C001–C006; ODP-01 to ODP-12; owner-record conflicts (Vigila, Strata) escalated as ODP-06 and ODP-07 |
 | Proposed capabilities distinguished from verified | Met | `integration/capability-verification.csv` with basis and status; validator blocks inflation |
-| Economic model reproducible and internally consistent | Met, with hypothetical inputs | `assurance econ`; CI currency check; 12 unit tests; no quotes exist |
+| Economic model reproducible and internally consistent | Met, with hypothetical inputs | `assurance econ`; CI currency check; 17 unit tests; no quotes exist |
 | Roadmap dependency-driven | Met | Validator: phase order, cycles, coverage, launch gates |
-| All applicable repository validation checks pass | Met for the assurance validator, tests and Praxis validate/registry check; **verified completion not met** (WI-ASR-CONSOLIDATION was closed by plain completion; WI-ASR-FINAL is the final work item; see section 4) | Section 1; section 3b; `findings/reviews/RV-ASR-2026-11-26.md` |
+| All applicable repository validation checks pass | Met for the assurance validator, tests and Praxis validate/registry check; **verified completion not met** (WI-ASR-CONSOLIDATION was closed by plain completion; WI-ASR-FINAL is the final work item; see section 7) | Section 1; section 3b; `findings/reviews/RV-ASR-2026-11-26.md` |
 | No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; six review rounds |
 | Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items, all decided by DF-ASR-2026-0D0F and 0D10) |
 
@@ -205,7 +205,7 @@ All remaining items were fixed in the final commits:
 - No auditor, counsel, bank, insurer or customer has reviewed anything.
 - Economic inputs are hypothetical or vendor claims.
 
-## 4. Final reconciliation (2026-11-26)
+## 7. Final reconciliation (2026-11-26)
 
 Commits after `fd6153a` reconciled the owner directions of 2026-11-25 and
 were reviewed by six separately initialized agents (A–F), with findings
