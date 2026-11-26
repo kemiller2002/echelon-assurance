@@ -658,3 +658,46 @@ let ``round 5 corruptions change the governed record`` () =
             else
                 a))
     |> reports "CAQ-002 claims"
+
+[<Fact>]
+let ``round 6 corruptions of any column change the governed record`` () =
+    let committed = Governed.snapshot loaded
+
+    let changes l =
+        Assert.NotEmpty(Governed.differences committed l)
+
+    corrupt
+        "tenets"
+        (List.map (fun t ->
+            if t["tenet_id"] = "TNT-01" then
+                t |> Map.add "statement" "Agents may approve money movement"
+            else
+                t))
+    |> changes
+
+    corrupt
+        "decisions"
+        (List.map (fun d ->
+            if d["decision_id"] = "DF-ASR-2026-0D0F" then
+                d |> Map.add "summary" "External reviewer on retainer"
+            else
+                d))
+    |> changes
+
+    corrupt
+        "controls"
+        (List.map (fun c ->
+            if c["control_id"] = "CTL-FIN-006" then
+                c |> Map.add "applicability" "not-applicable"
+            else
+                c))
+    |> changes
+
+    corrupt
+        "risks"
+        (List.map (fun r ->
+            if r["risk_id"] = "RSK-002" then
+                r |> Map.add "likelihood" "low"
+            else
+                r))
+    |> changes

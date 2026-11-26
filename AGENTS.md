@@ -100,9 +100,8 @@ dotnet run --project src/Echelon.Assurance.Cli -- governed --check
 ./praxis registry check && ./praxis validate
 ```
 
-**Governed record.** A change to a governed field (status, applicability,
-independence, authority, gating, legal position or customer answer; list in
-`src/Echelon.Assurance.Registers/Governed.fs`) fails the tests until the
+**Governed record.** A change to any field of any register
+(`src/Echelon.Assurance.Registers/Governed.fs`) fails the tests until the
 snapshot `tests/Echelon.Assurance.Tests/governed-record.csv` is regenerated
 with `assurance governed`. Regenerate only after the change is justified in the
 pull request, citing its authority; the snapshot diff is what reviewers check.

@@ -72,8 +72,8 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Under owner direction DF-ASR-2026-0D0F no fractional reviewer is engaged now; internal multi-agent review with deterministic verification is used for development review, and `Tested` rests on protected deterministic verification (VAL-040, technically separated) for executable controls. Multiple-agent review (VAL-041) is approved for development review only and never supports `Tested`, so judgment controls cannot reach `Tested` until a technically separated or organizational validator exists. Technical separation is not organizational independence and is never described as such; a stakeholder who requires organizational independence (an examiner, a bank partner) is told so (ODP-02).
 8. **Questions.** No question was falsely closed:
    - 28 depend on the auditor, 21 on legal research (no counsel is engaged; prepared questions only, ODP-12) and 16 on customers.
-   - 18 are answered, 17 of them by owner decision; 2 proposals remain on commercial intent (OQ-114, OQ-766).
-   - None blocks requirements finalization. 95 remain open, with their external dependencies preserved.
+   - 17 are answered, 16 by owner decision and one (OQ-807) by implementation evidence; 2 are superseded; 2 owner decisions on commercial intent are deferred (OQ-114, OQ-766).
+   - None blocks requirements finalization. 96 remain open, with their external dependencies preserved.
 
 ## 3. Owner decisions and what remains
 
