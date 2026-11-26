@@ -230,9 +230,11 @@ redesigned.
 - Additions specific to agents *(recommendation)*:
   - Agent-authored commits carry authenticated agent identity (not just a
     co-author trailer) so review rules can key on it.
-  - An agent never approves or merges its own pull request; a human review is
-    required for agent-authored changes to security-relevant paths (identity,
-    authorization, evidence, controls, CI, policy).
+  - An agent never approves or merges its own pull request; the owner's explicit
+    approval is required for the elevated change classes of BR-SDL-003
+    (authorization, ledger, payment-adapter, release, tenant-isolation,
+    policy, privilege, verifier and required-check changes); routine work
+    proceeds under the standing authorization of DF-ASR-2026-0D04.
   - **Test-weakening protection**: changes that delete or relax tests,
     assertions, lint rules, coverage thresholds or CI steps are classified as
     control weakening (P6) and require human approval; mutation score is
