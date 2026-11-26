@@ -384,17 +384,35 @@ let launchGates (baseline: Record list) (backlog: Record list) =
             )
         | _ -> None)
 
-/// A control may be Tested only when a validation procedure at
-/// internal-independent level or higher supports it (controls/README.md).
+/// Independence levels at or above technically separated verification
+/// (owner decision ODP-02, DF-ASR-2026-0F02). Agent review, technical
+/// separation, organizational independence, qualified professional review and
+/// external attestation are distinct; this set only orders them for the
+/// Tested rule and never makes them interchangeable.
+let technicallySeparatedOrHigher =
+    set
+        [
+            "technically-separated"
+            "internal-independent"
+            "qualified-professional"
+            "external-technical"
+            "external-penetration"
+            "external-attestation"
+        ]
+
+/// Judgment controls (automation target L0-L2) may also be Tested on
+/// multiple-agent review, because no deterministic verifier can test them.
+let private judgmentLevels = set [ "L0"; "L1"; "L2" ]
+
+/// A control may be Tested only when a validation procedure at technically
+/// separated level or higher supports it, or, for judgment controls, a
+/// multiple-agent review (controls/README.md).
 let testedNeedsIndependence (controls: Record list) (validations: Record list) =
-    let independent =
-        set
-            [
-                "internal-independent"
-                "external-technical"
-                "external-penetration"
-                "external-attestation"
-            ]
+    let acceptable (c: Record) =
+        if judgmentLevels.Contains(field c "automation_target") then
+            technicallySeparatedOrHigher.Add "agent-review"
+        else
+            technicallySeparatedOrHigher
 
     let level =
         validations
@@ -405,7 +423,7 @@ let testedNeedsIndependence (controls: Record list) (validations: Record list) =
     |> List.filter (fun c -> rank (field c "status") >= rank "Tested")
     |> List.filter (fun c ->
         items c "validation_ids"
-        |> List.exists (fun v -> independent.Contains(Map.tryFind v level |> Option.defaultValue ""))
+        |> List.exists (fun v -> (acceptable c).Contains(Map.tryFind v level |> Option.defaultValue ""))
         |> not)
     |> List.map (fun c ->
         sprintf
@@ -473,6 +491,57 @@ let answerDisclosure (controls: Record list) (answers: Record list) =
 
         publicErr @ deferred)
 
+/// The twelve owner decision items and the two owner tenets reconciled under
+/// DF-ASR-2026-0D0F and DF-ASR-2026-0D10.
+let ownerItems = [ for n in 1..12 -> sprintf "ODP-%02d" n ] @ [ "OT-01"; "OT-02" ]
+
+/// Every owner item has a traceability row naming an accepted decision, and
+/// each row covers every baseline requirement that the item's source
+/// disposition lists (bidirectional traceability of owner decisions).
+let decisionTraceability (decisions: Record list) (traces: Record list) (dispositions: Record list) =
+    let traced = traces |> List.map (fun t -> field t "item_id") |> set
+
+    let accepted =
+        decisions
+        |> List.filter (fun d -> field d "status" = "accepted")
+        |> List.map (fun d -> field d "decision_id")
+        |> set
+
+    let missing =
+        ownerItems
+        |> List.filter (traced.Contains >> not)
+        |> List.map (sprintf "registers/decision-traceability.csv: owner item %s has no traceability row")
+
+    let notAccepted =
+        traces
+        |> List.filter (fun t -> not (accepted.Contains(field t "decision_id")))
+        |> List.map (fun t ->
+            sprintf
+                "registers/decision-traceability.csv: %s cites %s, which is not an accepted decision"
+                (field t "item_id")
+                (field t "decision_id"))
+
+    let bySource =
+        dispositions |> List.map (fun d -> field d "source_req_id", d) |> Map.ofList
+
+    let incomplete =
+        traces
+        |> List.collect (fun t ->
+            match Map.tryFind (field t "item_id") bySource with
+            | None ->
+                [
+                    sprintf "registers/decision-traceability.csv: %s is not dispositioned" (field t "item_id")
+                ]
+            | Some d ->
+                let listed = items t "br_ids" |> set
+
+                items d "baseline_ids"
+                |> List.filter (listed.Contains >> not)
+                |> List.map (fun br ->
+                    sprintf "registers/decision-traceability.csv: %s omits %s" (field t "item_id") br))
+
+    missing @ notAccepted @ incomplete
+
 let errors (loaded: Loaded) =
     let r = records loaded
     let baseline = r "baseline"
@@ -493,6 +562,7 @@ let errors (loaded: Loaded) =
     @ answerDisclosure controls (r "question_bank")
     @ launchGates baseline (r "backlog")
     @ testedNeedsIndependence controls (r "validations")
+    @ decisionTraceability (r "decisions") (r "decision_traceability") (r "source_dispositions")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 
@@ -570,6 +640,42 @@ let render (loaded: Loaded) =
         "|---|---|---|---|---|"
     ]
     @ reverse
+    @ [
+        ""
+        "## Owner decisions → affected requirements, controls, policies, work items, questions"
+        ""
+        "| Item | Decision | Requirements | Controls | Policies | Work items | Questions |"
+        "|---|---|---|---|---|---|---|"
+    ]
+    @ (r "decision_traceability"
+       |> List.map (fun t ->
+           sprintf
+               "| %s | %s | %s | %s | %s | %s | %s |"
+               (field t "item_id")
+               (field t "decision_id")
+               (cell (field t "br_ids"))
+               (cell (field t "control_ids"))
+               (cell (field t "policy_ids"))
+               (cell (field t "work_item_ids"))
+               (cell (field t "question_ids"))))
+    @ [
+        ""
+        "## Reverse: requirement → owner decisions"
+        ""
+        "| Requirement | Owner decisions |"
+        "|---|---|"
+    ]
+    @ (baseline
+       |> List.choose (fun b ->
+           let id = field b "br_id"
+
+           match
+               r "decision_traceability"
+               |> List.filter (fun t -> items t "br_ids" |> List.contains id)
+               |> List.map (fun t -> sprintf "%s (%s)" (field t "item_id") (field t "decision_id"))
+           with
+           | [] -> None
+           | ds -> Some(sprintf "| %s | %s |" id (String.concat ", " ds))))
     @ [ ""; "## Traceability findings"; "" ]
     @ (if List.isEmpty problems then
            [ "None." ]

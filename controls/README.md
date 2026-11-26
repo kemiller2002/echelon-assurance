@@ -17,7 +17,7 @@ Adopted from Unbound `SOC2-019` and extended:
 | `Specified` | Implementation specification exists | Linked specification |
 | `Implemented` | Mechanism exists in a system | Code/config reference and test |
 | `Operating` | Has produced operating evidence in the real environment | Dated evidence records |
-| `Tested` | Effectiveness tested by a validation procedure | `VAL-` result with independence level `internal-independent` or higher; automated or self-assessment results alone never support `Tested` |
+| `Tested` | Effectiveness tested by a validation procedure | A `VAL-` result at `technically-separated` level or higher (separately credentialed verifier with bound receipts, VAL-040); for judgment controls (automation target L0–L2) the multiple-agent review protocol (`agent-review`, VAL-041) suffices (owner direction DF-ASR-2026-0D0F). Levels are distinct and never interchangeable: `agent-review`, `technically-separated`, `internal-independent` (organizational independence: a person outside management), `qualified-professional`, `external-technical`, `external-penetration`, `external-attestation`. Automated or self-assessment results alone never support `Tested`. |
 | `Deficient` | Failed a test or found not operating | Finding reference (restricted) |
 | `Remediating` | Deficiency under remediation | Remediation record |
 | `AuditorReviewed` | Examined by an independent auditor in an attestation | Auditor report reference |

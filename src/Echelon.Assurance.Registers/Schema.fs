@@ -419,7 +419,10 @@ let registers: RegisterSpec list =
                     [
                         "self-assessment"
                         "automated"
+                        "agent-review"
+                        "technically-separated"
                         "internal-independent"
+                        "qualified-professional"
                         "external-technical"
                         "external-penetration"
                         "external-attestation"
@@ -540,7 +543,7 @@ let registers: RegisterSpec list =
             "source_dispositions"
             "requirements/source-dispositions.csv"
             "source_req_id"
-            @"^(SBC|FIN-BC|PEC|AIG-BC|VAL-BC|CST|ECON|GOV-BC)-\d{3}$|^CA-[A-Z]+-\d{2}$|^REC-\d{2}$|^SBC-VC-\d{2}$"
+            @"^(SBC|FIN-BC|PEC|AIG-BC|VAL-BC|CST|ECON|GOV-BC)-\d{3}$|^CA-[A-Z]+-\d{2}$|^REC-\d{2}$|^SBC-VC-\d{2}$|^ODP-\d{2}$|^OT-\d{2}$"
             [
                 "source_req_id"
                 "source_document"
@@ -591,16 +594,52 @@ let registers: RegisterSpec list =
                 "security_implications"
                 "blockers"
                 "status"
+                "evidence_requirements"
+                "blocking_scope"
             ]
             [
                 "phase", set [ "P0"; "P1"; "P2"; "P3"; "P4"; "P5" ]
                 "effort", set [ "S"; "M"; "L" ]
                 "status", set [ "proposed"; "authorized"; "in-progress"; "done"; "withdrawn" ]
+                "blocking_scope",
+                set
+                    [
+                        "requirements-finalization"
+                        "development"
+                        "production-activation"
+                        "observation-period"
+                        "external-examination"
+                        "none"
+                    ]
             ]
             [
                 "requirements_addressed", "baseline"
                 "dependencies", "backlog"
                 "blockers", "open_questions"
+            ]
+        spec
+            "decision_traceability"
+            "registers/decision-traceability.csv"
+            "item_id"
+            @"^ODP-\d{2}$|^OT-\d{2}$"
+            [
+                "item_id"
+                "decision_id"
+                "br_ids"
+                "control_ids"
+                "policy_ids"
+                "work_item_ids"
+                "question_ids"
+                "summary"
+            ]
+            []
+            [
+                "decision_id", "decisions"
+                "br_ids", "baseline"
+                "control_ids", "controls"
+                "policy_ids", "policies"
+                "work_item_ids", "backlog"
+                "question_ids", "open_questions"
             ]
         spec
             "question_dispositions"

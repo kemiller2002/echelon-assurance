@@ -73,30 +73,13 @@ let ``no control claims a status above Designed without evidence held here`` () 
     Assert.True(List.isEmpty above, String.concat ", " above)
 
 [<Fact>]
-let ``every control has a validation at internal-independent level or higher`` () =
-    let strong =
-        set
-            [
-                "internal-independent"
-                "external-technical"
-                "external-penetration"
-                "external-attestation"
-            ]
+let ``every control has a validation able to support Tested under ODP-02`` () =
+    // Apply the exact Tested rule to every control as if it were Tested.
+    let asTested =
+        records "controls" |> List.map (fun c -> c |> Map.add "status" "Tested")
 
-    let level =
-        records "validations"
-        |> List.map (fun v -> v["validation_id"], v["independence_level"])
-        |> Map.ofList
-
-    let weak =
-        records "controls"
-        |> List.filter (fun c ->
-            Validation.splitList c["validation_ids"]
-            |> List.exists (fun v -> strong.Contains(Map.tryFind v level |> Option.defaultValue ""))
-            |> not)
-        |> List.map (fun c -> c["control_id"])
-
-    Assert.True(List.isEmpty weak, String.concat ", " weak)
+    let weak = Traceability.testedNeedsIndependence asTested (records "validations")
+    Assert.True(List.isEmpty weak, String.concat "\n" weak)
 
 [<Fact>]
 let ``fragments do not drift from registers`` () =

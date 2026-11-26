@@ -258,3 +258,60 @@ let ``tested control needs an independent validation procedure`` () =
     let vs = [ v "VAL-001" "automated"; v "VAL-025" "internal-independent" ]
     Assert.Single(testedNeedsIndependence [ c "VAL-001" ] vs) |> ignore
     Assert.Empty(testedNeedsIndependence [ c "VAL-001;VAL-025" ] vs)
+
+[<Fact>]
+let ``agent review supports Tested only for judgment controls`` () =
+    let v id level =
+        rec' [ "validation_id", id; "independence_level", level ]
+
+    let c target =
+        rec'
+            [
+                "control_id", "CTL-GOV-001"
+                "status", "Tested"
+                "validation_ids", "VAL-025"
+                "automation_target", target
+            ]
+
+    let vs = [ v "VAL-025" "agent-review" ]
+    Assert.Empty(testedNeedsIndependence [ c "L2" ] vs)
+    Assert.Single(testedNeedsIndependence [ c "L4" ] vs) |> ignore
+
+[<Fact>]
+let ``technically separated verification supports Tested for executable controls`` () =
+    let v id level =
+        rec' [ "validation_id", id; "independence_level", level ]
+
+    let c =
+        rec'
+            [
+                "control_id", "CTL-APP-001"
+                "status", "Tested"
+                "validation_ids", "VAL-040"
+                "automation_target", "L4"
+            ]
+
+    Assert.Empty(testedNeedsIndependence [ c ] [ v "VAL-040" "technically-separated" ])
+
+[<Fact>]
+let ``owner items without traceability rows are reported`` () =
+    let d = rec' [ "decision_id", "DF-ASR-2026-0D0F"; "status", "accepted" ]
+    Assert.Equal(14, List.length (decisionTraceability [ d ] [] []))
+
+[<Fact>]
+let ``traceability row must cite an accepted decision and cover its requirements`` () =
+    let d = rec' [ "decision_id", "DF-ASR-2026-0D0F"; "status", "accepted" ]
+
+    let disp =
+        rec' [ "source_req_id", "ODP-02"; "baseline_ids", "BR-GOV-004;BR-VAL-001" ]
+
+    let row ids decision =
+        rec' [ "item_id", "ODP-02"; "decision_id", decision; "br_ids", ids ]
+
+    let errs rows =
+        decisionTraceability [ d ] rows [ disp ]
+        |> List.filter (fun (e: string) -> e.Contains "ODP-02")
+
+    Assert.Empty(errs [ row "BR-GOV-004;BR-VAL-001" "DF-ASR-2026-0D0F" ])
+    Assert.Single(errs [ row "BR-GOV-004" "DF-ASR-2026-0D0F" ]) |> ignore
+    Assert.Single(errs [ row "BR-GOV-004;BR-VAL-001" "DF-ASR-2026-C005" ]) |> ignore
