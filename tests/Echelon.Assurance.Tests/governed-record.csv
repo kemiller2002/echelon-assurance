@@ -501,10 +501,10 @@ file,policies/drafts/POL-08-incident-response-and-notification.md,8e0b5b11bc5541
 file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
 file,policies/drafts/POL-11-ai-and-autonomous-systems.md,33b8d908cac1b87a
-file,policies/drafts/POL-12-financial-operations-integrity.md,fbe2352bdbe7ff32
+file,policies/drafts/POL-12-financial-operations-integrity.md,eb10e6e6d3e957c6
 file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
 file,policies/policy-inventory.md,c74ee7381b270eab
-file,policy-as-code/policy-as-code-specification.md,9f11008729a532d8
+file,policy-as-code/policy-as-code-specification.md,1e4ddfc98454e6fb
 file,policy-as-code/tool-evaluation.md,2810ac82a201172e
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
 file,regulatory/regulatory-applicability-matrix.md,4390bb0752f46bfc
@@ -559,7 +559,7 @@ file,src/Echelon.Assurance.Registers/Traceability.fs,4d5747ee191d2e4a
 file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
 file,trust-center/customer-trust-center-specification.md,3e33552e7635c7ee
-file,validation/assurance-system-resilience.md,7ede48f396effc06
+file,validation/assurance-system-resilience.md,b1c9459c6dbeaa81
 file,validation/continuous-security-testing-specification.md,ff818cec8a1f6890
 file,validation/independent-validation-architecture.md,d27a058ee08c1303
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43

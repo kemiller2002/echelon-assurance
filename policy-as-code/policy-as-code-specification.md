@@ -456,7 +456,8 @@ model (PEC-001), explicit classification of obligations and of what is not
 executable (PEC-002, new CTL-GOV-014), pure deterministic deciders with
 policy version in every decision (PEC-003), generation with drift detection
 and links for non-generated content (PEC-004), signed approval bound to the
-policy digest (PEC-005), and operation without AI services (PEC-012). Owner
-disposition on OQ-509: prefer F# pure deciders; Cedar only if a demonstrable
+policy digest (PEC-005), and operation without AI services (PEC-012). OQ-509
+disposition (inferred from the owner's in-principle baseline approval,
+DF-ASR-2026-0D10; the owner did not answer the question specifically): prefer F# pure deciders; Cedar only if a demonstrable
 assurance or interoperability benefit outweighs integration cost; no new
 runtime dependency is approved. OSCAL remains a later adapter (OQ-506).

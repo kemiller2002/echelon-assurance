@@ -79,7 +79,7 @@ does not control. In increasing order of independence:
    Monthly samples re-collected from source (VAL-019), reconciliation owned
    outside the control team (VAL-011) — `internal-independent`. *Not available
    with one human: performed as self-assessment and not described as
-   independent until a second person exists (DF-ASR-2026-0D0F, RSK-065).*
+   independent until a second person exists (DF-ASR-2026-0D0F, RSK-051).*
 4. **External witnesses that require no trust in Echelon.** Periodic digests
    of the evidence log anchored to an external timestamping/transparency
    service; anyone holding the digest can later detect alteration (VAL-018).

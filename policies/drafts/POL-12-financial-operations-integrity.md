@@ -3,7 +3,7 @@ policy_id: POL-12
 title: Financial Operations Integrity Policy
 version: 0.1.0-draft
 status: draft — not approved, not in force
-owner: Finance/controls owner role (defined; held by the owner until designated (repository proposal; ODP-04 itself defines only the delegate and protected-reporting roles); separation from the sole engineering approver is a recorded gap, RSK-065)
+owner: Finance/controls owner role (defined; held by the owner until designated (repository proposal; ODP-04 itself defines only the delegate and protected-reporting roles); separation from the sole engineering approver is a recorded gap, RSK-051)
 approval_authority: Board or sole owner
 review: annual
 scope: products that record, calculate, authorize or move money or financial positions on behalf of customers (Unbound first)
