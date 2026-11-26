@@ -8,7 +8,7 @@ Updated: 2026-11-26
 - Repository is public; owner decision 0D05 limits it to public research,
   policies, control objectives, methodology and sanitized results.
 - Praxis 3.25.0 installed 2026-11-25 (`./praxis validate` passes); platform rulesets not yet applied (owner action).
-- Register tooling is F# (`assurance` CLI, 93 tests) per owner decision 0D06.
+- Register tooling is F# (`assurance` CLI, 94 tests) per owner decision 0D06.
 - Existing assurance work elsewhere (read-only inputs):
   - Unbound: `requirements/governance/` (SOC 2 readiness directive `SOC2-001…036`,
     master enterprise control matrix `UNB-CTRL-*`, specific executable controls

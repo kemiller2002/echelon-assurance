@@ -91,6 +91,27 @@ let coversFile (relative: string) =
         || (lower.StartsWith "findings/"
             && lower.EndsWith ".md"
             && not (lower.StartsWith "findings/challenge-passes/"))
+        || (lower.EndsWith ".md"
+            && not (lower.Contains "/generated/" || lower.Contains "/fragments/")
+            && ([
+                    "controls/"
+                    "governance/"
+                    "ai-governance/"
+                    "validation/"
+                    "architecture/"
+                    "roadmap/"
+                    "context/"
+                    "customer-assurance/"
+                    "economics/"
+                    "regulatory/"
+                    "financial/"
+                    "soc/"
+                    "pentest/"
+                    "methodology/"
+                ]
+                |> List.exists lower.StartsWith
+                || lower = "readme.md"
+                || lower = "handoff.md"))
         || lower = "project-charter.md"
         || lower = "agents.md"
         || lower = "security-and-confidentiality.md"

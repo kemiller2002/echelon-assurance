@@ -772,3 +772,11 @@ let ``build inputs are governed and compile only governed sources`` () =
         |> List.ofSeq
 
     Assert.True(List.isEmpty outside, String.concat "\n" outside)
+
+[<Fact>]
+let ``normative Markdown is governed`` () =
+    Assert.True(Governed.coversFile "controls/README.md")
+    Assert.True(Governed.coversFile "governance/operating-model.md")
+    Assert.True(Governed.coversFile "README.md")
+    Assert.False(Governed.coversFile "roadmap/generated/backlog-by-phase.md")
+    Assert.False(Governed.coversFile "registers/fragments/README.md")
