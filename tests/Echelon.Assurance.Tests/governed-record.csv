@@ -434,7 +434,7 @@ file,customer-assurance/README.md,bc3f1c2246e4790f
 file,customer-assurance/findings.md,e58e7215f380462b
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
-file,docs/decisions/DF-ASR-2026-0D12--completion-authority-delegated-plain-completion-accepted.md,18bb6494baf22cb2
+file,docs/decisions/DF-ASR-2026-0D12--completion-authority-delegated-plain-completion-accepted.md,dd92d27d1237381a
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,3a3211757f4894d5
 file,docs/decisions/DF-ASR-2026-7B20--small-team-approval-and-independence-rule.md,dc6bff23c6b698fe
@@ -469,11 +469,11 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,68763a822684b2fd
 file,findings/clarity-and-edf-assessment.md,896aa16bd483adb1
-file,findings/completion-report-2026-11-26.md,cce9bd0a0a8c05eb
+file,findings/completion-report-2026-11-26.md,e8209d40fedf553a
 file,findings/counsel-and-auditor-questions.md,6011c21b8c890774
 file,findings/executive-findings.md,1c3678b0ee4bc59a
 file,findings/financial-integrity-review.md,ff57b38bfb7f38c9
-file,findings/reviews/RV-ASR-2026-11-26.md,f699230cc7371f30
+file,findings/reviews/RV-ASR-2026-11-26.md,b84237039ca5d0d7
 file,findings/validation-report.md,b66c3141c7e9dbd2
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba

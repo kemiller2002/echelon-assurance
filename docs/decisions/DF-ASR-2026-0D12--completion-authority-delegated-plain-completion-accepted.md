@@ -24,6 +24,6 @@ Accepting plain completion in place of verified completion departs from DF-ASR-2
 
 ## Consequences
 
-- WI-ASR-FINAL can be closed without a verifier-signed receipt. Its completion is plain, and its evidence is the validation runs and the review record.
+- Plain completion was accepted, but Praxis refused it for WI-ASR-FINAL: a claim-owned work item can be completed only by verified completion (PRX.COMPLETION.VERIFIED_COMPLETION_REQUIRED, 2026-11-26). The evidence and final disposition are recorded in the Praxis work history. The work item stays active until WI-PRAXIS-03 provides a verifier, and the rule is not bypassed.
 - PR #3 was merged on the owner's instruction. Pull request #4 is merged only on the owner's instruction, after its final commit is validated (DF-ASR-2026-0D11). Neither rests on verified completion.
 - No spending, external engagement, production activation or change to another repository is authorized by this record.
