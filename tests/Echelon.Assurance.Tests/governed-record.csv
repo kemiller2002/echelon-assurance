@@ -481,7 +481,7 @@ file,framework/standards/IDENTIFIERS.md,18c7f078aef2e319
 file,framework/standards/NAMING-STANDARD.md,fec4343ab4b8d149
 file,framework/standards/TAXONOMY.md,91fbbd647a090d10
 file,global.json,b48d6da8fa62c0da
-file,governance/operating-model.md,4bf99ebdd3fbcb9a
+file,governance/operating-model.md,09c42e4dea8a37ff
 file,integration/capability-findings.md,c5b68d9d5c40aa12
 file,integration/echelon-integration-matrix.md,babd05395746f435
 file,integration/proposed-changes.md,934bdfb05351b6c1
@@ -500,11 +500,11 @@ file,policies/drafts/POL-07-operations-security.md,5cc511cd266d4bc6
 file,policies/drafts/POL-08-incident-response-and-notification.md,8e0b5b11bc5541c8
 file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
-file,policies/drafts/POL-11-ai-and-autonomous-systems.md,33b8d908cac1b87a
+file,policies/drafts/POL-11-ai-and-autonomous-systems.md,eb296b808e34473a
 file,policies/drafts/POL-12-financial-operations-integrity.md,eb10e6e6d3e957c6
 file,policies/drafts/POL-13-customer-operations.md,f551e29882feb7e0
 file,policies/policy-inventory.md,c74ee7381b270eab
-file,policy-as-code/policy-as-code-specification.md,b9652e1b1e1c649a
+file,policy-as-code/policy-as-code-specification.md,2b4471ce6f68e58d
 file,policy-as-code/tool-evaluation.md,824f4b2370f04db7
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
 file,regulatory/regulatory-applicability-matrix.md,f473c2dcc2efe54c

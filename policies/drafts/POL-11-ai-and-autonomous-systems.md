@@ -47,7 +47,7 @@ Data sent to providers follows POL-05.01 and POL-10.02. Prompts and outputs cont
 
 ## 06 AI-generated evidence and autonomous remediation
 1. Evidence is produced by the system where the event occurred, not written by an agent. Agent summaries are labeled as analysis and link to source evidence.
-2. Autonomous remediation is permitted only for actions that are bounded in blast radius, pre-approved by type, checked before execution, and logged; irreversible actions are permitted only for approved routine classes (such as retention expiry with legal-hold checks), never for evidence, keys or financial records; remediation is disabled automatically after repeated failures (owner decision DF-ASR-2026-0D09).
+2. Autonomous remediation is permitted only for actions that are bounded in blast radius, pre-approved by type, checked before execution, and logged; irreversible actions are permitted only for approved routine classes (such as retention expiry with legal-hold checks), never for evidence, keys or financial records (for evidence, a repository interpretation of DF-ASR-2026-0D09 pending owner confirmation, controls/README.md); remediation is disabled automatically after repeated failures (owner decision DF-ASR-2026-0D09).
 
 ## 07 Accountability, evaluation and monitoring
 1. Each agent's sponsor is accountable for its behavior.
