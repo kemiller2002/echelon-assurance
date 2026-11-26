@@ -188,7 +188,7 @@ All remaining items were fixed in the final commits:
 | Every control has an objective and validation strategy | Met | Validator: objective, owner, validation and evidence required for all 121 controls |
 | Every policy has traceable enforcement or accountable human obligations | Met | Repository test: every policy section maps to controls; baseline policies derive from controls; `enforcement_class` distinguishes human judgment |
 | Every outstanding question has a disposition and next action | Met | 115 rows in `registers/question-dispositions.csv`; validator enforces it |
-| Every material contradiction resolved or escalated | Met | Decisions C001–C006; ODP-01 to ODP-12; owner-record conflicts (Vigila, Strata) escalated as ODP-06 and ODP-07 |
+| Every material contradiction resolved or escalated | Met | Decisions C001–C004 and C006 (C005 superseded by owner direction); ODP-01 to ODP-12; owner-record conflicts (Vigila, Strata) escalated as ODP-06 and ODP-07 |
 | Proposed capabilities distinguished from verified | Met | `integration/capability-verification.csv` with basis and status; validator blocks inflation |
 | Economic model reproducible and internally consistent | Met, with hypothetical inputs | `assurance econ`; CI currency check; 17 unit tests; no quotes exist |
 | Roadmap dependency-driven | Met | Validator: phase order, cycles, coverage, launch gates |

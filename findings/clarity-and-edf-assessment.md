@@ -58,7 +58,7 @@ one (ODP-02; no external reviewer is engaged now, DF-ASR-2026-0D0F).
 ### Outcome (observed, 2026-11-25, before consolidation)
 - 189 owner requirement IDs sat across nine documents, and 102 of them were registered.
 - The documents overlapped: for example, exception rules were stated four times and evidence status ladders four times.
-- All 121 controls were at `Designed`.
+- Every control in the catalog was at `Designed` (121 after consolidation; the earlier research catalog had 104, CURRENT-STATE).
 - Owner decisions assigned evidence, logging, database and provenance responsibilities to systems that do not implement them. Source inspection and executed tests confirm this (`integration/capability-verification.csv`).
 - Governance checks required by decision 0D07 were advisory, not platform-enforced.
 - The economic model compared alternatives without separating baseline engineering, without the same reviewer costs, and without scaling by product count.
