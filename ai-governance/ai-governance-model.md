@@ -254,9 +254,10 @@ redesigned.
 - Inventory of agents, models (pinned versions, not floating aliases where the
   provider allows), providers, data classes and contract terms
   (REQ-AIRMF-001, REQ-AIRMF-015).
-- Providers used in in-scope processes are evaluated as **subservice
-  organizations** consistent with the AICPA approach reported for TQA 9561
-  (carve-out or inclusive; CSOCs) (SRC-AIG-022, summary-only; OQ-602).
+- Providers are classified by role, access and dependency (OQ-602,
+  DF-ASR-2026-0D11). Those used in in-scope processes may be subservice
+  organizations, consistent with the AICPA approach reported for TQA 9561
+  (carve-out or inclusive; CSOCs) (SRC-AIG-022, summary-only).
 - Model, prompt, tool or provider change = change-controlled release gated by
   the evaluation suite (VAL-021; AIN-027). Provider-side silent updates are
   detected by a daily canary evaluation against a frozen golden set (RSK-016).

@@ -154,8 +154,8 @@ auditor's judgment decides).
 | **Security (CC1–CC9)** | In scope, always | It is mandatory in every SOC 2, and the Unbound directive already mandates it | `auditor-interpretation` (TSC not read; OQ-100) |
 | **Availability (A1)** | **Include** | Grant timing, donor access and payment-instruction windows are service commitments. Unbound already defines RPO/RTO, SLO and recovery semantics (CNV-ARC-001). Banks and partners will ask about continuity | `recommendation` |
 | **Confidentiality (C1)** | **Include** | Sponsor financial data, partner-segregated data, charity diligence documents and contractual confidentiality commitments to sponsors and banks | `recommendation` |
-| **Processing Integrity (PI1)** | **Include only if** SOC 1 is not obtained, or if partners demand it; otherwise **defer** | It overlaps with SOC 1 control objectives. It adds value for non-financial outputs, such as donor statements and tax acknowledgments, that may matter more to donors and partners than to auditors. Double-testing cost is an issue | `recommendation`, `open-question` (OQ-103) |
-| **Privacy (P1–P8)** | **Undetermined; lean exclude for the first report** | The privacy criteria fit when the entity itself makes privacy commitments to data subjects. When Unbound acts for the sponsor, the sponsor is the party making notice and consent commitments, so many P criteria become CUECs or "not relevant". In white-label programmes Unbound may collect personal information directly, which changes this | `open-question` (OQ-104) |
+| **Processing Integrity (PI1)** | **Include only if** SOC 1 is not obtained, or if partners demand it; otherwise **defer** | It overlaps with SOC 1 control objectives. It adds value for non-financial outputs, such as donor statements and tax acknowledgments, that may matter more to donors and partners than to auditors. Double-testing cost is an issue | `recommendation`, `open-question` (OQ-103: examination scope pending; design all five categories approved, DF-ASR-2026-0D11) |
+| **Privacy (P1–P8)** | **Undetermined; lean exclude for the first report** | The privacy criteria fit when the entity itself makes privacy commitments to data subjects. When Unbound acts for the sponsor, the sponsor is the party making notice and consent commitments, so many P criteria become CUECs or "not relevant". In white-label programmes Unbound may collect personal information directly, which changes this | `open-question` (OQ-104: examination scope pending; configurable privacy roles approved, DF-ASR-2026-0D11) |
 
 **Echelon Foundry's own platform.** If Echelon Foundry is the legal operator,
 its corporate controls (HR, governance, vendor management) fall inside the
@@ -187,7 +187,7 @@ Security common criteria for the Unbound system. Which legal entity is the
   - a description and assertion to prepare twice;
   - the risk of marketing it as "certified".
 - Owner-approved design: no Type 1 or SOC 3 absent commercial
-  justification (OQ-112, DF-ASR-2026-0D11) `[recommendation]`.
+  justification (OQ-112, DF-ASR-2026-0D11) `[owner decision]`.
 
 **Hard precondition: no report until production exists `[authoritative]`.**
 

@@ -320,7 +320,7 @@ controls,CTL-SDL-010,31f3721f078bb320
 controls,CTL-TEN-001,fd4e323ed05a102b
 controls,CTL-TEN-002,c1f4e4b3e138619f
 controls,CTL-VEN-001,460ec79daf3156b7
-controls,CTL-VEN-002,e8dbc54ce0082858
+controls,CTL-VEN-002,01f9a6014d5d6d30
 controls,CTL-VEN-003,c555a0f4883e1be8
 controls,CTL-VEN-004,78a04f2d96eca67b
 controls,CTL-VEN-005,03cdbfd299e72444
@@ -418,8 +418,8 @@ file,HANDOFF.md,0360e7138952a2ed
 file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,7691a8f95f0b9ffe
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
-file,ai-governance/ai-governance-model.md,c9f1b3f546f8b8b7
-file,architecture/evidence-architecture.md,837d5e73546ea6aa
+file,ai-governance/ai-governance-model.md,57ef54c1dbd0e474
+file,architecture/evidence-architecture.md,6d70f3623ce0539f
 file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,8384baf9452192cd
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
@@ -428,7 +428,7 @@ file,context/CURRENT-STATE.md,4002919529273517
 file,context/DECISIONS.md,5c8440043f359a82
 file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
-file,controls/README.md,f6d20c43781cb00e
+file,controls/README.md,24cc6d7d171cbeab
 file,customer-assurance/README.md,bc3f1c2246e4790f
 file,customer-assurance/findings.md,343ba2a99ae8fa86
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
@@ -492,8 +492,8 @@ file,integration/proposed-changes.md,8bdad6e82b0c32fe
 file,methodology/identifiers.md,1a70739a1118e343
 file,methodology/research-methodology.md,50096ce4322b2e32
 file,methodology/review-protocol.md,d26aea16300b8ac2
-file,pentest/penetration-testing-research.md,7d196ba041adefe2
-file,pentest/unbound-minimum-cost-testing-strategy.md,ad5f797877546627
+file,pentest/penetration-testing-research.md,6ecbfce5dca9f80a
+file,pentest/unbound-minimum-cost-testing-strategy.md,f8c4087a9027c4cf
 file,policies/drafts/POL-01-assurance-governance.md,599faa69d9d7778a
 file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
 file,policies/drafts/POL-03-people-security.md,b9b107dff77d24ea
@@ -548,7 +548,7 @@ file,schemas/work-adapter-request.schema.json,3e6e8b565abf2450
 file,schemas/work-adapter-result.schema.json,ce555e74b05b675f
 file,schemas/work-protocol.schema.json,725a1855c2e30d3c
 file,soc/soc-reporting-landscape.md,f035403a1ddcf5ef
-file,soc/unbound-soc-applicability.md,88ca3b9de6757e5e
+file,soc/unbound-soc-applicability.md,f82ae1943f18717a
 file,src/Echelon.Assurance.Cli/Echelon.Assurance.Cli.fsproj,b512aac6c08e03c4
 file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
