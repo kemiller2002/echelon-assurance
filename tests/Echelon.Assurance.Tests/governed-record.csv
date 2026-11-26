@@ -208,7 +208,7 @@ capabilities,SYS-TUTELA,06930e85cd0d2c9d
 capabilities,SYS-VIGILA,85c6ec7534ffcd66
 controls,CTL-AI-001,138387457de2f905
 controls,CTL-AI-002,2f6c1fde7499dcac
-controls,CTL-AI-003,42af3de286bf0fe6
+controls,CTL-AI-003,710a9e0547faee47
 controls,CTL-AI-004,777af08d58137ae8
 controls,CTL-AI-005,a0dcc17bd3680adf
 controls,CTL-AI-006,65fb1464fd242fb3
@@ -232,7 +232,7 @@ controls,CTL-ASR-003,23db827fc2857270
 controls,CTL-ASR-004,2be7ed32117d91ef
 controls,CTL-ASR-005,7545e2a6b23944c9
 controls,CTL-ASR-006,5d7a2c76f8d8277f
-controls,CTL-ASR-007,ce3419454cc8c623
+controls,CTL-ASR-007,6b0b38caebbf4d2d
 controls,CTL-ASR-008,df30efee3590e65c
 controls,CTL-ASR-009,f6676c029bc0dec9
 controls,CTL-ASR-010,c05af9d0d7a7a38f
@@ -280,7 +280,7 @@ controls,CTL-GOV-007,b5db138fe33e65e0
 controls,CTL-GOV-008,5786733802002b72
 controls,CTL-GOV-009,c11477eeccc24c90
 controls,CTL-GOV-010,8e93b02ef7021415
-controls,CTL-GOV-011,9af4e9610a6ef93b
+controls,CTL-GOV-011,4438ea447a7c0e34
 controls,CTL-GOV-012,52d2fc467324dcac
 controls,CTL-GOV-013,fe51d06237370c69
 controls,CTL-GOV-014,b71d9805de2eef33
@@ -297,7 +297,7 @@ controls,CTL-IAM-005,55d78cffd604f69f
 controls,CTL-IAM-006,9212edefdfe7b5f1
 controls,CTL-IAM-007,91be291694189141
 controls,CTL-IAM-008,8ca675dd6881671d
-controls,CTL-IAM-009,fbed0b38d73c4eaa
+controls,CTL-IAM-009,fb9cd2e6cd6cee0d
 controls,CTL-IR-001,536902301dcb7930
 controls,CTL-IR-002,8539dfeb2713af29
 controls,CTL-IR-003,73742188dfd6ee0b
@@ -312,7 +312,7 @@ controls,CTL-SDL-003,2b6c86dae3f6e2ac
 controls,CTL-SDL-004,be376b269291d7d7
 controls,CTL-SDL-005,822b7073dbfe448e
 controls,CTL-SDL-006,1dfd2626e4fcd758
-controls,CTL-SDL-007,7faa7c64450c312b
+controls,CTL-SDL-007,d5c4793074c1b1dd
 controls,CTL-SDL-008,ea551b59546a2688
 controls,CTL-SDL-009,d3267a93d1d32e14
 controls,CTL-SDL-010,31f3721f078bb320
@@ -762,7 +762,7 @@ policies,POL-13.02,dbcf7ba29c2232f6
 policies,POL-13.03,c16b172a46a1be20
 policies,POL-13.04,4a2e228f5dc44b71
 policies,POL-13.05,8684b3af2d195747
-production_gates,PG-01,2bbfd52ccae0bbb1
+production_gates,PG-01,4de2794783fdc16f
 production_gates,PG-02,1082155c22ec5835
 production_gates,PG-03,a92f0ead5b9eff03
 production_gates,PG-04,4f75772a971f17e3
@@ -937,7 +937,7 @@ question_dispositions,OQ-603,8966ca98dc3f7986
 question_dispositions,OQ-604,5ae8eb71e2396245
 question_dispositions,OQ-605,bd365260437b8f1b
 question_dispositions,OQ-606,23802c15ecf33edc
-question_dispositions,OQ-607,035b53d467339e9b
+question_dispositions,OQ-607,6dee571ab9318b3e
 question_dispositions,OQ-608,25b01dfbf53094dd
 question_dispositions,OQ-609,ede76decef0b2922
 question_dispositions,OQ-610,e26bd5020921ddf1
@@ -969,7 +969,7 @@ question_dispositions,OQ-757,b0c980c23ecdea56
 question_dispositions,OQ-758,6c3ed103c845c8d5
 question_dispositions,OQ-759,6693ddce9ba0f830
 question_dispositions,OQ-760,eb8b646b72515367
-question_dispositions,OQ-761,e7a51b2a831b910d
+question_dispositions,OQ-761,931e3dc635f003fe
 question_dispositions,OQ-762,f8ebdeb0679a734a
 question_dispositions,OQ-763,9e9b0afbcee5c2cb
 question_dispositions,OQ-764,9381a53d812d7ed9
