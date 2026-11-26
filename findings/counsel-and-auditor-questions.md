@@ -148,7 +148,7 @@ Unblocks: the build-vs-buy decision on a compliance platform.
 Question: Our proposed arrangement is a standing human authorization, a separate implementing
 agent, a technical verifier with its own key, and an enforced release gate for routine
 low-risk changes. Material policy, privilege, financial-exception and verifier changes need
-elevated human approval, with a fractional external reviewer where required. Agent identities
+elevated human approval. No external reviewer is contracted at the development stage (owner direction DF-ASR-2026-0D0F); an action that needs organizational independence is blocked or redesigned, and material exceptions are never self-approved. Agent identities
 are authenticated and bound to platform identities. Is this acceptable for change-approval and
 grant/payment SoD testing? If not, what is the minimum human arrangement?
 Proposed interpretation: technical independence is not organizational independence, so we

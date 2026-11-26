@@ -66,6 +66,23 @@ confidence: medium
    controls. Independence requires a party Echelon does not control (§5.4)
    [recommendation; AGENTS rule 4].
 
+### 1.1 Evidence by construction (TNT-17, owner direction DF-ASR-2026-0D10)
+
+Every system is designed so that its normal operation emits the evidence its
+controls need; evidence is not reconstructed afterwards (BR-ASR-012).
+
+- **Proportionate.** Emit what a control or obligation needs, not everything
+  observable. Each evidence type names the control it serves.
+- **Privacy-preserving.** Evidence carries references, hashes and
+  classifications rather than personal or financial content wherever the
+  control allows (section 8).
+- **Failure of evidence collection is itself detected.** Expected sources emit
+  heartbeats through the shared observability interfaces (Vigila, BR-LOG-002);
+  evidence populations are reconciled against system populations (section 6);
+  missing evidence is a control failure, never a pass (RSK-066).
+- **Design obligation.** A design review for a new system or material change
+  records which evidence it emits and for which controls.
+
 ## 2. Reuse of existing Echelon systems
 
 | System | Observed capability (read-only checkout 2026-11-25) | Role here |

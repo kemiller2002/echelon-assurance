@@ -27,7 +27,7 @@ authoritative_references: [TSC CC7.3-CC7.5, 16 CFR 314.4(h) and (j), 16 CFR 314.
 ## 03 Notification
 1. A notification register lists each obligation: who must be notified (customers, bank partners, regulators, individuals, law enforcement), trigger, deadline and owner. It is populated from laws (e.g. FTC Safeguards Rule: notice to the FTC within 30 days of discovering a notification event involving at least 500 consumers, where the rule applies; state breach statutes) and from contracts (bank and customer notice periods are often much shorter).
 2. The incident record computes notification deadlines from the discovery time; approaching deadlines escalate automatically.
-3. Decisions not to notify are recorded with reasoning and, where legal judgment is involved, counsel's advice.
+3. Decisions not to notify are recorded with reasoning. Where legal judgment is involved, the record cites the primary sources relied on, states that internal research is not legal advice, and records whether external advice was obtained; obtaining it in an actual incident is a recorded trigger, not a standing engagement (DF-ASR-2026-0D0F, ODP-12).
 4. Customers acting as controllers are notified so they can meet their own obligations.
 
 ## Change history

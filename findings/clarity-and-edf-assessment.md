@@ -149,7 +149,7 @@ assumed exist.
 | C3. Unbound's design keeps Echelon out of custody and money transmission | discovery | Medium–Low (flow F9 and bank white-label unresolved) | Owner, pending counsel |
 | C4. Continuous internal testing reduces external testing cost | discovery | Low (no data; external fee unaffected by assumption) | Engineering lead |
 | C5. Internal assurance automation saves money | discovery | Low (no clear cash saving at 1–2 products; evidence automation pays only with auditor reliance and about five or more products; minimum viable and outsourced tied under non-reliance; owner capacity binds first) | Owner |
-| C6. One human can operate the program with AI agents and fractional review | reassessment | Medium–Low (separation-of-duties conflicts persist) | Owner |
+| C6. One human can operate the program with AI agents, multiple-agent review and deterministic verification (no contracted reviewer, DF-ASR-2026-0D0F) | reassessment | Medium–Low (separation-of-duties conflicts persist) | Owner |
 | C7. Existing Echelon systems can provide the assurance capabilities | reassessment | Low (capability verification contradicts 4 of the assumptions) | Owner |
 
 ### 3. Current Understanding
@@ -197,7 +197,7 @@ went from implied-high to Low. The economics claim was raised from the original
 ### 9. Reassessment Plan
 - Reassess C3 before any production activation.
 - Reassess C5 after the auditor scoping response.
-- Reassess C6 when a second human joins or a fractional reviewer is contracted.
+- Reassess C6 when a second human joins, when a customer, examiner or bank partner requires organizational independence, or when a material exception cannot be approved without self-approval.
 - The watcher is the owner. The assurance coordinator agent prepares the evidence.
 
 ### 10. Learning Priorities

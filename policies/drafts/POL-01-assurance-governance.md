@@ -47,8 +47,13 @@ accepts is traceable to a control, an owner and evidence.
 1. Obligations are recorded as requirements with an applicability
    classification (legal, contractual, framework-selected, customer
    expectation, voluntary, not applicable, undetermined) and the reasoning.
-2. Undetermined applicability is escalated to qualified external advice; it is
-   not resolved by assumption.
+2. Undetermined applicability is not resolved by assumption. It is researched
+   from primary sources with multiple-agent analysis, recorded as an open
+   question with a prepared question package, and the affected capability is
+   gated from activation. External advice is obtained only when a recorded
+   legal, contractual or risk trigger requires it (owner direction
+   DF-ASR-2026-0D0F, ODP-12). Internal research is never represented as a legal
+   opinion.
 3. Changes to authoritative sources are monitored; a change creates a review
    item against affected requirements, controls and policies.
 4. No person or agent represents a compliance status, certification or

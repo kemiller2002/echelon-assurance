@@ -19,7 +19,7 @@ research_batch: B6 (key AIG)
 >
 > **Key controls for organizational review.** The controls that warrant organizationally independent review are listed in `docs/decisions/owner-decision-package-2026-11-25.md` (ODP-02). All others use automated and internal validation proportionate to risk. Blanket independent human review of routine operations is not required.
 >
-> **Small-team constraint.** With one human, `internal-independent` validations (VAL-006, VAL-011, VAL-012, VAL-016, VAL-019, VAL-022, VAL-025, VAL-032) have no independent performer today. Until a fractional reviewer exists they can be performed only as self-assessment, and they **cannot support `Tested` status** (see `controls/README.md`).
+> **Small-team constraint.** With one human, `internal-independent` validations (VAL-006, VAL-011, VAL-012, VAL-016, VAL-019, VAL-022, VAL-025, VAL-032) have no independent performer today. They are not performed as if independent. Under owner direction DF-ASR-2026-0D0F, `Tested` rests instead on protected deterministic verification (VAL-040, `technically-separated`) for executable controls and on the multiple-agent review protocol (VAL-041, `agent-review`) for L0–L2 judgment controls; neither is described as organizational independence (see `controls/README.md`). VAL-025 is used only if an organizationally independent reviewer is later engaged on a recorded trigger.
 >
 > **Continuous security testing** is specified in `validation/continuous-security-testing-specification.md`.
 
@@ -169,14 +169,18 @@ Enforcement mechanisms:
   control-write and validation-write permissions, and no agent holds approval.
 - The validation pipeline publishes results only to an append-only store the
   implementing pipeline cannot write.
-- A control's `Tested` status requires a validation result whose
+- *(Superseded for the development stage by owner direction
+  DF-ASR-2026-0D0F: `Tested` now requires `technically-separated` or higher,
+  or `agent-review` for L0–L2 judgment controls; see `controls/README.md`.)*
+  Original proposal: a control's `Tested` status requires a validation result whose
   `independence_level` is at least `internal-independent`; `controls/README.md`
   applies this to every control, not only key controls, and `automated`
   results alone keep it at `Operating` *(recommendation for the
   status rules in `controls/README.md`; coordinator decision)*.
 - Small-team reality: where two distinct humans are not available, record the
-  gap and use an external fractional reviewer for the validator/approver role
-  rather than pretending separation exists (OQ-608).
+  gap and block or redesign the action rather than pretending separation
+  exists (OQ-608). No external reviewer is contracted at the development stage
+  (DF-ASR-2026-0D0F).
 
 ## 6. Formal methods: where they pay
 
