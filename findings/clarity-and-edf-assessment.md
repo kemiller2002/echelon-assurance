@@ -133,12 +133,15 @@ regulated-adjacent and of high consequence, and some of its commitments have low
 correctability (retention destruction, funds-flow characterization).
 
 ### 1. Executive Understanding
-The program now has one baseline: 113 requirements that consolidate 208
-source items, including all 189 original owner requirements; no mandatory obligation is removed. The baseline is traced
+*Updated 2026-11-26 for the final reconciliation (owner directions DF-ASR-2026-0D0F and DF-ASR-2026-0D10).*
+The program now has one baseline: 117 requirements (113 approved in principle
+plus four traced additions) that consolidate 222 source items, including all 189 original owner requirements; no mandatory obligation is removed. The baseline is traced
 to tenets, policies, controls, validation and evidence, and a validator enforces
-the tracing. Nothing operates yet. The largest uncertainties are external: auditor
-reliance, legal characterization of funds flows, and insurer and customer
-requirements. The largest internal gaps are capabilities that the owner decisions
+the tracing. Nothing operates yet. The largest uncertainties are external:
+legal characterization of funds flows (worked by internal research only; no
+counsel engaged, ODP-12), and insurer, customer and examiner requirements.
+Production activation is gated (`registers/production-gates.csv`, all eleven
+gates `not-met`). The largest internal gaps are capabilities that the owner decisions
 assumed exist.
 
 ### 2. Clarity Snapshot
@@ -146,9 +149,9 @@ assumed exist.
 |---|---|---|---|
 | C1. The baseline is complete for the owner requirement set | commitment | High (validator-enforced) | Owner (accountable), assurance coordinator agent (maintains) |
 | C2. Security-by-construction requirements eliminate the named vulnerability classes within verified boundaries | discovery | Medium (design only; no boundary implemented) | Engineering lead |
-| C3. Unbound's design keeps Echelon out of custody and money transmission | discovery | Medium–Low (flow F9 and bank white-label unresolved) | Owner, pending counsel |
+| C3. Unbound's design keeps Echelon out of custody and money transmission | discovery | Medium–Low (flow F9 and bank white-label unresolved) | Owner (internal research; prepared questions, ODP-12; activation gated, PG-02) |
 | C4. Continuous internal testing reduces external testing cost | discovery | Low (no data; external fee unaffected by assumption) | Engineering lead |
-| C5. Internal assurance automation saves money | discovery | Low (no clear cash saving at 1–2 products; evidence automation pays only with auditor reliance and about five or more products; minimum viable and outsourced tied under non-reliance; owner capacity binds first) (ODP-09: no product-count threshold; decide by purpose; recalculated S9–S12) | Owner |
+| C5. Assurance investments are justified by the purpose of their evidence (ODP-09) | discovery | Low–Medium (recalculated by purpose and reliance case, S9–S12; A4 lowest at 1–2 products in every case; prevention package about USD 245k over five years at one product, justified by unmonetized risk reduction; evidence automation depends on measured manual evidence hours, not on product-count thresholds) | Owner |
 | C6. One human can operate the program with AI agents, multiple-agent review and deterministic verification (no contracted reviewer, DF-ASR-2026-0D0F) | reassessment | Medium–Low (separation-of-duties conflicts persist) | Owner |
 | C7. Existing Echelon systems can provide the assurance capabilities | reassessment | Low (capability verification contradicts 4 of the assumptions) | Owner |
 
@@ -174,7 +177,11 @@ to `C006`) and `findings/executive-findings.md`.
 
 ### 6. Calibration Review
 Confidence labels were lowered where earlier documents implied capability: C7
-went from implied-high to Low. The economics claim was raised from the original
+went from implied-high to Low. On 2026-11-26 six separately initialized
+reviewers (A–F) found that several summaries still overstated the validator
+and that agent review had been allowed to support `Tested`; both were
+corrected (`findings/reviews/RV-ASR-2026-11-26.md`). C1 stays High because the
+validator now rejects the corruptions they demonstrated. The economics claim was raised from the original
 "no conclusion" to Low–Medium, with an explicit branch on auditor reliance.
 
 ### 7. Correctability Review
@@ -187,22 +194,22 @@ went from implied-high to Low. The economics claim was raised from the original
 ### 8. Monitoring Plan
 | Signal | Threshold | Trigger claim | Response | Trigger reassessment |
 |---|---|---|---|---|
-| Auditor scoping response (WI-EXT-01) | Written position received | C5 | If no reliance: stay on A4 minimum viable; do not build evidence-collection automation (DF-ASR-2026-C005) | Revisit when the auditor changes |
+| Measured manual evidence hours per request (from the first customer or auditor request) | Recorded for two quarters | C5 | Decide evidence-collection automation by purpose and measured hours (ODP-09); auditor reliance is one input, not the gate | Each examination plan |
 | Capability work item completion (WI-STRATA-01, WI-PRAXIS-01, WI-VIGILA-02) | Each reaches `done` with executed tests | C7, C2 | Update capability register; raise baseline status only with evidence | Each release of those systems |
-| Counsel response on funds flows (WI-EXT-03) | Received | C3 | Adjust BR-FIN-020 perimeter and the roadmap | Any new rail or bank customer |
+| Recorded resolution of a funds-flow legal question (internal research, or external advice after an owner reassessment under 0D0F) | Recorded | C3 | Adjust BR-FIN-020 perimeter, PG-02 and the roadmap | Any new rail or bank customer |
 | Owner decision latency | More than 10 proposed decisions older than 30 days | C6 | Reduce proposal rate; batch decisions | Quarterly |
-| Actual maintenance hours versus estimate | More than 1.5× estimate for two quarters | C5 | Stop expanding internal automation; reconsider A3-style outsourced support | Annually |
+| Actual maintenance hours versus estimate | More than 1.5× estimate for two quarters | C5 | Stop expanding internal automation; owner reassesses capacity relief (no consulting budget is assumed, TNT-18) | Annually |
 | Traceability findings in CI | Above zero | C1 | Merge blocked (once WI-ASR-03 is done) | Continuous |
 
 ### 9. Reassessment Plan
 - Reassess C3 before any production activation.
-- Reassess C5 after the auditor scoping response.
+- Reassess C5 when manual evidence hours have been measured, or when an examination is planned.
 - Reassess C6 when a second human joins, when a customer, examiner or bank partner requires organizational independence, or when a material exception cannot be approved without self-approval.
 - The watcher is the owner. The assurance coordinator agent prepares the evidence.
 
 ### 10. Learning Priorities
-1. Auditor position on reliance on system evidence.
-2. Counsel position on the payment-partner rail and the bank white-label.
+1. Measured manual evidence hours for operations, customers and any examination.
+2. A recorded resolution of the payment-partner rail and bank white-label questions (internal research first; external advice only on a recorded trigger).
 3. The actual maintenance cost of the first automated controls.
 4. The actual diligence questions asked by the first sponsor and bank partner.
 
@@ -213,6 +220,8 @@ went from implied-high to Low. The economics claim was raised from the original
 - **Assumption Drift:** the Strata role diverged across three repositories.
 - **Burden Externalization:** proposals that shift approval load onto the single owner.
 - **Proportional Certainty:** applied in the risk-tiered validation (BR-VAL-002).
+- **Verification Debt (2026-11-26):** summaries claimed validator coverage that the rules did not enforce; corrected by corruption experiments and regression tests.
+- **Evidence by construction (TNT-17):** the EDF control point "evidence collected after the fact" is replaced by evidence emitted at enforcement points, with failure of collection detected (RSK-066).
 
 ### 12. Recommended Next Posture
 - **Commitment** on the baseline structure and the security- and financial-by-construction requirements.
@@ -224,7 +233,7 @@ The program is now simpler and internally consistent, but not yet
 implementation-ready, because:
 
 - Key capabilities it depends on are not built.
-- Several external answers determine whether internal evidence automation pays off.
+- External answers (legal characterization, customer and examiner requirements) determine when gated capabilities may be activated.
 
 The cheapest high-value steps are:
 
