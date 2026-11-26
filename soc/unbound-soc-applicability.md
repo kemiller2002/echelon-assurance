@@ -233,7 +233,7 @@ Security common criteria for the Unbound system. Which legal entity is the
      service. Control objectives cover contributions, grants, fees,
      investments, fund balances and reporting, plus ITGC (access, change,
      operations).
-   - **SOC 2 Type 2** covering **Security + Availability + Confidentiality**.
+   - **SOC 2 Type 2** covering **Security + Availability + Confidentiality** (superseded as a scope by decision 0D02: design for all five categories; see the end of this file).
    - Processing Integrity and Privacy remain undetermined (OQ-103, OQ-104).
 3. **Defer the SOC 2 criteria mapping.** Do not finalise it before the 2027
    TSC are issued (comment deadline 15 January 2027). Map controls to both
