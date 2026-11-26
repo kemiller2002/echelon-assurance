@@ -728,3 +728,11 @@ let ``owner decision records are in the governed record`` () =
     let committed = Governed.full loaded [ path, content ]
     Assert.True(Governed.coversFile path)
     Assert.NotEmpty(Governed.differencesWith committed loaded [ path, content + "\nEngage legal counsel." ])
+
+[<Fact>]
+let ``owner requirement records, validator code and workflows are governed`` () =
+    Assert.True(Governed.coversFile "requirements/continuous-security-testing.md")
+    Assert.True(Governed.coversFile "src/Echelon.Assurance.Registers/Governed.fs")
+    Assert.True(Governed.coversFile ".github/workflows/assurance-validation.yml")
+    Assert.False(Governed.coversFile "src/Echelon.Assurance.Registers/obj/Release/net10.0/X.AssemblyInfo.fs")
+    Assert.False(Governed.coversFile "requirements/generated/traceability-matrix.md")

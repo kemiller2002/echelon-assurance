@@ -18,7 +18,7 @@ CI passed on every pushed commit of PR #3.
 |---|---|---|
 | Formatting | `dotnet fantomas --check src tests` | pass |
 | Build | `dotnet build Echelon.Assurance.sln -c Release` | 0 errors, 0 warnings |
-| Unit and repository tests | `dotnet test` | 64 passed at consolidation (33 before this initiative); 91 passed after the final reconciliation (2026-11-26, section 7) |
+| Unit and repository tests | `dotnet test` | 64 passed at consolidation (33 before this initiative); 92 passed after the final reconciliation (2026-11-26, section 7) |
 | Register validation and traceability | `assurance validate .` | `OK: all registers valid` |
 | Fragment merge | `assurance merge --check .` | no warnings |
 | Generated views current | `assurance roadmap`, `trace`, `econ`, `tco`, then `git diff --exit-code` | current |
@@ -78,12 +78,16 @@ round actively tried to disprove the previous conclusions. All findings are in
 Passes stopped after round 4. The trend in new material findings was 33, then
 4, then 3, then 1. The last round found no new design or factual defect. Its
 material items were decisions that only the owner can make: a pre-launch
-penetration test, and spending on counsel. Both are now escalated.
+penetration test, and spending on counsel. Both were escalated then and are
+now decided by owner direction DF-ASR-2026-0D0F (ODP-11, ODP-12): no external
+test or legal engagement now; reassessment on recorded triggers.
+*(Historical stopping rationale for round 4; superseded by section 3a and
+section 7.)*
 
 The remaining minor items are recorded in the round-4 file. They are wording
 and count slips; those found were corrected. The mission's stopping condition is
 met: remaining issues require owner decisions (twelve ODP items), external
-evidence (auditor, counsel, bank, insurer and customer answers in
+evidence (auditor, legal resolution, bank, insurer and customer answers in
 `registers/question-dispositions.csv`), or implementation (`roadmap/backlog.csv`).
 
 **Independence statement.** All rounds were performed by AI agents controlled
@@ -104,7 +108,7 @@ The owner then pushed `docs/decisions/owner-review-direction-2026-11-25.md`, reg
 - **Risks.** RSK-064 added.
 - **Customer answers.** CAQ-005 and CAQ-049 updated.
 
-Validation was rerun after reconciliation (64 tests at that point; 91 after the final reconciliation, section 7) and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
+Validation was rerun after reconciliation (64 tests at that point; 92 after the final reconciliation, section 7) and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
 
 ## 3b. Owner remaining approvals and Praxis installation
 

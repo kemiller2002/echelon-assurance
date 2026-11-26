@@ -49,6 +49,13 @@ let coversFile (relative: string) =
     let registerPaths = Schema.registers |> List.map (fun s -> s.Path) |> set
 
     (p.StartsWith "docs/decisions/" && p.EndsWith ".md")
+    || (p.StartsWith "requirements/"
+        && p.EndsWith ".md"
+        && not (p.Contains "/generated/"))
+    || (p.StartsWith "src/"
+        && p.EndsWith ".fs"
+        && not (p.Contains "/obj/" || p.Contains "/bin/"))
+    || (p.StartsWith ".github/workflows/" && p.EndsWith ".yml")
     || p.EndsWith ".csv"
        && not (registerPaths.Contains p)
        && not (

@@ -47,7 +47,9 @@ Build F# orchestration, policy evaluation, evidence normalization, domain-specif
 - OQ-310: prefer independently selected qualified CPA; evaluate independence and peer review, not vendor affiliation alone.
 - OQ-311: obtain fixed-scope quotes when needed; compare relevant tester experience, methodology, credentials, independence, reporting and retest. CREST accreditation and OSCP/OSWE/GPEN/GWAPT are possible signals, not universal requirements or proof of quality. No paid engagement authorized.
 - OQ-312: demonstrate reproducible synthetic evidence package; auditor acceptance remains open.
-- OQ-313: draft coordinated vulnerability disclosure policy with explicit scope and authorization; safe-harbor wording researched from primary sources and reviewed by multiple agents before publication; external legal review only on a recorded trigger (ODP-12).
+- OQ-313: draft coordinated vulnerability disclosure policy with explicit scope and authorization; legal review before publication.
+
+  > *Consolidation note (2026-11-26, not owner text):* under owner direction DF-ASR-2026-0D0F (ODP-12) no legal engagement is authorized now; this review is performed as primary-source research with multiple-agent review, and external legal review is obtained only on a recorded trigger (BR-VUL-013).
 - OQ-604,612: automated validation and independent technical review are distinct; external reliance remains open.
 
 ## External strategy

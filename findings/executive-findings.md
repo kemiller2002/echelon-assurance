@@ -38,7 +38,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 | Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action, and for every open question the reason it is unresolved, the responsible role and the resolution trigger; none block requirements finalization; 15 block implementation, 40 production launch and 33 external examination |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems; tests executed for 5 (the Praxis run timed out before its attested-completion tests, so Praxis is partially tested) |
 | Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 13 scenarios (including the ODP-09 no-examination, partial-reliance, full-reliance and customer-specific cases), cost by evidence purpose, marginal cost; v1 preserved |
-| Roadmap | Narrative | `roadmap/backlog.csv`: 62 dependency-ordered work items across 15 repositories plus owner and managed-service actions; every live baseline requirement has a work item |
+| Roadmap | Narrative | `roadmap/backlog.csv`: 63 work items (62 live, 1 withdrawn), dependency-ordered across 15 named repositories, a placeholder for the observability owner repository, and owner and managed-service actions; every live baseline requirement has a work item |
 
 ## 2. Most important findings
 
