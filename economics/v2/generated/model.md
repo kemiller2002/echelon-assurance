@@ -373,7 +373,7 @@ Break-even is not reported for ODP-09 scenarios: no product-count threshold gate
 
 ### S10-partial-reliance
 
-ODP-09 partial reliance: an examination is commissioned and the examiner relies on about half of the system-generated evidence; half the manual non-reliance evidence preparation is charged. External technical validation of the assurance machinery is included because an examiner relying on system evidence would need it (ACT-045, ACT-071); no contracted reviewer.
+ODP-09 partial reliance: an examination is commissioned and the examiner relies on about half of the system-generated evidence; half the manual non-reliance evidence preparation is charged. External technical validation of the assurance machinery is included on the assumption that an examiner relying on system evidence would require it; under DF-ASR-2026-0D11 (OQ-612) such review is conditional and internal validation comes first (ACT-045, ACT-071); no contracted reviewer.
 
 Five-year incremental assurance cost, midpoint (low–high in the base case table):
 
@@ -392,7 +392,7 @@ Break-even is not reported for ODP-09 scenarios: no product-count threshold gate
 
 ### S11-full-reliance
 
-ODP-09 full reliance: an examination is commissioned and the examiner relies on system-generated evidence after testing it. External technical validation of the assurance machinery is included because an examiner relying on system evidence would need it (ACT-045, ACT-071); no contracted reviewer.
+ODP-09 full reliance: an examination is commissioned and the examiner relies on system-generated evidence after testing it. External technical validation of the assurance machinery is included on the assumption that an examiner relying on system evidence would require it; under DF-ASR-2026-0D11 (OQ-612) such review is conditional and internal validation comes first (ACT-045, ACT-071); no contracted reviewer.
 
 Five-year incremental assurance cost, midpoint (low–high in the base case table):
 

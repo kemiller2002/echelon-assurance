@@ -154,7 +154,7 @@ you test? How would you test completeness and accuracy? How would you classify a
 records: primary, derived or AI-interpreted?
 Proposed interpretation: you test ITGCs over the evidence system plus independent
 re-extraction samples. AI-interpreted material is never used as primary evidence.
-Unblocks: the build-vs-buy decision on a compliance platform.
+Unblocks: auditor acceptance of evidence produced independently of commercial compliance platforms (OQ-312; design approved, DF-ASR-2026-0D11).
 
 **A2. Segregation of duties with one human owner (OQ-701, OQ-763, OQ-702).**
 Question: Our proposed arrangement is a standing human authorization, a separate implementing
