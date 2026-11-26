@@ -657,6 +657,9 @@ let registers: RegisterSpec list =
                 "evidence_refs"
                 "original_status"
                 "proposed_status"
+                "why_unresolved"
+                "responsible_role"
+                "resolution_trigger"
             ]
             [
                 "classification",
@@ -666,6 +669,7 @@ let registers: RegisterSpec list =
                         "resolved-authoritative-research"
                         "resolved-implementation-evidence"
                         "proposed-decision-awaiting-approval"
+                        "deferred-owner-decision"
                         "dependent-customer"
                         "dependent-auditor"
                         "dependent-legal"

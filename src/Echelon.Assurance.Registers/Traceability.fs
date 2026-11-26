@@ -542,6 +542,24 @@ let decisionTraceability (decisions: Record list) (traces: Record list) (disposi
 
     missing @ notAccepted @ incomplete
 
+/// Every open question states why it is unresolved, the accountable internal
+/// role and the trigger that will resolve it; answered questions cite evidence.
+let questionCompleteness (dispositions: Record list) =
+    dispositions
+    |> List.collect (fun d ->
+        let id = field d "oq_id"
+
+        if field d "proposed_status" = "open" then
+            [ "why_unresolved"; "responsible_role"; "resolution_trigger" ]
+            |> List.filter (fun c -> (field d c).Trim() = "")
+            |> List.map (sprintf "registers/question-dispositions.csv: open %s has no %s" id)
+        elif field d "proposed_status" = "answered" && (field d "evidence_refs").Trim() = "" then
+            [
+                sprintf "registers/question-dispositions.csv: answered %s cites no evidence" id
+            ]
+        else
+            [])
+
 let errors (loaded: Loaded) =
     let r = records loaded
     let baseline = r "baseline"
@@ -563,6 +581,7 @@ let errors (loaded: Loaded) =
     @ launchGates baseline (r "backlog")
     @ testedNeedsIndependence controls (r "validations")
     @ decisionTraceability (r "decisions") (r "decision_traceability") (r "source_dispositions")
+    @ questionCompleteness (r "question_dispositions")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 

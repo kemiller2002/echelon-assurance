@@ -315,3 +315,21 @@ let ``traceability row must cite an accepted decision and cover its requirements
     Assert.Empty(errs [ row "BR-GOV-004;BR-VAL-001" "DF-ASR-2026-0D0F" ])
     Assert.Single(errs [ row "BR-GOV-004" "DF-ASR-2026-0D0F" ]) |> ignore
     Assert.Single(errs [ row "BR-GOV-004;BR-VAL-001" "DF-ASR-2026-C005" ]) |> ignore
+
+[<Fact>]
+let ``open question needs why, role and trigger; answered needs evidence`` () =
+    let q status why role trigger ev =
+        rec'
+            [
+                "oq_id", "OQ-001"
+                "proposed_status", status
+                "why_unresolved", why
+                "responsible_role", role
+                "resolution_trigger", trigger
+                "evidence_refs", ev
+            ]
+
+    Assert.Equal(3, List.length (questionCompleteness [ q "open" "" "" "" "" ]))
+    Assert.Empty(questionCompleteness [ q "open" "w" "r" "t" "" ])
+    Assert.Single(questionCompleteness [ q "answered" "" "" "" "" ]) |> ignore
+    Assert.Empty(questionCompleteness [ q "answered" "" "" "" "x.md" ])
