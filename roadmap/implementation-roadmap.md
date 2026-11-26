@@ -141,12 +141,14 @@ questionnaire answers through CTL-GOV-012 claim linting.
 
 ## P4 — For external attestation
 
-CTL-ASR-010: SOC 1 Type 2 (fund accounting objectives) and SOC 2 Type 2
-(Security, Availability, Confidentiality) over the agreed period, with a
-read-only auditor interface (`auditor/`). No standalone SOC 1 Type 1 (it
-gives user auditors no operating-effectiveness evidence; see
-`soc/unbound-soc-applicability.md`). Publish a SOC 3 only if marketing value
-justifies the extra cost.
+CTL-ASR-010, if an examination is planned (reassessed under
+DF-ASR-2026-0D0F): SOC 1 type 2 (fund accounting objectives) and SOC 2 type 2
+designed for all five trust services categories (decision 0D02), with
+examination scope per customer and auditor confirmation (OQ-103), over the
+agreed period, with a read-only auditor interface (`auditor/`). A type 1 or a
+SOC 3 only with demonstrated commercial benefit (decision 0D02; a type 1 gives
+user auditors no operating-effectiveness evidence, see
+`soc/unbound-soc-applicability.md`).
 
 ## P5 — Longer-term improvements
 

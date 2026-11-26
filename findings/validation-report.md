@@ -18,7 +18,7 @@ CI passed on c346fa7 and later pushed commits whose checks have completed; the f
 |---|---|---|
 | Formatting | `dotnet fantomas --check src tests` | pass |
 | Build | `dotnet build Echelon.Assurance.sln -c Release` | 0 errors, 0 warnings |
-| Unit and repository tests | `dotnet test` | 64 passed at consolidation (33 before this initiative); 94 passed after the final reconciliation (2026-11-26, section 7) |
+| Unit and repository tests | `dotnet test` | 64 passed at consolidation (33 before this initiative); 95 passed after the final reconciliation (2026-11-26, section 7) |
 | Register validation and traceability | `assurance validate .` | `OK: all registers valid` |
 | Fragment merge | `assurance merge --check .` | no warnings |
 | Generated views current | `assurance roadmap`, `trace`, `econ`, `tco`, then `git diff --exit-code` | current |
@@ -108,7 +108,7 @@ The owner then pushed `docs/decisions/owner-review-direction-2026-11-25.md`, reg
 - **Risks.** RSK-064 added.
 - **Customer answers.** CAQ-005 and CAQ-049 updated.
 
-Validation was rerun after reconciliation (64 tests at that point; 94 after the final reconciliation, section 7) and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
+Validation was rerun after reconciliation (64 tests at that point; 95 after the final reconciliation, section 7) and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
 
 ## 3b. Owner remaining approvals and Praxis installation
 

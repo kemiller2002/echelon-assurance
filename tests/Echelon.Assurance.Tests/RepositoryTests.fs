@@ -780,3 +780,11 @@ let ``normative Markdown is governed`` () =
     Assert.True(Governed.coversFile "README.md")
     Assert.False(Governed.coversFile "roadmap/generated/backlog-by-phase.md")
     Assert.False(Governed.coversFile "registers/fragments/README.md")
+
+[<Fact>]
+let ``all current Markdown is governed except historical and generated`` () =
+    Assert.True(Governed.coversFile "integration/capability-findings.md")
+    Assert.True(Governed.coversFile "trust-center/trust-center-specification.md")
+    Assert.True(Governed.coversFile "policy-as-code/policy-as-code-specification.md")
+    Assert.False(Governed.coversFile "research/journals/JR-ASR-2026-C001.md")
+    Assert.False(Governed.coversFile "findings/challenge-passes/round1.md")
