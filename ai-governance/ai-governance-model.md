@@ -22,7 +22,7 @@ research_batch: B6 (key AIG)
 >
 > **Superseded mitigations.** Prohibition P4 and the resilience scenarios relied on hash chaining, external anchoring and second-person approval. They are superseded by the managed retention lock, separately credentialed population reconciliation, and out-of-band alerts (BR-ASR-003, BR-ASR-006, BR-IAM-002). These detect failure and external compromise, but not action by the single owner (ODP-03).
 >
-> **Money movement.** AI agents never authorize, approve or release movement of funds or material financial exceptions, at any level and in any scope (BR-FIN-006, DF-ASR-2026-C004 accepted; ODP-10).
+> **Money movement.** In financial domains AI agents recommend only: they never prepare, alter or release payment instructions, and never authorize, approve or release movement of funds or material financial exceptions, at any level and in any scope (BR-FIN-006, DF-ASR-2026-C004 accepted; ODP-10).
 >
 > **Statuses.** The status ladder (Designed → Implemented → internally tested → technically independently verified → organizationally independently assessed → externally attested) is BR-ASR-002. "Different model" is never independence (BR-VAL-001).
 >

@@ -56,7 +56,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - **No production activation while material money-transmitter and custody questions are unresolved.** Under owner direction DF-ASR-2026-0D0F these are worked by internal primary-source research; no counsel is engaged now. **Two flows need specific answers before release 1:** the payment-partner rail, where the partner holds funds in transit, and white-label for banks (`findings/financial-integrity-review.md`, ODP-05).
    - **New activation gate, BR-FIN-020:** refuses configurations that would put Echelon in the flow of funds, and records who holds each dispatch credential. Unbound must never hold a credential that alone can dispatch money.
 4. **Contradictions resolved by strengthening, not weakening:**
-   - AI agents never authorize money movement in any scope (DF-ASR-2026-C004).
+   - In financial domains AI agents recommend only: they never prepare, alter or release payment instructions and never authorize money movement in any scope (BR-AI-001, BR-FIN-006, DF-ASR-2026-C004).
    - Periods cannot be reopened after statements issue.
    - Replay never posts entries or dispatches instructions.
    - Idempotency payload conflicts open a case rather than going to a dead-letter queue (DF-ASR-2026-C006).

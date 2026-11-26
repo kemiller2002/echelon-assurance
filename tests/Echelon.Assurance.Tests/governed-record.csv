@@ -109,7 +109,7 @@ baseline,BR-FIN-002,fe5c62138e2bae59
 baseline,BR-FIN-003,8936e8a68e462c55
 baseline,BR-FIN-004,650b1723b15c648d
 baseline,BR-FIN-005,fb2b31340f15080a
-baseline,BR-FIN-006,5eebb51b1bd7a940
+baseline,BR-FIN-006,cfbf86f126ccedda
 baseline,BR-FIN-007,2f2a70233bb54a13
 baseline,BR-FIN-008,ec3d94102afa2544
 baseline,BR-FIN-009,7d8a4ea73d512cef
@@ -415,12 +415,12 @@ file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,3a3211757f4894d5
 file,docs/decisions/DF-ASR-2026-7B20--small-team-approval-and-independence-rule.md,dc6bff23c6b698fe
-file,docs/decisions/DF-ASR-2026-C001--requirements-hierarchy-and-authoritative-baseline.md,ed81c6e31c8741ac
-file,docs/decisions/DF-ASR-2026-C002--managed-immutable-evidence-storage-replaces-custom-ledger.md,7c8cb32d92155f3b
-file,docs/decisions/DF-ASR-2026-C003--no-user-supplied-html-as-markup.md,ba07d0fe6df5c1b0
-file,docs/decisions/DF-ASR-2026-C004--ai-agents-never-authorize-movement-of-funds.md,c176af9b2e9a6566
+file,docs/decisions/DF-ASR-2026-C001--requirements-hierarchy-and-authoritative-baseline.md,e84609a36f5450b5
+file,docs/decisions/DF-ASR-2026-C002--managed-immutable-evidence-storage-replaces-custom-ledger.md,294346663bdf9cc4
+file,docs/decisions/DF-ASR-2026-C003--no-user-supplied-html-as-markup.md,a234ff0a982b88ac
+file,docs/decisions/DF-ASR-2026-C004--ai-agents-never-authorize-movement-of-funds.md,7a022da1ce2a923e
 file,docs/decisions/DF-ASR-2026-C005--staged-assurance-investment.md,3531f64ba76a21e3
-file,docs/decisions/DF-ASR-2026-C006--unbound-financial-semantics-adopted.md,4efd2c0563e14a06
+file,docs/decisions/DF-ASR-2026-C006--unbound-financial-semantics-adopted.md,0e3274663b045266
 file,docs/decisions/README.md,39253075dd66c87c
 file,docs/decisions/owner-approved-foundations-2026-11-25.md,ae5d8f63a2666ddd
 file,docs/decisions/owner-decision-package-2026-11-25.md,cd75f923e6ff0a6f
