@@ -200,7 +200,7 @@ Baseline requirements: 117. Source items dispositioned (original owner requireme
 | CTL-GOV-002 | Written policy set approved and versioned | BR-GOV-001, BR-GOV-003, BR-GOV-014 | 8 | Designed |
 | CTL-GOV-003 | Unauthorized policy change detection | BR-GOV-003 | 7 | Designed |
 | CTL-GOV-004 | Risk assessment and risk register | BR-GOV-008 | 9 | Designed |
-| CTL-GOV-005 | Requirement register and applicability decisions | BR-GOV-009, BR-GOV-010 | 4 | Designed |
+| CTL-GOV-005 | Requirement register and applicability decisions | BR-GOV-009, BR-GOV-010 | 5 | Designed |
 | CTL-GOV-006 | Regulatory change monitoring | BR-GOV-012 | 4 | Designed |
 | CTL-GOV-007 | Exception and risk acceptance register | BR-FIN-018, BR-GOV-004 | 4 | Designed |
 | CTL-GOV-008 | Authority matrix enforced by systems | BR-APP-005, BR-GOV-007, BR-AI-001 | 6 | Designed |
