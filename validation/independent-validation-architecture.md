@@ -154,7 +154,7 @@ SRC-AIG-031.)*
 
 | Separation axis | Implementer | Validator | Approver |
 |---|---|---|---|
-| Role (human) | Control owner/engineer | Person outside the implementing team (OQ-608) | Authority from decision register (OQ-607) |
+| Role (human) | Control owner/engineer | Person outside the implementing team where one exists; today multiple-agent review and protected deterministic verification, with no retainer (OQ-608, DF-ASR-2026-0D11) | Authority from decision register (OQ-607) |
 | Agent identity | Builder agent identities | Separate validation agent identities with read-only source access | none (humans only) |
 | Credentials | Write to control code via PR | Read-only to sources and evidence; write only to validation-results store | Approval service, phishing-resistant authenticator |
 | Repository | Control/policy repositories | Validation repository (tests, mutants, reconciliations) | Decision register |
@@ -241,10 +241,11 @@ effectiveness (RSK-040).
 OQ-601 (auditor reliance on agent evidence), OQ-604 (mutation testing as
 management monitoring), OQ-608 (staffing for separation) and OQ-612 (external
 technical validation provider) have owner-approved internal design resolutions
-(DF-ASR-2026-0D11); implementation verification remains pending for all four,
+(DF-ASR-2026-0D11); requirements definition and implementation verification
+remain pending for all four,
 and auditor or provider acceptance remains pending for OQ-601, OQ-604 and
 OQ-612 (OQ-608 has no external acceptance condition). OQ-611 (formal methods investment) is answered as
-deferred (DF-ASR-2026-0D10).
+deferred (inferred from the owner's baseline approval, DF-ASR-2026-0D10).
 
 ## Owner requirements VAL-BC-001..014 (2026-11-25)
 

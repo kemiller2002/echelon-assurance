@@ -338,7 +338,7 @@ verification remain pending; external acceptance remains pending where a
 condition exists, notably auditor acceptance (OQ-500, OQ-510). Provider
 selection for OQ-504 is pending as part of implementation; OQ-504 has no
 external acceptance condition.
-OQ-505 (public witness network) is answered as deferred (DF-ASR-2026-0D10).
+OQ-505 (public witness network) is answered as deferred (inferred from the owner's baseline approval, DF-ASR-2026-0D10).
 See `registers/question-dispositions.csv` and
 `registers/fragments/PAC-open-questions.csv`.
 

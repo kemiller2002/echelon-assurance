@@ -326,7 +326,7 @@ controls,CTL-VEN-004,78a04f2d96eca67b
 controls,CTL-VEN-005,03cdbfd299e72444
 controls,CTL-VUL-001,cf71389528269e16
 controls,CTL-VUL-002,ee893a71130423d5
-controls,CTL-VUL-003,91653627f9892c15
+controls,CTL-VUL-003,e380cb90c805d5ca
 controls,CTL-VUL-004,b59fb886f448d7f4
 decision_traceability,ODP-01,9ed407e13f82704d
 decision_traceability,ODP-02,18813afb9dc4fa93
@@ -419,7 +419,7 @@ file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,7691a8f95f0b9ffe
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
 file,ai-governance/ai-governance-model.md,57ef54c1dbd0e474
-file,architecture/evidence-architecture.md,a4af78fe48deea7c
+file,architecture/evidence-architecture.md,6089c8412b6e4140
 file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,8384baf9452192cd
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
@@ -451,7 +451,7 @@ file,docs/decisions/owner-review-direction-2026-11-25.md,59759d70be559755
 file,economics/compliance-economics.md,9437358ab0d928c7
 file,economics/parameters.csv,87a09cc2a85a9852
 file,economics/v2/README.md,ebaeab9b6acd4da5
-file,economics/v2/activities.csv,eef7bf61e9994e3b
+file,economics/v2/activities.csv,ff0208c65120cc5a
 file,economics/v2/alternatives.csv,3c3e74ac889c14dc
 file,economics/v2/scenarios.csv,4f0836b46e0edcb3
 file,financial/finbc-unbound-map.csv,1c1e7b36976aae5b
@@ -565,7 +565,7 @@ file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff5333
 file,trust-center/customer-trust-center-specification.md,3e33552e7635c7ee
 file,validation/assurance-system-resilience.md,7df63b8cbcca2c6b
 file,validation/continuous-security-testing-specification.md,55d4821d770dc1f7
-file,validation/independent-validation-architecture.md,728753d42a5cba56
+file,validation/independent-validation-architecture.md,9bb32833c8191f61
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43
 open_questions,OQ-100,5a235bf082c88204
 open_questions,OQ-101,018c707edccc7117
@@ -589,7 +589,7 @@ open_questions,OQ-201,afadd657ad84fbd4
 open_questions,OQ-202,9b81e62cd746dcda
 open_questions,OQ-203,9c643a0ee3bb96c8
 open_questions,OQ-204,2bbf422c44ddafcc
-open_questions,OQ-205,b8f998ab8cfc6c91
+open_questions,OQ-205,dbd54b1249a55e81
 open_questions,OQ-206,d025be033f3096d9
 open_questions,OQ-207,2246c8325656e7a9
 open_questions,OQ-208,83d95f9d82f3def9
@@ -634,7 +634,7 @@ open_questions,OQ-603,7de13bc815d9e31c
 open_questions,OQ-604,35dc9b80ba07c0d7
 open_questions,OQ-605,0c2e4519622b9308
 open_questions,OQ-606,139e366f1f61c8a4
-open_questions,OQ-607,b5e4ef010c6453c2
+open_questions,OQ-607,44885c9f1baa78f9
 open_questions,OQ-608,d793b730b06c26a6
 open_questions,OQ-609,2bd3ed7694e2762a
 open_questions,OQ-610,76c672efc4d65744
@@ -837,7 +837,7 @@ question_bank,CAQ-057,37f91819839b9bc9
 question_bank,CAQ-058,197b1523c9b02548
 question_bank,CAQ-059,d6517349f901e887
 question_bank,CAQ-060,779dc97d3b53e01a
-question_bank,CAQ-061,ea9ab8b0d36e3d1d
+question_bank,CAQ-061,043e9769105abaff
 question_bank,CAQ-062,dcd5fb618adb4d42
 question_bank,CAQ-063,b8845e1c2dd431e1
 question_bank,CAQ-064,2b8a54e79eec66af
@@ -913,7 +913,7 @@ question_dispositions,OQ-300,9e617f9e10b48b36
 question_dispositions,OQ-301,ad31795b733c6137
 question_dispositions,OQ-302,305184583af67d0f
 question_dispositions,OQ-303,9409607d41c22e2b
-question_dispositions,OQ-304,6c0b3b8b7d0eed30
+question_dispositions,OQ-304,70af2ecaa9951544
 question_dispositions,OQ-305,ea2d7efd66e94286
 question_dispositions,OQ-306,e68e077b0af0858d
 question_dispositions,OQ-307,9506c1e455f9b1c6
@@ -950,7 +950,7 @@ question_dispositions,OQ-612,4abf449223463958
 question_dispositions,OQ-613,ea084439ab1e5581
 question_dispositions,OQ-614,89539357a9cf663e
 question_dispositions,OQ-615,5981d8d01a4385f1
-question_dispositions,OQ-616,34678e11ebab4b2c
+question_dispositions,OQ-616,b3c8144df5919bfd
 question_dispositions,OQ-700,88cc244b39ef7229
 question_dispositions,OQ-701,5f34ee459a1a189f
 question_dispositions,OQ-702,4f76f4ed19cfb66c
