@@ -86,15 +86,17 @@ The owner directed on 2026-11-25:
 Scenario S8 implements this:
 
 - Non-reliance lines apply.
-- Fractional reviewer and external technical validation lines are excluded.
+- Contracted reviewer (the "fractional independent reviewer" lines) and external technical validation lines are excluded.
 - Examinations and penetration testing stay in as conservative cost provisions on the model's standard timing (pen test yearly from year 1, examinations from year 2). They are not commitments: the owner reassesses them against actual obligations. Removing them lowers every alternative equally and does not change the ranking.
 
 | Five-year midpoint | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A4 minimum viable | USD 1.09M | 1.55M | 2.92M | 5.20M | 7.48M |
-| A3 outsourced | 1.22M | 1.68M | 3.07M | 5.37M | 7.67M |
-| A5 targeted automation | 1.40M | 1.86M | 3.22M | 5.49M | 7.77M |
-| A8 recommended package | 1.34M | 1.82M | 3.27M | 5.68M | 8.10M |
+| A4 minimum viable | USD 1.19M | 1.65M | 3.03M | 5.32M | 7.61M |
+| A3 outsourced | 1.33M | 1.79M | 3.18M | 5.49M | 7.81M |
+| A5 targeted automation | 1.50M | 1.96M | 3.33M | 5.62M | 7.91M |
+| A8 recommended package | 1.44M | 1.92M | 3.38M | 5.81M | 8.24M |
+
+(Regenerated 2026-11-26 after adding the shared observability lines ACT-114..116, ODP-06, which are identical in every alternative; the earlier figures were about USD 0.10M lower at N=1.)
 
 **Cost.** Without auditor reliance, A4 has the lowest midpoint at every product count. A8 and A5 cost about USD 245k and 310k more than A4 over five years at one product. A5, A6 and A8 stay above A3 at every modelled product count.
 
@@ -123,10 +125,83 @@ None of these is monetized. Without reliance, automation does not reduce owner h
   - continuous security testing.
 - **Defer** collection automation whose only purpose is audit evidence.
 
+## ODP-09 recalculation (owner direction DF-ASR-2026-0D0F, 2026-11-26)
+
+The owner directed that costs be separated by purpose, recalculated across
+product counts 1, 2, 5, 10 and 15 and across reliance cases, and that **no
+product-count threshold** gate investment. The originals are preserved (v1 in
+`economics/`, scenarios S0–S8 unchanged in definition); the additions are:
+
+- **Purpose classes** (`purpose` column in `activities.csv`, validated by a
+  repository test): baseline-engineering, operational-visibility,
+  financial-integrity, prevention, continuous-validation,
+  operational-evidence, shared-infrastructure, auditor-packaging,
+  customer-packaging and external-services. The generated model reports
+  five-year cost by purpose for A4, A8 and A5 in each ODP-09 scenario. The
+  classification of each activity is hypothetical.
+- **Reliance cases** (`auditor_reliance` now none, partial or full):
+  S9 no examination, S10 partial reliance, S11 full reliance, and
+  S12 customer-specific (no examination; customer packaging doubled). All
+  exclude a contracted reviewer and external technical validation.
+- **Shared observability** (Vigila, ODP-06) is charged identically to every
+  alternative (ACT-114..116), so it changes totals but not rankings.
+
+Five-year midpoints (USD, generated `generated/model.md` is authoritative):
+
+| Scenario | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|---|
+| S9 no exam | A4 | 0.79M | 1.10M | 2.02M | 3.56M | 5.10M |
+| | A8 | 1.03M | 1.37M | 2.37M | 4.05M | 5.72M |
+| | A5 | 0.96M | 1.18M | 1.86M | 2.98M | 4.10M |
+| S10 partial reliance | A4 | 1.17M | 1.61M | 2.94M | 5.16M | 7.38M |
+| | A8 | 1.41M | 1.88M | 3.30M | 5.65M | 8.00M |
+| | A5 | 1.40M | 1.79M | 2.97M | 4.93M | 6.89M |
+| S11 full reliance | A4 | 1.14M | 1.57M | 2.86M | 5.00M | 7.14M |
+| | A8 | 1.39M | 1.84M | 3.21M | 5.49M | 7.77M |
+| | A5 | 1.29M | 1.62M | 2.60M | 4.24M | 5.88M |
+| S12 customer-specific | A4 | 0.88M | 1.23M | 2.30M | 4.07M | 5.84M |
+| | A8 | 1.12M | 1.51M | 2.65M | 4.55M | 6.46M |
+| | A5 | 1.03M | 1.29M | 2.07M | 3.37M | 4.66M |
+
+What this shows, without thresholds:
+
+1. **Purpose, not product count, decides each investment.** The A8 increment
+   over A4 is prevention (about USD 190k over five years at N=1),
+   financial integrity (about USD 34k) and continuous validation (about
+   USD 19k). Those lines are justified by the risk they reduce under TNT-01,
+   TNT-02 and TNT-16, whatever the product count.
+2. **Auditor packaging is the line most sensitive to reliance** (USD 118k at
+   N=1 to about USD 1.0M at N=15 in S8 for A4). It disappears when no
+   examination is commissioned and halves under partial reliance. Build it
+   only when an examination is actually planned.
+3. **Evidence-collection automation (A5) is not only an audit investment.**
+   In S9 and S12 (no examination) its midpoint falls below A4 from five
+   modelled products, as in S11 (full reliance); at one and two products A4
+   stays lowest in every ODP-09 case. This is a description of modelled
+   results, not a threshold: the driver is manual evidence preparation
+   needed for operations and customers, not auditor reliance. It depends on the
+   hypothetical assumption that A4's manual evidence preparation
+   (ACT-029, operational-evidence) is still needed without an examination;
+   if it is not, A4 stays lowest. Measure actual manual evidence hours
+   before deciding (measurement strategy below).
+4. **External services** (examination and penetration-test provisions) are
+   the largest non-baseline line in S8 and S10–S11. They are provisions, not
+   commitments (TNT-18, ODP-11).
+
+### Quantified and qualitative benefits
+
+| Benefit | Quantified here? | Measurement strategy |
+|---|---|---|
+| Lower manual evidence and packaging hours | Yes (cost lines) | Record hours per evidence request and per audit request from the first customer request onward |
+| Earlier detection of control failure | No (qualitative) | Time from control failure to detection, from gate and heartbeat records (BR-LOG-002) |
+| Vulnerability classes and financial errors prevented | No (ECON-011) | Gate-blocked defects by class; invariant-suite failures caught before release |
+| Faster customer diligence | No | Elapsed days per questionnaire; share of answers generated without edits |
+| Reuse across products | Partly (scaling factors) | Actual hours to onboard each additional product to gates, suites and observability |
+
 ## What the numbers do and do not support (DF-ASR-2026-C005, superseded for ODP-09 by DF-ASR-2026-0D0F)
 
 1. **At one or two products, no option is clearly cheaper on cash.** Minimum viable assurance has the lowest midpoint, but within overlapping ranges. The choice rests on security value, independence and owner capacity.
-2. **Evidence-collection automation pays only with auditor reliance and three or more products.** Gate it on a written auditor position (WI-EXT-01) and a credible product pipeline.
+2. **Evidence-collection automation** *(superseded by the ODP-09 recalculation above: no product-count threshold applies; decide by purpose and measured manual evidence hours).* Original text: pays only with auditor reliance and three or more products; gate it on a written auditor position (WI-EXT-01) and a credible product pipeline.
 3. **Prevention and testing automation (A8 increment, about USD 50–70k a year) is justified by risk reduction the model does not monetize,** under tenets TNT-01, TNT-02 and TNT-16. Much of it, such as financial invariant suites and security-by-construction rules, is arguably responsible baseline engineering for a financial product. Classifying it as baseline or as a discretionary assurance investment is an owner decision (ODP-09).
 4. **If owner capacity binds, A3-style outsourced support is a natural relief,** with a similar total cost under non-reliance, and it adds some independent challenge. Its incremental cost on top of A4 or A8 is not yet modelled.
 5. **Never without demonstrated demand:**

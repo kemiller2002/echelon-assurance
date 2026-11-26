@@ -8,12 +8,14 @@ let private scenario =
         Id = "T"
         Description = "test"
         MaintenanceMultiplier = 1.0
-        AuditorReliance = true
+        Reliance = 1.0
         AdditionalProductStartYear = 1
         DiscountRate = 0.0
         OpportunityMultiplier = 0.5
         LaborRate = 100.0, 200.0
         ExcludedClasses = Set.empty
+        ExcludedPurposes = Set.empty
+        CustomerMultiplier = 1.0
     }
 
 let private act alt cls perProduct annual start hours cash scaling condition =
@@ -29,6 +31,7 @@ let private act alt cls perProduct annual start hours cash scaling condition =
         Cash = cash
         Scaling = scaling
         Condition = condition
+        Purpose = "prevention"
     }
 
 [<Fact>]
@@ -84,15 +87,7 @@ let ``nonreliance lines apply only when the auditor does not rely`` () =
     let a = act "A" "human-admin" false true 1 (0.0, 0.0) (10.0, 10.0) 0.0 "nonreliance"
     Assert.Equal((0.0, 0.0), lifecycle scenario 1 a)
 
-    Assert.Equal(
-        (50.0, 50.0),
-        lifecycle
-            { scenario with
-                AuditorReliance = false
-            }
-            1
-            a
-    )
+    Assert.Equal((50.0, 50.0), lifecycle { scenario with Reliance = 0.0 } 1 a)
 
 [<Fact>]
 let ``discounting reduces later years`` () =
@@ -160,3 +155,42 @@ let ``excluded cost classes are not charged`` () =
         }
 
     Assert.Equal((0.0, 0.0), lifecycle s 1 a)
+
+[<Fact>]
+let ``partial reliance charges half of a nonreliance line`` () =
+    let a = act "A" "human-admin" false true 1 (0.0, 0.0) (10.0, 10.0) 0.0 "nonreliance"
+    Assert.Equal((25.0, 25.0), lifecycle { scenario with Reliance = 0.5 } 1 a)
+
+[<Fact>]
+let ``excluded purpose contributes nothing`` () =
+    let a = act "A" "subscription" false true 1 (0.0, 0.0) (10.0, 10.0) 0.0 "always"
+
+    let s =
+        { scenario with
+            ExcludedPurposes = set [ "prevention" ]
+        }
+
+    Assert.Equal((0.0, 0.0), lifecycle s 1 a)
+
+[<Fact>]
+let ``purpose breakdown sums to incremental plus baseline`` () =
+    let acts =
+        [
+            act "A" "subscription" false true 1 (0.0, 0.0) (10.0, 20.0) 0.0 "always"
+            { act "BASELINE" "baseline-engineering" true true 1 (1.0, 2.0) (0.0, 0.0) 0.8 "always" with
+                Purpose = "baseline-engineering"
+            }
+            { act "A" "external-pentest" false true 1 (0.0, 0.0) (5.0, 5.0) 0.0 "always" with
+                Purpose = "external-services"
+            }
+        ]
+
+    let r = evaluate acts scenario "A" 3
+
+    let total =
+        purposes
+        |> List.map (byPurpose acts scenario "A" 3)
+        |> List.fold (fun (a, b) (c, d) -> a + c, b + d) (0.0, 0.0)
+
+    Assert.Equal(fst r.Incremental + fst r.Baseline, fst total, 6)
+    Assert.Equal(snd r.Incremental + snd r.Baseline, snd total, 6)

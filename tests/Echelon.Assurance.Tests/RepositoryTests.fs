@@ -109,3 +109,16 @@ let ``fragments do not drift from registers`` () =
                 None)
 
     Assert.True(List.isEmpty drift, String.concat ", " drift)
+
+[<Fact>]
+let ``every economics activity has a known evidence purpose`` () =
+    let header, rows =
+        Csv.table (File.ReadAllText(Path.Combine(root, "economics/v2/activities.csv")))
+
+    let bad =
+        rows
+        |> List.map (fun r -> List.zip header r |> Map.ofList |> Economics.activity)
+        |> List.filter (fun a -> not (List.contains a.Purpose Economics.purposes))
+        |> List.map (fun a -> a.Id)
+
+    Assert.True(List.isEmpty bad, String.concat ", " bad)

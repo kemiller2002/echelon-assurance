@@ -25,6 +25,7 @@ type Activity =
         Cash: Range
         Scaling: float
         Condition: string
+        Purpose: string
     }
 
 type Scenario =
@@ -32,13 +33,32 @@ type Scenario =
         Id: string
         Description: string
         MaintenanceMultiplier: float
-        AuditorReliance: bool
+        /// Share of system-generated evidence the examiner relies on: 0 none, 1 full.
+        Reliance: float
         AdditionalProductStartYear: int
         DiscountRate: float
         OpportunityMultiplier: float
         LaborRate: Range
         ExcludedClasses: Set<string>
+        ExcludedPurposes: Set<string>
+        /// Multiplier on customer-packaging lines (customer-specific evidence requests).
+        CustomerMultiplier: float
     }
+
+/// Evidence-purpose classes (owner direction DF-ASR-2026-0D0F, ODP-09).
+let purposes =
+    [
+        "baseline-engineering"
+        "operational-visibility"
+        "financial-integrity"
+        "prevention"
+        "continuous-validation"
+        "operational-evidence"
+        "shared-infrastructure"
+        "auditor-packaging"
+        "customer-packaging"
+        "external-services"
+    ]
 
 type Result =
     {
@@ -69,25 +89,41 @@ let activity (r: Map<string, string>) =
         Cash = number r["cash_low"], number r["cash_high"]
         Scaling = number r["product_scaling"]
         Condition = r["condition"]
+        Purpose = Map.tryFind "purpose" r |> Option.defaultValue ""
     }
+
+let private idSet (v: string) =
+    v.Split ';'
+    |> Array.map (fun x -> x.Trim())
+    |> Array.filter ((<>) "")
+    |> Set.ofArray
+
+let reliance (v: string) =
+    match v.Trim() with
+    | "yes"
+    | "full" -> 1.0
+    | "no"
+    | "none" -> 0.0
+    | "partial" -> 0.5
+    | other -> number other
 
 let scenario (r: Map<string, string>) =
     {
         Id = r["scenario_id"]
         Description = r["description"]
         MaintenanceMultiplier = number r["maintenance_multiplier"]
-        AuditorReliance = r["auditor_reliance"] = "yes"
+        Reliance = reliance r["auditor_reliance"]
         AdditionalProductStartYear = int r["additional_product_start_year"]
         DiscountRate = number r["discount_rate"]
         OpportunityMultiplier = number r["opportunity_multiplier"]
         LaborRate = number r["labor_rate_low"], number r["labor_rate_high"]
-        ExcludedClasses =
-            Map.tryFind "excluded_cost_classes" r
-            |> Option.defaultValue ""
-            |> fun v -> v.Split ';'
-            |> Array.map (fun x -> x.Trim())
-            |> Array.filter ((<>) "")
-            |> Set.ofArray
+        ExcludedClasses = Map.tryFind "excluded_cost_classes" r |> Option.defaultValue "" |> idSet
+        ExcludedPurposes = Map.tryFind "excluded_purposes" r |> Option.defaultValue "" |> idSet
+        CustomerMultiplier =
+            Map.tryFind "customer_multiplier" r
+            |> Option.filter (fun v -> v.Trim() <> "")
+            |> Option.map number
+            |> Option.defaultValue 1.0
     }
 
 let private add (a: Range) (b: Range) = fst a + fst b, snd a + snd b
@@ -103,14 +139,25 @@ let isBuild (a: Activity) =
 
 let isBaseline (a: Activity) = a.Alternative = "BASELINE"
 
-let applies (s: Scenario) (a: Activity) =
-    let conditionHolds =
-        match a.Condition with
-        | "nonreliance" -> not s.AuditorReliance
-        | "reliance" -> s.AuditorReliance
-        | _ -> true
+/// Share of an activity that applies in a scenario: 0 when its cost class or
+/// purpose is excluded; reliance-conditional lines scale with the reliance share.
+let weight (s: Scenario) (a: Activity) =
+    if s.ExcludedClasses.Contains a.CostClass || s.ExcludedPurposes.Contains a.Purpose then
+        0.0
+    else
+        let customer =
+            if a.Purpose = "customer-packaging" then
+                s.CustomerMultiplier
+            else
+                1.0
 
-    not (s.ExcludedClasses.Contains a.CostClass) && conditionHolds
+        customer
+        * (match a.Condition with
+           | "nonreliance" -> 1.0 - s.Reliance
+           | "reliance" -> s.Reliance
+           | _ -> 1.0)
+
+let applies (s: Scenario) (a: Activity) = weight s a > 0.0
 
 /// Cost of one unit (one product's share, one year) before discounting.
 let unitCost (s: Scenario) (a: Activity) : Range =
@@ -153,6 +200,7 @@ let lifecycle (s: Scenario) (products: int) (a: Activity) : Range =
         [ 1..years ]
         |> List.map (fun y -> scale (productMultiplier s a products y * discountFactor s.DiscountRate y) (unitCost s a))
         |> sum
+        |> scale (weight s a)
 
 /// Opportunity cost: build hours diverted from product work, valued at the
 /// labor rate times the scenario opportunity multiplier. Reported separately.
@@ -276,6 +324,63 @@ let breakEvenPairs =
                 c, r
     ]
 
+/// Five-year cost of one alternative attributable to one purpose class.
+let byPurpose (all: Activity list) (s: Scenario) (alternative: string) (products: int) (purpose: string) =
+    activitiesFor alternative all @ (all |> List.filter isBaseline)
+    |> List.filter (fun a -> a.Purpose = purpose)
+    |> List.map (lifecycle s products)
+    |> sum
+
+/// Scenarios and alternatives broken down by purpose (ODP-09).
+let purposeScenarios =
+    [
+        "S8-owner-direction"
+        "S9-no-exam"
+        "S10-partial-reliance"
+        "S11-full-reliance"
+        "S12-customer-specific"
+    ]
+
+let purposeAlternatives =
+    [ "A4-mvp-echelon"; "A8-mvp-plus-prevention"; "A5-targeted-automation" ]
+
+let private purposeSection all (scenarios: Scenario list) (alternatives: string list) =
+    let header =
+        "| Purpose | "
+        + (productGrid |> List.map (sprintf "N=%d") |> String.concat " | ")
+        + " |"
+
+    let rule =
+        "|---|" + (productGrid |> List.map (fun _ -> "---") |> String.concat "|") + "|"
+
+    let one (s: Scenario) (alt: string) =
+        [ ""; sprintf "### %s, %s" s.Id alt; ""; header; rule ]
+        @ (purposes
+           |> List.map (fun p ->
+               "| "
+               + p
+               + " | "
+               + (productGrid
+                  |> List.map (fun n -> money (midpoint (byPurpose all s alt n p)))
+                  |> String.concat " | ")
+               + " |"))
+
+    let chosen = scenarios |> List.filter (fun s -> List.contains s.Id purposeScenarios)
+
+    let alts =
+        purposeAlternatives |> List.filter (fun a -> List.contains a alternatives)
+
+    if List.isEmpty chosen then
+        []
+    else
+        [
+            ""
+            "## Five-year cost by evidence purpose (midpoint, includes baseline engineering)"
+            ""
+            "Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`."
+        ]
+        @ (chosen |> List.collect (fun s -> alts |> List.collect (one s)))
+
 let renderMarkdown all (scenarios: Scenario list) (alternatives: string list) =
     let gridHeader =
         "| Alternative | "
@@ -353,5 +458,6 @@ let renderMarkdown all (scenarios: Scenario list) (alternatives: string list) =
         ""
     ]
     @ (scenarios |> List.collect section)
+    @ purposeSection all scenarios alternatives
     |> String.concat "\n"
     |> fun s -> s + "\n"

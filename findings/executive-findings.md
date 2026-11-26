@@ -62,7 +62,7 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 6. **Economics** (`economics/v2/README.md`; all inputs hypothetical or vendor claims, corrected over four challenge rounds):
    - At one product, five-year midpoints run USD 1.17–1.44M (USD 2.02M for a full internal platform), and the ranges span about 3×.
    - Minimum viable assurance has the lowest or near-lowest midpoint at one or two products in every scenario, with outsourced management within about 4%.
-   - Targeted automation is cheapest only with auditor reliance on system-generated evidence and about five or more products.
+   - Targeted automation is cheapest only with auditor reliance on system-generated evidence and about five or more products *(base-case result; under the ODP-09 recalculation, DF-ASR-2026-0D0F, investments are decided by purpose and measured manual evidence hours, not product-count thresholds; see `economics/v2/README.md`)*.
    - Under non-reliance, minimum viable and outsourced are tied, and evidence automation never pays.
    - Prevention and testing automation adds about USD 50–70k a year for risk reduction the model does not monetize.
    - Owner capacity, rather than cash, is likely the binding constraint.

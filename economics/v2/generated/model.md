@@ -9,53 +9,53 @@ Opportunity cost (build hours diverted from product work) is reported separately
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $642k–$2,233k | $942k–$3,369k | $1,842k–$6,776k | $3,342k–$12,455k | $4,842k–$18,134k |
-| A2-commercial-platform | $609k–$1,976k | $833k–$2,729k | $1,503k–$4,989k | $2,621k–$8,755k | $3,739k–$12,522k |
-| A3-outsourced-management | $560k–$1,862k | $770k–$2,537k | $1,402k–$4,560k | $2,454k–$7,931k | $3,507k–$11,302k |
-| A4-mvp-echelon | $538k–$1,794k | $743k–$2,494k | $1,356k–$4,594k | $2,377k–$8,093k | $3,399k–$11,592k |
-| A5-targeted-automation | $612k–$2,094k | $780k–$2,629k | $1,285k–$4,234k | $2,127k–$6,908k | $2,969k–$9,582k |
-| A6-hybrid | $642k–$2,126k | $826k–$2,692k | $1,379k–$4,390k | $2,301k–$7,219k | $3,223k–$10,049k |
-| A7-full-internal-platform | $890k–$3,154k | $1,049k–$3,644k | $1,526k–$5,115k | $2,321k–$7,566k | $3,116k–$10,016k |
-| A8-mvp-plus-prevention | $628k–$2,195k | $842k–$2,939k | $1,484k–$5,170k | $2,555k–$8,889k | $3,626k–$12,608k |
+| A1-conventional-manual | $675k–$2,405k | $976k–$3,545k | $1,878k–$6,965k | $3,383k–$12,665k | $4,888k–$18,365k |
+| A2-commercial-platform | $642k–$2,148k | $866k–$2,905k | $1,540k–$5,178k | $2,662k–$8,965k | $3,785k–$12,752k |
+| A3-outsourced-management | $592k–$2,034k | $804k–$2,713k | $1,438k–$4,748k | $2,496k–$8,141k | $3,553k–$11,533k |
+| A4-mvp-echelon | $571k–$1,966k | $776k–$2,670k | $1,392k–$4,783k | $2,418k–$8,303k | $3,445k–$11,823k |
+| A5-targeted-automation | $644k–$2,266k | $813k–$2,806k | $1,322k–$4,422k | $2,168k–$7,118k | $3,015k–$9,812k |
+| A6-hybrid | $675k–$2,298k | $860k–$2,868k | $1,416k–$4,578k | $2,342k–$7,429k | $3,269k–$10,279k |
+| A7-full-internal-platform | $923k–$3,326k | $1,083k–$3,821k | $1,562k–$5,304k | $2,362k–$7,775k | $3,162k–$10,247k |
+| A8-mvp-plus-prevention | $660k–$2,367k | $875k–$3,115k | $1,521k–$5,359k | $2,596k–$9,099k | $3,672k–$12,839k |
 
 ## Base case: marginal five-year cost of the N-th product
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $642k–$2,233k | $300k–$1,136k | $300k–$1,136k | $300k–$1,136k | $300k–$1,136k |
-| A2-commercial-platform | $609k–$1,976k | $224k–$753k | $224k–$753k | $224k–$753k | $224k–$753k |
-| A3-outsourced-management | $560k–$1,862k | $211k–$674k | $211k–$674k | $211k–$674k | $211k–$674k |
-| A4-mvp-echelon | $538k–$1,794k | $204k–$700k | $204k–$700k | $204k–$700k | $204k–$700k |
-| A5-targeted-automation | $612k–$2,094k | $168k–$535k | $168k–$535k | $168k–$535k | $168k–$535k |
-| A6-hybrid | $642k–$2,126k | $184k–$566k | $184k–$566k | $184k–$566k | $184k–$566k |
-| A7-full-internal-platform | $890k–$3,154k | $159k–$490k | $159k–$490k | $159k–$490k | $159k–$490k |
-| A8-mvp-plus-prevention | $628k–$2,195k | $214k–$744k | $214k–$744k | $214k–$744k | $214k–$744k |
+| A1-conventional-manual | $675k–$2,405k | $301k–$1,140k | $301k–$1,140k | $301k–$1,140k | $301k–$1,140k |
+| A2-commercial-platform | $642k–$2,148k | $225k–$757k | $225k–$757k | $225k–$757k | $225k–$757k |
+| A3-outsourced-management | $592k–$2,034k | $212k–$678k | $212k–$678k | $212k–$678k | $212k–$678k |
+| A4-mvp-echelon | $571k–$1,966k | $205k–$704k | $205k–$704k | $205k–$704k | $205k–$704k |
+| A5-targeted-automation | $644k–$2,266k | $169k–$539k | $169k–$539k | $169k–$539k | $169k–$539k |
+| A6-hybrid | $675k–$2,298k | $185k–$570k | $185k–$570k | $185k–$570k | $185k–$570k |
+| A7-full-internal-platform | $923k–$3,326k | $160k–$494k | $160k–$494k | $160k–$494k | $160k–$494k |
+| A8-mvp-plus-prevention | $660k–$2,367k | $215k–$748k | $215k–$748k | $215k–$748k | $215k–$748k |
 
 ## Base case: average five-year cost per product (midpoint)
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,438k | $1,078k | $862k | $790k | $766k |
-| A2-commercial-platform | $1,292k | $890k | $649k | $569k | $542k |
-| A3-outsourced-management | $1,211k | $827k | $596k | $519k | $494k |
-| A4-mvp-echelon | $1,166k | $809k | $595k | $524k | $500k |
-| A5-targeted-automation | $1,353k | $852k | $552k | $452k | $418k |
-| A6-hybrid | $1,384k | $880k | $577k | $476k | $442k |
-| A7-full-internal-platform | $2,022k | $1,173k | $664k | $494k | $438k |
-| A8-mvp-plus-prevention | $1,411k | $945k | $665k | $572k | $541k |
+| A1-conventional-manual | $1,540k | $1,130k | $884k | $802k | $775k |
+| A2-commercial-platform | $1,395k | $943k | $672k | $581k | $551k |
+| A3-outsourced-management | $1,313k | $879k | $619k | $532k | $503k |
+| A4-mvp-echelon | $1,269k | $862k | $617k | $536k | $509k |
+| A5-targeted-automation | $1,455k | $905k | $574k | $464k | $428k |
+| A6-hybrid | $1,486k | $932k | $599k | $489k | $452k |
+| A7-full-internal-platform | $2,124k | $1,226k | $687k | $507k | $447k |
+| A8-mvp-plus-prevention | $1,514k | $998k | $688k | $585k | $550k |
 
 ## Base case: opportunity cost of build hours (not included above)
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k |
-| A2-commercial-platform | $10k–$47k | $10k–$47k | $10k–$47k | $10k–$47k | $10k–$47k |
-| A3-outsourced-management | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k | $6k–$26k |
-| A4-mvp-echelon | $12k–$54k | $13k–$60k | $16k–$75k | $21k–$102k | $26k–$128k |
-| A5-targeted-automation | $35k–$152k | $37k–$161k | $41k–$186k | $49k–$228k | $57k–$270k |
-| A6-hybrid | $26k–$114k | $27k–$119k | $30k–$135k | $35k–$161k | $40k–$187k |
-| A7-full-internal-platform | $83k–$364k | $84k–$368k | $87k–$381k | $91k–$402k | $96k–$423k |
-| A8-mvp-plus-prevention | $29k–$126k | $31k–$135k | $36k–$164k | $45k–$211k | $54k–$258k |
+| A1-conventional-manual | $11k–$51k | $11k–$53k | $13k–$59k | $15k–$70k | $18k–$80k |
+| A2-commercial-platform | $15k–$72k | $15k–$74k | $17k–$80k | $19k–$91k | $22k–$101k |
+| A3-outsourced-management | $11k–$51k | $11k–$53k | $13k–$59k | $15k–$70k | $18k–$80k |
+| A4-mvp-echelon | $17k–$79k | $18k–$86k | $23k–$108k | $30k–$145k | $38k–$182k |
+| A5-targeted-automation | $40k–$177k | $42k–$187k | $48k–$219k | $59k–$271k | $69k–$324k |
+| A6-hybrid | $31k–$138k | $32k–$146k | $37k–$168k | $44k–$204k | $52k–$241k |
+| A7-full-internal-platform | $88k–$388k | $89k–$395k | $93k–$414k | $100k–$445k | $107k–$477k |
+| A8-mvp-plus-prevention | $34k–$150k | $36k–$162k | $43k–$197k | $54k–$254k | $66k–$312k |
 
 Baseline engineering and infrastructure (all alternatives, not incremental): N=1 $115k–$498k; N=5 $483k–$2,090k.
 
@@ -69,14 +69,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,438k | $2,155k | $4,309k | $7,899k | $11,488k |
-| A2-commercial-platform | $1,292k | $1,781k | $3,246k | $5,688k | $8,130k |
-| A3-outsourced-management | $1,211k | $1,653k | $2,981k | $5,193k | $7,405k |
-| A4-mvp-echelon | $1,166k | $1,618k | $2,975k | $5,235k | $7,496k |
-| A5-targeted-automation | $1,353k | $1,705k | $2,759k | $4,517k | $6,275k |
-| A6-hybrid | $1,384k | $1,759k | $2,884k | $4,760k | $6,636k |
-| A7-full-internal-platform | $2,022k | $2,347k | $3,320k | $4,943k | $6,566k |
-| A8-mvp-plus-prevention | $1,411k | $1,890k | $3,327k | $5,722k | $8,117k |
+| A1-conventional-manual | $1,540k | $2,260k | $4,422k | $8,024k | $11,627k |
+| A2-commercial-platform | $1,395k | $1,886k | $3,359k | $5,814k | $8,269k |
+| A3-outsourced-management | $1,313k | $1,758k | $3,093k | $5,318k | $7,543k |
+| A4-mvp-echelon | $1,269k | $1,723k | $3,087k | $5,361k | $7,634k |
+| A5-targeted-automation | $1,455k | $1,809k | $2,872k | $4,643k | $6,414k |
+| A6-hybrid | $1,486k | $1,864k | $2,997k | $4,886k | $6,774k |
+| A7-full-internal-platform | $2,124k | $2,452k | $3,433k | $5,069k | $6,705k |
+| A8-mvp-plus-prevention | $1,514k | $1,995k | $3,440k | $5,848k | $8,255k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -103,14 +103,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,421k | $2,139k | $4,293k | $7,882k | $11,472k |
-| A2-commercial-platform | $1,258k | $1,746k | $3,211k | $5,653k | $8,095k |
-| A3-outsourced-management | $1,195k | $1,637k | $2,964k | $5,176k | $7,388k |
-| A4-mvp-echelon | $1,141k | $1,593k | $2,949k | $5,210k | $7,470k |
-| A5-targeted-automation | $1,260k | $1,606k | $2,641k | $4,367k | $6,094k |
-| A6-hybrid | $1,296k | $1,666k | $2,777k | $4,629k | $6,482k |
-| A7-full-internal-platform | $1,818k | $2,138k | $3,097k | $4,697k | $6,296k |
-| A8-mvp-plus-prevention | $1,345k | $1,820k | $3,248k | $5,627k | $8,005k |
+| A1-conventional-manual | $1,502k | $2,222k | $4,384k | $7,986k | $11,588k |
+| A2-commercial-platform | $1,338k | $1,829k | $3,302k | $5,757k | $8,212k |
+| A3-outsourced-management | $1,275k | $1,720k | $3,055k | $5,280k | $7,505k |
+| A4-mvp-echelon | $1,221k | $1,676k | $3,040k | $5,313k | $7,587k |
+| A5-targeted-automation | $1,341k | $1,689k | $2,732k | $4,471k | $6,210k |
+| A6-hybrid | $1,376k | $1,749k | $2,868k | $4,733k | $6,598k |
+| A7-full-internal-platform | $1,898k | $2,221k | $3,188k | $4,800k | $6,413k |
+| A8-mvp-plus-prevention | $1,425k | $1,903k | $3,338k | $5,730k | $8,122k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -137,14 +137,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,464k | $2,182k | $4,336k | $7,925k | $11,515k |
-| A2-commercial-platform | $1,351k | $1,839k | $3,304k | $5,746k | $8,188k |
-| A3-outsourced-management | $1,238k | $1,680k | $3,007k | $5,219k | $7,431k |
-| A4-mvp-echelon | $1,209k | $1,661k | $3,017k | $5,278k | $7,538k |
-| A5-targeted-automation | $1,507k | $1,870k | $2,956k | $4,767k | $6,579k |
-| A6-hybrid | $1,532k | $1,914k | $3,063k | $4,978k | $6,893k |
-| A7-full-internal-platform | $2,363k | $2,695k | $3,692k | $5,354k | $7,016k |
-| A8-mvp-plus-prevention | $1,523k | $2,007k | $3,460k | $5,881k | $8,302k |
+| A1-conventional-manual | $1,603k | $2,324k | $4,485k | $8,087k | $11,690k |
+| A2-commercial-platform | $1,489k | $1,980k | $3,453k | $5,908k | $8,363k |
+| A3-outsourced-management | $1,377k | $1,822k | $3,157k | $5,381k | $7,606k |
+| A4-mvp-echelon | $1,348k | $1,802k | $3,166k | $5,440k | $7,713k |
+| A5-targeted-automation | $1,646k | $2,011k | $3,105k | $4,929k | $6,753k |
+| A6-hybrid | $1,670k | $2,056k | $3,212k | $5,140k | $7,068k |
+| A7-full-internal-platform | $2,502k | $2,837k | $3,841k | $5,516k | $7,191k |
+| A8-mvp-plus-prevention | $1,661k | $2,148k | $3,609k | $6,043k | $8,477k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -171,14 +171,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,491k | $2,209k | $4,363k | $7,952k | $11,542k |
-| A2-commercial-platform | $1,409k | $1,897k | $3,362k | $5,804k | $8,246k |
-| A3-outsourced-management | $1,265k | $1,707k | $3,034k | $5,246k | $7,458k |
-| A4-mvp-echelon | $1,251k | $1,703k | $3,060k | $5,320k | $7,581k |
-| A5-targeted-automation | $1,662k | $2,035k | $3,153k | $5,017k | $6,882k |
-| A6-hybrid | $1,679k | $2,070k | $3,242k | $5,196k | $7,150k |
-| A7-full-internal-platform | $2,703k | $3,044k | $4,064k | $5,765k | $7,466k |
-| A8-mvp-plus-prevention | $1,634k | $2,123k | $3,592k | $6,040k | $8,488k |
+| A1-conventional-manual | $1,667k | $2,387k | $4,548k | $8,151k | $11,753k |
+| A2-commercial-platform | $1,584k | $2,075k | $3,548k | $6,003k | $8,458k |
+| A3-outsourced-management | $1,440k | $1,885k | $3,220k | $5,445k | $7,670k |
+| A4-mvp-echelon | $1,427k | $1,881k | $3,245k | $5,519k | $7,792k |
+| A5-targeted-automation | $1,837k | $2,212k | $3,339k | $5,216k | $7,093k |
+| A6-hybrid | $1,854k | $2,248k | $3,428k | $5,394k | $7,361k |
+| A7-full-internal-platform | $2,879k | $3,221k | $4,250k | $5,964k | $7,678k |
+| A8-mvp-plus-prevention | $1,809k | $2,301k | $3,778k | $6,239k | $8,700k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -205,14 +205,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,438k | $2,155k | $4,309k | $7,899k | $11,488k |
-| A2-commercial-platform | $1,378k | $1,918k | $3,538k | $6,238k | $8,938k |
-| A3-outsourced-management | $1,261k | $1,733k | $3,151k | $5,513k | $7,875k |
-| A4-mvp-echelon | $1,216k | $1,698k | $3,145k | $5,555k | $7,966k |
-| A5-targeted-automation | $1,568k | $2,049k | $3,490k | $5,893k | $8,296k |
-| A6-hybrid | $1,599k | $2,103k | $3,616k | $6,136k | $8,657k |
-| A7-full-internal-platform | $2,237k | $2,691k | $4,051k | $6,319k | $8,587k |
-| A8-mvp-plus-prevention | $1,461k | $1,970k | $3,497k | $6,042k | $8,587k |
+| A1-conventional-manual | $1,540k | $2,260k | $4,422k | $8,024k | $11,627k |
+| A2-commercial-platform | $1,481k | $2,023k | $3,651k | $6,364k | $9,077k |
+| A3-outsourced-management | $1,363k | $1,838k | $3,263k | $5,638k | $8,013k |
+| A4-mvp-echelon | $1,319k | $1,803k | $3,257k | $5,681k | $8,104k |
+| A5-targeted-automation | $1,670k | $2,153k | $3,603k | $6,019k | $8,435k |
+| A6-hybrid | $1,701k | $2,208k | $3,728k | $6,262k | $8,795k |
+| A7-full-internal-platform | $2,339k | $2,796k | $4,164k | $6,445k | $8,726k |
+| A8-mvp-plus-prevention | $1,564k | $2,075k | $3,610k | $6,168k | $8,725k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -239,14 +239,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,464k | $2,182k | $4,336k | $7,925k | $11,515k |
-| A2-commercial-platform | $1,437k | $1,977k | $3,597k | $6,297k | $8,997k |
-| A3-outsourced-management | $1,288k | $1,760k | $3,177k | $5,539k | $7,901k |
-| A4-mvp-echelon | $1,259k | $1,741k | $3,187k | $5,598k | $8,008k |
-| A5-targeted-automation | $1,722k | $2,214k | $3,687k | $6,143k | $8,600k |
-| A6-hybrid | $1,746k | $2,258k | $3,794k | $6,354k | $8,914k |
-| A7-full-internal-platform | $2,578k | $3,039k | $4,423k | $6,730k | $9,037k |
-| A8-mvp-plus-prevention | $1,573k | $2,087k | $3,630k | $6,201k | $8,772k |
+| A1-conventional-manual | $1,603k | $2,324k | $4,485k | $8,087k | $11,690k |
+| A2-commercial-platform | $1,575k | $2,118k | $3,746k | $6,459k | $9,172k |
+| A3-outsourced-management | $1,427k | $1,902k | $3,327k | $5,701k | $8,076k |
+| A4-mvp-echelon | $1,398k | $1,882k | $3,336k | $5,760k | $8,183k |
+| A5-targeted-automation | $1,861k | $2,355k | $3,836k | $6,305k | $8,774k |
+| A6-hybrid | $1,885k | $2,400k | $3,943k | $6,516k | $9,089k |
+| A7-full-internal-platform | $2,717k | $3,181k | $4,572k | $6,892k | $9,212k |
+| A8-mvp-plus-prevention | $1,711k | $2,228k | $3,779k | $6,363k | $8,947k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -273,14 +273,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,438k | $1,894k | $3,264k | $5,547k | $7,830k |
-| A2-commercial-platform | $1,292k | $1,606k | $2,547k | $4,115k | $5,684k |
-| A3-outsourced-management | $1,211k | $1,491k | $2,332k | $3,733k | $5,134k |
-| A4-mvp-echelon | $1,166k | $1,462k | $2,349k | $3,828k | $5,306k |
-| A5-targeted-automation | $1,353k | $1,587k | $2,291k | $3,463k | $4,635k |
-| A6-hybrid | $1,384k | $1,630k | $2,370k | $3,602k | $4,835k |
-| A7-full-internal-platform | $2,022k | $2,238k | $2,887k | $3,968k | $5,049k |
-| A8-mvp-plus-prevention | $1,411k | $1,725k | $2,667k | $4,236k | $5,805k |
+| A1-conventional-manual | $1,540k | $1,999k | $3,377k | $5,672k | $7,968k |
+| A2-commercial-platform | $1,395k | $1,711k | $2,660k | $4,241k | $5,822k |
+| A3-outsourced-management | $1,313k | $1,596k | $2,444k | $3,858k | $5,272k |
+| A4-mvp-echelon | $1,269k | $1,567k | $2,462k | $3,953k | $5,445k |
+| A5-targeted-automation | $1,455k | $1,692k | $2,403k | $3,588k | $4,773k |
+| A6-hybrid | $1,486k | $1,735k | $2,483k | $3,728k | $4,973k |
+| A7-full-internal-platform | $2,124k | $2,343k | $3,000k | $4,094k | $5,188k |
+| A8-mvp-plus-prevention | $1,514k | $1,830k | $2,779k | $4,361k | $5,944k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -307,14 +307,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,234k | $1,847k | $3,687k | $6,753k | $9,819k |
-| A2-commercial-platform | $1,110k | $1,527k | $2,776k | $4,858k | $6,941k |
-| A3-outsourced-management | $1,039k | $1,417k | $2,551k | $4,442k | $6,333k |
-| A4-mvp-echelon | $1,002k | $1,388k | $2,545k | $4,473k | $6,402k |
-| A5-targeted-automation | $1,179k | $1,479k | $2,380k | $3,880k | $5,381k |
-| A6-hybrid | $1,201k | $1,521k | $2,481k | $4,081k | $5,681k |
-| A7-full-internal-platform | $1,793k | $2,069k | $2,898k | $4,279k | $5,659k |
-| A8-mvp-plus-prevention | $1,225k | $1,635k | $2,864k | $4,912k | $6,960k |
+| A1-conventional-manual | $1,326k | $1,942k | $3,789k | $6,868k | $9,947k |
+| A2-commercial-platform | $1,202k | $1,621k | $2,879k | $4,974k | $7,069k |
+| A3-outsourced-management | $1,131k | $1,512k | $2,654k | $4,557k | $6,461k |
+| A4-mvp-echelon | $1,094k | $1,482k | $2,647k | $4,589k | $6,530k |
+| A5-targeted-automation | $1,271k | $1,574k | $2,482k | $3,996k | $5,509k |
+| A6-hybrid | $1,293k | $1,616k | $2,584k | $4,197k | $5,810k |
+| A7-full-internal-platform | $1,885k | $2,164k | $3,000k | $4,394k | $5,788k |
+| A8-mvp-plus-prevention | $1,318k | $1,730k | $2,966k | $5,027k | $7,088k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -341,14 +341,14 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 
 | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|
-| A1-conventional-manual | $1,312k | $2,003k | $4,079k | $7,539k | $10,998k |
-| A2-commercial-platform | $1,252k | $1,766k | $3,308k | $5,878k | $8,448k |
-| A3-outsourced-management | $1,224k | $1,684k | $3,066k | $5,368k | $7,670k |
-| A4-mvp-echelon | $1,090k | $1,546k | $2,915k | $5,195k | $7,476k |
-| A5-targeted-automation | $1,402k | $1,857k | $3,220k | $5,493k | $7,766k |
-| A6-hybrid | $1,473k | $1,951k | $3,386k | $5,776k | $8,167k |
-| A7-full-internal-platform | $2,024k | $2,451k | $3,734k | $5,872k | $8,010k |
-| A8-mvp-plus-prevention | $1,335k | $1,818k | $3,267k | $5,682k | $8,097k |
+| A1-conventional-manual | $1,414k | $2,108k | $4,192k | $7,664k | $11,137k |
+| A2-commercial-platform | $1,355k | $1,871k | $3,421k | $6,004k | $8,587k |
+| A3-outsourced-management | $1,326k | $1,789k | $3,178k | $5,493k | $7,808k |
+| A4-mvp-echelon | $1,193k | $1,651k | $3,027k | $5,321k | $7,614k |
+| A5-targeted-automation | $1,504k | $1,961k | $3,333k | $5,619k | $7,905k |
+| A6-hybrid | $1,575k | $2,056k | $3,498k | $5,902k | $8,305k |
+| A7-full-internal-platform | $2,126k | $2,556k | $3,847k | $5,997k | $8,148k |
+| A8-mvp-plus-prevention | $1,438k | $1,923k | $3,380k | $5,808k | $8,235k |
 
 Break-even (smallest product count at which the automated alternative's midpoint is no higher):
 
@@ -367,3 +367,368 @@ Break-even (smallest product count at which the automated alternative's midpoint
 | A7-full-internal-platform | A2-commercial-platform | 10 |
 | A7-full-internal-platform | A3-outsourced-management | 26 |
 
+### S9-no-exam
+
+ODP-09 no examination: no SOC examination is commissioned and no auditor-specific packaging is prepared; no contracted reviewer or external technical validation (DF-ASR-2026-0D0F). Penetration testing and customer diligence stay as provisions.
+
+Five-year incremental assurance cost, midpoint (low–high in the base case table):
+
+| Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| A1-conventional-manual | $1,026k | $1,574k | $3,218k | $5,959k | $8,699k |
+| A2-commercial-platform | $931k | $1,284k | $2,345k | $4,113k | $5,881k |
+| A3-outsourced-management | $988k | $1,335k | $2,375k | $4,108k | $5,840k |
+| A4-mvp-echelon | $787k | $1,095k | $2,020k | $3,561k | $5,102k |
+| A5-targeted-automation | $958k | $1,183k | $1,857k | $2,980k | $4,102k |
+| A6-hybrid | $1,038k | $1,290k | $2,045k | $3,304k | $4,562k |
+| A7-full-internal-platform | $1,580k | $1,777k | $2,370k | $3,358k | $4,346k |
+| A8-mvp-plus-prevention | $1,032k | $1,367k | $2,372k | $4,048k | $5,724k |
+
+Break-even (smallest product count at which the automated alternative's midpoint is no higher):
+
+| Automated | vs conventional | Break-even N |
+|---|---|---|
+| A4-mvp-echelon | A1-conventional-manual | 1 |
+| A4-mvp-echelon | A2-commercial-platform | 1 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
+| A5-targeted-automation | A1-conventional-manual | 1 |
+| A5-targeted-automation | A2-commercial-platform | 2 |
+| A5-targeted-automation | A3-outsourced-management | 1 |
+| A6-hybrid | A1-conventional-manual | 2 |
+| A6-hybrid | A2-commercial-platform | 3 |
+| A6-hybrid | A3-outsourced-management | 2 |
+| A7-full-internal-platform | A1-conventional-manual | 3 |
+| A7-full-internal-platform | A2-commercial-platform | 6 |
+| A7-full-internal-platform | A3-outsourced-management | 5 |
+
+### S10-partial-reliance
+
+ODP-09 partial reliance: an examination is commissioned and the examiner relies on about half of the system-generated evidence; half the manual non-reliance evidence preparation is charged. No contracted reviewer or external technical validation.
+
+Five-year incremental assurance cost, midpoint (low–high in the base case table):
+
+| Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| A1-conventional-manual | $1,414k | $2,108k | $4,192k | $7,664k | $11,137k |
+| A2-commercial-platform | $1,312k | $1,803k | $3,275k | $5,729k | $8,183k |
+| A3-outsourced-management | $1,301k | $1,749k | $3,093k | $5,333k | $7,573k |
+| A4-mvp-echelon | $1,168k | $1,611k | $2,942k | $5,161k | $7,379k |
+| A5-targeted-automation | $1,397k | $1,789k | $2,968k | $4,931k | $6,894k |
+| A6-hybrid | $1,468k | $1,884k | $3,133k | $5,214k | $7,295k |
+| A7-full-internal-platform | $2,018k | $2,384k | $3,481k | $5,309k | $7,138k |
+| A8-mvp-plus-prevention | $1,413k | $1,883k | $3,295k | $5,648k | $8,000k |
+
+Break-even (smallest product count at which the automated alternative's midpoint is no higher):
+
+| Automated | vs conventional | Break-even N |
+|---|---|---|
+| A4-mvp-echelon | A1-conventional-manual | 1 |
+| A4-mvp-echelon | A2-commercial-platform | 1 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
+| A5-targeted-automation | A1-conventional-manual | 1 |
+| A5-targeted-automation | A2-commercial-platform | 2 |
+| A5-targeted-automation | A3-outsourced-management | 3 |
+| A6-hybrid | A1-conventional-manual | 2 |
+| A6-hybrid | A2-commercial-platform | 4 |
+| A6-hybrid | A3-outsourced-management | 7 |
+| A7-full-internal-platform | A1-conventional-manual | 3 |
+| A7-full-internal-platform | A2-commercial-platform | 7 |
+| A7-full-internal-platform | A3-outsourced-management | 10 |
+
+### S11-full-reliance
+
+ODP-09 full reliance: an examination is commissioned and the examiner relies on system-generated evidence after testing it. No contracted reviewer or external technical validation.
+
+Five-year incremental assurance cost, midpoint (low–high in the base case table):
+
+| Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| A1-conventional-manual | $1,414k | $2,108k | $4,192k | $7,664k | $11,137k |
+| A2-commercial-platform | $1,269k | $1,734k | $3,129k | $5,454k | $7,779k |
+| A3-outsourced-management | $1,276k | $1,709k | $3,008k | $5,173k | $7,338k |
+| A4-mvp-echelon | $1,143k | $1,571k | $2,857k | $5,001k | $7,144k |
+| A5-targeted-automation | $1,289k | $1,617k | $2,602k | $4,243k | $5,884k |
+| A6-hybrid | $1,360k | $1,712k | $2,767k | $4,526k | $6,284k |
+| A7-full-internal-platform | $1,911k | $2,212k | $3,116k | $4,621k | $6,127k |
+| A8-mvp-plus-prevention | $1,388k | $1,843k | $3,210k | $5,488k | $7,765k |
+
+Break-even (smallest product count at which the automated alternative's midpoint is no higher):
+
+| Automated | vs conventional | Break-even N |
+|---|---|---|
+| A4-mvp-echelon | A1-conventional-manual | 1 |
+| A4-mvp-echelon | A2-commercial-platform | 1 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
+| A5-targeted-automation | A1-conventional-manual | 1 |
+| A5-targeted-automation | A2-commercial-platform | 2 |
+| A5-targeted-automation | A3-outsourced-management | 2 |
+| A6-hybrid | A1-conventional-manual | 1 |
+| A6-hybrid | A2-commercial-platform | 2 |
+| A6-hybrid | A3-outsourced-management | 3 |
+| A7-full-internal-platform | A1-conventional-manual | 3 |
+| A7-full-internal-platform | A2-commercial-platform | 5 |
+| A7-full-internal-platform | A3-outsourced-management | 6 |
+
+### S12-customer-specific
+
+ODP-09 customer-specific: no SOC examination; each customer receives generated answers and evidence packages directly, and customer-specific diligence effort doubles (hypothetical). Auditor packaging and external examinations excluded; penetration-test provision retained.
+
+Five-year incremental assurance cost, midpoint (low–high in the base case table):
+
+| Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| A1-conventional-manual | $1,178k | $1,835k | $3,805k | $7,088k | $10,370k |
+| A2-commercial-platform | $1,038k | $1,458k | $2,718k | $4,817k | $6,916k |
+| A3-outsourced-management | $1,083k | $1,487k | $2,700k | $4,720k | $6,740k |
+| A4-mvp-echelon | $879k | $1,233k | $2,295k | $4,066k | $5,837k |
+| A5-targeted-automation | $1,033k | $1,292k | $2,070k | $3,365k | $4,660k |
+| A6-hybrid | $1,113k | $1,400k | $2,258k | $3,689k | $5,120k |
+| A7-full-internal-platform | $1,645k | $1,873k | $2,557k | $3,697k | $4,838k |
+| A8-mvp-plus-prevention | $1,124k | $1,505k | $2,648k | $4,553k | $6,459k |
+
+Break-even (smallest product count at which the automated alternative's midpoint is no higher):
+
+| Automated | vs conventional | Break-even N |
+|---|---|---|
+| A4-mvp-echelon | A1-conventional-manual | 1 |
+| A4-mvp-echelon | A2-commercial-platform | 1 |
+| A4-mvp-echelon | A3-outsourced-management | 1 |
+| A5-targeted-automation | A1-conventional-manual | 1 |
+| A5-targeted-automation | A2-commercial-platform | 1 |
+| A5-targeted-automation | A3-outsourced-management | 1 |
+| A6-hybrid | A1-conventional-manual | 1 |
+| A6-hybrid | A2-commercial-platform | 2 |
+| A6-hybrid | A3-outsourced-management | 2 |
+| A7-full-internal-platform | A1-conventional-manual | 3 |
+| A7-full-internal-platform | A2-commercial-platform | 5 |
+| A7-full-internal-platform | A3-outsourced-management | 5 |
+
+
+## Five-year cost by evidence purpose (midpoint, includes baseline engineering)
+
+Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`.
+
+### S8-owner-direction, A4-mvp-echelon
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $118k | $182k | $374k | $694k | $1,014k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S8-owner-direction, A8-mvp-plus-prevention
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $34k | $49k | $96k | $174k | $252k |
+| prevention | $278k | $328k | $482k | $736k | $992k |
+| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $118k | $182k | $374k | $694k | $1,014k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S8-owner-direction, A5-targeted-automation
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $165k | $192k | $275k | $413k | $551k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $111k | $121k | $151k | $201k | $251k |
+| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
+| auditor-packaging | $258k | $404k | $843k | $1,574k | $2,305k |
+| customer-packaging | $75k | $110k | $213k | $386k | $558k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S9-no-exam, A4-mvp-echelon
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $0k | $0k | $0k | $0k | $0k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $125k | $200k | $425k | $800k | $1,175k |
+
+### S9-no-exam, A8-mvp-plus-prevention
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $34k | $49k | $96k | $174k | $252k |
+| prevention | $278k | $328k | $482k | $736k | $992k |
+| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $0k | $0k | $0k | $0k | $0k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $125k | $200k | $425k | $800k | $1,175k |
+
+### S9-no-exam, A5-targeted-automation
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $165k | $192k | $275k | $413k | $551k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $111k | $121k | $151k | $201k | $251k |
+| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
+| auditor-packaging | $0k | $0k | $0k | $0k | $0k |
+| customer-packaging | $75k | $110k | $213k | $386k | $558k |
+| external-services | $125k | $200k | $425k | $800k | $1,175k |
+
+### S10-partial-reliance, A4-mvp-echelon
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $93k | $142k | $289k | $534k | $779k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S10-partial-reliance, A8-mvp-plus-prevention
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $34k | $49k | $96k | $174k | $252k |
+| prevention | $278k | $328k | $482k | $736k | $992k |
+| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $93k | $142k | $289k | $534k | $779k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S10-partial-reliance, A5-targeted-automation
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $165k | $192k | $275k | $413k | $551k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $111k | $121k | $151k | $201k | $251k |
+| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
+| auditor-packaging | $150k | $232k | $477k | $886k | $1,294k |
+| customer-packaging | $75k | $110k | $213k | $386k | $558k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S11-full-reliance, A4-mvp-echelon
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $68k | $102k | $204k | $374k | $544k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S11-full-reliance, A8-mvp-plus-prevention
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $34k | $49k | $96k | $174k | $252k |
+| prevention | $278k | $328k | $482k | $736k | $992k |
+| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $68k | $102k | $204k | $374k | $544k |
+| customer-packaging | $92k | $138k | $276k | $505k | $735k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S11-full-reliance, A5-targeted-automation
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $165k | $192k | $275k | $413k | $551k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $111k | $121k | $151k | $201k | $251k |
+| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
+| auditor-packaging | $43k | $60k | $112k | $198k | $284k |
+| customer-packaging | $75k | $110k | $213k | $386k | $558k |
+| external-services | $413k | $574k | $1,059k | $1,866k | $2,673k |
+
+### S12-customer-specific, A4-mvp-echelon
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $85k | $136k | $289k | $544k | $799k |
+| continuous-validation | $139k | $139k | $139k | $139k | $139k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $0k | $0k | $0k | $0k | $0k |
+| customer-packaging | $184k | $276k | $551k | $1,011k | $1,470k |
+| external-services | $125k | $200k | $425k | $800k | $1,175k |
+
+### S12-customer-specific, A8-mvp-plus-prevention
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $102k | $105k | $113k | $126k | $138k |
+| financial-integrity | $34k | $49k | $96k | $174k | $252k |
+| prevention | $278k | $328k | $482k | $736k | $992k |
+| continuous-validation | $158k | $169k | $202k | $259k | $315k |
+| operational-evidence | $225k | $359k | $760k | $1,429k | $2,098k |
+| shared-infrastructure | $19k | $19k | $19k | $19k | $19k |
+| auditor-packaging | $0k | $0k | $0k | $0k | $0k |
+| customer-packaging | $184k | $276k | $551k | $1,011k | $1,470k |
+| external-services | $125k | $200k | $425k | $800k | $1,175k |
+
+### S12-customer-specific, A5-targeted-automation
+
+| Purpose | N=1 | N=2 | N=5 | N=10 | N=15 |
+|---|---|---|---|---|---|
+| baseline-engineering | $306k | $551k | $1,286k | $2,511k | $3,736k |
+| operational-visibility | $165k | $192k | $275k | $413k | $551k |
+| financial-integrity | $0k | $0k | $0k | $0k | $0k |
+| prevention | $60k | $90k | $180k | $330k | $480k |
+| continuous-validation | $111k | $121k | $151k | $201k | $251k |
+| operational-evidence | $385k | $406k | $470k | $576k | $682k |
+| shared-infrastructure | $38k | $64k | $142k | $274k | $405k |
+| auditor-packaging | $0k | $0k | $0k | $0k | $0k |
+| customer-packaging | $150k | $219k | $426k | $771k | $1,116k |
+| external-services | $125k | $200k | $425k | $800k | $1,175k |
