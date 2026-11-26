@@ -419,9 +419,9 @@ file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,d98097165f28b4e7
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
 file,ai-governance/ai-governance-model.md,c9f1b3f546f8b8b7
-file,architecture/evidence-architecture.md,78c75a5512633f01
+file,architecture/evidence-architecture.md,837d5e73546ea6aa
 file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
-file,auditor/auditor-experience-specification.md,9f1038f5de0f73c8
+file,auditor/auditor-experience-specification.md,8384baf9452192cd
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
 file,context/ARCHITECTURE.md,597841df183adb8c
 file,context/CURRENT-STATE.md,4002919529273517
@@ -508,8 +508,8 @@ file,policies/drafts/POL-11-ai-and-autonomous-systems.md,eb296b808e34473a
 file,policies/drafts/POL-12-financial-operations-integrity.md,eb10e6e6d3e957c6
 file,policies/drafts/POL-13-customer-operations.md,f551e29882feb7e0
 file,policies/policy-inventory.md,c74ee7381b270eab
-file,policy-as-code/policy-as-code-specification.md,2612b9d6613dc2c0
-file,policy-as-code/tool-evaluation.md,824f4b2370f04db7
+file,policy-as-code/policy-as-code-specification.md,2f1a3a3829d32f6d
+file,policy-as-code/tool-evaluation.md,5b8a2a8dcbf1d475
 file,regulatory/framework-crosswalk-method.md,a0d4bbfce0581ef8
 file,regulatory/regulatory-applicability-matrix.md,4590011ed6adfb23
 file,requirements/README.md,ddb5003eb4ccde76
@@ -565,7 +565,7 @@ file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff5333
 file,trust-center/customer-trust-center-specification.md,3e33552e7635c7ee
 file,validation/assurance-system-resilience.md,7df63b8cbcca2c6b
 file,validation/continuous-security-testing-specification.md,55d4821d770dc1f7
-file,validation/independent-validation-architecture.md,85abddec0d3414f8
+file,validation/independent-validation-architecture.md,d4e8149262030df9
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43
 open_questions,OQ-100,5a235bf082c88204
 open_questions,OQ-101,018c707edccc7117

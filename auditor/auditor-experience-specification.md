@@ -81,7 +81,7 @@ OSCAL (NIST) provides models for catalogs, profiles, component definitions,
 SSPs, assessment plans, assessment results and POA&Ms. It is mature in the
 FedRAMP ecosystem; we found no evidence that SOC service auditors consume
 OSCAL directly (`open-question`; see `policy-as-code/tool-evaluation.md`).
-Recommendation: generate OSCAL as a secondary export from the authoritative
+Recommendation (OSCAL only when justified, OQ-506, DF-ASR-2026-0D11): generate OSCAL as a secondary export from the authoritative
 model (cheap if the model is structured) but deliver auditors the formats they
 actually use (CSV/XLSX populations, PDF/HTML descriptions, evidence archives).
 

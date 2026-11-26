@@ -264,7 +264,7 @@ streaming and repository inventory reconciliation [recommendation].
 |---|---|---|---|
 | `R-AUDIT` | Control operating evidence | Audit period + 1 year, pending research on required periods | assumption; configurable retention by class, jurisdiction and contract approved (OQ-502; DF-ASR-2026-0D11) |
 | `R-FIN` | Financial-transaction and reconciliation evidence | Undetermined (tax/banking rules) | period pending research; configurable retention approved (OQ-502; DF-ASR-2026-0D11) |
-| `R-SEC` | Security logs, incidents | Undetermined | open-question |
+| `R-SEC` | Security logs, incidents | Undetermined | period pending research; configurable retention approved (OQ-502; DF-ASR-2026-0D11) |
 | `R-INTEGRITY` | Envelopes, checkpoints, TSA tokens, witness cosigs | ≥ longest payload class + renewal of timestamps | recommendation |
 | `R-PI` | Payloads containing personal data | Minimum necessary; crypto-shreddable | recommendation |
 

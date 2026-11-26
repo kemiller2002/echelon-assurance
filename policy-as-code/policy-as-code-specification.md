@@ -316,7 +316,7 @@ Full detail in [`tool-evaluation.md`](tool-evaluation.md).
 
 | Tool | Role it can play | Fit for Echelon | Verdict |
 |---|---|---|---|
-| **OSCAL** (catalog, profile, mapping, component-definition, SSP, assessment-plan, assessment-results, POA&M) | Exchange format for control catalogs, implementation statements and assessment results | Strong as an **output**; heavy as an authoring format; FedRAMP direction but not named as mandatory in NTC-0009 | **Integrate (emit)** |
+| **OSCAL** (catalog, profile, mapping, component-definition, SSP, assessment-plan, assessment-results, POA&M) | Exchange format for control catalogs, implementation statements and assessment results | Strong as an **output**; heavy as an authoring format; FedRAMP direction but not named as mandatory in NTC-0009 | **Integrate (emit) when justified** (OQ-506: portable structured exports; OSCAL when justified, DF-ASR-2026-0D11) |
 | **OPA / Rego** | General decision engine (Kubernetes, CI, API gateways, Terraform plans) | Good for CI/infra checks over JSON; not needed for F# in-app decisions | **Integrate where an enforcement point already speaks Rego**; do not adopt as the policy model |
 | **Cedar** | Application authorization language, analyzable, formally modelled in Lean | Strong candidate for tenant/customer-facing authorization where policies must be analysed or delegated; F# has no first-party binding (Rust core, WASM, Go port) | **Evaluate by prototype** for in-app authz (OQ-509) |
 | **Kyverno** | Kubernetes-native admission/validation, CEL | Only if Echelon runs Kubernetes; not observed | **Not now** |

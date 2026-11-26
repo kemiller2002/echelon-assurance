@@ -213,7 +213,7 @@ Candidate invariants and recommendation:
 | Invariant | Technique | Recommendation | Phase |
 |---|---|---|---|
 | No agent principal can approve, merge protected branches, write primary evidence or alter retention | Analysable policy language + automated policy analysis (Cedar/SMT pattern) | **Yes** — cheap once the policy language is analysable; runs in CI (VAL-017) | P1 |
-| Approval binds to exact artifact hash; any change invalidates | TLA+ model of approval/exception state machine | Pilot, time-boxed (OQ-611) | P2 |
+| Approval binds to exact artifact hash; any change invalidates | TLA+ model of approval/exception state machine | Deferred; a time-boxed pilot only if later justified (OQ-611) | P2 |
 | Evidence log: append-only, sealed periods immutable, corrections linked | TLA+ model + property-based tests on implementation | Pilot with above | P2 |
 | Ledger conservation / double entry; settlement state machine | Property-based tests now; TLA+ for settlement protocol when built | PBT P1; TLA+ P2–P3 | P1–P3 |
 | Tenant isolation in authorization | Policy analysis | Yes with first item | P1 |
@@ -241,8 +241,9 @@ effectiveness (RSK-040).
 OQ-601 (auditor reliance on agent evidence), OQ-604 (mutation testing as
 management monitoring), OQ-608 (staffing for separation) and OQ-612 (external
 technical validation provider) have owner-approved internal design resolutions
-(DF-ASR-2026-0D11); auditor and provider acceptance and implementation
-verification remain pending. OQ-611 (formal methods investment) is answered as
+(DF-ASR-2026-0D11); implementation verification remains pending for all four,
+and auditor or provider acceptance remains pending for OQ-601, OQ-604 and
+OQ-612 (OQ-608 has no external acceptance condition). OQ-611 (formal methods investment) is answered as
 deferred (DF-ASR-2026-0D10).
 
 ## Owner requirements VAL-BC-001..014 (2026-11-25)

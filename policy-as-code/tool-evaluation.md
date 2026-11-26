@@ -72,7 +72,7 @@ capped accordingly. No tool here has been run by this program.
 
 1. **Adopt** a limited F# authoritative policy model (intent + bindings +
    evidence requirements), extending Praxis/Tutela patterns [recommendation].
-2. **Integrate** OSCAL as an emitted interchange format validated by NIST
+2. **Integrate**, when justified (OQ-506, DF-ASR-2026-0D11), OSCAL as an emitted interchange format validated by NIST
    schemas/trestle [recommendation].
 3. **Adopt** cloud-native and GitHub controls as enforcement points, bound
    from the model, with drift monitoring [recommendation].
