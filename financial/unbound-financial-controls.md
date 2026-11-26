@@ -76,7 +76,7 @@ objectives themselves are management's to define and the auditor's to accept).
 
 | Area | Control | Mechanism | Fail mode | SOC 1 | Unbound refs |
 |---|---|---|---|---|---|
-| Ledger integrity | Postings immutable; corrections only as reversing/adjusting entries | Append-only journal table, no UPDATE/DELETE grant to application role; hash chain over journal batches | fail-closed | Yes | UNB:UNB-SCTRL-025, UNB-ACC-* |
+| Ledger integrity | Postings immutable; corrections only as reversing/adjusting entries | Append-only journal table, no UPDATE/DELETE grant to application role; hash chain over journal batches (Unbound's proposed ledger mechanism, not in CTL-FIN-001; distinct from the evidence anchoring deferred by DF-ASR-2026-C002) | fail-closed | Yes | UNB:UNB-SCTRL-025, UNB-ACC-* |
 | Double-entry | Every journal balances per currency and legal entity | Type-level journal construction + DB constraint + daily recheck | fail-closed | Yes | ACC-MDL-002/003 |
 | Transaction authorization | Financial commands carry server-resolved principal, authority and policy version; dual control above threshold; initiator ≠ approver | Pure authorization function over sponsor's versioned authority matrix | fail-closed | Yes | UNB:UNB-SCTRL-001, 002, 015 |
 | Transaction completeness | Command inbox and outbox commit with the mutation; event sequence gap detection | Transactional outbox; sequence checks | fail-closed (write) / detective (gaps) | Yes | financial-core invariant 8 |

@@ -12,7 +12,7 @@ journal: JR-ASR-2026-C001
 
 The following commands were run locally on the final head with the .NET 10 SDK
 (10.0.404). The same steps run in CI (`.github/workflows/assurance-validation.yml`).
-CI passed on c346fa7 and later pushed commits whose checks have completed; the final head is validated locally as recorded in the completion report. CI failed on one intermediate commit, ba8c2aa (an unquoted comma in two OT-02 rows broke CSV parsing; 5 of 93 tests and the validator failed), which was fixed sixteen seconds later by c346fa7. CI also failed on 5ca1af2 (REQ-STATE-005 had no mapped control after its reclassification; the local gate had not stopped the commit), fixed by 54b2913; CI history after c346fa7 is recorded in `findings/reviews/RV-ASR-2026-11-26.md`.
+CI passed on c346fa7 and later pushed commits whose checks have completed, except 5ca1af2; the final head is validated locally as recorded in the completion report. CI failed on two intermediate commits. The first was ba8c2aa (an unquoted comma in two OT-02 rows broke CSV parsing; 5 of 93 tests and the validator failed), which was fixed sixteen seconds later by c346fa7. CI also failed on 5ca1af2 (REQ-STATE-005 had no mapped control after its reclassification; the local gate had not stopped the commit), fixed by 54b2913; CI history after c346fa7 is recorded in `findings/reviews/RV-ASR-2026-11-26.md`.
 
 | Check | Command | Result |
 |---|---|---|
