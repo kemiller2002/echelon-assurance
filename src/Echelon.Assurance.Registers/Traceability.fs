@@ -400,19 +400,12 @@ let technicallySeparatedOrHigher =
             "external-attestation"
         ]
 
-/// Judgment controls (automation target L0-L2) may also be Tested on
-/// multiple-agent review, because no deterministic verifier can test them.
-let private judgmentLevels = set [ "L0"; "L1"; "L2" ]
-
 /// A control may be Tested only when a validation procedure at technically
-/// separated level or higher supports it, or, for judgment controls, a
-/// multiple-agent review (controls/README.md).
+/// separated level or higher supports it. Multiple-agent review is approved
+/// for internal development review only (owner direction DF-ASR-2026-0D0F),
+/// so it never supports an operating-effectiveness status (controls/README.md).
 let testedNeedsIndependence (controls: Record list) (validations: Record list) =
-    let acceptable (c: Record) =
-        if judgmentLevels.Contains(field c "automation_target") then
-            technicallySeparatedOrHigher.Add "agent-review"
-        else
-            technicallySeparatedOrHigher
+    let acceptable (_: Record) = technicallySeparatedOrHigher
 
     let level =
         validations
@@ -428,6 +421,33 @@ let testedNeedsIndependence (controls: Record list) (validations: Record list) =
     |> List.map (fun c ->
         sprintf
             "controls/control-catalog.csv: %s is %s without an independent validation procedure"
+            (field c "control_id")
+            (field c "status"))
+
+/// Capability status may not exceed the verification actually performed:
+/// documentation-only review cannot establish any implemented state.
+let capabilityBasis (capabilities: Record list) =
+    let implemented =
+        set [ "implemented-unverified"; "partially-implemented"; "verified-implemented" ]
+
+    capabilities
+    |> List.filter (fun c ->
+        field c "verification_basis" = "docs-only"
+        && implemented.Contains(field c "status"))
+    |> List.map (fun c ->
+        sprintf
+            "integration/capability-verification.csv: %s claims %s from documentation only"
+            (field c "system_id")
+            (field c "status"))
+
+/// No operating-evidence register exists yet, so no control may claim a status
+/// that needs observed operation (Implemented or above).
+let controlEvidence (controls: Record list) =
+    controls
+    |> List.filter (fun c -> rank (field c "status") >= rank "Implemented")
+    |> List.map (fun c ->
+        sprintf
+            "controls/control-catalog.csv: %s is %s but no operating evidence is recorded"
             (field c "control_id")
             (field c "status"))
 
@@ -495,10 +515,28 @@ let answerDisclosure (controls: Record list) (answers: Record list) =
 /// DF-ASR-2026-0D0F and DF-ASR-2026-0D10.
 let ownerItems = [ for n in 1..12 -> sprintf "ODP-%02d" n ] @ [ "OT-01"; "OT-02" ]
 
+/// The decision that implements each owner item, fixed by the owner records:
+/// owner-review-direction (DF-ASR-2026-0D0F) and owner-remaining-approvals
+/// (DF-ASR-2026-0D10).
+let ownerItemDecision =
+    [ "ODP-02"; "ODP-03"; "ODP-05"; "ODP-09"; "ODP-11"; "ODP-12"; "OT-02" ]
+    |> List.map (fun i -> i, "DF-ASR-2026-0D0F")
+    |> Map.ofList
+    |> fun m ->
+        ownerItems
+        |> List.map (fun i -> i, Map.tryFind i m |> Option.defaultValue "DF-ASR-2026-0D10")
+        |> Map.ofList
+
 /// Every owner item has a traceability row naming an accepted decision, and
 /// each row covers every baseline requirement that the item's source
 /// disposition lists (bidirectional traceability of owner decisions).
-let decisionTraceability (decisions: Record list) (traces: Record list) (dispositions: Record list) =
+let decisionTraceabilityWith
+    (decisions: Record list)
+    (traces: Record list)
+    (dispositions: Record list)
+    (baseline: Record list)
+    (backlog: Record list)
+    =
     let traced = traces |> List.map (fun t -> field t "item_id") |> set
 
     let accepted =
@@ -540,25 +578,116 @@ let decisionTraceability (decisions: Record list) (traces: Record list) (disposi
                 |> List.map (fun br ->
                     sprintf "registers/decision-traceability.csv: %s omits %s" (field t "item_id") br))
 
-    missing @ notAccepted @ incomplete
+    let wrongDecision =
+        traces
+        |> List.choose (fun t ->
+            match Map.tryFind (field t "item_id") ownerItemDecision with
+            | Some d when d <> field t "decision_id" ->
+                Some(sprintf "registers/decision-traceability.csv: %s must cite %s" (field t "item_id") d)
+            | _ -> None)
+
+    let byBr = baseline |> List.map (fun b -> field b "br_id", b) |> Map.ofList
+
+    let derived (t: Record) column =
+        items t "br_ids"
+        |> List.choose (fun br -> Map.tryFind br byBr)
+        |> List.collect (fun b -> items b column)
+        |> set
+
+    let derivedWork (t: Record) =
+        let brs = items t "br_ids" |> set
+
+        backlog
+        |> List.filter (fun w ->
+            field w "status" <> "withdrawn"
+            && items w "requirements_addressed" |> List.exists brs.Contains)
+        |> List.map (fun w -> field w "work_item_id")
+        |> set
+
+    let mismatch =
+        if List.isEmpty baseline then
+            []
+        else
+            traces
+            |> List.collect (fun t ->
+                [
+                    "control_ids", derived t "control_ids"
+                    "policy_ids", derived t "policy_ids"
+                    "work_item_ids", derivedWork t
+                ]
+                |> List.filter (fun (column, expected) -> set (items t column) <> expected)
+                |> List.map (fun (column, expected) ->
+                    sprintf
+                        "registers/decision-traceability.csv: %s %s should be %s"
+                        (field t "item_id")
+                        column
+                        (String.concat ";" expected)))
+
+    missing @ notAccepted @ incomplete @ wrongDecision @ mismatch
+
+/// Decision traceability without the derived-set comparison.
+let decisionTraceability (decisions: Record list) (traces: Record list) (dispositions: Record list) =
+    decisionTraceabilityWith decisions traces dispositions [] []
+
+/// An evidence reference is a repository path or a register identifier.
+let evidenceRefWellFormed (ref: string) =
+    System.Text.RegularExpressions.Regex.IsMatch(
+        ref,
+        @"^[A-Za-z0-9_.\-]+(/[A-Za-z0-9_.\-]+)*\.(md|csv|fs|yml|yaml|json)$"
+    )
+    || System.Text.RegularExpressions.Regex.IsMatch(ref, @"^[A-Z][A-Z0-9]*(-[A-Z0-9]+)+$")
 
 /// Every open question states why it is unresolved, the accountable internal
 /// role and the trigger that will resolve it; answered questions cite evidence.
+/// Status, classification and tier are never blank; a question that depends on
+/// another party or is deferred cannot be answered; evidence references are
+/// paths or identifiers.
 let questionCompleteness (dispositions: Record list) =
     dispositions
     |> List.collect (fun d ->
         let id = field d "oq_id"
+        let status = field d "proposed_status"
+        let cls = field d "classification"
 
-        if field d "proposed_status" = "open" then
-            [ "why_unresolved"; "responsible_role"; "resolution_trigger" ]
+        let blanks =
+            [ "proposed_status"; "classification"; "blocking_tier" ]
             |> List.filter (fun c -> (field d c).Trim() = "")
-            |> List.map (sprintf "registers/question-dispositions.csv: open %s has no %s" id)
-        elif field d "proposed_status" = "answered" && (field d "evidence_refs").Trim() = "" then
-            [
-                sprintf "registers/question-dispositions.csv: answered %s cites no evidence" id
-            ]
-        else
-            [])
+            |> List.map (sprintf "registers/question-dispositions.csv: %s has no %s" id)
+
+        let consistent =
+            match status with
+            | "answered" when not (cls.StartsWith("resolved-")) ->
+                [
+                    sprintf "registers/question-dispositions.csv: %s is answered but classified %s" id cls
+                ]
+            | "open" when cls.StartsWith("resolved-") || cls = "superseded" ->
+                [
+                    sprintf "registers/question-dispositions.csv: %s is open but classified %s" id cls
+                ]
+            | _ -> []
+
+        let badRefs =
+            items d "evidence_refs"
+            |> List.filter (evidenceRefWellFormed >> not)
+            |> List.map (
+                sprintf
+                    "registers/question-dispositions.csv: %s evidence reference '%s' is not a path or identifier"
+                    id
+            )
+
+        let fields =
+            if status = "open" then
+                [ "why_unresolved"; "responsible_role"; "resolution_trigger" ]
+                |> List.filter (fun c -> (field d c).Trim() = "")
+                |> List.map (sprintf "registers/question-dispositions.csv: open %s has no %s" id)
+            elif status = "answered" && (field d "evidence_refs").Trim() = "" then
+                [
+                    sprintf "registers/question-dispositions.csv: answered %s cites no evidence" id
+                ]
+            else
+                []
+
+        blanks @ consistent @ badRefs @ fields)
 
 /// Production activation gates: every gate area is present; every requirement
 /// that gates production and every open production-blocking question is cited
@@ -598,13 +727,35 @@ let productionGates (gates: Record list) (baseline: Record list) (dispositions: 
     @ (dispositions
        |> List.filter (fun d ->
            field d "proposed_status" = "open"
-           && field d "blocking_tier" = "production-launch"
+           && (field d "blocking_tier" = "production-launch"
+               || field d "blocking_tier" = "implementation")
            && not (questions.Contains(field d "oq_id")))
        |> List.map (fun d ->
            sprintf "registers/production-gates.csv: open production-blocking %s is cited by no gate" (field d "oq_id")))
     @ (gates
        |> List.filter (fun g -> field g "status" = "met" && (field g "evidence_refs").Trim() = "")
        |> List.map (fun g -> sprintf "registers/production-gates.csv: %s is met without evidence" (field g "gate_id")))
+    @ (gates
+       |> List.collect (fun g ->
+           items g "evidence_refs"
+           |> List.filter (evidenceRefWellFormed >> not)
+           |> List.map (
+               sprintf
+                   "registers/production-gates.csv: %s evidence reference '%s' is not a path or identifier"
+                   (field g "gate_id")
+           )))
+    @ (let openIds =
+        dispositions
+        |> List.filter (fun d -> field d "proposed_status" = "open")
+        |> List.map (fun d -> field d "oq_id")
+        |> set
+
+       gates
+       |> List.filter (fun g -> field g "status" = "met")
+       |> List.collect (fun g ->
+           items g "question_ids"
+           |> List.filter openIds.Contains
+           |> List.map (sprintf "registers/production-gates.csv: %s is met while %s is open" (field g "gate_id"))))
 
 let errors (loaded: Loaded) =
     let r = records loaded
@@ -626,7 +777,14 @@ let errors (loaded: Loaded) =
     @ answerDisclosure controls (r "question_bank")
     @ launchGates baseline (r "backlog")
     @ testedNeedsIndependence controls (r "validations")
-    @ decisionTraceability (r "decisions") (r "decision_traceability") (r "source_dispositions")
+    @ decisionTraceabilityWith
+        (r "decisions")
+        (r "decision_traceability")
+        (r "source_dispositions")
+        baseline
+        (r "backlog")
+    @ capabilityBasis (r "capabilities")
+    @ controlEvidence controls
     @ questionCompleteness (r "question_dispositions")
     @ productionGates (r "production_gates") baseline (r "question_dispositions")
 

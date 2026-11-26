@@ -260,7 +260,7 @@ let ``tested control needs an independent validation procedure`` () =
     Assert.Empty(testedNeedsIndependence [ c "VAL-001;VAL-025" ] vs)
 
 [<Fact>]
-let ``agent review supports Tested only for judgment controls`` () =
+let ``agent review never supports Tested`` () =
     let v id level =
         rec' [ "validation_id", id; "independence_level", level ]
 
@@ -274,7 +274,7 @@ let ``agent review supports Tested only for judgment controls`` () =
             ]
 
     let vs = [ v "VAL-025" "agent-review" ]
-    Assert.Empty(testedNeedsIndependence [ c "L2" ] vs)
+    Assert.Single(testedNeedsIndependence [ c "L2" ] vs) |> ignore
     Assert.Single(testedNeedsIndependence [ c "L4" ] vs) |> ignore
 
 [<Fact>]
@@ -314,7 +314,8 @@ let ``traceability row must cite an accepted decision and cover its requirements
 
     Assert.Empty(errs [ row "BR-GOV-004;BR-VAL-001" "DF-ASR-2026-0D0F" ])
     Assert.Single(errs [ row "BR-GOV-004" "DF-ASR-2026-0D0F" ]) |> ignore
-    Assert.Single(errs [ row "BR-GOV-004;BR-VAL-001" "DF-ASR-2026-C005" ]) |> ignore
+    // Not accepted, and not the decision fixed for ODP-02.
+    Assert.Equal(2, List.length (errs [ row "BR-GOV-004;BR-VAL-001" "DF-ASR-2026-C005" ]))
 
 [<Fact>]
 let ``open question needs why, role and trigger; answered needs evidence`` () =
@@ -323,6 +324,12 @@ let ``open question needs why, role and trigger; answered needs evidence`` () =
             [
                 "oq_id", "OQ-001"
                 "proposed_status", status
+                "classification",
+                (if status = "answered" then
+                     "resolved-owner-decision"
+                 else
+                     "dependent-legal")
+                "blocking_tier", "none"
                 "why_unresolved", why
                 "responsible_role", role
                 "resolution_trigger", trigger
@@ -366,3 +373,67 @@ let ``production gates cover areas, gating requirements and blocking questions``
 
     Assert.Single(productionGates (gate "residual-risk" "met" "" :: complete) [] [])
     |> ignore
+
+[<Fact>]
+let ``documentation-only review cannot establish an implemented capability`` () =
+    let c basis status =
+        rec' [ "system_id", "SYS-X"; "verification_basis", basis; "status", status ]
+
+    Assert.Single(capabilityBasis [ c "docs-only" "implemented-unverified" ])
+    |> ignore
+
+    Assert.Empty(capabilityBasis [ c "docs-only" "specified-only" ])
+    Assert.Empty(capabilityBasis [ c "source-inspected" "partially-implemented" ])
+
+[<Fact>]
+let ``controls cannot claim operation without operating evidence`` () =
+    let c s =
+        rec' [ "control_id", "CTL-X"; "status", s ]
+
+    Assert.Single(controlEvidence [ c "Operating" ]) |> ignore
+    Assert.Empty(controlEvidence [ c "Designed" ])
+
+[<Fact>]
+let ``question status, classification and references must agree`` () =
+    let q status cls refs =
+        rec'
+            [
+                "oq_id", "OQ-001"
+                "proposed_status", status
+                "classification", cls
+                "blocking_tier", "none"
+                "evidence_refs", refs
+                "why_unresolved", "w"
+                "responsible_role", "r"
+                "resolution_trigger", "t"
+            ]
+
+    Assert.Empty(questionCompleteness [ q "answered" "resolved-owner-decision" "docs/x.md;DF-ASR-2026-0D0F" ])
+    Assert.NotEmpty(questionCompleteness [ q "answered" "dependent-legal" "docs/x.md" ])
+    Assert.NotEmpty(questionCompleteness [ q "answered" "resolved-owner-decision" "trust me" ])
+    Assert.NotEmpty(questionCompleteness [ q "" "" "" ])
+    Assert.NotEmpty(questionCompleteness [ q "open" "resolved-owner-decision" "" ])
+
+[<Fact>]
+let ``a gate cannot be met while a cited question is open`` () =
+    let gates =
+        gateAreas
+        |> List.map (fun a ->
+            rec'
+                [
+                    "gate_id", "PG-01"
+                    "area", a
+                    "question_ids", "OQ-001"
+                    "status", "met"
+                    "evidence_refs", "findings/x.md"
+                ])
+
+    let q =
+        rec'
+            [
+                "oq_id", "OQ-001"
+                "proposed_status", "open"
+                "blocking_tier", "implementation"
+            ]
+
+    Assert.Equal(List.length gateAreas, List.length (productionGates gates [] [ q ]))

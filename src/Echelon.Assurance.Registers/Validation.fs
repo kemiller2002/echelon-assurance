@@ -38,6 +38,9 @@ let scannedSuffixes =
         ".yml"
         ".yaml"
         ".txt"
+        ".sh"
+        ".ps1"
+        ".cmd"
     ]
 
 let private record (spec: RegisterSpec) (row: Csv.Row) = List.zip spec.Columns row |> Map.ofList

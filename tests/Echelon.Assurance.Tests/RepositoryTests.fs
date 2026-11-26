@@ -73,10 +73,14 @@ let ``no control claims a status above Designed without evidence held here`` () 
     Assert.True(List.isEmpty above, String.concat ", " above)
 
 [<Fact>]
-let ``every control has a validation able to support Tested under ODP-02`` () =
-    // Apply the exact Tested rule to every control as if it were Tested.
+let ``every executable control has a validation able to support Tested under ODP-02`` () =
+    // Apply the exact Tested rule to every L3-L5 control as if it were Tested.
+    // Judgment controls (L0-L2) cannot reach Tested until a technically
+    // separated or organizational validator exists; that limit is disclosed.
     let asTested =
-        records "controls" |> List.map (fun c -> c |> Map.add "status" "Tested")
+        records "controls"
+        |> List.filter (fun c -> not (List.contains c["automation_target"] [ "L0"; "L1"; "L2" ]))
+        |> List.map (fun c -> c |> Map.add "status" "Tested")
 
     let weak = Traceability.testedNeedsIndependence asTested (records "validations")
     Assert.True(List.isEmpty weak, String.concat "\n" weak)
@@ -178,3 +182,20 @@ let ``corrupted committed registers fail validation`` () =
             else
                 b))
     |> reports "CTL-NOPE-999"
+
+[<Fact>]
+let ``every evidence path cited by questions, gates and decisions exists`` () =
+    let paths name column =
+        records name
+        |> List.collect (fun r -> (Map.tryFind column r |> Option.defaultValue "").Split ';' |> List.ofArray)
+        |> List.map (fun s -> s.Trim())
+        |> List.filter (fun s -> s.Contains "/" || s.EndsWith ".md" || s.EndsWith ".csv")
+
+    let missing =
+        paths "question_dispositions" "evidence_refs"
+        @ paths "production_gates" "evidence_refs"
+        @ paths "decisions" "record_path"
+        |> List.distinct
+        |> List.filter (fun p -> not (File.Exists(Path.Combine(root, p)) || Directory.Exists(Path.Combine(root, p))))
+
+    Assert.True(List.isEmpty missing, String.concat "\n" missing)
