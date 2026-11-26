@@ -118,7 +118,7 @@ The owner then pushed `docs/decisions/owner-remaining-approvals-2026-11-25.md`, 
 - **Tenets.** TNT-17, evidence by construction, is added and realized by six baseline requirements.
 - **Baseline.** BR-GOV-013, BR-HR-002, BR-LOG-001, BR-ASR-008, BR-APP-001, BR-AI-004 and BR-SDL-001 are updated.
 - **Questions.** Twelve questions were answered by owner decision at that point (OQ-208, 304, 505, 509, 611, 616, 760, 800, 802, 803, 806, 809); OQ-208 and OQ-616 were later reopened (round F4, dispositions register), which holds 16 resolved-owner-decision rows. Others are reclassified to implementation or external dependencies. No question blocks requirements finalization.
-- **Backlog.** WI-ASR-01, WI-ASR-02 and WI-STRATA-04 are done; WI-VIGILA-01 and WI-ASR-03 are retitled.
+- **Backlog.** WI-ASR-01 and WI-ASR-02 are done (WI-STRATA-04 was later reopened, round B8); WI-VIGILA-01 and WI-ASR-03 are retitled.
 
 **Praxis.** Praxis 3.25.0 was installed with `praxis init`, from the checksum-verified native release.
 

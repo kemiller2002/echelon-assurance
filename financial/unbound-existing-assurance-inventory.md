@@ -53,7 +53,7 @@ Paths relative to `/home/user/unbound` unless stated.
 | `requirements/FULL-ACCOUNTING-SYSTEM.md`, `requirements/accounting/CANONICAL-CHART-AND-POSTING-RULES.md` | UNB-ACC-001..036, ACC-MDL-*; CNV-FIN-* with SOC1 tags and CUECs | — | candidate requirements | **High for FIN** |
 | `requirements/DEFERRED-PAYMENTS-AND-REMAINING-GAPS.md` | CNV-PAY-001 (sponsor originates, Unbound TPSP), CNV-PAY-002 (positive pay, NOC handling, destination proof) | — | adopted for design; activation gates name bank agreements | High for PAY |
 | `requirements/ai/AI-NATIVE-INTERACTION-REQUIREMENTS.csv` + md | 36 AI interaction requirements | 36 | design | Medium (AI domain) |
-| `requirements/discovery/2026-11-24-open-decision-resolution-review.md` and `…/simplification-economics/data/decisions.csv` | SPD-PLT-001 (is any SOC report needed in release 1?), SPD-ADV-003 (sponsor auditor ITGC assurance without SOC 1), XID-INV-008 (SOC 1 Type II before first white-label sponsor?) | — | open | **Directly relevant open decisions** |
+| `requirements/discovery/2026-11-24-open-decision-resolution-review.md` and `…/simplification-economics/data/decisions.csv` | SPD-PLT-001 (is any SOC report needed in release 1?), SPD-ADV-003 (sponsor auditor ITGC assurance without SOC 1), XID-INV-008 (SOC 1 Type II before first white-label sponsor?) | — | resolved and owner-approved in Unbound @9b38de4 (recorded here as open at inventory time) | **Directly relevant open decisions** |
 
 daf-landscape (paths relative to `/home/user/daf-landscape`):
 

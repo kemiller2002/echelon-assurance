@@ -34,7 +34,7 @@ backlog,WI-ORG-02,d072ebfc9c5c6e5b
 backlog,WI-ORG-03,32bab680d3a5d952
 backlog,WI-ORG-04,713bbeae9c9b7522
 backlog,WI-ORG-05,fe7c92ba3cfc0c0c
-backlog,WI-ORG-06,8192ade29162f6a8
+backlog,WI-ORG-06,abe074becd58facc
 backlog,WI-PRAXIS-01,8bd03b7a7a31feff
 backlog,WI-PRAXIS-02,50285777f9898006
 backlog,WI-PRAXIS-03,19d5ecfada7bc3ab
@@ -208,7 +208,7 @@ capabilities,SYS-TUTELA,06930e85cd0d2c9d
 capabilities,SYS-VIGILA,eea57cd05e9bc8dd
 controls,CTL-AI-001,138387457de2f905
 controls,CTL-AI-002,2f6c1fde7499dcac
-controls,CTL-AI-003,9f824f5a13c96f45
+controls,CTL-AI-003,42af3de286bf0fe6
 controls,CTL-AI-004,777af08d58137ae8
 controls,CTL-AI-005,a0dcc17bd3680adf
 controls,CTL-AI-006,65fb1464fd242fb3
@@ -233,11 +233,11 @@ controls,CTL-ASR-004,2be7ed32117d91ef
 controls,CTL-ASR-005,7545e2a6b23944c9
 controls,CTL-ASR-006,5d7a2c76f8d8277f
 controls,CTL-ASR-007,2af70b4d3a40bbf4
-controls,CTL-ASR-008,1b47a7d937fa832d
+controls,CTL-ASR-008,df30efee3590e65c
 controls,CTL-ASR-009,f6676c029bc0dec9
-controls,CTL-ASR-010,7428c173a24d7874
+controls,CTL-ASR-010,c05af9d0d7a7a38f
 controls,CTL-ASR-011,b7ddb06f358be1d7
-controls,CTL-BCR-001,3d4bc55b4d6e7016
+controls,CTL-BCR-001,e97c9ce5c0b31be1
 controls,CTL-BCR-002,b7f428520edcbec8
 controls,CTL-BCR-003,9cfe9fbe289b4df1
 controls,CTL-CFG-001,65af9fb768f8873e
@@ -367,14 +367,14 @@ decisions,DF-ASR-2026-C004,809be0fea1274574
 decisions,DF-ASR-2026-C005,c62fc5d386d797dc
 decisions,DF-ASR-2026-C006,c2b585fd5044e957
 evidence_types,EVT-001,438f78b8ac42a71f
-evidence_types,EVT-002,ffc8c82ceca12128
+evidence_types,EVT-002,6db1e4d58dc85948
 evidence_types,EVT-003,90b2ac59970ea2c0
 evidence_types,EVT-004,180110ec0bc608e0
 evidence_types,EVT-005,0686d6dee2f37cdd
 evidence_types,EVT-006,81ff4075aaa42f05
 evidence_types,EVT-007,03c3e75fcc652cde
 evidence_types,EVT-008,789cc5c9e70b1fa2
-evidence_types,EVT-009,e5d429840c897a44
+evidence_types,EVT-009,db0954be3efbbcf3
 evidence_types,EVT-010,03f4e1df7e8c6f1c
 evidence_types,EVT-011,6cb8f453aa01f749
 evidence_types,EVT-012,14027aa93d7375c5
@@ -388,7 +388,7 @@ evidence_types,EVT-019,c52e96b53fad3636
 evidence_types,EVT-020,de6ec1bd01b901b3
 evidence_types,EVT-021,1ef9760eecc60916
 evidence_types,EVT-022,81422502e7ab0b3e
-evidence_types,EVT-023,eb7a2373b83e0ffa
+evidence_types,EVT-023,965a285d698f4967
 evidence_types,EVT-024,74303e06be263184
 evidence_types,EVT-025,e9e5a630a52545c6
 evidence_types,EVT-026,35358a87c4f77094
@@ -428,7 +428,7 @@ file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
 file,controls/README.md,35d681996880f3ce
 file,customer-assurance/README.md,bc3f1c2246e4790f
-file,customer-assurance/findings.md,95a200a59ef58f56
+file,customer-assurance/findings.md,20d7d3aca1ff60ea
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
@@ -452,8 +452,8 @@ file,economics/v2/activities.csv,489a8457b2d6b0bf
 file,economics/v2/alternatives.csv,38e2e9e7f576f097
 file,economics/v2/scenarios.csv,903367ec3db1afb1
 file,financial/finbc-unbound-map.csv,c479ead4d0057bad
-file,financial/unbound-existing-assurance-inventory.md,cb6b4cb393ade013
-file,financial/unbound-financial-controls.md,7c5620dd01b69f59
+file,financial/unbound-existing-assurance-inventory.md,c245f2f2197ed387
+file,financial/unbound-financial-controls.md,aef01399bfeb836d
 file,findings/challenge-passes/round1-domain.csv,d946fc095bb40804
 file,findings/challenge-passes/round1-structure.csv,465a69f09654cc4c
 file,findings/challenge-passes/round2-verification.csv,34310ef07ab728c7
@@ -467,8 +467,8 @@ file,findings/clarity-and-edf-assessment.md,15bae05d67902fc9
 file,findings/counsel-and-auditor-questions.md,9c7ff142fd289dfd
 file,findings/executive-findings.md,e6c6f43e92b2ead0
 file,findings/financial-integrity-review.md,66519ca6ca391e9d
-file,findings/reviews/RV-ASR-2026-11-26.md,18f3479b72617326
-file,findings/validation-report.md,082b034423429184
+file,findings/reviews/RV-ASR-2026-11-26.md,ec4e0ded9eebe7f3
+file,findings/validation-report.md,a542b230e8d1f1f8
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
 file,framework/policies/OUTPUT-POLICY.md,f8f0403b2ec80c1f
@@ -501,9 +501,9 @@ file,policies/drafts/POL-08-incident-response-and-notification.md,de6101ae0e5e92
 file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
 file,policies/drafts/POL-11-ai-and-autonomous-systems.md,c15c1624ef95049d
-file,policies/drafts/POL-12-financial-operations-integrity.md,41cffd06fe717f73
+file,policies/drafts/POL-12-financial-operations-integrity.md,576aac3ceeb6b90c
 file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
-file,policies/policy-inventory.md,5d08b2194e5902c3
+file,policies/policy-inventory.md,104c3cad27407cb6
 file,policy-as-code/policy-as-code-specification.md,9f11008729a532d8
 file,policy-as-code/tool-evaluation.md,2810ac82a201172e
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
@@ -559,7 +559,7 @@ file,src/Echelon.Assurance.Registers/Traceability.fs,4d5747ee191d2e4a
 file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
 file,trust-center/customer-trust-center-specification.md,fe9b1d597fa4e425
-file,validation/assurance-system-resilience.md,0b4714571b0d6b09
+file,validation/assurance-system-resilience.md,b96534c6fa141957
 file,validation/continuous-security-testing-specification.md,ff818cec8a1f6890
 file,validation/independent-validation-architecture.md,ef94a4843e34adcc
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43
@@ -868,7 +868,7 @@ question_bank,CAQ-093,785f4fc6933e47a8
 question_bank,CAQ-094,a5c298718be45cbb
 question_bank,CAQ-095,1d0f53cd1e61405b
 question_bank,CAQ-096,b140df2812c9ae36
-question_bank,CAQ-097,c71456be93bf2498
+question_bank,CAQ-097,1c6221fcbdc70ecb
 question_dispositions,OQ-100,da2c6cbf8282fdce
 question_dispositions,OQ-101,ae504a6aca0311ee
 question_dispositions,OQ-102,b79efc888a938724
@@ -906,7 +906,7 @@ question_dispositions,OQ-216,9dc13225e36e1c6b
 question_dispositions,OQ-217,789dd09350153b2d
 question_dispositions,OQ-300,cde76fac05c8fd5e
 question_dispositions,OQ-301,2d8d2d271b7ab585
-question_dispositions,OQ-302,e1c17da14c08c8cf
+question_dispositions,OQ-302,a02d2fd2c1f1d10d
 question_dispositions,OQ-303,e26e81f305ee608e
 question_dispositions,OQ-304,7da8d954bdf38cfd
 question_dispositions,OQ-305,0cdebe51b2b7fc62
@@ -925,7 +925,7 @@ question_dispositions,OQ-503,0c287c36ab6929e3
 question_dispositions,OQ-504,0fe369b588a7a2ac
 question_dispositions,OQ-505,75f1fa43a3e515ca
 question_dispositions,OQ-506,7b00908e666fd509
-question_dispositions,OQ-507,e87434084e2440e8
+question_dispositions,OQ-507,7e743f7206c128ac
 question_dispositions,OQ-508,dbda81638da83bee
 question_dispositions,OQ-509,616c429080b4faad
 question_dispositions,OQ-510,ad8076a6cdfb2d44
@@ -2000,7 +2000,7 @@ systems,SYS-FOUNDRY,2fb63c5e0bc4b930
 systems,SYS-LIMEN,f93fc8f4baa641c7
 systems,SYS-ORDO,7b496508ae99e450
 systems,SYS-PERCEPTA,dfd5930d578f1a90
-systems,SYS-PRAXIS,7168ca859054352f
+systems,SYS-PRAXIS,6b2a516269a7a9dc
 systems,SYS-PROJADMIN,d42004c2a2759e1f
 systems,SYS-REGISTRY,b26c4934a33c9c01
 systems,SYS-SIGNAL,ed1e66c0cfe3de7c

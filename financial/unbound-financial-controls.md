@@ -94,7 +94,7 @@ objectives themselves are management's to define and the auditor's to accept).
 | Charity eligibility | Payee eligibility from authoritative sources (e.g. IRS data) with freshness check before each disbursement; OFAC screening | Eligibility service + screening | fail-closed | Indirect (compliance more than ICFR) | UNB:UNB-SCTRL-010–014 |
 | Fraud detection | Anomaly rules on grants, contributions, payee changes, access; human triage | Detection rules + case management | detective | Supports | — |
 | Manual adjustments | Reason code, evidence, preparer ≠ approver, reported to sponsor's reviewer; volume monitored | Adjustment workflow | fail-closed (approval) | Yes | — |
-| Historical corrections | No rewriting history; corrections reference originals; restatements of closed periods require sponsor approval | Append-only ledger | fail-closed | Yes | financial-core invariant 3 |
+| Historical corrections | No rewriting history; corrections reference originals; corrections to a closed period are made as a prior-period adjustment in the first open period; a period is reopened only before statements are issued, with sponsor approval (BR-FIN-010, DF-ASR-2026-C006) | Append-only ledger | fail-closed | Yes | financial-core invariant 3 |
 | Tenant-specific policies | Fee schedules, thresholds, grant rules are versioned, effective-dated, sponsor-approved configuration | Configuration governance (POL-13.02) | fail-closed | Yes (configuration is an application control input) | UNB-TEN-* |
 | Financial institution integrations | Positive pay, NOC/return handling, destination proof, signed/encrypted file exchange, bank file completeness counts | Integration controls | fail-closed (submission) / detective (returns) | Yes | UNB CNV-PAY-001/002 |
 

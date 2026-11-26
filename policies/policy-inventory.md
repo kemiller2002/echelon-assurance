@@ -74,4 +74,6 @@ and that the mechanism enforces it (`auditor-interpretation`; see
 | Agent modifying historical evidence | Append-only store with no delete permission for agent identities; compliance-mode retention lock (anchoring deferred, DF-ASR-2026-C002) | Objective, permission evidence, integrity verification results |
 
 Section-level owners, approval authorities and links to controls are in the
-register; `control_ids` and `requirement_ids` are populated in batch B7.
+register; `requirement_ids` is empty in the inventory, and traceability runs
+from the baseline rows (`requirements/baseline.csv`, `policy_ids`) to the
+policy sections.

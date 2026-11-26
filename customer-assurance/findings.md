@@ -77,6 +77,8 @@ inventory, evidence types, `requirements/organizational-governance.md` (GOV-BC-0
 
 ## 4. Public assurance interface
 
+> *Research proposal (superseded for disclosure classes by `customer-assurance/question-bank.csv`, which marks only CAQ-014 public under BR-CUS-002 and TC-RED-003). Do not build the public page from the examples below.*
+
 | Class | Contents | Examples in bank |
 |---|---|---|
 | public | Security program approach and framework alignment; honest status of independent assurance (no SOC report, no certifications, no pen test yet); encryption design principle; VDP and security.txt (once published); AI use disclosure and data-use position; subprocessor list (once it exists); trust-center description | CAQ-003, 011-015, 018, 031, 042, 048, 049, 052, 057, 069, 079, 081, 084, 088 |

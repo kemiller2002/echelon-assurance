@@ -19,6 +19,7 @@ research_batch: B6 (key AIG)
 > - **R3 (compromised CI/CD):** verifier keys in a protected environment that the implementer cannot read (WI-DOKIMOS-01). Pipeline-definition changes are elevated changes approved by the owner.
 > - **R4 (evidence manipulation):** retention lock plus separately credentialed population reconciliation against sources Echelon does not write, such as sponsor bank statements and platform APIs (BR-ASR-003). There is no chain verification.
 > - **R16 (anchoring lapse):** not applicable while anchoring is deferred.
+> - **R7, R8, R10, R12 and R13:** cells that rely on external review samples (VAL-026), internal-independent review (VAL-025), a walkthrough by someone outside the team, or evidence anchors describe options, not the current plan: VAL-026 is deferred under DF-ASR-2026-0D0F, VAL-025 cannot be performed as independent with one human (self-assessment only), no outside person is engaged, and anchoring is deferred under DF-ASR-2026-C002.
 
 
 # Assurance-system resilience
