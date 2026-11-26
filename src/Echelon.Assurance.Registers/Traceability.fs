@@ -385,7 +385,7 @@ let launchGates (baseline: Record list) (backlog: Record list) =
         | _ -> None)
 
 /// Independence levels at or above technically separated verification
-/// (owner decision ODP-02, DF-ASR-2026-0F02). Agent review, technical
+/// (owner decision ODP-02, DF-ASR-2026-0D0F). Agent review, technical
 /// separation, organizational independence, qualified professional review and
 /// external attestation are distinct; this set only orders them for the
 /// Tested rule and never makes them interchangeable.
@@ -844,7 +844,7 @@ let render (loaded: Loaded) =
         "Do not edit by hand."
         ""
         sprintf
-            "Baseline requirements: %d. Original owner requirements dispositioned: %d. Controls: %d. Traceability findings: %d."
+            "Baseline requirements: %d. Source items dispositioned (original owner requirements, reconciliation findings and owner decision items): %d. Controls: %d. Traceability findings: %d."
             (List.length baseline)
             (List.length (r "source_dispositions"))
             (List.length controls)

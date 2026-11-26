@@ -22,13 +22,13 @@ authoritative_references: [TSC CC8.1, CC7.1, NIST SP 800-218 (SSDF), SLSA v1.0, 
    detected (TNT-17, BR-ASR-012).
 
 ## 02 Change, code review and release
-1. All changes to protected branches go through a pull request with at least one approving review by someone other than the author, and all required status checks passing. Administrators cannot bypass these rules; repository rules are themselves defined as code.
+1. All changes to protected branches go through a pull request with an approving review by an actor other than the author (a human, or under the standing authorization of DF-ASR-2026-0D04 a separately credentialed technical verifier and the multiple-agent review protocol; technical separation is never described as organizational independence), and all required status checks passing. Administrators cannot bypass these rules; repository rules are themselves defined as code.
 2. AI-authored changes are marked with provenance and require human approval; an agent may not approve a change it authored or that its sponsor authored on its behalf.
 3. Releases are produced only by the CI pipeline from reviewed commits; the deployed artifact digest is recorded and traceable to the commit and pull request.
 4. Production state that does not trace to an approved release is an incident.
 
 ## 03 Emergency changes
-1. Emergency changes may bypass pre-merge review only through a defined break-glass path that alerts a second person.
+1. Emergency changes may bypass pre-merge review only through a defined break-glass path that raises an out-of-band alert (to the emergency delegate once designated under ODP-04; until then residual risk RSK-065).
 2. Every emergency change receives retrospective review within two business days. Missing review is a control failure.
 
 ## 04 Dependencies, supply chain, signing and provenance

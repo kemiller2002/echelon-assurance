@@ -44,7 +44,7 @@ accountable role.
 | Vendor and subservice | Owner | Register agent | A1 | Approves new providers and AI data classes | Register versions |
 | Customer assurance answers | Owner | Answer generator | A1 | Approves answers by disclosure class | Answer versions |
 | Management review | Owner | Package generator | A1 | Reviews material items (BR-GOV-011) | Signed review record |
-| Succession and continuity | Owner | None | — | Names delegate (ODP-04) | Exercise record |
+| Succession and continuity | Owner | None | — | Designates the delegate when operationally necessary (ODP-04; role defined, naming deferred) | Exercise record |
 
 ## What is eliminated, automated or exception-based
 
@@ -93,7 +93,7 @@ is no later than production launch; the owner has not set that deadline.
 
 ## Owner unavailability (BR-GOV-013)
 
-- **Delegate.** A named emergency delegate (ODP-04) can:
+- **Delegate.** The emergency delegate role (ODP-04; the individual is designated when operationally necessary, DF-ASR-2026-0D10) can:
   - suspend agents (BR-AI-005);
   - freeze releases;
   - contact sponsors and partners;

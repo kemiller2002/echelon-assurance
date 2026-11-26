@@ -25,11 +25,13 @@ accepts is traceable to a control, an owner and evidence.
 1. Echelon Foundry maintains a written information security program
    consisting of the policies POL-01 to POL-13, the control catalog and the
    registers in `echelon-assurance`.
-2. A single named individual is accountable for the program (the
-   "Qualified Individual" in FTC Safeguards terms where that rule applies). A
-   deputy is named so that absence does not stop approvals.
-3. Every control has a named human owner. AI agents may operate controls but
-   are never owners.
+2. One accountable role (held by the owner) is responsible for the program
+   (the "Qualified Individual" in FTC Safeguards terms where that rule
+   applies). An emergency delegate role is defined so that absence does not
+   stop urgent action; the individual is designated when operationally
+   necessary (owner direction DF-ASR-2026-0D10, ODP-04).
+3. Every control has an accountable human role. AI agents may operate controls
+   but are never owners.
 
 ## 02 Risk management
 
@@ -115,15 +117,14 @@ accepts is traceable to a control, an owner and evidence.
 
 ## 09 Management review and reporting
 
-At least quarterly, the owner reviews: control health metrics, failed and
+On material change, and monthly while operations are active (minimum annually; `governance/operating-model.md`), the owner reviews: control health metrics, failed and
 overdue controls, open exceptions, risk register changes, incidents, vendor
 changes and regulatory changes. The review and its decisions are recorded.
 
 ## Enforcement and validation
 
 Enforcement: authority matrix consumed by repository rules and application
-authorization; exception register with expiry automation. Validation: annual
-internal independent review of the program; external attestation per the
+authorization; exception register with expiry automation. Validation: multiple-agent review of the program (VAL-041), with internal-independent review only when an organizationally separate performer exists (ODP-02); external attestation per the
 roadmap.
 
 ## Change history

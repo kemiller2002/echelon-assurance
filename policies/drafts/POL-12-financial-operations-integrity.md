@@ -19,7 +19,7 @@ Detailed requirements: FIN-BC-001..024 (`requirements/financial-integrity-by-con
 
 ## 01 Transaction authorization
 1. Every financial action (contribution acceptance, grant recommendation approval, disbursement release, fee assessment, investment instruction, adjustment) requires authority recorded in the customer's authority matrix and enforced by the application.
-2. Above customer-defined thresholds, two distinct authorized humans approve; the initiator cannot approve. Agents may prepare and recommend but cannot release funds unless a customer has explicitly delegated a bounded authority and the delegation is recorded.
+2. Above customer-defined thresholds, two distinct authorized humans approve; the initiator cannot approve. AI agents may prepare and recommend but never authorize, approve or release funds in any scope. Execution is deterministic: a deterministic worker acts only under a recorded human authorization or an established recurring authority (for example, a sponsor-approved recurring grant) revalidated at execution, and payment execution stays on the sponsor's rails (ODP-10, DF-ASR-2026-0D10; DF-ASR-2026-C004; BR-FIN-006, BR-FIN-015).
 
 ## 02 Accounting integrity
 1. The ledger is double-entry; every posting balances; postings are immutable.

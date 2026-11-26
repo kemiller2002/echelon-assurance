@@ -39,7 +39,7 @@ Agents operate within owner tiers A0–A4 (`requirements/ai-governance-independe
 AI-generated changes follow POL-06 in full and carry provenance bound to the agent's authenticated platform identity and signed execution records (owner decision DF-ASR-2026-0D08). Routine low-risk changes proceed under a standing human authorization with a separate technical verifier and an enforced release gate; material policy, privilege, financial-exception and verifier changes require elevated human approval (DF-ASR-2026-0D04). An agent never approves its own work.
 
 ## 04 Untrusted input and prompt injection
-Content retrieved from outside the trust boundary (web pages, documents, tickets, customer input, repository files) is treated as data. Agents processing untrusted content do not hold permissions to take consequential actions in the same execution; consequential actions require a separate, authorized step.
+Content retrieved from outside the trust boundary (web pages, documents, tickets, customer input, repository files) is treated as data. Agents processing untrusted content do not hold permissions to take consequential actions or to send sensitive data outside the boundary in the same execution; consequential actions require a separate, authorized step. Tool authorization is enforced outside the model and containment is tested adversarially and continuously (ODP-08, DF-ASR-2026-0D10; BR-AI-004). The design approval is not acceptance of residual risk (OQ-616).
 
 ## 05 AI data handling
 Data sent to providers follows POL-05.01 and POL-10.02. Prompts and outputs containing Restricted data are retained only as required for evidence and are access-controlled.
