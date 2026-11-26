@@ -51,6 +51,8 @@ the first reference implementation; the architecture is organization-wide.
 | 21. Consolidation and removal register | [`requirements/source-dispositions.csv`](requirements/source-dispositions.csv) |
 | 22. Validation report | [`findings/validation-report.md`](findings/validation-report.md) |
 | 23. Clarity and EDF assessment | [`findings/clarity-and-edf-assessment.md`](findings/clarity-and-edf-assessment.md) |
+| 25. Production activation gates | [`registers/production-gates.csv`](registers/production-gates.csv) (PG-01..11; all `not-met`) |
+| 26. Owner decision traceability | [`registers/decision-traceability.csv`](registers/decision-traceability.csv) and the generated matrix |
 | 24. Owner decision package | [`docs/decisions/owner-decision-package-2026-11-25.md`](docs/decisions/owner-decision-package-2026-11-25.md) |
 | **Research program (B0–B8)** | |
 | Executive findings | [`findings/executive-findings.md`](findings/executive-findings.md); challenge of conventional practice and Clarity/EDF application in [`findings/`](findings/) |

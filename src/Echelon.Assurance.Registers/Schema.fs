@@ -618,6 +618,53 @@ let registers: RegisterSpec list =
                 "blockers", "open_questions"
             ]
         spec
+            "production_gates"
+            "registers/production-gates.csv"
+            "gate_id"
+            @"^PG-\d{2}$"
+            [
+                "gate_id"
+                "area"
+                "title"
+                "criteria"
+                "required_evidence"
+                "br_ids"
+                "control_ids"
+                "question_ids"
+                "risk_ids"
+                "work_item_ids"
+                "decision_ids"
+                "owner_role"
+                "status"
+                "evidence_refs"
+            ]
+            [
+                "area",
+                set
+                    [
+                        "financial-authorization"
+                        "regulatory"
+                        "tenant-isolation"
+                        "security-validation"
+                        "recovery"
+                        "privileged-access"
+                        "operational-evidence"
+                        "incident-response"
+                        "customer-commitments"
+                        "external-assurance"
+                        "residual-risk"
+                    ]
+                "status", set [ "not-met"; "met" ]
+            ]
+            [
+                "br_ids", "baseline"
+                "control_ids", "controls"
+                "question_ids", "open_questions"
+                "risk_ids", "risks"
+                "work_item_ids", "backlog"
+                "decision_ids", "decisions"
+            ]
+        spec
             "decision_traceability"
             "registers/decision-traceability.csv"
             "item_id"

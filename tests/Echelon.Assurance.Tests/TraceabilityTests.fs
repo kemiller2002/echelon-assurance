@@ -333,3 +333,36 @@ let ``open question needs why, role and trigger; answered needs evidence`` () =
     Assert.Empty(questionCompleteness [ q "open" "w" "r" "t" "" ])
     Assert.Single(questionCompleteness [ q "answered" "" "" "" "" ]) |> ignore
     Assert.Empty(questionCompleteness [ q "answered" "" "" "" "x.md" ])
+
+[<Fact>]
+let ``production gates cover areas, gating requirements and blocking questions`` () =
+    let gate area status ev =
+        rec'
+            [
+                "gate_id", "PG-01"
+                "area", area
+                "br_ids", "BR-A"
+                "question_ids", "OQ-001"
+                "status", status
+                "evidence_refs", ev
+            ]
+
+    let complete = gateAreas |> List.map (fun a -> gate a "not-met" "")
+    let br id g = rec' [ "br_id", id; "launch_gate", g ]
+
+    let q id tier =
+        rec' [ "oq_id", id; "proposed_status", "open"; "blocking_tier", tier ]
+
+    Assert.Empty(productionGates complete [ br "BR-A" "before-production" ] [ q "OQ-001" "production-launch" ])
+    Assert.Equal(1, List.length (productionGates (List.tail complete) [] []))
+
+    Assert.Single(productionGates complete [ br "BR-B" "before-production" ] [])
+    |> ignore
+
+    Assert.Empty(productionGates complete [ br "BR-B" "before-observation-period" ] [])
+
+    Assert.Single(productionGates complete [] [ q "OQ-002" "production-launch" ])
+    |> ignore
+
+    Assert.Single(productionGates (gate "residual-risk" "met" "" :: complete) [] [])
+    |> ignore

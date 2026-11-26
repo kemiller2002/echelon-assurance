@@ -122,3 +122,59 @@ let ``every economics activity has a known evidence purpose`` () =
         |> List.map (fun a -> a.Id)
 
     Assert.True(List.isEmpty bad, String.concat ", " bad)
+
+/// Applies a change to one committed register, keeping its header.
+let private corrupt name (change: Map<string, string> list -> Map<string, string> list) =
+    match loaded[name] with
+    | Some(header, rows) ->
+        let changed =
+            rows
+            |> List.map (fun r -> List.zip header r |> Map.ofList)
+            |> change
+            |> List.map (fun m -> header |> List.map (fun h -> Map.tryFind h m |> Option.defaultValue ""))
+
+        loaded |> Map.add name (Some(header, changed))
+    | None -> loaded
+
+let private reports (fragment: string) (l: Validation.Loaded) =
+    let errors = Validation.validate l [] @ Traceability.errors l
+
+    Assert.True(
+        errors |> List.exists (fun e -> e.Contains fragment),
+        sprintf "expected '%s' in:\n%s" fragment (String.concat "\n" errors)
+    )
+
+[<Fact>]
+let ``corrupted committed registers fail validation`` () =
+    corrupt "production_gates" (List.filter (fun g -> g["gate_id"] <> "PG-03"))
+    |> reports "no gate for area tenant-isolation"
+
+    corrupt "production_gates" (List.map (Map.add "status" "met"))
+    |> reports "is met without evidence"
+
+    corrupt
+        "question_dispositions"
+        (List.map (fun d ->
+            if d["proposed_status"] = "open" then
+                d |> Map.add "resolution_trigger" ""
+            else
+                d))
+    |> reports "has no resolution_trigger"
+
+    corrupt "decision_traceability" (List.filter (fun t -> t["item_id"] <> "ODP-07"))
+    |> reports "ODP-07"
+
+    corrupt
+        "controls"
+        (List.map (Map.add "status" "Tested")
+         >> List.map (Map.add "validation_ids" "VAL-041"))
+    |> reports "Tested"
+
+    corrupt
+        "baseline"
+        (List.map (fun b ->
+            if b["br_id"] = "BR-APP-014" then
+                b |> Map.add "control_ids" "CTL-NOPE-999"
+            else
+                b))
+    |> reports "CTL-NOPE-999"

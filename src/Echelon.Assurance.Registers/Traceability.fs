@@ -560,6 +560,52 @@ let questionCompleteness (dispositions: Record list) =
         else
             [])
 
+/// Production activation gates: every gate area is present; every requirement
+/// that gates production and every open production-blocking question is cited
+/// by a gate; a gate is "met" only with cited evidence.
+let gateAreas =
+    [
+        "financial-authorization"
+        "regulatory"
+        "tenant-isolation"
+        "security-validation"
+        "recovery"
+        "privileged-access"
+        "operational-evidence"
+        "incident-response"
+        "customer-commitments"
+        "external-assurance"
+        "residual-risk"
+    ]
+
+let productionGates (gates: Record list) (baseline: Record list) (dispositions: Record list) =
+    let cited column =
+        gates |> List.collect (fun g -> items g column) |> Set.ofList
+
+    let brs = cited "br_ids"
+    let questions = cited "question_ids"
+    let present = gates |> List.map (fun g -> field g "area") |> Set.ofList
+
+    (gateAreas
+     |> List.filter (present.Contains >> not)
+     |> List.map (sprintf "registers/production-gates.csv: no gate for area %s"))
+    @ (baseline
+       |> List.filter (fun b ->
+           field b "launch_gate" = "before-production"
+           && not (brs.Contains(field b "br_id")))
+       |> List.map (fun b ->
+           sprintf "registers/production-gates.csv: %s gates production but no gate cites it" (field b "br_id")))
+    @ (dispositions
+       |> List.filter (fun d ->
+           field d "proposed_status" = "open"
+           && field d "blocking_tier" = "production-launch"
+           && not (questions.Contains(field d "oq_id")))
+       |> List.map (fun d ->
+           sprintf "registers/production-gates.csv: open production-blocking %s is cited by no gate" (field d "oq_id")))
+    @ (gates
+       |> List.filter (fun g -> field g "status" = "met" && (field g "evidence_refs").Trim() = "")
+       |> List.map (fun g -> sprintf "registers/production-gates.csv: %s is met without evidence" (field g "gate_id")))
+
 let errors (loaded: Loaded) =
     let r = records loaded
     let baseline = r "baseline"
@@ -582,6 +628,7 @@ let errors (loaded: Loaded) =
     @ testedNeedsIndependence controls (r "validations")
     @ decisionTraceability (r "decisions") (r "decision_traceability") (r "source_dispositions")
     @ questionCompleteness (r "question_dispositions")
+    @ productionGates (r "production_gates") baseline (r "question_dispositions")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 
