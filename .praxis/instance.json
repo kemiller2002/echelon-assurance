@@ -1,0 +1,12 @@
+{
+  "schema": "praxis.instance/1",
+  "instanceId": "pxi-8b7ef8cc24d54b31a5b7c9a01f76cc08",
+  "createdAt": "2026-11-25T23:32:41.781Z",
+  "createdWith": "3.25.0",
+  "repository": {
+    "provider": "github",
+    "repositoryId": null,
+    "repository": "kemiller2002/echelon-assurance"
+  },
+  "predecessors": []
+}

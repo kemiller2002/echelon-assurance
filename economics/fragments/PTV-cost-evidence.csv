@@ -1,0 +1,17 @@
+item,low_usd,high_usd,unit,source_ids,evidence_class,notes
+Web application pen test - simple app (no API),2500,6000,per engagement,SRC-PTV-037,vendor-claim,Single vendor blog; simple scope (<20 pages).
+Web application pen test - typical range,5000,30000,per engagement,SRC-PTV-035,vendor-claim,Synack guide; competitor-authored.
+Web app pen test - moderate app with login,8000,15000,per engagement,SRC-PTV-036,vendor-claim,Compass IT guide.
+Web app pen test - complex multi-role app with APIs,15000,35000,per engagement,SRC-PTV-036,vendor-claim,Upper bound open-ended (35k+). Closest analogue to Unbound.
+Medium SaaS app with REST API,6000,15000,per engagement,SRC-PTV-037,vendor-claim,RedFox guide.
+API pen test (standalone),6000,18000,per engagement,SRC-PTV-036,vendor-claim,Compass IT guide.
+PTaaS annual programme (Cobalt) - Vendr median,29858,29858,per year (median),SRC-PTV-033,vendor-claim,Buyer-reported median via search summary of Vendr; Vendr page not directly readable (403). Cobalt credit = 8 testing hours (SRC-PTV-028).
+Autonomous pentest product (Cobalt promotion),3500,3500,per test,SRC-PTV-028,vendor-claim,"Promotional, valid to 2026-12-31. Automated product; not an independent manual pen test."
+Bug bounty platform fee (HackerOne) - Vendr median,40000,40000,per year (median),SRC-PTV-034,vendor-claim,Excludes bounty payouts. Not suitable pre-launch.
+Vanta subscription - Vendr observed,7500,57149,per year,SRC-PTV-029,vendor-claim,"Median ~20,000; 50-200 employee single-framework 15,000-35,000. Search summary of Vendr."
+Drata subscription - Vendr observed,9415,68250,per year,SRC-PTV-030,vendor-claim,"Median ~24,900-25,000. Search summary of Vendr; one outlier source reports ~38,000 median."
+Secureframe subscription - Vendr median,20000,20000,per year (median),SRC-PTV-031,vendor-claim,Search summary of Vendr; range not captured.
+AuditBoard/Optro subscription - Vendr observed,21220,111208,per year,SRC-PTV-032,vendor-claim,"Median ~45,900 (n=86). Enterprise audit/GRC tool; poor fit for Unbound."
+eramba Enterprise (flat fee),2700,5400,per year,SRC-PTV-046,vendor-claim,"Reported as EUR 2,500 (EUR 5,000 also shown); converted at an assumed ~1.08 USD/EUR (assumption). Community edition free."
+"Open-source GRC (CISO Assistant community, Probo, Comp AI community)",0,0,licence per year,SRC-PTV-043;SRC-PTV-044;SRC-PTV-045,vendor-claim,Licence cost only; hosting and engineering time excluded. AGPL obligations for CISO Assistant and Comp AI if modified and served.
+VDP with security.txt (self-run),0,0,per year (direct),SRC-PTV-024;SRC-PTV-025,recommendation,Direct cost near zero; triage time is the real cost (assumption).

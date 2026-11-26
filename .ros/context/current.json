@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "protocolVersion": "1.0.0",
+  "repository": "echelon-assurance",
+  "actor": "ros-bootstrap",
+  "startedAt": "2026-11-25T23:32:41.754Z",
+  "updatedAt": "2026-11-26T00:04:03.000Z",
+  "baselineDirtyPaths": [],
+  "workItems": [
+    {
+      "id": "ROS-INSTALL-3-25-0",
+      "type": "mechanical",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "installation",
+          "path": ".ros/installation.json"
+        }
+      ],
+      "updatedAt": "2026-11-25T23:32:41.754Z",
+      "completedAt": "2026-11-25T23:32:41.754Z"
+    },
+    {
+      "id": "WI-ASR-CONSOLIDATION",
+      "type": "research",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "research-record",
+          "path": "research/journals/JR-ASR-2026-C001--assurance-consolidation.md"
+        },
+        {
+          "type": "research-record",
+          "path": "findings/validation-report.md"
+        }
+      ],
+      "updatedAt": "2026-11-25T23:47:51Z",
+      "telemetryExecutionIds": [
+        "EXE-20261125T233256557Z-3f771e74"
+      ],
+      "latestCheckpoint": {
+        "id": "1198608af1dbba07886330c6",
+        "recordedAt": "2026-11-25T23:47:48Z",
+        "executionId": "EXE-20261125T233256557Z-3f771e74",
+        "repository": "echelon-assurance",
+        "branch": "claude/echelon-assurance-consolidation-jygy23",
+        "commit": "fd6153adac9149ce8bfd9e2e92a92a21bf616fd0",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-assurance"
+        },
+        "remoteBranch": "claude/echelon-assurance-consolidation-jygy23",
+        "remoteCommit": "fd6153adac9149ce8bfd9e2e92a92a21bf616fd0",
+        "summary": "Final state: consolidation and owner-direction reconciliation complete; six challenge rounds dispositioned; all validation passing",
+        "nextAction": "Complete the work item",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-11-25T23:47:51Z",
+      "conclusion": "Assurance baseline consolidated and reconciled with owner directions DF-ASR-2026-0D0F and 0D10; repository and Praxis validation pass; six adversarial challenge rounds dispositioned"
+    },
+    {
+      "id": "WI-ASR-FINAL",
+      "type": "task",
+      "state": "active",
+      "semanticState": "active",
+      "evidence": [],
+      "updatedAt": "2026-11-26T00:04:03.000Z",
+      "telemetryExecutionIds": [
+        "EXE-20261126T000404406Z-fc69561e"
+      ]
+    }
+  ]
+}

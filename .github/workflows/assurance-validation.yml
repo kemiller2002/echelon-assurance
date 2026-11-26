@@ -1,0 +1,47 @@
+name: assurance-validation
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: No build hooks or tracked build output
+        run: |
+          git ls-files > "$RUNNER_TEMP/files.txt"
+          if grep -Ei '(^|/)(bin|obj)/' "$RUNNER_TEMP/files.txt"; then echo "tracked build output"; exit 1; fi
+          if grep -Ei '\.(targets|props|rsp)$' "$RUNNER_TEMP/files.txt" | grep -Eiv '^Directory\.Build\.props$'; then echo "unexpected MSBuild hook"; exit 1; fi
+          if grep -Ei '(^|/)Directory\.Solution\.|(^|/)(before|after)\.[^/]*\.sln\.targets$' "$RUNNER_TEMP/files.txt"; then echo "solution hook"; exit 1; fi
+      - name: Restore tools
+        run: dotnet tool restore
+      - name: Formatting
+        run: dotnet fantomas --check src tests
+      - name: Build
+        run: dotnet build Echelon.Assurance.sln -c Release
+      - name: Test (fails on an empty run)
+        run: |
+          dotnet test Echelon.Assurance.sln -c Release --no-build --logger "trx;LogFileName=results.trx" | tee test.log
+          grep -Eq "Passed!.*Total: +[1-9]" test.log
+          test -s $(find . -name results.trx | head -1)
+          grep -Eq 'executed="[1-9][0-9]*"' $(find . -name results.trx | head -1)
+      - name: Validate registers
+        run: dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- validate .
+      - name: Governed record current
+        run: dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- governed --check .
+      - name: Fragments merge cleanly
+        run: dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- merge --check .
+      - name: Generated files are current
+        run: |
+          dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- roadmap .
+          dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- tco .
+          dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- econ .
+          dotnet run --project src/Echelon.Assurance.Cli -c Release --no-build -- trace .
+          git diff --exit-code -- roadmap/generated economics/generated economics/v2/generated requirements/generated
+          test "$(git ls-files requirements/generated roadmap/generated economics/generated economics/v2/generated | sort | tr '\n' ' ')" = "economics/generated/tco-summary.csv economics/generated/tco-summary.md economics/v2/generated/model.md economics/v2/generated/results.csv requirements/generated/traceability-matrix.md roadmap/generated/backlog-by-phase.md roadmap/generated/controls-by-phase.md "
