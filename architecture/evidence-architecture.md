@@ -333,7 +333,7 @@ OQ-500 (auditor reliance on witnessed tlog evidence), OQ-502 (retention),
 OQ-503 (crypto-shredding as erasure), OQ-504 (cloud provider), OQ-507
 (qualified timestamps), OQ-508 (GitHub plan for audit-log API) and OQ-510
 (agent evidence classification) now have owner-approved internal design
-resolutions (DF-ASR-2026-0D11); requirements definition, implementation
+resolutions (DF-ASR-2026-0D11); requirements definition and implementation
 verification remain pending; external acceptance remains pending where a
 condition exists, notably auditor acceptance (OQ-500, OQ-510). Provider
 selection for OQ-504 is pending as part of implementation; OQ-504 has no

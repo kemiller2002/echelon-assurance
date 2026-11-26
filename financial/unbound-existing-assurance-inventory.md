@@ -124,10 +124,11 @@ must come from elsewhere. [recommendation]
   (`accounting/CANONICAL-CHART-AND-POSTING-RULES.md` §1); Bank of America is
   named only as illustrative (`PARTNER-SEGREGATION-AND-TENANCY.md`).
   [observed]
-- **Customers (user entities) are sponsors**, and potentially partners
-  (white-label/servicing institutions). Donors and advisors are end users
-  of sponsors, not Unbound's contracting customers. [owner decision 1, DF-ASR-2026-0D01, which answered
-  OQ-753]
+- **Customers (user entities) are sponsors and financial institutions**
+  (white-label/servicing institutions); participants (donors and advisors)
+  use Unbound through them [owner decision 1, DF-ASR-2026-0D01, which
+  answered OQ-753]. Whether participants ever contract with Unbound directly
+  is not stated by decision 1 and is not assumed.
 
 ### 4.2 Financial administration activities
 

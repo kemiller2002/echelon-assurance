@@ -318,7 +318,7 @@ Full detail in [`tool-evaluation.md`](tool-evaluation.md).
 |---|---|---|---|
 | **OSCAL** (catalog, profile, mapping, component-definition, SSP, assessment-plan, assessment-results, POA&M) | Exchange format for control catalogs, implementation statements and assessment results | Strong as an **output**; heavy as an authoring format; FedRAMP direction but not named as mandatory in NTC-0009 | **Integrate (emit) when justified** (OQ-506: portable structured exports; OSCAL when justified, DF-ASR-2026-0D11) |
 | **OPA / Rego** | General decision engine (Kubernetes, CI, API gateways, Terraform plans) | Good for CI/infra checks over JSON; not needed for F# in-app decisions | **Integrate where an enforcement point already speaks Rego**; do not adopt as the policy model |
-| **Cedar** | Application authorization language, analyzable, formally modelled in Lean | Strong candidate for tenant/customer-facing authorization where policies must be analysed or delegated; F# has no first-party binding (Rust core, WASM, Go port) | **Evaluate by prototype** for in-app authz (OQ-509) |
+| **Cedar** | Application authorization language, analyzable, formally modelled in Lean | Strong candidate for tenant/customer-facing authorization where policies must be analysed or delegated; F# has no first-party binding (Rust core, WASM, Go port) | **Option only**: evaluate by prototype for in-app authz if a demonstrated benefit exceeds integration cost; no new runtime dependency approved (OQ-509) |
 | **Kyverno** | Kubernetes-native admission/validation, CEL | Only if Echelon runs Kubernetes; not observed | **Not now** |
 | **Cloud-native** (SCP/RCP, AWS Config, Azure Policy, GCP Org Policy) | Preventive and detective cloud guardrails | Required at the cloud layer regardless; they are the enforcement points | **Adopt as enforcement points**, bound from the model |
 | **GitHub rulesets / branch protection / push protection** | SDLC enforcement | Already central to Praxis; required checks must pin producer app | **Adopt as enforcement points** |
@@ -369,7 +369,7 @@ Recommendation: use **F# deciders** for domain state-transition legality
 Echelon; consider **Cedar** only where (a) customers or tenant admins author
 permissions, or (b) an auditor/customer values analyzable policy diffs. If
 Cedar is adopted, the policy model binds the Cedar policy set by digest and the
-CI gate runs Cedar's validator against the schema [recommendation; OQ-509].
+CI gate runs Cedar's validator against the schema [recommendation; option only under the OQ-509 disposition].
 
 ### 6.4 OSCAL emission
 

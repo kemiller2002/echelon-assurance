@@ -168,7 +168,8 @@ Enforcement mechanisms:
 
 - Branch protection: changes to the validation repository require approval by
   someone who did not author the change *and* is not the implementer of the
-  controls it tests; validation code cannot be changed in the same pull
+  controls it tests (not achievable with one human today; see the small-team
+  limits later in this section); validation code cannot be changed in the same pull
   request as the control it tests (a deterministic CI rule).
 - Policy analysis (VAL-017) proves no single principal holds both
   control-write and validation-write permissions, and no agent holds approval.

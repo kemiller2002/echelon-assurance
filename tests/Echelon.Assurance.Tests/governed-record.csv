@@ -320,7 +320,7 @@ controls,CTL-SDL-010,31f3721f078bb320
 controls,CTL-TEN-001,fd4e323ed05a102b
 controls,CTL-TEN-002,c1f4e4b3e138619f
 controls,CTL-VEN-001,460ec79daf3156b7
-controls,CTL-VEN-002,01f9a6014d5d6d30
+controls,CTL-VEN-002,2da66eddc98e2d79
 controls,CTL-VEN-003,c555a0f4883e1be8
 controls,CTL-VEN-004,78a04f2d96eca67b
 controls,CTL-VEN-005,03cdbfd299e72444
@@ -420,7 +420,7 @@ file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,7691a8f95f0b9ffe
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
 file,ai-governance/ai-governance-model.md,dc204cbc00b694e9
-file,architecture/evidence-architecture.md,6089c8412b6e4140
+file,architecture/evidence-architecture.md,e171a4aa92200722
 file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,8384baf9452192cd
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
@@ -457,7 +457,7 @@ file,economics/v2/activities.csv,ff0208c65120cc5a
 file,economics/v2/alternatives.csv,3c3e74ac889c14dc
 file,economics/v2/scenarios.csv,a5fb0e348b3186a9
 file,financial/finbc-unbound-map.csv,1c1e7b36976aae5b
-file,financial/unbound-existing-assurance-inventory.md,eabde7da413f5529
+file,financial/unbound-existing-assurance-inventory.md,f6956dc3e36041a3
 file,financial/unbound-financial-controls.md,d0a7e1f674e75aa6
 file,findings/challenge-passes/round1-domain.csv,d946fc095bb40804
 file,findings/challenge-passes/round1-structure.csv,465a69f09654cc4c
@@ -494,7 +494,7 @@ file,integration/proposed-changes.md,8bdad6e82b0c32fe
 file,methodology/identifiers.md,1a70739a1118e343
 file,methodology/research-methodology.md,50096ce4322b2e32
 file,methodology/review-protocol.md,1fcf391ca8dfaafd
-file,pentest/penetration-testing-research.md,8d14ce887e2072c8
+file,pentest/penetration-testing-research.md,56fee514b88cf815
 file,pentest/unbound-minimum-cost-testing-strategy.md,f8c4087a9027c4cf
 file,policies/drafts/POL-01-assurance-governance.md,599faa69d9d7778a
 file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
@@ -510,10 +510,10 @@ file,policies/drafts/POL-11-ai-and-autonomous-systems.md,eb296b808e34473a
 file,policies/drafts/POL-12-financial-operations-integrity.md,eb10e6e6d3e957c6
 file,policies/drafts/POL-13-customer-operations.md,f551e29882feb7e0
 file,policies/policy-inventory.md,c74ee7381b270eab
-file,policy-as-code/policy-as-code-specification.md,2f1a3a3829d32f6d
+file,policy-as-code/policy-as-code-specification.md,f0966cced62e988e
 file,policy-as-code/tool-evaluation.md,5b8a2a8dcbf1d475
 file,regulatory/framework-crosswalk-method.md,a0d4bbfce0581ef8
-file,regulatory/regulatory-applicability-matrix.md,5ba4704a87bd34b6
+file,regulatory/regulatory-applicability-matrix.md,fc5a08a5cc43e0fc
 file,requirements/README.md,ddb5003eb4ccde76
 file,requirements/ai-governance-independent-validation.md,7c9bb9fad1beb3f7
 file,requirements/assurance-economics.md,e265ba4586a7e3b1
@@ -567,7 +567,7 @@ file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff5333
 file,trust-center/customer-trust-center-specification.md,3e33552e7635c7ee
 file,validation/assurance-system-resilience.md,7df63b8cbcca2c6b
 file,validation/continuous-security-testing-specification.md,55d4821d770dc1f7
-file,validation/independent-validation-architecture.md,9bb32833c8191f61
+file,validation/independent-validation-architecture.md,af17b8dd528b5bac
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43
 open_questions,OQ-100,5a235bf082c88204
 open_questions,OQ-101,018c707edccc7117
@@ -801,7 +801,7 @@ question_bank,CAQ-019,0e0b58f94db913eb
 question_bank,CAQ-020,4fa74622f3a6b17a
 question_bank,CAQ-021,d64abef763f99103
 question_bank,CAQ-022,445562974e5b6b2c
-question_bank,CAQ-023,d3880561965a5552
+question_bank,CAQ-023,acf49d22c3f591ff
 question_bank,CAQ-024,9c7dae7e481436cd
 question_bank,CAQ-025,bf2f4acb1f06d71b
 question_bank,CAQ-026,4343ce0cce9a44d6
@@ -822,7 +822,7 @@ question_bank,CAQ-040,cbf6d19922be8762
 question_bank,CAQ-041,a5800d412ed56c6a
 question_bank,CAQ-042,dc63c8f7f720c30b
 question_bank,CAQ-043,538f2daffa1a5f9e
-question_bank,CAQ-044,453c44f0bd536bea
+question_bank,CAQ-044,edd94cea1200fa42
 question_bank,CAQ-045,217ca99dc6d48bed
 question_bank,CAQ-046,e270f98c4eac7f16
 question_bank,CAQ-047,191979ed11e772ab
