@@ -785,6 +785,83 @@ let questionCompleteness (dispositions: Record list) =
 
         blanks @ consistent @ badRefs @ fields)
 
+/// Verification dimensions (owner record of 2026-11-26, DF-ASR-2026-0D11):
+/// the architectural decision, requirements definition, implementation
+/// verification and external acceptance of a question are tracked separately.
+/// An answered question has an approved architectural decision; an open one
+/// does not. A dimension marked resolved (defined, verified, accepted) or
+/// exempt (not-applicable, not-required) carries a note; pending external
+/// acceptance names the parties; a canonical reference names another existing
+/// question that is itself canonical. Pure.
+let questionDimensions (dispositions: Record list) =
+    let ids = dispositions |> List.map (fun d -> field d "oq_id") |> set
+
+    let canonicalOf =
+        dispositions
+        |> List.map (fun d -> field d "oq_id", field d "canonical_ref")
+        |> Map.ofList
+
+    let dims =
+        [
+            "architectural_decision"
+            "requirements_definition"
+            "implementation_verification"
+            "external_acceptance"
+        ]
+
+    let noted =
+        set [ "defined"; "verified"; "accepted"; "not-applicable"; "not-required" ]
+
+    dispositions
+    |> List.collect (fun d ->
+        let id = field d "oq_id"
+        let status = field d "proposed_status"
+        let arch = field d "architectural_decision"
+        let note = (field d "dimension_notes").Trim()
+        let canonical = (field d "canonical_ref").Trim()
+        let at = sprintf "registers/question-dispositions.csv: %s %s" id
+
+        let statusRule =
+            match status with
+            | "answered" when arch <> "approved" -> [ at "is answered without an approved architectural decision" ]
+            | "open" when arch = "approved" -> [ at "is open with an approved architectural decision" ]
+            | _ -> []
+
+        let notes =
+            dims
+            |> List.filter (fun c -> noted.Contains(field d c) && c <> "architectural_decision")
+            |> List.filter (fun _ -> note = "")
+            |> List.map (fun c -> at (sprintf "marks %s %s without a dimension note" c (field d c)))
+
+        let parties =
+            if
+                field d "external_acceptance" = "pending"
+                && (field d "external_parties").Trim() = ""
+            then
+                [ at "has pending external acceptance but names no external party" ]
+            else
+                []
+
+        let canonicalRule =
+            if canonical = "" then
+                []
+            elif canonical = id || not (ids.Contains canonical) then
+                [ at (sprintf "canonical reference %s is not another question" canonical) ]
+            elif (Map.tryFind canonical canonicalOf |> Option.defaultValue "").Trim() <> "" then
+                [ at (sprintf "canonical reference %s is not itself canonical" canonical) ]
+            else
+                []
+
+        statusRule @ notes @ parties @ canonicalRule)
+
+/// A question still gates activation while it is open or while its
+/// requirements, implementation verification or external acceptance is pending.
+let pendingForActivation (d: Record) =
+    field d "proposed_status" = "open"
+    || field d "requirements_definition" = "pending"
+    || field d "implementation_verification" = "pending"
+    || field d "external_acceptance" = "pending"
+
 /// Production activation gates: every gate area is present; every requirement
 /// that gates production and every open production-blocking question is cited
 /// by a gate; a gate is "met" only with cited evidence.
@@ -828,12 +905,15 @@ let productionGatesWith
            sprintf "registers/production-gates.csv: %s gates production but no gate cites it" (field b "br_id")))
     @ (dispositions
        |> List.filter (fun d ->
-           field d "proposed_status" = "open"
+           field d "proposed_status" <> "superseded"
+           && pendingForActivation d
            && (field d "blocking_tier" = "production-launch"
                || field d "blocking_tier" = "implementation")
            && not (questions.Contains(field d "oq_id")))
        |> List.map (fun d ->
-           sprintf "registers/production-gates.csv: open production-blocking %s is cited by no gate" (field d "oq_id")))
+           sprintf
+               "registers/production-gates.csv: production-blocking %s (open or with pending dimensions) is cited by no gate"
+               (field d "oq_id")))
     @ (gates
        |> List.filter (fun g -> field g "status" = "met" && (field g "evidence_refs").Trim() = "")
        |> List.map (fun g -> sprintf "registers/production-gates.csv: %s is met without evidence" (field g "gate_id")))
@@ -848,7 +928,7 @@ let productionGatesWith
            )))
     @ (let openIds =
         dispositions
-        |> List.filter (fun d -> field d "proposed_status" = "open")
+        |> List.filter (fun d -> field d "proposed_status" <> "superseded" && pendingForActivation d)
         |> List.map (fun d -> field d "oq_id")
         |> set
 
@@ -857,7 +937,11 @@ let productionGatesWith
        |> List.collect (fun g ->
            items g "question_ids"
            |> List.filter openIds.Contains
-           |> List.map (sprintf "registers/production-gates.csv: %s is met while %s is open" (field g "gate_id"))))
+           |> List.map (
+               sprintf
+                   "registers/production-gates.csv: %s is met while %s is open or has pending dimensions"
+                   (field g "gate_id")
+           )))
     @ (if List.isEmpty backlog then
            []
        else
@@ -1097,6 +1181,7 @@ let errors (loaded: Loaded) =
     @ capabilityBasis (r "capabilities")
     @ controlEvidence controls
     @ questionCompleteness (r "question_dispositions")
+    @ questionDimensions (r "question_dispositions")
     @ productionGatesWith (r "production_gates") baseline (r "question_dispositions") (r "backlog") controls
     @ identifierReferences loaded
     @ ownerDecisionAnswers (r "question_dispositions") (r "decisions")

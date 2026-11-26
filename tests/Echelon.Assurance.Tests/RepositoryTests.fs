@@ -388,7 +388,9 @@ let ``every committed CSV row has as many fields as its header`` () =
     Assert.True(List.isEmpty bad, String.concat "\n" bad)
 
 /// Ratchet (round 3, reviewer H): closing a question or narrowing the
-/// requirement set is a governed change. Any change to these sets must edit
+/// requirement set is a governed change. The 71 questions answered by
+/// DF-ASR-2026-0D11 (docs/decisions/owner-question-resolutions-2026-11-26.md)
+/// were added on 2026-11-26. Any change to these sets must edit
 /// this test in the same pull request, citing the owner decision that
 /// authorizes it, so it is visible in review.
 [<Fact>]
@@ -396,20 +398,91 @@ let ``closed questions and removed or deferred source items match the governed r
     let closedQuestions =
         set
             [
+                "OQ-102"
+                "OQ-103"
+                "OQ-104"
+                "OQ-106"
+                "OQ-108"
+                "OQ-109"
+                "OQ-112"
+                "OQ-114"
+                "OQ-116"
+                "OQ-200"
+                "OQ-201"
+                "OQ-202"
+                "OQ-203"
+                "OQ-205"
+                "OQ-206"
+                "OQ-207"
+                "OQ-209"
+                "OQ-210"
+                "OQ-211"
+                "OQ-212"
+                "OQ-213"
+                "OQ-216"
+                "OQ-217"
+                "OQ-300"
+                "OQ-301"
+                "OQ-302"
                 "OQ-304"
+                "OQ-306"
+                "OQ-308"
+                "OQ-309"
+                "OQ-310"
+                "OQ-312"
+                "OQ-313"
+                "OQ-500"
+                "OQ-501"
+                "OQ-502"
+                "OQ-503"
+                "OQ-504"
                 "OQ-505"
+                "OQ-506"
+                "OQ-507"
+                "OQ-508"
                 "OQ-509"
+                "OQ-510"
+                "OQ-600"
+                "OQ-601"
+                "OQ-602"
+                "OQ-603"
+                "OQ-604"
+                "OQ-606"
+                "OQ-607"
+                "OQ-608"
                 "OQ-611"
+                "OQ-612"
+                "OQ-614"
+                "OQ-615"
+                "OQ-700"
+                "OQ-701"
+                "OQ-702"
+                "OQ-703"
+                "OQ-704"
                 "OQ-705"
+                "OQ-706"
+                "OQ-707"
                 "OQ-708"
+                "OQ-709"
+                "OQ-750"
                 "OQ-751"
                 "OQ-753"
+                "OQ-755"
+                "OQ-756"
+                "OQ-758"
                 "OQ-759"
                 "OQ-760"
+                "OQ-761"
+                "OQ-762"
+                "OQ-763"
+                "OQ-764"
+                "OQ-765"
+                "OQ-766"
                 "OQ-800"
                 "OQ-801"
                 "OQ-802"
                 "OQ-803"
+                "OQ-804"
                 "OQ-805"
                 "OQ-806"
                 "OQ-807"
@@ -531,6 +604,7 @@ let ``gating questions, accepted decisions, done work, risk acceptance and owner
                 "DF-ASR-2026-C006"
                 "DF-ASR-2026-0D0F"
                 "DF-ASR-2026-0D10"
+                "DF-ASR-2026-0D11"
             ],
         field "decisions" "decision_id" (fun d -> d["status"] = "accepted")
     )
@@ -788,3 +862,43 @@ let ``all current Markdown is governed except historical and generated`` () =
     Assert.True(Governed.coversFile "policy-as-code/policy-as-code-specification.md")
     Assert.False(Governed.coversFile "research/journals/JR-ASR-2026-C001.md")
     Assert.False(Governed.coversFile "findings/challenge-passes/round1.md")
+
+/// Verification dimensions (owner record DF-ASR-2026-0D11): corrupting a
+/// dimension, its justification, the auditor-reliance canonical reference or
+/// the gate coverage of a question with pending dimensions must fail.
+[<Fact>]
+let ``corrupted question dimensions fail validation`` () =
+    let change id (f: Map<string, string> -> Map<string, string>) =
+        corrupt "question_dispositions" (List.map (fun d -> if d["oq_id"] = id then f d else d))
+
+    change "OQ-205" (Map.add "architectural_decision" "pending")
+    |> reports "OQ-205 is answered without an approved architectural decision"
+
+    change "OQ-205" (Map.add "requirements_definition" "defined" >> Map.add "dimension_notes" "")
+    |> reports "OQ-205 marks requirements_definition defined without a dimension note"
+
+    change "OQ-205" (Map.add "external_parties" "")
+    |> reports "OQ-205 has pending external acceptance but names no external party"
+
+    change "OQ-108" (Map.add "canonical_ref" "OQ-108")
+    |> reports "OQ-108 canonical reference OQ-108 is not another question"
+
+    change "OQ-500" (Map.add "canonical_ref" "OQ-108")
+    |> reports "canonical reference OQ-500 is not itself canonical"
+
+    change "OQ-100" (Map.add "architectural_decision" "approved")
+    |> reports "OQ-100 is open with an approved architectural decision"
+
+    corrupt "production_gates" (List.map (Map.add "status" "met" >> Map.add "evidence_refs" "README.md"))
+    |> reports "is met while OQ-216 is open or has pending dimensions"
+
+    corrupt
+        "production_gates"
+        (List.map (fun g ->
+            g
+            |> Map.add
+                "question_ids"
+                (g["question_ids"].Split(';')
+                 |> Array.filter ((<>) "OQ-216")
+                 |> String.concat ";")))
+    |> reports "production-blocking OQ-216 (open or with pending dimensions) is cited by no gate"

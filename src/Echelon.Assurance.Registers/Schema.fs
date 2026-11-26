@@ -707,8 +707,19 @@ let registers: RegisterSpec list =
                 "why_unresolved"
                 "responsible_role"
                 "resolution_trigger"
+                "architectural_decision"
+                "requirements_definition"
+                "implementation_verification"
+                "external_acceptance"
+                "external_parties"
+                "canonical_ref"
+                "dimension_notes"
             ]
             [
+                "architectural_decision", set [ "approved"; "partial"; "pending"; "not-applicable" ]
+                "requirements_definition", set [ "defined"; "pending"; "not-applicable" ]
+                "implementation_verification", set [ "verified"; "pending"; "not-applicable" ]
+                "external_acceptance", set [ "accepted"; "pending"; "not-required"; "not-applicable" ]
                 "classification",
                 set
                     [
