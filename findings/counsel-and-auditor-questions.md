@@ -70,7 +70,7 @@ annual penetration testing plus vulnerability assessments every six months.
 314.6 (read) exempts paragraphs (b)(1), (d)(2), (h) and (i) for institutions under the 5,000 threshold.
 Proposed interpretation: a white-label technology provider that does not hold custody is
 probably a service provider to financial institutions, not a financial institution itself.
-Regardless of the answer, continuous internal monitoring and testing run (ODP-11); whether an independent penetration test is needed is reassessed against risk and actual obligations before material production launch (BR-VUL-012, PG-10).
+Regardless of the answer, continuous internal monitoring and testing are designed (ODP-11; CTL-VUL-004, Designed, not yet operating); whether an independent penetration test is needed is reassessed against risk and actual obligations before material production launch (BR-VUL-012, PG-10).
 Unblocks: whether the annual penetration test is a legal minimum or voluntary
 (REQ-PENTEST-010..012), and legal vs contractual classification for Unbound.
 
@@ -237,4 +237,4 @@ Attach the AI governance summary. Free; this is part of ordinary underwriting.
 - Licensors (OQ-214): email CIS to request a Supporter license, which is available to companies with under USD 200k in revenue. Email the SCF Council for written confirmation of the intended use.
 - Acquirer/processor (OQ-207): ask about SAQ type only if card payments are enabled.
 - AI providers (OQ-603): request enterprise data-processing terms.
-- Penetration-test firms (OQ-311): request fixed-fee quotes from the scoping brief.
+- Penetration-test firms (OQ-311): none now; the scoping package is kept current for the reassessment in WI-EXT-04 (DF-ASR-2026-0D0F, ODP-11). No quotes are requested.
