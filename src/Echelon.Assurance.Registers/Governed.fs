@@ -28,17 +28,30 @@ let snapshot (loaded: Loaded) : (string * string * string) list =
     |> List.collect (fun spec ->
         match Map.tryFind spec.Name loaded |> Option.flatten with
         | None -> []
-        | Some(header, _) ->
-            let cols = header |> List.filter (fun c -> not (excluded.Contains(spec.Name, c)))
+        | Some(header, rows) ->
+            // Raw rows, including malformed ones, so a row that fails to parse
+            // still changes the snapshot (round 13).
+            let idIndex =
+                header |> List.tryFindIndex ((=) spec.IdColumn) |> Option.defaultValue 0
 
-            Traceability.records loaded spec.Name
-            |> List.map (fun r ->
-                let value c =
-                    Map.tryFind c r |> Option.defaultValue ""
+            rows
+            |> List.map (fun row ->
+                let named =
+                    row
+                    |> List.mapi (fun i v ->
+                        let c =
+                            if i < List.length header then
+                                header[i]
+                            else
+                                sprintf "extra%d" i
 
-                let fields = cols |> List.map (fun c -> c + "=" + value c) |> String.concat "\u001f"
+                        c, v)
+                    |> List.filter (fun (c, _) -> not (excluded.Contains(spec.Name, c)))
+                    |> List.map (fun (c, v) -> c + "=" + v)
+                    |> String.concat "\u001f"
 
-                spec.Name, value spec.IdColumn, digest fields))
+                let id = if idIndex < List.length row then row[idIndex] else ""
+                spec.Name, id, digest named))
     |> List.sort
 
 /// Is a repository-relative CSV path an input outside the registers that the
