@@ -581,7 +581,7 @@ let ``governed fields match the committed governed record`` () =
     Assert.NotEmpty committed
 
     let files =
-        Directory.EnumerateFiles(root, "*.*", SearchOption.AllDirectories)
+        Directory.EnumerateFiles(root, "*", SearchOption.AllDirectories)
         |> Seq.map (fun p -> Path.GetRelativePath(root, p).Replace('\\', '/'), p)
         |> Seq.filter (fst >> Governed.coversFile)
         |> Seq.map (fun (rel, p) -> rel, File.ReadAllText p)
@@ -736,3 +736,39 @@ let ``owner requirement records, validator code and workflows are governed`` () 
     Assert.True(Governed.coversFile ".github/workflows/assurance-validation.yml")
     Assert.False(Governed.coversFile "src/Echelon.Assurance.Registers/obj/Release/net10.0/X.AssemblyInfo.fs")
     Assert.False(Governed.coversFile "requirements/generated/traceability-matrix.md")
+
+/// Round 10 (reviewer Q): build inputs are governed, and no build hook can
+/// redirect compilation outside the governed sources.
+[<Fact>]
+let ``build inputs are governed and compile only governed sources`` () =
+    Assert.True(Governed.coversFile "src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj")
+    Assert.True(Governed.coversFile "Echelon.Assurance.sln")
+    Assert.True(Governed.coversFile "Directory.Build.props")
+    Assert.True(Governed.coversFile "Directory.Build.targets")
+    Assert.True(Governed.coversFile "tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj")
+    Assert.True(Governed.coversFile "docs/decisions/NEW.MD")
+    Assert.True(Governed.coversFile ".github/workflows/x.yaml")
+
+    let hooks =
+        Directory.EnumerateFiles(root, "*", SearchOption.AllDirectories)
+        |> Seq.map (fun p -> Path.GetRelativePath(root, p).Replace('\\', '/'))
+        |> Seq.filter (fun p -> not (p.Contains "/obj/" || p.Contains "/bin/" || p.StartsWith ".git/"))
+        |> Seq.filter (fun p ->
+            let n = p.Substring(p.LastIndexOf '/' + 1).ToLowerInvariant()
+            n = "directory.build.targets" || n.EndsWith ".rsp")
+        |> List.ofSeq
+
+    Assert.True(List.isEmpty hooks, String.concat ", " hooks)
+
+    let outside =
+        Directory.EnumerateFiles(Path.Combine(root, "src"), "*.fsproj", SearchOption.AllDirectories)
+        |> Seq.collect (fun proj ->
+            let dir = Path.GetDirectoryName proj |> nonNull
+
+            System.Text.RegularExpressions.Regex.Matches(File.ReadAllText proj, "Include=\"([^\"]+\\.fs)\"")
+            |> Seq.map (fun m -> Path.GetFullPath(Path.Combine(dir, m.Groups[1].Value)))
+            |> Seq.filter (fun full -> not (full.StartsWith(Path.GetFullPath(Path.Combine(root, "src")))))
+            |> Seq.map (fun full -> proj + " -> " + full))
+        |> List.ofSeq
+
+    Assert.True(List.isEmpty outside, String.concat "\n" outside)

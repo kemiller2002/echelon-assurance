@@ -46,23 +46,42 @@ let snapshot (loaded: Loaded) : (string * string * string) list =
 /// views, fragments, tests and Praxis registries are excluded.
 let coversFile (relative: string) =
     let p = relative.Replace('\\', '/')
+    let lower = p.ToLowerInvariant()
     let registerPaths = Schema.registers |> List.map (fun s -> s.Path) |> set
+    let name = lower.Substring(lower.LastIndexOf '/' + 1)
 
-    (p.StartsWith "docs/decisions/" && p.EndsWith ".md")
-    || (p.StartsWith "requirements/"
-        && p.EndsWith ".md"
-        && not (p.Contains "/generated/"))
-    || (p.StartsWith "src/"
-        && p.EndsWith ".fs"
-        && not (p.Contains "/obj/" || p.Contains "/bin/"))
-    || (p.StartsWith ".github/workflows/" && p.EndsWith ".yml")
-    || p.EndsWith ".csv"
-       && not (registerPaths.Contains p)
-       && not (
-           [ "/generated/"; "/fragments/"; "/bin/"; "/obj/" ] |> List.exists p.Contains
-           || [ "tests/"; "registries/"; ".git/"; "node_modules/" ]
-              |> List.exists p.StartsWith
-       )
+    let buildOrOutput =
+        [ "/bin/"; "/obj/" ] |> List.exists lower.Contains
+        || [ "bin/"; "obj/" ] |> List.exists lower.StartsWith
+
+    let excludedRoot =
+        [ "tests/"; "registries/"; ".git/"; "node_modules/" ]
+        |> List.exists lower.StartsWith
+
+    let buildInput =
+        lower.EndsWith ".fsproj"
+        || lower.EndsWith ".sln"
+        || name.StartsWith "directory.build."
+        || name.StartsWith "directory.packages."
+        || name = "global.json"
+        || name = "nuget.config"
+        || lower = ".config/dotnet-tools.json"
+        || lower = ".editorconfig"
+
+    not buildOrOutput
+    && not (excludedRoot && not (lower.EndsWith ".fsproj"))
+    && (buildInput
+        || lower.StartsWith "src/"
+        || (lower.StartsWith "docs/decisions/" && lower.EndsWith ".md")
+        || (lower.StartsWith "requirements/"
+            && lower.EndsWith ".md"
+            && not (lower.StartsWith "requirements/generated/"))
+        || (lower.StartsWith ".github/workflows/"
+            && (lower.EndsWith ".yml" || lower.EndsWith ".yaml"))
+        || (lower.EndsWith ".csv"
+            && not (registerPaths.Contains p)
+            && not ([ "/generated/"; "/fragments/" ] |> List.exists lower.Contains)
+            && not excludedRoot))
 
 /// Digest rows for covered input files (whole file, line endings normalized).
 let fileSnapshot (files: (string * string) list) =

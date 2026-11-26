@@ -41,6 +41,11 @@ let scannedSuffixes =
         ".sh"
         ".ps1"
         ".cmd"
+        ".jsonl"
+        ".props"
+        ".targets"
+        ".sln"
+        ".fsproj"
     ]
 
 let private record (spec: RegisterSpec) (row: Csv.Row) = List.zip spec.Columns row |> Map.ofList
