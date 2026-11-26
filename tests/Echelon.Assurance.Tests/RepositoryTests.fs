@@ -214,3 +214,24 @@ let ``economics activities use known timing and condition values`` () =
         |> List.map (fun r -> r["activity_id"])
 
     Assert.True(List.isEmpty bad, String.concat ", " bad)
+
+/// Regression for 84d412a: an unquoted comma gave a row more fields than its
+/// header, and only `assurance econ` failed. Every committed CSV must be
+/// rectangular.
+[<Fact>]
+let ``every committed CSV row has as many fields as its header`` () =
+    let bad =
+        Directory.EnumerateFiles(root, "*.csv", SearchOption.AllDirectories)
+        |> Seq.filter (fun p ->
+            let rel = Path.GetRelativePath(root, p).Replace('\\', '/')
+            not (rel.Contains "/bin/" || rel.Contains "/obj/" || rel.StartsWith "registries/"))
+        |> Seq.collect (fun p ->
+            let header, rows = Csv.table (File.ReadAllText p)
+
+            rows
+            |> List.indexed
+            |> List.filter (fun (_, r) -> List.length r <> List.length header)
+            |> List.map (fun (i, _) -> sprintf "%s row %d" (Path.GetRelativePath(root, p)) (i + 2)))
+        |> List.ofSeq
+
+    Assert.True(List.isEmpty bad, String.concat "\n" bad)
