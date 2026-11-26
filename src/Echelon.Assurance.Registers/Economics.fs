@@ -45,7 +45,8 @@ type Scenario =
         CustomerMultiplier: float
     }
 
-/// Evidence-purpose classes (ODP-09: owner brief of 2026-11-26, with DF-ASR-2026-0D0F).
+/// Evidence-purpose classes: the nine of the owner brief of 2026-11-26 (ODP-09), refined in this
+/// repository with "remediation" and a split of packaging into auditor and customer.
 let purposes =
     [
         "baseline-engineering"
@@ -378,7 +379,7 @@ let private purposeSection all (scenarios: Scenario list) (alternatives: string 
             ""
             "## Five-year cost by evidence purpose (midpoint, includes baseline engineering)"
             ""
-            "Purpose classes per the owner brief of 2026-11-26 (ODP-09, with DF-ASR-2026-0D0F). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`."
+            "Purpose classes: the nine of the owner brief of 2026-11-26 (ODP-09, with DF-ASR-2026-0D0F), refined in this repository with remediation and a split of auditor and customer packaging. Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`."
         ]
         @ (chosen |> List.collect (fun s -> alts |> List.collect (one s)))
 

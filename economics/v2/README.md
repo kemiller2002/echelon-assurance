@@ -138,8 +138,10 @@ product-count threshold** gate investment. The originals are preserved (v1 in
 - **Purpose classes** (`purpose` column in `activities.csv`, validated by a
   repository test): baseline-engineering, operational-visibility,
   financial-integrity, prevention, continuous-validation,
-  operational-evidence, shared-infrastructure, auditor-packaging,
-  customer-packaging and external-services. The generated model reports
+  operational-evidence, shared-infrastructure, auditor-packaging and
+  external-services are the brief's nine classes; this repository adds
+  remediation and splits packaging into auditor and customer packaging
+  (refinements, not owner text). The generated model reports
   five-year cost by purpose for A4, A8 and A5 in each ODP-09 scenario. The
   classification of each activity is hypothetical.
 - **Reliance cases** (`auditor_reliance` now none, partial or full):

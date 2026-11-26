@@ -431,7 +431,7 @@ Break-even is not reported for ODP-09 scenarios: no product-count threshold gate
 
 ## Five-year cost by evidence purpose (midpoint, includes baseline engineering)
 
-Purpose classes per the owner brief of 2026-11-26 (ODP-09, with DF-ASR-2026-0D0F). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`.
+Purpose classes: the nine of the owner brief of 2026-11-26 (ODP-09, with DF-ASR-2026-0D0F), refined in this repository with remediation and a split of auditor and customer packaging. Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`.
 
 ### S8-owner-direction, A4-mvp-echelon
 

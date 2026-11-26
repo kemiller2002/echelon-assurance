@@ -142,7 +142,7 @@ baseline,BR-GOV-011,b2f27721b1f69e84
 baseline,BR-GOV-012,2c5a56ba22f62e9a
 baseline,BR-GOV-013,42bd026fd3db8307
 baseline,BR-GOV-014,f0c1a995c1bc7f1a
-baseline,BR-GOV-015,6007bfc84ac8c39f
+baseline,BR-GOV-015,210dd046267eed33
 baseline,BR-GOV-016,48985c37f0586201
 baseline,BR-GOV-017,aed31ea4be0f6aeb
 baseline,BR-HR-001,7e5e338d004cc484
@@ -441,10 +441,10 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,26b4c749a133bfdb
 file,findings/clarity-and-edf-assessment.md,a71a316d62c5844f
-file,findings/counsel-and-auditor-questions.md,3e99c64e4224257c
+file,findings/counsel-and-auditor-questions.md,6f0408ae7e851043
 file,findings/executive-findings.md,e6c6f43e92b2ead0
 file,findings/financial-integrity-review.md,66519ca6ca391e9d
-file,findings/reviews/RV-ASR-2026-11-26.md,f0982c7cead23836
+file,findings/reviews/RV-ASR-2026-11-26.md,c922f7d5cd1ff4b8
 file,findings/validation-report.md,2bef0e76f8cdba01
 file,global.json,b48d6da8fa62c0da
 file,policies/drafts/POL-01-assurance-governance.md,6222818163909251
@@ -476,7 +476,7 @@ file,src/Echelon.Assurance.Cli/Echelon.Assurance.Cli.fsproj,b512aac6c08e03c4
 file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
 file,src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj,3e2a5ded3dbf9f35
-file,src/Echelon.Assurance.Registers/Economics.fs,43542cf0ffd04ffe
+file,src/Echelon.Assurance.Registers/Economics.fs,ceca7a2d4ea559fe
 file,src/Echelon.Assurance.Registers/Governed.fs,3a4032e55a78a0a6
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
 file,src/Echelon.Assurance.Registers/Roadmap.fs,27ba2959764926ca
@@ -816,7 +816,7 @@ question_dispositions,OQ-204,5770ebfe34356ee2
 question_dispositions,OQ-205,6c729fa72cbd8cc2
 question_dispositions,OQ-206,362fb164ac64f121
 question_dispositions,OQ-207,903ffe278fbf534a
-question_dispositions,OQ-208,c352a68aafab883d
+question_dispositions,OQ-208,8331b89024c4ea1d
 question_dispositions,OQ-209,135a1f05c6f7754a
 question_dispositions,OQ-210,d96f1e23da74faf5
 question_dispositions,OQ-211,a6478e228404fafe
@@ -851,7 +851,7 @@ question_dispositions,OQ-507,e87434084e2440e8
 question_dispositions,OQ-508,dbda81638da83bee
 question_dispositions,OQ-509,616c429080b4faad
 question_dispositions,OQ-510,ad8076a6cdfb2d44
-question_dispositions,OQ-600,f822904a85962f8e
+question_dispositions,OQ-600,9cf8143b731a9b3f
 question_dispositions,OQ-601,8746baaae5bb9b6f
 question_dispositions,OQ-602,87473eb9b40aaa9e
 question_dispositions,OQ-603,8966ca98dc3f7986
@@ -896,7 +896,7 @@ question_dispositions,OQ-763,9e9b0afbcee5c2cb
 question_dispositions,OQ-764,1008b3ca79799952
 question_dispositions,OQ-765,323c3a308fd1e3c6
 question_dispositions,OQ-766,02da27fd6efdfa6a
-question_dispositions,OQ-800,71c49ea289f285ef
+question_dispositions,OQ-800,5037d1ad47541029
 question_dispositions,OQ-801,d48c235d7babfda1
 question_dispositions,OQ-802,39def4808fd85f76
 question_dispositions,OQ-803,d4d3513f756f7f4f
@@ -1350,7 +1350,7 @@ risks,RSK-061,6af11f17779ee742
 risks,RSK-062,c19fde3411a6ca12
 risks,RSK-063,c090efd9faa68a0e
 risks,RSK-064,ea92c0ee7f8ce653
-risks,RSK-065,ed6f9d74e21e45e4
+risks,RSK-065,b16ce9f7b2a7ea7a
 risks,RSK-066,a3f68cac3bc7ebb1
 source_dispositions,AIG-BC-001,fe6d72ad8be69ecb
 source_dispositions,AIG-BC-002,f24f15f495859328
