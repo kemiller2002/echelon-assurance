@@ -67,7 +67,9 @@ decision 0D03 (GLBA design baseline)) · `customer-expectation` · `voluntary`
    brand and administers investment allocations could be argued to be
    "significantly engaged". If so, 314.1(b) brings in customer information it
    holds about customers of *other* financial institutions too (SRC-REG-004,
-   tool paraphrase — re-verify). → **OQ-202, P0.** Evidence: `open-question`.
+   tool paraphrase — re-verify). → **OQ-202, P0.** Evidence: `open-question`
+   (legal classification not assumed; owner-approved design: meet substantive
+   safeguards without assuming legal classification, DF-ASR-2026-0D11).
 2. **Contractually, because a sponsor is a covered financial institution.**
    314.4(f) requires covered institutions to select capable service providers,
    require safeguards by contract and periodically assess them (SRC-REG-001).
@@ -125,7 +127,7 @@ law/legitimate business need" exception), and the board report (314.4(i)).
 Do **not** design around the 5,000-consumer exemption (314.6): it is counted per
 institution, and banks expect the exempted elements anyway. `recommendation`.
 
-**Triggers that change the classification:** a recorded resolution of OQ-200–OQ-202 (internal research, or external advice obtained on a recorded trigger);
+**Triggers that change the classification:** a recorded legal-classification determination for OQ-200–OQ-202 (internal research, or external advice obtained on a recorded trigger; DF-ASR-2026-0D11 approves only the internal design direction, not a classification);
 choice of a donor-facing brand versus white-label; any lending, custody,
 check-cashing, wire-transfer or tax-preparation service (FTC's own examples,
 SRC-REG-005); a bank contract (makes it contractual immediately).
@@ -133,7 +135,7 @@ SRC-REG-005); a bank contract (makes it contractual immediately).
 **Internal contradiction found:** many Unbound requirements cite
 "GLBA safeguards" as their basis, labelled "unverified general knowledge"
 (SRC-REG-052). This matrix does not confirm GLBA as a *legal* basis; those
-citations should be read as "contractual/expected" until OQ-200–OQ-202 close.
+citations should be read as "contractual/expected" until the legal classification in OQ-200–OQ-202 is determined (the safeguards design is owner-approved regardless of classification, DF-ASR-2026-0D11).
 Recorded for `integration/proposed-changes.md` (coordinator).
 
 ## 4. Matrix
@@ -151,7 +153,7 @@ triggers. Requirement-level rows are in `REG.csv`.
 | State breach notification (STATE) | 50 states + DC, GU, PR, VI (SRC-REG-042) | Anyone owning, licensing or maintaining residents' PI | **legal if Echelon holds residents' personal information** (for example future employees or contractors; none evidenced now) | **legal** (as maintainer: notify data owner; sponsors notify residents) | authoritative (law) / medium (Echelon facts) | Deadlines/triggers vary | First real PI |
 | State "reasonable security" (STATE) | e.g., 201 CMR 17 (MA) (SRC-REG-058) | Owners/licensors of MA residents' PI | legal if Echelon holds MA residents' personal information (none evidenced now) | contractual via sponsors | authoritative / medium | Whether a processor "licenses" PI | MA residents in data |
 | State comprehensive privacy (STATE) | ~20 state laws; CO, DE, NJ, OR (and per later commentary MD, MN) do not exempt 501(c)(3)s (SRC-REG-043); GLBA exemptions entity- vs data-level, MT narrowed 2025-10-01, CT 2025-10-01 or 2026-07-01 (sources disagree) (SRC-REG-044) | Controllers above thresholds; processors | likely below thresholds | undetermined (processor duties near-certain contractually) | auditor-interpretation / medium | Secondary sources disagree on lists | OQ-209; resident counts per sponsor |
-| NYDFS Part 500 (STATE) | 23 NYCRR 500; final phase 2025-11-01 (SRC-REG-045) | DFS licensees | undetermined as possible operator (OQ-216, OQ-301) | undetermined (licensing or covered-entity status open, OQ-216, OQ-301); contractual if a DFS-licensed partner | auditor-interpretation / low | — | OQ-211, OQ-216 |
+| NYDFS Part 500 (STATE) | 23 NYCRR 500; final phase 2025-11-01 (SRC-REG-045) | DFS licensees | undetermined as possible operator (OQ-216, OQ-301) | undetermined (licensing or covered-entity status not determined, OQ-216, OQ-301; owner-approved design assumes no NYDFS licence and no receipt, custody or unilateral movement of customer funds initially, DF-ASR-2026-0D11); contractual if a DFS-licensed partner | auditor-interpretation / low | — | OQ-211, OQ-216 |
 | GDPR (GDPR) | Reg. (EU) 2016/679 Art. 3(2) (SRC-REG-041) | Non-EU controllers/processors targeting or monitoring EU data subjects | not-applicable | not-applicable | authoritative / medium | Accessibility ≠ targeting (EDPB, not read) | OQ-208: EU/UK donors, marketing, tracking |
 | IRS DAF rules (IRS) | 26 U.S.C. 4966, 4967, 170(f)(8), 170(f)(18), 6033(k); 26 CFR 1.6001-1 (SRC-REG-046–050) | Sponsors, fund managers, donors | n/a | **contractual** (duties and taxes fall on sponsors, fund managers and donors; platform must enable compliance and not cause violations) | authoritative (law) / medium (classification) | Platform personnel acting with sponsor authority could be argued to be "fund managers" (4966(d)(3)); 170(f)(8)/(18) are donor-deduction conditions, not sponsor duties (OQ-212) | Sponsor contract; Unbound becoming a sponsor itself would make it **legal** |
 | IRS Pub 1075 / e-file (IRS) | FTI safeguards; e-file provider rules | Agencies receiving FTI; EROs/preparers | n/a | not-applicable | assumption / medium | — | Offering tax preparation (also makes operator a Safeguards FI) |
@@ -193,7 +195,8 @@ SOC 1 / SOC 2 (AICPA) are covered by batch B2 and are not classified here.
 ## 5. What this means for design (recommendations)
 
 1. **Adopt the 16 CFR 314.4 elements as the minimum security-program baseline
-   for production Unbound** regardless of how OQ-200–202 resolve. Cost of
+   for production Unbound** regardless of how the legal classification in
+   OQ-200–202 is determined (owner-approved design direction, DF-ASR-2026-0D11). Cost of
    adoption is low because SOC 2 and bank TPRM require nearly the same things;
    cost of later discovery that the rule applied directly is high. `recommendation`.
 2. **Treat banks as the binding route** (12 CFR 30 App. B, TPRM, 12 CFR 53.4 if
@@ -211,8 +214,10 @@ SOC 1 / SOC 2 (AICPA) are covered by batch B2 and are not classified here.
 
 ## 6. Biggest uncertainties
 
-- GLBA status of DAF sponsors and of a for-profit DAF platform (OQ-200–203).
-- Contracting structure with banks (direct BSCA provider vs sponsor's TPSP) (OQ-204–206).
+- GLBA legal status of DAF sponsors and of a for-profit DAF platform (OQ-200–203;
+  legal classification not assumed; internal design approved, DF-ASR-2026-0D11).
+- Contracting structure with banks (direct BSCA provider vs sponsor's TPSP) (OQ-204–206;
+  OQ-205/206 internal design approved, DF-ASR-2026-0D11; bank agreements pending).
 - What sponsors and banks will actually demand (OQ-215).
 - State privacy law lists change every session; secondary sources disagree.
 - Several primary texts could not be read (eCFR blocked, FFIEC 403, Nacha and PCI

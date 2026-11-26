@@ -121,7 +121,9 @@ External element (REQ-*)  --relationship-->  CTL-*  --implements-->  CSF 2.0 sub
 
 ## 7. Open points
 
-- OQ-214 (licences), OQ-215 (which frameworks customers want), OQ-217 (bank
-  self-assessment format post-CAT).
+- OQ-214 (licences), OQ-215 (which frameworks customers want).
+- OQ-217 (bank self-assessment format post-CAT): internal design approved as a
+  framework-neutral catalog and crosswalks (DF-ASR-2026-0D11); bank partner
+  acceptance pending.
 - Whether to publish the catalog in OSCAL is a later decision; the model is
   OSCAL-compatible because the anchor is.

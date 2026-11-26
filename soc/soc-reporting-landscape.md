@@ -418,7 +418,9 @@ evidence for **auditor re-performance and independent population
 extraction**, not for one-click report generation `[recommendation]`.
 
 Whether a specific service auditor will accept Echelon/Folio evidence
-packages, and on what IPE testing basis, is `open-question` (OQ-108).
+packages, and on what IPE testing basis, is pending (OQ-108; internal design
+approved: source-authenticated reproducible evidence with completeness and
+accuracy checks, DF-ASR-2026-0D11).
 
 ## 8. Sampling
 
@@ -553,7 +555,8 @@ are deliberately not reproduced.
 - **Echelon relevance.** An "internal audit function" made of Echelon-controlled
   agents is **not** objective in the AT-C sense unless its organizational
   status supports objectivity. Whether a service auditor would use such work
-  at all is `open-question` (OQ-109).
+  at all is pending (OQ-109; internal design approved as management
+  monitoring, not independent internal audit, DF-ASR-2026-0D11).
 
 ## 13. Restricted use and distribution
 

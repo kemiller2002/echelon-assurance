@@ -160,7 +160,7 @@ auditor's judgment decides).
 **Echelon Foundry's own platform.** If Echelon Foundry is the legal operator,
 its corporate controls (HR, governance, vendor management) fall inside the
 Security common criteria for the Unbound system. Which legal entity is the
-"service organization" is unresolved (OQ-102).
+"service organization" is pending (OQ-102); for planning, the owner-approved design treats the operator as the Echelon-side service organization (DF-ASR-2026-0D11).
 
 ## 5. Type 1 first, or straight to Type 2?
 
@@ -186,8 +186,8 @@ Security common criteria for the Unbound system. Which legal entity is the
   - a second engagement fee;
   - a description and assertion to prepare twice;
   - the risk of marketing it as "certified".
-- Whether to do it is a commercial owner decision (OQ-112 adjacent)
-  `[recommendation]`.
+- Owner-approved design: no Type 1 or SOC 3 absent commercial
+  justification (OQ-112, DF-ASR-2026-0D11) `[recommendation]`.
 
 **Hard precondition: no report until production exists `[authoritative]`.**
 
@@ -234,7 +234,10 @@ Security common criteria for the Unbound system. Which legal entity is the
      investments, fund balances and reporting, plus ITGC (access, change,
      operations).
    - **SOC 2 Type 2** covering **Security + Availability + Confidentiality** (superseded as a scope by decision 0D02: design for all five categories; see the end of this file).
-   - Processing Integrity and Privacy remain undetermined (OQ-103, OQ-104).
+   - Processing Integrity and Privacy are in the owner-approved design (all five
+     categories, OQ-103; configurable privacy roles with sponsor instructions as
+     default and own-purpose data separate, OQ-104; DF-ASR-2026-0D11); examination
+     scope pending.
 3. **Defer the SOC 2 criteria mapping.** Do not finalise it before the 2027
    TSC are issued (comment deadline 15 January 2027). Map controls to both
    structures in the meantime.
@@ -264,13 +267,13 @@ Security common criteria for the Unbound system. Which legal entity is the
 |---|---|---|---|
 | 1 | Exact TSC and DC text not read (login gate) | Summaries in `REQ-TSC-*` may be imprecise | OQ-100 |
 | 2 | First sponsor auditor's planned approach | Determines whether a SOC 1 is needed at all at launch | OQ-101 |
-| 3 | Legal entity that is the service organization; system boundary | Determines whose controls are in scope, and whether EF systems are inclusive | OQ-102 |
-| 4 | PI and Privacy in or out | Cost and description complexity | OQ-103, OQ-104 |
+| 3 | Legal entity that is the service organization; system boundary | Determines whose controls are in scope, and whether EF systems are inclusive | OQ-102 (actual entity pending; planning design approved, DF-ASR-2026-0D11) |
+| 4 | PI and Privacy in or out of examination scope (design covers all five categories) | Cost and description complexity | OQ-103, OQ-104 (internal design approved, DF-ASR-2026-0D11; examination scope pending) |
 | 5 | Bank and financial-institution partner demands | Could force earlier or both reports | OQ-105 |
-| 6 | Status of custodians, banks and processors as subservice organizations | Description, CSOCs and user-auditor work | OQ-106 |
+| 6 | Status of custodians, banks and processors as subservice organizations | Description, CSOCs and user-auditor work | OQ-106 (classify by contracts and control dependencies, DF-ASR-2026-0D11; CPA judgment pending) |
 | 7 | Final 2027 TSC content and effective date | Criteria mapping | OQ-107 |
-| 8 | Auditor acceptance of automated/Folio evidence and IPE basis | Core to the Echelon thesis of continuous evidence | OQ-108 |
-| 9 | Whether agent-performed monitoring counts as an internal audit function | Audit fee and the reasonable basis for the assertion | OQ-109 |
+| 8 | Auditor acceptance of automated/Folio evidence and IPE basis | Core to the Echelon thesis of continuous evidence | OQ-108 (auditor acceptance pending; internal design approved, DF-ASR-2026-0D11) |
+| 9 | How an auditor treats agent-performed monitoring (owner-approved design: management monitoring, not independent internal audit) | Audit fee and the reasonable basis for the assertion | OQ-109 (auditor treatment pending; DF-ASR-2026-0D11) |
 | 10 | Acceptable first period for user auditors | Timing | OQ-110 |
 | 11 | Combined SOC 1 + SOC 2 cost and feasibility | Budget | OQ-111 |
 | 12 | Sponsors' audit regimes | Whether SOC 1 demand materialises | OQ-115 |
@@ -292,5 +295,6 @@ Availability, Confidentiality, Processing Integrity, Privacy) on shared
 controls. Type I or SOC 3 only with demonstrated commercial benefit. The
 analysis above, which leaned toward deferring Processing Integrity and
 Privacy, is retained as the reasoning record. Actual examination scope
-remains subject to customer and auditor confirmation (OQ-101, OQ-103,
-OQ-104 stay open).
+remains subject to customer and auditor confirmation (OQ-101 stays open;
+OQ-103 and OQ-104 have owner-approved internal design resolutions,
+DF-ASR-2026-0D11, with examination scope pending).
