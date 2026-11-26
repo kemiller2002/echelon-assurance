@@ -1,0 +1,169 @@
+---
+id: ASR-FIND-COMPLETION-001
+title: Final assurance reconciliation, completion report
+status: draft for owner review
+created: 2026-11-26
+---
+
+# Completion report: final assurance reconciliation (2026-11-26)
+
+This report covers the brief summarized in `docs/charter/final-reconciliation-brief-2026-11-26.md`, applied to the owner records `docs/decisions/owner-review-direction-2026-11-25.md` (DF-ASR-2026-0D0F) and `docs/decisions/owner-remaining-approvals-2026-11-25.md` (DF-ASR-2026-0D10).
+
+Nothing in this repository is claimed to be operating, effective, compliant, certified or attested. Every control is `Designed`. The review below was performed by Echelon-controlled AI agents. It is structured internal review, not organizational independence, legal advice or attestation.
+
+## 1. Owner decisions and reconciled dispositions
+
+All twelve package items, plus the tenet items, are traced in both directions in `registers/decision-traceability.csv`. The validator fails if an item lacks a decision, requirement, control, policy, work item or question link.
+
+| Item | Decision | Reconciled disposition (main artifacts) |
+|---|---|---|
+| ODP-01 | 0D10 | 113 requirements approved in principle. Four additions, each traced to an owner item, bring the total to 117. The count change is recorded in the ODP-01 row of `requirements/source-dispositions.csv`. |
+| ODP-02 | 0D0F | Multi-agent review plus deterministic verification for development review (BR-VAL-004, VAL-041, `methodology/review-protocol.md`). No reviewer retainer. No exception is self-approved: CTL-GOV-007 and POL-01.05 cover every exception, and BR-GOV-004 covers material ones. The independence vocabulary is in `controls/README.md`. |
+| ODP-03 | 0D0F | Architectural safeguards with no custodian now. Residual risk and triggers are recorded in RSK-065. |
+| ODP-04 | 0D10 | Emergency-delegate and protected-reporting roles are defined in `governance/operating-model.md`. Naming is deferred (OQ-607). |
+| ODP-05 | 0D0F | Sponsor-controlled funds and white-label support are preserved. Functionality is kept distinct from activation, which is gated by PG-01 and PG-02 and by BR-FIN-020. No counsel is engaged. |
+| ODP-06 | 0D10 | Vigila is the shared observability initiative on managed infrastructure. Only work items are produced (BR-LOG-002, roadmap). |
+| ODP-07 | 0D10 | A thin Strata runtime with no unnecessary ORM complexity (BR-APP-014, WI-STRATA-04/05). |
+| ODP-08 | 0D10 | Restricted research agents (BR-AI-004). This is not risk acceptance (OQ-616 stays open). |
+| ODP-09 | 0D0F | Economics recalculated by purpose class at 1, 2, 5, 10 and 15 products, with no-examination, partial-reliance, full-reliance and customer-specific cases. No product-count thresholds. v1 is preserved (`economics/v2/README.md`). |
+| ODP-10 | 0D10 | US-first operation. Cards are deferred and processor-hosted. No AI authorizes money. Deterministic execution runs only under the sponsor's established authority (BR-FIN-006, C004, PG-01). Praxis and rulesets are mandatory. |
+| ODP-11 | 0D0F | Continuous internal testing is mandatory. External testing is reassessed before a material production launch (BR-VUL-012, PG-04). |
+| ODP-12 | 0D0F | No legal engagement. Primary-source research and prepared questions only (`findings/counsel-and-auditor-questions.md`). Internal work is never presented as legal opinion. |
+| OT-01 / OT-02 | 0D10 / 0D0F | Evidence by construction (TNT-17, BR-ASR-012). External services are not the default (TNT-18). |
+
+## 2. Final counts
+
+These are taken from the registers:
+
+- 117 baseline requirements (`requirements/baseline.csv`)
+- 222 source dispositions
+- 121 controls, all `Designed` (`controls/control-catalog.csv`)
+- 84 policy-inventory entries: 13 policies and 71 sections
+- 18 tenets
+- 66 risks
+- 41 validation procedures
+- 35 evidence types
+- 115 questions
+- 63 work items
+- 11 production gates
+- 14 decision-traceability items
+- 380 regulatory requirement rows
+
+## 3–4. Changes to the baseline, and disposition of sources
+
+The baseline grew from 113 to 117 requirements. The four additions are BR-VAL-004 (ODP-02), BR-LOG-002 (ODP-06), BR-APP-014 (ODP-07) and BR-ASR-012 (OT-01).
+
+The 222 source items are disposed as follows:
+
+| Disposition | Count |
+|---|---|
+| Consolidate | 149 |
+| Retain | 36 |
+| Strengthen | 16 |
+| Simplify | 13 |
+| Replace | 5 |
+| Defer | 2 |
+| Remove (editorial) | 1 |
+
+No mandatory obligation was removed (`requirements/source-dispositions.csv`).
+
+## 5. Outstanding questions by blocking category
+
+`registers/question-dispositions.csv` records 96 open, 17 answered and 2 superseded questions. Every open question has a reason it is unresolved, the lowest-cost resolution, a responsible role, a trigger and a blocking scope.
+
+Open questions by blocking tier:
+
+| Blocking tier | Open questions |
+|---|---|
+| Requirements finalization | 0 |
+| Implementation | 15 |
+| Production launch | 40 |
+| External examination | 33 |
+| None | 8 |
+
+Open questions by dependency:
+
+| Depends on | Open questions |
+|---|---|
+| Auditor | 28 |
+| Legal research | 21 |
+| Implementation | 19 |
+| Customer | 16 |
+| Vendor or insurer | 6 |
+| Future standard | 4 |
+| Deferred owner decision | 2 |
+
+## 6. Economic findings
+
+The economics are in `economics/v2/README.md` and `economics/v2/generated/model.md`. All inputs are hypothetical or vendor claims.
+
+- Minimum viable assurance (A4) has the lowest five-year midpoint at one and two products in all 13 scenarios. In the owner-direction case (S8) it costs USD 1.19M at one product.
+- The prevention and testing package (A8) costs about USD 245k more than A4 over five years at one product. Its case is risk reduction, which the model does not monetize.
+- Automation (A5) has a lower midpoint than A4 at five or more products in the no-examination, customer-specific and full-reliance cases. This rests on a hypothetical estimate of manual evidence hours, which must be measured before any decision.
+- Owner capacity, not cash, is likely the binding constraint.
+
+## 7. Capability findings
+
+`integration/capability-verification.csv` covers 27 systems, with tests executed for 5. `integration/capability-findings.md` summarizes them:
+
+- **Vigila** is a follow-up tracker. It has no logging or observability code.
+- **Strata** governs schemas but has no runtime data access.
+- **Praxis** verified completion exists but is not enabled with pinned keys.
+- **Conditor** has no trusted keys.
+- **Arca** hashes records but has no immutable storage.
+
+Requirements that depend on these capabilities are designed but not enforced (RSK-059).
+
+## 8. Implementation backlog
+
+`roadmap/backlog.csv` has 63 items: 57 proposed, 1 in progress, 4 done and 1 withdrawn. Each item records its phase, repository, requirements, dependencies, acceptance criteria, validation method, evidence requirements, blockers and blocking scope. Every live baseline requirement has a work item. No other repository was modified.
+
+## 9. Multiple-agent review (A–F)
+
+Six separately initialized reviewers examined the work. Their provenance and the reconciliation of their findings are recorded in `findings/reviews/RV-ASR-2026-11-26.md`.
+
+## 10. Adversarial challenge
+
+The adversarial challenge ran in rounds 2–51, all recorded in the same review record. From round 36 on, each round used three parallel slices with separate agents, and from round 46 on, each round also checked the previous round's diff line by line. Rounds 43–50 found 3, 1, 2, 3, 2, 1, 2 and 3 material findings. Most were borderline, and many were regressions from the previous round's edits.
+
+**Round 51 found no material finding in any slice.** A separate verifier then checked the minor fixes made after round 51 and found nothing material. Remaining coverage limits are stated there: some cross-repository claims could not be re-checked locally.
+
+## 11. Validation results
+
+Validation is run on the final head; CI runs the same checks on the PR. It covers:
+
+- the validator (`assurance validate`)
+- fragment-merge currency
+- currency of the generated views (trace, roadmap, econ, tco)
+- the governed-record check
+- Fantomas
+- 95 tests, including regression tests that corrupt committed registers and fixtures and require failure
+- Praxis validation
+
+**CI history.** CI failed twice on intermediate commits, ba8c2aa and 5ca1af2. Both were fixed (`findings/validation-report.md`).
+
+## 12. Governance status
+
+- **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is active.
+- **Verified completion** was attempted on the final commit. Its outcome is recorded in Praxis and in the PR #3 description.
+- **Branch protection.** `main` is not protected: GitHub reports `protected: false`, and no rulesets apply (WI-ASR-03, OQ-700/OQ-761). Only the owner can apply rulesets.
+
+## 13. Remaining external dependencies
+
+These are the dependencies on auditors, legal research, customers, banks, vendors and insurers listed in section 5. They are preserved in `registers/question-dispositions.csv`.
+
+No external engagement or expenditure is authorized. Under DF-ASR-2026-0D0F, any engagement needs a reassessment and the owner's authorization.
+
+## 14. Production activation blockers
+
+All eleven gates, PG-01 to PG-11 in `registers/production-gates.csv`, are `not-met`. Each lists its required evidence and the requirements, controls, questions, risks and work items it depends on. The 40 open production-launch questions also block activation. No production capability is activated.
+
+## 15. Decisions needing the owner
+
+1. Apply rulesets on `main` requiring the assurance and Praxis checks (WI-ASR-03).
+2. Enable verified completion with pinned verifier keys (WI-PRAXIS-03), or accept plain completion for this initiative.
+3. Confirm the repository's interpretation that evidence records are excluded from routine retention expiry (`controls/README.md`, decision 0D09).
+4. Name the emergency delegate and the protected-reporting recipient when operationally necessary (OQ-607).
+5. Decide whether to accept or further restrict the residual risk of research agents before production use (OQ-616).
+6. Make two deferred commercial-intent decisions (OQ-114, OQ-766).
+7. Decide on sensitivity: history wording in commit 23f06b4, author metadata in `.ros/events/events.jsonl`, and the example actor identifier in `docs/agent-provenance.md`.

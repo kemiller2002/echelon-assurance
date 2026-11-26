@@ -422,7 +422,7 @@ file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,9f1038f5de0f73c8
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
 file,context/ARCHITECTURE.md,597841df183adb8c
-file,context/CURRENT-STATE.md,3c348134835272dd
+file,context/CURRENT-STATE.md,aa73df7d126d7042
 file,context/DECISIONS.md,5c8440043f359a82
 file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
@@ -464,11 +464,12 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,68763a822684b2fd
 file,findings/clarity-and-edf-assessment.md,74da55a9a1555339
+file,findings/completion-report-2026-11-26.md,b5a6e0760a4a9a43
 file,findings/counsel-and-auditor-questions.md,7f89885de67d74ff
 file,findings/executive-findings.md,11008af910a33a02
 file,findings/financial-integrity-review.md,3b7bbdcfd4eb4a1b
 file,findings/reviews/RV-ASR-2026-11-26.md,a56282b9e4a6795e
-file,findings/validation-report.md,c8bce68cd77eb8f0
+file,findings/validation-report.md,7eaf58412ce105ab
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
 file,framework/policies/OUTPUT-POLICY.md,f8f0403b2ec80c1f

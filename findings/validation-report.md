@@ -219,4 +219,7 @@ reconciled on evidence (`findings/reviews/RV-ASR-2026-11-26.md`). The
 validator was hardened against ten corruption experiments, and regression tests
 corrupt the committed registers and require failure. Counts at the end of this
 reconciliation are in `context/CURRENT-STATE.md`; adversarial rounds and their
-stopping rationale are in the review record.
+stopping rationale are in the review record. Round 51 was the first round in
+which no reviewer found a material new finding; a separate verifier then checked
+the minor fixes made after it. The completion report is
+`findings/completion-report-2026-11-26.md`.
