@@ -145,7 +145,8 @@ Validation is run on the final head; CI runs the same checks on the PR. It cover
 ## 12. Governance status
 
 - **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is active.
-- **Verified completion** was attempted on the final commit. Its outcome is recorded in Praxis and in the PR #3 description.
+- **Verified completion is blocked.** At commit fdd0736, the claim on WI-ASR-FINAL succeeded (claimant claude-code, generation 1). Three validations ran under `praxis work validate-run` and passed: repository tests, `praxis validate` and the governed-record check. `praxis work complete-verified` then refused with `--authority FILE (or PRAXIS_COMPLETION_AUTHORITY) is required`. No completion authority with pinned verifier keys is provisioned in this repository (WI-PRAXIS-03). Creating one from an agent-held key would make the receipt self-attested, so it was not done. The claim was released, and WI-ASR-FINAL stays active.
+- **Merge is blocked.** The owner authorized merging subject to verified completion, and owner record 0D10 requires applicable Praxis verified completion and says not to merge incomplete work. PR #3 is therefore not merged. PR #1 and PR #2 stay open until PR #3 merges, so their content keeps a preserved home on `main`.
 - **Branch protection.** `main` is not protected: GitHub reports `protected: false`, and no rulesets apply (WI-ASR-03, OQ-700/OQ-761). Only the owner can apply rulesets.
 
 ## 13. Remaining external dependencies
@@ -161,7 +162,7 @@ All eleven gates, PG-01 to PG-11 in `registers/production-gates.csv`, are `not-m
 ## 15. Decisions needing the owner
 
 1. Apply rulesets on `main` requiring the assurance and Praxis checks (WI-ASR-03).
-2. Enable verified completion with pinned verifier keys (WI-PRAXIS-03), or accept plain completion for this initiative.
+2. **Merge blocker.** Provision a Praxis completion authority with pinned verifier keys (WI-PRAXIS-03) so that `work complete-verified` can run for WI-ASR-FINAL. Alternatively, record a decision that plain completion is acceptable for this initiative.
 3. Confirm the repository's interpretation that evidence records are excluded from routine retention expiry (`controls/README.md`, decision 0D09).
 4. Name the emergency delegate and the protected-reporting recipient when operationally necessary (OQ-607).
 5. Decide whether to accept or further restrict the residual risk of research agents before production use (OQ-616).
