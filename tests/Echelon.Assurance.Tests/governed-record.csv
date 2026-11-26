@@ -359,6 +359,7 @@ decisions,DF-ASR-2026-0D0E,9b746b71ce351607
 decisions,DF-ASR-2026-0D0F,80be8e9059eb5214
 decisions,DF-ASR-2026-0D10,6ee10af8b8adabad
 decisions,DF-ASR-2026-0D11,3daeb76c075dcf44
+decisions,DF-ASR-2026-0D12,18d9310125f8ab6a
 decisions,DF-ASR-2026-0E01,271b70a8ff6150b6
 decisions,DF-ASR-2026-3A1E,bf9d065d624b394d
 decisions,DF-ASR-2026-7B20,3855c01867ddf73f
@@ -414,7 +415,7 @@ file,CLAUDE.md,e401b9fc1ca10cc1
 file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,GEMINI.md,0fd756e53f9269f4
-file,HANDOFF.md,5bb1efb614ababbb
+file,HANDOFF.md,e75f9a582af69370
 file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,7691a8f95f0b9ffe
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
@@ -433,6 +434,7 @@ file,customer-assurance/README.md,bc3f1c2246e4790f
 file,customer-assurance/findings.md,e58e7215f380462b
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
+file,docs/decisions/DF-ASR-2026-0D12--completion-authority-delegated-plain-completion-accepted.md,b49524bc605901da
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,3a3211757f4894d5
 file,docs/decisions/DF-ASR-2026-7B20--small-team-approval-and-independence-rule.md,dc6bff23c6b698fe
@@ -467,9 +469,9 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,68763a822684b2fd
 file,findings/clarity-and-edf-assessment.md,896aa16bd483adb1
-file,findings/completion-report-2026-11-26.md,85c47980e52dd83f
+file,findings/completion-report-2026-11-26.md,4b0c8e76d574cc5e
 file,findings/counsel-and-auditor-questions.md,6011c21b8c890774
-file,findings/executive-findings.md,ff0cf864d8cd3251
+file,findings/executive-findings.md,c18a1599662ec4f4
 file,findings/financial-integrity-review.md,ff57b38bfb7f38c9
 file,findings/reviews/RV-ASR-2026-11-26.md,dfc3f3c744ba9c1b
 file,findings/validation-report.md,b66c3141c7e9dbd2
