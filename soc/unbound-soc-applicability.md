@@ -64,8 +64,9 @@ sources; it does not override them.
 
 ## 2. Would Unbound's services be relevant to user entities' ICFR?
 
-**Yes, strongly, once Unbound operates for real sponsors**
-`[authoritative]` reasoning applied to `[assumption]` facts.
+**Likely, once Unbound operates for real sponsors, if the operator is an
+entity separate from the sponsor (OQ-756)** `[auditor-interpretation]`;
+ICFR relevance is the sponsor auditor's judgment (OQ-754).
 
 **The test (AU-C 402.03, SRC-SOC-005).** A service is relevant to a user
 entity's audit when it affects how significant classes of transactions are:
@@ -140,7 +141,7 @@ auditor's judgment decides).
   entity's *processing commitments*, not user-entity control objectives over
   financial statement assertions. The AU-C 9402 reasoning still applies
   `[auditor-interpretation]`.
-- **Recommendation.** Plan a **SOC 1 Type 2** for the fund-accounting service
+- **Recommendation** (design target under decision 0D02; no examination is planned, DF-ASR-2026-0D0F). Plan a **SOC 1 Type 2** for the fund-accounting service
   and a **SOC 2 Type 2** for platform security. Both should share one control
   set and one evidence base, and preferably one service auditor and one
   period `[recommendation]`. Whether one firm can efficiently perform both,
@@ -227,7 +228,7 @@ Security common criteria for the Unbound system. Which legal entity is the
    - SPD-PLT-001 (no legal requirement; evidence engineering from day one);
    - XID-INV-008 (SOC 1 Type 2 when reliance or two or more user entities;
      no stand-alone Type 1 by default).
-2. **Plan two reports on one control and evidence base:**
+2. **Plan two reports on one control and evidence base** (if an examination is planned; reassessed under DF-ASR-2026-0D0F):
    - **SOC 1 Type 2** on the DAF fund-accounting and grant/fee processing
      service. Control objectives cover contributions, grants, fees,
      investments, fund balances and reporting, plus ITGC (access, change,

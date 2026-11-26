@@ -15,7 +15,7 @@ builds_on:
 
 > **Consolidation note (2026-11-25, `JR-ASR-2026-C001`).** PR #2 is merged into the consolidation branch, and every CA-* requirement is dispositioned in `requirements/source-dispositions.csv`.
 >
-> - **CA-PROV-03 is replaced** by managed immutable storage (proposed DF-ASR-2026-C002).
+> - **CA-PROV-03 is replaced** by managed immutable storage (DF-ASR-2026-C002, accepted).
 > - **The responsibility table in section 2 is superseded** by verified capabilities in `integration/capability-verification.csv`. Vigila has no runtime monitoring, Strata has no runtime layer, and Praxis attested completion is not enabled anywhere.
 > - **Broken references.** BND-06 and DDT-04 do not exist in echelon-due-diligence. They are corrected through WI-ASR-04.
 
@@ -124,5 +124,6 @@ not run). **Proposed** responsibilities are not capabilities.
 
 `SECURITY-AND-CONFIDENTIALITY.md` on the research branch records that the owner directed this
 repository to be private and that it is public. The organizational transparency policy (proposed)
-makes assurance research public by default. That conflict is an owner decision (OD-GOV-002); until it
-is made, this repository continues to follow public-repository rules.
+makes assurance research public by default. That conflict is an owner decision (OD-GOV-002); *(decided
+2026-11-25 by owner decision 5, DF-ASR-2026-0D05: public, limited to the
+permitted content classes)*.

@@ -293,7 +293,7 @@ controls,CTL-IAM-001,e8a8b343cdd15016
 controls,CTL-IAM-002,47fb4518fc84ce7b
 controls,CTL-IAM-003,f23d863df7e6da5e
 controls,CTL-IAM-004,d55997d8d46f4aba
-controls,CTL-IAM-005,a3aa66ffdd9dff82
+controls,CTL-IAM-005,55d78cffd604f69f
 controls,CTL-IAM-006,9212edefdfe7b5f1
 controls,CTL-IAM-007,91be291694189141
 controls,CTL-IAM-008,8ca675dd6881671d
@@ -331,7 +331,7 @@ decision_traceability,ODP-01,3d87b89553d969df
 decision_traceability,ODP-02,18813afb9dc4fa93
 decision_traceability,ODP-03,12491098c4b3e504
 decision_traceability,ODP-04,63f858f217e069ea
-decision_traceability,ODP-05,8ebd89ce4bb7b97d
+decision_traceability,ODP-05,67d96d811e783f1c
 decision_traceability,ODP-06,fb4b5eb2c2ac8bff
 decision_traceability,ODP-07,589850b6ba19098e
 decision_traceability,ODP-08,b93fcb59432730ba
@@ -428,7 +428,7 @@ file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
 file,controls/README.md,35d681996880f3ce
 file,customer-assurance/README.md,bc3f1c2246e4790f
-file,customer-assurance/findings.md,20d7d3aca1ff60ea
+file,customer-assurance/findings.md,857c97edf0ca59cb
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
@@ -449,9 +449,9 @@ file,economics/compliance-economics.md,9437358ab0d928c7
 file,economics/parameters.csv,87a09cc2a85a9852
 file,economics/v2/README.md,246e56a4b9a015d7
 file,economics/v2/activities.csv,39f5aa6208f50aa5
-file,economics/v2/alternatives.csv,38e2e9e7f576f097
+file,economics/v2/alternatives.csv,3c3e74ac889c14dc
 file,economics/v2/scenarios.csv,903367ec3db1afb1
-file,financial/finbc-unbound-map.csv,c479ead4d0057bad
+file,financial/finbc-unbound-map.csv,3d6d1e9537d82ef7
 file,financial/unbound-existing-assurance-inventory.md,c245f2f2197ed387
 file,financial/unbound-financial-controls.md,aef01399bfeb836d
 file,findings/challenge-passes/round1-domain.csv,d946fc095bb40804
@@ -462,12 +462,12 @@ file,findings/challenge-passes/round4-stopping-check.csv,9f89749accb6b95e
 file,findings/challenge-passes/round5-6-dispositions.csv,b3324e51262215ae
 file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
-file,findings/challenging-conventional-compliance.md,26b4c749a133bfdb
+file,findings/challenging-conventional-compliance.md,6775b0c6044fff37
 file,findings/clarity-and-edf-assessment.md,25756a5625dd8b69
 file,findings/counsel-and-auditor-questions.md,9c7ff142fd289dfd
 file,findings/executive-findings.md,e6c6f43e92b2ead0
-file,findings/financial-integrity-review.md,66519ca6ca391e9d
-file,findings/reviews/RV-ASR-2026-11-26.md,68a4f2200728f3a6
+file,findings/financial-integrity-review.md,697f545e441af219
+file,findings/reviews/RV-ASR-2026-11-26.md,4eade6b4f5af5420
 file,findings/validation-report.md,a542b230e8d1f1f8
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
@@ -512,7 +512,7 @@ file,requirements/README.md,bf7a0c418b406b69
 file,requirements/ai-governance-independent-validation.md,7c9bb9fad1beb3f7
 file,requirements/assurance-economics.md,e265ba4586a7e3b1
 file,requirements/challenge-review.md,5f0904cb867c772c
-file,requirements/continuous-assurance-requirements.md,ef6a468872e1bbb2
+file,requirements/continuous-assurance-requirements.md,14557a0b03b0507f
 file,requirements/continuous-security-testing.md,5d81ba0bb624debc
 file,requirements/executable-policy-and-continuous-evidence.md,0d845b77a06b91b2
 file,requirements/financial-integrity-by-construction.md,d7c711cf26a70801
@@ -544,7 +544,7 @@ file,schemas/work-adapter-request.schema.json,3e6e8b565abf2450
 file,schemas/work-adapter-result.schema.json,ce555e74b05b675f
 file,schemas/work-protocol.schema.json,725a1855c2e30d3c
 file,soc/soc-reporting-landscape.md,0151949f6a20c3f2
-file,soc/unbound-soc-applicability.md,fd11b8cf72e88ecb
+file,soc/unbound-soc-applicability.md,975f715631179358
 file,src/Echelon.Assurance.Cli/Echelon.Assurance.Cli.fsproj,b512aac6c08e03c4
 file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
@@ -558,10 +558,10 @@ file,src/Echelon.Assurance.Registers/Tco.fs,ad8aee70385975d4
 file,src/Echelon.Assurance.Registers/Traceability.fs,4d5747ee191d2e4a
 file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
-file,trust-center/customer-trust-center-specification.md,fe9b1d597fa4e425
+file,trust-center/customer-trust-center-specification.md,ed965c109bf3b9e9
 file,validation/assurance-system-resilience.md,ad483d54b9c41185
 file,validation/continuous-security-testing-specification.md,ff818cec8a1f6890
-file,validation/independent-validation-architecture.md,fd1d54f057378bed
+file,validation/independent-validation-architecture.md,d27a058ee08c1303
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43
 open_questions,OQ-100,5a235bf082c88204
 open_questions,OQ-101,018c707edccc7117
@@ -1197,7 +1197,7 @@ requirements,REQ-PEC-025,81dad372712fdc46
 requirements,REQ-PEC-026,94ae0226cfe10c9c
 requirements,REQ-PEC-027,621517704e87bd44
 requirements,REQ-PEC-028,e3f062a14923b0ff
-requirements,REQ-PENTEST-001,be4c852eba96208f
+requirements,REQ-PENTEST-001,d9f559ed9c63206f
 requirements,REQ-PENTEST-002,f72db3e3ed1c6afc
 requirements,REQ-PENTEST-003,3e304b80a9cd5e71
 requirements,REQ-PENTEST-004,5d32a912aa81266a
@@ -1563,7 +1563,7 @@ source_dispositions,ODP-01,bbcca0e9bf6ecd93
 source_dispositions,ODP-02,881b48bcb4dcaac5
 source_dispositions,ODP-03,35546bb4c17eab85
 source_dispositions,ODP-04,347acaf5188fef61
-source_dispositions,ODP-05,5027a1a0ec1f8ac1
+source_dispositions,ODP-05,8d8027cdb40d8ab9
 source_dispositions,ODP-06,c51e35033eeaa4ba
 source_dispositions,ODP-07,caefc17652716a2a
 source_dispositions,ODP-08,f9c3e0b83b48e999

@@ -22,7 +22,7 @@ security questionnaires become a lookup rather than a project.
 | Tier | Audience | Content | Gate |
 |---|---|---|---|
 | Public | Anyone | Security overview, policy summaries (not full text), subprocessor list, status/uptime, security.txt and vulnerability disclosure policy, SOC 3 report if obtained (SOC 3 is designed for general use) | None |
-| Prospect | Verified prospects | Full policy texts, control summaries by domain, pen-test **attestation letter** (scope, dates, tester, severity counts after remediation — not the report), insurance certificate, standard questionnaire answers (SIG Lite / CAIQ) | NDA click-through + identity verification |
+| Prospect | Verified prospects | Full policy texts, control summaries by domain, pen-test **attestation letter** (only if an external test is obtained; deferred under ODP-11) (scope, dates, tester, severity counts after remediation — not the report), insurance certificate, standard questionnaire answers (SIG Lite / CAIQ) | NDA click-through + identity verification |
 | Customer | Contracted customers and their auditors | SOC 1/SOC 2 reports (restricted-use: distribution limited to user entities and their auditors per the report's use restriction), bridge letters, CUEC list, data processing terms, incident notifications | Contract + named recipients; watermarked, logged downloads |
 | Bank partner | Financial-institution partners | Customer tier plus TPRM-specific artifacts: BCP/DR test summaries, vendor inventory for critical subservices, financial statements if required by contract | Contract; per-request approval |
 

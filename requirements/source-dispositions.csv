@@ -211,7 +211,7 @@ ODP-01,docs/decisions/owner-remaining-approvals-2026-11-25.md,,retain,BR-GOV-010
 ODP-02,docs/decisions/owner-review-direction-2026-11-25.md,,simplify,BR-GOV-004;BR-VAL-001;BR-VAL-002;BR-VAL-004;BR-GOV-017;BR-GOV-011;BR-ASR-003,No reviewer retainer; multiple-agent review and deterministic verification; no self-approval of material exceptions.
 ODP-03,docs/decisions/owner-review-direction-2026-11-25.md,,strengthen,BR-IAM-002;BR-ASR-005;BR-ASR-006,Architectural privileged-access safeguards; residual concentration documented; no custodian appointment now.
 ODP-04,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-GOV-013;BR-HR-002;BR-IAM-002;BR-ASR-008,"Roles, authority, activation and procedures defined; naming deferred."
-ODP-05,docs/decisions/owner-review-direction-2026-11-25.md,,strengthen,BR-FIN-020;BR-FIN-006,Sponsor-controlled flows; white-label as non-production functionality; activation gates for unresolved legal risk.
+ODP-05,docs/decisions/owner-review-direction-2026-11-25.md,,strengthen,BR-FIN-020;BR-FIN-006,"Sponsor-controlled flows; white-label built and tested in non-production, with production activation gated on resolution of CQ-5 and related legal questions (BR-FIN-020); activation gates for unresolved legal risk."
 ODP-06,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-LOG-001;BR-LOG-002;BR-ASR-008,Vigila retained as shared observability interfaces on managed infrastructure.
 ODP-07,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-APP-001;BR-APP-014,Thin Strata runtime with responsibility split.
 ODP-08,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-AI-004,Restricted research agents; continuous adversarial testing; residual risk not accepted.

@@ -231,7 +231,8 @@ effectiveness (RSK-040).
 |---|---|
 | P0–P1 | VAL-001..004, 009, 010, 011, 013, 014, 017, 018, 020, 024, 029, 030, 031 (VAL-014 moved from P2 in review pass 4: CTL-TEN-001 is a P1 control and daf-landscape gate G2 requires tenant-isolation tests before production) |
 | P2 | Add VAL-005, 006, 007, 008, 012, 015, 016, 019, 021, 022, 023, 025, 032 |
-| Only if an examination is planned (reassessed under DF-ASR-2026-0D0F; none planned now) | VAL-026 (external technical review of evidence machinery; deferred under 0D0F), VAL-027 (pen test incl. agents; deferred under ODP-11 — the need is reassessed against risk and actual obligations before material production activation, WI-EXT-04, PG-04, PG-10), then VAL-028 |
+| Before material production launch | VAL-027 (pen test incl. agents): deferred under ODP-11; the need is reassessed against risk and actual obligations before material production launch, whether or not an examination is planned (WI-EXT-04, PG-04, PG-10) |
+| Only if an examination is planned (reassessed under DF-ASR-2026-0D0F; none planned now) | VAL-026 (external technical review of evidence machinery; deferred under 0D0F), then VAL-028 |
 
 ## 8. Open items
 
