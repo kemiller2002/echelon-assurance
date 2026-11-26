@@ -101,7 +101,14 @@ let private merge root check =
         if not check then
             File.WriteAllText(Path.Combine(root, p.Register.Path), Csv.render (p.Register.Columns :: p.Merged)))
 
-    0
+    // With --check, fail when a merge would add rows or reports problems.
+    if
+        check
+        && plans |> List.exists (fun p -> p.Added > 0 || not (List.isEmpty p.Problems))
+    then
+        1
+    else
+        0
 
 let private roadmap root =
     let header, rows =
@@ -133,8 +140,16 @@ let private governedPath root =
     Path.Combine(root, "tests/Echelon.Assurance.Tests/governed-record.csv")
 
 /// Writes the governed-record snapshot; with --check, reports differences.
+let private repositoryCsvFiles (root: string) =
+    Directory.EnumerateFiles(root, "*.csv", SearchOption.AllDirectories)
+    |> Seq.map (fun p -> Path.GetRelativePath(root, p).Replace('\\', '/'), p)
+    |> Seq.filter (fst >> Governed.coversFile)
+    |> Seq.map (fun (rel, p) -> rel, File.ReadAllText p)
+    |> List.ofSeq
+
 let private governed root check =
     let loaded = loadAll root
+    let files = repositoryCsvFiles root
     let path = governedPath root
 
     if check then
@@ -148,7 +163,7 @@ let private governed root check =
             else
                 []
 
-        match Governed.differences committed loaded with
+        match Governed.differencesWith committed loaded files with
         | [] ->
             printfn "governed record current"
             0
@@ -156,7 +171,7 @@ let private governed root check =
             diffs |> List.iter (printfn "governed field changed: %s")
             1
     else
-        File.WriteAllText(path, Governed.render loaded)
+        File.WriteAllText(path, Governed.render loaded files)
         printfn "wrote %s" (Path.GetRelativePath(root, path))
         0
 

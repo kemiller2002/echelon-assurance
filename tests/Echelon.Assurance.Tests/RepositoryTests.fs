@@ -579,7 +579,16 @@ let ``governed fields match the committed governed record`` () =
             | _ -> None)
 
     Assert.NotEmpty committed
-    let diffs = Governed.differences committed loaded
+
+    let files =
+        Directory.EnumerateFiles(root, "*.csv", SearchOption.AllDirectories)
+        |> Seq.map (fun p -> Path.GetRelativePath(root, p).Replace('\\', '/'), p)
+        |> Seq.filter (fst >> Governed.coversFile)
+        |> Seq.map (fun (rel, p) -> rel, File.ReadAllText p)
+        |> List.ofSeq
+
+    Assert.NotEmpty files
+    let diffs = Governed.differencesWith committed loaded files
 
     Assert.True(
         List.isEmpty diffs,
@@ -701,3 +710,13 @@ let ``round 6 corruptions of any column change the governed record`` () =
             else
                 r))
     |> changes
+
+[<Fact>]
+let ``economics inputs are in the governed record`` () =
+    let path = "economics/v2/activities.csv"
+    let content = File.ReadAllText(Path.Combine(root, path))
+    let committed = Governed.full loaded [ path, content ]
+    let changed = [ path, content.Replace("prevention", "auditor-packaging") ]
+    Assert.NotEmpty(Governed.differencesWith committed loaded changed)
+    Assert.True(Governed.coversFile path)
+    Assert.False(Governed.coversFile "economics/v2/generated/results.csv")

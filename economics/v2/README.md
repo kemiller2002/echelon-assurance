@@ -48,7 +48,7 @@ carries its class in `activities.csv`.
 
 - **At N=1 the alternatives other than A7 are close.** Midpoints run USD 1.27M (A4) to 1.54M (A1); A7 is USD 2.12M. The ranges span about 3×, so no ranking at N ≤ 2 is reliable. A4 has the lowest midpoint at N=1 and N=2, with A3 within about 3%.
 - **At N=5 targeted automation (A5) has the lowest midpoint** under auditor reliance: USD 2.87M against about USD 3.09M (A3, A4) and USD 3.36M (A2). This is a base-case result that depends on reliance; it is not a decision threshold (ODP-09).
-- **A7 (full internal platform)** has the lowest midpoint only at large product counts under reliance.
+- **A7 (full internal platform)** is never the lowest midpoint at any modelled product count (at N=15, A5 is USD 6.41M against A7's 6.70M).
 - **A8 costs about USD 245k more than A4 over five years at N=1** (prevention USD 192k, financial integrity USD 34k, test infrastructure about USD 19k). The model counts the cost of prevention and testing automation but deliberately not its benefit (ECON-011).
 
 **Auditor non-reliance (S4) and the downside (S5):**
@@ -154,7 +154,7 @@ Five-year midpoints (USD, generated `generated/model.md` is authoritative):
 
 | Scenario | Alternative | N=1 | N=2 | N=5 | N=10 | N=15 |
 |---|---|---|---|---|---|---|
-| S9 no exam | A4 | 0.79M | 1.10M | 2.02M | 3.56M | 5.10M |
+| S9 no exam | A4 | 0.79M | 1.09M | 2.02M | 3.56M | 5.10M |
 | | A8 | 1.03M | 1.37M | 2.37M | 4.05M | 5.72M |
 | | A5 | 0.96M | 1.18M | 1.86M | 2.98M | 4.10M |
 | S10 partial reliance | A4 | 1.17M | 1.61M | 2.94M | 5.16M | 7.38M |

@@ -81,7 +81,7 @@ one (ODP-09).
 | Integration responsibilities assigned from READMEs and earlier assessments rather than executed verification | Technical | Capability matrix: Vigila absent; Strata has no runtime layer; Praxis provenance is self-reported |
 | A single human is the approver for every decision class, so independence rules collide | Human / Organizational | DF-ASR-2026-7B20; OQ-607, OQ-608 and OQ-800 |
 | Agents produce requirements faster than the owner can approve them, and proposals accumulate as "proposed" | Organizational | 18 proposed decisions awaiting approval in question dispositions |
-| External obligations are undetermined (auditor reliance, legal applicability), so designs hedge in prose instead of branching explicitly | Regulatory | 28 questions depend on an auditor and 21 on counsel |
+| External obligations are undetermined (auditor reliance, legal applicability), so designs hedge in prose instead of branching explicitly | Regulatory | 28 questions depend on an auditor and 21 on legal research (no counsel is engaged; prepared questions only, ODP-12) |
 | Cost estimates are not activity-based and not scaled by product | Financial | `economics/parameters.csv` (original) |
 
 ### Propagation (typed)

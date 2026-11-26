@@ -41,17 +41,42 @@ let snapshot (loaded: Loaded) : (string * string * string) list =
                 spec.Name, value spec.IdColumn, digest fields))
     |> List.sort
 
+/// Is a repository-relative CSV path an input outside the registers that the
+/// governed record must also cover (economics inputs, mappings)? Generated
+/// views, fragments, tests and Praxis registries are excluded.
+let coversFile (relative: string) =
+    let p = relative.Replace('\\', '/')
+    let registerPaths = Schema.registers |> List.map (fun s -> s.Path) |> set
+
+    p.EndsWith ".csv"
+    && not (registerPaths.Contains p)
+    && not (
+        [ "/generated/"; "/fragments/"; "/bin/"; "/obj/" ] |> List.exists p.Contains
+        || [ "tests/"; "registries/"; ".git/"; "node_modules/" ]
+           |> List.exists p.StartsWith
+    )
+
+/// Digest rows for covered input files (whole file, line endings normalized).
+let fileSnapshot (files: (string * string) list) =
+    files
+    |> List.filter (fst >> coversFile)
+    |> List.map (fun (path, content) -> "file", path.Replace('\\', '/'), digest (content.Replace("\r\n", "\n")))
+
+/// Combined snapshot: register records and covered input files.
+let full (loaded: Loaded) (files: (string * string) list) =
+    snapshot loaded @ fileSnapshot files |> List.sort
+
 /// Snapshot as CSV text.
-let render (loaded: Loaded) =
+let render (loaded: Loaded) (files: (string * string) list) =
     "register,id,digest\n"
-    + (snapshot loaded
+    + (full loaded files
        |> List.map (fun (r, i, d) -> sprintf "%s,%s,%s" r i d)
        |> String.concat "\n")
     + "\n"
 
 /// Differences between a committed snapshot and the current registers.
-let differences (committed: (string * string * string) list) (loaded: Loaded) =
-    let current = snapshot loaded |> set
+let differencesWith (committed: (string * string * string) list) (loaded: Loaded) (files: (string * string) list) =
+    let current = full loaded files |> set
     let previous = set committed
 
     let key (r, i, _) = r, i
@@ -62,3 +87,7 @@ let differences (committed: (string * string * string) list) (loaded: Loaded) =
         |> Set.toList
 
     changed |> List.map (fun (r, i) -> sprintf "%s %s" r i)
+
+/// Differences for register records only (files not supplied).
+let differences (committed: (string * string * string) list) (loaded: Loaded) =
+    differencesWith (committed |> List.filter (fun (r, _, _) -> r <> "file")) loaded []
