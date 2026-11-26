@@ -144,7 +144,7 @@ must come from elsewhere. [recommendation]
 
 ### 4.3 Characterisation
 
-1. **SOC 1 relevance is strong if Unbound operates a sponsor's DAF
+1. **SOC 1 relevance is likely if the operator is separate from the sponsor (OQ-756; the sponsor auditor's judgment, OQ-754) if Unbound operates a sponsor's DAF
    program ledger.** A SOC 1 (SSAE 18, AT-C 320) report addresses controls
    at a service organisation relevant to user entities' internal control
    over financial reporting; Unbound processes transactions whose output
@@ -160,8 +160,8 @@ must come from elsewhere. [recommendation]
    publicly claim SOC 2 (vendor-claim class), supporting a customer
    expectation. [customer-expectation, low confidence: claims are vendor
    marketing; no report reviewed]
-3. **Neither is required merely by the requirements.** Unbound's own open
-   decisions (SPD-PLT-001, XID-INV-008, SPD-ADV-003) leave timing to
+3. **Neither is required merely by the requirements.** Unbound's own decisions
+   (SPD-PLT-001, XID-INV-008, SPD-ADV-003; resolved and owner-approved in Unbound) leave timing to
    auditor reliance and contracts; "no universal launch rule". Without a
    SOC 1, the sponsor's external auditor would need to test Unbound's
    ITGCs and application controls directly (SPD-ADV-003). [open-question]

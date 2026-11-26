@@ -85,7 +85,7 @@ All twelve owner decision package items are decided, by two owner records of
 - internal multi-agent review instead of purchased independent review;
 - no counsel engagement now;
 - external testing deferred and reassessed before material production launch;
-- no additional custodian;
+- no additional custodian now;
 - continuous assurance prioritized without assuming auditor reliance;
 - no self-approval of material exceptions.
 

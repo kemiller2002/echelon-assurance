@@ -18,7 +18,7 @@ authoritative_references: [TSC CC6.1-CC6.3, 16 CFR 314.4(c)(1) and (c)(5), NIST 
 3. Every service and agent identity has a named human sponsor and an expiry or review date.
 
 ## 02 Privileged access
-1. No standing human administrative access to production. Privileged access is just-in-time, time-bound (default ≤ 4 hours), logged, and approved through the elevated-approval path (DF-ASR-2026-0D04): a separately credentialed technical verifier and an out-of-band alert. A second-person approval applies once a second person exists; until then the concentration is residual risk RSK-065 (ODP-03, DF-ASR-2026-0D0F).
+1. No standing human administrative access to production. Privileged access is just-in-time, time-bound (default ≤ 4 hours), logged, and approved by the owner under elevated human approval (DF-ASR-2026-0D04), with a separately credentialed technical verifier check and an out-of-band alert. A second-person approval applies once a second person exists; until then the concentration is residual risk RSK-065 (ODP-03, DF-ASR-2026-0D0F).
 2. Break-glass accounts are sealed, alert on use, and every use is reviewed within one business day.
 3. Privileged sessions on financial data or the evidence store are recorded.
 

@@ -135,9 +135,11 @@ questionnaire answers through CTL-GOV-012 claim linting.
    deterministic verification (VAL-040), while judgment controls cannot
    (OQ-803, answered); multi-agent review
    (BR-VAL-004) is used for internal development review.
-4. **Decision point**: if the auditor will not rely on Echelon-generated
-   evidence, buy a platform for the SaaS/cloud evidence layer
-   (economics §3).
+4. **Decision point** *(superseded by ODP-09 and TNT-18: no purchase is
+   authorized; evidence-collection automation is decided by purpose and
+   measured manual hours)*. Original text: if the auditor will not rely on
+   Echelon-generated evidence, buy a platform for the SaaS/cloud evidence
+   layer (economics §3).
 
 ## P4 — For external attestation
 
