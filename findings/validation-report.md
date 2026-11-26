@@ -12,7 +12,7 @@ journal: JR-ASR-2026-C001
 
 The following commands were run locally on the final head with the .NET 10 SDK
 (10.0.404). The same steps run in CI (`.github/workflows/assurance-validation.yml`).
-CI passed on the final head. It failed on one intermediate commit, ba8c2aa (an unquoted comma in two OT-02 rows broke CSV parsing; 5 of 93 tests and the validator failed), which was fixed sixteen seconds later by c346fa7.
+CI passed on c346fa7 and later pushed commits whose checks have completed; the final head is validated locally as recorded in the completion report. CI failed on one intermediate commit, ba8c2aa (an unquoted comma in two OT-02 rows broke CSV parsing; 5 of 93 tests and the validator failed), which was fixed sixteen seconds later by c346fa7.
 
 | Check | Command | Result |
 |---|---|---|

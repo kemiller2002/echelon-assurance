@@ -25,6 +25,11 @@ Items the brief introduced as organizational tenets:
   legally required, commercially necessary, or material uncertainty that
   cannot otherwise be resolved.
 
+The brief also restated ODP-07 as a thin Strata runtime with "no ORM". The
+owner record `owner-remaining-approvals-2026-11-25.md` says "avoid unnecessary
+ORM complexity"; the repository follows the brief's stricter wording and cites
+both.
+
 The brief also directed: reconciliation of all artifacts with bidirectional
 decision traceability; question dispositions with reason, role, trigger and
 blocking scope; a separately initialized multiple-agent review (A–F) and

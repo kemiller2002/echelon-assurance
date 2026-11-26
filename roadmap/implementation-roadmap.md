@@ -128,8 +128,11 @@ questionnaire answers through CTL-GOV-012 claim linting.
    means the controls in the agreed report scope, not the whole catalog.
    Review pass 6 found 65 controls had no `internal-independent` validation;
    VAL-025 now supports 94 controls; each carries VAL-025 (internal independent review). Under owner direction
-   DF-ASR-2026-0D0F no reviewer is contracted now, so these controls cannot reach
-   `Tested` until a reviewer exists (OQ-803, answered); multi-agent review
+   DF-ASR-2026-0D0F no reviewer is contracted now, so the internal-independent
+   exit criterion cannot be met until an organizationally separate reviewer
+   exists; executable controls can still reach `Tested` through protected
+   deterministic verification (VAL-040), while judgment controls cannot
+   (OQ-803, answered); multi-agent review
    (BR-VAL-004) is used for internal development review.
 4. **Decision point**: if the auditor will not rely on Echelon-generated
    evidence, buy a platform for the SaaS/cloud evidence layer

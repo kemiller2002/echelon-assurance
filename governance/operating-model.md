@@ -48,6 +48,8 @@ accountable role.
 
 ## What is eliminated, automated or exception-based
 
+This section applies the owner's guiding tenet that every manual compliance activity must justify its existence (`docs/decisions/owner-approved-foundations-2026-11-25.md`; recorded with tenets TNT-01 and TNT-04, DF-ASR-2026-0D0E).
+
 | Conventional activity | Treatment | Mechanism |
 |---|---|---|
 | Quarterly user access review spreadsheets | **Eliminated**; replaced by continuous comparison | BR-IAM-004 access as code plus drift detection; humans review exceptions only |

@@ -2,7 +2,7 @@ register,id,digest
 backlog,WI-AEGIS-01,e7e9d4b82c60346e
 backlog,WI-ARCA-01,159607434fd630ae
 backlog,WI-ARCA-02,43e5eb4c1b1b7fd1
-backlog,WI-ASR-01,c9c3486ab8552b5c
+backlog,WI-ASR-01,e257ffc93c5a5797
 backlog,WI-ASR-02,5da7a9bb12975666
 backlog,WI-ASR-03,b2dc19e0a1e61368
 backlog,WI-ASR-04,a8958d61899131b5
@@ -42,7 +42,7 @@ backlog,WI-PRAXIS-04,bf78c4631740de97
 backlog,WI-REGISTRY-01,4e1660d3d5b77bbf
 backlog,WI-SCALE-01,e4758b835a3eb069
 backlog,WI-SCALE-02,27fc333f55d7dee8
-backlog,WI-STRATA-01,16a2c9848d05e2bf
+backlog,WI-STRATA-01,e5a3a4a553da6d3c
 backlog,WI-STRATA-02,35fd4326bdcbf123
 backlog,WI-STRATA-04,63d6014a2742fd47
 backlog,WI-STRATA-05,b0418fddc7ed63fe
@@ -410,7 +410,7 @@ file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,PROJECT-CHARTER.md,e26e3ea1065587c0
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
-file,docs/charter/final-reconciliation-brief-2026-11-26.md,c8c03d0f192ec093
+file,docs/charter/final-reconciliation-brief-2026-11-26.md,390b9261bceac7bc
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,8fd9e2878505b201
@@ -662,7 +662,7 @@ policies,POL-13.02,dbcf7ba29c2232f6
 policies,POL-13.03,c16b172a46a1be20
 policies,POL-13.04,4a2e228f5dc44b71
 policies,POL-13.05,8684b3af2d195747
-production_gates,PG-01,fdf245788961a0a6
+production_gates,PG-01,12aa47504c0afb32
 production_gates,PG-02,1082155c22ec5835
 production_gates,PG-03,a92f0ead5b9eff03
 production_gates,PG-04,4f75772a971f17e3
@@ -868,7 +868,7 @@ question_dispositions,OQ-756,c47c4420c308e291
 question_dispositions,OQ-757,b0c980c23ecdea56
 question_dispositions,OQ-758,060a94f5bea36a0d
 question_dispositions,OQ-759,6693ddce9ba0f830
-question_dispositions,OQ-760,65a80ab06b784df8
+question_dispositions,OQ-760,eb8b646b72515367
 question_dispositions,OQ-761,e7a51b2a831b910d
 question_dispositions,OQ-762,0ad00e9be5df0904
 question_dispositions,OQ-763,1e7daf506da69a94
@@ -877,14 +877,14 @@ question_dispositions,OQ-765,591d5922f0887239
 question_dispositions,OQ-766,02da27fd6efdfa6a
 question_dispositions,OQ-800,71c49ea289f285ef
 question_dispositions,OQ-801,d48c235d7babfda1
-question_dispositions,OQ-802,cad3ab03bb1c2af1
-question_dispositions,OQ-803,78765a489428603d
+question_dispositions,OQ-802,39def4808fd85f76
+question_dispositions,OQ-803,d4d3513f756f7f4f
 question_dispositions,OQ-804,2cb43b2fa9f43490
 question_dispositions,OQ-805,b145b896814f45c7
 question_dispositions,OQ-806,8e9c950b8f17090e
 question_dispositions,OQ-807,3d5f4c9457dca91b
 question_dispositions,OQ-808,b2bca54d9bf2cb0f
-question_dispositions,OQ-809,bea8f628f61f8e6b
+question_dispositions,OQ-809,19240196577826af
 requirements,REQ-AIGBC-001,5218dcdc4ae33ad6
 requirements,REQ-AIGBC-002,56cc1b8d82f0bfd3
 requirements,REQ-AIGBC-003,8c67b58088c73714
