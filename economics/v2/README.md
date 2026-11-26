@@ -150,8 +150,9 @@ product-count threshold** gate investment. The originals are preserved (v1 in
   not a separate model: the model has no customer-count dimension, and
   customer-mandated tests or audit-rights assessments are not modelled. All
   exclude a contracted reviewer; S10 and S11 include external technical
-  validation of the assurance machinery, which an examiner relying on system
-  evidence would need. Break-even N is not reported for these scenarios.
+  validation of the assurance machinery on the assumption that an examiner
+  relying on system evidence would require it; under DF-ASR-2026-0D11 (OQ-612)
+  such review is conditional and internal validation comes first. Break-even N is not reported for these scenarios.
 - **Shared observability** (Vigila, ODP-06) is charged identically to every
   alternative (ACT-114..116), so it changes totals but not rankings.
 

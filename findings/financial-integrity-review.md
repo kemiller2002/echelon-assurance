@@ -83,7 +83,7 @@ Everything here is design. No bank, processor, partner or custodian agreement ex
 - **Proposed interpretation [AS]:**
   - In F7 the bank's customer is the sponsor, not Echelon. Echelon is a fourth party to the bank, and its exposure is contractual through the sponsor's ODFI agreement (OQ-757).
   - In F12, a bank (or bank subsidiary) contracting directly with Echelon for DAF technology and servicing would make Echelon a candidate bank service provider. Its services could then be examined by the bank's regulator.
-  - This contradicts the FIN-BC disposition "no assumed ... direct bank service relationship" (OQ-205) and must be escalated.
+  - This contradicted the earlier FIN-BC disposition "no assumed ... direct bank service relationship" (OQ-205). The owner has since approved supporting direct bank relationships behind activation gates (OQ-205, DF-ASR-2026-0D11). The legal question (CQ-5) and the contracting structure remain pending, and production activation stays gated (BR-FIN-020, PG-02).
 - **Facts that change this:**
   - which entity signs (bank, bank holding company affiliate, or a separate charity affiliated with the bank);
   - whether the services are of the kind 1867(c) reaches (data processing, recordkeeping);

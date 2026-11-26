@@ -130,6 +130,8 @@ The adversarial challenge ran in rounds 2–51, all recorded in the same review 
 
 **Round 51 found no material finding in any slice.** A separate verifier then checked the minor fixes made after round 51 and found nothing material. Remaining coverage limits are stated there: some cross-repository claims could not be re-checked locally.
 
+**After DF-ASR-2026-0D11.** The owner's question-resolutions record reopened the review. Round 52 (three slices) found one material finding. Round 53 (five slices, full coverage) found five, all in the reconciliation text or the review status. All are fixed. The stopping condition (a round with no material finding) is not yet met again for the reconciled state; see the review record.
+
 ## 11. Validation results
 
 Validation is run on the final head; CI runs the same checks on the PR. It covers:
