@@ -10,7 +10,7 @@ date: 2026-11-26
 
 ## Context
 
-Owner record DF-ASR-2026-0D10 requires the applicable Praxis verified completion. `praxis work complete-verified` needs a completion authority with pinned verifier keys, and none is provisioned (WI-PRAXIS-03). PR #3 was merged into `main` (9ab2b00) on the owner's direct instruction, without verified completion.
+Owner record DF-ASR-2026-0D10 requires the applicable Praxis verified completion. `praxis work complete-verified` needs a completion authority with pinned verifier keys, and none is provisioned (WI-PRAXIS-03). PR #3 was merged into `main` (9ab2b00) on the owner's direct instruction, without verified completion. The instruction was "Merge please", given in another session's chat at about 12:30Z on 2026-11-26 and relayed by that session. It came after the PR #3 description listed the merge as blocked on WI-PRAXIS-03, that is, on a completion authority or a record that plain completion is acceptable. This record treats it as the owner's acceptance of merging PR #3 without a Praxis completion authority. WI-PRAXIS-03 stays open for later merges.
 
 The owner was asked to either provision an authority or record that plain completion is acceptable. The owner delegated the decision.
 
