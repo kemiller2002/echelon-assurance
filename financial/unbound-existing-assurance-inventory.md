@@ -144,8 +144,7 @@ must come from elsewhere. [recommendation]
 
 ### 4.3 Characterisation
 
-1. **SOC 1 relevance is likely if the operator is separate from the sponsor (OQ-756; the sponsor auditor's judgment, OQ-754) if Unbound operates a sponsor's DAF
-   program ledger.** A SOC 1 (SSAE 18, AT-C 320) report addresses controls
+1. **If Unbound operates a sponsor's DAF program ledger, SOC 1 relevance is likely where the operator is separate from the sponsor (OQ-756; the sponsor auditor's judgment, OQ-754).** A SOC 1 (SSAE 18, AT-C 320) report addresses controls
    at a service organisation relevant to user entities' internal control
    over financial reporting; Unbound processes transactions whose output
    the sponsor's statements depend on. Unbound itself tags 58 of 79

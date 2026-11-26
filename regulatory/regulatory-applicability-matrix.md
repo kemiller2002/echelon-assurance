@@ -48,7 +48,8 @@ production enterprise, triggered by the first real donor record or money movemen
 `legal` (binds by statute/regulation once facts occur) · `contractual` (binds once
 a contract or network-rule participation exists; listed before signature when
 the term is effectively unavoidable) · `framework-selected` (here: **proposed**
-for selection — no decision record exists) · `customer-expectation` · `voluntary`
+for selection unless an owner decision record selects it, for example decisions
+0D02 and 0D03 for SOC design targets) · `customer-expectation` · `voluntary`
 · `not-applicable` (with trigger) · `undetermined` (needs an open question).
 
 ## 3. The GLBA question (the contested point)
