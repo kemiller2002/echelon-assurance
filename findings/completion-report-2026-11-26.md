@@ -7,7 +7,7 @@ created: 2026-11-26
 
 # Completion report: final assurance reconciliation (2026-11-26)
 
-This report covers the brief summarized in `docs/charter/final-reconciliation-brief-2026-11-26.md`, applied to the owner records `docs/decisions/owner-review-direction-2026-11-25.md` (DF-ASR-2026-0D0F) and `docs/decisions/owner-remaining-approvals-2026-11-25.md` (DF-ASR-2026-0D10).
+This report covers the brief summarized in `docs/charter/final-reconciliation-brief-2026-11-26.md`, applied to the owner records `docs/decisions/owner-review-direction-2026-11-25.md` (DF-ASR-2026-0D0F) and `docs/decisions/owner-remaining-approvals-2026-11-25.md` (DF-ASR-2026-0D10). It also covers the later owner record `docs/decisions/owner-question-resolutions-2026-11-26.md` (DF-ASR-2026-0D11), which approved internal design resolutions for 73 questions.
 
 Nothing in this repository is claimed to be operating, effective, compliant, certified or attested. Every control is `Designed`. The review below was performed by Echelon-controlled AI agents. It is structured internal review, not organizational independence, legal advice or attestation.
 
@@ -30,6 +30,7 @@ All twelve package items, plus the tenet items, are traced in both directions in
 | ODP-11 | 0D0F | Continuous internal testing is mandatory. External testing is reassessed before a material production launch (BR-VUL-012, PG-04). |
 | ODP-12 | 0D0F | No legal engagement. Primary-source research and prepared questions only (`findings/counsel-and-auditor-questions.md`). Internal work is never presented as legal opinion. |
 | OT-01 / OT-02 | 0D10 / 0D0F | Evidence by construction (TNT-17, BR-ASR-012). External services are not the default (TNT-18). |
+| Question resolutions | 0D11 | 71 previously open questions are answered by approved internal design resolutions (OQ-705 and OQ-708 were already closed). Architectural decision, requirements definition, implementation verification and external acceptance are tracked separately; only the architectural decision is resolved. The auditor-reliance questions are grouped under OQ-500. Defining requirements for the resolutions is WI-ASR-15. |
 
 ## 2. Final counts
 
@@ -44,9 +45,10 @@ These are taken from the registers:
 - 41 validation procedures
 - 35 evidence types
 - 115 questions
-- 63 work items
+- 64 work items
 - 11 production gates
 - 14 decision-traceability items
+- 26 decisions in the decision register
 - 380 regulatory requirement rows
 
 ## 3–4. Changes to the baseline, and disposition of sources
@@ -69,29 +71,29 @@ No mandatory obligation was removed (`requirements/source-dispositions.csv`).
 
 ## 5. Outstanding questions by blocking category
 
-`registers/question-dispositions.csv` records 96 open, 17 answered and 2 superseded questions. Every open question has a reason it is unresolved, the lowest-cost resolution, a responsible role, a trigger and a blocking scope.
+`registers/question-dispositions.csv` records 25 open, 88 answered and 2 superseded questions. Owner record DF-ASR-2026-0D11 answered 71 of the previously open questions at the level of internal design. Their requirements definition, implementation verification and external acceptance remain pending and are tracked per question (external acceptance pending for most; the external parties are named). Every open question has a reason it is unresolved, the lowest-cost resolution, a responsible role, a trigger and a blocking scope.
 
 Open questions by blocking tier:
 
 | Blocking tier | Open questions |
 |---|---|
 | Requirements finalization | 0 |
-| Implementation | 15 |
-| Production launch | 40 |
-| External examination | 33 |
-| None | 8 |
+| Implementation | 2 |
+| Production launch | 12 |
+| External examination | 9 |
+| None | 2 |
 
 Open questions by dependency:
 
 | Depends on | Open questions |
 |---|---|
-| Auditor | 28 |
-| Legal research | 21 |
-| Implementation | 19 |
-| Customer | 16 |
-| Vendor or insurer | 6 |
+| Customer | 8 |
+| Implementation or deployment facts | 5 |
+| Auditor | 4 |
 | Future standard | 4 |
-| Deferred owner decision | 2 |
+| Vendor or insurer | 4 |
+
+Answered questions whose implementation verification or external acceptance is still pending continue to gate production: the validator requires every such production-tier question to be cited by a production gate, and no gate can be met while a cited question has a pending dimension.
 
 ## 6. Economic findings
 
@@ -116,7 +118,7 @@ Requirements that depend on these capabilities are designed but not enforced (RS
 
 ## 8. Implementation backlog
 
-`roadmap/backlog.csv` has 63 items: 57 proposed, 1 in progress, 4 done and 1 withdrawn. Each item records its phase, repository, requirements, dependencies, acceptance criteria, validation method, evidence requirements, blockers and blocking scope. Every live baseline requirement has a work item. No other repository was modified.
+`roadmap/backlog.csv` has 64 items: 58 proposed, 1 in progress, 4 done and 1 withdrawn. Each item records its phase, repository, requirements, dependencies, acceptance criteria, validation method, evidence requirements, blockers and blocking scope. Every live baseline requirement has a work item. No other repository was modified.
 
 ## 9. Multiple-agent review (A–F)
 
@@ -137,14 +139,14 @@ Validation is run on the final head; CI runs the same checks on the PR. It cover
 - currency of the generated views (trace, roadmap, econ, tco)
 - the governed-record check
 - Fantomas
-- 95 tests, including regression tests that corrupt committed registers and fixtures and require failure
+- 96 tests, including regression tests that corrupt committed registers and fixtures and require failure
 - Praxis validation
 
 **CI history.** CI failed twice on intermediate commits, ba8c2aa and 5ca1af2. Both were fixed (`findings/validation-report.md`).
 
 ## 12. Governance status
 
-- **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is active.
+- **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is active. Owner record DF-ASR-2026-0D11 directs validating the exact final commit under Praxis before merge and approves enabling verified completion in scope (OQ-704); enabling it is WI-PRAXIS-03.
 - **Verified completion is blocked.** At commit fdd0736, the claim on WI-ASR-FINAL succeeded (claimant claude-code, generation 1). Three validations ran under `praxis work validate-run` and passed: repository tests, `praxis validate` and the governed-record check. `praxis work complete-verified` then refused with `--authority FILE (or PRAXIS_COMPLETION_AUTHORITY) is required`. No completion authority with pinned verifier keys is provisioned in this repository (WI-PRAXIS-03). Creating one from an agent-held key would make the receipt self-attested, so it was not done. The claim was released, and WI-ASR-FINAL stays active.
 - **Merge is blocked.** The owner authorized merging subject to verified completion, and owner record 0D10 requires applicable Praxis verified completion and says not to merge incomplete work. PR #3 is therefore not merged. PR #1 and PR #2 stay open until PR #3 merges, so their content keeps a preserved home on `main`.
 - **Branch protection.** `main` is not protected: GitHub reports `protected: false`, and no rulesets apply (WI-ASR-03, OQ-700/OQ-761). Only the owner can apply rulesets.
@@ -157,14 +159,13 @@ No external engagement or expenditure is authorized. Under DF-ASR-2026-0D0F, any
 
 ## 14. Production activation blockers
 
-All eleven gates, PG-01 to PG-11 in `registers/production-gates.csv`, are `not-met`. Each lists its required evidence and the requirements, controls, questions, risks and work items it depends on. The 40 open production-launch questions also block activation. No production capability is activated.
+All eleven gates, PG-01 to PG-11 in `registers/production-gates.csv`, are `not-met`. Each lists its required evidence and the requirements, controls, questions, risks and work items it depends on. The 12 open production-launch questions also block activation, as do the 28 answered production-launch questions whose requirements definition, implementation verification or external acceptance is pending (DF-ASR-2026-0D11 resolved only their design). No production capability is activated.
 
 ## 15. Decisions needing the owner
 
 1. Apply rulesets on `main` requiring the assurance and Praxis checks (WI-ASR-03).
 2. **Merge blocker.** Provision a Praxis completion authority with pinned verifier keys (WI-PRAXIS-03) so that `work complete-verified` can run for WI-ASR-FINAL. Alternatively, record a decision that plain completion is acceptable for this initiative.
 3. Confirm the repository's interpretation that evidence records are excluded from routine retention expiry (`controls/README.md`, decision 0D09).
-4. Name the emergency delegate and the protected-reporting recipient when operationally necessary (OQ-607).
+4. Name the emergency delegate and the protected-reporting recipient when operationally necessary. Under DF-ASR-2026-0D11 (OQ-607) the owner retains reserved authority until formal delegation; actual legal signatories are pending.
 5. Decide whether to accept or further restrict the residual risk of research agents before production use (OQ-616).
-6. Make two deferred commercial-intent decisions (OQ-114, OQ-766).
-7. Decide on sensitivity: history wording in commit 23f06b4, author metadata in `.ros/events/events.jsonl`, and the example actor identifier in `docs/agent-provenance.md`.
+6. Decide on sensitivity: history wording in commit 23f06b4, author metadata in `.ros/events/events.jsonl`, and the example actor identifier in `docs/agent-provenance.md`.

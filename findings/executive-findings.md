@@ -35,10 +35,10 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
 | Requirements | 189 IDs in 9 documents, 102 registered; heavy duplication (identity ×5, exceptions ×4, status ladder ×4) | `requirements/baseline.csv`: 117 baseline requirements, each with tenet, policy, control objective, risk, basis, owner, enforcement class, automation target, validation, triggers, evidence, failure behavior, residual risk, status, external dependencies, cost and disposition |
 | Dispositions | None | `requirements/source-dispositions.csv` (222 items): 149 consolidate, 36 retain, 16 strengthen, 13 simplify, 5 replace, 2 defer, 1 remove (editorial) |
 | Hierarchy | Implicit | 18 tenets → 84 policy entries → 121 controls → 117 baseline requirements → enforcement, validation (41 procedures) and evidence (35 types); generated traceability matrix; 11 production activation gates (`registers/production-gates.csv`) |
-| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action, and for every open question the reason it is unresolved, the responsible role and the resolution trigger; none block requirements finalization; 15 block implementation, 40 production launch and 33 external examination |
+| Questions | 113 rows; statuses partly wrong | 115 rows, each with classification, blocking tier, lowest-cost resolution and next action, and for every open question the reason it is unresolved, the responsible role and the resolution trigger; none block requirements finalization. After owner record DF-ASR-2026-0D11, 25 remain open (2 block implementation, 12 production launch, 9 external examination), and each question records its architectural decision, requirements definition, implementation verification and external acceptance separately |
 | Capabilities | Responsibilities assigned from READMEs and earlier assessments | `integration/capability-verification.csv`: 27 systems; tests executed for 5 (the Praxis run timed out before its attested-completion tests, so Praxis is partially tested) |
 | Economics | Five scenarios, one product, baseline not separated | Activity-based v2: 8 alternatives × 1–15 products × 13 scenarios (including the ODP-09 no-examination, partial-reliance, full-reliance and customer-specific cases), cost by evidence purpose, marginal cost; v1 preserved |
-| Roadmap | Narrative | `roadmap/backlog.csv`: 63 work items (62 live, 1 withdrawn), dependency-ordered across 15 named repositories, a placeholder for the observability owner repository, and owner and managed-service actions; every live baseline requirement has a work item |
+| Roadmap | Narrative | `roadmap/backlog.csv`: 64 work items (63 live, 1 withdrawn), dependency-ordered across 15 named repositories, a placeholder for the observability owner repository, and owner and managed-service actions; every live baseline requirement has a work item |
 
 ## 2. Most important findings
 
@@ -71,9 +71,9 @@ updated: 2026-11-25 (assurance consolidation, journal JR-ASR-2026-C001; v1.1.0 i
    - Owner capacity, rather than cash, is likely the binding constraint. No external consulting budget is authorized.
 7. **Independence is the structural constraint.** With one human, organizational independence is unavailable. Technical separation (separate verifier identity) is designed, but it is not organizational independence. Eight internal-independent validation procedures have no independent performer today, and owner-administered alerts and reconciliation detect failures but not owner action. Under owner direction DF-ASR-2026-0D0F no fractional reviewer is engaged now; internal multi-agent review with deterministic verification is used for development review, and `Tested` rests on protected deterministic verification (VAL-040, technically separated) for executable controls. Multiple-agent review (VAL-041) is approved for development review only and never supports `Tested`, so judgment controls cannot reach `Tested` until a technically separated or organizational validator exists. Technical separation is not organizational independence and is never described as such; a stakeholder who requires organizational independence (an examiner, a bank partner) is told so (ODP-02).
 8. **Questions.** No question was falsely closed:
-   - 28 depend on the auditor, 21 on legal research (no counsel is engaged; prepared questions only, ODP-12) and 16 on customers.
-   - 17 are answered, 16 by owner decision and one (OQ-807) by implementation evidence; 2 are superseded; 2 owner decisions on commercial intent are deferred (OQ-114, OQ-766).
-   - None blocks requirements finalization. 96 remain open, with their external dependencies preserved.
+   - Owner record DF-ASR-2026-0D11 (2026-11-26) approved internal design resolutions for 73 questions, 71 of them previously open. It did not resolve their requirements definition, implementation verification or external acceptance; those are tracked separately in `registers/question-dispositions.csv`, and external acceptance remains pending for most of them (auditor, legal, customer and vendor dependencies preserved).
+   - 88 are answered (87 by owner decision, one, OQ-807, by implementation evidence); 2 are superseded; 25 remain open: 8 depend on customers, 5 on implementation or deployment facts, 4 on the auditor, 4 on future standards and 4 on vendors or insurers.
+   - None blocks requirements finalization.
 
 ## 3. Owner decisions and what remains
 
@@ -103,6 +103,8 @@ All twelve owner decision package items are decided, by two owner records of
 - a new tenet, evidence by construction (TNT-17).
 
 Both are reconciled into the baseline, registers, economics and roadmap.
+
+**DF-ASR-2026-0D11** (2026-11-26): internal design resolutions approved for 73 questions; verification dimensions tracked separately; listed questions kept open until evidence exists; validate the exact final commit under Praxis before merge. Defining requirements for the approved resolutions is WI-ASR-15.
 
 **Remaining owner actions:**
 

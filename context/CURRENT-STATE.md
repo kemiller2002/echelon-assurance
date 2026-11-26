@@ -8,7 +8,7 @@ Updated: 2026-11-26
 - Repository is public; owner decision 0D05 limits it to public research,
   policies, control objectives, methodology and sanitized results.
 - Praxis 3.25.0 installed 2026-11-25 (`./praxis validate` passes); platform rulesets not yet applied (owner action).
-- Register tooling is F# (`assurance` CLI, 95 tests) per owner decision 0D06.
+- Register tooling is F# (`assurance` CLI, 96 tests) per owner decision 0D06.
 - Existing assurance work elsewhere (read-only inputs):
   - Unbound: `requirements/governance/` (SOC 2 readiness directive `SOC2-001…036`,
     master enterprise control matrix `UNB-CTRL-*`, specific executable controls
@@ -41,10 +41,10 @@ open questions in `registers/open-questions.csv`. See
 
 Registers after the final reconciliation (2026-11-26): 18 tenets, 117
 baseline requirements, 222 source dispositions, 121 controls, 41 validation
-procedures, 115 questions with dispositions (96 open, 17 answered, 2
-superseded), 27 systems assessed (5 with executed tests), 63 backlog work items, 11 production
+procedures, 115 questions with dispositions (25 open, 88 answered, 2
+superseded, after owner record DF-ASR-2026-0D11), 27 systems assessed (5 with executed tests), 64 backlog work items, 11 production
 activation gates (all `not-met`), 14 owner decision traceability rows, 97
-customer questions, 25 decisions, 66 risks. PR #1 and PR #2 content is consolidated on branch
+customer questions, 26 decisions, 66 risks. PR #1 and PR #2 content is consolidated on branch
 `claude/echelon-assurance-consolidation-jygy23`.
 
 ## Claims status
