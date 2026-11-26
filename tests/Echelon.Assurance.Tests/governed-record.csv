@@ -96,7 +96,7 @@ baseline,BR-ASR-007,6ab111bc92444c50
 baseline,BR-ASR-008,88dceb60e04071a0
 baseline,BR-ASR-009,62eb2452a4a40837
 baseline,BR-ASR-010,ac17ffd42b700532
-baseline,BR-ASR-011,46bfa476a114c100
+baseline,BR-ASR-011,d2e91fd7f9e536c0
 baseline,BR-ASR-012,162d99120f43ee2e
 baseline,BR-BCR-001,48835becacc2899f
 baseline,BR-CUS-001,4a1ca50f62b5cd2b
@@ -124,7 +124,7 @@ baseline,BR-FIN-016,7d0d7692058b4ebf
 baseline,BR-FIN-017,1e089e845da06de3
 baseline,BR-FIN-018,edc5aa047376bde5
 baseline,BR-FIN-019,4dd0ebe704e27095
-baseline,BR-FIN-020,51ceb7e428f5b877
+baseline,BR-FIN-020,15b46725c4e1558f
 baseline,BR-FIN-021,4cd5259397000fe1
 baseline,BR-FIN-022,40106428896dcb7d
 baseline,BR-FIN-023,179a97a316904fbb
@@ -250,7 +250,7 @@ controls,CTL-CUS-002,fa8704851ea61b05
 controls,CTL-CUS-003,cfe5b47727d35af0
 controls,CTL-CUS-004,47008af1218b220b
 controls,CTL-DAT-001,c78f600a6ecf6238
-controls,CTL-DAT-002,f26131a2fda66a33
+controls,CTL-DAT-002,31280f216db58d24
 controls,CTL-DAT-003,3884ecb7cab1d262
 controls,CTL-DAT-004,95a09d952a2bebb4
 controls,CTL-END-001,5f99b5d6f597332b
@@ -308,7 +308,7 @@ controls,CTL-LOG-003,58e10889ddae2e66
 controls,CTL-NET-001,972c4603ccb63acb
 controls,CTL-NET-002,d1a7f505d3073a52
 controls,CTL-SDL-001,f870a9dc09c638b4
-controls,CTL-SDL-002,d872ffec1a4d2dd8
+controls,CTL-SDL-002,d8fe5dcd8d87a077
 controls,CTL-SDL-003,2b6c86dae3f6e2ac
 controls,CTL-SDL-004,be376b269291d7d7
 controls,CTL-SDL-005,822b7073dbfe448e
@@ -418,8 +418,8 @@ file,HANDOFF.md,0360e7138952a2ed
 file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,d98097165f28b4e7
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
-file,ai-governance/ai-governance-model.md,38e19697fd871e1a
-file,architecture/evidence-architecture.md,c76186165970aa92
+file,ai-governance/ai-governance-model.md,c9f1b3f546f8b8b7
+file,architecture/evidence-architecture.md,78c75a5512633f01
 file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,9f1038f5de0f73c8
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
@@ -428,7 +428,7 @@ file,context/CURRENT-STATE.md,4002919529273517
 file,context/DECISIONS.md,5c8440043f359a82
 file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
-file,controls/README.md,e4c91713ef502b8d
+file,controls/README.md,f6d20c43781cb00e
 file,customer-assurance/README.md,bc3f1c2246e4790f
 file,customer-assurance/findings.md,343ba2a99ae8fa86
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
@@ -454,9 +454,9 @@ file,economics/v2/README.md,9ef28a3b5b45a543
 file,economics/v2/activities.csv,39f5aa6208f50aa5
 file,economics/v2/alternatives.csv,3c3e74ac889c14dc
 file,economics/v2/scenarios.csv,903367ec3db1afb1
-file,financial/finbc-unbound-map.csv,7e4e80c2f5f5d5bf
-file,financial/unbound-existing-assurance-inventory.md,7d1bec4423b3f74e
-file,financial/unbound-financial-controls.md,092be7c1d857f182
+file,financial/finbc-unbound-map.csv,1c1e7b36976aae5b
+file,financial/unbound-existing-assurance-inventory.md,540c7228e50d012e
+file,financial/unbound-financial-controls.md,d0a7e1f674e75aa6
 file,findings/challenge-passes/round1-domain.csv,d946fc095bb40804
 file,findings/challenge-passes/round1-structure.csv,465a69f09654cc4c
 file,findings/challenge-passes/round2-verification.csv,34310ef07ab728c7
@@ -468,7 +468,7 @@ file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,68763a822684b2fd
 file,findings/clarity-and-edf-assessment.md,74da55a9a1555339
 file,findings/completion-report-2026-11-26.md,08895de8e2d8178c
-file,findings/counsel-and-auditor-questions.md,7f89885de67d74ff
+file,findings/counsel-and-auditor-questions.md,2f0db3b76184079b
 file,findings/executive-findings.md,34c93639fb6a60d6
 file,findings/financial-integrity-review.md,3b7bbdcfd4eb4a1b
 file,findings/reviews/RV-ASR-2026-11-26.md,a56282b9e4a6795e
@@ -488,7 +488,7 @@ file,global.json,b48d6da8fa62c0da
 file,governance/operating-model.md,09c42e4dea8a37ff
 file,integration/capability-findings.md,c5b68d9d5c40aa12
 file,integration/echelon-integration-matrix.md,babd05395746f435
-file,integration/proposed-changes.md,934bdfb05351b6c1
+file,integration/proposed-changes.md,8bdad6e82b0c32fe
 file,methodology/identifiers.md,1a70739a1118e343
 file,methodology/research-methodology.md,50096ce4322b2e32
 file,methodology/review-protocol.md,d26aea16300b8ac2
@@ -508,7 +508,7 @@ file,policies/drafts/POL-11-ai-and-autonomous-systems.md,eb296b808e34473a
 file,policies/drafts/POL-12-financial-operations-integrity.md,eb10e6e6d3e957c6
 file,policies/drafts/POL-13-customer-operations.md,f551e29882feb7e0
 file,policies/policy-inventory.md,c74ee7381b270eab
-file,policy-as-code/policy-as-code-specification.md,2b4471ce6f68e58d
+file,policy-as-code/policy-as-code-specification.md,2612b9d6613dc2c0
 file,policy-as-code/tool-evaluation.md,824f4b2370f04db7
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
 file,regulatory/regulatory-applicability-matrix.md,f473c2dcc2efe54c
@@ -563,9 +563,9 @@ file,src/Echelon.Assurance.Registers/Traceability.fs,0919396c87490154
 file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
 file,trust-center/customer-trust-center-specification.md,3e33552e7635c7ee
-file,validation/assurance-system-resilience.md,b1c9459c6dbeaa81
-file,validation/continuous-security-testing-specification.md,ff818cec8a1f6890
-file,validation/independent-validation-architecture.md,d27a058ee08c1303
+file,validation/assurance-system-resilience.md,7df63b8cbcca2c6b
+file,validation/continuous-security-testing-specification.md,55d4821d770dc1f7
+file,validation/independent-validation-architecture.md,85abddec0d3414f8
 file,vendors/compliance-platform-analysis.md,1cdfa0912ec77f43
 open_questions,OQ-100,5a235bf082c88204
 open_questions,OQ-101,018c707edccc7117

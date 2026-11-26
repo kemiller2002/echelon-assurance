@@ -11,18 +11,22 @@
 Prepared 2026-11-25 from `registers/open-questions.csv` and the dispositions in
 `question-dispositions.csv`. No paid engagement is authorized by this document. Everything here is **proposed
 interpretation**, not a legal conclusion and not a statement of auditor acceptance.
+Many questions below now have owner-approved internal design resolutions
+(DF-ASR-2026-0D11); that record does not resolve their legal classification or
+external acceptance, which these packages still ask about.
 
 Common facts for every package:
 
 - Unbound is a donor-advised-fund (DAF) administration platform. Under owner decision 1 (DF-ASR-2026-0D01), Echelon runs it as a commercial technology and servicing platform for sponsoring charities and financial institutions. Donors and advisors use it only through those organizations. Echelon does not act as sponsor and does not hold custody of assets.
-- In the initial design, funds stay in bank accounts owned by the sponsor, and every flow is authorized by the sponsor. The design avoids platform custody and money transmission (REC item 17; the legal conclusion is open, OQ-216), and no direct Echelon–bank contract is assumed in the initial design; the contracting structure is undecided (OQ-205), and decision 1 includes financial-institution customers (F12, CQ-5). Card payments are deferred.
+- In the initial design, funds stay in bank accounts owned by the sponsor, and every flow is authorized by the sponsor. The design avoids platform custody and money transmission (REC item 17; the legal conclusion is open, OQ-216), and no direct Echelon–bank contract is assumed in the initial design; the approved internal design supports direct bank relationships behind activation gates, and the actual contracting structure is pending (OQ-205; DF-ASR-2026-0D11), and decision 1 includes financial-institution customers (F12, CQ-5). Card payments are deferred.
 - Operations are US-first (owner direction ODP-10); the proposed design does not deliberately target the EU/UK (OQ-208).
 - Controls are designed for SOC 1 type 2 and SOC 2 type 2 across all five trust categories (decision 2). GLBA Safeguards Rule elements are the design baseline, adopted without claiming they legally apply (decision 3).
 - AI agents act within delegated tiers; in financial domains AI agents are capped at A2; they never prepare, alter or release payment instructions and never authorize, approve or release money movement in any scope (BR-AI-001, BR-FIN-006, DF-ASR-2026-C004); financial execution is deterministic under established human authority, which for money movement is the sponsor's: a deterministic worker acts only under a recorded sponsor (board) delegation or sponsor-user authorization, or a recurring authority set by the sponsor and revalidated at execution (BR-FIN-006, BR-FIN-015, DF-ASR-2026-C004); and enforced technical gates apply (decision 4; ODP-10).
 
 Preconditions: the owner has decided US-first operations, the card deferral and
-the sponsor-controlled-funds constraint (ODP-05, ODP-10). Remaining: the intended
-contracting entity (OQ-102), and an owner reassessment under 0D0F before any
+the sponsor-controlled-funds constraint (ODP-05, ODP-10). Remaining: the actual
+contracting entity (OQ-102; for planning the operator is the Echelon-side
+service organization, DF-ASR-2026-0D11), and an owner reassessment under 0D0F before any
 package is sent.
 
 ---

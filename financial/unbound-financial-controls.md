@@ -127,6 +127,6 @@ decisions; sponsor manages its own user access to Unbound.
 ## 7. Open questions (see register)
 
 OQ-753 customers (answered by owner decision DF-ASR-2026-0D01); OQ-754 sponsor auditor expectation; OQ-756 entity
-separation; OQ-757 bank TPSP expectations; plus: whether the sponsor's
+separation (separate by design, DF-ASR-2026-0D11; legal entities pending); OQ-757 bank TPSP expectations; plus: whether the sponsor's
 auditor accepts invariant + reconciliation evidence for reduced sampling,
 and which control objectives the sponsor's auditor considers relevant.

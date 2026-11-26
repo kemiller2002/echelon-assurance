@@ -108,7 +108,7 @@ classification filter (BR-CUS-002).
   4. architectural assumptions (Strata boundary, Limen boundary, AI authority gateway);
   5. areas where internal suites are weak (selector defects, mutation survivors).
 - **What internal testing may change.** It may reduce remediation volume and retest effort, and may justify focusing scope. It never justifies excluding scope that an obligation requires. No claim is made that internal automation satisfies an independent-testing obligation unless the authority accepts it in writing (OQ-302, OQ-303, OQ-309).
-- **Legal frequency.** Under the FTC Safeguards Rule, 16 CFR 314.4(d)(2) allows effective continuous monitoring as an alternative to annual penetration testing plus six-monthly vulnerability assessment. Applicability to Echelon or Unbound is unresolved (OQ-300), and contractual and auditor expectations may require annual tests regardless.
+- **Legal frequency.** Under the FTC Safeguards Rule, 16 CFR 314.4(d)(2) allows effective continuous monitoring as an alternative to annual penetration testing plus six-monthly vulnerability assessment. Applicability to Echelon or Unbound is not assumed; the approved internal design is continuous monitoring and validation with no small-entity exemption assumed (OQ-300; DF-ASR-2026-0D11), and contractual and auditor expectations may require annual tests regardless.
 
 ## 7. Cost controls (BR-GOV-015)
 

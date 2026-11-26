@@ -152,7 +152,9 @@ must come from elsewhere. [recommendation]
    requires per-service SOC 1/SOC 2 scoping agreed with a CPA.
    [auditor-interpretation expected — the AICPA characterisation needs a
    SRC from the standards research batch; the Unbound tagging is observed;
-   overall: open-question OQ-754, OQ-755]
+   overall: open-question OQ-754; OQ-755 internal design approved, shared
+   controls and evidence with distinct examination objectives,
+   DF-ASR-2026-0D11]
 2. **SOC 2 relevance** arises from security/availability/confidentiality
    of donor and sponsor data, tenant isolation and AI agents — commitments
    to sponsors, partners and banks. daf-landscape records that competitors
@@ -170,8 +172,9 @@ must come from elsewhere. [recommendation]
 5. **Release 1 nuance**: if the "sponsor" and the platform operator end up
    being the same or related organisation, Unbound would not be a service
    organisation to a separate user entity, and SOC 1 relevance changes to
-   the sponsor's own ICFR and financial statement audit. [open-question
-   OQ-756]
+   the sponsor's own ICFR and financial statement audit. [legal entities
+   pending, OQ-756; sponsor and operator are separate by design,
+   DF-ASR-2026-0D11]
 
 ### 4.4 Evidence classes for SOC 1 relevant processes (design targets)
 

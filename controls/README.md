@@ -57,7 +57,7 @@ except these, deliberately:
 | Requirement | Why no control |
 |---|---|
 | REQ-GLBA-019, REQ-PENTEST-012 | Safeguards Rule small-institution exemption (< 5,000 consumers): an exemption, not an obligation; tracked so its loss is noticed |
-| REQ-PENTEST-009 | NYDFS limited exemption; NYDFS applicability undetermined (OQ-216, OQ-301) |
+| REQ-PENTEST-009 | NYDFS limited exemption; NYDFS applicability not assumed: no NYDFS license is assumed and operating-model changes are reassessed (OQ-301), and customer funds are not received, held or moved unilaterally initially (OQ-216) (DF-ASR-2026-0D11) |
 | REQ-TPRM-008 | Agencies' illustrative resource, not a requirement |
 
 Every policy and policy section is implemented by at least one control;

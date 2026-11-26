@@ -151,7 +151,9 @@ Notable source facts:
 - GitHub organization audit log covers **180 days**; programmatic API access
   is stated for GitHub Enterprise Cloud [authoritative SRC-PAC-018]. Evidence
   must therefore be collected continuously, not retrieved at audit time; plan
-  choice is an open question (OQ-508).
+  choice follows the approved internal resolution: existing GitHub
+  capabilities first, upgrading only if necessary and economical (OQ-508;
+  DF-ASR-2026-0D11).
 - Required status checks are only trustworthy if the **expected source app**
   is pinned; otherwise any writer can set a passing status [authoritative
   SRC-PAC-016]. CI evidence must record the producing app ID.
@@ -226,7 +228,10 @@ in increasing cost: (a) publish checkpoints to public witness networks (exposes
 only origin, tree size and root hash — no content); (b) give the auditor a
 read-only verifier tool and checkpoint feed so they re-verify inclusion and
 consistency themselves; (c) third-party monitoring service. Whether the
-auditor relies on (b) is OQ-500 [recommendation / open-question].
+auditor relies on (b) is pending auditor acceptance (OQ-500; internal design
+approved, DF-ASR-2026-0D11: managed immutable storage with independently
+verifiable integrity and completeness, and no unjustified custom witness
+network) [recommendation; external acceptance pending].
 
 ## 6. Completeness: proving evidence was not selectively omitted
 
@@ -257,8 +262,8 @@ streaming and repository inventory reconciliation [recommendation].
 
 | Retention class | Content | Proposed minimum | Basis |
 |---|---|---|---|
-| `R-AUDIT` | Control operating evidence | Audit period + 1 year, pending OQ-502 research | assumption; OQ-502 |
-| `R-FIN` | Financial-transaction and reconciliation evidence | Undetermined (tax/banking rules) | open-question OQ-502 |
+| `R-AUDIT` | Control operating evidence | Audit period + 1 year, pending research on required periods | assumption; configurable retention by class, jurisdiction and contract approved (OQ-502; DF-ASR-2026-0D11) |
+| `R-FIN` | Financial-transaction and reconciliation evidence | Undetermined (tax/banking rules) | period pending research; configurable retention approved (OQ-502; DF-ASR-2026-0D11) |
 | `R-SEC` | Security logs, incidents | Undetermined | open-question |
 | `R-INTEGRITY` | Envelopes, checkpoints, TSA tokens, witness cosigs | ≥ longest payload class + renewal of timestamps | recommendation |
 | `R-PI` | Payloads containing personal data | Minimum necessary; crypto-shreddable | recommendation |
@@ -288,8 +293,10 @@ Design:
    (low-entropy fields like emails). Never log unsalted hashes of identifiers;
    use keyed HMAC with a shreddable key [recommendation].
 4. WORM retention on encrypted PI payloads is compatible with crypto-shredding
-   only if the *key* is not WORM-locked. Whether crypto-shredding is accepted
-   as erasure is a legal question (OQ-503) [open-question].
+   only if the *key* is not WORM-locked. The approved internal design uses
+   crypto-deletion where appropriate and does not presume it is legal erasure
+   (OQ-503; DF-ASR-2026-0D11); whether it satisfies a given erasure obligation
+   remains a legal question [legal classification not assumed].
 
 ## 9. Access
 
@@ -323,9 +330,14 @@ Break-glass access is itself logged as evidence and reviewed
 ## 11. Open questions
 
 OQ-500 (auditor reliance on witnessed tlog evidence), OQ-502 (retention),
-OQ-503 (crypto-shredding as erasure), OQ-504 (cloud provider), OQ-505
-(public witness network), OQ-507 (qualified timestamps), OQ-508 (GitHub plan
-for audit-log API), OQ-510 (agent evidence classification). See
+OQ-503 (crypto-shredding as erasure), OQ-504 (cloud provider), OQ-507
+(qualified timestamps), OQ-508 (GitHub plan for audit-log API) and OQ-510
+(agent evidence classification) now have owner-approved internal design
+resolutions (DF-ASR-2026-0D11); requirements definition, implementation
+verification and external acceptance remain pending, including auditor
+acceptance (OQ-500, OQ-510) and provider selection (OQ-504, provider pending).
+OQ-505 (public witness network) is answered as deferred (DF-ASR-2026-0D10).
+See `registers/question-dispositions.csv` and
 `registers/fragments/PAC-open-questions.csv`.
 
 ## Owner requirements PEC-013..028 (2026-11-25)

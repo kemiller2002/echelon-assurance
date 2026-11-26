@@ -85,7 +85,9 @@ does not control. In increasing order of independence:
    service; anyone holding the digest can later detect alteration (VAL-018).
    *Deferred under DF-ASR-2026-C002 until someone requires it.*
 5. **External technical review** of evidence integrity, completeness and
-   identity separation (VAL-026; provider and CPA acceptance open, OQ-612).
+   identity separation (VAL-026; provider and CPA acceptance pending, OQ-612; internal design
+   approved, DF-ASR-2026-0D11: internal validation first, external review
+   conditional).
    *Deferred under DF-ASR-2026-0D0F; only if a reassessment authorizes it.*
 6. **Formal attestation** (VAL-028), where the CPA firm decides what of the
    above it relies on (OQ-601, OQ-604). *Only if an examination is planned

@@ -295,7 +295,7 @@ module Policy =
 | Output | Generate from model? | How / limit | Class |
 |---|---|---|---|
 | Human policy document | **Yes**, with authored prose | Render Markdown/PDF from `Narrative` + structured fields. Prose (purpose, rationale) is *authored inside the model*, not generated | recommendation |
-| Auditor documentation | **Mostly** | Policy→control→mechanism→evidence traceability matrix, approval history, exception list. Auditors still need system descriptions written by management (SOC 2 description criteria) — authored, not inferred | recommendation / open-question (OQ-501) |
+| Auditor documentation | **Mostly** | Policy→control→mechanism→evidence traceability matrix, approval history, exception list. Auditors still need system descriptions written by management (SOC 2 description criteria) — authored, not inferred | recommendation; internal design approved: the versioned approved policy model is authoritative and readable documents are generated (OQ-501; DF-ASR-2026-0D11); auditor acceptance pending |
 | Enforcement rules | **Only for parametric rules** | Simple, parameterised guardrails (allowed regions, required tags, retention days, required checks list) can be emitted as SCP/Azure Policy/Org Policy/ruleset JSON. Non-trivial logic (authorization, data-dependent rules) must be authored in its target language and *bound by digest* (§6.2). A Turing-complete DSL that compiles to Rego **and** Cedar **and** SCP is a new language with its own verification burden — rejected | recommendation |
 | CI checks | **Yes** | Generate a conformance job that checks every binding: file exists, digest matches, tests exist, ruleset live state equals expected spec | recommendation |
 | Agent instructions | **Yes, but as advisory only** | Emit AGENTS.md fragments ("changes to X require Y"). Instructions are not controls; the same obligation must have a non-agent enforcement point (Praxis `ProtectedClass`, rulesets) | recommendation |
@@ -387,7 +387,8 @@ Map model → OSCAL as follows (no OSCAL authoring by hand):
 | POA&M | Remediation register entries (restricted; never in this public repo) |
 
 Validate emitted OSCAL with NIST schemas and/or compliance-trestle in CI
-[recommendation]. Whether any customer requires OSCAL is unknown (OQ-506);
+[recommendation]. Whether any customer requires OSCAL is unknown; the approved internal design is
+portable structured exports, with OSCAL when justified (OQ-506; DF-ASR-2026-0D11);
 FedRAMP's 2026 notice requires machine-readable data and that human-readable
 materials be *generated from* machine-readable data, but does not itself name
 OSCAL [authoritative SRC-PAC-020]. That direction independently supports the

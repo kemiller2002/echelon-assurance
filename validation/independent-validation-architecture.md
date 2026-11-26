@@ -95,8 +95,10 @@ secondary sources SRC-AIG-021; recommendation for the application.)*
 
 Therefore: Echelon agents can raise the *quality and coverage* of
 management's monitoring and reduce the cost of external work; they cannot
-substitute for it. Whether the auditor will use any of it is open
-(OQ-601, OQ-604).
+substitute for it. Whether the auditor will use any of it is pending auditor
+acceptance (OQ-601, OQ-604; internal design approved, DF-ASR-2026-0D11: the
+original source remains authoritative, and mutation and synthetic tests are
+management monitoring and internal validation).
 
 ## 4. Layered validation strategy
 
@@ -237,8 +239,11 @@ effectiveness (RSK-040).
 ## 8. Open items
 
 OQ-601 (auditor reliance on agent evidence), OQ-604 (mutation testing as
-management monitoring), OQ-608 (staffing for separation), OQ-611 (formal
-methods investment), OQ-612 (external technical validation provider).
+management monitoring), OQ-608 (staffing for separation) and OQ-612 (external
+technical validation provider) have owner-approved internal design resolutions
+(DF-ASR-2026-0D11); auditor and provider acceptance and implementation
+verification remain pending. OQ-611 (formal methods investment) is answered as
+deferred (DF-ASR-2026-0D10).
 
 ## Owner requirements VAL-BC-001..014 (2026-11-25)
 

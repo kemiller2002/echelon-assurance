@@ -73,7 +73,9 @@ Five premises drive every mechanism below. Each is tagged with its evidence clas
    malicious process that lies about itself"; signed attestation is deferred
    (SRC-AIG-030). Assurance-grade attribution therefore needs an authenticated
    identity bound to each action (§5). *(authoritative for Praxis behaviour as
-   documented; open-question OQ-615 for the fix.)*
+   documented; the fix follows the approved internal resolution, authenticated
+   provenance via Praxis or a compatible external binding (OQ-615;
+   DF-ASR-2026-0D11), not yet implemented or verified.)*
 4. **AI is an accelerator, never a dependency of a control.** Control
    enforcement, evidence collection and approval must work with every AI
    provider unavailable (§18), consistent with the Echelon Registry invariant
@@ -213,8 +215,9 @@ disabling of required logs (AUTH-T08), no agent self-expansion of privileges
 
 Approval UX shows the diff, the weakening classification, cited evidence and
 what the agent did *not* check. Approval quality is sampled quarterly
-(RSK-019, automation bias; REQ-OWASPAI-013). Feasibility of distinct humans
-per role is open (OQ-608). Owner decision DF-ASR-2026-0D04 (superseding proposal DF-ASR-2026-7B20): standing human authorization + separate implementing agent + technical verifier + enforced release gate for routine low-risk work; elevated human approval for material changes. Owner direction DF-ASR-2026-0D0F replaces the "fractional human review" element for now (reassessed when required, TNT-18): no reviewer is contracted at the development stage; the multiple-agent review protocol (BR-VAL-004) and protected deterministic verification (VAL-040) are used, an action that needs organizational independence is blocked or redesigned, and self-approval of material exceptions is not authorized. With one human owner, the P1 rule (approver outside
+(RSK-019, automation bias; REQ-OWASPAI-013). Distinct humans per role are not
+available; the approved internal resolution is multi-agent review and protected
+deterministic verification, with no retainer (OQ-608; DF-ASR-2026-0D11). Owner decision DF-ASR-2026-0D04 (superseding proposal DF-ASR-2026-7B20): standing human authorization + separate implementing agent + technical verifier + enforced release gate for routine low-risk work; elevated human approval for material changes. Owner direction DF-ASR-2026-0D0F replaces the "fractional human review" element for now (reassessed when required, TNT-18): no reviewer is contracted at the development stage; the multiple-agent review protocol (BR-VAL-004) and protected deterministic verification (VAL-040) are used, an action that needs organizational independence is blocked or redesigned, and self-approval of material exceptions is not authorized. With one human owner, the P1 rule (approver outside
 the preparer's delegation chain) leaves no eligible approver for owner-sponsored
 agent work and conflicted with an earlier small-team fallback. Owner decision
 DF-ASR-2026-0D04 governs (OQ-800 answered): the standing authorization path
@@ -311,8 +314,9 @@ Residual risk acceptance is an owner decision (OQ-616).
 | Derived | Deterministic jobs with recorded inputs and code version | Yes, if reproducible | Recompute from inputs |
 | AI-interpreted | Agents | **No, not alone.** Must cite primary/derived hashes | Citation resolver + figure recomputation (VAL-020); sampled human review for confabulation (REQ-AIRMF-013, MS-2.5-003) |
 
-Auditor acceptance of agent-collected or agent-summarised evidence is open
-(OQ-601); PCAOB's 2024 amendments on technology-assisted analysis show that
+Auditor acceptance of agent-collected or agent-summarised evidence is pending
+(OQ-601; internal design approved, DF-ASR-2026-0D11: the original source
+remains authoritative despite AI collection or interpretation); PCAOB's 2024 amendments on technology-assisted analysis show that
 even an auditor's own tools are expected to address reliability of the
 information analysed (SRC-AIG-020, summary-only, analogy only).
 
@@ -412,7 +416,9 @@ Verified by VAL-022. *(recommendation; REQ-AIRMF-004.)*
   however, territorial scope, Article 4 literacy and Article 50 transparency
   for any future donor-facing assistant are **undetermined** and are worked by internal
   legal research, with external advice only after an owner reassessment under
-  DF-ASR-2026-0D0F (OQ-600). *(open-question)*
+  DF-ASR-2026-0D0F. The approved internal resolution is US-first, with EU
+  applicability reassessed before any relevant deployment (OQ-600;
+  DF-ASR-2026-0D11). *(legal applicability not assumed)*
 
 ## 21. Contradictions and limits preserved
 

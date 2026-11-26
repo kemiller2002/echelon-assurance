@@ -24,7 +24,7 @@ needs the owning repository's own governance process.
 | PC-17 | praxis, clarity, EEF | Converge on one signed-approval record pattern | Three approval designs (ECH1 overlaps) | P2 |
 | PC-18 | all repos | Context-status vs code consistency check (stale CURRENT-STATE contradicting code in ≥4 repos) | Management-assertion hygiene (ECH2 §3.6) | P2 |
 | PC-19 | AI runtime (no owner yet) | Signed agent action receipts; AI egress gateway enforcing provider-by-data-class; control-weakening change classifier | Gaps identified by AIG batch; owner to decide whether these extend Praxis/Aegis or need a new component | P1 |
-| PC-20 | unbound | Re-examine requirements that cite GLBA as their legal basis (marked "unverified general knowledge" in Unbound); GLBA applicability is contested and undetermined (OQ-200..203). Keep the safeguards as design baseline but cite them as framework-selected/contractual until a recorded legal resolution (internal research; external advice only on a recorded DF-ASR-2026-0D0F trigger) | REG batch finding | P1 |
+| PC-20 | unbound | Re-examine requirements that cite GLBA as their legal basis (marked "unverified general knowledge" in Unbound); GLBA applicability is contested and not assumed (OQ-200..203); the owner-approved internal design adopts the substantive GLBA safeguards regardless of classification and does not rely on the nonprofit exemption (DF-ASR-2026-0D11). Keep the safeguards as design baseline but cite them as framework-selected/contractual until a recorded legal resolution (internal research; external advice only on a recorded DF-ASR-2026-0D0F trigger) | REG batch finding | P1 |
 
 ## Owner decisions of 2026-11-25
 
