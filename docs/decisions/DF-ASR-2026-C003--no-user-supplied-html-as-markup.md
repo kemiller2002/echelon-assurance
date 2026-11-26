@@ -20,3 +20,5 @@ Eliminates the sanitizer class rather than maintaining one; may constrain future
 
 Proposed by the assurance consolidation (journal `JR-ASR-2026-C001`). Not
 authorized until the owner accepts it; see `docs/decisions/owner-decision-package-2026-11-25.md`.
+
+*Accepted: owner record DF-ASR-2026-0D10 (`docs/decisions/owner-remaining-approvals-2026-11-25.md`), with owner direction DF-ASR-2026-0D0F; the sentence above is historical (note added 2026-11-26).*

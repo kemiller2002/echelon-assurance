@@ -71,7 +71,7 @@ baseline,BR-AI-006,de6187c7e57106ec
 baseline,BR-AI-007,465f3e0d98e07c62
 baseline,BR-AI-008,ff5a58e0dc78fb6a
 baseline,BR-AI-009,25aaea9f16312965
-baseline,BR-APP-001,1dd67f9481b49d63
+baseline,BR-APP-001,f871c8e2befbcccb
 baseline,BR-APP-002,549acd2242526714
 baseline,BR-APP-003,dd961de9c9e0757d
 baseline,BR-APP-004,abc2631cb582931a
@@ -415,12 +415,12 @@ file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,3a3211757f4894d5
 file,docs/decisions/DF-ASR-2026-7B20--small-team-approval-and-independence-rule.md,dc6bff23c6b698fe
-file,docs/decisions/DF-ASR-2026-C001--requirements-hierarchy-and-authoritative-baseline.md,568d421344d56828
-file,docs/decisions/DF-ASR-2026-C002--managed-immutable-evidence-storage-replaces-custom-ledger.md,049b81129b272519
-file,docs/decisions/DF-ASR-2026-C003--no-user-supplied-html-as-markup.md,ab0d3da011286b46
-file,docs/decisions/DF-ASR-2026-C004--ai-agents-never-authorize-movement-of-funds.md,c5f55360c16c5e88
+file,docs/decisions/DF-ASR-2026-C001--requirements-hierarchy-and-authoritative-baseline.md,ed81c6e31c8741ac
+file,docs/decisions/DF-ASR-2026-C002--managed-immutable-evidence-storage-replaces-custom-ledger.md,7c8cb32d92155f3b
+file,docs/decisions/DF-ASR-2026-C003--no-user-supplied-html-as-markup.md,ba07d0fe6df5c1b0
+file,docs/decisions/DF-ASR-2026-C004--ai-agents-never-authorize-movement-of-funds.md,c176af9b2e9a6566
 file,docs/decisions/DF-ASR-2026-C005--staged-assurance-investment.md,3531f64ba76a21e3
-file,docs/decisions/DF-ASR-2026-C006--unbound-financial-semantics-adopted.md,701436d5bb854b83
+file,docs/decisions/DF-ASR-2026-C006--unbound-financial-semantics-adopted.md,4efd2c0563e14a06
 file,docs/decisions/README.md,39253075dd66c87c
 file,docs/decisions/owner-approved-foundations-2026-11-25.md,ae5d8f63a2666ddd
 file,docs/decisions/owner-decision-package-2026-11-25.md,cd75f923e6ff0a6f
@@ -450,7 +450,7 @@ file,policies/drafts/POL-07-operations-security.md,3adc46f931f49bd1
 file,policies/drafts/POL-08-incident-response-and-notification.md,de6101ae0e5e9259
 file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
-file,policies/drafts/POL-11-ai-and-autonomous-systems.md,706c1a622f8c3001
+file,policies/drafts/POL-11-ai-and-autonomous-systems.md,c9415b57dd2d2709
 file,policies/drafts/POL-12-financial-operations-integrity.md,2b0c91534651a8eb
 file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
 file,policies/policy-inventory.md,6287fa883f03a960
