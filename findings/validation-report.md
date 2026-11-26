@@ -49,6 +49,8 @@ right, which is why the challenge passes reviewed content.
 
 ## 2. Successive challenge passes
 
+*(Historical: section 2 and sections 3–3d describe the challenge passes before the final reconciliation of 2026-11-26; the later review A–F and adversarial rounds are in `findings/reviews/RV-ASR-2026-11-26.md`.)*
+
 Six review rounds were run by separate agent contexts (rounds 1–4 on the consolidation, rounds 5–6 on the owner-direction reconciliation). The agents were given
 the repository and the earlier findings, not the coordinator's conclusions. Each
 round actively tried to disprove the previous conclusions. All findings are in
@@ -176,7 +178,7 @@ All remaining items were fixed in the final commits:
 - BR-GOV-011 and BR-GOV-017 carry the reassessment qualifier;
 - stale counts are corrected.
 
-**Stopping rationale.** Across rounds 5 and 6, material findings fell from 8 to 2 new ones plus 3 incomplete fixes. All were textual alignment or count errors, not design or factual-law defects. Every finding now has a recorded disposition. No further round was run: the remaining risks need owner decisions, external evidence or implementation, which meets the mission's stopping condition.
+**Stopping rationale.** Across rounds 5 and 6, material findings fell from 8 to 2 new ones plus 3 incomplete fixes. All were textual alignment or count errors, not design or factual-law defects. Every finding now has a recorded disposition. No further round was run at that time (later rounds: `findings/reviews/RV-ASR-2026-11-26.md`): the remaining risks need owner decisions, external evidence or implementation, which meets the mission's stopping condition.
 
 ## 4. Completion criteria (mission section 23)
 

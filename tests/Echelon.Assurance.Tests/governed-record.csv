@@ -467,8 +467,8 @@ file,findings/clarity-and-edf-assessment.md,3d35443c20eb48cf
 file,findings/counsel-and-auditor-questions.md,4738aee841828858
 file,findings/executive-findings.md,11008af910a33a02
 file,findings/financial-integrity-review.md,3b7bbdcfd4eb4a1b
-file,findings/reviews/RV-ASR-2026-11-26.md,b19ad2ee2893b833
-file,findings/validation-report.md,a542b230e8d1f1f8
+file,findings/reviews/RV-ASR-2026-11-26.md,186083c7c6fd478d
+file,findings/validation-report.md,f9583f1501bcae45
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
 file,framework/policies/OUTPUT-POLICY.md,f8f0403b2ec80c1f
@@ -507,7 +507,7 @@ file,policies/policy-inventory.md,c74ee7381b270eab
 file,policy-as-code/policy-as-code-specification.md,9f11008729a532d8
 file,policy-as-code/tool-evaluation.md,2810ac82a201172e
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
-file,regulatory/regulatory-applicability-matrix.md,3a1688eb668f714d
+file,regulatory/regulatory-applicability-matrix.md,4390bb0752f46bfc
 file,requirements/README.md,bf7a0c418b406b69
 file,requirements/ai-governance-independent-validation.md,7c9bb9fad1beb3f7
 file,requirements/assurance-economics.md,e265ba4586a7e3b1
@@ -1110,7 +1110,7 @@ requirements,REQ-IRS-002,a2c3edf54696e93f
 requirements,REQ-IRS-003,44ba316e1ec8531c
 requirements,REQ-IRS-004,bee32d21cd89fac2
 requirements,REQ-IRS-005,414791fa691e6f95
-requirements,REQ-IRS-006,8da93f6f98ca31a1
+requirements,REQ-IRS-006,f4f1a09fb01fe465
 requirements,REQ-IRS-007,f70377d7872745f9
 requirements,REQ-IRS-008,caae9d713e8ed6b5
 requirements,REQ-ISO27001-001,382342ba96741d25
@@ -1215,7 +1215,7 @@ requirements,REQ-PENTEST-014,6c0787963e4f80a5
 requirements,REQ-PENTEST-015,cb99e27a3deb6366
 requirements,REQ-PENTEST-016,2b23aca3b6fe75bf
 requirements,REQ-PENTEST-017,65175c3fedee7925
-requirements,REQ-PENTEST-018,3c65236a0b1303fe
+requirements,REQ-PENTEST-018,db2cfbafb38f0a24
 requirements,REQ-PENTEST-019,fd42e0e67994316b
 requirements,REQ-PENTEST-020,d84c1781ed5a0f7a
 requirements,REQ-PENTEST-021,c31509fda4ac90bc
@@ -1289,7 +1289,7 @@ requirements,REQ-STATE-001,e559ddd82033e75f
 requirements,REQ-STATE-002,922a9789b46055f4
 requirements,REQ-STATE-003,aeeabbf13e608a17
 requirements,REQ-STATE-004,030f92cf5ca9c079
-requirements,REQ-STATE-005,5025438944943c20
+requirements,REQ-STATE-005,6cc26b921ae672ad
 requirements,REQ-STATE-006,65788cab4bbd5767
 requirements,REQ-TPRM-001,56d2817f95d1d675
 requirements,REQ-TPRM-002,2003dcdabac450ae
