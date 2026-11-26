@@ -340,6 +340,7 @@ decision_traceability,ODP-10,5ba199c979496e44
 decision_traceability,ODP-11,0e240ccf62757b89
 decision_traceability,ODP-12,7db22565e677fb2c
 decision_traceability,OT-01,0a787f46d3fee54d
+decision_traceability,OT-02,ff8316bda9793bc5
 decisions,DF-ASR-2026-0D01,d5ec0d52c5ecb630
 decisions,DF-ASR-2026-0D02,52ccf91ecc066a61
 decisions,DF-ASR-2026-0D03,cbb32153d6cb8cf3
@@ -1472,6 +1473,7 @@ source_dispositions,ODP-10,b6258e4a873c62a1
 source_dispositions,ODP-11,e86d78f8fdcf91a0
 source_dispositions,ODP-12,7f4f0a6f4d38ba4a
 source_dispositions,OT-01,c0ddf7e0fd2f66d3
+source_dispositions,OT-02,8e5f71d24b627337
 source_dispositions,PEC-001,3c949bd2f326e727
 source_dispositions,PEC-002,5088d99877bbf686
 source_dispositions,PEC-003,43d5723cd1b7312c
