@@ -104,7 +104,9 @@ Research gaps:
 - SEC Regulation S-P: only the Federal Register abstract was read (fact sheet HTTP 403).
 - No DAF sponsor or community foundation vendor questionnaire is public; DAF-sponsor
   questions are inferred (SRC-CAQ-023) and need validation with real prospects (OQ-215).
-- Bank expectations after the FFIEC CAT sunset are unknown (OQ-217). The 2026 proposed
+- Bank expectations after the FFIEC CAT sunset are unknown; the approved internal design is a
+  framework-neutral catalog with crosswalks, with bank acceptance pending (OQ-217;
+  DF-ASR-2026-0D11). The 2026 proposed
   interagency TPRM guidance (SRC-CAQ-002) may change bank due diligence; only its abstract
   was read.
 
@@ -121,7 +123,9 @@ Coverage gaps in the authoritative catalogs (questions answered `manual` or with
   described as adopted.
 - Owner decisions blocking many answers: accountable roles and deputy (OQ-607), SoD staffing
   (OQ-608), service-organization entity (OQ-102, OQ-756), workforce IdP (OQ-764), cloud
-  provider (OQ-504), AI provider terms (OQ-603).
+  provider (OQ-504), AI provider terms (OQ-603). Internal design resolutions for these were
+  approved on 2026-11-26 (DF-ASR-2026-0D11); actual legal entities and signatories, provider
+  selection and implementation remain pending.
 - The bank has no human approval yet; per GOV-BC-019 and DD-GOV-001 nothing in it is
   customer-releasable until a named human approves each answer.
 
