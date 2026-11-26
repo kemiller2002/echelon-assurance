@@ -16,6 +16,8 @@ The owner was asked to either provision an authority or record that plain comple
 
 ## Decision (taken under the owner's delegation)
 
+Accepting plain completion in place of verified completion departs from DF-ASR-2026-0D10. An agent may not approve that departure for itself (BR-GOV-004, BR-AI-002). The approval here is the owner's: the owner was asked to choose between provisioning an authority and recording that plain completion is acceptable, and delegated that choice. The agent applies the narrower option, which makes no claim of verification.
+
 1. **No self-made verifier key.** The implementing agent does not create a completion authority from a key it holds. A receipt signed with such a key would be self-attested. It would not be the separately credentialed verification that verified completion means (DF-ASR-2026-0D04; VAL-040), and presenting it as verified would be a fabricated verification receipt.
 2. **Plain completion accepted.** For the final reconciliation work item WI-ASR-FINAL, plain Praxis completion is accepted. The completion records the validations run under `praxis work validate-run` on the completed commit, and the review record (`findings/reviews/RV-ASR-2026-11-26.md`). Nothing describes it as verified completion.
 3. **WI-PRAXIS-03 stays open.** Provisioning a verifier with its own identity and pinned keys remains open. Verified completion stays the target for later work (OQ-704, DF-ASR-2026-0D11).
@@ -23,5 +25,5 @@ The owner was asked to either provision an authority or record that plain comple
 ## Consequences
 
 - WI-ASR-FINAL can be closed without a verifier-signed receipt. Its completion is plain, and its evidence is the validation runs and the review record.
-- The merge of PR #3 and of the follow-up pull request rests on the owner's instructions and on repository validation, not on verified completion.
+- PR #3 was merged on the owner's instruction. Pull request #4 is merged only on the owner's instruction, after its final commit is validated (DF-ASR-2026-0D11). Neither rests on verified completion.
 - No spending, external engagement, production activation or change to another repository is authorized by this record.

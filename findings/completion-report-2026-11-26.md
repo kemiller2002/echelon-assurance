@@ -48,7 +48,7 @@ These are taken from the registers:
 - 64 work items
 - 11 production gates
 - 14 decision-traceability items
-- 26 decisions in the decision register
+- 27 decisions in the decision register
 - 380 regulatory requirement rows
 
 ## 3–4. Changes to the baseline, and disposition of sources
@@ -130,7 +130,7 @@ The adversarial challenge ran in rounds 2–51, all recorded in the same review 
 
 **Round 51 found no material finding in any slice.** A separate verifier then checked the minor fixes made after round 51 and found nothing material. Remaining coverage limits are stated there: some cross-repository claims could not be re-checked locally.
 
-**After DF-ASR-2026-0D11.** The owner's question-resolutions record reopened the review. From round 52 on, rounds continue on the reconciliation and the post-merge fixes. The authoritative per-round counts and the current stopping status are in `findings/reviews/RV-ASR-2026-11-26.md`; summaries here deliberately do not repeat them.
+**After DF-ASR-2026-0D11.** The owner's question-resolutions record reopened the review. Review rounds continue on the reconciliation and the post-merge fixes. The authoritative per-round counts and the current stopping status are in `findings/reviews/RV-ASR-2026-11-26.md`; summaries here deliberately do not repeat them.
 
 ## 11. Validation results
 
@@ -148,7 +148,7 @@ Validation is run on the final head locally. CI runs the same checks on pull req
 
 ## 12. Governance status
 
-- **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is completed by plain completion under DF-ASR-2026-0D12, recorded in the Praxis work history. Owner record DF-ASR-2026-0D11 directs validating the exact final commit under Praxis before merge and approves enabling verified completion in scope (OQ-704); enabling it is WI-PRAXIS-03.
+- **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is closed by plain completion under DF-ASR-2026-0D12; the completion event is in `.ros/events/events.jsonl` from the commit that records it. Owner record DF-ASR-2026-0D11 directs validating the exact final commit under Praxis before merge and approves enabling verified completion in scope (OQ-704); enabling it is WI-PRAXIS-03.
 - **Completion.** Under the owner's delegation, DF-ASR-2026-0D12 accepts plain Praxis completion for WI-ASR-FINAL, never described as verified completion. No agent-held verifier key was created. Earlier attempt: At commit fdd0736, the claim on WI-ASR-FINAL succeeded (claimant claude-code, generation 1). Three validations ran under `praxis work validate-run` and passed: repository tests, `praxis validate` and the governed-record check. `praxis work complete-verified` then refused with `--authority FILE (or PRAXIS_COMPLETION_AUTHORITY) is required`. No completion authority with pinned verifier keys is provisioned in this repository (WI-PRAXIS-03). Creating one from an agent-held key would make the receipt self-attested, so it was not done. The claim was released.
 - **Merge.** PR #3 was merged into `main` at 2c2c4f3 (merge commit 9ab2b00) at the owner's direct instruction given in chat, without Praxis verified completion. That instruction is not otherwise recorded in the repository. PR #2 was merged, and PR #1 was closed as superseded; its content is mapped by the 0E01 record and its branch is kept. Fixes made after the merge are on the same branch, in pull request #4. Verified completion of WI-ASR-FINAL is still not done.
 - **Branch protection.** `main` is not protected: GitHub reports `protected: false`, and no rulesets apply (WI-ASR-03, OQ-700/OQ-761). Only the owner can apply rulesets.

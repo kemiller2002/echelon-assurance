@@ -359,7 +359,7 @@ decisions,DF-ASR-2026-0D0E,9b746b71ce351607
 decisions,DF-ASR-2026-0D0F,80be8e9059eb5214
 decisions,DF-ASR-2026-0D10,6ee10af8b8adabad
 decisions,DF-ASR-2026-0D11,3daeb76c075dcf44
-decisions,DF-ASR-2026-0D12,18d9310125f8ab6a
+decisions,DF-ASR-2026-0D12,4dde704dbe01f78b
 decisions,DF-ASR-2026-0E01,271b70a8ff6150b6
 decisions,DF-ASR-2026-3A1E,bf9d065d624b394d
 decisions,DF-ASR-2026-7B20,3855c01867ddf73f
@@ -425,7 +425,7 @@ file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,8384baf9452192cd
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
 file,context/ARCHITECTURE.md,597841df183adb8c
-file,context/CURRENT-STATE.md,b400fe62880618e9
+file,context/CURRENT-STATE.md,4a160f7ff98dea3d
 file,context/DECISIONS.md,5c8440043f359a82
 file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
@@ -434,7 +434,7 @@ file,customer-assurance/README.md,bc3f1c2246e4790f
 file,customer-assurance/findings.md,e58e7215f380462b
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
-file,docs/decisions/DF-ASR-2026-0D12--completion-authority-delegated-plain-completion-accepted.md,b49524bc605901da
+file,docs/decisions/DF-ASR-2026-0D12--completion-authority-delegated-plain-completion-accepted.md,18bb6494baf22cb2
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,3a3211757f4894d5
 file,docs/decisions/DF-ASR-2026-7B20--small-team-approval-and-independence-rule.md,dc6bff23c6b698fe
@@ -469,11 +469,11 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,68763a822684b2fd
 file,findings/clarity-and-edf-assessment.md,896aa16bd483adb1
-file,findings/completion-report-2026-11-26.md,56e830ba2743c61c
+file,findings/completion-report-2026-11-26.md,cce9bd0a0a8c05eb
 file,findings/counsel-and-auditor-questions.md,6011c21b8c890774
 file,findings/executive-findings.md,1c3678b0ee4bc59a
 file,findings/financial-integrity-review.md,ff57b38bfb7f38c9
-file,findings/reviews/RV-ASR-2026-11-26.md,dfc3f3c744ba9c1b
+file,findings/reviews/RV-ASR-2026-11-26.md,f699230cc7371f30
 file,findings/validation-report.md,b66c3141c7e9dbd2
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
@@ -651,7 +651,7 @@ open_questions,OQ-701,4b68a2ba0bfefe4c
 open_questions,OQ-702,d310b4486643e338
 open_questions,OQ-703,25cbbd3f4c98e3f2
 open_questions,OQ-704,b9641eea6b9dace4
-open_questions,OQ-705,071b8f51b0165d41
+open_questions,OQ-705,47ed0b84a0df5600
 open_questions,OQ-706,ee95b34add9bd23b
 open_questions,OQ-707,8e6691df87805b36
 open_questions,OQ-708,5804bc439ba204a4
@@ -666,7 +666,7 @@ open_questions,OQ-755,d59b35b523910465
 open_questions,OQ-756,9d441af3c41ecfc3
 open_questions,OQ-757,a39778ba06bf7c2d
 open_questions,OQ-758,a96dac1370861956
-open_questions,OQ-759,3aac1e5a50bf6347
+open_questions,OQ-759,1e82176d96244655
 open_questions,OQ-760,71a8431489a780e6
 open_questions,OQ-761,0b4777e2d22b289c
 open_questions,OQ-762,4127b15b7b84a161
