@@ -112,7 +112,7 @@ Everything here is design. No bank, processor, partner or custodian agreement ex
 - **Statute [A, SRC-FIN2-008]:**
   - 170(f)(8) denies a deduction of $250 or more without a contemporaneous written acknowledgment stating the cash amount or a description (not value) of property, and whether goods or services were provided.
   - 170(f)(18) requires, for DAF contributions, a contemporaneous written acknowledgment that the sponsoring organization "has exclusive legal control over the assets contributed".
-- **Proposed interpretation [AS].** The donee (sponsor) issues the acknowledgment. Unbound generates it on the sponsor's behalf through the gated, counsel-approved, versioned sponsor template (UNB-RCN-FIN-001; the sponsor's counsel, which DF-ASR-2026-0D0F does not govern) (UNB-RCN-FIN-001). Echelon must never appear as the donee.
+- **Proposed interpretation [AS].** The donee (sponsor) issues the acknowledgment. Unbound generates it on the sponsor's behalf through the gated, counsel-approved, versioned sponsor template (UNB-RCN-FIN-001; the sponsor's counsel, which DF-ASR-2026-0D0F does not govern). Echelon must never appear as the donee.
 - **Where this links to the funds flow.** Exclusive legal control is undermined by any design where Echelon, a partner or a donor can move contributed assets without the sponsor. daf-landscape §14 notes that "deposit and forward" designs weaken both the exclusive-control and own-funds positions [I].
 - **Processor-covered fees.** These, and contributions reversed by return or chargeback, need acknowledgment correction (CNV-FIN-003, CNV-PAY-006).
 
