@@ -80,7 +80,7 @@ one (ODP-02; no external reviewer is engaged now, DF-ASR-2026-0D0F).
 | Requirements written per topic batch, each mapping to controls but none consolidating across batches | Organizational | Nine documents dated the same day, each ending with "reconcile catalog, roadmap…" |
 | Integration responsibilities assigned from READMEs and earlier assessments rather than executed verification | Technical | Capability matrix: Vigila absent; Strata has no runtime layer; Praxis provenance is self-reported |
 | A single human is the approver for every decision class, so independence rules collide | Human / Organizational | DF-ASR-2026-7B20; OQ-607, OQ-608 and OQ-800 |
-| Agents produce requirements faster than the owner can approve them, and proposals accumulate as "proposed" | Organizational | 18 proposed decisions awaiting approval in question dispositions |
+| Agents produce requirements faster than the owner can approve them, and proposals accumulate as "proposed" | Organizational | 18 proposed decisions awaiting approval in question dispositions (historical; none are proposed in the register now) |
 | External obligations are undetermined (auditor reliance, legal applicability), so designs hedge in prose instead of branching explicitly | Regulatory | Before DF-ASR-2026-0D11 (historical): 28 questions depended on an auditor and 21 on legal research (no counsel is engaged; prepared questions only, ODP-12); after it, 4 open questions depend on an auditor and the legal dependencies continue as pending external acceptance of answered questions |
 | Cost estimates are not activity-based and not scaled by product | Financial | `economics/parameters.csv` (original) |
 

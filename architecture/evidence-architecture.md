@@ -351,7 +351,8 @@ reconciliation (CTL-ASR-003), freshness and unknown-is-not-pass (new
 CTL-ASR-011), separated privileges (CTL-ASR-006), managed immutable storage
 with GitHub not the sole store (CTL-ASR-002), heartbeat (CTL-ASR-004),
 reproducible auditor packages (CTL-ASR-010), self-verification (CTL-ASR-005,
-008). Per the owner's dispositions, a public witness network and qualified
-timestamp purchases are **deferred until justified** (OQ-504, OQ-505,
-OQ-507): the storage interface is provider-neutral first, and anchoring
+008). A public witness network is deferred (OQ-505, inferred from the owner's
+baseline approval, DF-ASR-2026-0D10) and qualified timestamp services are used
+only if required (OQ-507, DF-ASR-2026-0D11); storage is managed immutable
+storage with the provider pending (OQ-504, DF-ASR-2026-0D11): the storage interface is provider-neutral first, and anchoring
 options in this document are evaluation candidates, not commitments.
