@@ -235,7 +235,7 @@ controls,CTL-ASR-006,5d7a2c76f8d8277f
 controls,CTL-ASR-007,2af70b4d3a40bbf4
 controls,CTL-ASR-008,1b47a7d937fa832d
 controls,CTL-ASR-009,f6676c029bc0dec9
-controls,CTL-ASR-010,a6fb18edef42a0da
+controls,CTL-ASR-010,7428c173a24d7874
 controls,CTL-ASR-011,b7ddb06f358be1d7
 controls,CTL-BCR-001,3d4bc55b4d6e7016
 controls,CTL-BCR-002,b7f428520edcbec8
@@ -348,13 +348,13 @@ decisions,DF-ASR-2026-0D04,d88dacb6524e2340
 decisions,DF-ASR-2026-0D05,95fb61b9d68f7766
 decisions,DF-ASR-2026-0D06,920d448d1965ba9f
 decisions,DF-ASR-2026-0D07,761ab829ea4be383
-decisions,DF-ASR-2026-0D08,9c1feeec60f712b4
+decisions,DF-ASR-2026-0D08,dafc7322e8cfe3f8
 decisions,DF-ASR-2026-0D09,544a3a831e0db355
 decisions,DF-ASR-2026-0D0A,1542edfba3b5ef73
 decisions,DF-ASR-2026-0D0B,66eac6cf8a2cc23f
 decisions,DF-ASR-2026-0D0C,f2be1904ca879b5d
 decisions,DF-ASR-2026-0D0D,4937e11433210f82
-decisions,DF-ASR-2026-0D0E,d34099cb3d0622fd
+decisions,DF-ASR-2026-0D0E,9b746b71ce351607
 decisions,DF-ASR-2026-0D0F,80be8e9059eb5214
 decisions,DF-ASR-2026-0D10,6ee10af8b8adabad
 decisions,DF-ASR-2026-0E01,271b70a8ff6150b6
@@ -444,7 +444,7 @@ file,findings/clarity-and-edf-assessment.md,a71a316d62c5844f
 file,findings/counsel-and-auditor-questions.md,6f0408ae7e851043
 file,findings/executive-findings.md,e6c6f43e92b2ead0
 file,findings/financial-integrity-review.md,66519ca6ca391e9d
-file,findings/reviews/RV-ASR-2026-11-26.md,d4dc2616db58fa0e
+file,findings/reviews/RV-ASR-2026-11-26.md,7bafe279b1179c5f
 file,findings/validation-report.md,031bc4cce2ed8ac2
 file,global.json,b48d6da8fa62c0da
 file,policies/drafts/POL-01-assurance-governance.md,6222818163909251

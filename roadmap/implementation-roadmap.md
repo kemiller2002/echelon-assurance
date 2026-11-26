@@ -7,7 +7,7 @@ created: 2026-11-25
 inputs: [controls/control-catalog.csv, roadmap/generated/controls-by-phase.md, registers/open-questions.csv, integration/proposed-changes.md, economics/compliance-economics.md]
 ---
 
-> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`; updated for owner directions DF-ASR-2026-0D0F and 0D10).** Where the history below plans contracted reviewers, counsel memos or pre-launch external tests, the owner directions govern: none is engaged now, and each is reassessed when legally required, commercially necessary or when material uncertainty cannot otherwise be resolved. The dependency-driven backlog is now `roadmap/backlog.csv` (62 work items across echelon-assurance and 14 other repositories, phases P0 to P5). Its generated view is `roadmap/generated/backlog-by-phase.md`. The validator rejects a dependency on a later phase and dependency cycles.
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`; updated for owner directions DF-ASR-2026-0D0F and 0D10).** Where the history below plans contracted reviewers, counsel memos or pre-launch external tests, the owner directions govern: none is engaged now, and each is reassessed when legally required, commercially necessary or when material uncertainty cannot otherwise be resolved. The dependency-driven backlog is now `roadmap/backlog.csv` (63 work items (62 live, 1 withdrawn) across echelon-assurance and 14 other repositories, phases P0 to P5). Its generated view is `roadmap/generated/backlog-by-phase.md`. The validator rejects a dependency on a later phase and dependency cycles.
 >
 > Phase meanings follow the mission:
 > - **P0** requirements reconciliation;
