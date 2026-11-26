@@ -67,7 +67,7 @@ inventory, evidence types, `requirements/organizational-governance.md` (GOV-BC-0
 5. **Freshness per answer, derived from evidence.** Each answer's `evidence_freshness_rule`
    should be computed from its controls' `validation_frequency` (for example daily controls
    imply 1-day evidence); until operating, a 90-day catalog-snapshot rule applies.
-6. **Approval routing from content.** `owner+counsel` whenever an answer touches notification
+6. **Approval routing from content.** `owner+legal-research` (owner approval after recorded legal research; external advice only on a recorded trigger, ODP-12) whenever an answer touches notification
    deadlines, data location, retention, insurance, audit rights, legal applicability or
    contract terms; `owner` otherwise. No answer has `none`, because GOV-BC-019 and DD-GOV-001
    require human approval before any release, and agents draft but do not send (POL-11.02).

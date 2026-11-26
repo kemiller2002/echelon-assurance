@@ -62,7 +62,7 @@ CTL-TEN-001, CTL-SDL-001/002, CTL-FIN-001/002), and sampling elsewhere
 | 021 recoverability and replay | Replay triggering external side effects | Not designed explicitly before | Medium | Keep (new CTL-FIN-017); replay must never re-emit external effects |
 | 022 sponsor configuration | Tenant override of mandatory safeguards | Designed (TEN-002) | Low | Keep; mandatory safeguards non-configurable by type |
 | 023 exception management | Silent write-off via adjustment | Partly (FIN-004, FIN-011) | Low | Keep |
-| 024 retention | Conflicting holds across sponsors and jurisdictions | Designed (DAT-002) | Medium | Keep; hold precedence rule needs counsel input (OQ-502) |
+| 024 retention | Conflicting holds across sponsors and jurisdictions | Designed (DAT-002) | Medium | Keep; hold precedence rule needs a recorded legal resolution (OQ-502; internal research, external advice only on a recorded trigger) |
 
 ## What these requirements do not do
 

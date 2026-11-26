@@ -18,7 +18,7 @@ CI passed on every pushed commit of PR #3.
 |---|---|---|
 | Formatting | `dotnet fantomas --check src tests` | pass |
 | Build | `dotnet build Echelon.Assurance.sln -c Release` | 0 errors, 0 warnings |
-| Unit and repository tests | `dotnet test` | 64 passed, 0 failed (33 before this initiative) |
+| Unit and repository tests | `dotnet test` | 64 passed at consolidation (33 before this initiative); 84 passed after the final reconciliation (2026-11-26, section 4) |
 | Register validation and traceability | `assurance validate .` | `OK: all registers valid` |
 | Fragment merge | `assurance merge --check .` | no warnings |
 | Generated views current | `assurance roadmap`, `trace`, `econ`, `tco`, then `git diff --exit-code` | current |
@@ -64,7 +64,7 @@ round actively tried to disprove the previous conclusions. All findings are in
 
 **The most consequential corrections the passes forced:**
 
-1. **Economics conclusion reversed twice.** The first run favored targeted automation, then the hybrid. Once maintenance, non-reliance, mandatory gates and reviewer growth were charged to every alternative, the evidence supports minimum viable assurance. Internal automation shows no clear cash saving at one or two products. Evidence-collection automation pays only with auditor reliance and scale.
+1. **Economics conclusion reversed twice.** The first run favored targeted automation, then the hybrid. Once maintenance, non-reliance, mandatory gates and reviewer growth were charged to every alternative, the evidence supports minimum viable assurance. Internal automation shows no clear cash saving at one or two products. Evidence-collection automation pays only with auditor reliance and scale. *(Superseded for decisions by the ODP-09 recalculation, DF-ASR-2026-0D0F: costs are now separated by evidence purpose, no product-count threshold applies, and statements that evidence automation pays only with auditor reliance and scale no longer hold; see `economics/v2/README.md`.)*
 2. **FinCEN analysis.** Limb (i)(B), "any other person engaged in the transfer of funds", had been omitted. A legal reading was stated as fact. Counsel is now a pre-launch owner decision (ODP-12).
 3. **Evidence storage.** The replacement for the custom ledger was not actually immutable in the interim. A compliance-mode retention lock now applies from the first production evidence.
 4. **Independence wording.** Owner-administered reconciliation, heartbeat and alerts were called "independent". They are separately credentialed and detect failure, not owner action.
@@ -104,7 +104,7 @@ The owner then pushed `docs/decisions/owner-review-direction-2026-11-25.md`, reg
 - **Risks.** RSK-064 added.
 - **Customer answers.** CAQ-005 and CAQ-049 updated.
 
-Validation was rerun after reconciliation: 64 tests pass and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
+Validation was rerun after reconciliation (64 tests at that point; 84 after the final reconciliation, section 4) and all registers validate. Challenge round 5 reviewed the reconciliation (section 3c).
 
 ## 3b. Owner remaining approvals and Praxis installation
 

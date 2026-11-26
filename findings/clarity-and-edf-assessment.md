@@ -119,7 +119,7 @@ capability work and external answers.
 **Unknowns:**
 - The owner's current intent on observability (0D0D versus the Registry record).
 - Auditor reliance on system-generated evidence.
-- Counsel's view of the payment-partner rail.
+- The legal characterization of the payment-partner rail (internal research; external advice only after an owner reassessment).
 - The actual cost of maintaining internal automation.
 
 **Next Responsible Action:** the owner reviews `docs/decisions/owner-decision-package-2026-11-25.md`, and the protected-branch ruleset is applied (WI-ASR-03).

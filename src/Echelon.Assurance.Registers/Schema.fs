@@ -771,7 +771,7 @@ let registers: RegisterSpec list =
                     ]
                 "implementation_status", set [ "designed"; "not-started"; "not-applicable"; "unknown"; "operating" ]
                 "disclosure_class", set [ "public"; "customer-nda"; "restricted" ]
-                "approval_required", set [ "none"; "owner"; "owner+counsel" ]
+                "approval_required", set [ "none"; "owner"; "owner+legal-research" ]
             ]
             [
                 "source_ids", "sources"

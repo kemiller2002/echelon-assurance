@@ -41,7 +41,7 @@ Each record carries:
 | CA-KB-3 | Unknown is not yes. Answers that depend on open questions say "Not yet determined" and cite the question. |
 | CA-KB-4 | Each answer has a freshness rule. An answer whose evidence is stale or revoked reverts to unknown (BR-ASR-004). |
 | CA-KB-5 | Disclosure classes are `public`, `customer-nda` and `restricted`. Answers about planned or missing preventive controls are never public (due-diligence rule TC-RED-003). |
-| CA-KB-6 | Release requires approval: owner for all answers; owner plus counsel for legal, notification, insurance, data-location and contractual answers. No answer is approved as of 2026-11-25. |
+| CA-KB-6 | Release requires approval: owner for all answers; owner after recorded legal research (primary sources and multiple-agent review; external advice only on a recorded trigger, DF-ASR-2026-0D0F) for legal, notification, insurance, data-location and contractual answers. No answer is approved as of 2026-11-25. |
 | CA-KB-7 | Customer-specific questions not in the bank are answered manually, then considered for addition after two occurrences. Volume and effort are tracked (BR-GOV-015). |
 | CA-KB-8 | Material AI involvement in generated answers is disclosed to reviewers (BR-AI-008). Generated answers cite sources (BR-ASR-011). |
 | CA-KB-9 | The due-diligence repository's controls (ECTL, 642) and evidence requirements (EVR, 617) are crosswalked to this catalog before answers from either are reused (WI-ASR-04). The broken references BND-06 and DDT-04 in `requirements/continuous-assurance-requirements.md` are corrected through that crosswalk. |

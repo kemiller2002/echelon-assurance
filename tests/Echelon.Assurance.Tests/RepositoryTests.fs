@@ -174,6 +174,52 @@ let ``corrupted committed registers fail validation`` () =
          >> List.map (Map.add "validation_ids" "VAL-041"))
     |> reports "Tested"
 
+    // Round 3 (reviewer H): emptied gate lists, closing legal questions, removing owner requirements.
+    corrupt
+        "production_gates"
+        (List.map (fun g ->
+            if g["gate_id"] = "PG-03" then
+                g
+                |> Map.add "work_item_ids" ""
+                |> Map.add "control_ids" ""
+                |> Map.add "status" "met"
+            else
+                g))
+    |> reports "PG-03 control_ids should be"
+
+    corrupt
+        "production_gates"
+        (List.map (fun g ->
+            if g["gate_id"] = "PG-03" then
+                g |> Map.add "evidence_refs" "otherrepo:FAKE-1"
+            else
+                g))
+    |> reports "names no record"
+
+    corrupt
+        "question_dispositions"
+        (List.map (fun d ->
+            if d["oq_id"] = "OQ-216" then
+                d
+                |> Map.add "proposed_status" "superseded"
+                |> Map.add "classification" "superseded"
+                |> Map.add "evidence_refs" "README.md"
+            else
+                d))
+    |> reports "OQ-216 is superseded but classified"
+
+    corrupt
+        "source_dispositions"
+        (List.map (fun d ->
+            if d["source_req_id"] = "FIN-BC-013" then
+                d
+                |> Map.add "disposition" "remove"
+                |> Map.add "baseline_ids" ""
+                |> Map.add "rationale" "Not needed."
+            else
+                d))
+    |> reports "FIN-BC-013 is remove without an accepted decision"
+
     // Round 2 (reviewer G): irrelevant or invented evidence.
     corrupt
         "production_gates"
@@ -298,3 +344,50 @@ let ``every committed CSV row has as many fields as its header`` () =
         |> List.ofSeq
 
     Assert.True(List.isEmpty bad, String.concat "\n" bad)
+
+/// Ratchet (round 3, reviewer H): closing a question or narrowing the
+/// requirement set is a governed change. Any change to these sets must edit
+/// this test in the same pull request, citing the owner decision that
+/// authorizes it, so it is visible in review.
+[<Fact>]
+let ``closed questions and removed or deferred source items match the governed record`` () =
+    let closedQuestions =
+        set
+            [
+                "OQ-304"
+                "OQ-505"
+                "OQ-509"
+                "OQ-611"
+                "OQ-705"
+                "OQ-708"
+                "OQ-751"
+                "OQ-753"
+                "OQ-759"
+                "OQ-760"
+                "OQ-800"
+                "OQ-801"
+                "OQ-802"
+                "OQ-803"
+                "OQ-805"
+                "OQ-806"
+                "OQ-807"
+                "OQ-808"
+                "OQ-809"
+            ]
+
+    let narrowed = set [ "ECON-017"; "REC-04"; "VAL-BC-013" ]
+
+    let actualClosed =
+        records "question_dispositions"
+        |> List.filter (fun q -> q["proposed_status"] <> "open")
+        |> List.map (fun q -> q["oq_id"])
+        |> set
+
+    let actualNarrowed =
+        records "source_dispositions"
+        |> List.filter (fun d -> d["disposition"] = "remove" || d["disposition"] = "defer")
+        |> List.map (fun d -> d["source_req_id"])
+        |> set
+
+    Assert.Equal<Set<string>>(closedQuestions, actualClosed)
+    Assert.Equal<Set<string>>(narrowed, actualNarrowed)

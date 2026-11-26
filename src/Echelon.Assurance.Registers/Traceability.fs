@@ -447,7 +447,12 @@ let capabilityBasis (capabilities: Record list) =
     @ (capabilities
        |> List.filter (fun c ->
            field c "verification_basis" = "tests-executed"
-           && (field c "test_evidence").Trim() = "")
+           && not (
+               System.Text.RegularExpressions.Regex.IsMatch(
+                   field c "test_evidence",
+                   @"(?i)\d+\s*(/\s*\d+\s*)?(passed|checks|pass\b)"
+               )
+           ))
        |> List.map (fun c ->
            sprintf
                "integration/capability-verification.csv: %s claims executed tests without test evidence"
@@ -678,7 +683,13 @@ let questionCompleteness (dispositions: Record list) =
                 [
                     sprintf "registers/question-dispositions.csv: %s is open but classified %s" id cls
                 ]
-            | "superseded" when cls <> "superseded" || (field d "evidence_refs").Trim() = "" ->
+            | "superseded" when
+                cls <> "superseded"
+                || not (
+                    items d "evidence_refs"
+                    |> List.exists (fun r -> r.StartsWith("OQ-") || r.StartsWith("DF-ASR-"))
+                )
+                ->
                 [
                     sprintf
                         "registers/question-dispositions.csv: %s is superseded but classified %s or names no superseding record"
@@ -795,6 +806,43 @@ let productionGatesWith
            items g "question_ids"
            |> List.filter openIds.Contains
            |> List.map (sprintf "registers/production-gates.csv: %s is met while %s is open" (field g "gate_id"))))
+    @ (if List.isEmpty backlog then
+           []
+       else
+           let byBr = baseline |> List.map (fun b -> field b "br_id", b) |> Map.ofList
+
+           gates
+           |> List.collect (fun g ->
+               let brs = items g "br_ids"
+
+               let expectedControls =
+                   brs
+                   |> List.choose (fun b -> Map.tryFind b byBr)
+                   |> List.collect (fun b -> items b "control_ids")
+                   |> set
+
+               let expectedWork =
+                   backlog
+                   |> List.filter (fun w ->
+                       field w "status" <> "withdrawn"
+                       && items w "requirements_addressed" |> List.exists (fun r -> List.contains r brs))
+                   |> List.map (fun w -> field w "work_item_id")
+                   |> set
+
+               (if List.isEmpty brs then
+                    [
+                        sprintf "registers/production-gates.csv: %s cites no requirement" (field g "gate_id")
+                    ]
+                else
+                    [])
+               @ ([ "control_ids", expectedControls; "work_item_ids", expectedWork ]
+                  |> List.filter (fun (c, e) -> set (items g c) <> e)
+                  |> List.map (fun (c, e) ->
+                      sprintf
+                          "registers/production-gates.csv: %s %s should be %s"
+                          (field g "gate_id")
+                          c
+                          (String.concat ";" e)))))
     @ (let workStatus =
         backlog
         |> List.map (fun w -> field w "work_item_id", field w "status")
@@ -828,16 +876,66 @@ let identifierReferences (loaded: Loaded) =
         |> List.collect (fun s -> records loaded s.Name |> List.map (fun r -> field r s.IdColumn))
         |> set
 
-    let isPath (r: string) =
-        r.Contains "/" || r.Contains "." || r.Contains ":"
+    let repositories =
+        records loaded "systems"
+        |> List.choose (fun s ->
+            let m =
+                System.Text.RegularExpressions.Regex.Match(field s "repository", @"kemiller2002/([a-z0-9-]+)")
+
+            if m.Success then Some m.Groups[1].Value else None)
+        |> set
+
+    let isPath (r: string) = r.Contains "/" || r.Contains "."
+
+    let externalKnown (r: string) =
+        match r.Split ':' with
+        | [| repo; _ |] -> repositories.Contains repo
+        | _ -> false
 
     [ "question_dispositions", "oq_id"; "production_gates", "gate_id" ]
     |> List.collect (fun (name, idCol) ->
         records loaded name
         |> List.collect (fun r ->
             items r "evidence_refs"
-            |> List.filter (fun x -> not (isPath x) && not (known.Contains x))
+            |> List.filter (fun x ->
+                not (isPath x)
+                && not (known.Contains x)
+                && not (x.Contains ":" && externalKnown x))
             |> List.map (sprintf "%s: %s evidence identifier '%s' names no record" name (field r idCol))))
+
+/// A question answered by owner decision cites an accepted decision.
+let ownerDecisionAnswers (dispositions: Record list) (decisions: Record list) =
+    let accepted =
+        decisions
+        |> List.filter (fun d -> field d "status" = "accepted")
+        |> List.map (fun d -> field d "decision_id")
+        |> set
+
+    dispositions
+    |> List.filter (fun d ->
+        field d "proposed_status" = "answered"
+        && field d "classification" = "resolved-owner-decision"
+        && not (items d "evidence_refs" |> List.exists accepted.Contains))
+    |> List.map (fun d ->
+        sprintf "registers/question-dispositions.csv: %s cites no accepted owner decision" (field d "oq_id"))
+
+/// Removing or deferring a source item needs an accepted decision cited in the
+/// rationale (owner authority for narrowing the requirement set).
+let removalAuthority (dispositions: Record list) (decisions: Record list) =
+    let accepted =
+        decisions
+        |> List.filter (fun d -> field d "status" = "accepted")
+        |> List.map (fun d -> field d "decision_id")
+
+    dispositions
+    |> List.filter (fun d ->
+        (field d "disposition" = "remove" || field d "disposition" = "defer")
+        && not (accepted |> List.exists (fun a -> (field d "rationale").Contains a)))
+    |> List.map (fun d ->
+        sprintf
+            "requirements/source-dispositions.csv: %s is %s without an accepted decision in its rationale"
+            (field d "source_req_id")
+            (field d "disposition"))
 
 let errors (loaded: Loaded) =
     let r = records loaded
@@ -870,6 +968,8 @@ let errors (loaded: Loaded) =
     @ questionCompleteness (r "question_dispositions")
     @ productionGatesWith (r "production_gates") baseline (r "question_dispositions") (r "backlog") controls
     @ identifierReferences loaded
+    @ ownerDecisionAnswers (r "question_dispositions") (r "decisions")
+    @ removalAuthority (r "source_dispositions") (r "decisions")
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 
