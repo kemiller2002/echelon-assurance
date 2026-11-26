@@ -125,9 +125,12 @@ None of these is monetized. Without reliance, automation does not reduce owner h
   - continuous security testing.
 - **Defer** collection automation whose only purpose is audit evidence.
 
-## ODP-09 recalculation (owner direction DF-ASR-2026-0D0F, 2026-11-26)
+## ODP-09 recalculation (owner direction DF-ASR-2026-0D0F and owner brief of 2026-11-26)
 
-The owner directed that costs be separated by purpose, recalculated across
+Owner direction 0D0F (2026-11-25) required a recalculation without assuming
+auditor reliance. The owner brief of 2026-11-26
+(`docs/charter/final-reconciliation-brief-2026-11-26.md`) directed that costs
+be separated by purpose, recalculated across
 product counts 1, 2, 5, 10 and 15 and across reliance cases, and that **no
 product-count threshold** gate investment. The originals are preserved (v1 in
 `economics/`, scenarios S0–S8 unchanged in definition); the additions are:

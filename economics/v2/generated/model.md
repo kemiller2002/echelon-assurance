@@ -350,7 +350,7 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $2,126k | $2,556k | $3,847k | $5,997k | $8,148k |
 | A8-mvp-plus-prevention | $1,438k | $1,923k | $3,380k | $5,808k | $8,235k |
 
-Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (ODP-09, owner brief of 2026-11-26).
 
 ### S9-no-exam
 
@@ -369,7 +369,7 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $1,580k | $1,777k | $2,370k | $3,358k | $4,346k |
 | A8-mvp-plus-prevention | $1,032k | $1,367k | $2,372k | $4,048k | $5,724k |
 
-Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (ODP-09, owner brief of 2026-11-26).
 
 ### S10-partial-reliance
 
@@ -388,7 +388,7 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $2,106k | $2,472k | $3,569k | $5,397k | $7,225k |
 | A8-mvp-plus-prevention | $1,413k | $1,883k | $3,295k | $5,648k | $8,000k |
 
-Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (ODP-09, owner brief of 2026-11-26).
 
 ### S11-full-reliance
 
@@ -407,7 +407,7 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $1,998k | $2,300k | $3,203k | $4,709k | $6,215k |
 | A8-mvp-plus-prevention | $1,388k | $1,843k | $3,210k | $5,488k | $7,765k |
 
-Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (ODP-09, owner brief of 2026-11-26).
 
 ### S12-customer-specific
 
@@ -426,12 +426,12 @@ Five-year incremental assurance cost, midpoint (low–high in the base case tabl
 | A7-full-internal-platform | $1,645k | $1,873k | $2,557k | $3,697k | $4,838k |
 | A8-mvp-plus-prevention | $1,124k | $1,505k | $2,648k | $4,553k | $6,459k |
 
-Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F).
+Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (ODP-09, owner brief of 2026-11-26).
 
 
 ## Five-year cost by evidence purpose (midpoint, includes baseline engineering)
 
-Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`.
+Purpose classes per the owner brief of 2026-11-26 (ODP-09, with DF-ASR-2026-0D0F). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`.
 
 ### S8-owner-direction, A4-mvp-echelon
 

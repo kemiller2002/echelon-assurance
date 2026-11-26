@@ -215,7 +215,7 @@ ODP-05,docs/decisions/owner-review-direction-2026-11-25.md,,strengthen,BR-FIN-02
 ODP-06,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-LOG-001;BR-LOG-002;BR-ASR-008,Vigila retained as shared observability interfaces on managed infrastructure.
 ODP-07,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-APP-001;BR-APP-014,Thin Strata runtime with responsibility split.
 ODP-08,docs/decisions/owner-remaining-approvals-2026-11-25.md,,strengthen,BR-AI-004,Restricted research agents; continuous adversarial testing; residual risk not accepted.
-ODP-09,docs/decisions/owner-review-direction-2026-11-25.md,,replace,BR-GOV-015,Evidence-purpose classification replaces staged product-count gating (C005 superseded).
+ODP-09,docs/decisions/owner-review-direction-2026-11-25.md,,replace,BR-GOV-015,Evidence-purpose classification replaces staged product-count gating (C005 superseded); classification details from the owner brief of 2026-11-26 (docs/charter/final-reconciliation-brief-2026-11-26.md).
 ODP-10,docs/decisions/owner-remaining-approvals-2026-11-25.md,,retain,BR-SDL-001;BR-FIN-006;BR-FIN-015;BR-FIN-024;BR-AI-001,Organizational standards confirmed.
 ODP-11,docs/decisions/owner-review-direction-2026-11-25.md,,replace,BR-VUL-012;BR-VAL-003,Pre-activation risk assessment replaces an unconditional external test.
 ODP-12,docs/decisions/owner-review-direction-2026-11-25.md,,replace,BR-FIN-020;BR-VAL-003;BR-GOV-009,Activation gates and prepared legal questions replace counsel engagement.

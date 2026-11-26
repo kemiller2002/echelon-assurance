@@ -142,7 +142,7 @@ baseline,BR-GOV-011,b2f27721b1f69e84
 baseline,BR-GOV-012,2c5a56ba22f62e9a
 baseline,BR-GOV-013,42bd026fd3db8307
 baseline,BR-GOV-014,f0c1a995c1bc7f1a
-baseline,BR-GOV-015,01ec15f3ad66cd98
+baseline,BR-GOV-015,6007bfc84ac8c39f
 baseline,BR-GOV-016,48985c37f0586201
 baseline,BR-GOV-017,aed31ea4be0f6aeb
 baseline,BR-HR-001,7e5e338d004cc484
@@ -335,7 +335,7 @@ decision_traceability,ODP-05,8ebd89ce4bb7b97d
 decision_traceability,ODP-06,fb4b5eb2c2ac8bff
 decision_traceability,ODP-07,589850b6ba19098e
 decision_traceability,ODP-08,b93fcb59432730ba
-decision_traceability,ODP-09,a640e63125a92a75
+decision_traceability,ODP-09,a06b993978d876ca
 decision_traceability,ODP-10,5ba199c979496e44
 decision_traceability,ODP-11,0e240ccf62757b89
 decision_traceability,ODP-12,7db22565e677fb2c
@@ -410,7 +410,7 @@ file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,PROJECT-CHARTER.md,e26e3ea1065587c0
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
-file,docs/charter/final-reconciliation-brief-2026-11-26.md,7bb8add47b6d5cbb
+file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
 file,docs/charter/research-brief-2026-11-25.md,9ed149be7d180773
 file,docs/decisions/DF-ASR-2026-0E01--owner-approves-reconciled-baseline.md,574eb436c7d9578c
 file,docs/decisions/DF-ASR-2026-3A1E--no-new-system-evidence-ledger-extends-arca.md,3a3211757f4894d5
@@ -441,10 +441,10 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,26b4c749a133bfdb
 file,findings/clarity-and-edf-assessment.md,a71a316d62c5844f
-file,findings/counsel-and-auditor-questions.md,03f8912029b207ae
+file,findings/counsel-and-auditor-questions.md,3e99c64e4224257c
 file,findings/executive-findings.md,e6c6f43e92b2ead0
 file,findings/financial-integrity-review.md,66519ca6ca391e9d
-file,findings/reviews/RV-ASR-2026-11-26.md,85c28faa6e7b081a
+file,findings/reviews/RV-ASR-2026-11-26.md,f0982c7cead23836
 file,findings/validation-report.md,2bef0e76f8cdba01
 file,global.json,b48d6da8fa62c0da
 file,policies/drafts/POL-01-assurance-governance.md,6222818163909251
@@ -476,7 +476,7 @@ file,src/Echelon.Assurance.Cli/Echelon.Assurance.Cli.fsproj,b512aac6c08e03c4
 file,src/Echelon.Assurance.Cli/Program.fs,ae076ea8ebe7b79d
 file,src/Echelon.Assurance.Registers/Csv.fs,7806fdcb34ea236b
 file,src/Echelon.Assurance.Registers/Echelon.Assurance.Registers.fsproj,3e2a5ded3dbf9f35
-file,src/Echelon.Assurance.Registers/Economics.fs,f747a88548c6ac57
+file,src/Echelon.Assurance.Registers/Economics.fs,43542cf0ffd04ffe
 file,src/Echelon.Assurance.Registers/Governed.fs,3a4032e55a78a0a6
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
 file,src/Echelon.Assurance.Registers/Roadmap.fs,27ba2959764926ca
@@ -1489,7 +1489,7 @@ source_dispositions,ODP-05,5027a1a0ec1f8ac1
 source_dispositions,ODP-06,c51e35033eeaa4ba
 source_dispositions,ODP-07,caefc17652716a2a
 source_dispositions,ODP-08,f9c3e0b83b48e999
-source_dispositions,ODP-09,3af52db4002d8119
+source_dispositions,ODP-09,3a74b7ed1ce3233d
 source_dispositions,ODP-10,b6258e4a873c62a1
 source_dispositions,ODP-11,e86d78f8fdcf91a0
 source_dispositions,ODP-12,7f4f0a6f4d38ba4a

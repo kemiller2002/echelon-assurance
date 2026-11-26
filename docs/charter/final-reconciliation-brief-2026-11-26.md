@@ -27,6 +27,16 @@ Items the brief introduced as organizational tenets:
   legally required, commercially necessary, or material uncertainty that
   cannot otherwise be resolved.
 
+The brief also detailed ODP-09 beyond the 0D0F record: recalculate economics
+separating baseline engineering, operational visibility, financial integrity,
+prevention, continuous validation, operational evidence, shared
+infrastructure, auditor-specific packaging and external services; model 1, 2,
+5, 10 and 15 products and no-examination, partial-reliance, full-reliance and
+customer-specific cases; apply no product-count thresholds; preserve the
+originals and regenerate. (0D0F itself says: prioritize reusable continuous
+assurance and operational evidence; no external consulting budget;
+recalculate without assuming auditor reliance.)
+
 The brief also restated ODP-07 as a thin Strata runtime with "no ORM". The
 owner record `owner-remaining-approvals-2026-11-25.md` says "avoid unnecessary
 ORM complexity"; the repository follows the brief's stricter wording and cites

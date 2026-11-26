@@ -45,7 +45,7 @@ type Scenario =
         CustomerMultiplier: float
     }
 
-/// Evidence-purpose classes (owner direction DF-ASR-2026-0D0F, ODP-09).
+/// Evidence-purpose classes (ODP-09: owner brief of 2026-11-26, with DF-ASR-2026-0D0F).
 let purposes =
     [
         "baseline-engineering"
@@ -378,7 +378,7 @@ let private purposeSection all (scenarios: Scenario list) (alternatives: string 
             ""
             "## Five-year cost by evidence purpose (midpoint, includes baseline engineering)"
             ""
-            "Purpose classes per owner direction DF-ASR-2026-0D0F (ODP-09). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`."
+            "Purpose classes per the owner brief of 2026-11-26 (ODP-09, with DF-ASR-2026-0D0F). Assignment of each activity to a purpose is a hypothetical classification recorded in `activities.csv`."
         ]
         @ (chosen |> List.collect (fun s -> alts |> List.collect (one s)))
 
@@ -416,7 +416,7 @@ let renderMarkdown all (scenarios: Scenario list) (alternatives: string list) =
         @ [ "" ]
         @ (if List.contains s.Id purposeScenarios then
                [
-                   "Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (DF-ASR-2026-0D0F)."
+                   "Break-even is not reported for ODP-09 scenarios: no product-count threshold gates investment (ODP-09, owner brief of 2026-11-26)."
                    ""
                ]
            else

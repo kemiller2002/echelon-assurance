@@ -20,7 +20,7 @@ Common facts for every package:
 - Controls are designed for SOC 1 type 2 and SOC 2 type 2 across all five trust categories (decision 2). GLBA Safeguards Rule elements are the design baseline, adopted without claiming they legally apply (decision 3).
 - AI agents act within delegated tiers; in financial domains AI agents are capped at A2; they never prepare, alter or release payment instructions and never authorize, approve or release money movement in any scope (BR-AI-001, BR-FIN-006, DF-ASR-2026-C004); financial execution is deterministic under a recorded human authorization or an established recurring authority set by a human, and enforced technical gates apply (decision 4; ODP-10).
 
-Preconditions: the owner has decided the US-only scope, the card deferral and
+Preconditions: the owner has decided US-first operations, the card deferral and
 the sponsor-controlled-funds constraint (ODP-05, ODP-10). Remaining: the intended
 contracting entity (OQ-102), and an owner reassessment under 0D0F before any
 package is sent.
