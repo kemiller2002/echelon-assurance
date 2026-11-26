@@ -78,12 +78,12 @@ accepts is traceable to a control, an owner and evidence.
 1. An exception records: the requirement or control affected, scope, reason,
    risk, compensating controls, expiry (maximum 12 months), requester and
    approver.
-2. No agent may approve an exception; exceptions requested by agents are
-   approved by the owner. A material exception is never self-approved: the
-   approver may not be the requester or anyone reporting solely to the
-   requester, so an owner-originated material exception is blocked, or the
-   action redesigned, until a separate qualified approver exists (BR-GOV-004,
-   DF-ASR-2026-0D0F).
+2. The approver may not be the requester or anyone reporting solely to the
+   requester (CTL-GOV-007); no agent may approve an exception, and exceptions
+   requested by agents are approved by the owner. In particular, no material
+   exception is self-approved: an owner-originated material exception is
+   blocked, or the action redesigned, until a separate qualified approver
+   exists (BR-GOV-004, DF-ASR-2026-0D0F).
 3. Expired exceptions automatically become control failures.
 
 ## 06 Delegation of authority

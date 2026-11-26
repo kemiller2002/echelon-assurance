@@ -18,7 +18,7 @@ confidence: medium
 > - **Obligation classes.** The five classes (executable decision, configuration constraint, scheduled obligation, human judgment, external obligation) are now a column of every baseline requirement (`enforcement_class`), so the policy model can be generated from the baseline.
 > - **Generation.** Generation is required only where it removes duplicated maintenance (BR-GOV-002, *simplify*).
 > - **Authorization engine.** F# pure decisions stay the default; Cedar is not adopted (OQ-509).
-> - **Precedence.** The order is: mandatory legal and platform safeguards; then Echelon policy; then sponsor policy; then tenant configuration. Unresolved conflicts deny or route to review (BR-GOV-004, BR-FIN-017).
+> - **Precedence.** The order is: mandatory legal and platform safeguards; then Echelon policy; then sponsor policy; then tenant configuration. Unresolved conflicts deny or route to review (PEC-007, BR-FIN-017).
 > - **Lifecycle.** Approval binds the policy digest. Activation, rollback and expiry are BR-GOV-003.
 >
 > The first implementation slice is WI-ASR-06. Where this document conflicts with the baseline, the baseline governs.

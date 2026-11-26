@@ -78,7 +78,7 @@ Economically viable mitigations, in order:
 
 1. Design so the sponsor is the second party for money.
 2. Use the technical verifier for routine work.
-3. Use the internal multi-agent review protocol for development review (BR-VAL-004, `methodology/review-protocol.md`); no fractional reviewer is contracted now (owner direction DF-ASR-2026-0D0F). Reassess on the owner's triggers in DF-ASR-2026-0D0F (TNT-18): legally required, commercially necessary, or material uncertainty that cannot otherwise be resolved; an observation period, production risk acceptance or an obligation requiring organizational independence are examples.
+3. Use the internal multi-agent review protocol for development review (BR-VAL-004, `methodology/review-protocol.md`); no fractional reviewer is contracted now (owner direction DF-ASR-2026-0D0F). Reassess on the owner's triggers in DF-ASR-2026-0D0F (TNT-18): legally required, commercially necessary, or material uncertainty that cannot otherwise be resolved; in the repository's interpretation (not owner text), an observation period, production risk acceptance or an obligation requiring organizational independence would be instances.
 4. Escalate to a second hire only when workload or obligations justify it (BR-GOV-011 metrics).
 
 No personnel, approvals or reviewers are invented here.

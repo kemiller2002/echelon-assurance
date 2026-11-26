@@ -481,7 +481,7 @@ file,framework/standards/IDENTIFIERS.md,18c7f078aef2e319
 file,framework/standards/NAMING-STANDARD.md,fec4343ab4b8d149
 file,framework/standards/TAXONOMY.md,91fbbd647a090d10
 file,global.json,b48d6da8fa62c0da
-file,governance/operating-model.md,54ebb3c629a132f9
+file,governance/operating-model.md,4bf99ebdd3fbcb9a
 file,integration/capability-findings.md,c5b68d9d5c40aa12
 file,integration/echelon-integration-matrix.md,babd05395746f435
 file,integration/proposed-changes.md,934bdfb05351b6c1
@@ -490,7 +490,7 @@ file,methodology/research-methodology.md,50096ce4322b2e32
 file,methodology/review-protocol.md,d26aea16300b8ac2
 file,pentest/penetration-testing-research.md,31f1af1a4222ccaa
 file,pentest/unbound-minimum-cost-testing-strategy.md,2cb61a417087f85f
-file,policies/drafts/POL-01-assurance-governance.md,e5bd2d569dd35d5f
+file,policies/drafts/POL-01-assurance-governance.md,599faa69d9d7778a
 file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
 file,policies/drafts/POL-03-people-security.md,b9b107dff77d24ea
 file,policies/drafts/POL-04-identity-and-access.md,ed818d48c577dced
@@ -504,7 +504,7 @@ file,policies/drafts/POL-11-ai-and-autonomous-systems.md,33b8d908cac1b87a
 file,policies/drafts/POL-12-financial-operations-integrity.md,eb10e6e6d3e957c6
 file,policies/drafts/POL-13-customer-operations.md,f551e29882feb7e0
 file,policies/policy-inventory.md,c74ee7381b270eab
-file,policy-as-code/policy-as-code-specification.md,1e4ddfc98454e6fb
+file,policy-as-code/policy-as-code-specification.md,b9652e1b1e1c649a
 file,policy-as-code/tool-evaluation.md,824f4b2370f04db7
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
 file,regulatory/regulatory-applicability-matrix.md,592ec348b0fc4b00
