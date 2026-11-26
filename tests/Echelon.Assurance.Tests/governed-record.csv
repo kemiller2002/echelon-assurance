@@ -12,7 +12,7 @@ backlog,WI-ASR-07,c3cf43a837658964
 backlog,WI-ASR-08,d70c7f691ec43fc8
 backlog,WI-ASR-09,fe6c3171a83c65be
 backlog,WI-ASR-10,3b4591fde25fb119
-backlog,WI-ASR-11,adb620da01e4418b
+backlog,WI-ASR-11,71bda681a283c8c2
 backlog,WI-ASR-12,9d93f1aa45d881d3
 backlog,WI-ASR-13,88d914623453aba3
 backlog,WI-ASR-14,fb8f52948ff09d2c
@@ -27,7 +27,7 @@ backlog,WI-EXT-03,8647cee6ec28ca4f
 backlog,WI-EXT-04,ad43aaf17029987e
 backlog,WI-FIDES-01,c6af56f9d0c9a5a9
 backlog,WI-FIDES-02,815799737ff6bf86
-backlog,WI-FOLIO-01,f4b4ab854d456691
+backlog,WI-FOLIO-01,07b4d050a097aaf0
 backlog,WI-FORMA-01,8a3d1ca450368dd2
 backlog,WI-ORG-01,dd9098e338e72f8b
 backlog,WI-ORG-02,d072ebfc9c5c6e5b
@@ -141,7 +141,7 @@ baseline,BR-GOV-010,cfe2c51dca441bc0
 baseline,BR-GOV-011,b2f27721b1f69e84
 baseline,BR-GOV-012,2c5a56ba22f62e9a
 baseline,BR-GOV-013,42bd026fd3db8307
-baseline,BR-GOV-014,f0c1a995c1bc7f1a
+baseline,BR-GOV-014,fad5ff175397ae2d
 baseline,BR-GOV-015,210dd046267eed33
 baseline,BR-GOV-016,48985c37f0586201
 baseline,BR-GOV-017,aed31ea4be0f6aeb
@@ -463,12 +463,12 @@ file,findings/challenge-passes/round5-6-dispositions.csv,b3324e51262215ae
 file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,26b4c749a133bfdb
-file,findings/clarity-and-edf-assessment.md,a71a316d62c5844f
+file,findings/clarity-and-edf-assessment.md,15bae05d67902fc9
 file,findings/counsel-and-auditor-questions.md,9c7ff142fd289dfd
 file,findings/executive-findings.md,e6c6f43e92b2ead0
 file,findings/financial-integrity-review.md,66519ca6ca391e9d
-file,findings/reviews/RV-ASR-2026-11-26.md,982871175428035e
-file,findings/validation-report.md,66bc15527089ab4f
+file,findings/reviews/RV-ASR-2026-11-26.md,18f3479b72617326
+file,findings/validation-report.md,082b034423429184
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
 file,framework/policies/OUTPUT-POLICY.md,f8f0403b2ec80c1f
@@ -484,7 +484,7 @@ file,global.json,b48d6da8fa62c0da
 file,governance/operating-model.md,19d756630b8427c3
 file,integration/capability-findings.md,c5b68d9d5c40aa12
 file,integration/echelon-integration-matrix.md,babd05395746f435
-file,integration/proposed-changes.md,7bcc73169493b82f
+file,integration/proposed-changes.md,934bdfb05351b6c1
 file,methodology/identifiers.md,1a70739a1118e343
 file,methodology/research-methodology.md,50096ce4322b2e32
 file,methodology/review-protocol.md,d26aea16300b8ac2
@@ -501,9 +501,9 @@ file,policies/drafts/POL-08-incident-response-and-notification.md,de6101ae0e5e92
 file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
 file,policies/drafts/POL-11-ai-and-autonomous-systems.md,c15c1624ef95049d
-file,policies/drafts/POL-12-financial-operations-integrity.md,2b0c91534651a8eb
+file,policies/drafts/POL-12-financial-operations-integrity.md,41cffd06fe717f73
 file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
-file,policies/policy-inventory.md,6287fa883f03a960
+file,policies/policy-inventory.md,5d08b2194e5902c3
 file,policy-as-code/policy-as-code-specification.md,9f11008729a532d8
 file,policy-as-code/tool-evaluation.md,2810ac82a201172e
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
@@ -519,7 +519,7 @@ file,requirements/financial-integrity-by-construction.md,d7c711cf26a70801
 file,requirements/organizational-governance.md,451db1a155039645
 file,requirements/reconciliation-and-roadmap.md,3556f4d692e2e88d
 file,requirements/security-by-construction.md,2eaa65de0590478c
-file,roadmap/implementation-roadmap.md,80ae2ca21181f653
+file,roadmap/implementation-roadmap.md,1ded3fc0f784ff58
 file,schemas/artifact-metadata.schema.json,dfc3b8726c44dc9b
 file,schemas/ecir-approval-v1.schema.json,63730005d1310bc5
 file,schemas/evidence.schema.json,0591b832d246c107
@@ -804,7 +804,7 @@ question_bank,CAQ-029,d2891305a2ada6b0
 question_bank,CAQ-030,13f8eb2e71f12fca
 question_bank,CAQ-031,e2e9e3686d1d4ef8
 question_bank,CAQ-032,f81628a33e1ea4f8
-question_bank,CAQ-033,4e1b8636f5117584
+question_bank,CAQ-033,35aeaa5fd51f8442
 question_bank,CAQ-034,5c19acf28db8694d
 question_bank,CAQ-035,02f3eab4cf1a8b9d
 question_bank,CAQ-036,abf73ec37dc98af1
@@ -1427,7 +1427,7 @@ risks,RSK-060,c2ef5248c5e94162
 risks,RSK-061,6af11f17779ee742
 risks,RSK-062,c19fde3411a6ca12
 risks,RSK-063,c090efd9faa68a0e
-risks,RSK-064,ea92c0ee7f8ce653
+risks,RSK-064,b0fdee22832d7a90
 risks,RSK-065,b16ce9f7b2a7ea7a
 risks,RSK-066,a3f68cac3bc7ebb1
 source_dispositions,AIG-BC-001,fe6d72ad8be69ecb
@@ -2040,7 +2040,7 @@ validations,VAL-008,40bf88aa45545da7
 validations,VAL-009,5d06b1349f178a38
 validations,VAL-010,622c4d7338c8f21b
 validations,VAL-011,320be67d38b25859
-validations,VAL-012,7579a0b7e4e2b2db
+validations,VAL-012,0016ddd0794e6773
 validations,VAL-013,d2d8e1d090947400
 validations,VAL-014,e592936c9816ba4e
 validations,VAL-015,62217c1c55378fcf
@@ -2050,13 +2050,13 @@ validations,VAL-018,61a938b1cab43f12
 validations,VAL-019,6b33b6528eaafbd5
 validations,VAL-020,96358ce90b29e5ec
 validations,VAL-021,ea89b439bbdf9083
-validations,VAL-022,4c7462d5e544e0e2
+validations,VAL-022,2e47061c130fb7a1
 validations,VAL-023,5a247a2d40931768
 validations,VAL-024,5dbfd198bfd02bbb
 validations,VAL-025,ddbb2a7e0e5df2ee
-validations,VAL-026,4090ea83b6fc71a3
+validations,VAL-026,09b197dfb9612e5a
 validations,VAL-027,4a881dd5ea1a5177
-validations,VAL-028,47400896acd29780
+validations,VAL-028,c3466c0b0c06069b
 validations,VAL-029,8619451c3cd0f869
 validations,VAL-030,64373c1e8cbefa7e
 validations,VAL-031,4737bb97c1d1ba54

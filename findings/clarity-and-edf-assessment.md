@@ -239,4 +239,4 @@ The cheapest high-value steps are:
 
 - enforcing the existing checks;
 - building prevention and testing automation that has value regardless of auditor reliance;
-- obtaining one written auditor position before investing in evidence-collection automation.
+- deciding evidence-collection automation by purpose and measured manual evidence hours (ODP-09); an auditor position is sought only if a reassessment under DF-ASR-2026-0D0F authorizes it.

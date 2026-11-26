@@ -24,7 +24,7 @@ Detailed requirements: the BR-FIN rows of `requirements/baseline.csv` (DF-ASR-20
 ## 02 Accounting integrity
 1. The ledger is double-entry; every posting balances; postings are immutable.
 2. Invariants are enforced at write time and tested continuously: balanced journals, no negative fund balances where prohibited, fee calculations reproducible from versioned fee schedules, every disbursement traceable to an approved grant.
-3. Period close is a recorded event after which postings to the period require an approved adjustment.
+3. Period close is a recorded event. Ordinary postings to a hard-closed period are rejected and routed to a prior-period adjustment in the first open period; a period is never reopened after statements are issued (BR-FIN-010, DF-ASR-2026-C006).
 
 ## 03 Reconciliation
 1. Ledger positions are reconciled daily against independent sources (bank, custodian, payment processor statements) obtained directly from the source, not via a user-editable channel.

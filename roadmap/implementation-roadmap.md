@@ -46,7 +46,7 @@ Actions (owner unless stated):
    - OQ-200..202: GLBA status of sponsors and of the Echelon entity [internal
      primary-source research and precise questions; no counsel engagement now
      (DF-ASR-2026-0D0F)].
-   - OQ-754 / OQ-101: whether a first sponsor's auditor expects SOC 1 [a 30-minute
+   - OQ-754 / OQ-101: whether a first sponsor's auditor expects SOC 1 [only if a reassessment under DF-ASR-2026-0D0F authorizes it: a 30-minute
      call with the sponsor's audit firm; no fee expected (`assumption`)].
    - OQ-204 / OQ-215: what bank partners and prospective sponsors will
      actually request [ask for their vendor due-diligence questionnaire].

@@ -24,9 +24,9 @@ written policies exist; `industry-convention` for the document count.
 We therefore keep **13 policies**, each addressed to one accountable owner and
 one approval authority, with numbered sections. Each section is addressable
 (`POL-06.02`) so controls, requirements and agent instructions can cite it
-precisely. The policy text is generated from the structured policy model in
-`policy-as-code/` (one source of truth); the Markdown drafts in
-`policies/drafts/` are the human-readable rendering.
+precisely. Generating policy text from a structured policy model in
+`policy-as-code/` is planned (BR-GOV-001, BR-GOV-002) and not implemented;
+the Markdown drafts in `policies/drafts/` are currently hand-written.
 
 | Policy | Absorbs (conventional standalone documents) |
 |---|---|
