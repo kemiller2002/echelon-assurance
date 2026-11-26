@@ -415,7 +415,7 @@ file,CLAUDE.md,e401b9fc1ca10cc1
 file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,GEMINI.md,0fd756e53f9269f4
-file,HANDOFF.md,e75f9a582af69370
+file,HANDOFF.md,5ad2981bcbb92285
 file,PROJECT-CHARTER.md,b5a9b42b92925352
 file,README.md,7691a8f95f0b9ffe
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
@@ -425,7 +425,7 @@ file,architecture/evidence-envelope.schema.json,60d98a7befe5628f
 file,auditor/auditor-experience-specification.md,8384baf9452192cd
 file,automation/control-automation-matrix.md,0e0e85d369537ec5
 file,context/ARCHITECTURE.md,597841df183adb8c
-file,context/CURRENT-STATE.md,61bb222adb5e06b0
+file,context/CURRENT-STATE.md,b400fe62880618e9
 file,context/DECISIONS.md,5c8440043f359a82
 file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
@@ -469,9 +469,9 @@ file,findings/challenge-passes/round5-owner-reconciliation.csv,6b6e34ec057afd50
 file,findings/challenge-passes/round6-verification.csv,6ef6761e5d5a7a20
 file,findings/challenging-conventional-compliance.md,68763a822684b2fd
 file,findings/clarity-and-edf-assessment.md,896aa16bd483adb1
-file,findings/completion-report-2026-11-26.md,4b0c8e76d574cc5e
+file,findings/completion-report-2026-11-26.md,56e830ba2743c61c
 file,findings/counsel-and-auditor-questions.md,6011c21b8c890774
-file,findings/executive-findings.md,c18a1599662ec4f4
+file,findings/executive-findings.md,1c3678b0ee4bc59a
 file,findings/financial-integrity-review.md,ff57b38bfb7f38c9
 file,findings/reviews/RV-ASR-2026-11-26.md,dfc3f3c744ba9c1b
 file,findings/validation-report.md,b66c3141c7e9dbd2

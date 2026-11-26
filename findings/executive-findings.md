@@ -111,7 +111,7 @@ Both are reconciled into the baseline, registers, economics and roadmap.
 - Apply repository rulesets on `main` (WI-ASR-03). Praxis 3.25.0 was installed on 2026-11-25.
 - Name the delegate and protected-reporting recipient when operationally necessary (proposed: no later than production launch; OQ-607).
 - Provision a Praxis verifier with its own identity and pinned keys (WI-PRAXIS-03) for later work. PR #3 was merged without verified completion on the owner's instruction, and plain completion was accepted under the owner's delegation (DF-ASR-2026-0D12).
-- Decide whether to open a pull request for the fixes made after the merge.
+- Review and merge the fixes made after the merge (pull request #4).
 
 ## 4. Claims status
 

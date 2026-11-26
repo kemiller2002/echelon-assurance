@@ -134,7 +134,7 @@ The adversarial challenge ran in rounds 2–51, all recorded in the same review 
 
 ## 11. Validation results
 
-Validation is run on the final head locally. CI runs the same checks on pull requests and on pushes to `main`; branch commits made after the merge have no CI run until a pull request is opened, so they are validated locally only. It covers:
+Validation is run on the final head locally. CI runs the same checks on pull requests and on pushes to `main`; branch commits made after the merge were validated locally only until pull request #4 brought them under CI.
 
 - the validator (`assurance validate`)
 - fragment-merge currency
@@ -150,7 +150,7 @@ Validation is run on the final head locally. CI runs the same checks on pull req
 
 - **Praxis 3.25.0** is installed and `praxis validate` passes. Work item WI-ASR-FINAL is completed by plain completion under DF-ASR-2026-0D12, recorded in the Praxis work history. Owner record DF-ASR-2026-0D11 directs validating the exact final commit under Praxis before merge and approves enabling verified completion in scope (OQ-704); enabling it is WI-PRAXIS-03.
 - **Completion.** Under the owner's delegation, DF-ASR-2026-0D12 accepts plain Praxis completion for WI-ASR-FINAL, never described as verified completion. No agent-held verifier key was created. Earlier attempt: At commit fdd0736, the claim on WI-ASR-FINAL succeeded (claimant claude-code, generation 1). Three validations ran under `praxis work validate-run` and passed: repository tests, `praxis validate` and the governed-record check. `praxis work complete-verified` then refused with `--authority FILE (or PRAXIS_COMPLETION_AUTHORITY) is required`. No completion authority with pinned verifier keys is provisioned in this repository (WI-PRAXIS-03). Creating one from an agent-held key would make the receipt self-attested, so it was not done. The claim was released.
-- **Merge.** PR #3 was merged into `main` at 2c2c4f3 (merge commit 9ab2b00) at the owner's direct instruction given in chat, without Praxis verified completion. That instruction is not otherwise recorded in the repository. PR #2 was merged, and PR #1 was closed as superseded; its content is mapped by the 0E01 record and its branch is kept. Fixes made after the merge are on the same branch and need a new pull request. Verified completion of WI-ASR-FINAL is still not done.
+- **Merge.** PR #3 was merged into `main` at 2c2c4f3 (merge commit 9ab2b00) at the owner's direct instruction given in chat, without Praxis verified completion. That instruction is not otherwise recorded in the repository. PR #2 was merged, and PR #1 was closed as superseded; its content is mapped by the 0E01 record and its branch is kept. Fixes made after the merge are on the same branch, in pull request #4. Verified completion of WI-ASR-FINAL is still not done.
 - **Branch protection.** `main` is not protected: GitHub reports `protected: false`, and no rulesets apply (WI-ASR-03, OQ-700/OQ-761). Only the owner can apply rulesets.
 
 ## 13. Remaining external dependencies
@@ -171,5 +171,5 @@ All eleven gates, PG-01 to PG-11 in `registers/production-gates.csv`, are `not-m
 4. Name the emergency delegate and the protected-reporting recipient when operationally necessary. Under DF-ASR-2026-0D11 (OQ-607) the owner retains reserved authority until formal delegation; actual legal signatories are pending.
 5. Decide whether to accept or further restrict the residual risk of research agents before production use (OQ-616).
 6. Decide on sensitivity: history wording in commit 23f06b4, author metadata in `.ros/events/events.jsonl`, and the example actor identifier in `docs/agent-provenance.md`.
-7. Decide whether to open a pull request for the post-merge fixes.
+7. Review and merge the post-merge fixes (pull request #4).
 8. State commercial intent for future services when planned (OQ-114, OQ-766; the scoping rule is approved, DF-ASR-2026-0D11).
