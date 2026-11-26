@@ -78,7 +78,9 @@ let renderMarkdown rate (totals: (string * Totals) list) =
              + "%")
         "Do not edit by hand. Ranges, not point estimates. See `economics/compliance-economics.md` for interpretation."
         ""
-        "| Scenario | Unavoidable external | Reducible | Total (5 yr) |"
+        "> **Superseded (v1, preserved for comparison).** Owner direction DF-ASR-2026-0D0F replaced the assumptions behind the 'external under v1 assumptions' column (contracted reviewer, external testing, assumed auditor reliance). Use `economics/v2/` (S8–S12) for current planning."
+        ""
+        "| Scenario | External under v1 assumptions | Reducible | Total (5 yr) |"
         "|---|---|---|---|"
     ]
     @ (totals |> List.map row)

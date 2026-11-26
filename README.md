@@ -45,7 +45,7 @@ the first reference implementation; the architecture is organization-wide.
 | 15. Independent validation methodology | [`validation/independent-validation-architecture.md`](validation/independent-validation-architecture.md) |
 | 16. Organizational operating model | [`governance/operating-model.md`](governance/operating-model.md) |
 | 17. Customer assurance requirements | [`customer-assurance/`](customer-assurance/) |
-| 18. Revised economic model | [`economics/v2/`](economics/v2/) (v1 preserved in [`economics/`](economics/)) |
+| 18. Revised economic model | [`economics/v2/`](economics/v2/) (v1 preserved, superseded, in [`economics/`](economics/)) |
 | 19. Prioritized implementation roadmap | [`roadmap/generated/backlog-by-phase.md`](roadmap/generated/backlog-by-phase.md), [`roadmap/implementation-roadmap.md`](roadmap/implementation-roadmap.md) |
 | 20. Cross-repository backlog | [`roadmap/backlog.csv`](roadmap/backlog.csv) |
 | 21. Consolidation and removal register | [`requirements/source-dispositions.csv`](requirements/source-dispositions.csv) |

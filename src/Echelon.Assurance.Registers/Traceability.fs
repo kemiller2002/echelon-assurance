@@ -996,12 +996,18 @@ let doneDependencies (backlog: Record list) =
         |> List.map (fun w -> field w "work_item_id", field w "status")
         |> Map.ofList
 
-    backlog
-    |> List.filter (fun w -> field w "status" = "done")
-    |> List.collect (fun w ->
-        items' w
-        |> List.filter (fun d -> Map.tryFind d status |> Option.defaultValue "" <> "done")
-        |> List.map (sprintf "roadmap/backlog.csv: %s is done but its dependency %s is not" (field w "work_item_id")))
+    (backlog
+     |> List.filter (fun w -> field w "status" = "done")
+     |> List.collect (fun w ->
+         items' w
+         |> List.filter (fun d -> Map.tryFind d status |> Option.defaultValue "" <> "done")
+         |> List.map (sprintf "roadmap/backlog.csv: %s is done but its dependency %s is not" (field w "work_item_id"))))
+    @ (backlog
+       |> List.filter (fun w -> field w "status" = "done")
+       |> List.collect (fun w ->
+           items w "blockers"
+           |> List.filter (fun b -> b.StartsWith "OQ-")
+           |> List.map (sprintf "roadmap/backlog.csv: %s is done but lists blocker %s" (field w "work_item_id"))))
 
 /// An agent or automated performer never holds an organizational, professional
 /// or external independence level (DF-ASR-2026-0D0F).

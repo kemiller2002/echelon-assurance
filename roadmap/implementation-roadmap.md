@@ -112,12 +112,12 @@ questionnaire answers through CTL-GOV-012 claim linting.
 
 ## P3 — Before beginning an audit observation period
 
-1. **Engage the CPA firm early** for scoping: system boundaries, SOC 1
+1. **If an examination is planned** (reassessed under DF-ASR-2026-0D0F; no engagement is authorized now), engage the CPA firm early for scoping: system boundaries, SOC 1
    control objectives, TSC categories, carve-out of cloud provider and
    custodians, and — critically — whether they will rely on system-generated
    populations with completeness proofs (OQ-500, OQ-601, OQ-759). Run a
    readiness assessment (economics scenario 5).
-2. Controls: CTL-ASR-002/003/005/006/007/008 (anchored ledger, completeness
+2. Controls: CTL-ASR-002/003/005/006/007/008 (managed retention-locked evidence store per DF-ASR-2026-C002, completeness
    reconciliation, mutation/sentinel testing, evidence store isolation,
    internal independent review, external validation of the assurance
    machinery), CTL-VEN-002 (CUEC mapping incl. GitHub), CTL-CUS-003/004

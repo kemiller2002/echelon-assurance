@@ -426,7 +426,7 @@ file,docs/decisions/owner-approved-foundations-2026-11-25.md,ae5d8f63a2666ddd
 file,docs/decisions/owner-decision-package-2026-11-25.md,cd75f923e6ff0a6f
 file,docs/decisions/owner-remaining-approvals-2026-11-25.md,12aeeef62147559a
 file,docs/decisions/owner-review-direction-2026-11-25.md,59759d70be559755
-file,economics/parameters.csv,0fc67012625b17b1
+file,economics/parameters.csv,87a09cc2a85a9852
 file,economics/v2/activities.csv,489a8457b2d6b0bf
 file,economics/v2/alternatives.csv,4a5a52c40eadfa9c
 file,economics/v2/scenarios.csv,903367ec3db1afb1
@@ -474,8 +474,8 @@ file,src/Echelon.Assurance.Registers/Governed.fs,a40cdc7a46273c4e
 file,src/Echelon.Assurance.Registers/Merge.fs,0d6f01415fecb3ba
 file,src/Echelon.Assurance.Registers/Roadmap.fs,27ba2959764926ca
 file,src/Echelon.Assurance.Registers/Schema.fs,9db3dd6397580e37
-file,src/Echelon.Assurance.Registers/Tco.fs,c1ccfb6b97d51289
-file,src/Echelon.Assurance.Registers/Traceability.fs,e12c26d0e103f060
+file,src/Echelon.Assurance.Registers/Tco.fs,5c95b739a5d004d7
+file,src/Echelon.Assurance.Registers/Traceability.fs,4d5747ee191d2e4a
 file,src/Echelon.Assurance.Registers/Validation.fs,1fb2cb91c87ba894
 file,tests/Echelon.Assurance.Tests/Echelon.Assurance.Tests.fsproj,34b2f0c2ff53334d
 open_questions,OQ-100,b127549be306754a

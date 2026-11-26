@@ -42,7 +42,7 @@ open questions in `registers/open-questions.csv`. See
 Registers after the final reconciliation (2026-11-26): 18 tenets, 117
 baseline requirements, 222 source dispositions, 121 controls, 41 validation
 procedures, 115 questions with dispositions (96 open, 17 answered, 2
-superseded), 27 verified systems, 63 backlog work items, 11 production
+superseded), 27 systems assessed (5 with executed tests), 63 backlog work items, 11 production
 activation gates (all `not-met`), 14 owner decision traceability rows, 97
 customer questions, 25 decisions, 66 risks. PR #1 and PR #2 content is consolidated on branch
 `claude/echelon-assurance-consolidation-jygy23`.

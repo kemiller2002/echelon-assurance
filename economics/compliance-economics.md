@@ -9,6 +9,14 @@ inputs: [economics/parameters.csv, economics/generated/tco-summary.md, economics
 
 # Compliance economics
 
+> **Superseded (v1, preserved for comparison).** Owner direction
+> DF-ASR-2026-0D0F (ODP-02, ODP-09, ODP-11, ODP-12) replaced the assumptions
+> this model rests on: no contracted or fractional reviewer, external testing
+> and legal engagement deferred and reassessed on recorded triggers, no
+> expenditure authorized, and no assumed auditor reliance. Costs labelled
+> "unavoidable" here were unavoidable only under those earlier assumptions.
+> Use `economics/v2/` (scenarios S8–S12) for current planning.
+
 ## 1. Read this first
 
 - Every price is a **vendor claim** or **assumption**: vendor and
