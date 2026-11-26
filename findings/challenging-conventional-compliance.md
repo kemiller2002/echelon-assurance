@@ -12,7 +12,7 @@ For each practice: the risk it targets; whether the practice is required
 (and by what); whether a stronger mechanism exists; what new risk the
 alternative brings; and whether an auditor would accept it. "Auditor
 acceptance" is our expectation, not a confirmed fact, unless cited; every
-row's acceptance question rolls up into OQ-500, OQ-601, OQ-759 for the first
+row's acceptance question rolls up into OQ-500 and OQ-601 (OQ-759 is superseded by DF-ASR-2026-0D0A) for the first
 CPA conversation.
 
 | # | Conventional practice | Risk actually addressed | Required? | Stronger alternative | New risks | Likely auditor view | Controls |

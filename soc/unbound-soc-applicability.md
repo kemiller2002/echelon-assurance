@@ -45,7 +45,7 @@ SRC-SOC-028/029).
   **institutional partners or financial institutions** in embedded or
   white-label programs (PARTNER-SEGREGATION-AND-TENANCY.md). The operator has
   instruction-only authority and never takes title to money (UNB-XIN-REG-001).
-- **Owner-approved Unbound decisions (2026-11-24) already in place** (Unbound marks them external-authorization-required, with professional gates still open):
+- **Owner-approved Unbound decisions (2026-11-24) already in place** (each approved-owner in Unbound @9b38de4, with Unbound's own basis: SPD-PLT-001 and SPD-ADV-003 external-authorization-required; XID-INV-008 reasoned-interpretation; RCD-031 established-by-authoritative-evidence; each gated on sponsor auditors and contracts):
   - **SPD-PLT-001:** no report is legally required. Evidence engineering
     continues from inception. SOC description and period work is conditional
     on contract demand or a second user entity. Before go-live, obtain the
@@ -141,7 +141,7 @@ auditor's judgment decides).
   entity's *processing commitments*, not user-entity control objectives over
   financial statement assertions. The AU-C 9402 reasoning still applies
   `[auditor-interpretation]`.
-- **Recommendation** (design target under decision 0D02; no examination is planned, DF-ASR-2026-0D0F). Plan a **SOC 1 Type 2** for the fund-accounting service
+- **Recommendation** (design target under decision 0D02; no examination is currently planned or authorized (external engagements deferred under DF-ASR-2026-0D0F; ODP-09 plans without assuming auditor reliance)). Plan a **SOC 1 Type 2** for the fund-accounting service
   and a **SOC 2 Type 2** for platform security. Both should share one control
   set and one evidence base, and preferably one service auditor and one
   period `[recommendation]`. Whether one firm can efficiently perform both,
