@@ -18,7 +18,7 @@ authoritative_references: [TSC CC2.3, CC3.4, A1.2, CC6.5, customer and bank part
 
 ## 02 Configuration governance
 1. Tenant-specific policies (fee schedules, approval thresholds, grant policies, eligibility rules) are versioned configuration. Changes require approval by the customer's authorized administrator, are effective-dated, and are reported back to the customer.
-2. Echelon staff cannot change a tenant's financial configuration without the customer's recorded authorization, except under incident response with notification.
+2. Echelon staff cannot change a tenant's financial configuration (fee schedules, approval thresholds, grant rules) without the customer's recorded authorization (CTL-TEN-002, BR-FIN-017; Echelon staff hold no A3+ financial authority, BR-FIN-008). Incident response may only contain: suspend, hold or freeze, never loosen thresholds or change fees or grant rules; the customer is notified at once, and normal operation resumes only with the customer's recorded authorization.
 
 ## 03 Complaints
 Complaints are recorded with category, received date, owner and resolution; trends are reviewed in management review. Bank partner contracts may impose specific handling and reporting; those are recorded as requirements.

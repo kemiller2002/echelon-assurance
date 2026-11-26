@@ -490,7 +490,7 @@ file,methodology/research-methodology.md,50096ce4322b2e32
 file,methodology/review-protocol.md,d26aea16300b8ac2
 file,pentest/penetration-testing-research.md,31f1af1a4222ccaa
 file,pentest/unbound-minimum-cost-testing-strategy.md,2cb61a417087f85f
-file,policies/drafts/POL-01-assurance-governance.md,554c6ad75e40a4a0
+file,policies/drafts/POL-01-assurance-governance.md,e5bd2d569dd35d5f
 file,policies/drafts/POL-02-code-of-conduct-acceptable-use.md,47f8206b2e248743
 file,policies/drafts/POL-03-people-security.md,b9b107dff77d24ea
 file,policies/drafts/POL-04-identity-and-access.md,ed818d48c577dced
@@ -502,10 +502,10 @@ file,policies/drafts/POL-09-resilience.md,0d3fe9793d49baf4
 file,policies/drafts/POL-10-third-party-and-vendor-risk.md,2ffb9048007c1a1e
 file,policies/drafts/POL-11-ai-and-autonomous-systems.md,33b8d908cac1b87a
 file,policies/drafts/POL-12-financial-operations-integrity.md,eb10e6e6d3e957c6
-file,policies/drafts/POL-13-customer-operations.md,8dfe61c88b9fe71c
+file,policies/drafts/POL-13-customer-operations.md,f551e29882feb7e0
 file,policies/policy-inventory.md,c74ee7381b270eab
 file,policy-as-code/policy-as-code-specification.md,1e4ddfc98454e6fb
-file,policy-as-code/tool-evaluation.md,2810ac82a201172e
+file,policy-as-code/tool-evaluation.md,824f4b2370f04db7
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
 file,regulatory/regulatory-applicability-matrix.md,4390bb0752f46bfc
 file,requirements/README.md,bf7a0c418b406b69
