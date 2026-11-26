@@ -68,5 +68,5 @@ CTL-TEN-001, CTL-SDL-001/002, CTL-FIN-001/002), and sampling elsewhere
 
 They do not establish legal applicability, auditor acceptance, operating
 effectiveness or the absence of vulnerabilities, and they do not replace
-independent penetration testing; both owner records say so, and the catalog
+independent penetration testing; the owner's security-by-construction record says so (requirements/security-by-construction.md), and the catalog
 keeps every new control at `Designed`.

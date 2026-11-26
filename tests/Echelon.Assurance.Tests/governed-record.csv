@@ -452,7 +452,7 @@ file,economics/v2/activities.csv,39f5aa6208f50aa5
 file,economics/v2/alternatives.csv,3c3e74ac889c14dc
 file,economics/v2/scenarios.csv,903367ec3db1afb1
 file,financial/finbc-unbound-map.csv,7e4e80c2f5f5d5bf
-file,financial/unbound-existing-assurance-inventory.md,60dba3e7fde83ff0
+file,financial/unbound-existing-assurance-inventory.md,7280ddde1cecb0e8
 file,financial/unbound-financial-controls.md,4b5ec87a5c1100fc
 file,findings/challenge-passes/round1-domain.csv,d946fc095bb40804
 file,findings/challenge-passes/round1-structure.csv,465a69f09654cc4c
@@ -467,7 +467,7 @@ file,findings/clarity-and-edf-assessment.md,3d35443c20eb48cf
 file,findings/counsel-and-auditor-questions.md,4738aee841828858
 file,findings/executive-findings.md,11008af910a33a02
 file,findings/financial-integrity-review.md,3b7bbdcfd4eb4a1b
-file,findings/reviews/RV-ASR-2026-11-26.md,1b738d5764eb1c25
+file,findings/reviews/RV-ASR-2026-11-26.md,d028423baf012cdb
 file,findings/validation-report.md,a542b230e8d1f1f8
 file,framework/REP-SPECIFICATION.md,107a31d594e4d7d9
 file,framework/policies/EVIDENCE-POLICY.md,4a355f90897a40ba
@@ -507,11 +507,11 @@ file,policies/policy-inventory.md,c74ee7381b270eab
 file,policy-as-code/policy-as-code-specification.md,9f11008729a532d8
 file,policy-as-code/tool-evaluation.md,2810ac82a201172e
 file,regulatory/framework-crosswalk-method.md,2c919236bd5a9a98
-file,regulatory/regulatory-applicability-matrix.md,0ca3685527922552
+file,regulatory/regulatory-applicability-matrix.md,3a1688eb668f714d
 file,requirements/README.md,bf7a0c418b406b69
 file,requirements/ai-governance-independent-validation.md,7c9bb9fad1beb3f7
 file,requirements/assurance-economics.md,e265ba4586a7e3b1
-file,requirements/challenge-review.md,5f0904cb867c772c
+file,requirements/challenge-review.md,7b02661dabaf633b
 file,requirements/continuous-assurance-requirements.md,14557a0b03b0507f
 file,requirements/continuous-security-testing.md,5d81ba0bb624debc
 file,requirements/executable-policy-and-continuous-evidence.md,0d845b77a06b91b2
@@ -1289,8 +1289,8 @@ requirements,REQ-STATE-001,e559ddd82033e75f
 requirements,REQ-STATE-002,922a9789b46055f4
 requirements,REQ-STATE-003,aeeabbf13e608a17
 requirements,REQ-STATE-004,030f92cf5ca9c079
-requirements,REQ-STATE-005,479ec2d0646dc116
-requirements,REQ-STATE-006,a73748a283473b00
+requirements,REQ-STATE-005,ca042cde8790d6fe
+requirements,REQ-STATE-006,65788cab4bbd5767
 requirements,REQ-TPRM-001,56d2817f95d1d675
 requirements,REQ-TPRM-002,2003dcdabac450ae
 requirements,REQ-TPRM-003,fbef32c3f3b80bff
