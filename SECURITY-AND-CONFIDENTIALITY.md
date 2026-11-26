@@ -26,6 +26,18 @@ vulnerability details were found; design-level gaps of Echelon systems that
 those systems' own public documentation already discloses are retained as
 sanitized results.
 
+A second sensitivity review covered the content added after that review
+(2026-11-26, final reconciliation; `findings/reviews/RV-ASR-2026-11-26.md`).
+It swept for credentials, private keys, tokens, personal email addresses,
+private network addresses and vulnerability identifiers, and reviewed
+`integration/capability-verification.csv` for exploit-relevant detail. Four
+passages describing how specific Echelon mechanisms could be defeated were
+generalized. Two items remain and need an owner decision, because removing
+them means rewriting public history or Praxis's append-only event log: the
+earlier, more specific wording remains in git history (commit 23f06b4), and
+`.ros/events/events.jsonl` records commit author metadata (name and email)
+that is already public in the repository's commit history.
+
 ## Never commit
 
 | Category | Examples | Where it belongs instead |

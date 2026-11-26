@@ -22,7 +22,7 @@ reuses mature tools as controlled dependencies, and builds F# only for:
 | Artifact | Producer | What it is | What it is not |
 |---|---|---|---|
 | Internal security assessment report | Automated, Echelon-controlled | Scoped results of internal suites with coverage and limitations | Not a penetration test, not independent, not an attestation |
-| Technically independent verification | Separate verifier identity (Dokimos) | Re-execution or check of receipts under separate credentials | Not organizational independence |
+| Technically separated verification (`technically-separated`; planned, WI-DOKIMOS-01) | Separate verifier identity (Dokimos; currently same CI trust domain, `integration/capability-verification.csv`) | Re-execution or check of receipts under separate credentials | Not organizational independence |
 | Independent penetration test | External qualified tester | Human-led adversarial testing under rules of engagement | Not an attestation |
 | SOC 1 / SOC 2 report | Independent CPA firm | Attestation over a described system and period | Not a security guarantee |
 

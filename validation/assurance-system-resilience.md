@@ -76,10 +76,13 @@ does not control. In increasing order of independence:
    `automated`, not independent: same owner.
 3. **Reperformance by a different person with different credentials.**
    Monthly samples re-collected from source (VAL-019), reconciliation owned
-   outside the control team (VAL-011) — `internal-independent`.
+   outside the control team (VAL-011) — `internal-independent`. *Not available
+   with one human: performed as self-assessment and not described as
+   independent until a second person exists (DF-ASR-2026-0D0F, RSK-065).*
 4. **External witnesses that require no trust in Echelon.** Periodic digests
    of the evidence log anchored to an external timestamping/transparency
    service; anyone holding the digest can later detect alteration (VAL-018).
+   *Deferred under DF-ASR-2026-C002 until someone requires it.*
 5. **External technical review** of evidence integrity, completeness and
    identity separation (VAL-026; provider and CPA acceptance open, OQ-612).
 6. **Formal attestation** (VAL-028), where the CPA firm decides what of the

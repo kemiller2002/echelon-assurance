@@ -22,11 +22,11 @@ research_batch: B6 (key AIG)
 >
 > **Superseded mitigations.** Prohibition P4 and the resilience scenarios relied on hash chaining, external anchoring and second-person approval. They are superseded by the managed retention lock, separately credentialed population reconciliation, and out-of-band alerts (BR-ASR-003, BR-ASR-006, BR-IAM-002). These detect failure and external compromise, but not action by the single owner (ODP-03).
 >
-> **Money movement.** AI agents never authorize, approve or release movement of funds or material financial exceptions, at any level and in any scope (BR-FIN-006, proposed DF-ASR-2026-C004).
+> **Money movement.** AI agents never authorize, approve or release movement of funds or material financial exceptions, at any level and in any scope (BR-FIN-006, DF-ASR-2026-C004 accepted; ODP-10).
 >
 > **Statuses.** The status ladder (Designed → Implemented → internally tested → technically independently verified → organizationally independently assessed → externally attested) is BR-ASR-002. "Different model" is never independence (BR-VAL-001).
 >
-> **Section 8.** Section 8's reference to OQ-800 is governed by DF-ASR-2026-7B20 (proposed) and owner decision package item ODP-02.
+> **Section 8.** Section 8's reference to OQ-800 is decided by owner decision DF-ASR-2026-0D04 (superseding the proposal DF-ASR-2026-7B20) and owner direction DF-ASR-2026-0D0F (ODP-02).
 >
 > **Verified capability (2026-11-25).** Praxis provenance is self-reported. Only validation receipts are signed. Agent identities are not yet platform-bound (`integration/capability-verification.csv`, WI-PRAXIS-01). Where this document conflicts with the baseline, the baseline governs.
 
@@ -88,7 +88,7 @@ Five premises drive every mechanism below. Each is tagged with its evidence clas
 
 | Existing asset | What it gives this model | Gap for assurance use | Evidence basis |
 |---|---|---|---|
-| Praxis agent provenance (`docs/agent-provenance.md`) | Actor kind/id/provider/model/runtime; per-execution IDs; additive, refusal-checked contribution records; `previous/current.sha256` on events; requester/executor/principal separation for remote runs | Self-reported; no signatures; no defence against lying process; repository-scoped | Read in full (SRC-AIG-030) |
+| Praxis agent provenance (`docs/agent-provenance.md`) | Actor kind/id/provider/model/runtime; per-execution IDs; additive, refusal-checked contribution records; event hashes reported in documentation but not confirmed by verification (events are not signed or hash-chained per `integration/capability-verification.csv`); requester/executor/principal separation for remote runs | Self-reported; no signatures; no defence against lying process; repository-scoped | Read in full (SRC-AIG-030) |
 | Unbound authority tiers A0–A5 and `GOV-AUTH-001..026` | Authority registry, no self-grant (003), SoD across humans/agents (004), approval bound to exact proposal + evidence snapshot (009), tamper-evident logs (012), independent reconciliation (014), kill switch (024), deterministic enforcement (021); tests AUTH-T01..T12 | Written for DAF operations; needs an assurance-domain action catalog | Read (SRC-AIG-031) |
 | Unbound `AIN-001..036`, `RR-AIN-003-r1` | Capability manifest (AIN-002), injection isolation (AIN-012), identity/attribution (AIN-013), no synthetic success claims (AIN-014), model/prompt change control (AIN-027), budgets (AIN-028), missing traces = deficiency (AIN-033); A4 approver must not have originated or modified the item | Requirements only, not implemented | Read (SRC-AIG-032) |
 | Unbound continuous control monitoring architecture | Expected-evidence schedule, missing-evidence algorithm, "never from absence of alarms", linked corrections, append-only history | Specified, not executed; Strata API capabilities unverified | Read headings and key lines (SRC-AIG-033) |
@@ -216,8 +216,10 @@ what the agent did *not* check. Approval quality is sampled quarterly
 (RSK-019, automation bias; REQ-OWASPAI-013). Feasibility of distinct humans
 per role is open (OQ-608). Owner decision DF-ASR-2026-0D04 (superseding proposal DF-ASR-2026-7B20): standing human authorization + separate implementing agent + technical verifier + enforced release gate for routine low-risk work; elevated human approval for material changes. Owner direction DF-ASR-2026-0D0F replaces the "fractional human review" element: no reviewer is contracted at the development stage; the multiple-agent review protocol (BR-VAL-004) and protected deterministic verification (VAL-040) are used, an action that needs organizational independence is blocked or redesigned, and self-approval of material exceptions is not authorized. With one human owner, the P1 rule (approver outside
 the preparer's delegation chain) leaves no eligible approver for owner-sponsored
-agent work and conflicts with the POL-11.03 small-team fallback; which rule
-governs is OQ-800.
+agent work and conflicts with the POL-11.03 small-team fallback. Owner decision
+DF-ASR-2026-0D04 governs (OQ-800 answered): the standing authorization path
+applies, and actions that need organizational independence are blocked or
+redesigned.
 
 ## 9. AI-generated code governance
 
@@ -443,4 +445,5 @@ controls (CTL-IAM-001, CTL-AI-001..008, CTL-IR-003, CTL-VEN-003,
 CTL-LOG-002, CTL-DAT-002, CTL-GOV-007/008/012, CTL-APP-005/010,
 CTL-FIN-002, CTL-ASR-006) plus one new control, CTL-AI-010 (AI involvement
 disclosure and correction path). Residual prompt-injection risk (RSK-001) is
-explicitly **not accepted** pending owner review.
+explicitly **not accepted** (ODP-08 approved the design, not the residual
+risk); production acceptance is a separate owner decision (OQ-616, PG-11).

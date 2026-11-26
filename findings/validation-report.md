@@ -32,7 +32,7 @@ references and secret patterns:
   - A requirement's policies, validation procedures and evidence types belong to its controls.
 - **Status ceilings.**
   - No requirement claims a status above its controls.
-  - `Tested` requires a validation procedure at internal-independent level or above.
+  - `Tested` requires a validation procedure at `technically-separated` level or above (protected deterministic verification, VAL-040); multiple-agent review (VAL-041) never supports `Tested` (owner direction DF-ASR-2026-0D0F; corrected 2026-11-26).
   - Capability status `verified-implemented` requires executed tests.
 - **Coverage.** Every tenet is realized, every question has a disposition and next action, and question status agrees with that disposition.
 - **Roadmap.**
@@ -178,7 +178,7 @@ All remaining items were fixed in the final commits:
 
 | Criterion | Status | Evidence |
 |---|---|---|
-| Every original requirement has a documented disposition | Met | 208 rows in `requirements/source-dispositions.csv`; validator enforces bidirectional links |
+| Every original requirement has a documented disposition | Met | 222 rows (2026-11-26; 208 at consolidation) in `requirements/source-dispositions.csv`; validator enforces bidirectional links |
 | Every control has an objective and validation strategy | Met | Validator: objective, owner, validation and evidence required for all 121 controls |
 | Every policy has traceable enforcement or accountable human obligations | Met | Repository test: every policy section maps to controls; baseline policies derive from controls; `enforcement_class` distinguishes human judgment |
 | Every outstanding question has a disposition and next action | Met | 115 rows in `registers/question-dispositions.csv`; validator enforces it |
@@ -186,13 +186,13 @@ All remaining items were fixed in the final commits:
 | Proposed capabilities distinguished from verified | Met | `integration/capability-verification.csv` with basis and status; validator blocks inflation |
 | Economic model reproducible and internally consistent | Met, with hypothetical inputs | `assurance econ`; CI currency check; 12 unit tests; no quotes exist |
 | Roadmap dependency-driven | Met | Validator: phase order, cycles, coverage, launch gates |
-| All applicable repository validation checks pass | Met | Section 1; Praxis verify, validate and registry check (section 3b) |
+| All applicable repository validation checks pass | Met for the assurance validator, tests and Praxis validate/registry check; **verified completion not met** (WI-ASR-CONSOLIDATION was closed by plain completion; WI-ASR-FINAL is the final work item; see section 4) | Section 1; section 3b; `findings/reviews/RV-ASR-2026-11-26.md` |
 | No unsupported claims of compliance, certification or effectiveness | Met to the extent reviewed | All controls `Designed`; customer answers capped; six review rounds |
 | Concise owner package limited to genuine owner decisions | Met | `docs/decisions/owner-decision-package-2026-11-25.md` (12 items, all decided by DF-ASR-2026-0D0F and 0D10) |
 
 ## 5. Conflicts with existing tooling and standards (documented, not disabled)
 
-- **Praxis not installed here, and `main` not protected.** CI is therefore advisory (RSK-060). Fixing this is an owner action (WI-ASR-03, ODP-10).
+- **`main` not protected.** Praxis 3.25.0 is installed and CI runs it, but without required checks CI is advisory (RSK-060). Fixing this is an owner action (WI-ASR-03, ODP-10).
 - **Praxis and Tutela test suites are console programs.** `dotnet test` on them runs nothing and still exits 0, so they must be run with `dotnet run`. This repository's CI guards against an empty test run.
 - **Strata and Dokimos target .NET 8.** They ran here only with roll-forward. The Echelon F#-first standard is met, but toolchain alignment is a proposal for those repositories.
 - **Tutela's Python conformance oracle** conflicts with the F#-first standard. It expires 2027-01-31 (WI-TUTELA-03).
@@ -204,3 +204,13 @@ All remaining items were fixed in the final commits:
 - Regulatory research read primary text for FinCEN, the FTC Safeguards Rule, 12 U.S.C. 1867 and the 2023 interagency guidance. Nacha Rules, licensed frameworks (SIG, SOC criteria PDFs) and state statutes were read only in summary.
 - No auditor, counsel, bank, insurer or customer has reviewed anything.
 - Economic inputs are hypothetical or vendor claims.
+
+## 4. Final reconciliation (2026-11-26)
+
+Commits after `fd6153a` reconciled the owner directions of 2026-11-25 and
+were reviewed by six separately initialized agents (A–F), with findings
+reconciled on evidence (`findings/reviews/RV-ASR-2026-11-26.md`). The
+validator was hardened against ten corruption experiments, and regression tests
+corrupt the committed registers and require failure. Counts at the end of this
+reconciliation are in `context/CURRENT-STATE.md`; adversarial rounds and their
+stopping rationale are in the review record.

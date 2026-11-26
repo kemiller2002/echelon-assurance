@@ -43,13 +43,16 @@ independence level, §2). Both are recorded for every result.
 
 ## 2. Independence spectrum
 
-The six levels are the `independence_level` enum in `src/Echelon.Assurance.Registers/Schema.fs`.
+The levels are the `independence_level` enum in `src/Echelon.Assurance.Registers/Schema.fs`.
 
 | Level | Performed by | What it can support | What it must never be called | Evidence class of the distinction |
 |---|---|---|---|---|
 | `self-assessment` | Control owner (human or the owner's agents) | Readiness; management's own monitoring | "tested", "validated", "independent" | recommendation |
 | `automated` | Echelon-controlled pipelines and agents | Continuous detection; management monitoring; evidence that a test ran | "independent", "audited" | recommendation |
+| `agent-review` | Separately initialized AI agents under the multiple-agent review protocol (VAL-041, `methodology/review-protocol.md`) | Internal development review only (DF-ASR-2026-0D0F); never `Tested` | "independent", "organizational review", "tested" | recommendation |
+| `technically-separated` | Echelon-controlled verifier with separate credentials and bound receipts (VAL-040, Dokimos planned under WI-DOKIMOS-01) | Deterministic re-execution supporting `Tested` for executable controls | "independent", "organizationally independent" | recommendation |
 | `internal-independent` | Echelon person outside the implementing/operating team, with separate credentials | Internal assurance comparable to internal audit; NIST AI RMF MEASURE 1.3 "internal experts who did not serve as front-line developers" (REQ-AIRMF-006) | "external", "attestation" | authoritative (for the AI RMF basis) |
+| `qualified-professional` | Qualified professional (for example counsel or a CPA) engaged on a recorded trigger; none is engaged now (DF-ASR-2026-0D0F) | Professional judgment within the engagement scope | "attestation" unless it is one | recommendation |
 | `external-technical` | Third party engaged for a technical review (not a CPA attestation) | Expert opinion on design/operation of specific mechanisms | "audit", "attestation", "certification" | recommendation |
 | `external-penetration` | Independent penetration testing firm | Point-in-time adversarial findings | evidence of operating effectiveness over a period | industry-convention |
 | `external-attestation` | Independent CPA firm under AICPA attestation standards (SOC 1/SOC 2) | Opinion on controls over a period, for report users | — | authoritative (attestation standards; owned by SOC batch) |
@@ -228,7 +231,7 @@ effectiveness (RSK-040).
 |---|---|
 | P0–P1 | VAL-001..004, 009, 010, 011, 013, 014, 017, 018, 020, 024, 029, 030, 031 (VAL-014 moved from P2 in review pass 4: CTL-TEN-001 is a P1 control and daf-landscape gate G2 requires tenant-isolation tests before production) |
 | P2 | Add VAL-005, 006, 007, 008, 012, 015, 016, 019, 021, 022, 023, 025, 032 |
-| Before first SOC 2 Type 2 period | VAL-026 (external technical review of evidence machinery), VAL-027 (pen test incl. agents; its first run is earlier, before production launch, per roadmap P1 and CTL-VUL-002), then VAL-028 |
+| Before first SOC 2 Type 2 period | VAL-026 (external technical review of evidence machinery), VAL-027 (pen test incl. agents; deferred under ODP-11 — the need is reassessed against risk and actual obligations before material production activation, WI-EXT-04, PG-04, PG-10), then VAL-028 |
 
 ## 8. Open items
 

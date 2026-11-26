@@ -7,7 +7,7 @@ validation methodology for an AI-native compliance operating model.
 > Make security and compliance measurable, continuously evidenced properties
 > of the organization rather than a periodic administrative exercise.
 
-**Status:** assurance consolidation complete for requirements, controls, decisions, economics and roadmap (journal `JR-ASR-2026-C001`); owner decisions recorded (DF-ASR-2026-0D0F, DF-ASR-2026-0D10); see [`docs/decisions/owner-decision-package-2026-11-25.md`](docs/decisions/owner-decision-package-2026-11-25.md). Nothing in this repository asserts that any
+**Status:** final reconciliation of the owner directions of 2026-11-25 (DF-ASR-2026-0D0F, DF-ASR-2026-0D10) in review; design-stage only, no production implementation (journal `JR-ASR-2026-C001`); see [`docs/decisions/owner-decision-package-2026-11-25.md`](docs/decisions/owner-decision-package-2026-11-25.md). Nothing in this repository asserts that any
 Echelon system is compliant, that any control is operating effectively, or
 that any audit requirement is satisfied. See
 [`context/CURRENT-STATE.md`](context/CURRENT-STATE.md).
@@ -51,9 +51,10 @@ the first reference implementation; the architecture is organization-wide.
 | 21. Consolidation and removal register | [`requirements/source-dispositions.csv`](requirements/source-dispositions.csv) |
 | 22. Validation report | [`findings/validation-report.md`](findings/validation-report.md) |
 | 23. Clarity and EDF assessment | [`findings/clarity-and-edf-assessment.md`](findings/clarity-and-edf-assessment.md) |
+| 24. Owner decision package | [`docs/decisions/owner-decision-package-2026-11-25.md`](docs/decisions/owner-decision-package-2026-11-25.md) |
 | 25. Production activation gates | [`registers/production-gates.csv`](registers/production-gates.csv) (PG-01..11; all `not-met`) |
 | 26. Owner decision traceability | [`registers/decision-traceability.csv`](registers/decision-traceability.csv) and the generated matrix |
-| 24. Owner decision package | [`docs/decisions/owner-decision-package-2026-11-25.md`](docs/decisions/owner-decision-package-2026-11-25.md) |
+| 27. Final reconciliation review record | [`findings/reviews/RV-ASR-2026-11-26.md`](findings/reviews/RV-ASR-2026-11-26.md) |
 | **Research program (B0–B8)** | |
 | Executive findings | [`findings/executive-findings.md`](findings/executive-findings.md); challenge of conventional practice and Clarity/EDF application in [`findings/`](findings/) |
 | Owner research brief | [`docs/charter/research-brief-2026-11-25.md`](docs/charter/research-brief-2026-11-25.md) |

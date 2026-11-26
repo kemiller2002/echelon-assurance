@@ -13,7 +13,7 @@ evidence_types: registers/fragments/PAC-evidence-types.csv
 confidence: medium
 ---
 
-> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`; resolves the overlap question OQ-809 / registry OD-GOV-020 pending owner approval).** Governing requirements: BR-ASR-001 to BR-ASR-011, BR-DAT-001 and BR-IAM-001.
+> **Consolidation note (2026-11-25, `JR-ASR-2026-C001`; resolves the overlap question OQ-809 / registry OD-GOV-020; accepted with DF-ASR-2026-C001 under DF-ASR-2026-0D10).** Governing requirements: BR-ASR-001 to BR-ASR-011, BR-DAT-001 and BR-IAM-001.
 >
 > **Reconciliation with `requirements/continuous-assurance-requirements.md` (PR #2):**
 > - CA-PROV-01 and CA-REPRO-01 become envelope fields (BR-ASR-001).
@@ -22,7 +22,7 @@ confidence: medium
 > - CA-DISC becomes BR-ASR-007 and BR-CUS-002.
 > - **CA-PROV-03 (hash chain plus external anchoring) is replaced** by managed immutable storage.
 >
-> **Minimum architecture now (proposed DF-ASR-2026-C002):**
+> **Minimum architecture now (DF-ASR-2026-C002, accepted):**
 > 1. Envelopes are emitted at enforcement points.
 > 2. Sensitive payloads are kept apart from minimal integrity metadata.
 > 3. Storage is managed object storage with a provider retention lock in a separate account.
@@ -85,7 +85,9 @@ controls need; evidence is not reconstructed afterwards (BR-ASR-012).
 
 ## 2. Reuse of existing Echelon systems
 
-| System | Observed capability (read-only checkout 2026-11-25) | Role here |
+> Capability statements below are from an earlier read-only review. `integration/capability-verification.csv` is authoritative and supersedes them where they differ: it does not confirm signed run authorizations, `CheckProducer` pinning or hash-chained Praxis events, nor Tutela's Evidence record or authority policy. Nothing here is relied on until verified there.
+
+| System | Reported capability (earlier read-only review; see the CSV) | Role here |
 |---|---|---|
 | Praxis | Execution records, receipts (expected vs observed), signed run authorizations bound to policy digest, `CheckProducer` pinning | Producer of SDLC/agent execution evidence (EVT-007, EVT-018) |
 | Tutela | `Evidence` record with digest + provenance + validity window; deny-by-default authority policy over evidence types/issuers | Envelope fields `integrity`, `provenance`, `validity`; evidence-authority rule at ingest |
@@ -96,10 +98,10 @@ controls need; evidence is not reconstructed afterwards (BR-ASR-012).
 
 Gap: none of these is an append-only, witnessed, retention-locked evidence
 store with completeness reconciliation. That is the new component, subject to
-a decision record per AGENTS rule 5 [recommendation]. Note: the proposed
-decision record `DF-ASR-2026-3A1E` instead extends Arca (GitHub-backed
-records) with a hash chain, anchoring and a WORM target; the two designs are
-not yet reconciled (OQ-805).
+a decision record per AGENTS rule 5 [recommendation]. The earlier
+proposal `DF-ASR-2026-3A1E` (Arca with a hash chain, anchoring and a WORM
+target) is superseded by DF-ASR-2026-C002, which adopts managed immutable
+storage (OQ-805 answered).
 
 ## 3. Evidence envelope
 
