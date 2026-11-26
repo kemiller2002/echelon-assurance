@@ -107,6 +107,14 @@ let coversFile (relative: string) =
                 ]
                 |> List.exists lower.StartsWith
             ))
+        || ((lower.StartsWith "architecture/"
+             || lower.StartsWith "schemas/"
+             || lower.StartsWith "policy-as-code/")
+            && (lower.EndsWith ".json"
+                || lower.EndsWith ".yaml"
+                || lower.EndsWith ".yml"
+                || lower.EndsWith ".cedar"
+                || lower.EndsWith ".rego"))
         || lower = "project-charter.md"
         || lower = "agents.md"
         || lower = "security-and-confidentiality.md"

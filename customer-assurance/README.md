@@ -92,4 +92,4 @@ attestation or audit.
   - retention periods.
 
   These are owner decisions recorded through the obligation register (BR-GOV-009) once customer contracts exist; they are not invented here.
-- **Timing conflict.** Unbound XID-INV-008 records a "SOC 1 Type I at launch" decision while OQ-101 and OQ-110 remain open here. This is reconciled through WI-UNB-08.
+- **Timing.** Unbound XID-INV-008 resolves that no SOC 1 type 2 is universally required before the first outsourced sponsor (its "Type I at launch" text is only the original recommendation). Here, decision 0D02 sets the design target at SOC 1 and SOC 2 type 2; examination timing remains open (OQ-101, OQ-110) and is not part of WI-UNB-08.

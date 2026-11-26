@@ -219,8 +219,8 @@ TPRM team for its standard due-diligence request list, its model security addend
 - B5 (OQ-610): What do you require on a vendor's use of AI: disclosure, model risk management and human oversight?
 - B6 (OQ-310, OQ-506, OQ-606): Will you accept a SOC report from a firm affiliated with a compliance platform? Do you need OSCAL output or ISO 42001?
 
-Our proposed position: controls are designed for SOC 2 type 2, and SOC 1 type 2 where the
-sponsor's ICFR relevance is confirmed (decision 0D02); whether and when an examination happens
+Our proposed position: controls are designed for SOC 1 type 2 and SOC 2 type 2 across all five
+trust services categories (decision 0D02); whether and when an examination happens
 is not yet decided. Contract notice windows are configurable. We do not claim the bank
 has accepted any of this.
 
