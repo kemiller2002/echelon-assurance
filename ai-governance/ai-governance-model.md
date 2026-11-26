@@ -231,9 +231,10 @@ redesigned.
   - Agent-authored commits carry authenticated agent identity (not just a
     co-author trailer) so review rules can key on it.
   - An agent never approves or merges its own pull request; the owner's explicit
-    approval is required for the elevated change classes of BR-SDL-003
-    (authorization, ledger, payment-adapter, release, tenant-isolation,
-    policy, privilege, verifier and required-check changes); routine work
+    approval is required for the elevated change classes of DF-ASR-2026-0D04
+    (material policy, privilege, financial-exception and verifier changes)
+    and BR-SDL-003 (authorization, ledger, payment-adapter, release,
+    tenant-isolation and required-check changes); routine work
     proceeds under the standing authorization of DF-ASR-2026-0D04.
   - **Test-weakening protection**: changes that delete or relax tests,
     assertions, lint rules, coverage thresholds or CI steps are classified as
