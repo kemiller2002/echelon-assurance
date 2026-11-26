@@ -64,7 +64,7 @@ let ``every policy and section is implemented by at least one control`` () =
     Assert.True(List.isEmpty without, String.concat ", " without)
 
 [<Fact>]
-let ``no control claims a status above Designed without evidence held here`` () =
+let ``no control claims a status above Specified without evidence held here`` () =
     let above =
         records "controls"
         |> List.filter (fun c -> not (List.contains c["status"] [ "Proposed"; "Designed"; "Specified" ]))
@@ -173,6 +173,69 @@ let ``corrupted committed registers fail validation`` () =
         (List.map (Map.add "status" "Tested")
          >> List.map (Map.add "validation_ids" "VAL-041"))
     |> reports "Tested"
+
+    // Round 2 (reviewer G): irrelevant or invented evidence.
+    corrupt
+        "production_gates"
+        (List.map (fun g ->
+            if g["gate_id"] = "PG-08" then
+                g |> Map.add "status" "met" |> Map.add "evidence_refs" "README.md"
+            else
+                g))
+    |> reports "PG-08 is met while work item"
+
+    corrupt
+        "production_gates"
+        (List.map (fun g ->
+            if g["gate_id"] = "PG-08" then
+                g |> Map.add "evidence_refs" "EVIDENCE-FAKE-1"
+            else
+                g))
+    |> reports "names no record"
+
+    corrupt
+        "question_dispositions"
+        (List.map (fun d ->
+            if d["oq_id"] = "OQ-216" then
+                d |> Map.add "proposed_status" "superseded"
+            else
+                d))
+    |> reports "OQ-216 is superseded but classified"
+
+    corrupt
+        "question_dispositions"
+        (List.map (fun d ->
+            if d["oq_id"] = "OQ-616" then
+                d
+                |> Map.add "proposed_status" "answered"
+                |> Map.add "classification" "resolved-owner-decision"
+                |> Map.add "evidence_refs" "README.md"
+            else
+                d))
+    |> reports "OQ-616 is resolved by owner decision but cites no decision record"
+
+    corrupt
+        "capabilities"
+        (List.map (fun c ->
+            if c["system_id"] = "SYS-VIGILA" then
+                c
+                |> Map.add "verification_basis" "tests-executed"
+                |> Map.add "status" "verified-implemented"
+                |> Map.add "test_evidence" ""
+            else
+                c))
+    |> reports "SYS-VIGILA claims executed tests without test evidence"
+
+    corrupt
+        "capabilities"
+        (List.map (fun c ->
+            if c["system_id"] = "SYS-CENSUS" then
+                c
+                |> Map.add "verification_basis" "not-accessible"
+                |> Map.add "status" "implemented-unverified"
+            else
+                c))
+    |> reports "from no access"
 
     corrupt
         "baseline"

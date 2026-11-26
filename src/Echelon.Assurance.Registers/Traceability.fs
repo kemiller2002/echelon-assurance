@@ -430,15 +430,28 @@ let capabilityBasis (capabilities: Record list) =
     let implemented =
         set [ "implemented-unverified"; "partially-implemented"; "verified-implemented" ]
 
-    capabilities
-    |> List.filter (fun c ->
-        field c "verification_basis" = "docs-only"
-        && implemented.Contains(field c "status"))
-    |> List.map (fun c ->
-        sprintf
-            "integration/capability-verification.csv: %s claims %s from documentation only"
-            (field c "system_id")
-            (field c "status"))
+    (capabilities
+     |> List.filter (fun c ->
+         (field c "verification_basis" = "docs-only"
+          || field c "verification_basis" = "not-accessible")
+         && implemented.Contains(field c "status"))
+     |> List.map (fun c ->
+         sprintf
+             "integration/capability-verification.csv: %s claims %s from %s"
+             (field c "system_id")
+             (field c "status")
+             (if field c "verification_basis" = "docs-only" then
+                  "documentation only"
+              else
+                  "no access")))
+    @ (capabilities
+       |> List.filter (fun c ->
+           field c "verification_basis" = "tests-executed"
+           && (field c "test_evidence").Trim() = "")
+       |> List.map (fun c ->
+           sprintf
+               "integration/capability-verification.csv: %s claims executed tests without test evidence"
+               (field c "system_id")))
 
 /// No operating-evidence register exists yet, so no control may claim a status
 /// that needs observed operation (Implemented or above).
@@ -629,13 +642,14 @@ let decisionTraceabilityWith
 let decisionTraceability (decisions: Record list) (traces: Record list) (dispositions: Record list) =
     decisionTraceabilityWith decisions traces dispositions [] []
 
-/// An evidence reference is a repository path or a register identifier.
+/// An evidence reference is a repository path, a register identifier, or an
+/// identifier in another Echelon repository written `repository:ID`.
 let evidenceRefWellFormed (ref: string) =
     System.Text.RegularExpressions.Regex.IsMatch(
         ref,
         @"^[A-Za-z0-9_.\-]+(/[A-Za-z0-9_.\-]+)*\.(md|csv|fs|yml|yaml|json)$"
     )
-    || System.Text.RegularExpressions.Regex.IsMatch(ref, @"^[A-Z][A-Z0-9]*(-[A-Z0-9]+)+$")
+    || System.Text.RegularExpressions.Regex.IsMatch(ref, @"^([a-z0-9-]+:)?[A-Z][A-Z0-9]*(-[A-Z0-9]+)+$")
 
 /// Every open question states why it is unresolved, the accountable internal
 /// role and the trigger that will resolve it; answered questions cite evidence.
@@ -663,6 +677,25 @@ let questionCompleteness (dispositions: Record list) =
             | "open" when cls.StartsWith("resolved-") || cls = "superseded" ->
                 [
                     sprintf "registers/question-dispositions.csv: %s is open but classified %s" id cls
+                ]
+            | "superseded" when cls <> "superseded" || (field d "evidence_refs").Trim() = "" ->
+                [
+                    sprintf
+                        "registers/question-dispositions.csv: %s is superseded but classified %s or names no superseding record"
+                        id
+                        cls
+                ]
+            | "answered" when
+                cls = "resolved-owner-decision"
+                && not (
+                    items d "evidence_refs"
+                    |> List.exists (fun r -> r.StartsWith("docs/decisions/") || r.StartsWith("DF-ASR-"))
+                )
+                ->
+                [
+                    sprintf
+                        "registers/question-dispositions.csv: %s is resolved by owner decision but cites no decision record"
+                        id
                 ]
             | _ -> []
 
@@ -707,7 +740,13 @@ let gateAreas =
         "residual-risk"
     ]
 
-let productionGates (gates: Record list) (baseline: Record list) (dispositions: Record list) =
+let productionGatesWith
+    (gates: Record list)
+    (baseline: Record list)
+    (dispositions: Record list)
+    (backlog: Record list)
+    (controls: Record list)
+    =
     let cited column =
         gates |> List.collect (fun g -> items g column) |> Set.ofList
 
@@ -756,6 +795,49 @@ let productionGates (gates: Record list) (baseline: Record list) (dispositions: 
            items g "question_ids"
            |> List.filter openIds.Contains
            |> List.map (sprintf "registers/production-gates.csv: %s is met while %s is open" (field g "gate_id"))))
+    @ (let workStatus =
+        backlog
+        |> List.map (fun w -> field w "work_item_id", field w "status")
+        |> Map.ofList
+
+       let controlStatus =
+           controls
+           |> List.map (fun c -> field c "control_id", field c "status")
+           |> Map.ofList
+
+       gates
+       |> List.filter (fun g -> field g "status" = "met")
+       |> List.collect (fun g ->
+           let gid = field g "gate_id"
+
+           (items g "work_item_ids"
+            |> List.filter (fun w -> Map.tryFind w workStatus |> Option.defaultValue "" <> "done")
+            |> List.map (sprintf "registers/production-gates.csv: %s is met while work item %s is not done" gid))
+           @ (items g "control_ids"
+              |> List.filter (fun c -> rank (Map.tryFind c controlStatus |> Option.defaultValue "") < rank "Operating")
+              |> List.map (sprintf "registers/production-gates.csv: %s is met while control %s is not Operating" gid))))
+
+/// Production activation gates without the work-item and control conditions.
+let productionGates (gates: Record list) (baseline: Record list) (dispositions: Record list) =
+    productionGatesWith gates baseline dispositions [] []
+
+/// Identifier evidence references must name a record in some register.
+let identifierReferences (loaded: Loaded) =
+    let known =
+        Schema.registers
+        |> List.collect (fun s -> records loaded s.Name |> List.map (fun r -> field r s.IdColumn))
+        |> set
+
+    let isPath (r: string) =
+        r.Contains "/" || r.Contains "." || r.Contains ":"
+
+    [ "question_dispositions", "oq_id"; "production_gates", "gate_id" ]
+    |> List.collect (fun (name, idCol) ->
+        records loaded name
+        |> List.collect (fun r ->
+            items r "evidence_refs"
+            |> List.filter (fun x -> not (isPath x) && not (known.Contains x))
+            |> List.map (sprintf "%s: %s evidence identifier '%s' names no record" name (field r idCol))))
 
 let errors (loaded: Loaded) =
     let r = records loaded
@@ -786,7 +868,8 @@ let errors (loaded: Loaded) =
     @ capabilityBasis (r "capabilities")
     @ controlEvidence controls
     @ questionCompleteness (r "question_dispositions")
-    @ productionGates (r "production_gates") baseline (r "question_dispositions")
+    @ productionGatesWith (r "production_gates") baseline (r "question_dispositions") (r "backlog") controls
+    @ identifierReferences loaded
 
 let private cell (s: string) = s.Replace("|", "/").Replace(";", ", ")
 

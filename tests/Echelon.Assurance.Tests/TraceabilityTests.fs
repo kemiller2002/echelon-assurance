@@ -326,7 +326,7 @@ let ``open question needs why, role and trigger; answered needs evidence`` () =
                 "proposed_status", status
                 "classification",
                 (if status = "answered" then
-                     "resolved-owner-decision"
+                     "resolved-implementation-evidence"
                  else
                      "dependent-legal")
                 "blocking_tier", "none"

@@ -19,7 +19,7 @@ research_batch: B6 (key AIG)
 >
 > **Key controls for organizational review.** The controls that warrant organizationally independent review are listed in `docs/decisions/owner-decision-package-2026-11-25.md` (ODP-02). All others use automated and internal validation proportionate to risk. Blanket independent human review of routine operations is not required.
 >
-> **Small-team constraint.** With one human, `internal-independent` validations (VAL-006, VAL-011, VAL-012, VAL-016, VAL-019, VAL-022, VAL-025, VAL-032) have no independent performer today. They are not performed as if independent. Under owner direction DF-ASR-2026-0D0F, `Tested` rests instead on protected deterministic verification (VAL-040, `technically-separated`) for executable controls and on the multiple-agent review protocol (VAL-041, `agent-review`) for L0–L2 judgment controls; neither is described as organizational independence (see `controls/README.md`). VAL-025 is used only if an organizationally independent reviewer is later engaged on a recorded trigger.
+> **Small-team constraint.** With one human, `internal-independent` validations (VAL-006, VAL-011, VAL-012, VAL-016, VAL-019, VAL-022, VAL-025, VAL-032) have no independent performer today. They are not performed as if independent. Under owner direction DF-ASR-2026-0D0F, `Tested` rests instead on protected deterministic verification (VAL-040, `technically-separated`) for executable controls. The multiple-agent review protocol (VAL-041, `agent-review`) is approved for internal development review only and never supports `Tested`, so judgment controls (L0–L2) cannot reach `Tested` until a technically separated or organizational validator exists. Technical separation is not described as organizational independence (see `controls/README.md`). VAL-025 is used only if an organizationally independent reviewer is later engaged on a recorded trigger.
 >
 > **Continuous security testing** is specified in `validation/continuous-security-testing-specification.md`.
 
@@ -173,8 +173,8 @@ Enforcement mechanisms:
 - The validation pipeline publishes results only to an append-only store the
   implementing pipeline cannot write.
 - *(Superseded for the development stage by owner direction
-  DF-ASR-2026-0D0F: `Tested` now requires `technically-separated` or higher,
-  or `agent-review` for L0–L2 judgment controls; see `controls/README.md`.)*
+  DF-ASR-2026-0D0F: `Tested` now requires `technically-separated` or higher;
+  `agent-review` never supports it; see `controls/README.md`.)*
   Original proposal: a control's `Tested` status requires a validation result whose
   `independence_level` is at least `internal-independent`; `controls/README.md`
   applies this to every control, not only key controls, and `automated`
