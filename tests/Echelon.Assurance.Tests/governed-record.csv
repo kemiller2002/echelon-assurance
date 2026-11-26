@@ -413,7 +413,7 @@ file,Directory.Build.props,6214ae3d83c083d0
 file,Echelon.Assurance.sln,bcca259bf3275975
 file,GEMINI.md,0fd756e53f9269f4
 file,HANDOFF.md,0360e7138952a2ed
-file,PROJECT-CHARTER.md,e26e3ea1065587c0
+file,PROJECT-CHARTER.md,4cd66634cb4bb856
 file,README.md,d98097165f28b4e7
 file,SECURITY-AND-CONFIDENTIALITY.md,615b9469abffa19b
 file,ai-governance/ai-governance-model.md,f1d4ac33feaedaa6
@@ -426,7 +426,7 @@ file,context/CURRENT-STATE.md,3c348134835272dd
 file,context/DECISIONS.md,5c8440043f359a82
 file,context/KNOWN-RISKS.md,32fc1ab420e1a794
 file,context/RESEARCH-QUEUE.md,11af02d3af32fe18
-file,controls/README.md,35d681996880f3ce
+file,controls/README.md,e4c91713ef502b8d
 file,customer-assurance/README.md,bc3f1c2246e4790f
 file,customer-assurance/findings.md,d6052c608bd3a4c0
 file,docs/charter/final-reconciliation-brief-2026-11-26.md,b769dac7da1b0bc5
@@ -481,7 +481,7 @@ file,framework/standards/IDENTIFIERS.md,18c7f078aef2e319
 file,framework/standards/NAMING-STANDARD.md,fec4343ab4b8d149
 file,framework/standards/TAXONOMY.md,91fbbd647a090d10
 file,global.json,b48d6da8fa62c0da
-file,governance/operating-model.md,19d756630b8427c3
+file,governance/operating-model.md,5bb04375b058b537
 file,integration/capability-findings.md,c5b68d9d5c40aa12
 file,integration/echelon-integration-matrix.md,babd05395746f435
 file,integration/proposed-changes.md,934bdfb05351b6c1

@@ -68,6 +68,8 @@ L3 31, L2 12, L1 6, L0 6, L5 5. L5 controls: dormant
 accounts, offboarding, entitlement drift in non-production, configuration
 drift on reversible settings, and routine retention expiry (irreversible,
 permitted with legal-hold checks and bounded batches under owner decision
-DF-ASR-2026-0D09). Judgment controls remain L0–L2 by design.
+DF-ASR-2026-0D09; evidence records are excluded and treated as evidence
+destruction under the elevated safeguards of 0D09, repository
+interpretation pending owner confirmation). Judgment controls remain L0–L2 by design.
 
 The catalog CSV is authoritative and is curated directly.
